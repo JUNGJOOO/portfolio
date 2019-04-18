@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>반응형 테스트</title>
+	<link rel="stylesheet" href="css/common.css">
+	<style>
+        .wrap{
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .input_test{
+            display: block;
+        }
+        .input_test input{
+            width: 100%;
+            height: 40px;
+            padding-left: 10px;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border: none;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+        }
+        .select_test{
+            margin-top: 30px;
+        }
+        .select_test select{
+            width: 100%;
+            height: 60px;
+            padding-left: 20px;
+            appearance: none;
+/*            -webkit-appearance: none;*/
+            -moz-appearance: none;
+            border: none;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            background: url(https://s3.ap-northeast-2.amazonaws.com/spin-protocol-resource/resources/images/icon_select.png) no-repeat;
+            background-position: 98%;
+            background-size: 10px 6px;
+            border:1px solid black;
+        }
+        .textarea_test{
+            margin-top: 40px;
+            font-size: 0;
+            border:1px solid blue;
+        }
+        textarea{
+            width: 100%;
+            height: 70px;
+            resize: none;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border: none;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+        }
+        .date_test{
+            border: 1px solid red;
+            margin-top: 60px;
+        }
+        .date_test input{
+            width: 100%;
+            height: 70px;
+            
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border: none;
+            border-radius: 0;
+            -webkit-border-radius: 0;
+            
+/*
+            background: url(https://s3.ap-northeast-2.amazonaws.com/spin-protocol-resource/resources/images/icon_select.png) no-repeat lightgray;
+            background-position: 98%;
+            background-size: 10px 6px;
+*/
+        }
+        .date_test input[type="date"]::-webkit-calendar-picker-indicator {
+            color: red;
+        }
+/*
+        input[type="date"]::-webkit-clear-button {
+            display: none;
+        }
+
+        input[type="date"]::-webkit-inner-spin-button { 
+            display: none;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            color: #2c3e50;
+        }
+
+        input[type="date"] {
+            appearance: none;
+            -webkit-appearance: none;
+            color: #95a5a6;
+            font-family: "Helvetica", arial, sans-serif;
+            font-size: 18px;
+            border:1px solid #ecf0f1;
+            background:#ecf0f1;
+            padding:5px;
+            display: inline-block !important;
+            visibility: visible !important;
+        }
+
+        input[type="date"], focus {
+            color: #95a5a6;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+        }
+*/
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <div class="input_test">
+        <input placeholder="잘되려나.............">
+    </div>
+    <div class="select_test">
+        <select name="type" id="part" class="type">
+            <option value="one">선착순형</option>
+            <option value="two">선정형</option>
+        </select>
+    </div>
+    <div class="textarea_test">
+        <textarea></textarea>
+    </div>
+    <div class="date_test">
+        <input type="date" name="test_date">
+    </div>
+</div>
+</body>
+</html>
