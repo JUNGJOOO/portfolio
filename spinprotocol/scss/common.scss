@@ -1,0 +1,577 @@
+@import '_mixin';
+
+header {
+    @include box($h: 70px, $bg: #fff);
+    box-shadow: 0 3px 20px 0 rgba(124, 124, 124, 0.1);
+    .header-util {
+        float: right;
+        position: relative;
+        z-index: 20;
+        margin-right: 30px;
+        height: 100%;
+        & > li{
+            @include flex();
+            float: left;
+            height: 100%;
+            padding: 0 6px;
+            & > button img{
+                width: 100%;
+            }
+        }
+        .header-util__profile{
+            display: none;
+            margin-left: 5px;
+            & > button{
+                @include box($w: 26px, $h: 26px);
+            }
+        }
+        .header-util__wallet {
+            .header__wrap-wallet-btn{
+                @include box($w: 26px, $h: 22px);
+                position:relative;
+                border: none;
+                .header-util__wallet--black {display: block;}
+                .header-util__wallet--white {display: none;}
+            }
+            .header-util__lyr {
+                @include position($t: 10px, $r: 75px, $z: 300);
+                @include box($w: 400px, $h: 600px, $margin: 50px auto 0, $bg: #f1f3f5, $radius: 5px, $shadow: 0 0 4px rgba(0, 0, 0, 0.3));
+                overflow: hidden;
+                display: none;
+                .header-util__tit {
+                    @include box($display: block, $h: 260px, $bg: #f1f3f5);
+                    @include font($weight: 400, $size: 2.2rem, $align: center);
+                    padding: 35px 0 0 0;
+                    img{
+                        display: block;
+                        margin: 0 auto;
+                        height: 185px;
+                    }
+                    p{font-size: 1rem;}
+                }
+                .header-util__container{
+                    padding: 0 40px;
+                    text-align: center;
+                    background-color: #f1f3f5;
+                    p{
+                        padding-top: 10px;
+                        padding-bottom: 45px;
+                        font-size: 1rem;
+                        font-weight:700;
+                        line-height: 22px;
+                    }
+                    button{
+                        position: relative;
+                        @include box($w: 100%, $line-h: 45px, $bg: #fff, $border: 1px solid rgba(208, 208, 208, 0.42), $shadow: 0 0 5px rgba(0, 0, 0, 0.1));
+                        @include font($weight: 400, $size: 0.9rem, $color: #000, $align: left);
+                        padding-left: 25px;
+                        transition: 0.2s;
+                        &:before{
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            width: 4px;
+                            height: 45px;
+                            background-color: #000;
+                        }
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            right: 24px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 12px;
+                            height: 12px;
+                            background: url("https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/wallet/wallet_arrow-05.png")
+                            no-repeat;
+                            background-size: 100% auto;
+                            transition: 0.2s;
+                        }
+                        &:hover:after{right: 18px;}
+                    }
+                    button + button {
+                        margin-top: 10px;
+                    }
+                }
+            }
+            .header_active{display: block;}
+        }
+        .header-util__notice{
+            .header__wrap-notice-btn{
+                @include box($w: 18px, $h: 23px);
+                position:relative;
+                border: none;
+                .notice-count{
+                    @include position($t: -5px, $r: -10px);
+                    @include box($w: 18px, $h: 18px, $bg: #f45879);
+                    @include font( $size: 0.8rem, $weight: 700, $color: #fff);
+                    line-height: 16px;
+                    border: 1px solid #fff;
+                    border-radius: 100%;
+                }
+                .header__notice-icon_black{display: block;}
+                .header__notice-icon_white{display: none;}
+            }
+            .header-util__lyr{
+                @include position($t: 54px, $r: 16px);
+                @include box($w: 350px, $h: 347px, $bg: #fff);
+                display: none;
+                overflow-x: auto;
+                text-align: left;
+                z-index: 300;
+                border-radius: 5px;
+                box-shadow: 0 0 4px rgba(0,0,0,0.3);
+                strong{
+                    display: block;
+                    border-bottom: 1px solid #ddd;
+                    padding: 10px;
+                    @include font($weight: 600, $color: #666);
+                    background-color: #f8f8f8;
+                }
+                .header-util__items li {
+                    position: relative;
+                    padding: 10px 0px 10px 10px;
+                    width: 100%;
+                    font-size: 0;
+                    cursor: pointer;
+                    & > a{
+                        display: block;
+                        width: 100%;
+                    }
+                    .header-util__icon{
+                        display: inline-block;
+                        width: 32px;
+                        height: 32px;
+                        vertical-align: top;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .header-util__subject{
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 270px;
+                        padding: 0 5px;
+                        .header-util__content{
+                            font-size: 1rem;
+                            line-height: 1.3rem;
+                        }
+                        .header-util__date{
+                            margin-top: 3px;
+                            font-size: 0.8rem;
+                            line-height: 1rem;
+                            font-weight: 300;
+                            color: #92949c;
+                        }
+                    }
+                    .header-util__remove{
+                        position: absolute;
+                        z-index: 1000;
+                        top: 8px;
+                        right: 3px;
+                        width: 32px;
+                        line-height: 32px;
+                        border: none;
+                        text-align: center;
+                        img{
+                            width: 9px
+                        }
+                    }
+                    .no-notice-msg{
+                        color: #aaa;
+                        text-align: center;
+                        line-height: 300px;
+                    }
+                }
+                li.header-util__items--click > * {opacity: 0.4;}
+                li.header-util__items--click .header-util__remove{opacity: 1;}
+            }
+            .header_active{display: block;}
+        }
+       
+    }
+    .header__wallet-box{
+        @include position($t: 54px, $r: 203px, $z: 300);
+        @include box($w: 400px, $h: 600px, $bg: #fff, $radius: 5px);
+        overflow-x: auto;
+        text-align: left;
+        box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    }
+}
+
+.nav-wrap__mobile {
+    overflow: hidden;
+    @include position ($p:absolute, $l:0, $r:0, $t:0, $z: 10);
+    & > a{
+        display: block;
+        padding: 12px 0 0 20px;
+        width: 56px;
+        height: 56px;
+        color: white;
+        .bar1, .bar2, .bar3 {
+            margin: 7px 0;
+            width: 25px;
+            height: 1px;
+            background-color: white;
+            transition: 0.4s;
+        }
+        &.change{
+            .bar1 {
+                -webkit-transform: rotate(-45deg) translate(-8px, 4px);
+                transform: rotate(-45deg) translate(-8px, 4px);
+            }
+            .bar2 {opacity: 0;}
+            .bar3 {
+                -webkit-transform: rotate(45deg) translate(-8px, -4px);
+                transform: rotate(45deg) translate(-8px, -4px);
+            }
+        }
+    }
+    .gnb__mobile {
+        display: none;
+        width: 100%;
+        height: 100vh;
+        padding: 35px;
+        background-color: rgba(0,0,0,.9);
+        & > ul > li{
+            border-bottom: 1px solid #444;
+            a {
+                cursor: pointer;
+                text-decoration: none;
+                font-size: 1rem;
+                color: #939393;
+            }
+            & > a{
+                font-size: 1.1rem;
+                line-height: 54px;
+            }
+            .gnb__sub{
+                margin-bottom: 10px;
+                display: none;
+                li{
+                    margin-left: 10px;
+                    line-height: 35px;
+                }
+            }
+        }
+        //활성화
+        & > ul > li.gnb__li{
+            display: block;
+            color: white;
+            & > a{color: white;}
+            .gnb__sub{
+                display: block;
+                font-weight: 400;
+                color: white;
+                li .gnb__li--active{
+                    color: white;
+                }
+            }
+        }
+        button{
+            @include position (fixed, $r: 0, $l: 0, $b: 0);
+            width: 100%;
+            height: 100px;
+            color: white;
+        }
+    }
+}
+
+.nav-wrap{
+    @include position (fixed, $t: 0);
+    @include box($w: 220px, $h: 100%, $bg: rgb(34,40,39));
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    h1{
+        @include flex();
+        @include box($h: 70px, $bg:rgb(42,47,46));
+        a{
+            height: 70px;
+            align-items: center;
+            justify-content: center;
+            background-position: center;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            img{
+                position: relative;
+                left: -6px;
+            }
+        }
+        .h1__tablet{
+            display: none;
+            img{width: 65%;}
+        }
+        .h1__wide{display: flex;}
+    }
+    .nav__profile{
+        padding: 30px 0 20px;
+        @include flex($direction: column);
+        .nav_shop{
+            @include position($t: 139px, $r: 66px);
+            overflow: hidden;
+            a{
+                @include box($display: flex, $w: 30px, $h: 30px, $bg: #222827, $radius: 100%);
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                img{
+                    width: 70%;
+                }
+          }
+        }
+        .nav__profile-name{
+            @include font($weight: 400, $line-h: 40px, $align: center, $color: #fff);
+        }
+        .nav__profile-image{
+          @include box(
+            $w: 70px, 
+            $h: 70px, 
+            $bg: #fff,
+            $margin: 0 auto,
+            $radius: 100%
+          );
+          overflow: hidden;
+          img{ width: 100%; }
+        }
+    }
+    .gnb{
+        position: relative;
+        width: 100%;
+        & > ul > li{
+            line-height: 50px;
+            a{
+              display: block;
+              padding: 0 35px;
+              @include font($weight: 300, $color: #939393);
+            }
+            & > a{
+                padding: 20px 35px;
+                font-size: 1rem;
+                line-height: 1rem;
+            }
+            .gnb__sub{
+                display: none;
+                @include position($p:relative, $t: 2px);
+                li{
+                    height: 30px;
+                    line-height: 30px;
+                    &:last-child{
+                        padding-bottom: 50px;
+                    }
+                    a{
+                        @include font($size: 0.9rem, $weight: 100);
+                        &:hover{color: white;}
+                    }
+                }
+            }
+        }
+        // 활성화
+        & > ul > li.gnb__li{
+            position: relative;
+            color: white;
+            background-color: rgb(42,47,46);
+            & > a{
+                color: white;
+                &:after {
+                    content: url(https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/icon/side-arrow-icon.png);
+                    position: absolute;
+                    top: 16px;
+                    right: 20px;
+                }
+            }
+            .gnb__sub{
+                display: block;
+                font-weight: 400;
+                color: white;
+                li .gnb__li--active{
+                    color: white;
+                }
+            }
+            &::before{
+                content: '';
+                @include position($l: 0);
+                @include box($w: 4px, $h: 100%, $bg: #00dbbf);
+            }
+        }
+    }
+    .nav__logout{
+        @include position($b: 0);
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        .nav__btn{
+          color: #fff;
+        }
+    }
+}
+
+.hidden{
+    display: none!important;
+}
+.container {
+    margin-left: 220px;
+    padding: 15px 30px;
+}
+.title{
+    &:after{
+        content: '';
+        clear: both;
+        display: block;
+    }
+    h3{
+        float: left;
+        padding: 20px 0;
+        @include font($style:normal, $weight:500, $size: 1.2rem, $color: #222);
+    }
+    .search-btn {
+        float: right;
+        padding-top: 15px;
+        button{
+            padding: 0 8px;
+            border-radius: 4px;
+            background-color: #5e9b7c;
+            @include font($color:#fff, $line-h:25px);
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        .search-btn__reset,
+        .search-btn__excel {
+            background-color: #ddd;
+        }
+    }
+}
+
+.pagination{
+    margin: 20px 0;
+    text-align: center;
+    font-size: 0;
+    button{
+        @include button($w: 30px, $h: 30px, $line-h: 27px, $color:#00aa87, $bg: #f9f9f9, $border: 1px solid rgba(0,0,0,0.1), $radius: 0px, $size: 1.4rem);
+        font-weight: 700;
+    }
+    input{
+        @include box($w: 40px, $h: 30px, $bg: transparent, $margin: 0 0 0 -1px, $padding: 0 !important, $radius: 0 !important, $border: 1px solid #ccc !important, $line-h: 30px);
+        text-align: center;
+        vertical-align: top;
+    }
+    span{
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 1rem;
+        line-height: 30px;
+        vertical-align: top;
+    }
+}
+
+// 반응형
+@include respond-to(handhelds){
+    header{
+        @include position(fixed, $t: 0, $z: 2);
+        @include box($h: 56px, $bg: #222827);
+        z-index: 999;
+        box-shadow: 0 3px 8px 0 rgba(124, 124, 124, 0.3);
+        .header-util{
+            margin-right: 20px;
+            .header-util__profile {display: flex;}
+            .header-util__wallet {
+                .header__wrap-wallet-btn{
+                    .header-util__wallet--black {display: none;}
+                    .header-util__wallet--white {display: block;}
+                }
+                .header-util__lyr {
+                    @include position($t: 0, $r: 14px);
+                    @include box($w: 300px, $h: 430px);
+                    .header-util__tit {
+                        @include box($h: 210px);
+                        padding: 0;
+                        img{height: 175px;}
+                    }
+                    .header-util__container{
+                        padding: 0 20px;
+                        p{
+                            padding-top: 10px;
+                            padding-bottom:30px;
+                        }
+                    }
+                }
+            }
+            .header-util__notice{
+                .header__wrap-notice-btn {
+                    width: 17px;
+                    .notice-count {
+                        width: 15px;
+                        height: 15px;
+                        line-height: 14px;
+                        border: none;
+                    }
+                    .header__notice-icon-black{display: none;}
+                    .header__notice-icon_white{display: block;}
+                }
+                .header-util__lyr{
+                    @include position( $t: 50px, $r: 14px);
+                    width: 300px; 
+                    z-index: 99999;
+                    .header-util__items li {
+                        padding: 8px 0px 8px 8px;
+                        .header-util__icon{width: 30px; height: 30px;}
+                        .header-util__subject{width: 230px;}
+                    }
+                   
+                }
+            }
+        }
+	}
+    .nav-wrap{@include position ($l: -250px);}
+    #main{z-index: 0}
+    #main .container{
+        position: relative;
+        z-index: 1;
+        padding: 10px 20px;
+        margin-top: 60px;
+        margin-left: 0;
+    }
+    @keyframes active-menu{
+		100% {height: 0;}
+	}
+}
+@include respond-to(medium-screens){
+    .nav-wrap__mobile{display:none}
+    .nav-wrap{
+        width: 110px;
+        h1{
+            @include position( relative, $t: 0, $r: 0, $b: 0, $l: 0);
+            display: block;
+            .h1__wide{display: none;}
+            .h1__tablet{display: flex;}
+            a img{left: 0;}
+        }
+        .gnb{
+            & > ul > li{
+                a{padding: 0 0 0 22px;}
+                & > a{
+                    padding: 20px 22px;
+                    font-size: 0.85rem;
+                    &:after {display: none;}
+                }
+                .gnb__sub{
+                    top: -6px;
+                    li{
+                        height: 27px;
+                        line-height: 27px;
+                        &:last-child{ padding-bottom: 36px;}
+                        a{@include font($size: 0.85rem);}
+                    }
+                }
+            }
+        }
+        .gnb__li--active::after {display: none;}
+    }
+    #main .container{
+        margin-left: 110px;
+    }
+}
+@include respond-to(wide-screens){
+    .nav-wrap__mobile{display:none}
+}
+@include respond-to(pc-screens){
+    .nav-wrap__mobile{display:none}
+}
