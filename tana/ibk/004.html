@@ -1,0 +1,96 @@
+<html lang="kr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>계좌인증&gt;다른은행</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body id="step1">
+	<div class="wrap">
+		<header>
+			<h1 class="logo"><a href="#">참! 좋은 은행 IBK 기업은행</a></h1>
+		</header>
+		<h2 class="title">계좌인증</h2>
+		<ul class="tab_list bdb">
+			<li><a href="003.html">기업은행</a></li>
+			<li class="is_active"><a href="004.html">다른은행</a></li>
+		</ul>
+		<section class="norm account_section">
+			<div class="account">
+				<div class="pield">
+					<p class="sub_title mg-b10">은행선택</p>
+					<div class="bank bdrp modal_button" data-target="bankpop">
+						<input type="hidden">
+						<a href="#">선택하세요.</a>
+					</div>
+				</div>
+				<div class="pield">
+					<p class="sub_title">계좌번호</p>
+					<input type="number" class="bdb" placeholder="'-' 없이 입력" data-name="계좌번호">
+				</div>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div class="footer_btn">
+			<a href="005.html" id="btn_next">다음</a>
+		</div>
+	</footer>
+	
+
+	<div class="bankpop modal" id="bankpop">
+		<div class="bankpop_wrap">
+			<div class="bankpop_header">은행선택</div>
+			<div class="bankpop_cont">
+				<ul class="bankpop_ul1">
+					<li class="bank1" data-bank-cd="bank1"><a href="#"><i></i>우리은행</a></li>
+					<li class="bank2" data-bank-cd="bank1"><a href="#"><i></i>하나은행</a></li>
+					<li class="bank3" data-bank-cd="bank1"><a href="#"><i></i>지역농축협</a></li>
+					<li class="bank4" data-bank-cd="bank1"><a href="#"><i></i>한국씨티은행</a></li>
+					<li class="bank5" data-bank-cd="bank1"><a href="#"><i></i>경남은행</a></li>
+					<li class="bank6" data-bank-cd="bank1"><a href="#"><i></i>대구은행</a></li>
+					<li class="bank7" data-bank-cd="bank1"><a href="#"><i></i>부산은행</a></li>
+					<li class="bank8" data-bank-cd="bank1"><a href="#"><i></i>산업은행</a></li>
+					<li class="bank9" data-bank-cd="bank1"><a href="#"><i></i>새마을금고</a></li>
+					<li class="bank10" data-bank-cd="bank1"><a href="#"><i></i>신협</a></li>
+					<li class="bank11" data-bank-cd="bank1"><a href="#"><i></i>제주은행</a></li>
+					<li class="bank12" data-bank-cd="bank1"><a href="#"><i></i>HSBC</a></li>
+					<li class="bank13" data-bank-cd="bank1"><a href="#"><i></i>중국공상은행</a></li>
+					<li class="bank14" data-bank-cd="bank1"><a href="#"><i></i>중국건설은행</a></li>
+					<li class="bank15" data-bank-cd="bank1"><a href="#"><i></i>카카오뱅크</a></li>
+				</ul>
+				<ul class="bankpop_ul2">
+					<li class="bank1" data-bank-cd="bank1"><a href="#"><i></i>국민은행</a></li>
+					<li class="bank2" data-bank-cd="bank1"><a href="#"><i></i>신한은행</a></li>
+					<li class="bank3" data-bank-cd="bank1"><a href="#"><i></i>농협은행</a></li>
+					<li class="bank4" data-bank-cd="bank1"><a href="#"><i></i>SC은행</a></li>
+					<li class="bank5" data-bank-cd="bank1"><a href="#"><i></i>우체국</a></li>
+					<li class="bank6" data-bank-cd="bank1"><a href="#"><i></i>광주은행</a></li>
+					<li class="bank7" data-bank-cd="bank1"><a href="#"><i></i>도이치</a></li>
+					<li class="bank8" data-bank-cd="bank1"><a href="#"><i></i>산림조합</a></li>
+					<li class="bank9" data-bank-cd="bank1"><a href="#"><i></i>저축은행</a></li>
+					<li class="bank10" data-bank-cd="bank1"><a href="#"><i></i>수협</a></li>
+					<li class="bank11" data-bank-cd="bank1"><a href="#"><i></i>전북은행</a></li>
+					<li class="bank12" data-bank-cd="bank1"><a href="#"><i></i>BOA</a></li>
+					<li class="bank13" data-bank-cd="bank1"><a href="#"><i></i>JP모간</a></li>
+					<li class="bank14" data-bank-cd="bank1"><a href="#"><i></i>비엔피파리바은행</a></li>
+					<li class="bank15" data-bank-cd="bank1"><a href="#"><i></i>중국은행서울지점</a></li>
+					<li class="bank16" data-bank-cd="bank1"><a href="#"><i></i>케이뱅크</a></li>
+				</ul>
+			</div>
+			<button class="close">
+				<span class="line"></span>
+				<span class="line"></span>
+			</button>
+		</div>
+	</div>
+
+</body>
+</html>

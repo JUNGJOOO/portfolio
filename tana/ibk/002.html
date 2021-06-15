@@ -1,0 +1,94 @@
+<html lang="kr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>휴대폰인증</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body id="step1">
+	<div class="wrap wrap_bt">
+		<header>
+			<h1 class="logo"><a href="#">참! 좋은 은행 IBK 기업은행</a></h1>
+		</header>
+		<h2 class="title title_ver2">휴대폰 인증</h2>
+		<section class="norm">
+			<p class="desc mg-b25">본인인증을 위해 통신사(SKT, KT, LG U +, 알뜰폰)로 본인명의 확인이 필요합니다.</p>
+			<div class="pield bdrp">
+				<div class="checkbox">
+					<input type="checkbox" class="chk" id="chk_term" data-name="휴대폰 인증 약관동의">
+					<label for="chk_term"></label>
+					<a href="#" class="check_pdf">휴대폰 인증 약관동의</a>
+				</div>
+			</div>
+			<div class="pield">
+				<p class="sub_title">이름</p>
+				<input type="text" class="bdb" placeholder="이름입력" id="name" data-name="이름">
+			</div>
+			<div class="pield pield_type1">
+				<p class="sub_title">주민등록번호</p>
+				<div>
+					<input type="text" class="bdb" maxlength="6" placeholder="주민번호 앞 6자리" data-name="주민등록번호">
+				</div>
+				<em>-</em>
+				<div>
+					<input type="text" class="bdb" maxlength="1" data-name="주민등록번호">
+					<ul class="cir">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<input type="hidden" id="yyyymmdd">
+			</div>
+			<div class="pield pield_type2 bdb">
+				<p class="sub_title">휴대전화번호</p>
+				<div class="select_box select_box3">
+					<label for="telecom">SKT</label>
+					<select id="telecom" data-name="통신사">
+						<option value="01">SKT</option>
+						<option value="02">KT</option>
+						<option value="03">LGU+</option>
+						<option value="04">SKT알뜰폰</option>
+						<option value="05">KT알뜰폰</option>
+						<option value="06">LGU+알뜰폰</option>
+					</select>
+				</div>
+				<input type="number" placeholder="'-'없이 입력" maxlength="11" data-name="휴대전화번호">
+				<button type="button" class="btn_num modal_button" data-target="erpop">인증번호 발송</button>
+			</div>
+			<div class="pield pield_type3 bdb">
+				<span class="cl1">3:00</span>
+				<input type="number" class="text-right" placeholder="인증번호입력" maxlength="6" data-name="인증번호">
+			</div>
+			<p class="desc mg-t10">본인명의의 휴대폰이 아닌 경우, 본인인증이 불가합니다.</p>
+		</section>
+	</div>
+	<footer>
+		<div class="footer_btn">
+			<a href="003.html" id="btn_next">다음</a>
+		</div>
+	</footer>
+
+	<div class="erpop modal" id="erpop">
+		<div class="erpop_wrap">
+			<div class="erpop_header">안내</div>
+			<div class="erpop_cont fcenter">
+				<p id="err_msg">인증번호가 발송되었습니다.</p>
+			</div>
+			<div class="erpop_footer">
+				<a href="#" class="cl" id="btn_alert">확인</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

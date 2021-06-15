@@ -1,0 +1,102 @@
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>계좌인증&gt;기업은행</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body id="step1">
+    <div class="wrap">
+        <header>
+            <h1 class="logo"><a href="#">참! 좋은 은행 IBK 기업은행</a></h1>
+        </header>
+        <h2 class="title">계좌인증</h2>
+        <ul class="tab_list bdb">
+            <li class="is_active"><a href="003.html">기업은행</a></li>
+            <li><a href="004.html">다른은행</a></li>
+        </ul>
+        <section class="norm account_section">
+            <div class="account">
+                <div class="pield">
+                    <p class="sub_title mg-b10">계좌선택</p>
+                    <div class="select_box_area">
+                        <input type="hidden" data-name="계좌번호">
+                        <div class="select_box2 bdr" id="div_accnt">
+                            <strong>계좌선택</strong>
+                            <span>000-000000-00-000</span>
+                        </div>
+                        <div class="select_box2_dropdown bdr">
+                            <ul>
+                                <li>
+                                    <a role="button">
+                                        <strong>보통예금(신IBK급여통장)</strong>
+                                        <span>684-008436-01-018</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a role="button">
+                                        <strong>보통예금(신IBK급여통장)</strong>
+                                        <span>684-008436-01-018</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a role="button">
+                                        <strong>보통예금(신IBK급여통장)</strong>
+                                        <span>684-008436-01-018</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a role="button">
+                                        <strong>보통예금(신IBK급여통장)</strong>
+                                        <span>684-008436-01-018</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="pield">
+                    <p class="sub_title">계좌비밀번호</p>
+                    <input type="password"  class="bdb" placeholder="숫자 4자리" maxlength="4" data-name="계좌비밀번호">
+                    <p class="cl3 mg-t15 list_dot">비밀번호 3회 오류 시 해당계좌의 거래가 제한됩니다.</p>
+                    <p class="cl3 list_dot">비밀번호를 잊으셨다면 다른은행 계좌인증을 이용하세요.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footer_btn">
+            <a href="005.html" id="btn_next">다음</a>
+        </div>
+    </footer>
+    <script>
+        $(".select_box2").click(function(){
+            var select = $(this);
+            select.addClass("open").next('.select_box2_dropdown').slideDown(100).addClass("open");
+            $(document).mouseup(function(e){
+                var seting = $(".select_box2_dropdown");
+                if(seting.has(e.target).length === 0){
+                    seting.removeClass("open").slideUp(100);
+                    seting.removeClass("open");
+                }
+            });
+            $(".select_box2_dropdown a").click(function(){
+                var option = $(this).html();
+                $(".select_box2_dropdown a").removeClass('selected');
+                $(".select_box2_dropdown").removeClass("open").slideUp(300);
+                select.removeClass("open");
+                $(this).addClass("selected");
+                select.html(option)
+            })
+        })
+    </script>
+</body>
+</html>

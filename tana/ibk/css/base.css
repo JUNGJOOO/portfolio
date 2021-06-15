@@ -1,0 +1,206 @@
+@charset "UTF-8";
+*{outline: none;}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'NotoSans', 'Noto Sans KR', "맑은고딕", "Malgun Gothic", AppleGothic, sans-serif;
+  font-weight: 300;
+  font-style: inherit;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+html{font-size: 15px; line-height: 1.5;}
+input, button, select, textarea, labels{
+  font-family: 'NotoSans', 'Noto Sans KR', "맑은고딕", "Malgun Gothic", AppleGothic, sans-serif;
+  font-size: 15px; font-weight: 300; color: #333;
+  border: none; vertical-align:middle; padding: 0;
+}
+input, button, select, button, img{vertical-align:middle;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main{display: block;}
+ol, ul{list-style: none;}
+br{opacity: 0;}
+html, body{height: 100%; position: relative;}
+input[type=button], input[type=text], input[type=image], input[type=submit], textarea, select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -ms-border-radius: none;
+  -moz-border-radius: none;
+  -o-border-radius: none;
+  border-radius: none; 
+}
+input[type='text'], input[type='password'], input[type='submit'], input[type='search']{
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+input::placeholder{font-size: 14px; font-weight: 100; color: #8c8c8c;}
+input.place_right::placeholder{text-align: right;}
+
+
+input[type='date']{background-color: transparent;}
+input, button{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+input[type=submit], input[type=button], button, select{
+  cursor: pointer;
+}
+input[type=checkbox]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  appearance: checkbox;
+  vertical-align: middle;
+}
+input::-ms-clear{
+  display: none;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+a{color: inherit; text-decoration: none; cursor: pointer;}
+a:active, a:hover{text-decoration: none;}
+select::-ms-expand{display: none;}
+address, caption, cite, code, dfn, em, var{font-style: normal; font-weight: 300;}
+textarea{overflow: hidden;}
+.hide, .hidden, .blind, caption, legend{
+  overflow: hidden; position: absolute; top: 0; left: 0;
+  width: 0; height: 0; opacity: 0;
+  font-size: 0; line-height: 0; text-indent: -999999px;
+}
+
+
+/* table */
+table {width: 100%; border-collapse: collapse; border-spacing: 0;}
+caption, th, td {text-align: left; font-weight: 300;}
+table, td, th {vertical-align: middle;}
+
+
+
+/* custom */
+.clear:after{display: block; content: ""; clear: both;}
+.text-ellipsis{
+  display: block;
+  word-wrap: normal;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text-ellipsis2{
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.text-center{text-align: center !important;}
+.text-left{text-align: left !important;}
+.text-right{text-align: right !important;}
+
+
+.float_l{float: left;}
+.float_r{float: right;}
+
+
+
+
+/* NotoSans */
+@font-face {
+  font-family: 'NotoSans';
+  font-style: normal;
+  font-weight: 300;
+  src:url(../font/NotoSansKR-Regular.otf) format("opentype"),
+      url(../font/NotoSansKR-Regular.woff) format("woff"),
+      url(../font/NotoSansKR-Regular.woff2) format("woff2")
+}
+@font-face {
+  font-family: 'NotoSans';
+  font-style: normal;
+  font-weight: 500;
+  src:url(../font/NotoSansKR-Medium.otf) format("opentype"),
+      url(../font/NotoSansKR-Medium.woff) format("woff"),
+      url(../font/NotoSansKR-Medium.woff2) format("woff2")
+}
+@font-face {
+  font-family: 'NotoSans';
+  font-style: normal;
+  font-weight: 700;
+  src:url(../font/NotoSansKR-Bold.otf) format("opentype"),
+      url(../font/NotoSansKR-Bold.woff) format("woff"),
+      url(../font/NotoSansKR-Bold.woff2) format("woff2")
+}
+
+
+
+
+
+/* X 닫기 */
+.close{
+  position: absolute; top: 15px; right: 20px;
+  width: 18px; height: 18px; background-color: transparent;
+}
+.close .line{display: block; width: 18px; height: 1px; margin-top: -2px; background-color: #757575;}
+.close .line:nth-of-type(1){
+  content: ''; position: absolute; top: 50%; left: 0;
+  -webkit-transform: translateY(50%) rotate(45deg);
+  transform: translateY(50%) rotate(45deg);
+}
+.close .line:nth-of-type(2){
+  content: ''; position: absolute; top: 50%; left: 0;
+  -webkit-transform: translateY(50%) rotate(135deg);
+  transform: translateY(50%) rotate(135deg);
+}
+
+
+
+/* + 더하기 */
+.plus{
+  position: absolute; top: 0; right: 0;
+  width: 16px; height: 16px; background-color: transparent;
+}
+.plus .line{display: block; width: 16px; height: 2px; margin-top: -2px; background-color: #000;}
+.plus .line:nth-of-type(1){
+  content: ''; position: absolute; top: 50%; left: 0;
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
+}
+.plus .line:nth-of-type(2){
+  content: ''; position: absolute; top: 50%; left: 0;
+  -webkit-transform: translateY(50%) rotate(90deg);
+  transform: translateY(50%) rotate(90deg);
+}
+
+
+
+/* flex center */
+.fcenter{
+  display: -webkit-box; display: -ms-flexbox; display: flex;
+  -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+  -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}

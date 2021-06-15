@@ -1,0 +1,60 @@
+<html lang="kr">
+<head>
+	<meta charset="UTF-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>인증서 확인(3차인증)</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body id="step1" class="">
+	<div class="wrap">
+		<header>
+			<h1 class="logo"><a href="#">참! 좋은 은행 IBK 기업은행</a></h1>
+		</header>
+		<h2 class="title">인증서 확인</h2>
+		<div class="certify_subtit">
+			계좌 및 카드 등록의 완료를 위해 인증이 필요합니다.
+		</div>
+		<section class="norm certify_section">
+			<ul class="certify_link">
+				<li><a href="#">금융인증서</a></li>
+				<li><a href="#">네이버인증서</a></li>
+				<li><a href="#">카카오인증서</a></li>
+				<li><a href="#">ARS</a></li>
+			</ul>
+			<div class="certify_agree bdr">
+				<div class="checkbox bdb">
+					<input type="checkbox" id="checkall">
+					<label for="checkall">전체 동의</label>
+				</div>
+				<ul id="ul_terms">
+					<li class="checkbox checkbox_type1">
+						<input type="checkbox" name="check" id="check1" data-name="개인정보 수집 및 이용동의">
+						<label for="check1">개인정보 수집 및 이용동의(필수)</label>
+					</li>
+					<li class="checkbox checkbox_type1">
+						<input type="checkbox" name="check" id="check2" data-name="고유식별정보 수집 및 이용동의">
+						<label for="check2">고유식별정보 수집 및 이용동의(필수)</label>
+					</li>
+					<li class="checkbox checkbox_type1">
+						<input type="checkbox" name="check" id="check3" data-name="개인정보 제 3자 제공 동의 유효성 검증">
+						<label for="check3">개인정보 제 3자 제공 동의 유효성 검증(필수)</label>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</div>
+	<footer>
+		<div class="footer_btn">
+			<a href="009.html" id="btn_next">다음</a>
+		</div>
+	</footer>
+</body>
+</html>

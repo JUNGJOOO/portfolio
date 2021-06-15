@@ -1,0 +1,157 @@
+<html lang="kr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>자산목록&gt;계좌</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/common.js"></script>
+</head>
+<body id="step1" class="">
+	<div class="wrap wrap_send">
+		<header>
+			<h1 class="logo"><a href="#">참! 좋은 은행 IBK 기업은행</a></h1>
+		</header>
+		<h2 class="title">마이데이터 전송</h2>
+		<ul class="tab_list bdb">
+			<li class="is_active"><a href="005.html">계좌</a></li>
+			<li><a href="잘못된접근.html">카드</a></li>
+		</ul>
+		<section class="norm send_section">
+			<div class="checkbox checkbox_type1">
+				<input type="checkbox" id="checkall">
+				<label for="checkall" class="cl3">전체선택</label>
+				<div class="send_total txt-14 cl3"><em class="cl3" id="checked_all_accnt_cnt">0</em>개 선택 / 총 <em class="cl3" id="all_accnt_cnt">8</em>계좌</div>
+			</div>
+			<ul class="dropdown_wrap" id="ul_acnt">
+				<li class="dropdown">
+					<div class="dropdown_subtit bdb cl">수신상품</div>
+					<a href="#"><b class="caret"></b></a>
+					<div class="dropdown_box">
+						<div class="checkbox checkbox_type1 mg-b10">
+							<input type="checkbox" id="checkall_1" class="sect_chk">
+							<label for="checkall_1" class="cl3">전체선택</label>
+							<div class="send_total txt-14 cl3"><em class="cl3 checked_sec_accnt_cnt">0</em>개 선택 / 총 <em class="cl3 sec_accnt_cnt">2</em>계좌</div>
+						</div>
+						<div class="send_box">
+							<div class="checkbox checkbox_type1">
+								<input type="checkbox" name="checkall_1" id="check1">
+								<label for="check1"></label>
+								<span class="clb">자유입출금식</span>
+							</div>
+							<p class="txt-14 cl3">보통예금(신IBK급여통장)</p>
+							<p class="txt-17">684-008436-01-018</p>
+						</div>
+						<div class="send_box">
+							<div class="checkbox checkbox_type1">
+								<input type="checkbox" name="checkall_1" id="check2">
+								<label for="check2"></label>
+								<span class="clb">자유입출금식</span>
+							</div>
+							<p class="txt-14 cl3">보통예금(신IBK급여통장)</p>
+							<p class="txt-17">684-008436-01-018</p>
+						</div>
+					</div>
+				</li>
+				<li class="dropdown">
+					<div class="dropdown_subtit bdb cl4">투자상품</div>
+					<a href="#"><b class="caret"></b></a>
+					<div class="dropdown_box">
+						<div class="checkbox checkbox_type1 mg-b10">
+							<input type="checkbox" id="checkall_2" class="sect_chk">
+							<label for="checkall_2" class="cl3">전체선택</label>
+							<div class="send_total txt-14 cl3"><em class="cl3 checked_sec_accnt_cnt">0</em>개 선택 / 총 <em class="cl3 sec_accnt_cnt">2</em>계좌</div>
+						</div>
+						<div class="send_box">
+							<div class="checkbox checkbox_type1">
+								<input type="checkbox" name="checkall_2" id="check3">
+								<label for="check3"></label>
+								<span class="cl4b">자유입출금식</span>
+							</div>
+							<p class="txt-14 cl3">보통예금(신IBK급여통장)</p>
+							<p class="txt-17">684-008436-01-018</p>
+						</div>
+						<div class="send_box">
+							<div class="checkbox checkbox_type1">
+								<input type="checkbox" name="checkall_2" id="check4">
+								<label for="check4"></label>
+								<span class="cl4b">자유입출금식</span>
+							</div>
+							<p class="txt-14 cl3">보통예금(신IBK급여통장)</p>
+							<p class="txt-17">684-008436-01-018</p>
+						</div>
+					</div>
+				</li>
+				<li class="dropdown">
+					<div class="dropdown_subtit bdb cl5">대출상품</div>
+					<a href="#"><b class="caret"></b></a>
+					<div class="dropdown_box">
+						<div class="checkbox checkbox_type1 mg-b10">
+							<input type="checkbox" id="checkall_3" class="sect_chk">
+							<label for="checkall_3" class="cl3">전체선택</label>
+							<div class="send_total txt-14 cl3"><em class="cl3 checked_sec_accnt_cnt">0</em>개 선택 / 총 <em class="cl3 sec_accnt_cnt">2</em>계좌</div>
+						</div>
+						<div class="send_box">
+							<div class="checkbox checkbox_type1">
+								<input type="checkbox" name="checkall_3" id="check5">
+								<label for="check5"></label>
+								<span class="cl5b">자유입출금식</span>
+							</div>
+							<p class="txt-14 cl3">보통예금(신IBK급여통장)</p>
+							<p class="txt-17">684-008436-01-018</p>
+						</div>
+						<div class="send_box">
+							<div class="checkbox checkbox_type1">
+								<input type="checkbox" name="checkall_3" id="check6">
+								<label for="check6"></label>
+								<span class="cl5b">자유입출금식</span>
+							</div>
+							<p class="txt-14 cl3">보통예금(신IBK급여통장)</p>
+							<p class="txt-17">684-008436-01-018</p>
+						</div>
+					</div>
+				</li>
+				<li class="dropdown">
+					<div class="dropdown_subtit bdb cl6">퇴직연금</div>
+					<a href="#"><b class="caret"></b></a>
+					<div class="dropdown_box">
+						<div class="checkbox checkbox_type1 mg-b10">
+							<input type="checkbox" id="checkall_4" class="sect_chk">
+							<label for="checkall_4" class="cl3">전체선택</label>
+							<div class="send_total txt-14 cl3"><em class="cl3 checked_sec_accnt_cnt">0</em>개 선택 / 총 <em class="cl3 sec_accnt_cnt">2</em>계좌</div>
+						</div>
+						<div class="send_box">
+							<div class="checkbox checkbox_type1">
+								<input type="checkbox" name="checkall_4" id="check7">
+								<label for="check7"></label>
+								<span class="cl6b">자유입출금식</span>
+							</div>
+							<p class="txt-14 cl3">보통예금(신IBK급여통장)</p>
+							<p class="txt-17">684-008436-01-018</p>
+						</div>
+						<div class="send_box">
+							<div class="checkbox checkbox_type1">
+								<input type="checkbox" name="checkall_4" id="check8">
+								<label for="check8"></label>
+								<span class="cl6b">자유입출금식</span>
+							</div>
+							<p class="txt-14 cl3">보통예금(신IBK급여통장)</p>
+							<p class="txt-17">684-008436-01-018</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+	</div>
+	<footer>
+		<div class="footer_btn">
+			<a href="007.html" id="btn_next">다음</a>
+		</div>
+	</footer>
+</body>
+</html>
