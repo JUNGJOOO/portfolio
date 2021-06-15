@@ -1,0 +1,218 @@
+@charset "UTF-8";
+/* 위원회소개 */
+.about_be, .about_group{font-size: 0; color: #333;}
+
+/* 위원회소개 - 위원소개 */
+.be_form{
+    display: inline-block; width: calc((100% - 50px) / 3); height: 280px; padding: 20px;
+    font-size: 0; background: url(../img/about_bg.png) no-repeat; background-position: 77% 122%; background-size: 57%;
+    border: 5px solid #eee; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+.be_form + .be_form{margin-top: 25px;}
+.be_form:nth-child(3n){margin: 0 25px;}
+.be_form.be_top{display: block;}
+.be_form .be_img{display: inline-block; width: 45%;}
+.be_form .be_img img{width: 124px; height: 124px; vertical-align: top; background-color: #eee; border-radius: 50%;}
+.be_form .be_desc{display: inline-block; width: 55%; font-size: 0; vertical-align:top;}
+.be_form .be_desc *{font-size: 17px; line-height: 1.8;}
+.be_form .be_desc dt{display: inline-block; width:45px; color: #f19f39;}
+.be_form .be_desc dd{display: inline-block; width: calc(100% - 45px); vertical-align: top;}
+
+
+/* 위원회소개 - 위원장소개 - 인사말 */
+.about_greetings {
+    position: relative; padding: 80px 110px;
+    overflow: hidden; border-top: 25px solid #e8e8e8;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+.about_greetings:after {
+    content: ''; position: absolute; left: 0; top: -4px;
+    height: 100%; width: 25px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#e8e8e8), to(#fff));
+    background: linear-gradient(to bottom, #e8e8e8, #fff);
+}
+.about_greetings:before {
+    content: ''; position: absolute; right: 0;  top: -4px;
+    height: 100%; width: 25px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#e8e8e8), to(#fff));
+    background: linear-gradient(to bottom, #e8e8e8, #fff);
+}
+.about_greetings .greeting_img{
+    display: inline-block; width: 150px; height: 200px; border: 1px solid #ddd;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+.about_greetings .greeting_img img{width: 100%; height: 100%;}
+.about_greetings .greeting_left {display: inline-block; width: calc(100% - 150px); margin: 0 auto; vertical-align: top;}
+.about_greetings .greeting_left .greeting_txt {
+    width: 100%; padding-left: 50px;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+.about_greetings .greeting_left .greeting_txt > p + p{margin-bottom: 25px;}
+.about_greetings .greeting_txt_name .rank{display: inline-block; margin-right: 10px; vertical-align: middle;}
+.about_greetings .greeting_txt_name .name{display: inline-block; font-size: 20px; font-weight: 600; color: #333; vertical-align: middle;}
+
+
+/* 위원회소개 - 위원장소개 - 프로필 */
+.about_profile .jin_box + .jin_box{margin-top: 40px;}
+.about_profile ul{border: 10px solid #f5f5f5; padding: 15px 25px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.about_profile li{display: block; width: 100%;}
+.about_profile span{display: inline-block; width: 200px; color: #f19f39;}
+
+
+/* 위원회소개 - 위원회조직 및 업무 */
+.about_group_img{text-align: center; margin: 0 auto;}
+.about_group .jin_box{position: relative;}
+/* 위원회직 및 업무 modal */
+.about_groupModal {
+    display: none; /* Hidden by default */
+    position: fixed; z-index: 10;  left: 0; top: 0;
+    width: 100%; height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    -webkit-box-align: center; 
+    -ms-flex-align: center; 
+    align-items: center;
+}
+.modal-content {
+    position: relative; top: -15px; height: 80vh;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.modal-content img{width: 900px; height: auto;}
+.close {position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%);}
+
+
+/* 위원회소개 - 위원회 연혁 */
+.past {width: 100%; padding: 50px 0 0 0; overflow: hidden; font-size: 0;}
+.past .past_year {
+    position: relative; top: -20px;
+    display: inline-block; width: 25%;
+    font-size: 40px; font-weight: 700; font-style: italic; color: #f19f39;
+    vertical-align: top;
+}
+.past ul {position: relative; display: inline-block; width: 75%;}
+.past ul:after {content: ''; position: absolute; top: 0; left: -125px; width: 1px; height: 100%; background-color: #f19f39; opacity: 0.5;}
+.past ul:before { content: ''; position: absolute; top: 0; left: -130px; width: 10px; height: 10px; background-color: #f19f39; border-radius: 5px;}
+.past ul li {padding-bottom: 20px; margin-top: -10px;}
+.past ul li:last-child {padding-bottom: 60px;}
+.past ul:last-child:after {display: none;}
+.past .past_date {display: inline-block; margin-right: 40px; font-size: 18px; font-weight: 700; color: #333; vertical-align: top;}
+.past .past_desc {display: inline-block; color: #333;}
+.past .past_tit{display: block; padding-bottom: 20px; margin-top: 5px; font-size: 20px; line-height: 1; font-weight: 700; color: #f19f39; }
+
+/* 위원회소개 - 찾아오시는길 */
+.map .map_link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 1px solid #bbb;
+    background-color: lightgray;
+}
+.map .map_cont {margin: 60px 0 0 0 ;}
+.map .map_box+.map_box {margin-top: 30px;}
+.map .map_box div+div{margin-top: 20px;}
+.map .map_link .customoverlay{ position: relative; bottom: 58px; background-color: #fff; border-radius: 7px; border: 1px solid #bbb;}
+.map .map_link .customoverlay:after{
+    content:''; position: absolute; bottom: -9px; left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 14px; height: 14px;
+    background-color: #fff; border-right: 1px solid #bbb; border-bottom: 1px solid #bbb;
+}
+.map .map_link .customoverlay a{ display: block; font-size: 0;}
+.map .map_link .customoverlay .title{ display: inline-block; padding: 0 0 0 10px; font-size: 16px; font-weight: 500; line-height: 35px;}
+.map .map_link .customoverlay .icon{
+    position: relative; display: inline-block;
+    width: 30px; height: 35px; font-size: 0; line-height: 35px;
+    border-radius: 0 7px 7px 0; vertical-align: top;
+}
+.map .map_link .customoverlay .icon:after{
+    content: ''; position: absolute; top: 12px; left: 6px;
+    -webkit-transform: rotate(455deg); transform: rotate(45deg);
+    width: 5px; height: 5px; border: 3px solid; border-color: #555 #555 transparent transparent;
+}
+
+
+@media screen and (min-width: 801px) and (max-width: 1280px) {
+    /* 위원회소개 - 위원소개 */
+    .be_form{width: calc((100% - 25px) / 2)}
+    .be_form:nth-child(3n){margin: 0;}
+    .be_form:nth-child(2n){margin-right: 25px;}
+
+    /* 위원회소개 - 위원장소개 - 인사말 */
+    .about_greetings {padding: 60px 80px;}
+    .about_greetings .greeting_left .greeting_txt > p:nth-of-type(2) br{display: none;}
+
+
+    /* 위원회소개 - 위원회조직 및 업무 */
+    .about_group_img img{width: 100%;}
+
+    /* 위원회소개 - 위원회 연혁 */
+    .past ul:before{left: -11%;}
+    .past ul:after{left: -10.3%;}
+
+}
+
+@media screen and (max-width: 800px) {
+    /* 위원회소개 - 위원소개 */
+    .be_form{width: 100%; height: 100%;}
+    .be_form:nth-child(3n){margin: 0;}
+    .be_form .be_desc{display: block; width: 100%; padding: 25px 0 10px;}
+
+
+    /* 위원회소개 - 위원장소개 - 인사말 */
+    .about_greetings {padding: 35px 30px; border-top: 10px solid #e8e8e8; }
+    .about_greetings:after {width: 10px;}
+    .about_greetings:before {width: 10px;}
+    .about_greetings .greeting_img{display: block; margin: 0 auto;}
+    .about_greetings .greeting_left{display: block; width: 100%;}
+    .about_greetings .greeting_left .greeting_txt{padding-left: 0; padding-top: 30px;}
+    .about_greetings .greeting_left .greeting_txt > p:nth-of-type(2) br{display: none;}
+    .about_greetings .greeting_left .greeting_txt > p + p{margin-bottom: 15px;}
+    .about_greetings .greeting_txt_name .name{font-size: 18px;}
+
+
+    /* 위원회소개 - 위원장소개 - 프로필 */
+    .about_profile .jin_box + .jin_box{margin-top: 25px;}
+    .about_profile ul{padding: 15px 20px;}
+    .about_profile li + li{margin-top: 10px;}
+    .about_profile span{display: block; width: 100%; line-height: 1.3;}
+
+
+    /* 위원회소개 - 위원회조직 및 업무 */
+    .about_group_img img{width: 100%;}
+    .about_group .table{overflow-x: auto;}
+    .about_group .table table{table-layout: auto; width: 150%;}
+
+    /* 위원회소개 - 위원회 연혁 */
+    .past {padding: 0; }
+    .past .past_year {top: 0; display: block; width: 100%; font-size: 30px;}
+    .past ul{width: 100%;}
+    .past ul:after{display: none; }
+    .past ul:before{display: none; }
+    .past ul li{margin-top: 0;}
+    .past ul li:last-child{padding-bottom: 40px;}
+    .past .past_tit{padding-bottom: 0; padding-top: 10px; font-size: 18px;}
+    .past .past_date{display: block; width: 100%; margin-right: 0; margin-bottom: 4px; line-height:1.5;}
+    .past .past_desc{display: block; width: 100%; line-height: 1.7;}
+
+    /* 위원회소개 - 찾아오시는길 */
+    .map .map_cont{margin: 35px 0 0 0 ;}
+}
+
