@@ -1,0 +1,384 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {display: block;}
+ol, ul {list-style: none; list-style-type: none; zoom: 1;}
+br{opacity: 0;}
+
+
+/*******************************************************************
+default
+********************************************************************/
+html, body {
+  height: 100%;
+  position: relative;
+}
+
+input[type=button], input[type=text], input[type=image], input[type=submit], textarea, select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+
+textarea {overflow: hidden;}
+textarea.content{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+}
+
+/* IE6 */
+:first-child + html .clearFix {zoom: 1;}
+
+/* IE7 */
+.hide, .hidden, .blind, caption, legend {
+  opacity: 0;
+  text-indent: -999em;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+.clearFix:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+* html .clearFix {zoom: 1;}
+
+/* 뷰표트 변환시 폰트크기 자동확대 방지 */
+body {
+  -webkit-text-size-adjust: none;
+}
+
+input[type='text'], input[type='password'], input[type='submit'], input[type='search'] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+input[type='date'] {
+  background-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:active, a:hover {
+  text-decoration: none;
+}
+
+address, caption, cite, code, dfn, em, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+input, select, textarea, button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+input[type=radio] {
+  -webkit-appearance: radio;
+  -moz-appearance: radio;
+  appearance: radio;
+}
+
+input[type=submit], input[type=button], button {
+  cursor: pointer;
+}
+
+input[type=checkbox], input[type=checkbox] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  appearance: checkbox;
+}
+
+input[type=checkbox] {
+  /* position: static !important; */
+  vertical-align: middle;
+}
+
+input[type=checkbox] + label:before {
+  display: none;
+}
+
+/* input 기본 스타일 초기화 */
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+input::-ms-clear {
+  display: none;
+}
+
+/* input type number 에서 화살표 제거 */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+
+/* IE10 이상을 위한 css */
+input::placeholder {
+    font-size: 13px; color: #999;
+    opacity: 1; /* 파이어폭스에서 뿌옇게 나오는 현상을 방지하기 위한 css */
+}
+input::-webkit-input-placeholder {
+    font-size: 13px; color: #999;
+}
+/* IE */
+input:-ms-input-placeholder {
+    font-size: 13px; color: #999;
+}
+/* Firefox */
+input:-mos-input-placeholder {
+    font-size: 13px; color: #999;
+}
+
+/* Select box 스타일 초기화 */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* IE 에서 Select box 화살표 제거 */
+select::-ms-expand {
+  display: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+html {
+  font-family: 'NanumGothic', 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', Dotum, Arial, sans-serif;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, strong, table th, input, textarea, select, button {
+  font-weight: 500;
+  font-size: inherit;
+  color: #000;
+  letter-spacing: -0.5px;
+  margin: 0;
+  padding: 0;
+}
+input[type="checkbox"] {
+  display: inline-block;
+  width: 16px !important;
+  height: 16px !important;
+}
+
+@font-face {
+  font-family: 'NanumGothic';
+  font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/NanumGothicLight.eot);
+  src: url(../fonts/NanumGothicLight.woff) format("woff"),
+        url(../fonts/NanumGothicLight.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'NanumGothic';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/NanumGothic.eot);
+  src: url(../fonts/NanumGothic.woff) format("woff"),
+        url(../fonts/NanumGothic.otf) format("opentype");
+}
+
+@font-face {
+  font-family: 'NanumGothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/NanumGothicBold.eot);
+  src: url(../fonts/NanumGothicBold.woff) format("woff"),
+        url(../fonts/NanumGothicBold.otf) format("opentype");
+}
+
+
+
+
+
+
+
+
+/* ============= 개인정보보호위원회 메인 페이지 ============= */
+body{background-color: #f6f6f6;}
+body * {font-family: 'NanumGothic';}
+
+/* 접근성 */
+.accessibility{overflow:hidden;position:relative;z-index:1024;width:100%;}
+.accessibility a{display:block;overflow:hidden;height:1px;width:1px;margin:0 -1px -1px 0;font-size:0;line-height:0;text-align:center;}
+.accessibility a:focus,
+#accessibility a:hover,
+#accessibility a:active{width:auto;height:20px;margin:0;padding:8px 0 0 15px;background:#20262c;font-size:12px;font-weight:700;line-height:1;color:#fff;}
+
+/* 공통 */
+.dblue{background-color: #082078 !important;}
+.lblue{background-color: #3e8cf8 !important;}
+
+.login_area{
+    position: relative; overflow: hidden;
+    width: 100%; height: 100%;
+    display: -webkit-box; display: -ms-flexbox; display: flex;
+    -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+    -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+.login_area:before{
+    content: '';
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    background: url(../img/common_bg.jpg) no-repeat;
+    width: 1920px; height: 1080px;
+}
+
+.login_wrap{
+    position: relative;
+    width: 965px; height: 495px; max-width: 100%; 
+    background-color: #fff; border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.login_wrap h1{position: absolute; top: -60px; left: 0; width: 300px; height: 48px;}
+.login_wrap h1 a{display: block;}
+.login_wrap h1 img{width: 100%;}
+
+.login{width: 100%; height: 100%;}
+.login .login_bg{
+    background: url(../img/ver1_bg_small.jpg) no-repeat; background-size: cover; 
+    width: 100%; height: 385px;
+    border-top-left-radius: 15px; border-top-right-radius: 15px;
+}
+.login .login_bottom{
+    display: flex;
+    -webkit-justify-content: space-between; justify-content: space-between;
+    width: 965px; height: 110px;
+    border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;
+}
+.login .login_bottom > div{
+    position: relative; width: 50%;
+    display: -webkit-box; display: -ms-flexbox; display: flex;
+    -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+    -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+    flex-direction: column;
+}
+.login .login_bottom .left:before{content: ''; position: absolute; top: 20px; right: 0; width: 1px; height: 72px; background-color: #e0e3ec; }
+.login .btn{
+    width: 260px; height: 50px; margin-bottom: 12px;
+    font-size: 20px; line-height: 50px;
+    font-weight: 700; color: #fff;
+    border-radius: 5px;
+}
+.login .login_bottom ul{display: block; font-size: 0;}
+.login .login_bottom ul li{position: relative; display: inline-block;}
+.login .login_bottom ul li:nth-child(1):before{content: ''; position:absolute; top: 0; right: -12px; width: 1px; height: 12px; background-color: #b2b2b2;}
+.login .login_bottom ul li:nth-child(1){margin-right: 10px;}
+.login .login_bottom ul li:nth-child(2){margin-left: 10px;}
+.login .login_bottom ul li a{font-size: 13px; line-height: 1; color: #666;}
+.lg_check{margin-top: 13px;}
+
+
+/* ================================= modal 공통 ================================= */
+.modal {
+    display: none;
+    position: fixed; z-index: 10; top: -4%; left: 0;
+    width: 100%; height: 100%; 
+    overflow: auto;
+    -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+    -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+}
+.modal-content {
+    position: relative; top: -17px;
+    display: -webkit-box; display: -ms-flexbox; display: flex;
+    -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+    flex-direction: column;
+    width: 355px; height: 235px;
+    padding: 0 38px; 
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.modal-head{padding: 21px 0 16px; font-size: 18px; line-height: 1; font-weight: 700; text-align: center; color: #3e8cf8;}
+.modal-inner{width: 100%;}
+.loginList li{border: 1px solid #d2d2d2; margin-bottom: 7px; border-radius: 5px;}
+.loginList li input{
+    width: 100%; height: 35px; padding: 0 15px;
+    font-size: 13px; line-height: 35px;
+    color: #555; letter-spacing: 1px; background: transparent;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+.loginList li input:focus, .loginList li input:active{outline: none; background-color: transparent;}
+
+.loginList li input::placeholder{font-size: 11px; font-weight: 300; color: #a4a4a4 !important; letter-spacing: -0.5px;}
+
+.loginBtn{display: block; width: 100%; height: 37px; margin-top: 10px; vertical-align: top; border-radius: 5px; overflow: hidden;}
+.loginBtn .button{ 
+    display: -webkit-box; display: -ms-flexbox; display: flex;
+    -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+    -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+    width: 100%; height: 100%;
+    font-size: 16px; font-weight: 700; color: #fff;
+}
+
+.modal .close {
+    position: absolute; top: 0; right: 0;
+    width: 25px; height: 25px;
+    font-size: 0;
+    background-color: #bcbcbc; border-radius: 0;
+    cursor: pointer; vertical-align: top;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+.modal .close:before{content:''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(45deg); width: 17px; height: 2px; background-color: #fff; border-radius: 10px;}
+.modal .close:after{content:''; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(135deg); width: 17px; height: 2px; background-color: #fff; border-radius: 10px;}
+
+/* ================================= checkbox공통  ================================= */
+.custom_checkstyle1 input[type="checkbox"] {display:none;}
+.custom_checkstyle1 input[type="checkbox"] + label{font-size: 13px; color: #666;}
+.custom_checkstyle1 input[type="checkbox"] + label span {
+    display:inline-block; width: 15px; height: 15px; margin: -2px 7px 0 0;
+    background:url(../img/checkbox.png) left top no-repeat;
+    vertical-align:middle; cursor:pointer;
+}
+.custom_checkstyle1 input[type="checkbox"]:checked + label span {background:url(../img/checkbox.png) -25px top no-repeat;}

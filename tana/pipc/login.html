@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>개인정보위원회 로그인</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+	<meta name="title" content="개인정보위원회"/>
+	<meta name="keywords" content="개인정보위원회"/>
+    <meta name="description" content="개인정보위원회의 로그인 정보를 제공합니다."/>
+    <link type="text/css" href="css/base.css" media="all" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script> 
+</head>
+
+<body>
+    <div class="accessibility">
+        <a href="#contents">본문 바로가기</a>
+    </div>
+
+    <!-- s : login -->
+    <div class="login_area">
+        <div class="login_wrap">
+            <h1><a href="login_ver1.html"><img src="img/logo.png" alt="개인정보위원회"></a></h1>
+            <section class="login">
+                <div class="login_bg">
+                    <p class="hidden">안전한 개인정보, 신뢰하는 데이터 시대</p>
+                    <p class="hidden">보호할 수 없다면 증명할 수 없습니다.</p>
+                </div>
+                <div class="login_bottom" id="contents">
+                    <div class="left">
+                        <h2>
+                            <button type="button" class="btn dblue">행정전자서명 로그인</button>
+                        </h2>
+                        <ul>
+                            <li><a href="#">인증서 등록</a></li>
+                            <li><a href="#">GPKI 다운로드</a></li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <h2>
+                            <button type="button" class="btn lblue" id="modal_loginBtn">아이디 로그인</button>
+                        </h2>
+                        <ul>
+                            <li><a href="#">계정신청</a></li>
+                            <li><a href="#">사용자 메뉴얼</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- e : login -->
+
+    <!-- s : login modal -->
+    <div id="modal_loginModal" class="modal">
+        <div class="modal-content">
+            <strong class="modal-head">아이디 로그인</strong>
+            <div class="modal-inner">
+                <ul class="loginList">
+                    <li>
+                        <label class="hidden" for="login">아이디</label>
+                        <input name="login" id="login" type="text" placeholder="아이디를 입력하세요.">
+                    </li>
+                    <li>
+                        <label class="hidden" for="passwd">비밀번호</label>
+                        <input name="passwd" id="passwd" type="password" placeholder="비밀번호를 입력하세요.">
+                    </li>
+                </ul>
+                <p class="loginBtn lblue">
+                    <input type="submit" value="로그인" class="button lblue">
+                </p>
+                <div class="lg_check">
+                    <div class="custom_checkstyle1">
+                        <input type="checkbox" id="lg_save" name="lg_save" />
+                        <label for="lg_save"><span></span>아이디 저장</label>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="close">닫기</button>
+        </div>
+    </div>
+    <!-- e : login modal -->
+
+    <script type="text/javascript">
+    $( document ).ready(function() {
+        var modal = document.getElementById('modal_loginModal');
+        var btn = document.getElementById("modal_loginBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "flex";
+        }
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    });
+    </script>
+
+</body>
+</html>
