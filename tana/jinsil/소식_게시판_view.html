@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>게시판</title>
+    <meta name="yandex-verification" content="671979c5f8a2c452">
+    <meta name="subject" content="진실화해위원회">
+    <meta name="description" content="진실·화해를 위한 과거사정리위원회에 대한 정보를 제공합니다.">
+    <meta name="Keywords" content="진실화해위원회,진화해">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content=">진실화해위원회 ">
+    <meta property="og:description" content="진실·화해를 위한 과거사정리위원회에 대한 정보를 제공합니다.">
+    <meta property="og:url" content="https://www.jinsil.go.kr/jinsil/">
+    <meta property="og:site_name" content="진실화해위원회">
+
+    <link type="text/css" href="css/base.css" media="all" rel="stylesheet" />
+    <link type="text/css" href="css/style.css" media="all" rel="stylesheet" />
+    <link type="text/css" href="css/board.css" media="all" rel="stylesheet" />
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+
+    <!-- s: .header -->
+    <header class="header">
+        <div class="header_wrap">
+            <div class="header_logo">
+                <h1>
+                    <a href="main.html"><span class="hidden">진실화해위원회</span></a>
+                </h1>
+                <div class="temporary">
+                    <img class="temp_pc" src="img/temporary.png" alt="임시홈페이지"/>
+                    <img class="temp_m" src="img/temporary_m.png" alt="임시홈페이지"/>
+                </div>
+            </div>
+            <nav>
+                <h2 class="blind">주메뉴</h2>
+                <div class="gnb_home mobile_is_only">
+                    <a href="#">HOME</a>
+                </div>
+                <div class="gnb_tit mobile_is_only">
+                    <a href="#">전체메뉴</a>
+                </div>
+                <ul class="gnb_menu" id="gnb">
+                    <li class="gnb_menu_list"><a href="소개_위원장소개_인사말.html" title="위원회 소개">위원회 소개</a>
+                        <div class="gnb_dropmenu">
+                            <ul>
+                                <li><a href="소개_위원장소개_인사말.html" title="위원장 소개">위원장 소개</a></li>
+                                <li><a href="소개_조직및업무.html" title="위원회 조직 및 업무">위원회 조직 및 업무</a></li>
+                                <li><a href="소개_연혁.html" title="위원회 연혁">위원회 연혁</a></li>
+                                <li><a href="소개_찾아오시는길.html" title="찾아오시는 길">찾아오시는 길</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="gnb_menu_list"><a class="active" href="소식_공지사항_list.html" title="위원회 소식 및 활동">위원회 소식 및 활동</a>
+                        <div class="gnb_dropmenu">
+                            <ul>
+                                <li><a href="소식_공지사항_list.html" title="공지사항">공지사항</a></li>
+                                <li><a href="소식_보도자료_list.html" title="보도자료">보도자료</a></li>
+                                <li><a href="소식_홍보자료_list.html" title="홍보자료">홍보자료</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="gnb_menu_list"><a href="자료_1기_조사보고서.html" title="위원회 자료">위원회 자료</a>
+                        <div class="gnb_dropmenu">
+                            <ul>
+                                <li><a href="자료_1기_조사보고서.html" title="1기 위원회">1기 위원회</a></li>
+                                <li><a href="자료_1기_조사보고서.html" title="2기 위원회">2기 위원회</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="gnb_menu_list"><a href="진실규명신청안내.html" title="진실규명 신청">진실규명 신청</a></li>
+                    <li class="gnb_menu_list"><a href="과거사관련사이트.html" title="관련사이트">관련사이트</a></li>
+                </ul>
+            </nav>
+            <button class="btn_sitemap tablet_is_only" id="btn_sitemap">
+                <p class="hidden">사이트맵 열기/닫기</p>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+            <button class="btn_allmenu mobile_is_only" id="btn_allmenu">
+                <p class="hidden">전체메뉴 열기/닫기</p>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </div>
+        <div class="sitemap">
+            <div class="sitemap_wrap">
+                <ul>
+                    <li><a href="#">위원회 소개</a>
+                        <ul class="menu_container">
+                            <li><a href="소개_위원장소개_인사말.html" title="위원장 소개">위원장 소개</a></li>
+                            <li><a href="소개_조직및업무.html" title="위원회 조직 및 업무">위원회 조직 및 업무</a></li>
+                            <li><a href="소개_연혁.html" title="위원회 연혁">위원회 연혁</a></li>
+                            <li><a href="소개_찾아오시는길.html" title="찾아오시는 길">찾아오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">위원회 소식 및 활동</a>
+                        <ul class="menu_container">
+                            <li><a href="소식_공지사항_list.html" title="공지사항">공지사항</a></li>
+                            <li><a href="소식_보도자료_list.html" title="보도자료">보도자료</a></li>
+                            <li><a href="소식_홍보자료_list.html" title="홍보자료">홍보자료</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">위원회 자료</a>
+                        <ul class="menu_container">
+                            <li><a href="자료_1기_조사보고서.html" title="1기 위원회">1기 위원회</a></li>
+                            <li><a href="자료_1기_조사보고서.html" title="2기 위원회">2기 위원회</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="진실규명신청안내.html" title="진실규명 신청">진실규명 신청</a></li>
+                    <li><a href="과거사관련사이트.html" title="관련사이트">관련사이트</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav_bg"></div>
+    </header>
+    <!-- e: .header -->
+    <!-- s: .sidebar -->
+    <aside class="sidebar">
+        <div class="inner">
+            <h2 class="h2_tit"><strong>위원회 소식 및 활동</strong></h2>
+            <h3 class="hidden">공지사항</h3>
+            <div id="leftMenu" class="lnb">
+                <ul id="subMenuList" class="lnb_wrap">
+                    <li><a href="소식_공지사항_list.html">공지사항</a></li>
+                    <li><a href="소식_보도자료_list.html">보도자료</a></li>
+                    <li><a href="소식_홍보자료_list.html">홍보자료</a></li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <!-- e: .sidebar -->
+    <!-- s: .breadcrumb -->
+    <div class="breadcrumb">
+        <div class="inner">
+            <span id="pageLinkNav">
+                <a href="main.html" class="menu-home"><span>Home</span></a>
+                <span class="gt"> &gt; </span>
+                <a href="소식_공지사항_list.html"><span>위원회 소식 및 활동</span></a>
+                <span class="gt"> &gt; </span>
+                <span class="menu-active">게시글 상세보기</span>
+            </span>
+        </div>
+    </div>
+    <!-- e: .breadcrumb -->
+    <!-- s: .contents -->
+    <div id="contents" class="contents">
+        <div class="inner">
+            <!-- s: .view -->
+            <div class="view">
+                <div class="view_header">
+                    <h3 class="tit">진실·화해를 위한 과거사정리 기본법에 의한 진실규명 신청 안내</h3>
+                    <div class="desc">
+                        <dl>
+                            <dt>작성자</dt>
+                            <dd>관리자</dd>
+                        </dl>
+                        <dl>
+                            <dt>작성일</dt>
+                            <dd>2021-03-25</dd>
+                        </dl>
+                        <dl>
+                            <dt>조회수</dt>
+                            <dd>129</dd>
+                        </dl>
+                    </div>
+                    <div class="desc desc_files">
+                        <dl>
+                            <dt>첨부파일</dt>
+                            <dd>
+                                <span class="file">
+                                    <img src="../img/attachedfile.png" alt="파일 다운로드">&nbsp;
+                                    <a href="resources/201210 (조간) 2기 진실화해위원회 출범. 진실규명 업무 개시.hwp" download>
+                                        201210 (조간) 2기 진실화해위원회 출범. 진실규명 업무 개시.hwp&nbsp;(<span id="download1">다운로드 130 회</span>)
+                                    </a>
+                                </span>
+                          </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="view_content">
+                    - 지난 2020년 12월 10일 제2기 진실⸱화해를위한과거사정리위원회(이하 진실화해위원회, 위원장 정근식)가 출범한 후 2021년 1월 28일이면 위원회 출범 50일 째가 되는 날이다.<br/>
+                    - 이에 제2기 진실화해위원회는 출범 50일을 맞아 위원회 추진경과를 국민 여러분께 보고드리고, 국민⸱정치권⸱언론 등 각 계 각 층의 지속적인 관심과 협조를 부탁드리기 위해 1월 27일 오전 10시 위원회 대회실에서 기자간담회를 개최하였다.<br/>
+                    - 이날 간담회는 진실화해위원회 위원장이 간략히 추진경과를 설명한 후 기자들의 현안 질의에 답변하는 형식으로 1시간 여 동안 진행되었다.<br/>
+                    - 1기 활동에 대한 평가, 조사과정의 투명성 및 위원회의 정치적 중립성 확보 방안 등 향후 위원회 진실규명 업무의 전반적인 추진에 대한 다양한 질의가 이루어졌다.<br/>
+                    - 2021년 1월 26일 현재 총 1,347건, 2,178명에 달하는 사람들이 진실규명 신청을 접수하였다. 신청기간이 2년 인데도 불구하고 50일이 채 되기도 전에 신청이 1,300건 넘었다는 것은 피해자와 유가족들의 진실규명에 대한 간절한 기대를 방증한다고 볼 수 있다.<br/>
+                    - 다만, 이렇게 많은 사건들이 들어왔음에도 최근 국회에서 추천된 위원 1명이 자진 사퇴함으로써 9명(대통령 지명 1명, 국회 선출 8명)의 위원회 구성이 완료되지 못해 접수된 사건들에 대한 조사개시 여부와 진실규명 조사를 본격적으로 시작하지 못하고 있는 실정이다.<br/>
+                    - 정근식 위원장은 “하루빨리 위원회 구성이 완료되어 피해자와 유가족분들의 오랜 간절함에 더 이상의 기다림이 더해지지 않도록 정치권의 지속적인 관심과 협조를 부탁드리며 우리 위원회도 과거사 진실규명 완결을 위해 제2기 진실화해위원회가 마지막이라는 각오로 과거의 역사적 진실을 정확하게 규명하고 이를 바탕으로 평화와 화해의 길을 열어가도록 모든 역량을 모아 나갈 것이다”라고 밝혔다.
+                </div>
+            </div>
+            <div class="view_bottom text-right">
+                <a class="btn_style2" href="소식_공지사항_list.html">목록</a>
+            </div>
+            <!-- e: .view -->
+            <!-- s: .notice_bottom -->
+            <div class="notice_bottom">
+                <dl>
+                    <dt>이전글</dt>
+                    <dd class="title">
+                        <a href="소식_게시판_view.html">'21. 1. 27. 진실화해위원회 기자간담회 개최</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>다음글</dt>
+                    <dd class="title">
+                        <a href="소식_게시판_view.html">'21. 2. 5. 경기도지사 면담 및 선감학원 현장 방문</a>
+                    </dd>
+                </dl>
+            </div>
+            <!-- e: .notice_bottom -->
+        </div>
+    </div>
+    <!-- e: .contents -->
+    <!-- s: .footer -->
+    <footer class="footer">
+        <div class="inner">
+            <ul class="footer_nav">
+                <li><a href="소개_찾아오시는길.html">찾아오시는 길</a></li>
+            </ul>
+            <div class="add">
+                <address>(04554) 서울특별시 중구 퇴계로 173, 남산스퀘어 빌딩(5~6층)</address>
+            </div>
+            <p class="copy">Copyright 2020 Truth and Reconciliation Commission, Republic of Korea All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- e: .footer -->
+
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>
