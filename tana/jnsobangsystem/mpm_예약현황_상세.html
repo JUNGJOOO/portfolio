@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>예약현황 상세</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+	<meta name="title" content="전남소방 행정시스템"/>
+	<meta name="keywords" content="전남소방 행정시스템"/>
+    <meta name="description" content="전남소방 행정시스템의 이용안내 정보를 제공합니다."/>
+    <!-- css -->
+    <link type="text/css" href="css/base.css" media="all" rel="stylesheet" />
+    <link type="text/css" href="css/mpm_common.css" media="all" rel="stylesheet" />
+</head>
+
+<body>
+<div class="mpm mpmi">
+
+    <!--header-->
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo">영상전략 회의실</h1>
+            <div class="util">
+                <p>
+                    <label for="TODAY" class="hidden">오늘날짜</label>
+                    <input type="text" id="TODAY" value="" disabled="disabled"/>
+                </p>
+                <strong>
+                    <b>
+                        <label for="TIME" class="hidden">오늘시간</label>
+                        <input type="text" id="TIME" value="" disabled="disabled"/>
+                    </b>
+                </strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- content -->
+    <div id="contents" class="contents">
+        <div class="inner">
+
+            <section class="boxd none">
+                <h2 class="mpmi_left">회의중</h2>
+                <div class="mpmi_right">
+                    <p class="mpmi_during">10:00 ~ 12:00</p>
+                    <p class="mpmi_detail">구조구급과 / 홍길동</p>
+                </div>
+                <div class="mpmi_bottom">
+                    전국적 화재안전특별조사 시민조사단 참여 구성회의 시민조사단 참여 구성회의 구성회의구성회의구성회의시민조사단 참여 구성회의
+                </div>
+            </section>
+
+<!-- 예약이 없습니다 : "none" class 추가 -->
+            <section class="boxd">
+                <h2 class="mpmi_left mpmi_left2">예약이 없습니다.</h2>
+                <div class="mpmi_bottom">
+                    회의실 담당자 : 홍길동<br/>
+                    연락처: 010-1234-1234
+                </div>
+            </section>
+
+
+            <div class="btn_wrap">
+                <a href="mpm_예약현황_일별.html"><span>회의실</span> 예약현황</a>
+                <a href="mpm_회의실이용안내.html"><span>회의실</span> 이용안내</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/day.js"></script>
+<script type="text/javascript" src="js/mpm_common.js"></script>
+
+</body>
+</html>

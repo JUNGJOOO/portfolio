@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+/* gin groupoinfo */
+.dpt{height: 1080px; background: url(../images/gi_area.jpg) no-repeat; background-position: center;}
+.dpt .header{position: relative; height: 165px; background-color: #235196; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.dpt .header *{color: #e4f0ff;}
+.dpt .header .inner{
+    display: -webkit-box; display: -ms-flexbox; display: flex;
+    -webkit-justify-content: space-between; justify-content: space-between;
+    -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+    height: 100%;
+}
+.dpt .header h1{font-size: 120px; line-height:1; font-weight: 600; letter-spacing: -7px;}
+.dpt .header h1 span{font-size: 90px; line-height: 1; font-weight: 100;}
+.dpt .header .util{text-align: right; letter-spacing: -1px;}
+.dpt .header .util input{width: 100%; text-align: right; background: transparent; }
+.dpt .header .util p{display: block; margin-bottom: 10px;}
+.dpt .header .util p input{font-family: 'Arita'; font-size: 30px; font-weight: 100;}
+.dpt .header .util strong{display: block;}
+.dpt .header .util strong b{display: block;}
+.dpt .header .util strong b input{width: 100%; height: 65px; font-family: 'Arita'; font-size: 80px; line-height: 60px; font-weight: 600;}
+.dpt .inner{width: 1720px; margin: 0 auto;}
+.dpt .control{position: fixed; right: 50px; bottom: 25px; height: 200px;}
+
+.boxg .group_head{
+    height: 30px;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.dpt .group > ul li{margin: 0 0.5rem;}
+.dpt .modal-profile:after{content: ''; display: block; clear: both;}
+.dpt .modal-profile ul{width: 450px;}
+
+
+
+
+/* ==================================== modal ==================================== */
+/* modal style2 */
+.modal-s2 .modal-content{width: 950px; border-top: 30px solid #0062bc; border-bottom: 30px solid #0062bc; }
+.modal-s2 .close{top: -60px;}
+
+
+/* 팀장이 없을때 teamnone 클래스 추가 */
+.teamnone .boxg_section1 {height: 115px;}
+.teamnone .boxg_section1:before {height: 170px;}
+.teamnone .boxg_section2 b{display: block;}
+
+
+/* 팀원이 없을때 teamonly*/
+.teamonly .boxg_section:before{display: none;}
+
+
+/* 본부장실 수정 */
+.dpt_director .group_first.boxg_section1:before{display: none;}
+.dpt_director .boxg_section1:before{display: none;}
+
+.group_first .boxg.director_box { width: 600px; }
+.group_first .boxg.director_box .boxg_wrap { height: 300px; padding: 40px 40px 0 40px; }
+.group_first .boxg.director_box .group_head{height: 60px; font-size: 36px; line-height: 60px;}
+
+.group_first .boxg.director_box .group_tit {padding: 25px 0 15px; font-size: 46px; }
+.group_first .boxg.director_box .group_onf em {font-size: 46px; }
+.group_first .boxg.director_box .group_desc {font-size: 38px; overflow: visible; -webkit-line-clamp: 2;}
+.group_first .boxg.director_box .group_cont {width: 290px;}
+.group_first .boxg.director_box .group_img {width: 200px; height: 200px; }
+
+.boxg.sub_director_box {width: 440px;}
+.boxg.sub_director_box .group_cont {width: 210px;} 
+.boxg.sub_director_box .boxg_wrap {height: 210px; padding: 40px 40px 0 40px}
+.boxg.sub_director_box .group_tit {padding: 20px 0 10px; font-size: 32px; }
+.boxg.sub_director_box .group_onf em{font-size: 32px; }
+.boxg.sub_director_box .group_desc {font-size: 28px }
+.boxg.sub_director_box .group_img {width: 120px; height: 120px; }
+.boxg.sub_director_box .group_head {height: 50px; font-size: 30px; line-height: 50px; }

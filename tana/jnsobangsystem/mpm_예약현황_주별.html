@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>예약현황 주별</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+	<meta name="title" content="전남소방 행정시스템"/>
+	<meta name="keywords" content="전남소방 행정시스템"/>
+    <meta name="description" content="전남소방 행정시스템의 이용안내 정보를 제공합니다."/>
+    <!-- css -->
+    <link type="text/css" href="css/base.css" media="all" rel="stylesheet" />
+    <link type="text/css" href="css/mpm_common.css" media="all" rel="stylesheet" />
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+<div class="mpm mpmw">
+
+    <!--header-->
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo">영상전략 회의실</h1>
+            <div class="util">
+                <p>
+                    <label for="TODAY" class="hidden">오늘날짜</label>
+                    <input type="text" id="TODAY" value="" disabled="disabled"/>
+                </p>
+                <strong>
+                    <b>
+                        <label for="TIME" class="hidden">오늘시간</label>
+                        <input type="text" id="TIME" value="" disabled="disabled"/>
+                    </b>
+                </strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- content -->
+    <div id="contents" class="contents">
+        <div class="inner mpmw_area boxd">
+            <section>
+                <ul class="tab_header">
+                    <li><a href="mpm_예약현황_일별.html">일별보기</a></li>
+                    <li class="active"><a href="mpm_예약현황_주별.html">주별보기</a></li>
+                </ul>
+
+                <div class="mpmw_week">
+                    <div class="week_tit">
+                        <i>시간</i>
+                        <ul>
+                            <li>
+                                <div>
+                                    <span>27</span> <em>SUN</em>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span>28</span> <em>MON</em>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span>29</span> <em>TUE</em>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span>30</span> <em>WED</em>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span>31</span> <em>THUR</em>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span>1</span> <em>FRI</em>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span>2</span> <em>SAT</em>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="table table_week">
+                        <table summary="영상전략 회의실의 주별보기 표로 날짜별, 시간별로 예약현황을 알수있도록 구성되어 있습니다.">
+                            <caption>영상전략 회의실 주별보기 표</caption>
+                            <thead class="hidden">
+                                <tr>
+                                    <th scope="col">시간</th>
+                                    <th scope="col"><span>27</span> <em>SUN</em></th>
+                                    <th scope="col"><span>28</span> <em>MON</em></th>
+                                    <th scope="col"><span>29</span> <em>TUE</em></th>
+                                    <th scope="col"><span>30</span> <em>WED</em></th>
+                                    <th scope="col"><span>31</span> <em>THUR</em></th>
+                                    <th scope="col"><span>1</span> <em>FRI</em></th>
+                                    <th scope="col"><span>2</span> <em>SAT</em></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id="time00">
+                                    <th>00:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time01">
+                                    <th>01:00</th>
+                                    <td>
+                                        <div class="week-sch week-sch1 week-part1 openModal">
+                                            <strong>회의제목 회의제목 회의제목 회의제목</strong>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="week-sch week-sch2 week-part1">
+                                            <strong>회의제목 회의제목 회의제목 회의제목 회의제목</strong>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="week-sch week-sch3 week-part3">
+                                            <strong>회의제목 회의제목 회의제목 회의제목 회의제목</strong>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="week-sch week-sch4 week-part2">
+                                            <strong>회의제목 회의제목 회의제목 회의제목 회의제목</strong>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="week-sch week-sch5 week-part2">
+                                            <strong>회의제목 회의제목 회의제목 회의제목 회의제목</strong>
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time02">
+                                    <th>02:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time03">
+                                    <th>03:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time04">
+                                    <th>04:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time05">
+                                    <th>05:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time06">
+                                    <th>06:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time07">
+                                    <th>07:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time08">
+                                    <th>08:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time09">
+                                    <th>09:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time10">
+                                    <th>10:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time11">
+                                    <th>11:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time12">
+                                    <th>12:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time13">
+                                    <th>13:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time14">
+                                    <th>14:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time15">
+                                    <th>15:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time16">
+                                    <th>16:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time17">
+                                    <th>17:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time18">
+                                    <th>18:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time19">
+                                    <th>19:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time20">
+                                    <th>20:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time21">
+                                    <th>21:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time22">
+                                    <th>22:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr id="time23">
+                                    <th>23:00</th>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="control">
+                        <div onclick="scollTop_week()" class="control-prev">
+                            <div class="triangle">이전</div>
+                        </div>
+                        <div onclick="scrollBottom_week()" class="control-next">
+                            <div class="triangle">다음</div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div id="modal" class="modal modal-s1">
+        <div class="modal-content">
+            <div class="modal-head"><b>화재안전특별조사에 대한 회의 화재안전특별조사에 대한 회의</b></div>
+            <div class="modal-inner">
+                <ul>
+                    <li>
+                        <p class="modal-tit">회의일정</p>
+                        <p class="modal-desc">2020년 12월 1일(화) 10:00 ~ 12:00</p>
+                    </li>
+                    <li>
+                        <p class="modal-tit">신청자</p>
+                        <p class="modal-desc">ㅇㅇㅇㅇ부 홍길동</p>
+                    </li>
+                    <li>
+                        <p class="modal-tit">참여인원</p>
+                        <p class="modal-desc">3명</p>
+                    </li>
+                    <li>
+                        <p class="modal-tit">회의내용</p>
+                        <p class="modal-desc"><em>전국적 화재안전특별조사 시민조사단 참여 구성회의 전국적 화재안전특별조사 시민조사단 참여 구성회의</em></p>
+                    </li>
+
+                    <li>
+                        <p class="modal-tit">회의실관리자</p>
+                        <p class="modal-desc">홍길동 / 010-1234-5678</p>
+                    </li>
+                </ul>
+            </div>
+            <span class="close btn_style1">닫기</span>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/day.js"></script>
+<script type="text/javascript" src="js/mpm_common.js"></script>
+
+</body>
+</html>

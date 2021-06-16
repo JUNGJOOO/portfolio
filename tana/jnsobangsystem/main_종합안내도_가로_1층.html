@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>종합안내도 가로 1층</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+	<meta name="title" content="전남소방 행정시스템"/>
+	<meta name="keywords" content="전남소방 행정시스템"/>
+    <meta name="description" content="전남소방 행정시스템의 이용안내 정보를 제공합니다."/>
+    <!-- css -->
+    <link type="text/css" href="css/base.css" media="all" rel="stylesheet" />
+    <link type="text/css" href="css/main_common.css" media="all" rel="stylesheet" />
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        .main_row .map_area:hover ul.row1f li:nth-of-type(4){background-color: #333; color: #fff; cursor: pointer;}
+    </style>
+</head>
+<body class="row">
+<div class="main_row">
+    <div id="contents" class="contents">
+        <div class="floor_wrap">
+            <strong class="floor_title">1F</strong>
+            <ul>
+                <li><a href="main_종합안내도_가로_4층.html">4층</a></li>
+                <li><a href="main_종합안내도_가로_3층.html">3층</a></li>
+                <li><a href="main_종합안내도_가로_2층.html">2층</a></li>
+                <li class="active"><a href="main_종합안내도_가로_1층.html">1층</a></li>
+            </ul>
+        </div>
+        <div class="inner">
+            <div class="map_area">
+                <img src="images/map_row1f.png" usemap="#image-map-row1" alt="가로 1층 평면도"/>
+                <map name="image-map-row1">
+                    <area class="" target="_self" alt="" title="" href="#" coords="92,96,583,92,524,672,11,667" shape="poly">
+                    <area class="" target="_self" alt="" title="" href="#" coords="587,91,797,95,785,310,572,308" shape="poly">
+                    <area class="" target="_self" alt="" title="" href="#" coords="571,314,785,317,768,669,533,672" shape="poly">
+                    <area class="row_floorModal1-1" target="_self" alt="" title="" href="#" coords="1193,536,989,313" shape="rect">
+                    <area class="" target="_self" alt="" title="" href="#" coords="1316,315,1540,533" shape="rect">
+                </map>
+                <ul class="row1f">
+                    <li>종합상황실</li>
+                    <li>휴게실</li>
+                    <li>정보통신/구급상황관리</li>
+                    <li>긴급구조대응실</li>
+                    <li>대기실/샤워실</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bottom_menu">
+        <div class="util">
+            <p>
+                <label for="TODAY" class="hidden">오늘날짜</label>
+                <input type="text" id="TODAY" value="" disabled="disabled"/>
+            </p>
+            <strong>
+                <b>
+                    <label for="TIME" class="hidden">오늘시간</label>
+                    <input type="text" id="TIME" value="" disabled="disabled"/>
+                </b>
+            </strong>
+        </div>
+        <nav>
+            <ul class="contents_btn">
+                <li><a href="main_종합안내도_가로_1층.html">층별안내</a></li>
+                <li class="openModal"><button>부서검색</button></li>
+                <li class="openModal2"><button>직원검색</button></li>
+                <li class="home"><a href="main_종합안내도_가로_메인.html">메인으로</a></li>
+            </ul>
+        </nav>
+    </footer>
+</div>
+
+<!--  modal 부서검색 -->
+<div id="modal" class="modal modal-s3 modal-dep">
+    <div class="modal-search">
+        <div class="modal-content">
+            <div class="modal-head">
+                <button type="button" onclick="dep()" class="btn-dep">부서검색</button>
+                <button type="button" onclick="stf()" class="btn-stf">직원검색</button>
+                <button type="button" class="btn-voc">음성검색</button>
+            </div>
+            <div class="modal-inner">
+                <label for="searchword" class="hidden">검색어</label>
+                <input class="btn_searchword" id="searchword" name="searchword" type="text" value="" placeholder="검색어를 입력하세요.">
+                <div class="modal-searchlist">
+                    <p>구조구급과</p>
+                    <p>구조팀</p>
+                    <p>특수구조대</p>
+                    <p>구조구급과</p>
+                    <p>구조팀</p>
+                    <p>구조구급과</p>
+                    <p>구조팀</p>
+                    <p>특수구조대</p>
+                    <p>구조구급과</p>
+                    <p>구조팀</p>
+                </div>
+                <div class="control">
+                    <div onclick="scollTop_modal_dep()" class="control-prev">
+                        <div class="triangle">이전</div>
+                    </div>
+                    <div onclick="scrollBottom_modal_dep()" class="control-next">
+                        <div class="triangle">다음</div>
+                    </div>
+                </div>
+
+            </div>
+            <span class="close btn_style1">닫기</span>
+        </div>
+    </div>
+
+    <!-- 검색결과 -->
+    <div class="dep-searchresult">
+        <div class="modal-content">
+            <div class="modal-head bl2_bg">
+                <b>구조구급과</b>
+            </div>
+            <div class="modal-inner">
+                <!-- 부서검색결과 -->
+                <div class="group">
+                    <strong class="boxg_section1 group_first">
+                        <div class="boxg">
+                            <h2 class="group_head">구조구급</h2>
+                            <div class="boxg_wrap">
+                                <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                <div class="group_cont">
+                                    <p class="group_tit">
+                                        <span class="group_rank">소방정</span>
+                                        <span class="group_name">홍길동</span>
+                                    </p>
+                                    <p class="group_onf"><em class="gic1">근무중</em></p>
+                                    <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                </div>
+                            </div>
+                        </div>
+                    </strong>
+                    <ul>
+                        <li>
+                            <div class="boxg_section1">
+                                <div class="boxg">
+                                    <h2 class="group_head">소방항공대</h2>
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic3">출장</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="boxg_section">
+                                <div class="boxg">
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic1">근무중</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxg">
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic1">근무중</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxg">
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic1">근무중</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxg">
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic1">근무중</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxg">
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic1">근무중</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxg">
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic1">근무중</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li>
+                            <div class="boxg_section1">
+                                <div class="boxg">
+                                    <h2 class="group_head">소방항공대</h2>
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic3">출장</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="boxg_section">
+                                <div class="boxg">
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic1">근무중</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxg">
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic1">근무중</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxg">
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic1">근무중</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxg">
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic1">근무중</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxg">
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic1">근무중</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxg">
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic1">근무중</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="boxg_section1">
+                                <div class="boxg">
+                                    <h2 class="group_head">소방항공대</h2>
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic3">출장</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="boxg_section">
+                                <div class="boxg">
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic1">근무중</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxg">
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic1">근무중</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxg">
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic1">근무중</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxg">
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic1">근무중</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxg">
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic1">근무중</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="boxg">
+                                    <div class="boxg_wrap">
+                                        <div class="group_img"><img src="images/gi_img.png"  alt="프로필 사진"/></div>
+                                        <div class="group_cont">
+                                            <p class="group_tit">
+                                                <span class="group_rank">소방정</span>
+                                                <span class="group_name">홍길동</span>
+                                            </p>
+                                            <p class="group_onf"><em class="gic1">근무중</em></p>
+                                            <p class="group_desc">구조구급 업무전반 구조구급 업무전반</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-move">
+                    <a href="main_종합안내도_가로_2층.html" class="bl1_bg">2층</a>
+                    <a href="main_종합안내도_가로_1층.html" class="bl3_bg">층별안내 보기</a>
+                </div>
+                <div class="control">
+                    <div onclick="scollTop_row1()" class="control-prev">
+                        <div class="triangle">이전</div>
+                    </div>
+                    <div onclick="scrollBottom_row1()" class="control-next">
+                        <div class="triangle">다음</div>
+                    </div>
+                </div>
+            </div>
+            <span class="close btn_style1">닫기</span>
+        </div>
+    </div>
+</div>
+
+<!--  modal 직원검색 -->
+<div id="modal2" class="modal modal-s3 modal-stf">
+    <div class="modal-search">
+        <div class="modal-content">
+            <div class="modal-head">
+                <button type="button" onclick="dep()" class="btn-dep">부서검색</button>
+                <button type="button" onclick="stf()" class="btn-stf">직원검색</button>
+                <button type="button" class="btn-voc">음성검색</button>
+            </div>
+            <div class="modal-inner">
+                <label for="searchword" class="hidden">검색어</label>
+                <input class="btn_searchword" id="searchword" name="searchword" type="text" value="" placeholder="검색어를 입력하세요.">
+                <div class="modal-searchlist">
+                    <p>홍길동</p>
+                    <p>홍길동</p>
+                    <p>홍길동</p>
+                    <p>홍길동</p>
+                    <p>홍길동</p>
+                    <p>홍길동</p>
+                    <p>이정주</p>
+                    <p>이정주</p>
+                </div>
+
+                <div class="control">
+                    <div onclick="scollTop_modal_stf()" class="control-prev">
+                        <div class="triangle">이전</div>
+                    </div>
+                    <div onclick="scrollBottom_modal_stf()" class="control-next">
+                        <div class="triangle">다음</div>
+                    </div>
+                </div>
+
+            </div>
+            <span class="close btn_style1">닫기</span>
+        </div>
+    </div>
+    <!-- 검색결과 -->
+    <div class="stf-searchresult">
+        <div class="modal-content">
+            <div class="modal-head bl2_bg">직원검색결과
+                <button type="button" onclick="stf_back()">다시 검색</button>
+            </div>
+            <div class="modal-inner">
+                <div class="modal-profile clearfix">
+                    <div class="profile-img">
+                        <img src="images/modal_s2.jpg" alt="프로필 이미지">
+                        <div>
+                            <strong class="gic4_bg">휴가</strong>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>
+                            <p class="profile-tit">성명</p>
+                            <p class="profile-desc">홍길동</p>
+                        </li>
+                        <li>
+                            <p class="profile-tit">계급</p>
+                            <p class="profile-desc">소방경</p>
+                        </li>
+                        <li>
+                            <p class="profile-tit">직위</p>
+                            <p class="profile-desc">3팀장</p>
+                        </li>
+                        <li>
+                            <p class="profile-tit">업무</p>
+                            <p class="profile-desc">
+                                <em>구조구급 업무전반 구조구급 업무전반</em>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="profile-tit">전화</p>
+                            <p class="profile-desc">286-0710</p>
+                        </li>
+                        <li>
+                            <p class="profile-tit">위치</p>
+                            <p class="profile-desc">2층</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="modal-move">
+                    <a href="#" class="bl1_bg">2층</a>
+                    <a href="#" class="bl3_bg">층별안내 보기</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--  modal 층별안내-->
+<div id="row_floorModal1-1" class="modal modal-s4">
+    <div class="modal-content">
+        <div class="modal-head"><b>긴급구조대응실</b></div>
+        <div class="modal-inner">
+            <ul class="modal-item1">
+                <li>
+                    <p class="modal-tit">담당자</p>
+                    <p class="modal-desc">홍길동</p>
+                </li>
+                <li>
+                    <p class="modal-tit">연락처</p>
+                    <p class="modal-desc">010-1234-5678</p>
+                </li>
+                <li>
+                    <p class="modal-tit">수용인원</p>
+                    <p class="modal-desc">3명</p>
+                </li>
+            </ul>
+            <ul class="modal-item2">ddd
+                <li><img src="images/map_col4f.png"></li>
+                <li><img src="images/map_row1f.png"></li>
+                <li><img src="images/icon_chart_bg.png"></li>
+            </ul>
+            <ul class="modal-item1">
+                <li>
+                    <p class="modal-tit">상세정보</p>
+                    <p class="modal-desc">
+                        1. 회의실 장비<br/>
+                        - 프로젝트 1대, 마이크 5대, 화상회의 가능
+                    </p>
+                    <p class="modal-desc">
+                        2. 회의실 규격<br/>
+                        - 가로 10미터, 세로 50미터, 높이 2미터
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <span class="close btn_style1">닫기</span>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/day.js"></script>
+<script type="text/javascript" src="js/main_common.js"></script>
+<script>
+    $(".modal-dep .modal-searchlist > p").on("click",function(){
+        $(".modal-dep .modal-search").attr("style","display:none");
+        $(".dep-searchresult").attr("style","display:flex");
+    });
+    $(".modal-dep .close").on("click",fnCloseDep);
+    function fnCloseDep(){
+        $(".dep-searchresult").attr("style","display:none");
+        $(".modal-dep .modal-search").attr("style","display:flex");
+    }
+</script>
+</body>
+</html>

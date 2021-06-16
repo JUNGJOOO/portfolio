@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>기구조직표</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+	<meta name="title" content="전남소방 행정시스템"/>
+	<meta name="keywords" content="전남소방 행정시스템"/>
+    <meta name="description" content="전남소방 행정시스템의 이용안내 정보를 제공합니다."/>
+
+    <link type="text/css" href="css/base.css" media="all" rel="stylesheet" />
+    <link type="text/css" href="css/ebd3_common.css" media="all" rel="stylesheet" />
+</head>
+
+<body>
+<div class="ebd ebd1"> <!-- 과장 7개가 되면 ebd17 클래스 추가 -->
+
+
+
+
+    <!--header-->
+    <header class="common_header">
+        <div class="header_inner">
+            <a class="chart_btn" href ="javascript:cm_open();">
+                전체메뉴
+                <div class="chart_mline">
+                    <div class="chart_line"></div>
+                    <div class="chart_line"></div>
+                    <div class="chart_line"></div>
+                </div>
+            </a>
+            <nav class="chart_menu">
+                <ul>
+                    <li><a href="#">소방활동 활동현황</a></li>
+                    <li class="on"><a href="#">전남소방 기구조직표</a></li>
+                    <li><a href="#">전남소방 소방서현황</a></li>
+                    <li><a href="#">전남소방 기본현황</a></li>
+                    <li class="chart_close"><a href ="javascript:WinClose();">창닫기</a></li>
+                </ul>
+            </nav>
+            <h1 class="logo">전남소방 기구조직표</h1>
+            <div class="util">
+                <p>
+                    <label for="TODAY" class="hidden">오늘날짜</label>
+                    <input type="text" id="TODAY" value="" disabled="disabled"/>
+                </p>
+                <strong>
+                    <b>
+                        <label for="TIME" class="hidden">오늘시간</label>
+                        <input type="text" id="TIME" value="" disabled="disabled"/>
+                    </b>
+                </strong>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        function cm_open(){
+            $(".chart_menu").show();
+        }
+        $('body').click(function(e) {
+            if(!$(e.target).hasClass("chart_menu")) {
+                $(".chart_menu").hide();
+            }
+        });
+    </script>
+
+    <!-- content -->
+    <div id="contents" class="contents">
+        <div class="contents_inner">
+            <div class="land">
+                <strong class="land_first">
+                    <div class="boxgp">
+                        <h2 class="boxgp_head">전남소방본부장</h2>
+                        <div class="boxgp_wrap">
+                            <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                            <div class="boxgp_cont">
+                                <p class="boxgp_tit">
+                                    <span class="boxgp_name">마재윤</span>
+                                    <span class="boxgp_rank">소방감</span>
+                                </p>
+                                <dl>
+                                    <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    <div><dt>현계급임용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </strong>
+                
+                <ul class="land_exe">
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표2.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head bl4_bg">소방행정과장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">윤강열</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>현계급임용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+<!--
+                    <li>
+                        <div class="boxgp">
+                            <h2 class="boxgp_head bl4_bg">대응예방과장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">박상래</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+-->
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표2.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head bl4_bg">대응예방과장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">박상래</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>현&nbsp;계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표2.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head bl4_bg">구조구급과장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">문병운 </span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표2.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head bl4_bg">소방감사담당관</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">공석</span>
+                                        <span class="boxgp_rank"></span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>-</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>-</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>-</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>-</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표2.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head bl4_bg">소방교육과장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">박의성</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표2.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head bl4_bg">119종합상황실</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">조제춘</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+
+                <ul class="land_mng">
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표3.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head">목포소방서장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">홍&nbsp;길&nbsp;동</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표3.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head">ㅇㅇ소방서장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">홍&nbsp;길&nbsp;동</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표3.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head">ㅇㅇ소방서장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">홍&nbsp;길&nbsp;동</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표3.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head">ㅇㅇ소방서장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">홍&nbsp;길&nbsp;동</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표3.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head">ㅇㅇ소방서장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">홍&nbsp;길&nbsp;동</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표3.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head">ㅇㅇ소방서장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">홍&nbsp;길&nbsp;동</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표3.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head">ㅇㅇ소방서장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">홍&nbsp;길&nbsp;동</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표3.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head">ㅇㅇ소방서장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">홍&nbsp;길&nbsp;동</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표3.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head">ㅇㅇ소방서장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">홍&nbsp;길&nbsp;동</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표3.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head">ㅇㅇ소방서장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">홍&nbsp;길&nbsp;동</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표3.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head">ㅇㅇ소방서장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">홍&nbsp;길&nbsp;동</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표3.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head">ㅇㅇ소방서장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">홍&nbsp;길&nbsp;동</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표3.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head">ㅇㅇ소방서장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">홍&nbsp;길&nbsp;동</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표3.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head">ㅇㅇ소방서장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">홍&nbsp;길&nbsp;동</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표3.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head">ㅇㅇ소방서장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">홍&nbsp;길&nbsp;동</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표3.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head">ㅇㅇ소방서장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">홍&nbsp;길&nbsp;동</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표3.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head">ㅇㅇ소방서장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">홍&nbsp;길&nbsp;동</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li onclick="location.href='ebd2_전자칠판_기구조직표3.html'">
+                        <div class="boxgp">
+                            <h2 class="boxgp_head">ㅇㅇ소방서장</h2>
+                            <div class="boxgp_wrap">
+                                <div class="boxgp_img"><img src="images/gi_img2.jpg"  alt="프로필 사진"/></div>
+                                <div class="boxgp_cont">
+                                    <p class="boxgp_tit">
+                                        <span class="boxgp_name">홍&nbsp;길&nbsp;동</span>
+                                        <span class="boxgp_rank">소방정</span>
+                                    </p>
+                                    <dl>
+                                        <div><dt>생&nbsp;년&nbsp;월&nbsp;일&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>임&nbsp;용&nbsp;날&nbsp;짜&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>계&nbsp;급&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                        <div><dt>부&nbsp;서&nbsp;임&nbsp;용&nbsp;:&nbsp;</dt><dd>2020.&nbsp;12.&nbsp;20</dd></div>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/day.js"></script>
+<script type="text/javascript" src="js/ebd.js"></script>
+
+</body>
+</html>

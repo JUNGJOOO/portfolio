@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>전자칠판 소방활동현황 55인치</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+	<meta name="title" content="전남소방 행정시스템"/>
+	<meta name="keywords" content="전남소방 행정시스템"/>
+    <meta name="description" content="전남소방 행정시스템의 이용안내 정보를 제공합니다."/>
+    <!-- css -->
+    <link type="text/css" href="css/base.css" media="all" rel="stylesheet" />
+    <link type="text/css" href="css/chart_common.css" media="all" rel="stylesheet" />
+    <!-- bxslider -->
+    <link href="css/bxslider.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="js/bxslider.js"></script>
+    <!-- chart -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+<body>
+<div class="chart">
+
+    <!--header-->
+    <header class="common_header">
+        <div class="header_inner">
+            <a class="chart_btn" href ="javascript:cm_open();">
+                전체메뉴
+                <div class="chart_mline">
+                    <div class="chart_line"></div>
+                    <div class="chart_line"></div>
+                    <div class="chart_line"></div>
+                </div>
+            </a>
+            <nav class="chart_menu">
+                <ul>
+                    <li class="on"><a href="#">소방활동 활동현황</a></li>
+                    <li><a href="#">전남소방 기구조직표</a></li>
+                    <li><a href="#">전남소방 소방서현황</a></li>
+                    <li><a href="#">전남소방 기본현황</a></li>
+                    <li class="chart_close"><a href ="javascript:WinClose();">창닫기</a></li>
+                </ul>
+            </nav>
+            <h1 class="logo">전남소방 통계현황</h1>
+            <div class="util">
+                <p>
+                    <label for="TODAY" class="hidden">오늘날짜</label>
+                    <input type="text" id="TODAY" value="" disabled="disabled"/>
+                </p>
+                <strong>
+                    <b>
+                        <label for="TIME" class="hidden">오늘시간</label>
+                        <input type="text" id="TIME" value="" disabled="disabled"/>
+                    </b>
+                </strong>
+            </div>
+        </div>
+    </header>
+
+    <script>
+    function cm_open(){
+        $(".chart_menu").addClass("show")
+    }
+    $('body').click(function(e) {
+        if(!$(e.target).hasClass("chart_menu")) {
+            $(".chart_menu").removeClass("show")
+        }
+    });
+    </script>
+
+    <!-- content -->
+    <div id="contents" class="contents">
+        <div class="contents_inner">
+
+            <seciton class="section_chart">
+                <h2 class="section_head">소방활동현황</h2>
+                <div class="chart_wrap">
+                    <div class="chart_day">
+                        <div class="head_wrap">
+                            <h4 class="chart_head">일일 현황</h4>
+                            <p>2020. 12. 21 (월)</p>
+                            <b>00:00 ~ 현재</b>
+                        </div>
+                        <ul>
+                            <li>
+                                <p>화재</p>
+                                <b>13</b>&nbsp;<em>건</em>
+                            </li>
+                            <li>
+                                <p>구조</p>
+                                <b>20</b>&nbsp;<em>건</em>
+                            </li>
+                            <li>
+                                <p>구급</p>
+                                <b>3</b>&nbsp;<em>건</em>
+                            </li>
+                            <li>
+                                <p>기타</p>
+                                <b>8</b>&nbsp;<em>건</em>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="chart_week">
+                        <div class="head_wrap">
+                            <h4 class="chart_head">주간 현황</h4>
+                        </div>
+                        <div class="chart_area">
+                            <div id="chart_week"></div>
+                        </div>
+                    </div>
+                    <div class="chart_month">
+                        <div class="head_wrap">
+                            <h4 class="chart_head">월간 현황</h4>
+                        </div>
+                        <div class="chart_area">
+                            <div id="chart_month"></div>
+                        </div>
+                    </div>
+                </div>
+            </seciton>
+
+
+            <seciton class="section_list">
+                <h2 class="section_head">활동중인 긴급구조</h2>
+                <ul class="bxSlider_list">
+                    <li>
+                        <dl>
+                            <dt>종별</dt><dd class="cl1">화재</dd>
+                            <dt>세부종별</dt><dd>화재확인출동</dd>
+                            <dt>진행상황</dt><dd>현장도착보고</dd>
+                        </dl>
+                        <div class="list_contents">
+                            <div class="list_time">
+                                <p>20.12.01</p>
+                                <b>09:21</b>
+                            </div>
+                            <div class="list_title">
+                                <p>
+                                    1전라남도 순천시 별량면 덕정리 360 (순천만요양병원소방회선) 전라남도 순천시 별량면 덕정리 360 전라남도 순천시 별량면 덕정리 360 전라남도 순천시 별량면 덕정리 360
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <dl>
+                            <dt>종별</dt><dd class="cl2">구조</dd>
+                            <dt>세부종별</dt><dd>화재확인출동</dd>
+                            <dt>진행상황</dt><dd>현장도착보고</dd>
+                        </dl>
+                        <div class="list_contents">
+                            <div class="list_time">
+                                <p>20.12.01</p>
+                                <b>09:21</b>
+                            </div>
+                            <div class="list_title">
+                                <p>
+                                    2전라남도 순천시 별량면 덕정리 360 (순천만요양병원소방회선) 전라남도 순천시 별량면 덕정리 360 전라남도 순천시 별량면 덕정리 360 전라남도 순천시 별량면 덕정리 360
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <dl>
+                            <dt>종별</dt><dd class="cl3">구급</dd>
+                            <dt>세부종별</dt><dd>화재확인출동</dd>
+                            <dt>진행상황</dt><dd>현장도착보고</dd>
+                        </dl>
+                        <div class="list_contents">
+                            <div class="list_time">
+                                <p>20.12.01</p>
+                                <b>09:21</b>
+                            </div>
+                            <div class="list_title">
+                                <p>
+                                    3전라남도 순천시 별량면 덕정리 360 (순천만요양병원소방회선) 전라남도 순천시 별량면 덕정리 360 전라남도 순천시 별량면 덕정리 360 전라남도 순천시 별량면 덕정리 360
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <dl>
+                            <dt>종별</dt><dd class="cl4">기타</dd>
+                            <dt>세부종별</dt><dd>화재확인출동</dd>
+                            <dt>진행상황</dt><dd>현장도착보고</dd>
+                        </dl>
+                        <div class="list_contents">
+                            <div class="list_time">
+                                <p>20.12.01</p>
+                                <b>09:21</b>
+                            </div>
+                            <div class="list_title">
+                                <p>
+                                    4전라남도 순천시 별량면 덕정리 360 (순천만요양병원소방회선) 전라남도 순천시 별량면 덕정리 360 전라남도 순천시 별량면 덕정리 360 전라남도 순천시 별량면 덕정리 360
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                
+                    <li>
+                        <dl>
+                            <dt>종별</dt><dd class="cl1">화재</dd>
+                            <dt>세부종별</dt><dd>화재확인출동</dd>
+                            <dt>진행상황</dt><dd>현장도착보고</dd>
+                        </dl>
+                        <div class="list_contents">
+                            <div class="list_time">
+                                <p>20.12.01</p>
+                                <b>09:21</b>
+                            </div>
+                            <div class="list_title">
+                                <p>
+                                    5전라남도 순천시 별량면 덕정리 360 (순천만요양병원소방회선) 전라남도 순천시 별량면 덕정리 360 전라남도 순천시 별량면 덕정리 360 전라남도 순천시 별량면 덕정리 360
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <dl>
+                            <dt>종별</dt><dd class="cl1">화재</dd>
+                            <dt>세부종별</dt><dd>화재확인출동</dd>
+                            <dt>진행상황</dt><dd>현장도착보고</dd>
+                        </dl>
+                        <div class="list_contents">
+                            <div class="list_time">
+                                <p>20.12.01</p>
+                                <b>09:21</b>
+                            </div>
+                            <div class="list_title">
+                                <p>
+                                    6전라남도 순천시 별량면 덕정리 360 (순천만요양병원소방회선) 전라남도 순천시 별량면 덕정리 360 전라남도 순천시 별량면 덕정리 360 전라남도 순천시 별량면 덕정리 360
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <dl>
+                            <dt>종별</dt><dd class="cl1">화재</dd>
+                            <dt>세부종별</dt><dd>화재확인출동</dd>
+                            <dt>진행상황</dt><dd>현장도착보고</dd>
+                        </dl>
+                        <div class="list_contents">
+                            <div class="list_time">
+                                <p>20.12.01</p>
+                                <b>09:21</b>
+                            </div>
+                            <div class="list_title">
+                                <p>
+                                    7전라남도 순천시 별량면 덕정리 360 (순천만요양병원소방회선) 전라남도 순천시 별량면 덕정리 360 전라남도 순천시 별량면 덕정리 360 전라남도 순천시 별량면 덕정리 360
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </seciton>
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/day.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){ 
+        $('.bxSlider_list').bxSlider({
+            mode: 'vertical',
+            infiniteLoop: true,
+            auto: true,
+            autoStart: true,
+            autoControls: false,
+            autoHover: true,
+
+            pager: false,
+            control: false,
+
+            pause: 2000,
+            minSlides : 6,
+            maxSlides : 6,
+            moveSlides: 1,
+        }); 
+    });
+
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(chart_week);
+    google.charts.setOnLoadCallback(chart_month);
+
+    function chart_week() {
+        var data = google.visualization.arrayToDataTable([
+            ["Element", "Density", { role: "style" } ],
+            ["화재", 333, "#e9523f"],
+            ["구조", 12, "#f8b84a"],
+            ["구급", 777, "#6672fc"],
+            ["기타", 100, "#1f998e"]
+        ]);
+
+        var options = {
+            width: 695,
+            height: 430,
+            bar: {groupWidth: "30%"},
+            legend: { position: 'none' },
+            hAxis : { 
+                textStyle : {
+                    fontName: 'Arita',
+                    fontSize: 20,
+                    color: '#626262',
+                    bold: true,
+                }
+            },
+            vAxis : {
+                textStyle : {
+                    fontName: 'Arita',
+                    fontSize: 15,
+                    color: '#000',
+                }
+            }
+        };
+        var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+        var chart = new google.visualization.ColumnChart(document.getElementById("chart_week"));
+        chart.draw(view, options);
+    }
+
+
+    function chart_month() {
+        var data = google.visualization.arrayToDataTable([
+            ["Element", "Density", { role: "style" } ],
+            ["화재", 11000, "#e9523f"],
+            ["구조", 300, "#f8b84a"],
+            ["구급", 2000, "#6672fc"],
+            ["기타", 1000, "#1f998e"]
+        ]);
+
+        var options = {
+            width: 695,
+            height: 430,
+            bar: {groupWidth: "30%"},
+            legend: { position: 'none' },
+            hAxis : { 
+                textStyle : {
+                    fontName: 'Arita',
+                    fontSize: 20,
+                    color: '#626262',
+                    bold: true,
+                }
+            },
+            vAxis : {
+                textStyle : {
+                    fontName: 'Arita',
+                    fontSize: 15,
+                    color: '#000',
+                }
+            }
+        };
+        var view = new google.visualization.DataView(data);
+            view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+        var chart = new google.visualization.ColumnChart(document.getElementById("chart_month"));
+        chart.draw(view, options);
+    }
+
+
+</script>
+</body>
+</html>

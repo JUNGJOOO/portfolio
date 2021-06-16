@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>예약현황 일별</title>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+	<meta name="title" content="전남소방 행정시스템"/>
+	<meta name="keywords" content="전남소방 행정시스템"/>
+    <meta name="description" content="전남소방 행정시스템의 이용안내 정보를 제공합니다."/>
+    <!-- css -->
+    <link type="text/css" href="css/base.css" media="all" rel="stylesheet" />
+    <link type="text/css" href="css/mpm_common.css" media="all" rel="stylesheet" />
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+<div class="mpm mpmd">
+
+    <!--header-->
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo">영상전략 회의실</h1>
+            <div class="util">
+                <p>
+                    <label for="TODAY" class="hidden">오늘날짜</label>
+                    <input type="text" id="TODAY" value="" disabled="disabled"/>
+                </p>
+                <strong>
+                    <b>
+                        <label for="TIME" class="hidden">오늘시간</label>
+                        <input type="text" id="TIME" value="" disabled="disabled"/>
+                    </b>
+                </strong>
+            </div>
+        </div>
+    </header>
+
+    <!-- content -->
+    <div id="contents" class="contents">
+        <div class="inner mpmw_area boxd">
+            <section>
+                <ul class="tab_header">
+                    <li class="active"><a href="mpm_예약현황_일별.html">일별보기</a></li>
+                    <li><a href="mpm_예약현황_주별.html">주별보기</a></li>
+                </ul>
+
+                <div class="mpmd_day">
+                    <ul>
+                        <li>
+                            <span>09:00 ~ 10:00</span>
+                            <strong><i>전국적 화재안전특별조사 시민조사단 참여 전국적 화재안전특별조사 시민조사단 참여</i></strong>
+                        </li>
+                        <li class="active openModal">
+                            <span>09:00 ~ 10:00</span>
+                            <strong><i>전국적 화재안전특별조사 시민조사단 참여 전국적 화재안전특별조사 시민조사단 참여</i></strong>
+                        </li>
+                        <li>
+                            <span>09:00 ~ 10:00</span>
+                            <strong><i>dddddd</i></strong>
+                        </li>
+                        <li>
+                            <span>09:00 ~ 10:00</span>
+                            <strong><i>aaa</i></strong>
+                        </li>
+                        <li>
+                            <span>09:00 ~ 10:00</span>
+                            <strong><i>전국적 화재안전특별조사 시민조사단 참여 전국적 화재안전특별조사 시민조사단 참여</i></strong>
+                        </li>
+                        <li>
+                            <span>09:00 ~ 10:00</span>
+                            <strong><i>전국적 화재안전특별조사 시민조사단 참여 전국적 화재안전특별조사 시민조사단 참여</i></strong>
+                        </li>
+                        <li>
+                            <span>09:00 ~ 10:00</span>
+                            <strong><i>전국적 화재안전특별조사 시민조사단 참여 전국적 화재안전특별조사 시민조사단 참여</i></strong>
+                        </li>
+                        <li>
+                            <span>09:00 ~ 10:00</span>
+                            <strong><i>전국적 화재안전특별조사 시민조사단 참여 전국적 화재안전특별조사 시민조사단 참여</i></strong>
+                        </li>
+                        <li>
+                            <span>09:00 ~ 10:00</span>
+                            <strong><i>전국적 화재안전특별조사 시민조사단 참여 전국적 화재안전특별조사 시민조사단 참여</i></strong>
+                        </li>
+                        <li>
+                            <span>09:00 ~ 10:00</span>
+                            <strong><i>전국적 화재안전특별조사 시민조사단 참여 전국적 화재안전특별조사 시민조사단 참여</i></strong>
+                        </li>
+                        <li>
+                            <span>09:00 ~ 10:00</span>
+                            <strong><i>전국적 화재안전특별조사 시민조사단 참여 전국적 화재안전특별조사 시민조사단 참여</i></strong>
+                        </li>
+                    </ul>
+
+                    <div class="control">
+                        <div onclick="scollTop_day()" class="control-prev">
+                            <div class="triangle">이전</div>
+                        </div>
+                        <div onclick="scrollBottom_day()" class="control-next">
+                            <div class="triangle">다음</div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div id="modal" class="modal modal-s1">
+        <div class="modal-content">
+            <div class="modal-head"><b>화재안전특별조사에 대한 회의 화재안전특별조사에 대한 회의</b></div>
+            <div class="modal-inner">
+                <ul>
+                    <li>
+                        <p class="modal-tit">회의일정</p>
+                        <p class="modal-desc">2020년 12월 1일(화) 10:00 ~ 12:00</p>
+                    </li>
+                    <li>
+                        <p class="modal-tit">신청자</p>
+                        <p class="modal-desc">ㅇㅇㅇㅇ부 홍길동</p>
+                    </li>
+                    <li>
+                        <p class="modal-tit">참여인원</p>
+                        <p class="modal-desc">3명</p>
+                    </li>
+                    <li>
+                        <p class="modal-tit">회의내용</p>
+                        <p class="modal-desc"><em>전국적 화재안전특별조사 시민조사단 참여 구성회의 전국적 화재안전특별조사 시민조사단 참여 구성회의</em></p>
+                    </li>
+
+                    <li>
+                        <p class="modal-tit">회의실관리자</p>
+                        <p class="modal-desc">홍길동 / 010-1234-5678</p>
+                    </li>
+                </ul>
+            </div>
+            <span class="close btn_style1">닫기</span>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js/day.js"></script>
+<script type="text/javascript" src="js/mpm_common.js"></script>
+
+</body>
+</html>

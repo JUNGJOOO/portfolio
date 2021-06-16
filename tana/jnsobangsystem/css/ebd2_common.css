@@ -1,0 +1,352 @@
+@charset "UTF-8";
+html, body{font-size: 10px;}
+
+/* electronic blackboard = ebd  2가지 버전*/
+/* 3840 x 2160 */
+/* 1920 x 1080 */
+
+.ebdchart_header{
+    position: relative; height: 18rem;
+    display: -webkit-box; display: -ms-flexbox; display: flex;
+    -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+    -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+    background-color: #235196;
+}
+.ebdchart_header *{color: #fff;}
+.ebdchart_header .header_inner{width: 374rem; margin: 0 auto;}
+.ebdchart_header a{
+    float: left; position: relative; top: 3rem;
+    display: block; height: 10rem;
+    padding: 0 7rem 0 3rem;
+    font-size: 4.5rem; line-height: 9.7rem;
+    border: 0.3rem solid #fff; border-radius: 2rem;
+}
+.ebdchart_header a:after{
+    content:"";
+    position: absolute; right:3.1rem; top:3.3rem;
+    display: block; width: 2.5rem; height: 2.5rem;
+    border-top: 0.5rem solid #fff; border-right: 0.5rem solid #fff;
+    -webkit-transform: rotate(45deg); transform: rotate(45deg);
+}
+.ebdchart_header h1{
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    font-size: 11rem; line-height: 1; font-weight: 700; color: #e4f0ff; letter-spacing: -0.1rem;
+}
+.ebdchart_header .util{position: relative; top: 1.2rem; float: right; text-align: right; letter-spacing: -0.1rem; font-size: 0;}
+.ebdchart_header .util > *{float: left; height: 18rem;}
+.ebdchart_header .util input{text-align: right; background: transparent; }
+.ebdchart_header .util p{position: relative; top: 0.8rem;}
+.ebdchart_header .util p input{font-family: 'Arita'; font-size: 4rem; line-height: 18rem; font-weight: 100;}
+.ebdchart_header .util strong{width: 23rem;}
+.ebdchart_header .util strong b{display: inline-block;}
+.ebdchart_header .util strong b input{width: 100%; font-family: 'Arita'; font-size: 8rem; line-height: 18rem; font-weight: 600;}
+
+
+
+/* ==================================== 전자칠판 기구조직표 ==================================== */
+.ebd{height: 216rem; padding-bottom: 3rem; background: url(../images/ebd.jpg) no-repeat; background-position: center; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.contents_inner{height: 198rem; padding: 5rem 0rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.ebd .btn_prev{position: absolute; z-index: 1; display: inline-block; margin-left: 2.5%; padding: 0 5rem 0 11.5rem; font-size: 4.5rem; font-weight: 600; line-height: 10rem; color: #fff; border-radius: 1.5rem;}
+.ebd .btn_prev:before{
+    content: ''; position: absolute; top: 3.2rem; left: 4.8rem;
+    display: inline-block; padding: 1.1rem;
+    border: solid #fff; border-width: 0 1rem 1rem 0; border-radius: 0.5rem;
+    transform: rotate(135deg); -webkit-transform: rotate(135deg);
+}
+.ebd .control{height: 34rem; right: 3rem; bottom: 3rem;}
+.ebd .control > div{
+    position: absolute; top: 0; right: 0;
+    width: 13rem; height: 13rem; background-color: #b9bfcb;
+    border-radius: 50%; cursor: pointer;
+}
+.ebd .control > div:hover{background-color: #98c5ff;}
+.ebd .control > div.control-next{top: auto; bottom: 2rem; right: 0; transform: rotate(60deg);}
+.ebd .control > div.control-next .triangle {margin: 0.8rem auto;}
+.triangle, .triangle:before, .triangle:after {width: 7rem; height: 7.6rem; font-size: 0;}
+.triangle {
+    overflow: hidden; position: relative; margin: 1rem auto; border-radius: 20%;
+    transform: translateY(50%) rotate(30deg) skewY(30deg) scaleX(.866);
+} 
+.triangle:before, .triangle:after{ position: absolute; background: #fff; pointer-events: auto; content: '';}
+.triangle:before {
+    border-radius: 20% 20% 20% 53%;
+    transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) 
+            skewX(30deg) scaleY(.866) translateX(-24%);
+}
+.triangle:after{
+    border-radius: 20% 20% 53% 20%;
+    transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) 
+            skewX(-30deg) scaleY(.866) translateX(24%);
+}
+
+
+
+
+
+
+
+/* land */
+.land{margin: 0 auto;}
+.land > ul{position: relative; margin: 0 auto; text-align: center;}
+.land > ul:before{
+    display: none; content: '';
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    width: 2860px; height: 0.3rem; background-color: #babfc9;
+}
+
+.land1 > ul:before{display: none;}
+.land2 > ul:before{width: 577px;}
+.land3 > ul:before{width: 1150px;}
+.land4 > ul:before{width: 1722px;}
+.land5 > ul:before{width: 2296px;}
+.land6 > ul:before{width: 2860px;}
+
+.land > ul li{display: inline-block; vertical-align: top;}
+.land .land_exe {padding: 4rem 0 0 0; font-size: 0;}
+.land .land_exe li{position: relative; }
+.land .land_exe li:before{
+    display: none; content:'';
+    position: absolute; top: -4rem; left: 50%;
+    transform: translateX(-50%);
+    width: 0.3rem; height: 4rem;
+    background-color: #babfc9;
+}
+
+.land .boxgp{position: relative; width: 55rem; margin: 0 auto; background-color: #fff; border-radius: 1rem; box-shadow: 0 0 0.5rem rgba(0,0,0,0.2); cursor: pointer; color: #000;}
+.land .boxgp:after{content:''; display: block; clear: both;}
+.land .boxgp .boxgp_head{
+    height: 6rem; font-size: 3.6rem; line-height: 6rem; font-weight: 600; text-align: center; color: #fff;
+    border-top-left-radius: 1rem; border-top-right-radius: 1rem; background-color: #799ed5;
+} 
+.land .boxgp .boxgp_wrap{height: 21rem; padding: 2.3rem 0 0 3.5rem; text-align: left; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.land .boxgp .boxgp_img{float: left; position: relative; width: 12rem; height: 16rem; margin-right: 2.8rem; overflow: hidden; border-radius: 10%; background-color: #e4e3e9;}
+.land .boxgp .boxgp_img img{position: absolute; top: 50%; transform: translateY(-50%); width: 100%;}
+.land .boxgp .boxgp_cont{float: left;}
+.land .boxgp .boxgp_tit{padding-bottom: 1.5rem; padding-top: 1rem;}
+.land .boxgp .boxgp_name{font-size: 3.1rem; line-height: 3.1rem; font-weight: 700; color: #303030; letter-spacing: 0.4rem;}
+.land .boxgp .boxgp_rank{margin-left: 1rem; font-size: 2.3rem; line-height: 3.1rem; font-weight: 500; color: #303030;}
+.land .boxgp dl{font-size: 0;}
+.land .boxgp dl div+div{margin-top: 0.8rem;}
+.land .boxgp dl dt{display: inline-block; font-size: 2rem; line-height: 1;}
+.land .boxgp dl dd{display: inline-block; font-size: 2rem; line-height: 1;}
+
+.land .land_first{
+    position: relative;
+    width: 100%; margin-bottom: 4rem;
+    display: -webkit-box; display: -ms-flexbox; display: flex;
+    -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+    -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+}
+.land .land_first:before{
+    display: none; content:'';
+    position: absolute; bottom:-48rem; left: 50%;
+    transform: translateX(-50%);
+    width: 0.3rem; height: 50rem;
+    background-color: #babfc9;
+}
+.land .land_first .boxgp{box-shadow: 0 0 1rem rgba(0,0,0,0.2);}
+.land .land_first .boxgp .boxgp_cont{width: 35rem;}
+.land .land_first .boxgp dl div+div{margin-top: 1.4rem}
+
+.boxgp_section{position: relative; margin-top: 6rem; border-radius: 2rem;}
+.boxgp_section:before{content:''; position: absolute; top: -9.8rem; left: 50%; transform: translateX(-50%); width: 0.3rem; height: 9.8rem; background-color: #babfc9;}
+.boxgp_section .boxgp+.boxgp{margin-top: 3rem;}
+.boxgp_section:after{content: ''; position: absolute; left: 0; bottom: -10rem; width: 100%; height: 10rem; }
+.boxgp_section2{width: 100%; text-align: left; margin-top: 0;}
+.boxgp_section2.boxgp_section:before{display: none;}
+.boxgp_section2 .boxgp{display: inline-block; }
+.ebd2 .land .land_exe{padding: 4rem 0 2rem 0}
+.boxgp_section2 b{
+    display: block; width: 65%; height: 9.8rem;
+    background: url(../images/ebd_bar2.png) no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+/* ebd1 */
+.ebd1 .land .boxgp{width: 55rem;}
+.ebd1 .land > ul li{padding: 0 2rem 4rem 2rem;}
+.ebd1 .land .land_first{margin-top: 4rem; margin-bottom: 3rem;}
+.ebd1 .land .land_first .boxgp{width: 76rem;}
+.ebd1 .land .land_first .boxgp .boxgp_wrap{height: 34rem; padding: 3.5rem 0 0 6rem;}
+.ebd1 .land .land_first .boxgp .boxgp_img{width: 20rem; height: 26.5rem; margin-right: 5rem;}
+.ebd1 .land .land_first .boxgp .boxgp_name{font-size: 5rem; line-height: 5rem;}
+.ebd1 .land .land_first .boxgp .boxgp_rank{font-size: 4rem; line-height: 5rem;}
+.ebd1 .land .land_first .boxgp dl dt{font-size: 3.3rem;}
+.ebd1 .land .land_first .boxgp dl dd{font-size: 3.3rem;}
+.ebd1 .land .land_first .boxgp .boxgp_cont{width: 45rem;}
+.ebd1 .land .land_first .boxgp .boxgp_tit{padding: 1.3rem 0;}
+.land .land_mng{
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+    width: 100%; margin-top: 6rem;
+    text-align: center;
+}
+.land .land_mng li{position: relative;}
+.ebd1 .land .land_first .boxgp .boxgp_head{
+    width: 100%; height: 8.5rem;
+    margin: 0 auto;
+    font-size: 5rem; line-height: 8.5rem;
+    background-color: #0a9b8e;
+}
+.ebd1 .land .land_exe .boxgp .boxgp_head{background-color: #235bae !important;}
+.ebd1 .land .boxgp .boxgp_wrap{padding: 2.3rem 0 0 6.5rem;}
+.ebd1 .land .boxgp .boxgp_img{ margin-right: 4.8rem;}
+.ebd1 .land .land_exe{padding: 6rem 0 0 0;}
+
+
+/* 조직기구표1의 과장이 7개가 되면 ebd17 클래스 추가 */
+.ebd17 .land .boxgp{width: 50rem;}
+.ebd17 .land > ul li{padding: 0 2rem 4rem 2rem;}
+.ebd17 .land .land_first{margin-bottom: 1rem;}
+.ebd17 .land .land_first .boxgp{width: 84rem;}
+.ebd17 .land .land_first .boxgp .boxgp_wrap{height: 38rem; padding: 3.5rem 0 0 5rem;}
+.ebd17 .land .land_first .boxgp .boxgp_img{width: 23rem; height: 30rem; margin-right: 5rem;}
+.ebd17 .land .land_first .boxgp .boxgp_name{font-size: 5rem; line-height: 5rem;}
+.ebd17 .land .land_first .boxgp .boxgp_rank{font-size: 4rem; line-height: 5rem;}
+.ebd17 .land .land_first .boxgp dl dt{font-size: 3.7rem; letter-spacing: 0.3rem;}
+.ebd17 .land .land_first .boxgp dl dd{font-size: 3.7rem;}
+.ebd17 .land .land_first .boxgp .boxgp_cont{width: 45rem;}
+.ebd17 .land .land_first .boxgp .boxgp_tit{padding: 1.5rem 0 2rem;}
+.ebd17 .land .land_exe{padding: 9rem 0 0 0;}
+.ebd17 .land .land_mng{
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+    width: 99%; text-align: left;
+}
+.ebd17 .land .land_mng li{position: relative;}
+.ebd17 .land .land_first .boxgp .boxgp_head{
+    width: 100%; height: 8.5rem;
+    margin: 0 auto;
+    font-size: 5rem; line-height: 8.5rem;
+}
+.ebd17 .land .boxgp .boxgp_img{margin-right: 3rem;}
+.ebd17 .land .boxgp .boxgp_wrap{padding: 2.3rem 0 0 3.6rem;}
+
+
+
+
+
+
+/* ebd2 */
+.ebd2 .land .land_first .boxgp{width: 64rem; box-shadow: 0 0 1rem rgba(0,0,0,0.2);}
+.ebd2 .land .land_first .boxgp .boxgp_head{width: 100%; height: 8rem; margin: 0 auto; font-size: 4.7rem; line-height: 8rem; background-color: #235196;}
+.ebd2 .land .land_first .boxgp .boxgp_wrap{height: 29.4rem;}
+.ebd2 .land .land_first .boxgp .boxgp_img{width: 18rem; height: 24rem;}
+.ebd2 .land .land_first .boxgp .boxgp_name{font-size: 3.8rem; line-height: 3.8rem;}
+.ebd2 .land .land_first .boxgp .boxgp_rank{font-size: 3rem; line-height: 3.8rem;}
+.ebd2 .land .land_first .boxgp dl dt{font-size: 3rem;}
+.ebd2 .land .land_first .boxgp dl dd{font-size: 3rem;}
+.ebd2 .land .land_first .boxgp .boxgp_tit{padding-bottom: 1.5rem;}
+.ebd2 .land .land_first .boxgp dl div+div{margin-top: 1.1rem}
+.ebd2 .land .land_first:before{display: block; bottom: -4rem; height: 8rem;}
+.ebd2 .land > ul:before{display: block;}
+.ebd2 .land .land_exe li:before{display: block;}
+.ebd2 .contents_inner{height: 198rem; overflow-y: scroll;-ms-overflow-style: none; scrollbar-width: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.ebd2 .contents_inner::-webkit-scrollbar {display: none;}
+
+
+
+.ebd2 .land7 .boxgp .boxgp_wrap{padding: 2.5rem 0 0 3.5rem;}
+.ebd2 .land7 .boxgp .boxgp_img{margin-right: 3rem;}
+
+.ebd2 .boxgp_section{margin: 9.8rem 0 0 0; text-align: center; }
+.ebd2 .boxgp_section2{margin: 0; text-align: left; }
+.ebd2 .land5 .boxgp{margin: 0 auto 3rem;}
+.ebd2 .land6 .boxgp{margin: 0 auto 3rem;}
+.ebd2 .land7 .boxgp{margin: 0 auto 3rem;}
+
+
+.ebd2 .land .boxgp_section .boxgp{width: 44rem; margin: 0 auto 3rem auto;}
+.ebd2 .land .boxgp_section2 .boxgp{width: 44rem; margin: 0 1.5rem 3rem 1.5rem;}
+
+.ebd2 .boxgp_section .boxgp_head{background-color: #799ed5 !important;}
+.ebd2 .land .land_exe li{width: 94rem}
+.ebd2 .land5 .land_exe li{width: 63rem}
+.ebd2 .land6 .land_exe li{width: 60rem}
+.ebd2 .land7 .land_exe li{width: 54rem}
+.ebd2 .land8 .land_exe li{width: 47rem}
+
+
+.ebd2 .land .land_exe li > .boxgp{width: 44rem; margin: 0 auto;}
+.ebd2 .land_center{width: 376rem; text-align: left; margin: 6rem auto 0; font-size: 0;}
+.ebd2 .land_center > div{display: inline-block; text-align: left;}
+
+.ebd2 .land1 > ul:before{display: none;}
+.ebd2 .land2 > ul:before{width: 94rem;}
+.ebd2 .land3 > ul:before{width: 188rem;}
+.ebd2 .land4 > ul:before{width: 282rem;}
+.ebd2 .land5 > ul:before{width: 252rem;}
+.ebd2 .land6 > ul:before{width: 300rem;}
+.ebd2 .land7 > ul:before{width: 324rem;}
+.ebd2 .land8 > ul:before{width: 329rem;}
+
+
+
+/* 팀장이 없을때 */
+.ebd2 .teamnone > .boxgp{height: 27rem; background-color: transparent; box-shadow: none;}
+.ebd2 .land .land_exe li.teamnone:before{height: 31rem;}
+
+
+
+/* ebd3 과는 무조건 4개*/
+.ebd3 .land .land_first .boxgp{width: 64rem; box-shadow: 0 0 1rem rgba(0,0,0,0.2);}
+.ebd3 .land .land_first .boxgp .boxgp_head{width: 100%; height: 8rem; margin: 0 auto; font-size: 4.7rem; line-height: 8rem; background-color: #235196;}
+.ebd3 .land .land_first .boxgp .boxgp_wrap{height: 29.4rem;}
+.ebd3 .land .land_first .boxgp .boxgp_img{width: 18rem; height: 24rem;}
+.ebd3 .land .land_first .boxgp .boxgp_name{font-size: 3.8rem; line-height: 3.8rem;}
+.ebd3 .land .land_first .boxgp .boxgp_rank{font-size: 3rem; line-height: 3.8rem;}
+.ebd3 .land .land_first .boxgp dl dt{font-size: 3rem;}
+.ebd3 .land .land_first .boxgp dl dd{font-size: 3rem;}
+.ebd3 .land .land_first .boxgp .boxgp_tit{padding-bottom: 1.5rem;}
+.ebd3 .land .land_first .boxgp dl div+div{margin-top: 1.1rem}
+.ebd3 .land .land_first:before{display: block; bottom: -4rem; height: 8rem;}
+.ebd3 .land > ul:before{display: block;}
+.ebd3 .land .land_exe li:before{display: block;}
+.ebd3 .contents_inner{height: 198rem; overflow-y: scroll;-ms-overflow-style: none; scrollbar-width: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.ebd3 .contents_inner::-webkit-scrollbar {display: none;}
+
+
+.ebd3 .boxgp_section{margin: 9.8rem 0 0 0; text-align: center; }
+.ebd3 .boxgp_section2{margin: 0; text-align: left; }
+.ebd3 .boxgp_section .boxgp_head{background-color: #799ed5 !important;}
+.ebd3 .land .land_exe li{width: 94rem}
+.ebd3 .land .land_exe li > .boxgp{width: 44rem; margin: 0 auto;}
+.ebd3 .land .boxgp_section .boxgp{width: 44rem; margin: 0 auto 3rem auto;}
+.ebd3 .land .boxgp_section2 .boxgp{width: 44rem; margin: 0 1.5rem 3rem 1.5rem;}
+
+.ebd3 .land_center{width: 376rem; text-align: left; margin: 6rem auto 0; font-size: 0;}
+.ebd3 .land_center > div{display: inline-block; width: 44rem; margin: 0 1.5rem 3rem 1.5rem; text-align: left;}
+
+
+.ebd3 .land1 > ul:before{display: none;}
+.ebd3 .land2 > ul:before{width: 94rem;}
+.ebd3 .land3 > ul:before{width: 188rem;}
+.ebd3 .land4 > ul:before{width: 282rem;}
+.ebd3 .land5 > ul:before{width: 252rem;}
+.ebd3 .land6 > ul:before{width: 300rem;}
+.ebd3 .land7 > ul:before{width: 324rem;}
+.ebd3 .land8 > ul:before{width: 329rem;}
+
+
+
+
+@media screen and (max-width: 1920px) {
+    html, body{font-size: 5px;}
+
+    .land > ul:before{width: 1433px;}
+    .land1 > ul:before{display: none;}
+    .land2 > ul:before{width: 288.5px;}
+    .land3 > ul:before{width: 575px;}
+    .land4 > ul:before{width: 861px;}
+    .land5 > ul:before{width: 1148px;}
+    .land6 > ul:before{width: 1436px;}
+
+}
