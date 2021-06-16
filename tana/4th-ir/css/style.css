@@ -914,8 +914,9 @@ footer{background-color: #262646; margin-top: 100px;}
     .board_total{display: block;}
     .board_search{float: left; display: block; width: 100%;}
     .board_search .input{width: 100%;}
-    .board_search .control{width:  calc(100% - 46px);}
-    .board_search .control:nth-of-type(2){width: calc(100% - 172px);}
+    .board_search select{width: 100%; border-bottom: 1px solid #3984d8;}
+    .board_search .control{width:  100%;}
+    .board_search .control:nth-of-type(2){width: calc(100% - 46px);}
     .board_search .control:last-child{width: 46px;}
     .board_search .button{background-size: 380% auto; background-position: 7px 0;}
     .board_search2 select{width: 100%;}
