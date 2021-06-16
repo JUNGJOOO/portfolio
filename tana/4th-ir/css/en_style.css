@@ -1,0 +1,153 @@
+@charset "UTF-8";
+.en header .header_logo{width: 151px; background: url(../img/4th_logo_en.jpg) no-repeat;}
+
+/* ==================== content ==================== */
+.en_pcfir .sidebar{background: #013061 url(../img/sidebar1.jpg) no-repeat; background-position: center;}
+.en_hackthon .sidebar{background: #013061 url(../img/sidebar4.jpg) no-repeat; background-position: center;}
+.en_news .sidebar{background: #013061 url(../img/sidebar2.jpg) no-repeat; background-position: center;}
+.en_data .sidebar{background: #013061 url(../img/sidebar3.jpg) no-repeat; background-position: center;}
+.en_4th .sidebar{background: #013061 url(../img/sidebar_en1.jpg) no-repeat; background-position: center;}
+
+.en_list1{padding-left: 25px;}
+.en_list1 li{position: relative; font-size: 16px;}
+.en_list1 li:before{
+    content: '';
+    position: absolute; top: 7px; left: -18px;
+    width: 8px; height: 8px; background-color: #006db9;
+    border-radius: 50%;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+.en_list1 li+li{margin-top: 5px;}
+
+.en_list2{padding-left: 25px; margin-bottom: 20px;}
+.en_list2 li{position: relative; font-size: 18px;}
+.en_list2 li:before{
+    content: ''; position: absolute; top: 7px; left: -18px;
+    width: 10px; height: 10px; border: 3px solid #013061; border-radius: 50%;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+.en_list2 li+li{margin-top: 5px;}
+.en_list_bg1{
+    padding: 25px; margin: 10px 0 20px 25px; background-color: #f5f5f5; border-radius: 10px;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+.en_list_bg1 .txt-20{margin-bottom: 5px;}
+
+
+/* ==================== pc버전 전체메뉴 ==================== */
+.en .totalmenu_nav > ul > li:nth-of-type(2){width: 125px;}
+.en .totalmenu_nav > ul > li:nth-of-type(2) .totalmenu_sub{width: 125px;}
+
+/* ==================== footer ==================== */
+.en .footer_txt p{font-size: 14px; color: #ddd;}
+
+/* ******** 정책정보 > 데이터119 ******** */
+.en .oonine_project li{height: 375px; padding-top: 175px;}
+.en .oonine_project li:nth-of-type(3){padding-top: 120px;}
+.en .oonine_project li:nth-of-type(1):after{top: 75px;}
+.en .oonine_project li:nth-of-type(2):after{top: 75px;}
+.en .oonine_project li b{display: block;}
+
+
+/* ******** About PCFIR > Greetings (인사말) ******** */
+.en .greeting_leader strong{display: block;}
+
+/* ******** About PCFIR > Organization (조직도) ******** */
+.en .org_header strong{width: auto;}
+.en .orgteam_header strong{width: 350px;}
+.en .orgmem_header{width: 65%;}
+.en .orgteam_wrap .is-blue1{
+    display: block;
+    word-wrap: normal;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.en .orgteam_side2 .is-blue1{width: 420px;}
+
+
+/* ********  About PCFIR > Location and Directions (찾아오시는 길) ******** */
+.en .map_box2 .map_section em{width: 270px;}
+.en .map_box2 .map_section span{width: calc(100% - 300px);}
+
+
+/* ******** HACKTHON (해커톤) ******** */
+.hackathon_overview{margin-top: 20px; padding: 10px 10px 10px 40px; border: 2px solid #006db9; border-radius: 10px;}
+.hackathon_overview div{position: relative;}
+.hackathon_overview div:before{
+    content: ''; position: absolute; top: 7px; left: -18px;
+    width: 10px; height: 10px; border: 3px solid #006db9; border-radius: 50%;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+/* ******** About 4TH-IR (4차 산업혁명 안내) ******** */
+.en_4th_img{width: 100%; margin-top: 20px;}
+
+
+@media screen and (max-width: 1400px) {
+    .en header .header_logo{width: 120px; height: 33px; background-size: 100% auto;}
+    .en .footer_wrap{height: 100px;}
+    .en_pcfir .sidebar,
+    .en_hackthon .sidebar,
+    .en_news .sidebar,
+    .en_data .sidebar,
+    .en_4th .sidebar{background: #013061;}
+
+    .en_list1 li{font-size: 15px;}
+    .en_list2 li{font-size: 16px;}
+    .en_list_bg1{padding: 20px; margin: 10px 0 20px 0;}
+
+    .en .oonine_project li{height:auto; padding-top: 110px; padding-bottom: 25px;}
+    .en .oonine_project li:nth-of-type(3){height: auto; padding-top: 120px;}
+    .en .oonine_project li:nth-of-type(1):after{top: 30px;}
+    .en .oonine_project li:nth-of-type(2):after{top: 30px;}
+    .en .oonine_project li:nth-of-type(3):after{top: 30px;}
+
+    /* ******** About PCFIR > Organization (조직도) ******** */
+    .en .orgmem_header{width: 90%;}
+    .en .orgteam_header strong{width: 35%;}
+    .orgteam_list:nth-of-type(2) li a{
+        display: block;
+        word-wrap: normal;
+        word-break: normal;
+        text-overflow: clip;
+        white-space: normal;
+        overflow: hidden;
+    }
+    .en .orgteam_side2 .is-blue1{width: 265px;}
+
+    /* ******** 정책정보 > 데이터119 ******** */
+    .en_data .click_group div a{width: 150px;}
+
+    /* ******** HACKTHON (해커톤) ******** */
+    .hackathon_overview{padding: 10px 10px 10px 30px;}
+
+}
+@media screen and (max-width: 768px) {
+    .en .footer_wrap{height: auto;}
+    .en_list_bg1{padding: 15px;}
+    .en .orgmem_header{width: 100%;}
+    .org .tab_list_orgmem li a{
+        display: block;
+        word-wrap: normal;
+        word-break: break-all;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    /* ********  About PCFIR > Location and Directions (찾아오시는 길) ******** */
+    .en .map_box2 .map_section em{display: block;}
+    .en .map_box2 .map_section span{display: block; width: 100%;} 
+    .en .orgteam_header strong{
+        word-wrap: normal;
+        word-break: break-all;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: calc((100% - 10px) / 2);
+        padding: 0 10px;
+        -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+    }
+    .en .orgteam_side2 .is-blue1{width: 100%;}
+    .en .orgteam_header{height: 50px;}
+}
