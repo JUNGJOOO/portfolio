@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACKTHON > HACKTHON</title>
+    <link rel="stylesheet" type="text/css" href="./css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/en_style.css"/>
+
+    <!-- jquery / font -->
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"/>
+    <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+<div class="wrap en en_hackthon">
+<!-- header -->
+<header>
+    <div class="accessibility">
+        <a href="#contents">Skip to Content</a>
+        <a href="#gnb">Skip to Main Menu</a>
+    </div>
+    <div class="header_wrap">
+        <h1 class="header_logo">
+            <a href="en_main.html"><span class="blind">presidential committee on the fourth industrial revolution</span></a>
+        </h1>
+        <!-- pc 전체메뉴 -->
+        <div class="totalmenu">
+            <nav class="totalmenu_nav">
+                <ul id="gnb">
+                    <li><a href="en_aboutpcfir_greetings.html">About PCFIR</a>
+                        <ul class="totalmenu_sub">
+                            <li><a href="en_aboutpcfir_greetings.html">Greetings</a></li>
+                            <li><a href="en_aboutpcfir_overview.html">Overview</a></li>
+                            <li><a href="aboutpcfir_organi_organi.html">Organization</a></li>
+                            <li><a href="en_aboutpcfir_location.html">Location and Directions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="en_news_news_list.html">NEWS</a>
+                        <ul class="totalmenu_sub">
+                            <li><a href="en_news_news_list.html">NEWS</a></li>
+                            <li><a href="en_news_International_list.html">International Cooperation</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="en_about4thir.html">About 4TH-IR</a>
+                        <ul class="totalmenu_sub">
+                            <li><a href="en_about4thir.html">About 4TH-IR</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="en_hackthon.html">HACKTHON</a>
+                        <ul class="totalmenu_sub">
+                            <li><a href="en_hackthon.html">HACKTHON</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="en_data.html">DATA 119</a>
+                        <ul class="totalmenu_sub">
+                            <li><a href="en_data.html">DATA 119</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="header_util">
+                <li class="header_search"><a title="search page" href="통합검색1.html"><i class="fa fa-search"></i><span class="sr-only">search button</span></a></li>
+                <li class="header_lang"><a title="korea page" href="kr_main.html">KOREA</a></li>
+            </ul>
+        </div>
+        <!-- pc이하버전 -->
+        <button class="mbmenu_toggle">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+        <!-- pc이하버전 전체메뉴 -->
+        <aside class="mbmenu" id="mbmenu">
+            <ul class="mbmenu_util">
+                <li class="mb_lang"><a title="korea page" href="kr_main.html">KOREA</a></li>
+            </ul>
+            <nav class="mbmenu_nav">
+                <ul id="gnb">
+                    <li class="dropdown"><a href="#">About PCFIR<b class="caret"></b></a>
+                        <ul class="dropdown_menu">
+                            <li><a href="en_aboutpcfir_greetings.html"><i>&#45;</i>Greetings</a></li>
+                            <li><a href="en_aboutpcfir_overview.html"><i>&#45;</i>Overview</a></li>
+                            <li><a href="aboutpcfir_organi_organi.html"><i>&#45;</i>Organization</a></li>
+                            <li><a href="en_aboutpcfir_location.html"><i>&#45;</i>Location and Directions</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">NEWS<b class="caret"></b></a>
+                        <ul class="dropdown_menu">
+                            <li><a href="en_news_news_list.html"><i>&#45;</i>NEWS</a></li>
+                            <li><a href="en_news_International_list.html"><i>&#45;</i>International Cooperation</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">About 4TH-IR<b class="caret"></b></a>
+                        <ul class="dropdown_menu">
+                            <li><a href="en_about4thir.html"><i>&#45;</i>About 4TH-IR</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">HACKTHON<b class="caret"></b></a>
+                        <ul class="dropdown_menu">
+                            <li><a href="en_hackthon.html"><i>&#45;</i>HACKTHON</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">DATA 119<b class="caret"></b></a>
+                        <ul class="dropdown_menu">
+                            <li><a href="en_data.html"><i>&#45;</i>DATA 119</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button class="mbmenu_close">
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </aside>
+    </div>
+    <div class="bg_totalmenu"></div>
+</header>
+<!-- content -->
+<div class="content " id="contents">
+    <aside class="sidebar">
+        <h2 class="sidebar_tit">HACKTHON</h2>
+    </aside>
+    <div class="content_body">
+        <div class="content_wrap">
+            <div class="content_header">
+                <h3 class="content_tit">HACKTHON</h3>
+                <div class="breadcrumb">
+                    <a href="#"><span>HACKTHON</span></a>
+                    <span class="hcode">&gt;</span>
+                    <a href="#" class="bread_active"><span>HACKTHON</span></a>
+                </div>
+            </div>
+<!-- s: content -->
+            <h4 class="title_h4">Overview</h4>
+            <div class="hackathon_sketch">
+                <img src="img/hackathon_01.png" alt="4차 산업혁명 규제·제도혁신 해커톤">
+                <div class="sketch_box">
+                    <p class="txt-18">
+                        Now that the 4th Industrial Revolution is upon us,<br class="p_m"/>
+                        new institutional issues are arising amid the birth of new industries and destruction of the old order.<br class="p_m"/>
+                        The PCFIR encourages public debates on these issues and controversies,<br class="p_m"/>
+                        involving acute conflicts of interest, hoping to find suitable answers and solutions through discourse.
+                    </p>
+                </div>
+            </div>
+            <div class="hackathon_overview">
+                <div class="cl2 txt-16">The PCFIR serves as the intermediator and coordinator of these debates and helps participants discuss and find specific reform measures.</div>
+            </div>
+            <h4 class="title_h4">Characteristics of the Hackathon</h4>
+            <ul class="en_list2">
+                <li>Issues on the agenda, solutions, and executive plans must all be identified and selected based on the consensus of participants.</li>
+                <li>Participants face no limits to their speech, but professional facilitators will mediate the debates.</li>
+                <li>Working together, the participants draft a final version of the consensus, which is then relayed to the respective ministries and departments. The results of the debates are monitored and checked.</li>
+            </ul>
+            <h4 class="title_h4">Process</h4>
+            <div class="cl2 txt-20 has-weight-bold">- Preparations</div>
+            <div class="en_list_bg1">
+                <ul class="en_list1">
+                    <li>Decide on the issues to be discussed.</li>
+                    <li>Select participants, including those from both the public and private sector.</li>
+                    <li>Organize preliminary discussions/meetings, both online and offline, for the analysis and finalization of the issues on the agenda and the detailed debate plan.</li>
+                </ul>
+            </div>
+            <div class="cl2 txt-20 has-weight-bold">- Hackathon</div>
+            <div class="en_list_bg1">
+                <ul class="en_list1">
+                    <li>Share core issues.</li>
+                    <li>Organize debates (opening → discussion → convergence).</li>
+                    <li>Draft plans for regulatory and institutional reforms.</li>
+                    <li>Organize meetings with policymakers.</li>
+                    <li>Draft the final consensus.</li>
+                </ul>
+            </div>
+            <div class="cl2 txt-20 has-weight-bold">- Follow-up</div>
+            <div class="en_list_bg1">
+                <ul class="en_list1">
+                    <li>Produce detailed action plans.</li>
+                    <li>Monitor and follow up with the government and National Assembly’s implementation of the plans.</li>
+                    <li>Confirm progress on a quarterly basis, and share feedback with Hackathon participants.</li>
+                </ul>
+            </div>
+<!-- e: content -->
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<footer>
+    <div class="footer_wrap">
+        <div class="footer_txt">
+            <p class="footer_desc"> 03154 1,Jong-ro, Jongno-gu, Seoul, Republic of Korea</p>
+            <p class="footer_copy">Copyright ⓒ 2017 The Presidential Committee on the 4th industrial revolution All Rights Reserved.</p>
+        </div>
+        <div class="footer_link">
+            <div class="footer_mark">
+                <a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" target="_blank" title="새 창 열림">
+                    <img alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)" title="국가 공인 인증기관 : 웹와치" src="img/footer_link1.png"/>
+                </a>
+                <a href="http://www.kogl.or.kr/info/introduce.do" target="_blank" title="새 창 열림">
+                    <img alt="공공누리 마크" src="img/footer_link2.png"/>
+                </a>
+            </div>
+            <ul class="footer_sns">
+                <li class="blog"><a href="https://blog.naver.com/kr4thir" target="_blank" title="새 창 열림">blog</a></li>
+                <li class="facebook"><a href="https://www.facebook.com/kr4thir" target="_blank" title="새 창 열림">facebook</a></li>
+                <li class="youtube"><a href="https://www.youtube.com/channel/UCrRVmKLCFSbjS9AsRAqo9yQ" target="_blank" title="새 창 열림">youtube</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</div>
+
+<script type="text/javascript" src="./js/common.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정책·정보 > 참고자료/보고서</title>
+    <link rel="stylesheet" type="text/css" href="./css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+
+    <!-- jquery / font -->
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"/>
+    <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+<div class="wrap info">
+<!-- header -->
+<header>
+    <div class="accessibility">
+        <a href="#contents">본문 바로가기</a>
+        <a href="#gnb">주메뉴 바로가기</a>
+    </div>
+    <div class="header_wrap">
+        <h1 class="header_logo">
+            <a href="kr_main.html"><span class="blind">대통령 직속 4차산업혁명위원회</span></a>
+        </h1>
+        <!-- pc 전체메뉴 -->
+        <div class="totalmenu">
+            <nav class="totalmenu_nav">
+                <ul id="gnb">
+                    <li><a href="위원회소개_인사말.html">위원회 소개</a>
+                        <ul class="totalmenu_sub">
+                            <li><a href="위원회소개_인사말.html">인사말</a></li>
+                            <li><a href="위원회소개_위원회역할.html">위원회 역할</a></li>
+                            <li><a href="위원회소개_조직도위원소개_조직도.html">조직도·위원소개</a></li>
+                            <li><a href="위원회소개_찾아오시는길.html">찾아오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="알림마당_공지사항_list.html">알림마당</a>
+                        <ul class="totalmenu_sub">
+                            <li><a href="알림마당_공지사항_list.html">공지사항</a></li>
+                            <li><a href="알림마당_보도자료_list.html">보도자료</a></li>
+                            <li><a href="알림마당_국제협력_list.html">국제협력</a></li>
+                            <li><a href="알림마당_위원회활동_list.html">위원회 활동</a></li>             
+                            <li><a href="알림마당_미디어_list.html">미디어</a></li>                                                   
+                        </ul>
+                    </li>
+                    <li><a href="정책정보_안건심의_list.html">정책·정보</a>
+                        <ul class="totalmenu_sub">
+                            <li><a href="정책정보_안건심의_list.html">안건/심의</a></li>
+                            <li><a href="정책정보_참고자료보고서_list.html">참고자료/보고서</a></li>
+                            <li><a href="정책정보_카드뉴스_list.html">카드뉴스·인포그래픽</a></li>
+                            <li><a href="정책정보_데이터119.html">국가 데이터 정책방안</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="국민참여_해커톤_list.html">국민참여</a>
+                        <ul class="totalmenu_sub">
+                            <li><a href="국민참여_해커톤_list.html">해커톤</a></li>
+                            <li><a href="국민참여_의견수렴_list.html">의견수렴</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="header_util">
+                <li class="header_search"><a title="검색 페이지" href="통합검색1.html"><i class="fa fa-search"></i><span class="sr-only">검색 버튼</span></a></li>
+                <li class="header_lang"><a title="영문 페이지" href="en_main.html">ENGLISH</a></li>
+            </ul>
+        </div>
+        <!-- pc이하버전 -->
+        <button class="mbmenu_toggle">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+        <!-- pc이하버전 전체메뉴 -->
+        <aside class="mbmenu" id="mbmenu">
+            <ul class="mbmenu_util">
+                <li class="mb_lang"><a title="영문 페이지" href="en_main.html">ENGLISH</a></li>
+            </ul>
+            <nav class="mbmenu_nav">
+                <ul id="gnb">
+                    <li class="dropdown"><a href="#">위원회 소개<b class="caret"></b></a>
+                        <ul class="dropdown_menu">
+                            <li><a href="위원회소개_인사말.html"><i>&#45;</i>인사말</a></li>
+                            <li><a href="위원회소개_위원회역할.html"><i>&#45;</i>위원회 역할</a></li>
+                            <li><a href="위원회소개_조직도위원소개_조직도.html"><i>&#45;</i>조직도·위원소개</a></li>
+                            <li><a href="위원회소개_찾아오시는길.html"><i>&#45;</i>찾아오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">알림마당<b class="caret"></b></a>
+                        <ul class="dropdown_menu">
+                            <li><a href="알림마당_공지사항_list.html"><i>&#45;</i>공지사항</a></li>
+                            <li><a href="알림마당_보도자료_list.html"><i>&#45;</i>보도자료</a></li>
+                            <li><a href="알림마당_국제협력_list.html"><i>&#45;</i>국제협력</a></li>
+                            <li><a href="알림마당_위원회활동_list.html"><i>&#45;</i>위원회 활동</a></li>
+                            <li><a href="알림마당_미디어_list.html"><i>&#45;</i>미디어</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">정책·정보<b class="caret"></b></a>
+                        <ul class="dropdown_menu">
+                            <li><a href="정책정보_안건심의_list.html"><i>&#45;</i>안건/심의</a></li>
+                            <li><a href="정책정보_참고자료보고서_list.html"><i>&#45;</i>참고자료/보고서</a></li>
+                            <li><a href="정책정보_카드뉴스_list.html"><i>&#45;</i>카드뉴스·인포그래픽</a></li>
+                            <li><a href="정책정보_데이터119.html"><i>&#45;</i>국가 데이터 정책방안</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">국민참여<b class="caret"></b></a>
+                        <ul class="dropdown_menu">
+                            <li><a href="국민참여_해커톤_list.html"><i>&#45;</i>해커톤</a></li>
+                            <li><a href="국민참여_의견수렴_list.html"><i>&#45;</i>의견수렴</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button class="mbmenu_close">
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </aside>
+    </div>
+    <div class="bg_totalmenu"></div>
+</header>
+<!-- content -->
+<div class="content" id="contents">
+    <aside class="sidebar">
+        <h2 class="sidebar_tit">정책·정보</h2>
+    </aside>
+    <div class="content_body">
+        <div class="content_wrap">
+            <div class="content_header">
+                <h3 class="content_tit">참고자료/보고서</h3>
+                <div class="breadcrumb">
+                    <a href="#"><span>정책·정보</span></a>
+                    <span class="hcode">&gt;</span>
+                    <a href="#" class="bread_active"><span>참고자료/보고서</span></a>
+                </div>
+            </div>
+<!-- s: content -->
+            <div class="board">
+                <div class="board_wrap">
+                    <!-- s: .board_header -->
+                    <div class="board_header">
+                        <div class="board_total is-hidden-mobile">
+                            전체 <em>24</em>건, 현재 페이지 <em>1</em>/1
+                        </div>
+                        <div class="board_search board_search2">
+                            <div class="field">
+                                <div class="control">
+                                    <div class="select">
+                                        <select>
+                                            <option value="" selected>전체</option>
+                                            <option value="0">총괄법제</option>
+                                            <option value="1">데이터</option>
+                                            <option value="2">기술산업</option>
+                                            <option value="3">규제개선</option>
+                                            <option value="4">사회혁신</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="control">
+                                    <div class="select">
+                                        <select>
+                                            <option value="" selected>전체</option>
+                                            <option value="0">제목</option>
+                                            <option value="1">기간</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="control"><input class="input" type="text" placeholder="검색어를 입력하세요"></div>
+                                <div class="control"><button class="button">검색</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e: .board_header -->
+                    <!-- s: .table_wrap -->
+                    <div class="table_wrap">
+                        <table class="table">
+                            <caption class="hide">번호,제목,기간,진행상황에 따른 리스트 목록</caption>
+                            <colgroup>
+                                <col style="width:80px;" class="hidden-mb">
+                                <col style="width:150px;" class="hidden-mb">
+                                <col style="">
+                                <col style="width:220px;" class="hidden-mb">
+                                <col style="width:160px;" class="hidden-mb">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="hidden-mb">번호</th>
+                                    <th scope="col" class="hidden-mb">구분</th>
+                                    <th scope="col">제목</th>
+                                    <th scope="col" class="hidden-mb">출처</th>
+                                    <th scope="col" class="hidden-mb">작성일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="notify">
+                                    <td class="hidden-mb">공지</td>
+                                    <td class="hidden-mb">
+                                        <span class="is-sort-type1">총괄법제</span>
+                                    </td>
+                                    <td class="text-left">
+                                        <span class="hidden-pc is-sort-type1">총괄법제</span>
+                                        <a href="#" class="title text-ellipsis">
+                                            통일교육원 공무직근로자 채용 서류전형 합격자 및 면접시험 일정공고
+                                            통일교육원 공무직근로자 채용 서류전형 합격자 및 면접시험 일정공고
+                                            통일교육원 공무직근로자 채용 서류전형 합격자 및 면접시험 일정공고
+                                            통일교육원 공무직근로자 채용 서류전형 합격자 및 면접시험 일정공고
+                                            통일교육원 공무직근로자 채용 서류전형 합격자 및 면접시험 일정공고
+                                        </a>
+                                        <p class="title hidden-pc">2021.01.01</p>
+                                    </td>
+                                    <td class="hidden-mb">4차산업혁명위원회</td>
+                                    <td class="hidden-mb">2021.01.01</td>
+                                </tr>
+                                <tr class="notify">
+                                    <td class="hidden-mb">공지</td>
+                                    <td class="hidden-mb">
+                                        <span class="is-sort-type2">데이터</span>
+                                    </td>
+                                    <td class="text-left">
+                                        <span class="hidden-pc is-sort-type2">데이터</span>
+                                        <a href="#" class="title text-ellipsis">
+                                            통일교육원 공무직근로자 채용 서류전형 합격자 및 면접시험 일정공고
+                                            통일교육원 공무직근로자 채용 서류전형 합격자 및 면접시험 일정공고
+                                            통일교육원 공무직근로자 채용 서류전형 합격자 및 면접시험 일정공고
+                                            통일교육원 공무직근로자 채용 서류전형 합격자 및 면접시험 일정공고
+                                            통일교육원 공무직근로자 채용 서류전형 합격자 및 면접시험 일정공고
+                                        </a>
+                                        <p class="title hidden-pc">2021.01.01</p>
+                                    </td>
+                                    <td class="hidden-mb">4차산업혁명위원회</td>
+                                    <td class="hidden-mb">2021.01.01</td>
+                                </tr>
+                                <tr>
+                                    <td class="hidden-mb">3</td>
+                                    <td class="hidden-mb">
+                                        <span class="is-sort-type3">기술산업</span>
+                                    </td>
+                                    <td class="text-left">
+                                        <span class="hidden-pc is-sort-type3">기술산업</span>
+                                        <a href="#" class="title text-ellipsis">
+                                            통일교육원 공무직근로자 채용 서류전형 합격자 및 면접시험 일정공고
+                                        </a>
+                                        <p class="title hidden-pc">2021.01.01</p>
+                                    </td>
+                                    <td class="hidden-mb">4차산업혁명위원회</td>
+                                    <td class="hidden-mb">2021.01.01</td>
+                                </tr>
+                                <tr>
+                                    <td class="hidden-mb">2</td>
+                                    <td class="hidden-mb">
+                                        <span class="is-sort-type4">규제개선</span>
+                                    </td>
+                                    <td class="text-left">
+                                        <span class="hidden-pc is-sort-type4">규제개선</span>
+                                        <a href="#" class="title text-ellipsis">
+                                            통일교육원 공무직근로자 채용 서류전형 합격자 및 면접시험 일정공고
+                                        </a>
+                                        <p class="title hidden-pc">2021.01.01</p>
+                                    </td>
+                                    <td class="hidden-mb">4차산업혁명위원회</td>
+                                    <td class="hidden-mb">2021.01.01</td>
+                                </tr>
+                                <tr>
+                                    <td class="hidden-mb">1</td>
+                                    <td class="hidden-mb">
+                                        <span class="is-sort-type5">사회혁신</span>
+                                    </td>
+                                    <td class="text-left">
+                                        <span class="hidden-pc is-sort-type5">사회혁신</span>
+                                        <a href="#" class="title text-ellipsis">
+                                            통일교육원 공무직근로자 채용 서류전형 합격자 및 면접시험 일정공고
+                                        </a>
+                                        <p class="title hidden-pc">2021.01.01</p>
+                                    </td>
+                                    <td class="hidden-mb">4차산업혁명위원회</td>
+                                    <td class="hidden-mb">2021.01.01</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <!-- e: .table_wrap -->
+                    <!-- s: .pagination -->
+                    <nav class="pagination">
+                        <a href="#" class="pagination_first">
+                            <i class="hide">처음페이지</i>
+                        </a>
+                        <a href="#" class="pagination_prev">
+                            <i class="hide">이전페이지</i>
+                        </a>
+                        <ul class="pagination_list">
+                            <li class="active"><a href="#" title="1페이지">1</a></li>
+                            <li><a href="#" title="2페이지">2</a></li>
+                            <li><a href="#" title="3페이지">3</a></li>
+                            <li><a href="#" title="4페이지">4</a></li>
+                            <li><a href="#" title="5페이지">5</a></li>
+                            <li><a href="#" title="6페이지">6</a></li>
+                            <li><a href="#" title="7페이지">7</a></li>
+                            <li><a href="#" title="8페이지">8</a></li>
+                            <li><a href="#" title="9페이지">9</a></li>
+                            <li><a href="#" title="10페이지">10</a></li>
+                        </ul>
+                        <a href="#" class="pagination_next">
+                            <i class="hide">다음페이지</i>
+                        </a>
+                        <a href="#" class="pagination_last">
+                            <i class="hide">마지막페이지</i>
+                        </a>
+                    </nav>
+                    <!-- e: .pagination -->
+                </div>
+            </div>
+<!-- e: content -->
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<footer>
+    <div class="footer_wrap">
+        <strong class="footer_logo">
+            <span class="hide">대통령직속 4차산업혁명위원회</span>
+        </strong>
+        <div class="footer_txt">
+            <p class="footer_copy">Copyright ⓒ 2017 The Presidential Committee on the 4th industrial revolution All Rights Reserved.</p>
+            <p class="footer_desc">이 사이트의 모든 저작권은 4차산업혁명위원회에 있습니다. 이곳의 모든 사진과 컨텐츠의 무단 재배포를 금지합니다.</p>
+            <p class="footer_address">주소 우) 03154 서울특별시 종로구 종로1 광화문교보빌딩 13층 4차산업혁명위원회</p>
+            <a href="이용안내_저작권보호및이용정책.html"><i class="fas fa-book"></i>저작권 보호 및 이용정책</a>
+            <a href="이용안내_사이트맵.html"><i class="fas fa-sitemap"></i>사이트맵</a>
+        </div>
+        <div class="footer_link">
+            <div class="footer_mark">
+                <a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" target="_blank" title="새 창 열림">
+                    <img alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)" title="국가 공인 인증기관 : 웹와치" src="img/footer_link1.png"/>
+                </a>
+                <a href="http://www.kogl.or.kr/info/introduce.do" target="_blank" title="새 창 열림">
+                    <img alt="공공누리 마크" src="img/footer_link2.png"/>
+                </a>
+            </div>
+            <ul class="footer_sns">
+                <li class="blog"><a href="https://blog.naver.com/kr4thir" target="_blank" title="새 창 열림">blog</a></li>
+                <li class="facebook"><a href="https://www.facebook.com/kr4thir" target="_blank" title="새 창 열림">facebook</a></li>
+                <li class="youtube"><a href="https://www.youtube.com/channel/UCrRVmKLCFSbjS9AsRAqo9yQ" target="_blank" title="새 창 열림">youtube</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</div>
+
+<script type="text/javascript" src="./js/common.js"></script>
+
+</body>
+</html>

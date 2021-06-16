@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대통령직속 4차산업혁명위원회</title>
+    <link rel="stylesheet" type="text/css" href="./css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/jquery-ui.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/jquery-bxslider.css">
+
+    <!-- jquery / font -->
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"/>
+    <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+</head>
+
+<body>
+<div class="wrap main">
+<!-- header -->
+<header>
+    <div class="accessibility">
+        <a href="#contents">본문 바로가기</a>
+        <a href="#gnb">주메뉴 바로가기</a>
+    </div>
+    <div class="header_wrap">
+        <h1 class="header_logo">
+            <a href="kr_main.html"><span class="blind">대통령 직속 4차산업혁명위원회</span></a>
+        </h1>
+        <!-- pc 전체메뉴 -->
+        <div class="totalmenu">
+            <nav class="totalmenu_nav">
+                <ul id="gnb">
+                    <li><a href="위원회소개_인사말.html">위원회 소개</a>
+                        <ul class="totalmenu_sub">
+                            <li><a href="위원회소개_인사말.html">인사말</a></li>
+                            <li><a href="위원회소개_위원회역할.html">위원회 역할</a></li>
+                            <li><a href="위원회소개_조직도위원소개_조직도.html">조직도·위원소개</a></li>
+                            <li><a href="위원회소개_찾아오시는길.html">찾아오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="알림마당_공지사항_list.html">알림마당</a>
+                        <ul class="totalmenu_sub">
+                            <li><a href="알림마당_공지사항_list.html">공지사항</a></li>
+                            <li><a href="알림마당_보도자료_list.html">보도자료</a></li>
+                            <li><a href="알림마당_국제협력_list.html">국제협력</a></li>
+                            <li><a href="알림마당_위원회활동_list.html">위원회 활동</a></li>             
+                            <li><a href="알림마당_미디어_list.html">미디어</a></li>                                                   
+                        </ul>
+                    </li>
+                    <li><a href="정책정보_안건심의_list.html">정책·정보</a>
+                        <ul class="totalmenu_sub">
+                            <li><a href="정책정보_안건심의_list.html">안건/심의</a></li>
+                            <li><a href="정책정보_참고자료보고서_list.html">참고자료/보고서</a></li>
+                            <li><a href="정책정보_카드뉴스_list.html">카드뉴스·인포그래픽</a></li>
+                            <li><a href="정책정보_데이터119.html">국가 데이터 정책방안</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="국민참여_해커톤_list.html">국민참여</a>
+                        <ul class="totalmenu_sub">
+                            <li><a href="국민참여_해커톤_list.html">해커톤</a></li>
+                            <li><a href="국민참여_의견수렴_list.html">의견수렴</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="header_util">
+                <li class="header_search"><a title="검색 페이지" href="통합검색1.html"><i class="fa fa-search"></i><span class="sr-only">검색 버튼</span></a></li>
+                <li class="header_lang"><a title="영문 페이지" href="en_main.html">ENGLISH</a></li>
+            </ul>
+        </div>
+        <!-- pc이하버전 -->
+        <button class="mbmenu_toggle">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+        <!-- pc이하버전 전체메뉴 -->
+        <aside class="mbmenu" id="mbmenu">
+            <ul class="mbmenu_util">
+                <li class="mb_lang"><a title="영문 페이지" href="en_main.html">ENGLISH</a></li>
+            </ul>
+            <nav class="mbmenu_nav">
+                <ul id="gnb">
+                    <li class="dropdown"><a href="#">위원회 소개<b class="caret"></b></a>
+                        <ul class="dropdown_menu">
+                            <li><a href="위원회소개_인사말.html"><i>&#45;</i>인사말</a></li>
+                            <li><a href="위원회소개_위원회역할.html"><i>&#45;</i>위원회 역할</a></li>
+                            <li><a href="위원회소개_조직도위원소개_조직도.html"><i>&#45;</i>조직도·위원소개</a></li>
+                            <li><a href="위원회소개_찾아오시는길.html"><i>&#45;</i>찾아오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">알림마당<b class="caret"></b></a>
+                        <ul class="dropdown_menu">
+                            <li><a href="알림마당_공지사항_list.html"><i>&#45;</i>공지사항</a></li>
+                            <li><a href="알림마당_보도자료_list.html"><i>&#45;</i>보도자료</a></li>
+                            <li><a href="알림마당_국제협력_list.html"><i>&#45;</i>국제협력</a></li>
+                            <li><a href="알림마당_위원회활동_list.html"><i>&#45;</i>위원회 활동</a></li>
+                            <li><a href="알림마당_미디어_list.html"><i>&#45;</i>미디어</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">정책·정보<b class="caret"></b></a>
+                        <ul class="dropdown_menu">
+                            <li><a href="정책정보_안건심의_list.html"><i>&#45;</i>안건/심의</a></li>
+                            <li><a href="정책정보_참고자료보고서_list.html"><i>&#45;</i>참고자료/보고서</a></li>
+                            <li><a href="정책정보_카드뉴스_list.html"><i>&#45;</i>카드뉴스·인포그래픽</a></li>
+                            <li><a href="정책정보_데이터119.html"><i>&#45;</i>국가 데이터 정책방안</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">국민참여<b class="caret"></b></a>
+                        <ul class="dropdown_menu">
+                            <li><a href="국민참여_해커톤_list.html"><i>&#45;</i>해커톤</a></li>
+                            <li><a href="국민참여_의견수렴_list.html"><i>&#45;</i>의견수렴</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button class="mbmenu_close">
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </aside>
+    </div>
+    <div class="bg_totalmenu"></div>
+</header>
+<!-- content -->
+<div class="content " id="contents">
+    <!-- s: intro -->
+    <section id="intro" class="intro">
+        <div id="myCarousel" class="slide">
+            <div class="carousel-inner">
+                <div class="item" style="background:url(img/main_visual_01.jpg) no-repeat center; background-size: cover;">
+                    <div class="contents">
+                        <strong>나의건강정보를 한눈에!</strong>
+                        <p>나의건강기록앱을 알아보세요</p>
+                        <div class="symbol">
+                            <img class="add_img" alt="" src="">
+                        </div>
+                        <button class="button" type="button" data-url="https://youtu.be/MX1TiYv8BVE">영상 보러가기</button>
+                    </div>
+                </div>
+                <div class="item" style="background:url(img/main_visual_02.jpg) no-repeat center; background-size: cover;">
+                    <div class="contents">
+                        <strong></strong>
+                        <p></p>
+                        <div class="symbol">
+                            <img class="add_img big_symbol" alt="" src="img/main_visual_thumb.png">
+                        </div>
+                        <button class="button add_btn linkBtn" type="button" data-url="https://youtu.be/d2rhwU-rzcc">영상 보러가기</button>
+                    </div>
+                </div>
+                <div class="item" style="background:url(img/main_visual_03.png) no-repeat center; background-size: cover;">
+                    <div class="contents">
+                        <strong>해커톤 규제개선 의제 국민 제안</strong>
+                        <p>4차산업혁명시대, 무엇을 토론할 지 국민 여러분이 제안해주십시오</p>
+                        <div class="symbol">
+                            <img class="add_img" alt="" src="img/main_visual_thumb2.png">
+                        </div>
+                        <button class="button add_btn linkBtn" type="button" data-url="https://www.4th-ir.go.kr/hackathon/list">해커톤 안건 국민제안</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content_wrap">
+            <div class="slide-box">
+                <div id="slide-counter" class="slide-counter"></div>
+                <div class="bannera_btn">
+                    <div class="bannera_btn_box">
+                        <div class="prev_bannera"></div>
+                        <div class="next_bannera"></div>
+                    </div>
+                    <div class="bannera_btn_middle">
+                        <div class="playstop_bannera"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- e: intro -->
+
+    <!-- s: msection1 -->
+     <section class="msection1">
+        <div class="content_wrap">
+            <div class="msection1_wrap">
+                <h3 class="mabout_go">
+                    <a href="알림마당_위원회활동_list.html">위원회 활동<i class="ico-marrow"></i></a>
+                </h3>
+                <ul class="mabout">
+                    <li>
+                        <a href="#">
+                            <div class="mabout_tit cl2 text-ellipsis">2021.01.01</div>
+                            <div class="mabout_desc text-ellipsis2">윤성로 위원장, 프랑스 통상장관 면담</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="mabout_tit cl2 text-ellipsis">2021.01.01</div>
+                            <div class="mabout_desc text-ellipsis2">4차산업혁명위원회 제19차 전체 회의 개최 4차산업혁명위원회 제19차 전체 회의 개최</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="mabout_tit cl2 text-ellipsis">2021.01.01</div>
+                            <div class="mabout_desc text-ellipsis2">4차산업혁명위원회 제19차 전체 회의 개최</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="mabout_tit cl2 text-ellipsis">2021.01.01</div>
+                            <div class="mabout_desc text-ellipsis2">4차산업혁명위원회 제19차 전체 회의 개최</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- e: msection1 -->
+
+     <!-- s: msection2 -->
+     <section class="msection2">
+        <div class="content_wrap">
+            <div class="msection2_wrap">
+                <h3 class="hide">메뉴 링크이동</h3>
+                <ul class="mlink">
+                    <li>
+                        <a href="정책정보_안건심의_list.html" target="_self">
+                            <div class="mlink_tit">안건/심의</div>
+                            <div class="mlink_desc">투명한 의원회 심의결과</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.4th-ir.go.kr/recommendation#sub_category_05-1-1" target="_blank">
+                            <div class="mlink_tit">대정부 권고안</div>
+                            <div class="mlink_desc">국민의 의견을 담은 권고안</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="국민참여_해커톤_list.html" target="_self">
+                            <div class="mlink_tit">해커톤</div>
+                            <div class="mlink_desc">규제·제도혁신</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="알림마당_국제협력_list.html" target="_self">
+                            <div class="mlink_tit">국제협력</div>
+                            <div class="mlink_desc">국제협력 정보</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="정책정보_참고자료보고서_list.html" target="_self">
+                            <div class="mlink_tit">참고자료/보고서</div>
+                            <div class="mlink_desc">위원회 활동 관련 자료</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="위원회소개_조직도위원소개_조직도.html" target="_self">
+                            <div class="mlink_tit">조직도</div>
+                            <div class="mlink_desc">위원회 구성</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- e: msection2 -->
+
+    <!-- s: msection3 -->
+    <section class="msection3">
+        <div class="content_wrap">
+            <div class="msection3_wrap mcolumns">
+                <div class="mcolumn">
+                    <h3 class="mtitle_h3">공지사항</h3>
+                    <ul class="mpreview">
+                        <li class="mpreview_main">
+                            <a href="#">
+                                <div class="mpreview_main_box">
+                                    <div class="mpreview_tit text-ellipsis2">개인주도형 의료데이터 활성화를 위한 기업간담회 기업간담회 기업간담회</div>
+                                    <div class="mpreview_desc text-ellipsis2">누구나 현장 중계에 참여하실 수 있습니다. 편한 채널로 접속해주세요. 편한 채널로 접속해주세요</div>
+                                </div>
+                                <div class="mpreview_date">21.01.<em>20</em></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="mpreview_tit text-ellipsis">개인주도형 의료데이터 활성화를 위한 기업간담회 개인주도형 의료데이터 활성화를 위한 기업간담회</div>
+                                <div class="mpreview_date">2021.01.01</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="mpreview_tit text-ellipsis">개인주도형 의료데이터 활성화를 위한 기업간담회</div>
+                                <div class="mpreview_date">2021.01.01</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="mpreview_tit text-ellipsis">개인주도형 의료데이터 활성화를 위한 기업간담회</div>
+                                <div class="mpreview_date">2021.01.01</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="mpreview_tit text-ellipsis">개인주도형 의료데이터 활성화를 위한 기업간담회</div>
+                                <div class="mpreview_date">2021.01.01</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mcolumn_btn">
+                        <a class="more" href="알림마당_공지사항_list.html">더보기</a>
+                    </div>
+                </div>
+                <div class="mcolumn">
+                    <h3 class="mtitle_h3">보도자료</h3>
+                    <ul class="mpreview">
+                        <li class="mpreview_main">
+                            <a href="#">
+                                <div class="mpreview_main_box">
+                                    <div class="mpreview_tit text-ellipsis2">개인주도형 의료데이터 활성화를 위한 기업간담회 기업간담회 기업간담회</div>
+                                    <div class="mpreview_desc text-ellipsis2">누구나 현장 중계에 참여하실 수 있습니다. 편한 채널로 접속해주세요. 편한 채널로 접속해주세요</div>
+                                </div>
+                                <div class="mpreview_date">21.01.<em>20</em></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="mpreview_tit text-ellipsis">개인주도형 의료데이터 활성화를 위한 기업간담회 개인주도형 의료데이터 활성화를 위한 기업간담회</div>
+                                <div class="mpreview_date">2021.01.01</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="mpreview_tit text-ellipsis">개인주도형 의료데이터 활성화를 위한 기업간담회</div>
+                                <div class="mpreview_date">2021.01.01</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="mpreview_tit text-ellipsis">개인주도형 의료데이터 활성화를 위한 기업간담회</div>
+                                <div class="mpreview_date">2021.01.01</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="mpreview_tit text-ellipsis">개인주도형 의료데이터 활성화를 위한 기업간담회</div>
+                                <div class="mpreview_date">2021.01.01</div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mcolumn_btn">
+                        <a class="more" href="알림마당_보도자료_list.html">더보기</a>
+                    </div>
+                </div>
+                <div class="mcolumn mface">
+                    <h3 class="mtitle_h3">SNS 소식</h3>
+                    <div>
+                        <ul class="bxslider_facebook">
+                            <li>
+                                <a href="#">
+                                    <div class="mface_img">
+                                        <img src="img/main_face_banner1.jpg" alt="페이스북소식 썸네일">
+                                    </div>
+                                    <div class="mface_txt text-ellipsis2">4차 산업혁명을 쉽게 알 수 있는 가장 편하고 지적인 방법! [EBS 클래스e 프로그램] "4차 산업혁명, 초연결 시대의 4차 산업혁명을 쉽게 알 수 있는 가장</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="mface_img">
+                                        <img src="img/main_face_banner4.jpg" alt="페이스북소식 썸네일">
+                                    </div>
+                                    <div class="mface_txt text-ellipsis2">4차 산업혁명을 쉽게 알 수 있는 가장 편하고 지적인 방법! [EBS 클래스e 프로그램] "4차 산업혁명, 초연결 시대의 4차 산업혁명을 쉽게 알 수 있는 가장</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="mface_img">
+                                        <img src="img/main_face_banner2.jpg" alt="페이스북소식 썸네일">
+                                    </div>
+                                    <div class="mface_txt text-ellipsis2">4차 산업혁명을 쉽게 알 수 있는 가장 편하고 지적인 방법! [EBS 클래스e 프로그램] "4차 산업혁명, 초연결 시대의 4차 산업혁명을 쉽게 알 수 있는 가장</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="mface_img">
+                                        <img src="img/main_face_banner3.jpg" alt="페이스북소식 썸네일">
+                                    </div>
+                                    <div class="mface_txt text-ellipsis2">4차 산업혁명을 쉽게 알 수 있는 가장 편하고 지적인 방법! [EBS 클래스e 프로그램] "4차 산업혁명, 초연결 시대의 4차 산업혁명을 쉽게 알 수 있는 가장</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mcolumn_btn">
+                        <div id="face_prev" class="face_prev">이전</div>
+                        <div id="face_next" class="face_next">다음</div>
+                        <a class="more" href="https://www.facebook.com/kr4thir" target="_blank">더보기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- e: msection3 -->
+</div>
+
+
+<!-- footer -->
+<footer>
+    <div class="footer_wrap">
+        <strong class="footer_logo">
+            <span class="hide">대통령직속 4차산업혁명위원회</span>
+        </strong>
+        <div class="footer_txt">
+            <p class="footer_copy">Copyright ⓒ 2017 The Presidential Committee on the 4th industrial revolution All Rights Reserved.</p>
+            <p class="footer_desc">이 사이트의 모든 저작권은 4차산업혁명위원회에 있습니다. 이곳의 모든 사진과 컨텐츠의 무단 재배포를 금지합니다.</p>
+            <p class="footer_address">주소 우) 03154 서울특별시 종로구 종로1 광화문교보빌딩 13층 4차산업혁명위원회</p>
+            <a href="이용안내_저작권보호및이용정책.html"><i class="fas fa-book"></i>저작권 보호 및 이용정책</a>
+            <a href="이용안내_사이트맵.html"><i class="fas fa-sitemap"></i>사이트맵</a>
+        </div>
+        <div class="footer_link">
+            <div class="footer_mark">
+                <a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" target="_blank" title="새 창 열림">
+                    <img alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)" title="국가 공인 인증기관 : 웹와치" src="img/footer_link1.png"/>
+                </a>
+                <a href="http://www.kogl.or.kr/info/introduce.do" target="_blank" title="새 창 열림">
+                    <img alt="공공누리 마크" src="img/footer_link2.png"/>
+                </a>
+            </div>
+            <ul class="footer_sns">
+                <li class="blog"><a href="https://blog.naver.com/kr4thir" target="_blank" title="새 창 열림">blog</a></li>
+                <li class="facebook"><a href="https://www.facebook.com/kr4thir" target="_blank" title="새 창 열림">facebook</a></li>
+                <li class="youtube"><a href="https://www.youtube.com/channel/UCrRVmKLCFSbjS9AsRAqo9yQ" target="_blank" title="새 창 열림">youtube</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</div>
+
+<script type="text/javascript" src="./js/common.js"></script>
+<script>
+$(document).ready(function() {
+// 메인 비주얼
+    $('#slide-counter').prepend('<strong class="current-index"></strong>/');
+    var slider = $('.carousel-inner').bxSlider({
+        mode: 'horizontal', 
+        pager: false, 
+        autoDelay: 2000,	
+        minSlides: 1,
+        maxSlides: 1,
+        auto: true,
+        controls : true, 
+        autoControls: true,	
+        stopAutoOnclick:true,
+        prevSelector: '.prev_bannera',
+        nextSelector: '.next_bannera',
+        autoControlsSelector: '.playstop_bannera',
+        onSliderLoad: function (currentIndex){
+            $('#slide-counter .current-index').text(currentIndex + 1);
+        },
+        onSlideBefore: function ($slideElement, oldIndex, newIndex){
+            $('#slide-counter .current-index').text(newIndex + 1);
+        }
+    });
+    $('#slide-counter').append(slider.getSlideCount());
+    $(".bx-stop").click(function(){	// 중지버튼 눌렀을때 
+        slider.stopAuto(); 
+        $(".bx-stop").hide(); 
+        $(".bx-start").show(); 
+        return false; 
+    }); 
+    $(".bx-start").click(function(){//시작버튼 눌렀을때 
+        slider.startAuto(); 
+        $(".bx-start").hide(); 
+        $(".bx-stop").show(); 
+        return false; 
+    }); 
+    $(".bx-start").hide();//onload시 시작버튼 숨김. 
+    var slideeQQ = slider.getSlideCount();
+    $('span.ltest').html(slideeQQ);
+
+
+// 페이스북
+    $('.bxslider_facebook').bxSlider({
+        mode: 'horizontal',// 가로 방향 수평 슬라이드
+        speed: 500,        // 이동 속도를 설정
+        pager: false,      // 현재 위치 페이징 표시 여부 설정
+        moveSlides: 1,     // 슬라이드 이동시 개수
+        minSlides: 1,      // 최소 노출 개수
+        maxSlides: 1,      // 최대 노출 개수
+        slideMargin: 0,    // 슬라이드간의 간격
+        auto: false,        // 자동 실행 여부
+        autoHover: false,   // 마우스 호버시 정지 여부
+        controls: true,    // 이전 다음 버튼 노출 여부
+        prevSelector: '#face_prev',
+        nextSelector: '#face_next',
+    });
+});
+</script>
+
+</body>
+</html>

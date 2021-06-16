@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS > NEWS > Detail page</title>
+    <link rel="stylesheet" type="text/css" href="./css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/en_style.css"/>
+
+    <!-- jquery / font -->
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"/>
+    <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body>
+<div class="wrap en en_news">
+<!-- header -->
+<header>
+    <div class="accessibility">
+        <a href="#contents">Skip to Content</a>
+        <a href="#gnb">Skip to Main Menu</a>
+    </div>
+    <div class="header_wrap">
+        <h1 class="header_logo">
+            <a href="en_main.html"><span class="blind">presidential committee on the fourth industrial revolution</span></a>
+        </h1>
+        <!-- pc 전체메뉴 -->
+        <div class="totalmenu">
+            <nav class="totalmenu_nav">
+                <ul id="gnb">
+                    <li><a href="en_aboutpcfir_greetings.html">About PCFIR</a>
+                        <ul class="totalmenu_sub">
+                            <li><a href="en_aboutpcfir_greetings.html">Greetings</a></li>
+                            <li><a href="en_aboutpcfir_overview.html">Overview</a></li>
+                            <li><a href="aboutpcfir_organi_organi.html">Organization</a></li>
+                            <li><a href="en_aboutpcfir_location.html">Location and Directions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="en_news_news_list.html">NEWS</a>
+                        <ul class="totalmenu_sub">
+                            <li><a href="en_news_news_list.html">NEWS</a></li>
+                            <li><a href="en_news_International_list.html">International Cooperation</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="en_about4thir.html">About 4TH-IR</a>
+                        <ul class="totalmenu_sub">
+                            <li><a href="en_about4thir.html">About 4TH-IR</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="en_hackthon.html">HACKTHON</a>
+                        <ul class="totalmenu_sub">
+                            <li><a href="en_hackthon.html">HACKTHON</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="en_data.html">DATA 119</a>
+                        <ul class="totalmenu_sub">
+                            <li><a href="en_data.html">DATA 119</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="header_util">
+                <li class="header_search"><a title="search page" href="통합검색1.html"><i class="fa fa-search"></i><span class="sr-only">search button</span></a></li>
+                <li class="header_lang"><a title="korea page" href="kr_main.html">KOREA</a></li>
+            </ul>
+        </div>
+        <!-- pc이하버전 -->
+        <button class="mbmenu_toggle">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+        <!-- pc이하버전 전체메뉴 -->
+        <aside class="mbmenu" id="mbmenu">
+            <ul class="mbmenu_util">
+                <li class="mb_lang"><a title="korea page" href="kr_main.html">KOREA</a></li>
+            </ul>
+            <nav class="mbmenu_nav">
+                <ul id="gnb">
+                    <li class="dropdown"><a href="#">About PCFIR<b class="caret"></b></a>
+                        <ul class="dropdown_menu">
+                            <li><a href="en_aboutpcfir_greetings.html"><i>&#45;</i>Greetings</a></li>
+                            <li><a href="en_aboutpcfir_overview.html"><i>&#45;</i>Overview</a></li>
+                            <li><a href="aboutpcfir_organi_organi.html"><i>&#45;</i>Organization</a></li>
+                            <li><a href="en_aboutpcfir_location.html"><i>&#45;</i>Location and Directions</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">NEWS<b class="caret"></b></a>
+                        <ul class="dropdown_menu">
+                            <li><a href="en_news_news_list.html"><i>&#45;</i>NEWS</a></li>
+                            <li><a href="en_news_International_list.html"><i>&#45;</i>International Cooperation</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">About 4TH-IR<b class="caret"></b></a>
+                        <ul class="dropdown_menu">
+                            <li><a href="en_about4thir.html"><i>&#45;</i>About 4TH-IR</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">HACKTHON<b class="caret"></b></a>
+                        <ul class="dropdown_menu">
+                            <li><a href="en_hackthon.html"><i>&#45;</i>HACKTHON</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">DATA 119<b class="caret"></b></a>
+                        <ul class="dropdown_menu">
+                            <li><a href="en_data.html"><i>&#45;</i>DATA 119</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <button class="mbmenu_close">
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </aside>
+    </div>
+    <div class="bg_totalmenu"></div>
+</header>
+<!-- content -->
+<div class="content " id="contents">
+    <aside class="sidebar">
+        <h2 class="sidebar_tit">NEWS</h2>
+    </aside>
+    <div class="content_body">
+        <div class="content_wrap">
+            <div class="content_header">
+                <h3 class="content_tit">NEWS</h3>
+                <div class="breadcrumb">
+                    <a href="#"><span>NEWS</span></a>
+                    <span class="hcode">&gt;</span>
+                    <a href="#" class="bread_active"><span>NEWS</span></a>
+                </div>
+            </div>
+<!-- s: content -->
+            <div class="board">
+                <div class="board_wrap normal_view">
+                    <!-- s: .board_detail -->
+                    <article class="board_detail">
+                        <div class="detail_header">
+                            <h3 class="title">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text</h3>
+                            <div class="board_info">
+                                <span class="hide">date</span>
+                                <span>2021.10.10</span>
+                            </div>
+                        </div>
+                        <div class="detail_content">
+                            <div class="board_content">
+                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32 </p>
+                            </div>
+                            <section class="section_files">
+                                <h4 class="title">File <span>(2)</span></h4>
+                                <ul class="files_area">
+                                    <li>
+                                        <i class="ico-clip"></i>
+                                        <a href="#" title="download" class="text-ellipsis">
+                                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.pdf
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <i class="ico-clip"></i>
+                                        <a href="#" title="download" class="text-ellipsis">Lorem Ipsum is simply dummy text of the printing and typesetting industry.pdf</a>
+                                    </li>
+                                </ul>
+                            </section>
+                        </div>
+                    </article>
+                    <!-- e: .board_detail -->
+                    <!-- s: .board_differ -->
+                    <div class="board_differ">
+                        <h4 class="title">Relation Content</h4>
+                        <div class="differ_content">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <p class="title text-ellipsis2">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
+                                        <div class="differ_info">
+                                            <span class="hide">date</span>
+                                            <span>2021.10.10</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p class="title text-ellipsis2">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
+                                        <div class="differ_info">
+                                            <span class="hide">date</span>
+                                            <span>2021.10.10</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p class="title text-ellipsis2">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
+                                        <div class="differ_info">
+                                            <span class="hide">date</span>
+                                            <span>2021.10.10</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p class="title text-ellipsis2">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
+                                        <div class="differ_info">
+                                            <span class="hide">date</span>
+                                            <span>2021.10.10</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <p class="title text-ellipsis2">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form</p>
+                                        <div class="differ_info">
+                                            <span class="hide">date</span>
+                                            <span>2021.10.10</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- e: .board_differ -->
+                    <!-- s: .pn_list -->
+                    <div class="pn_list">
+                        <ul>
+                            <li class="pn_prev">
+                                <a href="#">
+                                    <i class="hcode">&lt;</i> Previous
+                                    <span class="text-ellipsis">No Content</span>
+                                </a>
+                            </li>
+                            <li class="pn_home">
+                                <a href="board.html">목록</a>
+                            </li>
+                            <li class="pn_next">
+                                <a href="#">
+                                    Next <i class="hcode">&gt;</i>
+                                    <span class="text-ellipsis">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+<!-- e: content -->
+        </div>
+    </div>
+</div>
+
+<!-- footer -->
+<footer>
+    <div class="footer_wrap">
+        <div class="footer_txt">
+            <p class="footer_desc"> 03154 1,Jong-ro, Jongno-gu, Seoul, Republic of Korea</p>
+            <p class="footer_copy">Copyright ⓒ 2017 The Presidential Committee on the 4th industrial revolution All Rights Reserved.</p>
+        </div>
+        <div class="footer_link">
+            <div class="footer_mark">
+                <a href="http://www.webwatch.or.kr/Situation/WA_Situation.html?MenuCD=110" target="_blank" title="새 창 열림">
+                    <img alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)" title="국가 공인 인증기관 : 웹와치" src="img/footer_link1.png"/>
+                </a>
+                <a href="http://www.kogl.or.kr/info/introduce.do" target="_blank" title="새 창 열림">
+                    <img alt="공공누리 마크" src="img/footer_link2.png"/>
+                </a>
+            </div>
+            <ul class="footer_sns">
+                <li class="blog"><a href="https://blog.naver.com/kr4thir" target="_blank" title="새 창 열림">blog</a></li>
+                <li class="facebook"><a href="https://www.facebook.com/kr4thir" target="_blank" title="새 창 열림">facebook</a></li>
+                <li class="youtube"><a href="https://www.youtube.com/channel/UCrRVmKLCFSbjS9AsRAqo9yQ" target="_blank" title="새 창 열림">youtube</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</div>
+
+<script type="text/javascript" src="./js/common.js"></script>
+
+</body>
+</html>
