@@ -11,14 +11,14 @@
 
     <link type="text/css" href="css/base.css" media="all" rel="stylesheet" />
     <link type="text/css" href="css/ebd3_common.css" media="all" rel="stylesheet" />
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
-<div class="ebd ebd1"> <!-- 과장 7개가 되면 ebd17 클래스 추가 -->
-
-
-
-
+<div class="ebd ebd1">
+    
     <!--header-->
     <header class="common_header">
         <div class="header_inner">
@@ -32,10 +32,11 @@
             </a>
             <nav class="chart_menu">
                 <ul>
-                    <li><a href="#">소방활동 활동현황</a></li>
-                    <li class="on"><a href="#">전남소방 기구조직표</a></li>
-                    <li><a href="#">전남소방 소방서현황</a></li>
-                    <li><a href="#">전남소방 기본현황</a></li>
+                    <li><a href="chart_출동통계현황_95.html">소방활동 활동현황</a></li>
+                    <li class="on"><a href="ebd2_전자칠판_기구조직표1.html">전남소방 기구조직표</a></li>
+                    <li><a href="ebd2_전자칠판_기구조직표3.html">전남소방 소방서현황</a></li>
+                    <li><a href="main_종합안내도_가로_1층.html">전남소방 기본현황</a></li>
+                    <li><a href="mpm_예약현황_상세.html">전남소방 예약현황</a></li>
                     <li class="chart_close"><a href ="javascript:WinClose();">창닫기</a></li>
                 </ul>
             </nav>
@@ -56,14 +57,14 @@
     </header>
 
     <script>
-        function cm_open(){
-            $(".chart_menu").show();
+    function cm_open(){
+        $(".chart_menu").addClass("show")
+    }
+    $('body').click(function(e) {
+        if(!$(e.target).hasClass("chart_menu")) {
+            $(".chart_menu").removeClass("show")
         }
-        $('body').click(function(e) {
-            if(!$(e.target).hasClass("chart_menu")) {
-                $(".chart_menu").hide();
-            }
-        });
+    });
     </script>
 
     <!-- content -->
