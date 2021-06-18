@@ -838,7 +838,7 @@ body{background-color: #f5f5f5; color: #505f7a;}
     background-color: #235196;
 }
 .common_header *{color: #fff;}
-.common_header .header_inner{width: 3640px; height: 180px; margin: 0 auto;}
+.common_header .header_inner{width: 3640px; max-width: 90%; height: 180px; margin: 0 auto;}
 .common_header .chart_btn{
     float: left; position: relative; top: 30px;
     display: block; height: 100px;
