@@ -1,0 +1,97 @@
+/* 전남소방본부 + 지역소방서 + 의용소방대 + 소방학교 = 공통의 footer */
+
+.footer{position:relative;z-index:9;background:#f4f4f4;}
+.footer .inner{margin:0 auto;max-width:1280px;text-align:right;}
+.footer_link{padding:20px 0;border-bottom:1px solid #d9d9d9;font-size:0;}
+.footer_link h2{float:left;display:inline-block;font-size:2rem;line-height:4.5rem;color:#000;vertical-align:top;}
+.footer_link fieldset {display: inline-block;}
+.footer_link fieldset + fieldset {margin-left: 4px;}
+.footer_link .quick_link{position:relative;display:inline-block;width:260px;height:45px;-webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; font-size:0}
+.footer_link .quick_link::after{
+    content:'+';position:absolute;right:55px;top:15px;width:20px;height:20px;
+    font-size:2.6rem;line-height:1.3rem;color:#000;text-align:center;background-color:#ffcb07;
+}
+.footer_link .quick_link select{
+    display:inline-block;padding:0 12px;width:214px;height:45px;background-color:#ffcb07;
+    font-size:1.6rem;color:#000;letter-spacing:-1px;cursor:pointer;vertical-align:top;
+    -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box;
+
+}
+.footer_link .quick_link input{
+    display:inline-block;width:45px;height:45px;vertical-align:top; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box;   }
+.copy_box {padding: 30px 0 28px;font-size: 0;}
+.copy_box .footer_info{display:inline-block;width:70%;font-size:1.5rem;line-height:2.5rem;color:#fff;text-align:left;vertical-align:top}
+
+
+/* sns_link */
+.footer .language_select_wrap{display: none; margin-left:0; line-height: 20px; vertical-align: top;}
+.footer .sns_link{display: none; margin-bottom: 10px; margin-left: 20px;}
+.footer .sns_link{ margin-bottom: 10px;}
+.footer .sns_link ul { height: 20px; font-size: 0;}
+.footer .sns_link li { display: inline-block;}
+.footer .sns_link li:nth-child(1) {
+    width: 9px; height: 18px;
+    background: url(../img/2020091414412771856.png);
+    background-size: 100% auto;
+}
+.footer .sns_link li:nth-child(2) {
+    margin: 0 12px;
+    width: 19px; height: 18px;
+    background: url(../img/2020091414413496087.png);
+    background-size: 100% auto;
+}
+.footer .sns_link li:nth-child(3) {
+    width: 24px; height: 18px;
+    background: url(../img/2020091414414226257.png);
+    background-size: 100% auto;
+}
+.footer .sns_link a { display: block; height: 100%;cursor: pointer;}
+
+.copy_box .footer_info .footer_nav li{display:inline-block;margin-bottom:15px;line-height:16px}
+.copy_box .footer_info .footer_nav li+li{margin-left:25px}
+.copy_box .footer_info .footer_nav li a{font-size:1.6rem;color:#000}
+
+/* footer 추가한부분 */
+.copy_box .footer_info .add{color: #6d6b6b;}
+.copy_box .footer_info .copy{color: #6d6b6b;}
+.copy_box .footer_info .browser{margin-top: 15px; color: #ff0000;}
+
+.copy_box .footer_logo{display:inline-block;width:30%;text-align:right;}
+.copy_box .footer_logo p{display:inline-block;}
+.copy_box .footer_logo p+p{margin-left:10px;}
+
+@media screen and (min-width: 801px) and (max-width: 1280px) {
+    .footer .inner{width:90%}.footer_link h2{width:140px;font-size:1.5rem;text-align:left}
+    .footer_link fieldset{width:calc((100% - 155px)/ 4)}
+    .footer_link fieldset .quick_link{width:100%}
+    .footer_link fieldset .quick_link select{width:calc(100% - 45px);font-size:1.4rem}
+    .footer .language_select_wrap{display: inline-block; margin-right: 20px;}
+    .footer .sns_link{display: inline-block; margin-left: 0;}
+}
+
+@media screen and (max-width: 800px) {
+    .footer_link{padding:5px 0 20px 0}
+    .footer_link .inner{width:95%}
+    .footer_link h2{display:block;width:100%;font-size:1.5rem;text-align:left}
+    .footer_link fieldset{width:100%}
+    .footer_link fieldset+fieldset{margin:6px 0 0 0}
+    .footer_link fieldset .quick_link{width:100%;height:44px}
+    .footer_link fieldset .quick_link select{width:calc(100% - 45px);font-size:1.4rem;border-bottom:0}
+    .footer_link fieldset .quick_link:after{top:14px}
+    .copy_box{padding:15px 0 15px}
+    .copy_box .inner{width:95%}
+    .copy_box .footer_info{display:inline-block;width:100%;font-size:1.3rem;line-height:2rem}
+    .copy_box .footer_info .footer_nav li{margin-bottom:5px}
+    .copy_box .footer_info .footer_nav li+li{margin-left:10px}
+    .copy_box .footer_info .footer_nav li a{font-size:1.3rem;font-weight:500}
+    .copy_box .footer_info .add{font-size:12px;line-height:17px}
+    .copy_box .footer_info .add{font-size:12px;line-height:17px}
+    .copy_box .footer_info .browser{margin-top: 5px ;font-size: 12px; line-height: 17px;}
+    .copy_box .footer_info .footer_nav li address{font-size:1.2rem;line-height:1.8rem}
+    .copy_box .footer_info .footer_nav li .copy{font-size:1.2rem}
+    .copy_box .footer_logo{display:none}
+    .footer .language_select_wrap{display: none;}
+    .footer .sns_link{display: inline-block; margin-left: 0;}
+
+    .copy_box .footer_info .footer_nav li:nth-of-type(4){display: block; margin-left: 0;}
+}

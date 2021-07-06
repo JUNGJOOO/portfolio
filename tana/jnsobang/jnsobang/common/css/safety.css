@@ -1,0 +1,234 @@
+.safety_tab .safety_style1{font-size:17px}
+.safety_tab .safety_style2{color:#f9601c}
+.safety_tab .safety_style3{font-weight:700}
+.safety_tab .safety_style4{text-decoration:underline}
+.safety_tab .safety_top{margin-top:20px}
+.safety_tab .safety_bottom{margin-bottom:20px}
+.safety_tab .safety_txt{font-size:16px;line-height:28px;color:#555}
+.safety_tit{padding:30px 0 15px;font-size:20px;line-height:20px;font-weight:700}
+.safety_tab .group_txt{font-size:17px;line-height:26px;color:#555}
+.safety_tab button{background-color:transparent}
+.safety_tab img{width:100%}
+.safety_tab .safety_guide{position:relative;margin-top:30px;padding:65px 70px;background-color:#f5f5f5;-webkit-box-sizing:border-box;box-sizing:border-box}
+.safety_tab .safety_guide .guide_tit{font-size:50px;line-height:60px;letter-spacing:-3px}
+.safety_tab .safety_guide .guide_tit .mobile_br{display:block}
+.safety_tab .safety_guide .guide_subtit{font-size:24px;line-height:24px;margin:35px 0}
+.safety_tab .safety_guide .guide_desc{width:65%;font-size:18px;line-height:26px}
+.safety_tab .safety_guide .guide_btnwrap{margin-top:35px}
+.safety_tab .safety_guide .guide_btnwrap a{position:relative;display:inline-block;padding:13px 40px 13px 15px;background-color:#333;font-size:24px;line-height:24px;font-weight:700;color:#fff}
+.safety_tab .safety_guide .guide_btnwrap a:first-child{background-color:#f9601c}
+.safety_tab .safety_guide .guide_btnwrap a+a{margin-left:20px}
+.safety_tab .safety_guide .guide_btnwrap a:after{content:'';position:absolute;top:50%;right:20px;width:8px;height:8px;border:solid #fff;border-width:0 2px 2px 0;-webkit-transform:translateY(-50%) rotate(-45deg);transform:translateY(-50%) rotate(-45deg)}
+.safety_tab .safety_tab_tit{position:relative;display:block;padding:25px 0;margin-bottom:-1px;border-top:1px solid #555;border-bottom:1px solid #555;cursor:pointer}
+.safety_tab .safety_tab_tit.safety_tab_top{border-top:2px solid #555}
+.safety_tab .safety_tab_tit .tab_tit{display:inline-block;font-size:20px;font-weight:700}
+.safety_tab .safety_tab_tit button{position:absolute;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);display:block;width:100%;height:80px;padding-right:60px;padding-left:0;font-size:15px;text-align:right;border-radius:0;background-color:transparent}
+.safety_tab .safety_tab_tit button:before{content:'';position:absolute;right:26px;top:46%;-webkit-transform:translate(-30%,-50%) rotate(135deg);transform:translate(-30%,-50%) rotate(135deg);width:5px;height:5px;border:3px solid;border-color:#5d5d5d #5d5d5d transparent transparent}
+.safety_tab .safety_tab_tit button.open:before{top:54%;-webkit-transform:translate(-30%,-50%) rotate(-45deg);transform:translate(-30%,-50%) rotate(-45deg)}
+.safety_tab1{padding-bottom:300px}
+.safety_tab1 .safety_guide:after{content:'';position:absolute;right:35px;bottom:35px;width:390px;height:280px;background:url(../img/2020072117214952121.png) no-repeat;background-size:100% auto}
+.safety_tab1 .safety_tab1_box{display:none;margin-top:25px}
+.safety_tab1 .group_txt:nth-of-type(5){margin-bottom:40px}
+.safety_tab1 .carinfo_tit{display:block;height:40px;font-size:20px;line-height:40px;font-weight:700;color:#333;text-align:center;background-color:#efefef}
+.safety_tab1 .carinfo_subtit{display:block;margin:30px 0 15px;font-size:16px;line-height:16px;font-weight:700;color:#555}
+.safety_tab1 .safety_tab1_carinfo{display:inline-block;width:calc((100% - 10px)/ 2);margin-top:20px;margin-bottom:40px;vertical-align:top}
+.safety_tab1 .safety_tab1_carinfo+.safety_tab1_carinfo{margin-left:10px}
+.safety_tab1 .safety_border{border:1px solid #ddd}
+.safety_tab1 .carinfo_img{font-size:0;border-top:1px solid #ddd;border-left:1px solid #ddd;-webkit-box-sizing:border-box;box-sizing:border-box}
+.safety_tab1 .carinfo_img li{display:inline-block;width:50%;padding:10px;vertical-align:top;border-right:1px solid #ddd;border-bottom:1px solid #ddd;-webkit-box-sizing:border-box;box-sizing:border-box}
+.safety_tab1 .carinfo_img li img{width:100%}
+.safety_tab1 .carinfo_desc{padding:20px;-webkit-box-sizing:border-box;box-sizing:border-box}
+.safety_tab1 .carinfo_desc p span{font-size:16px;line-height:26px}
+.safety_tab1 .carinfo_desc p span:nth-of-type(1){font-weight:700}
+.safety_tab1 .carinfo_desc p:nth-of-type(2) span{display:block}
+@media screen and (min-width:801px) and (max-width:1280px){
+    .safety_tab1 .safety_guide:after{width:310px;height:215px}
+}
+@media screen and (max-width:800px){
+    .safety_tab1 .safety_guide:after{display:none}
+    .safety_tab1 .carinfo_tit{font-size:18px}
+    .safety_tab1 .safety_tab1_carinfo{display:block;width:100%}
+    .safety_tab1 .carinfo_desc p span{font-size:14px;line-height:24px}
+}
+
+
+
+.safety_tab2 .safety_guide:after{content:'';position:absolute;right:35px;bottom:35px;width:372px;height:180px;background:url(../img/2020082113212216336.png) no-repeat;background-size:100% auto}
+.safety_tab2_cont{margin-bottom:300px}
+.safety_tab2 .safety_tab2_cont .safety_link a{position:relative;padding-right:15px}
+.safety_tab2 .safety_tab2_cont .safety_link a:after{content:'';position:absolute;top:50%;right:0;width:8px;height:8px;border:solid #f9601c;border-width:0 2px 2px 0;-webkit-transform:translateY(-50%) rotate(-45deg);transform:translateY(-50%) rotate(-45deg)}
+@media screen and (min-width:801px) and (max-width:1280px){
+    .safety_tab2 .safety_guide:after{display:none}
+    .safety_tab .safety_guide .guide_tit{font-size:40px;line-height:50px}
+    .safety_tab .safety_guide .guide_btnwrap a{font-size:20px}
+    .safety_tab .safety_guide .guide_subtit{width:70%;line-height:33px}
+    .safety_tab .safety_guide .guide_desc{width:70%}
+    .safety_tab2 .safety_guide .guide_desc{width:100%}
+}
+@media screen and (max-width:800px){
+    .safety_tab2_cont .safety_table table{width:100%}
+    .safety_tab1_cont .safety_table table{width:100%}
+    .safety_tab2 .safety_guide:after{display:none}
+    .safety_tit{font-size:17px;padding:25px 0 10px;margin-top:0}
+    .safety_tab .group_txt{font-size:16px;line-height:24px}
+    .safety_tab .safety_guide{padding:30px 15px}
+    .safety_tab .safety_guide .guide_tit{font-size:22px;line-height:30px;letter-spacing:-1px}
+    .safety_tab .safety_guide .guide_tit .mobile_br{display:none!important}
+    .safety_tab .safety_guide .guide_subtit{width:100%;font-size:18px;margin:15px 0}
+    .safety_tab .safety_guide .guide_desc{width:100%;font-size:16px;line-height:23px}
+    .safety_tab .safety_guide .guide_btnwrap{margin-top:20px}
+    .safety_tab .safety_guide .guide_btnwrap a{padding:8px 30px 8px 10px;font-size:15px;line-height:20px}
+    .safety_tab .safety_guide .guide_btnwrap a+a{margin-left:8px}
+    .safety_tab .safety_guide .guide_btnwrap a:after{right:15px}
+    .safety_tab .safety_tab_tit .tab_tit{font-size:18px}
+    .safety_tab .safety_tab_tit button{font-size:0}
+}
+@media screen and (max-width:800px){
+    .safety_table table{width:220%;table-layout:auto}
+}
+@media screen and (max-width:800px){
+    .safety_table{overflow-x:auto}
+}
+
+
+.safety_table tbody tr td:first-child{font-weight:700}
+.safety_table button{width:auto;height:auto;padding:7px 10px;font-size:14px;line-height:14px;font-weight:700;color:#fff;border-radius:0;background-color:transparent}
+.safety_table .safety_btn_style1{background-color:#f9601c}
+.safety_table .safety_btn_style2{background-color:#333}
+.safety_table .safetytable_custom_select{position:relative;z-index:1;width:120px;height:27px;display:inline-block;border:1px solid #ccc;background:0 0;vertical-align:top}
+.safety_table .safetytable_custom_select select{padding:0 10px;width:100%;height:100%;font-size:16px;-webkit-box-sizing:border-box;box-sizing:border-box;vertical-align:top}
+.safety_table .safetytable_custom_select:after{content:'';position:absolute;right:15px;top:50%;height:7px;width:7px;-webkit-transform:translateY(-50%) rotate(-45deg);transform:translateY(-50%) rotate(-45deg);border-bottom:2px solid #7f8084;border-left:2px solid #7f8084}
+@media screen and (min-width:801px) and (max-width:1280px){
+    .safety_table .safetytable_custom_select{width:calc(100% - 55px)}
+}
+
+
+.safety_cal_wrap{padding:70px 50px 20px 50px;background-color:#fbfbfb;-webkit-box-sizing:border-box;box-sizing:border-box}
+.safety_cal_wrap .cal_tit{margin-bottom:25px;text-align:center;font-size:24px;line-height:24px}
+.safety_cal_wrap .cal_tit span{position:relative;font-size:24px;font-weight:700;color:#333}
+.safety_cal_wrap .cal_tit a{display:inline-block;width:12px;height:12px;font-size:0;line-height:20px;border:solid #7d7d7d;border-width:0 2px 2px 0}
+.safety_cal_wrap .cal_tit .cal_prev{-webkit-transform:translateY(-50%) rotate(135deg);transform:translateY(-50%) rotate(135deg)}
+.safety_cal_wrap .cal_tit .cal_next{-webkit-transform:translateY(-50%) rotate(-45deg);transform:translateY(-50%) rotate(-45deg)}
+.safety_cal_wrap .safety_cal table{table-layout:fixed}
+.safety_cal_wrap .safety_cal .sun{color:#fa2525}
+.safety_cal_wrap .safety_cal .sat{color:#4376ea}
+.safety_cal_wrap .safety_cal .publicday{color:#fa2525}
+.safety_cal_wrap .safety_cal .publicday .cal_date span{font-size:13px;vertical-align:top}
+.safety_cal_wrap .safety_cal thead tr{border-bottom:1px solid #d2d2d2}
+.safety_cal_wrap .safety_cal thead tr th{padding:0 10px;font-size:18px;line-height:40px;font-weight:700;text-align:left;-webkit-box-sizing:border-box;box-sizing:border-box;color:#333}
+.safety_cal_wrap .safety_cal tbody tr{border-bottom:1px solid #d2d2d2}
+.safety_cal_wrap .safety_cal tbody td{padding:15px 10px 10px 10px;-webkit-box-sizing:border-box;box-sizing:border-box;color:#333}
+.safety_cal_wrap .safety_cal tbody .cal_date{font-size:20px;line-height:20px;margin-bottom:7px}
+.safety_cal_wrap .safety_cal tbody .date{min-height:70px;cursor:pointer}
+.safety_cal_wrap .safety_cal tbody .car{font-size:14px;line-height:20px;color:#fff;text-align:left}
+.safety_cal_wrap .safety_cal tbody .car .car_done_txt{display:none}
+.safety_cal_wrap .safety_cal tbody .car.car_done .car1{background-color:#ccc}
+.safety_cal_wrap .safety_cal tbody .car.car_done .car2{background-color:#ccc}
+.safety_cal_wrap .safety_cal tbody .car.car_done .car_done_txt{display:inline-block;width:calc(100% - 50px);text-align:left;vertical-align:top;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
+.safety_cal_wrap .safety_cal tbody .car span{display:inline-block;width:40px;text-align:center;cursor:pointer}
+.safety_cal_wrap .safety_cal tbody .car+.car{margin-top:2px}
+.safety_cal_wrap .safety_cal tbody .car_done{width:100%;text-align:left}
+.safety_cal_wrap .safety_cal tbody .car_done_txt{font-size:14px;color:#999}
+.safety_cal_wrap .safety_cal tbody .car1{font-size:14px;background-color:#1f7d4b}
+.safety_cal_wrap .safety_cal tbody .car2{font-size:14px;background-color:#ffba25}
+.safety_cal_wrap .safety_cal tbody .car3{font-size:14px;background-color:#ccc}
+.safety_cal_wrap .safety_cal tbody .apply{font-size:14px;line-height:20px;color:#fff;text-align:left}
+.safety_cal_wrap .safety_cal tbody .apply .apply1{display:inline-block;width:60px;text-align:center;background-color:#95bfe7;cursor:pointer}
+.safety_cal_wrap .safety_cal tbody .apply .apply2{display:inline-block;width:60px;text-align:center;background-color:#ccc;cursor:pointer}
+.safety_cal_wrap .safety_cal tbody .apply .apply_txt{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;display:block;font-size:14px;color:#999}
+.safety_cal_wrap .cal_info{margin-top:20px;font-size:15px}
+.safety_cal_wrap .cal_info span{font-weight:700}
+.safety_cal_wrap .cal_info span+span{margin-left:30px}
+.safety_cal_wrap .cal_info .cal_info_yes{position:relative;padding-left:40px}
+.safety_cal_wrap .cal_info .cal_info_yes:before{content:'';position:absolute;left:0;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);width:15px;height:15px;background-color:#1f7d4b}
+.safety_cal_wrap .cal_info .cal_info_yes:after{content:'';position:absolute;left:20px;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);width:15px;height:15px;background-color:#ffba25}
+.safety_cal_wrap .cal_info .cal_info_done{position:relative;padding-left:20px}
+.safety_cal_wrap .cal_info .cal_info_done:before{content:'';position:absolute;left:0;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);width:15px;height:15px;background-color:#ccc}
+.safety_cal_wrap .cal_info .cal_info_yes2{position:relative;padding-left:20px}
+.safety_cal_wrap .cal_info .cal_info_yes2:before{content:'';position:absolute;left:0;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);width:15px;height:15px;background-color:#95bfe7}
+.safety_cal_wrap .cal_info .cal_info_done2{position:relative;padding-left:20px}
+.safety_cal_wrap .cal_info .cal_info_done2:before{content:'';position:absolute;left:0;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);width:15px;height:15px;background-color:#ccc}
+@media screen and (min-width:801px) and (max-width:1280px){
+    .safety_cal_wrap{padding:50px 30px 20px 30px}
+}
+@media screen and (max-width:800px){
+    .safety_cal_wrap{padding:0;background-color:#fff}
+    .safety_cal_wrap .cal_info{font-size:14px}
+    .safety_cal_wrap .cal_info span{display:block}
+    .safety_cal_wrap .cal_info span+span{margin-left:0;margin-top:7px}
+    .safety_cal_wrap .cal_info .cal_info_yes{display:inline-block}
+    .safety_cal_wrap .cal_info .cal_info_done{display:inline-block}
+    .safety_cal_wrap .cal_info .cal_info_yes2{display:inline-block}
+    .safety_cal_wrap .cal_info .cal_info_done2{display:inline-block}
+    .safety_cal_wrap .safety_cal tbody .car.car_done .car_done_txt{display:none}
+    .safety_cal_wrap .safety_cal .publicday .cal_date span{display:none}
+    .safety_cal_wrap .safety_cal tbody .cal_date{font-size:15px}
+    .safety_cal_wrap .safety_cal thead tr th{font-size:17px}
+    .safety_cal_wrap .cal_tit span{font-size:20px}
+    .safety_cal_wrap .cal_tit a{width:10px;height:10px;line-height:15px}
+    .safety_cal_wrap .safety_cal tbody td{padding:15px 0 10px 0}
+    .safety_cal_wrap .safety_cal tbody .car1{font-size:12px}
+    .safety_cal_wrap .safety_cal tbody .car2{font-size:12px}
+    .safety_cal_wrap .safety_cal tbody .apply{font-size:12px}
+    .safety_cal_wrap .safety_cal tbody .apply .apply1{width:48px}
+    .safety_cal_wrap .safety_cal tbody .apply .apply2{width:48px}
+    .safety_cal_wrap .safety_cal tbody .apply .apply_txt{display:none}
+}
+
+
+
+.safety_conttable table{table-layout:fixed}
+.safety_conttable table tbody tr:nth-of-type(1){border-top:3px solid #555}
+.safety_conttable table tbody tr:last-child{border-bottom:1px solid #555}
+.safety_conttable table tbody tr:last-child th{vertical-align:top}
+.safety_conttable table tbody tr{border-bottom:1px solid #ccc}
+.safety_conttable table tbody tr{-webkit-box-sizing:border-box;box-sizing:border-box;background-color:#f5f5f5}
+.safety_conttable table tbody th{width:20%;height:65px;padding:20px;font-size:16px;font-weight:700;text-align:left;-webkit-box-sizing:border-box;box-sizing:border-box;vertical-align:middle}
+.safety_conttable table tbody td{width:80%;height:65px;padding:10px;font-size:16px;font-weight:500;vertical-align:middle;-webkit-box-sizing:border-box;box-sizing:border-box;background-color:#fff}
+.safety_conttable table input[type=text]{padding:0 10px;width:265px;height:45px;border:1px solid #ccc;font-size:16px;-webkit-box-sizing:border-box;box-sizing:border-box;vertical-align:top}
+.safety_conttable table input[type=password]{padding:0 10px;width:265px;height:45px;border:1px solid #ccc;font-size:16px;-webkit-box-sizing:border-box;box-sizing:border-box;vertical-align:top}
+.safety_conttable table input::-webkit-input-placeholder{font-size:16px;color:#333;font-weight:100}
+.safety_conttable table input:-ms-input-placeholder{font-size:16px;color:#333;font-weight:100}
+.safety_conttable table input::-ms-input-placeholder{font-size:16px;color:#333;font-weight:100}
+.safety_conttable table input::placeholder{font-size:16px;color:#333;font-weight:100}
+.safety_conttable table input:disabled{background:0 0;border:none!important}
+.safety_conttable table .disabled{border:none!important;background-color:transparent}
+.safety_conttable table .disabled:after{display:none}
+.safety_conttable .safety_custom_select{position:relative;z-index:1;width:265px;height:45px;display:inline-block;background:0 0;vertical-align:top}
+.safety_conttable .safety_custom_select select{padding:0 10px;width:100%;height:100%;font-size:16px;border:1px solid #ccc;vertical-align:top;-webkit-box-sizing:border-box;box-sizing:border-box;opacity:1}
+.safety_conttable .safety_custom_select:after{content:'';position:absolute;right:15px;top:50%;height:7px;width:7px;-webkit-transform:translateY(-50%) rotate(-45deg);transform:translateY(-50%) rotate(-45deg);border-bottom:2px solid #7f8084;border-left:2px solid #7f8084}
+.safety_conttable .safety_custom_datepicker{position:relative;display:inline-block;height:45px;-webkit-box-sizing:border-box;box-sizing:border-box;font-size:16px;vertical-align:top}
+.safety_conttable .safety_custom_datepicker input[type=text]{width:160px}
+.safety_conttable .safety_custom_datepicker:after{content:'';position:absolute;right:20px;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);width:17px;height:17px;background:url(/images/sub/datepicker.png) no-repeat;background-size:100% auto;background-position:center}
+.safety_conttable .actday .safety_custom_select{width:100px}
+.safety_conttable .actday span{vertical-align:middle;display:inline-block}
+.safety_conttable .actday em{display:inline-block;margin-left:10px;vertical-align:middle;font-size:15px;font-weight:700;line-height:40px;letter-spacing:-2px}
+.safety_conttable .safety_library{height:480px}
+.safety_conttable .safety_library div{border:1px solid #ccc;height:calc(100% - 10px);font-size:15px;font-weight:100}
+.safety_conttable .safety_library div textarea{width:100%;height:100%;resize:none}
+.safety_conttable.safety_conttable_view table tbody td{padding:10px 20px}
+.safety_conttable.safety_conttable_view table tbody td div{font-size:16px}
+.safety_conttable.safety_conttable_view table tbody td span{font-size:16px}
+.safety_conttable.safety_conttable_view .actday .safety_custom_select{width:17px}
+.safety_conttable.safety_conttable_view .actday .safety_custom_select select{padding:0}
+.safety_conttable.safety_conttable_view .safety_library{height:auto}
+.safety_btnwrap{text-align:center;margin-top:50px}
+.safety_btnwrap button{height:45px;padding:0 25px;color:#fff;font-size:17px;font-weight:700;background-color:#f9601c}
+@media screen and (min-width:801px) and (max-width:1280px){
+    .safety_conttable table input[type=text]{width:100%}
+    .safety_conttable table input[type=password]{width:100%}
+    .safety_conttable .safety_custom_datepicker{width:calc(100% - 270px);margin-bottom:5px}
+    .safety_conttable .safety_custom_datepicker input[type=text]{width:100%}
+    .safety_conttable .safety_custom_select{width:100%}
+}
+@media screen and (max-width:800px){
+    .safety_conttable table input[type=text]{width:100%}
+    .safety_conttable table input[type=password]{width:100%}
+    .safety_conttable table tbody th{padding:10px 5px}
+    .safety_conttable table tbody tr:nth-of-type(4) th{vertical-align:top}
+    .safety_conttable .safety_custom_datepicker{width:100%;margin-bottom:5px}
+    .safety_conttable .safety_custom_datepicker input[type=text]{width:100%}
+    .safety_conttable .actday em,.safety_conttable .actday span{display:inline-block}
+    .safety_conttable .safety_custom_select{width:100%}
+    .safety_btnwrap button{padding:0 30px;height:36px;font-size:15px}
+}

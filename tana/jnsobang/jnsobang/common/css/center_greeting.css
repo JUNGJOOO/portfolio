@@ -1,0 +1,74 @@
+.greetings{position:relative;overflow:hidden}
+.greetings .greeting_mid{text-align:center;margin:30px 0 100px}
+.greetings .greeting_mid p{position:relative;padding:40px 0 35px;font-size:20px;line-height:20px}
+.greetings .greeting_mid p:after{content:'';position:absolute;bottom:0;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);width:32px;height:1px;background-color:#838383}
+.greetings .greeting_bg:after{content:'';clear:both;display:block}
+.greetings .greeting_bg .greeting_bg_top{background-color:#e8e8e8;height:25px}
+.greetings .greeting_bg .greeting_bg_left{float:left;width:25px;height:100vh;background:-webkit-gradient(linear,left top,left bottom,from(#e8e8e8),to(#fff));background:linear-gradient(to bottom,#e8e8e8,#fff)}
+.greetings .greeting_bg .greeting_bg_right{float:right;width:25px;height:100vh;background:-webkit-gradient(linear,left top,left bottom,from(#e8e8e8),to(#fff));background:linear-gradient(to bottom,#e8e8e8,#fff)}
+.greetings .greeting_wrap{position:relative;border-top:25px solid #e8e8e8;margin-bottom:60px}
+.greetings .greeting_wrap:after{content:'';position:absolute;left:0;top:-4px;height:100%;width:25px;background:-webkit-gradient(linear,left top,left bottom,from(#e8e8e8),to(#fff));background:linear-gradient(to bottom,#e8e8e8,#fff)}
+.greetings .greeting_wrap:before{content:'';position:absolute;right:0;top:-4px;height:100%;width:25px;background:-webkit-gradient(linear,left top,left bottom,from(#e8e8e8),to(#fff));background:linear-gradient(to bottom,#e8e8e8,#fff)}
+.greetings .greeting_left{display:inline-block;width:51%;vertical-align:top}
+.greetings .greeting_left .greeting_txt{float:right;margin-top:80px;width:80%}
+.greetings .greeting_left .greeting_txt>p{margin-bottom:25px;font-size:17px;line-height:26px;color:#333}
+.greetings .greeting_left .greeting_txt>p:first-child{margin-bottom:20px;font-size:24px}
+.greetings .greeting_left .greetin_right_txt .rank{display:inline-block;font-size:17px;color:#333;margin-right:10px}
+.greetings .greeting_left .greetin_right_txt .name{display:inline-block;font-size:20px;font-weight:700;color:#333;letter-spacing:4px}
+.greetings .greeting_right{display:inline-block;width:49%}
+.greetings .greeting_right .greeting_right_bg{position:relative;top:-70px}
+.greetings .greeting_right .greeting_right_bg img{width:100%}
+
+@media screen and (min-width:801px) and (max-width:1280px){
+    .greetings{padding-bottom:200px}
+    .greetings .greeting_mid{margin:30px 0 70px}
+    .greetings .greeting_right .greeting_right_bg{position:static;top:0}
+    .greetings .greeting_right .greeting_right_bg img{position:absolute;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);width:50%}
+    .greetings .greeting_left .greeting_txt{margin-top:60px}
+}
+@media screen and (max-width:800px){
+    .greetings .greeting_mid{margin:30px 0 70px}
+    .greetings .greeting_mid img{width:100%}
+    .greetings .greeting_mid p{font-size:16px;padding:20px 0 35px}
+    .greetings .greeting_wrap{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;-ms-flex-wrap:nowrap;flex-wrap:nowrap;border-top:15px solid #e8e8e8}
+    .greetings .greeting_wrap:after{width:15px}
+    .greetings .greeting_wrap:before{width:15px}
+    .greetings .greeting_left{display:block;width:100%;padding:0 30px;-webkit-box-sizing:border-box;box-sizing:border-box}
+    .greetings .greeting_left .greeting_txt{width:100%;margin-top:0}
+    .greetings .greeting_left .greeting_txt>p{font-size:16px;line-height:22px;margin-bottom:15px}
+    .greetings .greeting_left .greeting_txt>p:first-child{font-size:20px}
+    .greetings .greeting_right{display:block;width:100%}
+    .greetings .greeting_right .greeting_right_bg{text-align:center;top:-53px}
+    .greetings .greeting_right .greeting_right_bg img{width:80%}
+}
+
+.greetings .greeting_bottom{width:80%;margin:0 auto 200px}
+.greetings .greeting_bottom li{position:relative;display:inline-block;vertical-align:top}
+.greetings .greeting_bottom li:nth-of-type(1){width:calc(55% - 80px);padding-left:80px}
+.greetings .greeting_bottom li:nth-of-type(2){width:calc(45% - 95px);padding-left:95px}
+.greetings .greeting_bottom li:after{content:'';position:absolute;top:0;left:0}
+.greetings .greeting_bottom li:nth-of-type(1):after{width:60px;height:60px;background:url(/jnsobang/common/img/2020092417334822627.png) no-repeat}
+.greetings .greeting_bottom li:nth-of-type(2):after{width:80px;height:65px;background:url(/jnsobang/common/img/2020092417340107790.png) no-repeat}
+.greetings .greeting_bottom a{position:relative;font-size:20px;line-height:20px;font-weight:600;color:#f9601c;cursor:pointer}
+.greetings .greeting_bottom a:after{content:'';position:absolute;top:50%;right:-30px;-webkit-transform:translateY(-50%) rotate(-45deg);transform:translateY(-50%) rotate(-45deg);width:8px;height:8px;border:solid #f9601c;border-width:0 2px 2px 0}
+.greetings .greeting_bottom p{margin-top:12px;font-size:17px;line-height:24px;color:#333}
+
+
+@media screen and (min-width:801px) and (max-width:1280px){
+    .greetings .greeting_bottom{margin:100px auto 0}
+    .greetings .greeting_bottom li:nth-of-type(1){width:100%;padding-left:95px;padding-bottom:45px}
+    .greetings .greeting_bottom li:nth-of-type(2){width:100%}
+    .greetings .greeting_bottom li:nth-of-type(2):after{background-size:100% auto;width:60px;height:60px}
+}
+@media screen and (max-width:800px){
+    .greetings .greeting_bottom{margin-top:35px;width:100%;padding:0 30px;-webkit-box-sizing:border-box;box-sizing:border-box}
+    .greetings .greeting_bottom li:after{top:7px}
+    .greetings .greeting_bottom li:nth-of-type(1){width:calc(100% - 45px);padding-left:60px;padding-bottom:30px}
+    .greetings .greeting_bottom li:nth-of-type(2){width:calc(100% - 45px);padding-left:60px}
+    .greetings .greeting_bottom li:nth-of-type(1):after{width:45px;height:70px;background:url(/jnsobang/common/img/2020092417335457337.png) no-repeat;background-size:100% auto}
+    .greetings .greeting_bottom li:nth-of-type(2):after{width:45px;height:60px;background:url(/jnsobang/common/img/2020092417340696328.png) no-repeat;background-size:100% auto}
+    .greetings .greeting_bottom a{font-size:16px;line-height:20px}
+    .greetings .greeting_bottom a:after{content:'';position:absolute;top:50%;right:-15px;-webkit-transform:translateY(-50%) rotate(-45deg);transform:translateY(-50%) rotate(-45deg);width:8px;height:8px;border:solid #f9601c;border-width:0 2px 2px 0}
+    .greetings .greeting_bottom p{margin-top:5px;font-size:15px;line-height:22px}
+    .greetings .greeting_bottom p br{display:none}
+}
