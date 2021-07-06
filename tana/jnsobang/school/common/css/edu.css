@@ -1,0 +1,165 @@
+/* 교육안내 */
+/**/
+/* 소방공무원 교육일정 */
+/* 일반인 교육일정 */
+
+
+/* 사이버강의실 */
+.cyber_area{font-family: 'Arita'; text-align: center; }
+.cyber_area .cyber_bg{ margin: 120px auto 45px; width: 420px; height:425px; background: url(/school/common/img/2020102915410943849.png) no-repeat;}
+.cyber_area .cyber_tit{font-size:24px; line-height: 24px; color: #d90008;}
+.cyber_area .cyber_subtit{margin-top: 25px; font-size:35px; line-height: 36px; color: #333333;}
+
+@media screen and (max-width: 800px) {
+    .cyber_area .cyber_bg{width: 270px; height: 290px;margin: 50px auto 40px; background-size: 100% auto;}
+    .cyber_area .cyber_tit{font-size: 20px;}
+    .cyber_area .cyber_subtit{margin-top: 5px; font-size: 25px;}
+}
+
+
+
+
+
+
+
+
+.public {
+  font-size: 1.7rem;
+  margin-bottom: 300px;
+  line-height: 1;
+  color: #333;
+}
+
+.public .school_table_tit {
+  font-size: 2rem;
+  padding: 22px 0 29px;
+}
+
+.public .school_table_tit:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.public .school_table_tit .table_tit {
+  font-weight: 700;
+  float: left;
+}
+
+.public .school_table_tit .table_info {
+  float: right;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #777;
+}
+
+.public .school_table {
+  width: 100%;
+  border-top: 2px solid #555;
+  border-bottom: 1px solid #999;
+}
+
+.public .school_table table {
+  text-align: center;
+}
+
+.public .school_table table tr {
+  border-top: 1px solid #dcdcdc;
+}
+
+.public .school_table table td {
+  border-right: 1px solid #dcdcdc;
+}
+
+.public .school_table table td:last-child {
+  border-right: none;
+}
+
+.public .school_table table th {
+  border-right: 1px solid #dcdcdc;
+}
+
+.public .school_table table th:last-child {
+  border-right: none;
+}
+
+.public .school_table table thead tr:first-child {
+  border-top: none;
+}
+
+.public .school_table table thead tr th {
+  font-weight: 500;
+  background: #f8f7f6;
+  padding: 15px 0;
+}
+
+.public .school_table table tbody tr th {
+  vertical-align: middle;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.public .school_table table tbody tr th.bd_b {
+  border-bottom: 1px solid #999;
+}
+
+.public .school_table table tbody tr td {
+  color: #777;
+  font-weight: 400;
+  padding: 15px 0;
+  vertical-align: middle;
+}
+
+.public .school_table table tbody tr.bold_tr {
+  background: #f8f7f6;
+  border-bottom: 1px solid #999;
+}
+
+.public .school_table table tbody tr.bold_tr:last-child {
+  border-bottom: none;
+}
+
+.public .school_table table tbody tr.bold_tr td {
+  font-weight: 500;
+  color: #555;
+  padding: 8px 0;
+}
+
+.public .school_table table tbody tr.bold_tr td.c_red {
+  color: #d9151b;
+}
+
+@media screen and (min-width: 801px) and (max-width: 1280px) {
+  .public .school_table_tit {
+    font-size: 1.8rem;
+    padding: 18px 0;
+  }
+  .public .school_table_tit .table_info {
+    font-size: 1.4rem;
+  }
+  .public .school_table table tbody tr th {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .public {
+    font-size: 1.6rem;
+  }
+  .public .school_table_tit {
+    font-size: 1.6rem;
+  }
+  .public .school_table_tit .table_info {
+    font-size: 1.2rem;
+  }
+  .public .school_table {
+    width: 100%;
+    overflow-x: auto;
+  }
+  .public .school_table table {
+    min-width: 800px;
+  }
+  .public .school_table table tbody tr th {
+    font-size: 1.4rem;
+  }
+}
