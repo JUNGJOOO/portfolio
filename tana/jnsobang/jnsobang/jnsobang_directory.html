@@ -1,0 +1,554 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HTML LIST</title>
+<style type="text/css">
+	* {font-family:dotum;font-size:16px; line-height: 1.3; color:#333;}
+	h1 {position:relative; font:bold 22px/26px Dotum;padding:10px;margin-bottom:10px;border-bottom:2px solid #666;}
+	h2 {font:bold 20px/24px Dotum;padding:30px 0 0 0;}
+	dt {margin:0;padding:10px 0;border-top:1px solid #666;}
+	dd {margin:0;padding:0;}
+	.intro {position:absolute;top:0;right:0;width:500px;text-align:right;line-height:14px;color:#999;}
+	.menutree {border-collapse:collapse;width:100%;}
+	.menutree thead th {background:#eee;}
+	.menutree th {border:1px solid #999;padding:5px 0;vertical-align:top; font-weight:normal;}
+	.menutree tbody{border-bottom:2px soild blue;margin-bottom:3px;}
+	.menutree tbody tr th, .menutree tbody tr td { text-align:left; font-weight:normal; padding-left:10px; vertical-align: middle;}
+	.menutree td {border:1px solid #999;padding:5px 0;text-align:center;}
+	.menutree td.url {text-align:left;padding-left:10px;}
+	.menutree td.url a{line-height: 1.6;}
+	.asp {background:pink;}
+	.dev {background:skyblue;}
+	.complete {background:#eee;}
+	.question {background:red;}
+	a {cursor:pointer; color:#02557b;}
+	a:visited {color:#666;}
+	a:link {}
+	a:hover {}
+	.fl { float:left; }
+	.tit {background:#909090; color:#fff; }
+	.tit02 {background:#0e457a; color:#fff; }
+	.tit03 {color:#f00; }
+	.html {background:#feaea5;}
+	.dircttit{ float:left; border:none; } 
+	.work2{ float:right; margin-top:25px; list-style:none; }
+	.work2 li{ float:left; margin-right:10px; padding:7px 5px; color:#fff; }
+	.work2 li.wr01{ background:#909090; }
+	.work2 li.wr02{ background:#0e457a; }
+	.work2 li.wr03{ margin-right:0; padding:6px 5px;  border:1px solid #000;  color:#f00; }
+    .board{background-color:#c3c3c3;}
+    .board2{background-color:#777;}
+    .board3{background-color:lightblue;}
+    .br{height: 10px;}
+    table{margin-bottom: 100px;}
+</style>
+</head>
+
+<body>
+
+<h1 class="dircttit">
+	[국문] HTML LIST
+</h1>
+<table class="menutree" summary="메뉴구조도">
+	<colgroup>
+		<col width="15%" /><!-- 1detph -->
+		<col width="20%" /><!-- 2detph -->
+		<col width="20%" /><!-- 3detph -->
+		<col width="20%" /><!-- URL -->
+		<col width="" /><!-- 비고 -->
+	</colgroup>
+	<thead>
+		<tr>
+			<th>1depth</th>
+			<th>2depth</th>
+			<th>3depth</th>
+			<th>URL</th>
+			<th>비고</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th colspan="5" class="tit02">메인</th>
+		</tr>
+		<tr>
+			<th></th>
+			<th>메인</th>
+			<th></th>
+            <td class="url">
+                <a href="jnsobang_main.html" target="_blank">jnsobang_main.html</a>
+            </td>
+			<td></td>
+		</tr>
+
+
+<!--  민원마당 -->
+        <tr>
+            <th colspan="5" class="br"></th>
+        </tr>
+		<tr>
+			<th colspan="5" class="tit02">민원마당 (minwon)</th>
+		</tr>
+        <tr>
+            <th></th>
+			<th rowspan="2">민원안내</th>
+            <th>인터넷 민원안내</th>
+			<td class="url"><a href="minwon/ininfo.html" target="_blank">minwon/ininfo.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+            <th></th>
+			<th>일반민원안내</th> 
+			<td class="url"><a href="minwon/cominfo.html" target="_blank">minwon/cominfo.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+			<th>게시판</th>
+			<th rowspan="2">민원상담</th>
+            <th>민원상담</th>
+			<td class="url"><a href="minwon/list.html" target="_blank">minwon/list.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+			<th></th>
+			<th>Q&A</th>
+			<td class="url"><a href="minwon/qna.html" target="_blank">minwon/qna.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+            <th></th>
+			<th>불법행위신고</th>
+			<th></th>
+			<td class="url"><a href="minwon/illegality.html" target="_blank">minwon/illegality.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+            <th></th>
+			<th>화재피해주민지원</th>
+			<th></th>
+			<td class="url"><a href="minwon/support.html" target="_blank">minwon/support.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+            <th></th>
+			<th rowspan="3">화재배상책임보험</th>
+            <th>제도안내</th>
+			<td class="url"><a href="minwon/system.html" target="_blank">minwon/system.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+			<th>게시판</th>
+			<th>자료게시판</th>
+			<td class="url"><a href="minwon/datalist.html" target="_blank">minwon/datalist.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+            <th>게시판</th>
+			<th>화재배상책임보험 FAQ</th>
+			<td class="url"><a href="minwon/faq.html" target="_blank">minwon/faq.html</a></td>
+			<td></td>
+		</tr>
+
+
+
+
+
+
+
+
+<!--  자료실 -->
+        <tr>
+            <th colspan="5" class="br"></th>
+        </tr>
+        <tr>
+            <th colspan="5" class="tit02">자료실 (data)</th>
+        </tr>
+        <tr>
+            <th></th>
+			<th rowspan="7">분야별정보</th>
+            <th>분야별정보</th>
+			<td class="url"><a href="data/info.html" target="_blank">data/info.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+			<th>게시판</th>
+			<th>소방시설</th>
+			<td class="url" rowspan="6"><a href="data/info1.html" target="_blank">data/info1.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+			<th>게시판</th>
+			<th>위험물</th>
+			<td></td>
+		</tr>
+        <tr>
+			<th>게시판</th>
+			<th>화재</th>
+			<td></td>
+		</tr>
+        <tr>
+			<th>게시판</th>
+			<th>구조구급</th>
+			<td></td>
+		</tr>
+        <tr>
+			<th>게시판</th>
+			<th>건축민원</th>
+			<td></td>
+		</tr>
+        <tr>
+			<th>게시판</th>
+			<th>기타</th>
+			<td></td>
+		</tr>
+        <tr>
+			<th>게시판</th>
+			<th>보도자료</th>
+			<th></th>
+			<td class="url"><a href="data/report.html" target="_blank">data/report.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+			<th>게시판</th>
+			<th>소방통계자료</th>
+			<th></th>
+			<td class="url"><a href="data/current.html" target="_blank">data/current.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+			<th>게시판</th>
+			<th rowspan="2">법령정보</th>
+            <th>지침</th>
+			<td class="url"><a href="data/statute.html" target="_blank">data/statute.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+            <th></th>
+			<th>법령정보</th>
+			<td class="url"><a target="_blank" href="http://www.nfa.go.kr/nfa/publicrelations/legalinformation/jurisdiction/">소방청 새창열기</a></td>
+			<td></td>
+		</tr>
+        <tr>
+            <th></th>
+			<th rowspan="5">재난행동요령</th>
+            <th>자연재난</th>
+			<td rowspan="4" class="url"><a href="data/act.html" target="_blank">data/act.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+            <th></th>
+			<th>사회재난</th>
+			<td></td>
+		</tr>
+        <tr>
+            <th></th>
+			<th>생활안전</th>
+			<td></td>
+		</tr>
+        <tr>
+            <th></th>
+			<th>어린이 안전나라</th>
+			<td></td>
+		</tr>
+        <tr>
+			<th>게시판</th>
+			<th>미디어자료</th>
+			<td></td>
+		</tr>
+        <tr>
+			<th>게시판</th>
+			<th>자주찾는 서식</th>
+			<th></th>
+			<td class="url"><a href="data/form.html" target="_blank">data/form.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+			<th>썸네일게시판</th>
+			<th rowspan="2">홍보자료</th>
+            <th>홍보책자</th>
+			<td class="url"><a href="data/promote.html" target="_blank">data/promote.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+			<th>썸네일게시판</th>
+			<th>동향지</th>
+			<td class="url"><a href="data/trend.html" target="_blank">data/trend.html</a></td>
+			<td></td>
+		</tr>
+
+
+
+
+
+
+
+<!--  소방현장 -->
+        <tr>
+            <th colspan="5" class="br"></th>
+        </tr>
+        <tr>
+            <th colspan="5" class="tit02">소방현장 (stats)</th>
+        </tr>
+        <tr>
+            <th>게시판</th>
+            <th>소방활동상황</th>
+            <th></th>
+            <td class="url"><a href="stats/act.html" target="_blank">stats/act.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>썸네일게시판</th>
+            <th>포토갤러리</th>
+            <th></th>
+            <td class="url"><a href="stats/gallery.html" target="_blank">stats/gallery.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>이미지게시판</th>
+            <th>동영상갤러리</th>
+            <th></th>
+            <td class="url"><a href="stats/video.html" target="_blank">stats/video.html</a></td>
+            <td></td>
+        </tr>
+
+
+
+
+
+
+
+
+<!--  소통마당 -->
+        <tr>
+            <th colspan="5" class="br"></th>
+        </tr>
+        <tr>
+            <th colspan="5" class="tit02">소통마당 (commu)</th>
+        </tr>
+        <tr>
+            <th>게시판</th>
+            <th>공지사항</th>
+            <th></th>
+            <td class="url"><a href="commu/notice.html" target="_blank">commu/notice.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>게시판</th>
+            <th>시험/채용</th>
+            <th></th>
+            <td class="url"><a href="commu/test.html" target="_blank">commu/test.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>게시판</th>
+            <th>고시/공고</th>
+            <th></th>
+            <td class="url"><a href="commu/official.html" target="_blank">commu/official.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>게시판</th>
+            <th>감사/정보공개</th>
+            <th></th>
+            <td class="url"><a href="commu/audit.html" target="_blank">commu/audit.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>게시판</th>
+            <th>자유게시판</th>
+            <th></th>
+            <td class="url"><a href="commu/free.html" target="_blank">commu/free.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>게시판</th>
+            <th>칭찬합시다</th>
+            <th></th>
+            <td class="url"><a href="commu/praise.html" target="_blank">commu/praise.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>사이버추모관</th>
+            <th></th>
+            <td class="url"><a href="commu/heroes.html" target="_blank">commu/heroes.html</a></td>
+            <td></td>
+        </tr>
+
+
+
+
+
+<!--  소방안전체험 -->
+        <tr>
+            <th colspan="5" class="br"></th>
+        </tr>
+        <tr>
+            <th colspan="5" class="tit02">소방안전체험 (safety)</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>이동안전체험차량교육</th>
+            <th></th>
+            <td class="url"><a href="safety/car.html" target="_blank">safety/car.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>소방안전교육</th>
+            <th></th>
+            <td class="url"><a href="safety/edu.html" target="_blank">safety/edu.html</a></td>
+            <td></td>
+        </tr>
+
+
+
+
+
+<!--  본부소개 -->
+        <tr>
+            <th colspan="5" class="br"></th>
+        </tr>
+        <tr>
+            <th colspan="5" class="tit02">본부소개 (center)</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>인사말</th>
+            <th></th>
+            <td class="url"><a href="center/greeting.html" target="_blank">center/greeting.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+			<th rowspan="3">연혁</th>
+            <th>현재~2010년</th>
+			<td class="url"><a href="center/history1.html" target="_blank">center/history1.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+            <th></th>
+			<th>2009년~1990년</th>
+			<td class="url"><a href="center/history2.html" target="_blank">center/history2.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+            <th></th>
+			<th>1989년~1899년</th>
+			<td class="url"><a href="center/history3.html" target="_blank">center/history3.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+            <th></th>
+			<th rowspan="3">조직 및 기능</th>
+            <th>기구조직표</th>
+			<td class="url"><a href="center/table.html" target="_blank">center/table.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+            <th></th>
+			<th>부서안내</th>
+			<td class="url"><a href="center/team.html" target="_blank">center/team.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+            <th></th>
+			<th>역대본부장</th>
+			<td class="url"><a href="center/leader.html" target="_blank">center/leader.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+            <th></th>
+            <th>직원소개</th>
+            <th></th>
+            <td class="url"><a href="center/member.html" target="_blank">center/member.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>본부현황</th>
+            <th></th>
+            <td class="url"><a href="center/current1.html" target="_blank">center/current1.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>소방서</th>
+            <th></th>
+            <td class="url"><a href="center/zone1.html" target="_blank">center/zone1.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>찾아오시는 길</th>
+            <th></th>
+            <td class="url"><a href="center/map.html" target="_blank">center/map.html</a></td>
+            <td></td>
+        </tr>
+
+
+
+
+
+
+
+
+<!--  이용안내 -->
+        <tr>
+            <th colspan="5" class="br"></th>
+        </tr>
+        <tr>
+            <th colspan="5" class="tit02">이용안내 (use)</th>
+        </tr>
+        <tr>
+            <th></th>
+			<th rowspan="3">개인정보처리방침</th>
+            <th>개인정보처리방침 16.08.22</th>
+			<td class="url"><a href="use/personalInfo3.html" target="_blank">use/personalInfo3.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+            <th></th>
+			<th>개인정보처리방침 15.07.01</th>
+			<td class="url"><a href="use/personalInfo2.html" target="_blank">use/personalInfo2.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+            <th></th>
+			<th>개인정보처리방침 13.01.23~15.06.30</th>
+			<td class="url"><a href="use/personalInfo1.html" target="_blank">use/personalInfo1.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+            <th></th>
+            <th>저작권보호 및 이용정책</th>
+            <th></th>
+            <td class="url"><a href="use/copyrightolicy.html" target="_blank">use/copyrightolicy.html</a></td>
+            <td></td>
+        </tr>
+
+
+        
+<!--  사이트맵 -->
+        <tr>
+            <th colspan="5" class="br"></th>
+        </tr>
+        <tr>
+            <th colspan="5" class="tit02">사이트맵 (etc)</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>사이트맵</th>
+            <th></th>
+            <td class="url"><a href="etc/sitemap.html" target="_blank">etc/sitemap.html</a></td>
+            <td></td>
+        </tr>
+
+
+
+
+	</tbody>
+</table>
+</body>
+</html>
