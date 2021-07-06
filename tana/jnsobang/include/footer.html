@@ -34,10 +34,10 @@
                             <option value="http://www.ksrfo.org/" title="대한민국재향소방동호회 새창으로 열기" class="selectList">대한민국재향소방동호회</option>
                             <option value="http://www.sobangin.or.kr/" title="소방산업정보시스템 새창으로 열기" class="selectList">소방산업정보시스템</option>
                             <option value="https://www.weather.go.kr/" title="기상청으로 열기" class="selectList">기상청</option>
-                            <option value="/volunteer/volunteer_main.html" title="전남의용소방대연합회" class="selectList">전남의용소방대연합회</option>
-                            <option value="/school/school_main.html" title="전남소방교육대" class="selectList">전남소방교육대</option>
+                            <option value="https://jungjooo.github.io/portfolio/tana/jnsobang/volunteer/volunteer_main.html" title="전남의용소방대연합회" class="selectList">전남의용소방대연합회</option>
+                            <option value="https://jungjooo.github.io/portfolio/tana/jnsobang/school/school_main.html" title="전남소방교육대" class="selectList">전남소방교육대</option>
                         </select>
-                        <input class="go" type="image" src="/jnsobang/common/img/2020091410001710485.jpg" alt="새창으로 이동">
+                        <input class="go" type="image" src="https://jungjooo.github.io/portfolio/tana/jnsobang/jnsobang/common/img/2020091410001710485.jpg" alt="새창으로 이동">
                     </div>
                 </fieldset>
                 <fieldset>
@@ -52,7 +52,7 @@
                             <option value="http://www.mpss.go.kr/child" title="어린이안전교육 새창으로 열기" class="selectList"> 어린이안전교육</option>
                             <option value="http://tv.mpss.go.kr/web/main/main.do" title="국민안전방송 새창으로 열기" class="selectList"> 국민안전방송</option>
                         </select>
-                        <input class="go" type="image" src="/jnsobang/common/img/2020091410001710485.jpg" alt="새창으로 이동">
+                        <input class="go" type="image" src="https://jungjooo.github.io/portfolio/tana/jnsobang/jnsobang/common/img/2020091410001710485.jpg" alt="새창으로 이동">
                     </div>
                 </fieldset>
                 <fieldset>
@@ -81,7 +81,7 @@
                             <option value="http://www.jnsobang.go.kr/jangheung/" class="selectList">장흥소방서</option>
                             <option value="http://www.jnsobang.go.kr/wando/" class="selectList">완도소방서</option>
                         </select>
-                        <input class="go" type="image" src="/jnsobang/common/img/2020091410001710485.jpg" alt="새창으로 이동">
+                        <input class="go" type="image" src="https://jungjooo.github.io/portfolio/tana/jnsobang/jnsobang/common/img/2020091410001710485.jpg" alt="새창으로 이동">
                     </div>
                 </fieldset>
                 <fieldset>
@@ -93,7 +93,7 @@
                             <option value="http://www.jeonnam.go.kr/" title="전라남도청 새창으로 열기" class="selectList">전라남도청
                             </option>
                         </select>
-                        <input class="go" type="image" src="/jnsobang/common/img/2020091410001710485.jpg" alt="새창으로 이동">
+                        <input class="go" type="image" src="https://jungjooo.github.io/portfolio/tana/jnsobang/jnsobang/common/img/2020091410001710485.jpg" alt="새창으로 이동">
                     </div>
                 </fieldset>
             </div>
@@ -130,16 +130,27 @@
                 <div class="footer_logo">
                     <p>
                         <a href="http://www.jeonnam.go.kr/" target="_blank" title="새창열림">
-                            <img src="/jnsobang/common/img/202006301459102086.png" alt="생명의땅으뜸전남">
+                            <img src="https://jungjooo.github.io/portfolio/tana/jnsobang/jnsobang/common/img/202006301459102086.png" alt="생명의땅으뜸전남">
                         </a>
                     </p>
-                    <p><img src="/jnsobang/common/img/2020063014591868397.png" alt="WA 웹접근성 품질마크"></p>
-                    <p><img src="/jnsobang/common/img/2020063014592689595.png" alt="QR코드"></p>
+                    <p><img src="https://jungjooo.github.io/portfolio/tana/jnsobang/jnsobang/common/img/2020063014591868397.png" alt="WA 웹접근성 품질마크"></p>
+                    <p><img src="https://jungjooo.github.io/portfolio/tana/jnsobang/jnsobang/common/img/2020063014592689595.png" alt="QR코드"></p>
                 </div>
             </div>
         </div>
     </footer>
-    <script type="text/javascript" src="/jnsobang/common/js/footer.js"></script>
+    
+<script type="text/javascript">
+    $(document).on('click','.go',function(){
+        var url = $(this).prev().val();
+        if(url==''){ alert("사이트를 선택하시기 바랍니다.");
+            $(this).prev().focus();
+        }else{
+            window.open(url,'_blank');
+        }
+    });
+</script>
+
 <!-- e : footer -->
 </body>
 </html>
