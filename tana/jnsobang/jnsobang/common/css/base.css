@@ -190,14 +190,13 @@ table {
   background: url();
 }
 
-
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 300;
-  src: url(/font/NotoSansKR-Light.woff2) format("woff2"),
-       url(/font/NotoSansKR-Light.woff) format("woff"),
-       url(/font/NotoSansKR-Light.otf) format("opentype");
+  src: url(../../../font/NotoSansKR-Light.woff2) format("woff2"),
+       url(../../../font/NotoSansKR-Light.woff) format("woff"),
+       url(../../../font/NotoSansKR-Light.otf) format("opentype");
 }
 
 
@@ -205,52 +204,52 @@ table {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 400;
-  src: url(/font/NotoSansKR-Regular.woff2) format("woff2"),
-       url(/font/NotoSansKR-Regular.woff) format("woff"),
-       url(/font/NotoSansKR-Regular.otf) format("opentype");
+  src: url(../../../font/NotoSansKR-Regular.woff2) format("woff2"),
+       url(../../../font/NotoSansKR-Regular.woff) format("woff"),
+       url(../../../font/NotoSansKR-Regular.otf) format("opentype");
 }
 
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 500;
-  src: url(/font/NotoSansKR-Medium.woff2) format("woff2"),
-       url(/font/NotoSansKR-Medium.woff) format("woff"),
-       url(/font/NotoSansKR-Medium.otf) format("opentype");
+  src: url(../../../font/NotoSansKR-Medium.woff2) format("woff2"),
+       url(../../../font/NotoSansKR-Medium.woff) format("woff"),
+       url(../../../font/NotoSansKR-Medium.otf) format("opentype");
 }
 
 @font-face {
   font-family: 'Noto Sans KR';
   font-style: normal;
   font-weight: 700;
-  src: url(/font/NotoSansKR-Bold.woff2) format("woff2"),
-       url(/font/NotoSansKR-Bold.woff) format("woff"),
-       url(/font/NotoSansKR-Bold.otf) format("opentype");
+  src: url(../../../font/NotoSansKR-Bold.woff2) format("woff2"),
+       url(../../../font/NotoSansKR-Bold.woff) format("woff"),
+       url(../../../font/NotoSansKR-Bold.otf) format("opentype");
 }
 
 @font-face {
   font-family: 'Arita';
   font-style: normal;
   font-weight: 700;
-  src: url(/font/Arita-Bold.woff2) format("woff2"),
-       url(/font/Arita-Bold.woff) format("woff"),
-       url(/font/Arita-Bold.otf) format("opentype");
+  src: url(../../../font/Arita-Bold.woff2) format("woff2"),
+       url(../../../font/Arita-Bold.woff) format("woff"),
+       url(../../../font/Arita-Bold.otf) format("opentype");
 }
 @font-face {
   font-family: 'Arita';
   font-style: normal;
   font-weight: 600;
-  src: url(/font/Arita-SemiBold.woff2) format("woff2"),
-       url(/font/Arita-SemiBold.woff) format("woff"),
-       url(/font/Arita-SemiBold.otf) format("opentype");
+  src: url(../../../font/Arita-SemiBold.woff2) format("woff2"),
+       url(../../../font/Arita-SemiBold.woff) format("woff"),
+       url(../../../font/Arita-SemiBold.otf) format("opentype");
 }
 @font-face {
   font-family: 'Arita';
   font-style: normal;
   font-weight: 500;
-  src: url(/font/Arita-Medium.woff2) format("woff2"),
-       url(/font/Arita-Medium.woff) format("woff"),
-       url(/font/Arita-Medium.otf) format("opentype");
+  src: url(../../../font/Arita-Medium.woff2) format("woff2"),
+       url(../../../font/Arita-Medium.woff) format("woff"),
+       url(../../../font/Arita-Medium.otf) format("opentype");
 }
 
 
