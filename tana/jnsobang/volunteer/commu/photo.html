@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+    <meta name="author" content="전남의용소방대연합회"/>
+    <meta name="subject" content="전남의용소방대연합회"/>
+    <meta name="keywords" content="전라남도, 전남의용소방대연합회, 의용소방대소개, 알림마당, 클린신고센터, 지역의소대"/>
+    <meta name="description" content="재난없는 안전사회 구현의 지름길! 우리의 안전은 우리 모두의 손으로!"/>
+    <title>전남의용소방대연합회</title>
+    <!-- css -->
+    <link type="text/css" href="../../jnsobang/common/css/base.css" media="all" rel="stylesheet">
+    <link type="text/css" href="../../jnsobang/common/css/footer.css" media="all" rel="stylesheet">
+    <link type="text/css" href="../../jnsobang/common/css/header.css" media="all" rel="stylesheet">
+    <link type="text/css" href="../../jnsobang/common/css/header_active.css" media="all" rel="stylesheet">
+    <link type="text/css" href="../../jnsobang/common/css/page_common.css" media="all" rel="stylesheet">
+    <link type="text/css" href="../../jnsobang/common/css/page_board.css" media="all" rel="stylesheet">
+    <link type="text/css" href="../../jnsobang/common/css/default_xscroll.css" media="all" rel="stylesheet">
+    <link type="text/css" href="../../jnsobang/common/css/gallery_video.css" media="all" rel="stylesheet">
+
+    <!-- volunteer css -->
+    <link type="text/css" href="../common/css/header_volunteer.css" media="all" rel="stylesheet">
+
+    <!-- script -->
+    <script type="text/javascript" src="../../jnsobang/common/js/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../../jnsobang/common/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../jnsobang/common/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../../jnsobang/common/js/common.js"></script>
+
+    <!-- layout script -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#volunteer_header").load("https://jungjooo.github.io/portfolio/tana/jnsobang/include/volunteer_header.html");
+            $("#volunteer_footer").load("https://jungjooo.github.io/portfolio/tana/jnsobang/include/volunteer_footer.html");
+            $("#boardpho_list").load("https://jungjooo.github.io/portfolio/tana/jnsobang/include/boardpho_list.html");
+        });
+    </script>
+</head>
+<body>
+<div id="wrap" class="volunteer wrap_commu2">
+    <div id="volunteer_header"></div>
+    <!-- s : sidebar -->
+    <aside class="sidebar">
+        <div class="inner" style="background: url(../common/img/2020090319285801799.jpg);">>
+            <h2 class="h2_tit">
+                <strong>알림마당</strong>
+            </h2>
+            <h3 class="hidden">공지사항</h3>
+            <nav id="leftMenu" class="lnb">
+                <ul id="subMenuList" class="lnb_wrap">
+                    <li><a href="notice.html">공지사항</a></li>
+                    <li><a href="free.html">자유게시판</a></li>
+                    <li class="on"><a href="photo.html">포토갤러리(활동현황)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <div class="breadcrumb">
+        <div class="inner">
+            <span id="pageLinkNav">
+                <a href="../volunteer_main.html" class="menu-home"><span>Home</span></a>
+                <span class="gt"> &gt; </span>
+                <a href="notice.html"><span>알림마당</span></a>
+                <span class="gt"> &gt; </span>
+                <span class="menu-active">포토갤러리</span>
+            </span>
+            <div class="share">
+                <button class="btn-share" title="공유하기"><span class="blind">sns</span></button>
+                <div class="sns-wrap">
+                    <div class="sns">
+                        <span class="ico facebook"><a title="새창열림" target="_blank"><span class="blind">facebook</span></a></span>
+                        <span class="ico kakao"><a title="새창열림" target="_blank"><span class="blind">kakao</span></a></span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- e : sidebar -->
+    <!-- s : contents -->
+    <div class="contents" id="contents">
+        <div class="inner">
+            <div id="boardpho_list"></div>
+        </div>
+    </div>
+    <!-- e : contents -->
+    <div id="volunteer_footer"></div>
+</div>
+<script type="text/javascript" src="../../jnsobang/common/js/share.js"></script>
+</body>
+</html>
