@@ -10,7 +10,7 @@
 .greeting .tab_title span.c_orange{color:#fd7116}
 .greeting .tab_box .tab{display:none}
 .greeting .tab_box .tab.on{display:block}
-.greeting .tab_box .tab_box_left{position:relative;display:inline-block;width:501px;height:510px;background:url(/volunteer/common/img/2020090409385690226.png) no-repeat left top;background-size:auto;font-size:1.5rem}
+.greeting .tab_box .tab_box_left{position:relative;display:inline-block;width:501px;height:510px;background:url(../img/2020090409385690226.png) no-repeat left top;background-size:auto;font-size:1.5rem}
 .greeting .tab_box .tab_box_left .m_img{display:none}
 .greeting .tab_box .tab_box_left .greeting_man{position:absolute;left:150px}
 .greeting .tab_box .tab_box_left .greeting_man:after{content:'';position:absolute;top:70px;left:130px;z-index:1;-webkit-transform:rotate(30deg);transform:rotate(30deg);display:block;width:2px;height:267px;background-color:#fd7116}
@@ -94,7 +94,7 @@
 .group .budget{padding:18px 0;font-size:1.8rem}
 .group .budget span{font-weight:700}
 .group .pay{padding:11px 0;font-size:1.6rem}
-.group .pay:before{content:'';display:inline-block;width:16px;height:12px;background:url(/images/sub_img/pay_arrow.png) no-repeat center center}
+/* .group .pay:before{content:'';display:inline-block;width:16px;height:12px;background:url(/images/sub_img/pay_arrow.png) no-repeat center center} */
 @media screen and (min-width:801px) and (max-width:1280px){
     .group{padding:7px 0 200px}
     .group .group_table table{font-size:1.3rem}
