@@ -1,0 +1,33 @@
+.train_facility{margin-bottom:300px;font-size:1.6rem}
+.train_facility .train_tit{margin:29px 0;font-size:2rem;font-weight:700;color:#333}
+.train_facility .train_table table{border-top:2px solid #555;border-bottom:1px solid #999}
+.train_facility .train_table table tr{height:47px;line-height:47px;text-align:center}
+.train_facility .train_table table thead{border-bottom:1px solid #c8c8c7}
+.train_facility .train_table table thead th{border-right:1px solid #dcdcdc;font-weight:500;color:#333}
+.train_facility .train_table table thead th:last-child{border-right:none}
+.train_facility .train_table table tbody tr{border-bottom:1px solid #dcdcdc}
+.train_facility .train_table table tbody tr:last-child{border-bottom:none}
+.train_facility .train_table table tbody td{border-right:1px solid #dcdcdc;font-weight:400;color:#777}
+.train_facility .train_table table tbody td:last-child{border-right:none}
+.train_facility .train_table table tbody td:first-child{color:#333;font-weight:500}
+.train_facility .pic_area ul{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;width:100%;margin-top:50px}
+.train_facility .pic_area ul li{width:calc(100% - 10px)/2}
+.train_facility .pic_area ul li img{width:628px;border:1px solid #d5d5d5;-webkit-box-sizing:border-box;box-sizing:border-box}
+.train_facility .pic_area ul li p{margin-top:-4px;padding:20px 0 39px;font-size:1.8rem;line-height:1.8rem;font-weight:500;color:#000;text-align:center}
+
+
+@media screen and (min-width:801px) and (max-width:1280px){
+    .train_facility{font-size:1.5rem}
+    .train_facility .train_tit{font-size:1.8rem}
+    .train_facility .pic_area ul li{width:calc(50% - 5px)}
+    .train_facility .pic_area ul li img{width:100%}
+    .train_facility .pic_area ul li p{padding:15px 0 20px;font-size:1.6rem}
+}
+@media screen and (max-width:800px){
+    .train_facility{font-size:1.4rem}
+    .train_facility .train_tit{font-size:1.6rem}
+    .train_facility .train_table table .t_3{width:50%}
+    .train_facility .pic_area ul li{width:100%}
+    .train_facility .pic_area ul li img{width:100%}
+    .train_facility .pic_area ul li p{padding:10px 0 15px;font-size:1.4rem}
+}

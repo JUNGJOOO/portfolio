@@ -1,0 +1,242 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HTML LIST</title>
+<style type="text/css">
+	* {font-family:dotum;font-size:16px; line-height: 1.3; color:#333;}
+	h1 {position:relative; font:bold 22px/26px Dotum;padding:10px;margin-bottom:10px;border-bottom:2px solid #666;}
+	h2 {font:bold 20px/24px Dotum;padding:30px 0 0 0;}
+	dt {margin:0;padding:10px 0;border-top:1px solid #666;}
+	dd {margin:0;padding:0;}
+	.intro {position:absolute;top:0;right:0;width:500px;text-align:right;line-height:14px;color:#999;}
+	.menutree {border-collapse:collapse;width:100%;}
+	.menutree thead th {background:#eee;}
+	.menutree th {border:1px solid #999;padding:5px 0;vertical-align:top; font-weight:normal;}
+	.menutree tbody{border-bottom:2px soild blue;margin-bottom:3px;}
+	.menutree tbody tr th, .menutree tbody tr td { text-align:left; font-weight:normal; padding-left:10px; vertical-align: middle;}
+	.menutree td {border:1px solid #999;padding:5px 0;text-align:center;}
+	.menutree td.url {text-align:left;padding-left:10px;}
+	.menutree td.url a{line-height: 1.6;}
+	.asp {background:pink;}
+	.dev {background:skyblue;}
+	.complete {background:#eee;}
+	.question {background:red;}
+	a {cursor:pointer; color:#02557b;}
+	a:visited {color:#666;}
+	a:link {}
+	a:hover {}
+	.fl { float:left; }
+	.tit {background:#909090; color:#fff; }
+	.tit02 {background:#0e457a; color:#fff; }
+	.tit03 {color:#f00; }
+	.html {background:#feaea5;}
+	.dircttit{ float:left; border:none; } 
+	.work2{ float:right; margin-top:25px; list-style:none; }
+	.work2 li{ float:left; margin-right:10px; padding:7px 5px; color:#fff; }
+	.work2 li.wr01{ background:#909090; }
+	.work2 li.wr02{ background:#0e457a; }
+	.work2 li.wr03{ margin-right:0; padding:6px 5px;  border:1px solid #000;  color:#f00; }
+    .board{background-color:#c3c3c3;}
+    .board2{background-color:#777;}
+    .board3{background-color:lightblue;}  
+    .br{height: 10px;}
+</style>
+</head>
+
+<body>
+
+<h1 class="dircttit">
+	[school] HTML LIST
+</h1>
+<table class="menutree" summary="메뉴구조도">
+	<colgroup>
+		<col width="10%" /><!-- 1detph -->
+		<col width="20%" /><!-- 2detph -->
+		<col width="15%" /><!-- 3detph -->
+		<col width="25%" /><!-- URL -->
+		<col width="" /><!-- 비고 -->
+	</colgroup>
+	<thead>
+		<tr>
+			<th>1depth</th>
+			<th>2depth</th>
+			<th>3depth</th>
+			<th>URL</th>
+			<th>비고</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th colspan="5" class="tit02">메인</th>
+		</tr>
+		<tr>
+			<th></th>
+			<th>메인</th>
+			<th></th>
+            <td class="url">
+                <a href="school_main.html" target="_blank">school_main.html</a>
+            </td>
+			<td></td>
+		</tr>
+
+
+
+
+<!--  학교소개 -->
+        <tr>
+            <th colspan="5" class="br"></th>
+        </tr>
+		<tr>
+			<th colspan="5" class="tit02">학교소개 (intro)</th>
+		</tr>
+        <tr>
+			<th></th>
+			<th>인사말</th>
+			<th></th>
+			<td class="url"><a href="intro/greeting.html" target="_blank">intro/greeting.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+			<th></th>
+			<th>교육방침</th>
+			<th></th>
+			<td class="url"><a href="intro/policy.html" target="_blank">intro/policy.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+			<th></th>
+			<th rowspan="2">일반현황</th>
+            <th>연혁</th>
+			<td class="url"><a href="intro/situation_history.html" target="_blank">intro/situation_history.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+			<th></th>
+			<th>역대 과장</th>
+			<td class="url"><a href="intro/situation_leader.html" target="_blank">intro/situation_leader.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+			<th></th>
+			<th>조직 및 업무</th>
+			<th></th>
+			<td class="url"><a href="intro/duty.html" target="_blank">intro/duty.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+			<th></th>
+			<th>오시는 길</th>
+			<th></th>
+			<td class="url"><a href="intro/map.html" target="_blank">intro/map.html</a></td>
+			<td></td>
+		</tr>
+
+
+
+<!--  교육안내 -->
+        <tr>
+            <th colspan="5" class="br"></th>
+        </tr>
+        <tr>
+            <th colspan="5" class="tit02">교육안내 (edu)</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>소방공무원 교육일정</th>
+            <th></th>
+            <td class="url"><a href="edu/publicofficer.html" target="_blank">edu/publicofficer.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>일반인 교육일정</th>
+            <th></th>
+            <td class="url"><a href="edu/ordinary.html" target="_blank">edu/ordinary.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>사이버강의실</th>
+            <th></th>
+            <td class="url"><a href="edu/cyber.html" target="_blank">edu/cyber.html</a></td>
+            <td></td>
+        </tr>
+
+
+
+<!--  자료실 -->
+        <tr>
+            <th colspan="5" class="br"></th>
+        </tr>
+        <tr>
+            <th colspan="5" class="tit02">자료실 (data)</th>
+        </tr>
+        <tr>
+			<th></th>
+			<th rowspan="2">소방자료</th>
+            <th>상징</th>
+			<td class="url"><a href="data/firedata.html" target="_blank">data/firedata.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+			<th></th>
+			<th>소방가</th>
+			<td class="url"><a href="data/song.html" target="_blank">data/song.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+			<th>썸네일게시판</th>
+			<th rowspan="2">교육 사진</th>
+            <th>신임교육과정반</th>
+			<td class="url"><a href="data/eduphoto.html" target="_blank">data/eduphoto.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+			<th>썸네일게시판</th>
+			<th>전문교육과정반</th>
+			<td class="url"><a href="data/eduphoto_proclass.html" target="_blank">data/eduphoto_proclass.html</a></td>
+			<td></td>
+		</tr>
+        <tr>
+            <th>이미지게시판</th>
+            <th>동영상자료</th>
+            <th></th>
+            <td class="url"><a href="data/video.html" target="_blank">data/video.html</a></td>
+            <td></td>
+        </tr>
+
+
+
+<!--  참여공간 -->
+        <tr>
+            <th colspan="5" class="br"></th>
+        </tr>
+        <tr>
+            <th colspan="5" class="tit02">참여공간 (zone)</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>공지/공고</th>
+            <th></th>
+            <td class="url"><a href="zone/notice.html" target="_blank">zone/notice.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th rowspan="2">자유게시판</th>
+            <th>학교에 바란다</th>
+            <td class="url"><a href="zone/free.html" target="_blank">zone/free.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>고충상담(성/청렴)</th>
+            <td class="url"><a href="zone/free_counseling.html" target="_blank">zone/free_counseling.html</a></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
