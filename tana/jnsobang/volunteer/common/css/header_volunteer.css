@@ -1,0 +1,44 @@
+body{overflow-x: hidden;}
+
+#wrap.wrap_intro .gnb .depth1 > li:nth-of-type(1) > a,
+#wrap.wrap_commu2 .gnb .depth1 > li:nth-of-type(2) > a,
+#wrap.wrap_clean .gnb .depth1 > li:nth-of-type(3) > a,
+#wrap.wrap_center .gnb .depth1 > li:nth-of-type(4) > a,
+#wrap.wrap_fireman .gnb .depth1 > li:nth-of-type(5) > a
+{color: #fd7116;}
+
+#wrap.wrap_intro .gnb .depth1 > li:nth-of-type(1) > a:after,
+#wrap.wrap_commu2 .gnb .depth1 > li:nth-of-type(2) > a:after,
+#wrap.wrap_clean .gnb .depth1 > li:nth-of-type(3) > a:after,
+#wrap.wrap_center .gnb .depth1 > li:nth-of-type(4) > a:after,
+#wrap.wrap_fireman .gnb .depth1 > li:nth-of-type(5) > a:after{
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 100%; height: 5px; background-color: #fd7116;
+}
+
+h1.logo{position:absolute;top:50%;left:0;z-index:200;-webkit-transform:translateY(-50%);transform:translateY(-50%);width:250px;height:50px;background:url(/volunteer/common/img/2020091117433947252.png) no-repeat 0}
+h1.logo a{display:block;height:100%}
+h1.logo.active{position:fixed;top:28px}
+.header.active{border-top:none}
+.main_header h1.logo{background:url(/volunteer/common/img/202009212216449637.png) no-repeat;height:47px}
+.gnb_all .gnb_all_depth1{width:1000px}
+.gna_all_mbtxt{display:none}
+.gnb_home_mb{display:none}
+.gnb_all .gnb_all_depth1>li{width:calc(100% / 4)}
+
+
+@media screen and (min-width:801px) and (max-width:1280px){
+    h1.logo{width:180px;height:50px;background:url(/volunteer/common/img/2020091117454823954.png) no-repeat 0}
+    .main_header h1.logo{background:url(/volunteer/common/img/2020092122163406070.png) no-repeat;height:33px}
+    .gnb_all .gnb_all_depth1{width:90%}
+    .gnb_all .gnb_all_depth1>li{padding:30px 20px 0 20px}
+    .header_util .toggle_menu_mb{display:none}
+    .main_header .header_util{width:auto;margin-top:0}
+}
+@media screen and (max-width:800px){
+    h1.logo{left:10px;width:170px;background:url(/volunteer/common/img/2020091117462122047.png) no-repeat 0;background-size:100% auto}
+    .main_header h1.logo{background:url(/volunteer/common/img/202009212209134146.png) no-repeat;background-size:100% auto;height:33px}
+    .header_util .toggle_menu_mb{display:block}
+    .header_util .toggle_menu{display:none}
+    .main_header .header_util .toggle_menu_mb.active{display:block;background:url(/jnsobang/common/img/2020090417563672121.png) no-repeat;background-size:100% auto;width:24px;height:17px;top:18px;right:10px}
+}

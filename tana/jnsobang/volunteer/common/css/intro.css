@@ -1,0 +1,132 @@
+.greetings_talk{position:relative;overflow:hidden}
+.greetings_talk .greeting_mid{text-align:center;margin:30px 0 70px}
+.greetings_talk .greeting_mid .greeting_tit{font-size:50px;line-height:60px;font-weight:600;color:#777}
+.greetings_talk .greeting_mid .greeting_tit .br1{display:block}
+.greetings_talk .greeting_mid .greeting_tit .br2{display:none}
+.greetings_talk .greeting_mid .greeting_tit_style1{color:#ff671a}
+.greetings_talk .greeting_mid .greeting_tit_style2{color:#333}
+.greetings_talk .greeting_mid p:last-child{position:relative;padding:40px 0 35px;font-size:20px;line-height:20px;color:#333}
+.greetings_talk .greeting_mid p:last-child br{display:none}
+.greetings_talk .greeting_mid p:last-child:after{content:'';position:absolute;bottom:0;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);width:32px;height:1px;background-color:#838383}
+.greetings_talk .greeting_bg:after{content:'';clear:both;display:block}
+.greetings_talk .greeting_bg .greeting_bg_top{background-color:#e8e8e8;height:25px}
+.greetings_talk .greeting_bg .greeting_bg_left{float:left;width:25px;height:100vh;background:-webkit-gradient(linear,left top,left bottom,from(#e8e8e8),to(#fff));background:linear-gradient(to bottom,#e8e8e8,#fff)}
+.greetings_talk .greeting_bg .greeting_bg_right{float:right;width:25px;height:100vh;background:-webkit-gradient(linear,left top,left bottom,from(#e8e8e8),to(#fff));background:linear-gradient(to bottom,#e8e8e8,#fff)}
+.greetings_talk .greeting_wrap{position:relative;border-top:25px solid #e8e8e8;margin-bottom:200px}
+.greetings_talk .greeting_wrap:after{content:'';position:absolute;left:0;height:100%;width:25px;background:-webkit-gradient(linear,left top,left bottom,from(#e8e8e8),to(#fff));background:linear-gradient(to bottom,#e8e8e8,#fff)}
+.greetings_talk .greeting_wrap:before{content:'';position:absolute;right:0;height:100%;width:25px;background:-webkit-gradient(linear,left top,left bottom,from(#e8e8e8),to(#fff));background:linear-gradient(to bottom,#e8e8e8,#fff)}
+.greetings_talk .greeting_left{display:inline-block;width:45%;vertical-align:top}
+.greetings_talk .greeting_left .greeting_txt{float:right;margin-top:80px;width:80%}
+.greetings_talk .greeting_left .greeting_txt>p{font-size:17px;line-height:28px;color:#333}
+.greetings_talk .greeting_left .greeting_txt>p+p{margin-bottom:20px}
+.greetings_talk .greeting_left .greeting_txt>p:first-child{margin-bottom:25px;font-size:24px;line-height:24px}
+.greetings_talk .greeting_left .greeting_txt>p:first-child br{display:none}
+.greetings_talk .greeting_left ul{margin-top:70px}
+.greetings_talk .greeting_left ul li+li{margin-top:50px}
+.greetings_talk .greeting_left ul a{position:relative;font-size:20px;line-height:20px;font-weight:600;color:#ff671a;cursor:pointer}
+.greetings_talk .greeting_left ul a:after{content:'';position:absolute;top:50%;right:-15px;-webkit-transform:translateY(-50%) rotate(-45deg);transform:translateY(-50%) rotate(-45deg);width:8px;height:8px;border:solid #ff671a;border-width:0 2px 2px 0}
+.greetings_talk .greeting_left ul p{margin-top:10px;font-size:16px;line-height:24px;color:#333}
+.greetings_talk .greeting_right{position:relative;display:inline-block;width:55%;height:700px;text-align:center}
+.greetings_talk .greeting_right .greeting_right_bg{position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);width:100%;height:100%;background:url(/suncheon/common/img/2020082611290574036.png) no-repeat;background-size:80% auto;background-position:center 110%}
+.greetings_talk .greeting_right .greeting_right_bg img{position:absolute;left:50%;top:43%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);width:260px;height:360px;border:1px solid #ddd}
+.greetings_talk .greeting_right .man{position:relative;transform:translateY(-50%);right:15px;top:36%;display:inline-block;width:50%;text-align:right;vertical-align:top}
+.greetings_talk .greeting_right .woman{position:relative;transform:translateY(-50%);left:15px;top:36%;display:inline-block;width:50%;text-align:left;vertical-align:top}
+.greetings_talk .greeting_right .man .text{position:relative;right:10px;margin-top:30px}
+.greetings_talk .greeting_right .woman .text{position:relative;left:8px;margin-top:30px}
+.greetings_talk .greeting_right .rank{font-size:16px;line-height:22px;font-weight:400;color:#333}
+.greetings_talk .greeting_right .name{font-size:20px;line-height:22px;font-weight:600;color:#333;margin-left:10px}
+@media screen and (min-width:801px) and (max-width:1280px){
+    .greetings_talk{padding-bottom:200px}
+    .greetings_talk .greeting_wrap{margin-bottom:0}
+    .greetings_talk .greeting_right .greeting_right_bg{background:0 0}
+}
+@media screen and (max-width:800px){
+    .greetings_talk .greeting_mid{margin:30px 0 35px}
+    .greetings_talk .greeting_mid .greeting_tit{font-size:30px;line-height:35px}
+    .greetings_talk .greeting_mid .greeting_tit .br1{display:block}
+    .greetings_talk .greeting_mid .greeting_tit .br2{display:block}
+    .greetings_talk .greeting_mid p:last-child{font-size:16px}
+    .greetings_talk .greeting_mid p:last-child br{display:block}
+    .greetings_talk .greeting_left .greeting_txt>p:first-child br{display:block}
+    .greetings_talk .greeting_wrap{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse;-ms-flex-wrap:nowrap;flex-wrap:nowrap;border-top:15px solid #e8e8e8}
+    .greetings_talk .greeting_wrap:after{width:15px}
+    .greetings_talk .greeting_wrap:before{width:15px}
+    .greetings_talk .greeting_left{display:block;width:100%;padding:0 30px;-webkit-box-sizing:border-box;box-sizing:border-box}
+    .greetings_talk .greeting_left .greeting_txt{width:100%;margin-top:0}
+    .greetings_talk .greeting_left .greeting_txt>p{font-size:16px;line-height:25px;margin-bottom:15px}
+    .greetings_talk .greeting_left .greeting_txt>p:first-child{font-size:20px}
+    .greetings_talk .greeting_left ul{margin-top:35px}
+    .greetings_talk .greeting_left ul li+li{margin-top:30px}
+    .greetings_talk .greeting_left ul a{font-size:16px;line-height:20px}
+    .greetings_talk .greeting_left ul a:after{content:'';position:absolute;top:50%;right:-15px;-webkit-transform:translateY(-50%) rotate(-45deg);transform:translateY(-50%) rotate(-45deg);width:8px;height:8px;border:solid #ff671a;border-width:0 2px 2px 0}
+    .greetings_talk .greeting_left ul p{margin-top:5px;font-size:14px;line-height:22px}
+    .greetings_talk .greeting_right{display:block;width:100%;height:auto;margin-bottom:50px}
+    .greetings_talk .greeting_right .greeting_right_bg{background:0 0}
+    .greetings_talk .greeting_right .greeting_right_bg img{position:static;left:0;top:0;-webkit-transform:translate(0,0);transform:translate(0,0);margin-top:25px}
+    .greetings_talk .greeting_right .man{top:20px;right:5px;transform:translateY(0)}
+    .greetings_talk .greeting_right .man img{width:80%}
+    .greetings_talk .greeting_right .woman{top:20px;left:5px;transform:translateY(0)}
+    .greetings_talk .greeting_right .woman img{width:80%}
+    .greetings_talk .greeting_right .rank{font-size:14px}
+    .greetings_talk .greeting_right .name{font-size:15px}
+    .greetings_talk .greeting_right .man .text{position:absolute;right:0;width:80%;margin-top:12px;text-align:center}
+    .greetings_talk .greeting_right .woman .text{width:80%;margin-top:12px;left:auto;text-align:center}
+    .greetings_talk .greeting_right .name{margin-left:5px}
+}
+
+
+
+.situation{margin-bottom:507px;color:#555;line-height:1}
+.situation .group_tit{font-size:1.8rem;margin-top:9px}
+.situation .group_tit span{font-weight:700}
+.situation .table_info{font-size:1.5rem;padding:8px;text-align:right}
+.situation .group_table{width:100%}
+.situation .group_table table{font-size:1.6rem;border-top:2px solid #555;border-bottom:1px solid #d6d6d6}
+.situation .group_table table tr{box-sizing:border-box;-webkit-box-sizing:border-box}
+.situation .group_table table tr th:last-child{border-right:none}
+.situation .group_table table tr td:last-child{border-right:none}
+.situation .group_table table th{vertical-align:middle;height:50px;border-right:1px solid #d6d6d6;line-height:1;font-weight:500;color:#555}
+.situation .group_table table thead th{background-color:#f8f7f6;font-weight:700}
+.situation .group_table table thead tr{border-bottom:1px solid #999}
+.situation .group_table table tbody td{height:60px;text-align:center;vertical-align:middle;border-right:1px solid #d6d6d6;color:#555}
+.situation .group_table table tbody tr{border-bottom:1px solid #d6d6d6}
+.situation .budget{font-size:1.8rem;padding:50px 0 30px 0}
+.situation .budget span{font-weight:700}
+.situation .pay{font-size:1.6rem}
+.situation .pay>div{padding:7px 0}
+@media screen and (min-width:801px) and (max-width:1280px){
+    .situation{margin-bottom:200px}
+    .situation .budget{padding:30px 0}
+}
+@media screen and (max-width:800px){
+    .situation{margin-bottom:50px}
+    .situation .situation_top{margin-bottom:20px}
+    .situation .group_tit{display:inline-block;margin-top:0;font-size:1.4rem}
+    .situation .table_info{float:right;display:inline-block;font-size:1.3rem;padding:0}
+    .situation .group_table{width:100%;overflow-x:auto;white-space:nowrap}
+    .situation .group_table table{width:250%;font-size:1.4rem}
+    .situation .group_table table tbody td{height:40px}
+    .situation .budget{padding:20px 0;font-size:1.4rem}
+    .situation .pay{font-size:1.4rem;line-height:20px}
+    .situation .pay>div{padding:3px 0}
+}
+
+
+
+.law{margin-bottom:300px;font-size:1.7rem;line-height:1}
+.law .law_box .law_tit{font-size:2rem;font-weight:700;padding:0 0 20px}
+.law .law_box .sub_tit{font-weight:500;color:#fd7116;padding-bottom:10px}
+.law .law_box .cont ol>li+li{margin-top:20px}
+.law .law_box .cont ul{padding:15px 0 10px 15px}
+.law .law_box .cont ul li{color:#555}
+.law .law_box .cont ul li+li{margin-top:17px}
+.law .law_box+.law_box{margin-top:35px}
+@media screen and (max-width:800px){
+    .law{font-size:1.6rem;line-height:24px}
+    .law .law_box .law_tit{font-size:1.7rem;padding:0 0 8px}
+    .law .law_box .sub_tit{padding-bottom:0}
+    .law .law_box .cont ol>li+li{margin-top:0}
+    .law .law_box .cont ul{padding:7px 0 7px 10px}
+    .law .law_box .cont ul li+li{margin-top:3px}
+    .law .law_box+.law_box{margin-top:15px}
+}
