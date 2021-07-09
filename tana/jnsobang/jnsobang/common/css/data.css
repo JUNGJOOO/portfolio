@@ -1,0 +1,69 @@
+.data_promote2 .photogallery .data_promote_btnedit{float:right;position:relative;bottom:15px;right:0;padding:1px 5px;background-color:#ff6719;font-size:13px;color:#fff;cursor:pointer}
+.data_info>ul{display:block;width:100%;margin-top:25px;font-size:0}
+.data_info>ul li{position:relative;display:inline-block;border:1px solid #ccc;width:calc((100% - 20px)/ 3);margin-right:10px;margin-bottom:10px;padding:25px;-webkit-box-sizing:border-box;box-sizing:border-box;vertical-align:top}
+.data_info>ul li:after{content:'';position:absolute;right:25px;bottom:25px}
+.data_info>ul li:nth-of-type(1):after{width:73px;height:82px;background:url(../img/2020082713231537783.png) no-repeat}
+.data_info>ul li:nth-of-type(2):after{width:71px;height:76px;background:url(../img/202008271323560949.png) no-repeat}
+.data_info>ul li:nth-of-type(3):after{width:120px;height:65px;background:url(../img/2020082713241828030.png) no-repeat}
+.data_info>ul li:nth-of-type(4):after{width:73px;height:68px;background:url(../img/2020082713244184857.png) no-repeat}
+.data_info>ul li:nth-of-type(5):after{width:60px;height:80px;background:url(../img/건축민원아이콘.png) no-repeat}
+.data_info>ul li:nth-of-type(6):after{width:60px;height:80px;background:url(../img/2020082713245530557.png) no-repeat}
+.data_info>ul li:nth-child(3n){margin-right:0}
+.data_info>ul li .data_tit{font-size:25px;line-height:25px;font-weight:700;color:#555}
+.data_info>ul li .data_desc{margin:15px 0 80px;font-size:17px;line-height:17px;color:#555}
+.data_info>ul li a{position:relative;display:inherit;font-size:17px;line-height:16px;color:#999}
+.data_info>ul li a:after{content:'';position:absolute;right:-15px;top:50%;transform:translateY(-50%);width:8px;height:14px;background:url(../img/2020072310460024859.png) no-repeat;background-size:100% auto}
+
+@media screen and (min-width:801px) and (max-width:1280px){
+    .data_info{padding-bottom:100px}
+    .data_info>ul li{width:calc((100% - 20px)/ 2)}
+    .data_info>ul li:nth-child(2n){margin-right:0}
+    .data_info>ul li:nth-child(3n){margin-right:10px}
+}
+@media screen and (max-width:800px){
+    .data_info{padding-bottom:100px}
+    .data_info>ul li{width:100%;padding:20px}
+    .data_info>ul li a{font-size:15px;line-height:14px}
+    .data_info>ul li a:after{width:7px;height:12px}
+    .data_info>ul li .data_tit{font-size:18px}
+    .data_info>ul li .data_desc{font-size:14px;margin:13px 0 50px}
+    .data_info>ul li:after{right:0;bottom:0}
+    .data_info>ul li:nth-of-type(1):after{background:url(../img/2020090813172325549.png) no-repeat;background-size:80% auto}
+    .data_info>ul li:nth-of-type(2):after{background:url(../img/202009081317298883.png) no-repeat;background-size:80% auto}
+    .data_info>ul li:nth-of-type(3):after{background:url(../img/2020090813173600786.png) no-repeat;background-size:80% auto;right:-9px;bottom:4px}
+    .data_info>ul li:nth-of-type(4):after{background:url(../img/2020090813174223855.png) no-repeat;background-size:80% auto;bottom:8px}
+    .data_info>ul li:nth-of-type(5):after{background:url(../img/건축민원아이콘_모바일.png) no-repeat;background-size:100% auto;right:11px;bottom:8px}
+    .data_info>ul li:nth-of-type(6):after{background:url(../img/2020090813174888987.png) no-repeat;background-size:80% auto;right:4px;bottom:3px}
+}
+
+.data_act .data_act_tab li{display:inline-block;height:50px;font-size:15px}
+.data_act .data_act_wrap{padding-bottom:300px}
+.data_act .data_act_wrap ul{display:block;width:100%;font-size:0}
+.data_act .data_act_wrap ul li{position:relative;display:inline-block;width:calc((100% - 30px)/ 4);margin-right:10px;margin-bottom:10px;-webkit-box-sizing:border-box;box-sizing:border-box;vertical-align:top;cursor:pointer}
+.data_act .data_act_wrap ul li:nth-child(4n){margin-right:0}
+.data_act .data_act_wrap ul li:hover:after{display:block}
+.data_act .data_act_wrap ul li:hover a h4{color:#fd7116}
+.data_act .data_act_wrap ul li:hover a:after{background-position:-29px 0}
+.data_act .data_act_wrap ul li:after{content:'';position:absolute;top:0;right:0;bottom:0;left:0;border:2px solid #fd7116;display:none}
+.data_act .data_act_wrap ul li a{border:1px solid #ccc;display:block;padding:20px}
+.data_act .data_act_wrap ul li a h4{color:#555;font-weight:700;font-size:18px;line-height:18px}
+.data_act .data_act_wrap ul li a:after{content:'';position:absolute;right:20px;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);width:25px;height:22px;background:url(../img/2020082709065179343.png) no-repeat}
+.data_act .data_act_wrap ul li:hover a:after{background:url(../img/2020080417393831155.png) no-repeat}
+
+@media screen and (min-width:801px) and (max-width:1280px){
+    .data_act .data_act_wrap{margin-top:0}
+    .data_act .data_act_wrap ul li{width:calc((100% - 20px)/ 3)}
+    .data_act .data_act_wrap ul li:nth-child(3n){margin-right:0}
+    .data_act .data_act_wrap ul li:nth-of-type(4){margin-right:10px}
+    .data_act .data_act_wrap ul li:nth-of-type(8){margin-right:10px}
+    .data_act .data_act_wrap ul li:nth-of-type(12){margin-right:0}
+    .data_act .data_act_wrap ul li:nth-of-type(16){margin-right:10px}
+}
+@media screen and (max-width:800px){
+    .data_act .data_act_wrap{margin-top:0}
+    .data_act .data_act_wrap ul li{width:100%;margin-right:0}
+    .data_act .data_act_wrap ul li a{padding:15px}
+    .data_act .data_act_wrap ul li a h4{font-size:16px}
+    .data_act .data_act_wrap ul li a:after{background:url(../img/2020090717135663299.png) no-repeat;background-size:100% auto;width:20px;height:20px}
+    .data_act .data_act_wrap ul li:hover a:after{background:url(../img/202009071714097353.png) no-repeat;background-size:100% auto;width:20px;height:20px}
+}

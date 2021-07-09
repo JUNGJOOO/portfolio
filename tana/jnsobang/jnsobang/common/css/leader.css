@@ -1,0 +1,38 @@
+.leader{padding-bottom:200px}
+.leader li+li{margin-top:20px}
+.leader li:first-child .group_ledaer_tit{background-color:#555}
+.leader li:first-child .group_ledaer_tit a{color:#fff}
+.leader .group_ledaer_tit{display:inline-block;margin-top:20px;width:310px;border:1px solid #dcdcdc;vertical-align:top;-webkit-box-sizing:border-box;box-sizing:border-box}
+.leader .group_ledaer_tit a{display:block;padding-left:30px;font-size:2.6rem;line-height:66px;color:#555}
+.leader .group_ledaer_tit a span{font-weight:700}
+.leader .group_ledaer_content{display:inline-block;width:calc(100% - 312px)}
+.leader .group_ledaer_content .group_ledaer_img{overflow:hidden;position:relative;left:-35px;display:inline-block;width:103px;height:103px;vertical-align:top;border-radius:50px}
+.leader .group_ledaer_content .group_ledaer_img img{display:block;width:100%;height:100%}
+.leader .group_ledaer_content .group_leader_txt{display:inline-block;margin-top:20px}
+.leader .group_ledaer_content .group_leader_txt h3{font-size:2.6rem;color:#333}
+.leader .group_ledaer_content .group_leader_txt h3 span{font-weight:700}
+.group_ledaer_content .group_leader_txt div{display:inline-block;font-size:1.6rem;line-height:4rem;color:#333}
+.leader .group_ledaer_content .group_leader_txt div+div{margin-left:30px}
+.leader .group_ledaer_content .group_leader_txt div strong{font-weight:700;color:#333;margin-right:10px}
+
+@media screen and (min-width:801px) and (max-width:1280px){
+    .leader .group_ledaer_tit{width:215px}
+    .leader .group_ledaer_content{width:calc(100% - 215px)}
+    .leader .group_ledaer_tit a{padding-left:15px;font-size:20px}
+    .leader .group_ledaer_content .group_leader_txt{width:calc(100% - 107px)}
+    .leader .group_ledaer_content .group_ledaer_img{left:-25px}
+    .leader .group_ledaer_content .group_leader_txt div+div{margin-left:15px}
+}
+@media screen and (max-width:800px){
+    .leader{margin-top:45px}
+    .leader .group_ledaer_tit{display:block;width:100%}
+    .leader li+li{margin-top:35px}
+    .leader .group_ledaer_content{display:block;width:100%;margin-top:15px}
+    .leader .group_ledaer_tit a{padding-left:45px;font-size:17px;line-height:50px}
+    .leader .group_ledaer_content .group_leader_txt{width:calc(100% - 104px);margin-top:0;margin-left:18px}
+    .leader .group_ledaer_content .group_ledaer_img{top:-80px;left:0;width:80px;height:80px}
+    .leader .group_ledaer_content .group_leader_txt div{display:block;font-size:16px;line-height:30px}
+    .leader .group_ledaer_content .group_leader_txt div+div{margin-left:0}
+    .leader .group_ledaer_content .group_leader_txt h3{font-size:19px;margin-bottom:7px}
+    .leader .group_ledaer_tit{width:calc(100% - 55px);margin-left:55px}
+}
