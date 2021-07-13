@@ -1,0 +1,171 @@
+@charset "utf-8";
+
+
+/*
+        body에 mbin 클래스 추가
+*/
+
+
+
+
+*{margin: 0; padding: 0;}
+a{text-decoration: none;}
+input{border: none;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+blockquote,
+body,
+button,
+code,
+dd,
+div,
+section,
+dl,
+dt,
+fieldset,
+input,
+legend,
+li,
+ol,
+p,
+span,
+strong,
+pre,
+select,
+td,
+textarea,
+th,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'NotoSansKR' !important;
+}
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight:300;
+    src: url("../../common/fonts/NotoSansKR-Regular.woff") format('woff'),
+         url("../../common/fonts/NotoSansKR-Regular.otf") format('opentype');
+}
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../../common/fonts/NotoSansKR-Medium.woff") format('woff'),
+         url("../../common/fonts/NotoSansKR-Medium.otf") format('opentype');
+}
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: bold;
+    src: url("../../common/fonts/NotoSansKR-Bold.woff") format('woff'),
+         url("../../common/fonts/NotoSansKR-Bold.otf") format('opentype');
+}
+
+/* ============== 레이아웃 ============== */
+body.mbin{background-color: #f5f5f5;}
+.mbin .sw-expose-top{height: 70px; background-color: #fff;}
+.mbin .sw-expose-top .sw-logo{width: 190px; height: 36px; margin: 0 auto; padding: 15px 0 0 0;}
+.mbin .sw-expose-top .sw-logo a{display: block;}
+.mbin .sw-expose-bottom{background-color: #5c4d9a; }
+.mbin .sw-inner {padding: 0 20px;}
+
+
+/* ============== header menu 영역 mbinmenu ============== */
+.mbinmenu_toggle{position: absolute; top: 24px; left: 20px; width: 24px; height: 22px; cursor: pointer; background: none;}
+.mbinmenu_toggle:after{content: ''; display: block; clear: both; }
+.mbinmenu_toggle span{float: left; display: block; width: 24px; height: 4px; border-radius: 5px; background-color: #333;}
+.mbinmenu_toggle span:nth-of-type(2){width: 14px;}
+.mbinmenu_toggle span + span{margin-top: 5px;}
+.mbinmenu{ position: fixed; top: 0; left: 0; z-index: 1; display: none; width: 280px; height: 100vh; padding: 22px 20px 0 20px; background-color: #fff; box-shadow: 50px 0 65px rgba(0,0,0,0.15); -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.mbinmenu.is_open{display: block;}
+.mbinmenu .mbinmenu_logo a{display: block; width: 140px; height: 100%; margin-bottom: 30px;}
+.mbinmenu .mbinmenu_nav li{margin-bottom: 20px;}
+.mbinmenu .mbinmenu_nav li a{display: block; font-size: 18px; line-height: 1; color: #4f4f4f; }
+.mbinmenu .mbinmenu_util{position: absolute; left: 0; bottom: 25px; width: 100%; padding: 0 20px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.mbinmenu .mbinmenu_util li{width: 100%; border: 1px solid #5c4d9a; border-radius: 15px; text-align: center;}
+.mbinmenu .mbinmenu_util li+li{margin-top: 5px;}
+.mbinmenu .mbinmenu_util li a{display: block; width: 100%; font-size: 16px; line-height: 40px; color: #5c4d9a;}
+.mbinmenu .mbinmenu_close{position: absolute; top: 20px; right: 6%; width: 28px; height: 28px; cursor: pointer; background: none; border: none;}
+.mbinmenu .mbinmenu_close span{ display: block; width: 28px; height: 2px; margin-top: -2px; background-color: #777;}
+.mbinmenu .mbinmenu_close span:nth-of-type(1){ position: absolute; top: 50%; -webkit-transform: translateY(50%) rotate(45deg); transform: translateY(50%) rotate(45deg);}
+.mbinmenu .mbinmenu_close span:nth-of-type(2){ position: absolute; top: 50%; -webkit-transform: translateY(50%) rotate(135deg); transform: translateY(50%) rotate(135deg);}
+
+
+/* ============== 상단 검색 ============== */
+.mbin .mbin_topMenuArea{ padding: 25px 0; font-size: 0;}
+.mbin .mbin_topMenuArea li{ overflow: hidden; position: relative; display: inline-block; font-size: 17px; color: #5c4d9a; box-shadow: 0 0 5px rgba(0,0,0,0.3); border-radius: 20px; vertical-align: top;}
+.mbin .mbin_topMenuArea li+li{margin-left: 10px;}
+.mbin .mbin_topMenuArea .menu-s{width: calc(50% - 20px)}
+.mbin .mbin_topMenuArea .menu-d{width: 25%;}
+.mbin .mbin_topMenuArea .menu-r{width: 25%;}
+.mbin .mbin_topMenuArea a{
+    display: block; width: 100%; height: 40px; padding: 0 20px;
+    font-size: 17px; line-height: 40px; font-weight: 500; color: #5c4d9a; background-color: #fff;
+}
+.mbin .mbin_topMenuArea input{
+    display: block; width: 100%; height: 40px; padding: 0 65px 0 20px; font-family: 'NotoSansKR' !important; font-size: 17px; line-height: 40px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
+.mbin .mbin_topMenuArea input::placeholder{color: #5c4d9a;}
+.mbin .mbin_topMenuArea .ico-right{
+    position: absolute; top: 50%; right: 15px;
+    -webkit-transform: translateY(-50%); transform: translateY(-50%);
+    width: 28px; height: 30px; cursor: pointer;
+}
+.mbin .mbin_topMenuArea .ico-right .mbin_btn1{ display: block; width: 100%; height: 100%; background: url(../images/ico_btn1.png) no-repeat;}
+.mbin .mbin_topMenuArea .mbin_btn2{
+    position: absolute; top: 50%; right: 15px;
+    -webkit-transform: translateY(-50%); transform: translateY(-50%);
+    width: 15px; height: 15px;
+    background: url(../images/ico_btn2.png) no-repeat;
+}
+
+
+/* ============== 컨텐츠 시작 ============== */
+.mbin .sw-portlet-layout{margin-top: 20px;}
+
+/* ============== 컨텐츠1 ============== */
+.mbin_sec1_box{font-size: 0;}
+.mbin_sec1_box li{display: inline-block; width: calc((100% - 47px) / 4); height: 110px; background-color: #fff; border: 1px solid #5c4d9a; border-radius: 15px; text-align: center; vertical-align: top;}
+.mbin_sec1_box li+li{margin-left: 13px;}
+.mbin_sec1_box li a{display: block; width: 100%; height: 100%; padding-top: 8px; font-size: 14px; color: #666; vertical-align: top; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.mbin_sec1_box li i{display: block; width: 64px; height: 64px; margin: 0 auto 8px; background: url(../images/ico_sec1.png) no-repeat;}
+.mbin_sec1_box li .i1{background-position: 0 0;}
+.mbin_sec1_box li .i2{background-position: -83px 0;}
+.mbin_sec1_box li .i3{background-position: -166px 0;}
+.mbin_sec1_box li .i4{background-position: -249px 0;}
+
+/* ============== 컨텐츠2 ============== */
+.mbin_sec2 .box-tit{position: relative; padding: 0 15px; background-color: #5c4d9a; color: #fff; font-size: 18px; line-height: 30px; border-radius: 15px;}
+.mbin_sec2 .box-top-btn{ position: absolute; top: 0; right: 10px; height: 100%;}
+.mbin_sec2 .box-top-btn li{display: inline-block; width: 21px; height: 100%;}
+.mbin_sec2 .box-top-btn a{display: block; width: 100%; height: 100%;}
+.mbin_sec2 .box-top-btn a i{ display: block; width: 100%; height: 100%;}
+.mbin_sec2 .box-top-btn .mbin_btn3{background: url(../images/ico_btn3.png) no-repeat; background-position: center center;}
+.mbin_sec2 .box-top-btn .mbin_btn4{background: url(../images/ico_btn4.png) no-repeat; background-position: center center;}
+.mbin_table{font-size: 0;}
+.mbin_table li{margin-top: 5px;}
+.mbin_table a{display: block; width: 100%; padding: 10px 15px; color: #333; border-radius: 15px; border: 1px solid #fff; background-color: #fff; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.mbin_table a:hover{border: 1px solid #5c4d9a;}
+.mbin_table a div{font-size: 14px;}
+.mbin_table .text-n{display: inline-block; width: 50%;}
+.mbin_table .text-d{display: inline-block; width: 50%; font-weight: 300; color: #777; text-align: right;}
+.mbin_table .text-t{display: block; width: 100%; word-wrap: normal; word-break: break-all; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; margin-top: 5px; font-size: 16px;}
+
+/* ============== 컨텐츠3 ============== */
+.mbin_sec3{margin-bottom: 30px;}
+.mbin_sec3_box{font-size: 0;}
+.mbin_sec3_box li{display: inline-block; width: calc((100% - 45px) / 3); height: 90px; background-color: #5c4d9a; border-radius: 15px; text-align: center; vertical-align: top;}
+.mbin_sec3_box li+li{margin-left: 22px;}
+.mbin_sec3_box li a{display: block; width: 100%; height: 100%; padding-top: 8px; font-size: 16px; color: #fff; vertical-align: top; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.mbin_sec3_box li i{display: block; width: 54px; height: 42px; margin: 0 auto 7px; background: url(../images/ico_sec3.png) no-repeat;}
+.mbin_sec3_box li .i1{background-position: 0 0;}
+.mbin_sec3_box li .i2{background-position: -64px 0;}
+.mbin_sec3_box li .i3{background-position: -127px 0;}
+
+
+@media screen and (max-width: 991px) { 
+}

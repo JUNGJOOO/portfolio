@@ -1,0 +1,152 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'NanumGothic';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../../../common/fonts/NanumGothic-Regular.woff") format('woff'),
+         url("../../../common/fonts/NanumGothic-Regular.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'NanumGothic';
+    font-style: normal;
+    font-weight: bold;
+    src: url("../../../common/fonts/NanumGothic-Bold.woff") format('woff'),
+         url("../../../common/fonts/NanumGothic-Bold.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'NanumGothic-eb';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../../../common/fonts/NanumGothic-EB.woff") format('woff'),
+         url("../../../common/fonts/NanumGothic-EB.ttf") format('truetype'),
+         url("../../../common/fonts/NanumGothic-EB.eot") format("eot");
+}
+
+blockquote,
+body,
+button,
+code,
+dd,
+div,
+section,
+dl,
+dt,
+fieldset,
+input,
+legend,
+li,
+ol,
+p,
+pre,
+select,
+td,
+textarea,
+th,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'NanumGothic' !important;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+html {
+    overflow-x: auto;
+  }
+  body {
+    word-wrap: break-word;
+  }
+  li,
+  p,
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    list-style-type: none;
+  }
+  a:active,
+  a:hover,
+  a:link,
+  a:visited {
+    text-decoration: none;
+    outline: none;
+  }
+.login {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: #e4e4e4;
+  overflow: hidden;
+}
+.login > .row,
+.login > .row > .col-md-12 {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: fixed !important;
+}
+body:before {background-color: #e4e4e4;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px ) {
+	
+}
+
+
+/* ========================== new-login ========================== */
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: normal;
+    src: url("/common/fonts/NotoSansKR-Regular.woff") format('woff'),
+         url("/common/fonts/NotoSansKR-Regular.otf") format('opentype');
+}
+@font-face {
+    font-family: 'NotoSansKR';
+    font-style: normal;
+    font-weight: bold;
+    src: url("/common/fonts/NotoSansKR-Bold.woff") format('woff'),
+         url("/common/fonts/NotoSansKR-Bold.otf") format('opentype');
+}
+.new-login .login-simple {background-color: #fff;}
+.new-login .login-logo{position: absolute; top: -60px; left: 0; width: 98px; height: 32px; margin: 0;}
+.new-login .login-simple .login-inner {
+    overflow: visible; position: absolute; top: 50%; left: 50%;
+    -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);
+    width: 1200px; height: 600px; margin: 0; padding: 320px 0 0 50px;
+    background: url(../images/nl_background.jpg) no-repeat center;
+    -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+.new-login .login-link{width: 230px;}
+.new-login .login-link li{width:100%; height: 45px; border-radius: 25px; background-image: linear-gradient(to right, #554ab3 19%, #126fb5 90%);}
+.new-login .login-link li+li{margin-top: 5px;}
+.new-login .login-link li button{position: relative; display: block; width: 100%; height: 100%; padding-left: 25px; font-family:'NotoSansKR' !important; font-size: 15px; line-height: 45px; font-weight: bold; color: #fff; text-align: left; cursor: pointer; border-radius: 25px; border-style: none; background: url(../images/nl_btn_arrow.png) no-repeat 91% center;}
+.new-login .login-link button em{font-weight: normal;  font-style: inherit;}
+.new-login .login_address{display: block; margin-top: 20px; font-family:'NotoSansKR' !important; font-size: 14px; line-height: 1.7; font-weight: bold; color: #fff;}
