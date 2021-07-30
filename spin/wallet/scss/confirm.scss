@@ -1,0 +1,48 @@
+@import "mixin";
+ul {
+  position: absolute;
+  top: 125px;
+  z-index: 100;
+  width: 320px;
+  li {
+    padding-bottom: 10px;
+  }
+}
+.container > ul li + li {
+  margin-top: 45px;
+}
+.clip-wrap {
+  display: inline-block;
+  cursor: pointer;
+  & > img {
+    height: 8px;
+  }
+  &:hover > div {
+    display: block;
+  }
+  & > div {
+    top: 27px;
+    left: 2px;
+  }
+}
+.notice-wrap {
+  & > * {
+    color: #fff;
+  }
+  span {
+    font-weight: 700;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+p {
+  @include pStyle(block, 8px, break-all, 0.9rem, 20px, 100);
+}
+.bg-black {
+  @include bg-black(absolute, 0, 0, 0, block, 100%, 385px, #000);
+}
+.btn-fix {
+  @include btn-fix(absolute, 80px, 0, 0, 320px);
+}

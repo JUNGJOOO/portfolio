@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Wallet history</title>
+	<link rel="stylesheet" href="css/common.css"> 
+	<link rel="stylesheet" href="css/history.css"> 
+    <script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+<div class="wallet-pop-wrap">
+   <div class="wallet-header">
+      <div class="header-img">
+<!--          <img src="https://s3.ap-northeast-2.amazonaws.com/spin-protocol-resource/resources/images/wallet/wallet_logo_spin.png" alt="spin logo">-->
+          <img src="img/spin_logo.png" alt="klay logo">
+      </div>
+      <div class="header-txt">
+           <h1>19.1194 <span>SPIN</span></h1>
+           <p>$ 0.00 USD</p>
+       </div>  
+       <div class="btn-cancle">
+           <button type="button" onclick="location.href='main.html'"></button>
+       </div> 
+   </div>
+    <div class="container hmain"> 
+        <div class="wallet-view">
+            <ol>
+                <li class="send">
+                   <div class="history-conts">
+                        <div class="history-left">
+                            <strong>SEND</strong>
+                            <p>100 SPIN</p>
+                        </div>
+                        <div class="history-right">
+                            <button type="button"></button>
+                        </div>
+                    </div>
+                    <div class="history-detail">
+                       <div>
+                           <strong>To</strong>
+                           <p>0x3c50551e1FC6ddacFA17B2263714ea5C1A229F02</p>
+                            <div class="clip-wrap">
+                                <img src="img/copy.png" alt="clip copy">
+                                <div>클립보드로 복사</div>
+                            </div>
+                       </div>
+                       <div>
+                           <strong>From</strong>
+                           <p>0x3c50551e1FC6ddacFA17B2263714ea5C1A229F02</p>
+                           <div class="clip-wrap">
+                                <img src="img/copy.png" alt="clip copy">
+                                <div>클립보드로 복사</div>
+                            </div>
+                       </div>
+                       <div>
+                           <strong>TX Hash</strong><p>0x3c50551e1FC6ddacFA17B2263714ea5C1A229F02</p>
+                           <div class="clip-wrap">
+                                <img src="img/copy.png">
+                                <div>TX 바로가기</div>
+                            </div>
+                       </div>
+                       <div>
+                           <strong>TX Fee</strong>
+                           <p>10<em>KLAY</em></p>
+                       </div>
+                    </div>
+                </li>    
+                <li class="receive">
+                    <div class="history-conts">
+                        <div class="history-left">
+                            <strong>RECEIVE</strong>
+                            <p>100 SPIN</p>
+                        </div>
+                        <div class="history-right">
+                            <button type="button"></button>
+                        </div>
+                    </div>
+                    <div class="history-detail">
+                       <div>
+                           <strong>To</strong>
+                           <p>0x3c50551e1FC6ddacFA17B2263714ea5C1A229F02</p>
+                            <div class="clip-wrap">
+                                <img src="img/copy.png" alt="clip copy">
+                                <div>클립보드로 복사</div>
+                            </div>
+                       </div>
+                       <div>
+                           <strong>From</strong>
+                           <p>0x3c50551e1FC6ddacFA17B2263714ea5C1A229F02</p>
+                           <div class="clip-wrap">
+                                <img src="img/copy.png" alt="clip copy">
+                                <div>클립보드로 복사</div>
+                            </div>
+                       </div>
+                       <div>
+                           <strong>TX Hash</strong><p>0x3c50551e1FC6ddacFA17B2263714ea5C1A229F02</p>
+                           <div class="clip-wrap">
+                                <img src="img/copy.png">
+                                <div>TX 바로가기</div>
+                            </div>
+                       </div>
+                       <div>
+                           <strong>TX Fee</strong>
+                           <p>10</p>
+                       </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="wallet-list">
+            <ul>
+                <li>
+                    <a href="send.html">Send</a>
+                </li>
+                <li>
+                    <a href="history.html">History</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.history-detail').hide();
+    $(".history-right > button").on('click', function(e){
+        $(this).parent().parent().parent().toggleClass("open");
+        $(this).parent().parent().parent().find(".history-detail").slideToggle();
+        e.stopPropagation()
+    });
+});
+</script>
+
+</body>
+</html>

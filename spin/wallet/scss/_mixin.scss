@@ -1,0 +1,77 @@
+$backgroun-color: #f1f3f5;
+$point-color: #00aa87;
+
+@mixin pStyle($d, $mt, $wb, $fs, $lh, $fw) {
+  display: $d;
+  margin-top: $mt;
+  word-break: $wb;
+  font-size: $fs;
+  line-height: $lh;
+  font-weight: $fw;
+}
+
+@mixin btn-fix($p, $pb, $pl, $pr, $w) {
+  position: $p;
+  bottom: $pb;
+  left: $pl;
+  right: $pr;
+  width: $w;
+  // 수정3 : 추가
+  height: 52px;
+  // 
+  z-index: 10;
+  margin-top: 30px;
+  line-height: 50px;
+  background-color: #fff;
+  font-weight: 700;
+  color: #000;
+  border: 1px solid rgba(208, 208, 208, 0.42);
+  border-radius: 30px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  letter-spacing: 0.5px;
+}
+
+@mixin bg-black($ps, $pl, $pb, $pz, $d, $w, $h, $bc) {
+  position: $ps;
+  left: $pl;
+  bottom: $pb;
+  z-index: $pz;
+  display: $d;
+  width: $w;
+  height: $h;
+  background-color: $bc;
+}
+
+@mixin reset-wrap($p, $pl, $pb, $ptf, $w, $lh, $ta, $fw, $bc, $bs) {
+  position: $p;
+  left: $pl;
+  bottom: $pb;
+  transform: $ptf;
+  width: $w;
+  line-height: $lh;
+  text-align: $ta;
+  font-weight: $fw;
+  background-color: $bc;
+  box-shadow: $bs;
+}
+
+@mixin clip-wrap-div($pt, $pr) {
+  top: $pt;
+  right: $pr;
+
+  display: none;
+  position: absolute;
+  z-index: 10;
+  width: 100px;
+  padding: 3px 10px;
+  background-color: #969696;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 19px;
+//   letter-spacing: -0.2px;
+  color: #fff;
+  text-align: center;
+}
