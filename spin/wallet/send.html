@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Wallet send</title>
+	<link rel="stylesheet" href="css/common.css"> 
+	<link rel="stylesheet" href="css/send.css"> 
+    
+</head>
+<body>
+<div class="wallet-pop-wrap">
+   <div class="wallet-header">
+      <div class="header-img">
+        <img src="img/spin_logo.png" alt="klay logo">
+        <!-- <img src="https://s3.ap-northeast-2.amazonaws.com/spin-protocol-resource/resources/images/wallet/wallet_logo_spin.png" alt="spin logo"> -->
+        <!--<img src="https://s3.ap-northeast-2.amazonaws.com/spin-protocol-resource/resources/images/wallet/wallet_logo_klay.png" alt="klay logo">-->
+      </div>
+      <div class="header-txt">
+           <h1>19.1194 <span>SPIN</span></h1>
+           <p>$ 0.00 USD</p>
+       </div>
+       <div class="btn-cancle">
+           <button type="button" onclick="location.href='main.html'"></button>
+       </div> 
+   </div>
+    <div class="container hmain"> 
+        <div class="wallet-view">
+            <ul>
+                <li class="send-coin">
+                    <label>Coin</label>
+                    <p>SPIN</p>
+                </li>
+                <li class="send-to">
+                    <label>To</label>
+                    <input type="text" placeholder="Wallet Address">
+                </li>
+                <li class="send-amount">
+                    <label>Amount To Send</label>
+                    <div class="amount">
+                        <div>
+                            <input type="text" class="amount-box">
+                            <span>SPIN</span>
+                        </div>
+                        <!-- <em>=</em>
+                        <div>
+                            <strong class="amount-box">액수</strong>
+                            <span>KRW</span>
+                        </div> -->
+                    </div> 
+                </li>
+                <li class="send-txfee">
+                    <label>TX Fee</label>
+                    <p>20 KLAY (10 Gpeb)</p>
+                </li>
+            </ul> 
+            <div class="total">
+                <span>Total</span>
+                <div>
+                    <p>20000</p>
+                    <em>SPIN</em>
+                    <span>+ 20</span>
+                    <em>KLAY</em>
+                </div>
+            </div>
+            <button type="button" class="btn-fix">
+                Send
+                <!-- 수정3 : 추가 -->
+                <div class="lds-spinner" style="display: none;">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <!---->
+            </button>
+        </div>
+        <div class="wallet-list">
+            <ul>
+                <li>
+                    <a href="send.html">Send</a>
+                </li>
+                <li>
+                    <a href="history.html">History</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
