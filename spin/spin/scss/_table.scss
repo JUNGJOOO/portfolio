@@ -1,0 +1,219 @@
+@import '_mixin';
+
+.table {
+    margin-top: 20px;
+    .table__wrap {
+        overflow: hidden;
+        position: relative;
+        font-size: 0;
+        .table__scroll {
+            @include box($bg: #fff, $border: 1px solid #ddd, $radius: 5px);
+            overflow-x: auto;
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                text-align: center;
+                tr {
+                    border-bottom: 1px solid rgba(60, 60, 60, 0.1);
+                    th {
+                        @include font($weight: 500, $size: 1rem, $color: #6a6a6c, $space: nowrap);
+                        padding: 10px 20px;
+                        height: 4.3rem;
+                    }
+                    td {
+                        @include font($weight: 400, $color: #222, $space: nowrap);
+                        padding: 5px 10px;
+                        button {
+                            padding: 0 10px;
+                            line-height: 25px;
+                            border: 1px solid #ddd;
+                            border-radius: 5px;
+                            background-color: #fff;
+                            font-size: 0.85rem;
+                            cursor: pointer;
+                            -webkit-transition: 0.2s;
+                            transition: 0.2s;
+                            margin: 0 3px;
+                        }
+                        button:hover {
+                            color: #fff;
+                            border: 1px solid #5e9b7c;
+                            border-radius: 5px;
+                            background-color: #5e9b7c;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                thead{
+                    .help-mark {
+                        position: relative;
+                        color: #666;
+                        padding-left: 2px;
+                        cursor: pointer;
+                        transition: 0.2s;
+                        -webkit-transition: 0.2s;
+                        &:hover > .question-box {
+                            display: block;
+                        }
+                        .question-box {
+                            @include position($t: 25px, $r: 0);
+                            @include font($size: 0.9rem, $color: #fff, $align: left, $space:normal);
+                            @include box($padding: 10px, $w: 200px, $bg: #5e9b7c, $radius: 5px, $shadow: 0 0 4px #aaa);
+                            display: none;
+                            -webkit-box-shadow: 0 0 4px #aaa;
+                        }
+                    }
+                }
+                tbody > tr {
+                    height: 5rem;
+                    &:hover {
+                        background-color: #f6fcfb;
+                        -webkit-transition: 0.1s;
+                        transition: 0.1s;
+                        cursor: pointer;
+                    }
+                    &:last-child{border-bottom: none}
+                    .dashboard-pd-name{
+                        overflow: hidden;
+                        margin: 0 auto;
+                        max-width: 500px;
+                        text-overflow: ellipsis;
+                    }
+                    .product-link {
+                        color: #5e9b7c;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    .campaign-name{
+                        margin: 0 auto;
+                        max-width: 500px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    .account-detail a {
+                        display: inline-block;
+                        padding: 0 10px;
+                        line-height: 25px;
+                        border: 1px solid #ddd;
+                        border-radius: 5px;
+                        background-color: #fff;
+                        font-size: 0.85rem;
+                        cursor: pointer;
+                        -webkit-transition: 0.2s;
+                        transition: 0.2s;
+                        margin: 0 3px;
+                        &:hover {
+                            color: #fff;
+                            border: 1px solid #5e9b7c;
+                            border-radius: 5px;
+                            background-color: #5e9b7c;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 13px;
+    z-index: 5;
+    vertical-align: middle;
+    input, select{
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    input:checked + .slider,
+    select:checked + .slider {
+      background-color: #5e9b7c;
+    }
+    input:focus + .slider,
+    select:focus + .slider {
+      box-shadow: 0 0 1px #5e9b7c;
+    }
+    input:checked + .slider:before,
+    select:checked + .slider:before {
+      -webkit-transform: translateX(30px);
+      transform: translateX(25px);
+    }
+    .slider {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        cursor: pointer;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: -5px;
+            width: 18px;
+            height: 18px;
+            background-color: #fff;
+            -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+        }
+        &.round {
+            border-radius: 34px;
+            &:before{border-radius: 50%;}
+        }
+    }
+
+}
+
+.table > .notice {
+    margin: 0 0 10px 0;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    .notice__title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: #222;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+    .notice__text {
+        padding-top: 15px;
+        font-size: 0;
+        ul {
+            font-size: 0;
+            li {
+                position: relative;
+                padding-left: 15px;
+                &:before{
+                    content: "-";
+                    position: absolute;
+                    left: 0;
+                }
+                p{
+                    display: block;
+                    font-size: 1rem;
+                }
+                div {
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 0.9rem;
+                    line-height: 1.4rem;
+                    color: #777;
+                    white-space: pre-line;
+                }
+            }
+            li+li{margin-top: 10px;}
+        }
+    }
+}

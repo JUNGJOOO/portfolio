@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/element.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="css/notice_board.css">
+    <title>Spin Protocol</title>
+</head>
+<body>
+    <header>
+        <ul class="header-util">
+            <li class="header-util__profile">
+                <button class="header-util-profile-img" onClick="location.href='http://womanstalk.co.kr/celeb/shop?id=491'">
+                    <img src="../images/shop-icon-white.svg" alt="shop">
+                </button>
+            </li>
+            <li class="header-util__wallet" onclick="myFunction()">
+                <button class="header__wrap-wallet-btn">
+                    <img src="../images/wallet-icon.svg" alt="wallet" class="header-util__wallet--black" data-char="wallet">
+                    <img src="../images/wallet_white.svg" alt="wallet" class="header-util__wallet--white">
+                </button>
+                <div class="header-util__lyr" id="myPopup">
+                    <div class="header-util__tit">
+                        <img src="../images/spin_img.png" alt="스핀캐릭터">
+                        <p>SPIN은 다양한 활동을 통해 제공하는</p>
+                        <p>보상 형태의 포인트입니다.</p>
+                    </div>
+                    <div class="header-util__container">
+                        <p>지갑을 통해 SPIN을 보관하고 전송하세요 :)</p>
+                        <button type="button">새로 만들기</button>
+                        <button type="button">로그인</button>
+                    </div>
+                </div>
+            </li>
+            <li class="header-util__notice" onclick="myFunction2()">
+                <button type="button" class="header__wrap-notice-btn">
+                    <span class="notice-count">2</span>
+                    <img src="../images/icon_alarm_new.svg" alt="notice" class="header__notice-icon-black">
+                    <img src="../images/icon_alarm_new_white.svg" alt="notice" class="header__notice-icon_white">
+                </button>
+                <div class="header-util__lyr" id="myPopup2">
+                    <strong>전체 알림</strong>
+                    <ul class="header-util__items">
+                        <li class="">
+                            <a href="dash_board.html">
+                                <div class="header-util__icon">
+                                    <img src="https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/spin-logo/spin-logo.svg" alt="공지 아이콘">
+                                </div> 
+                                <div class="header-util__subject">
+                                    <p class="header-util__content">새로운 공지가 등록되었습니다.</p>
+                                    <p class="header-util__date">10월 28일</p>
+                                </div>
+                                <div class="header-util__remove">
+                                    <img src="https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/icon/pop-delete-icon.svg" alt="취소">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="header-util__items--click">
+                            <a href="dash_board.html">
+                                <div class="header-util__icon">
+                                    <img src="https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/spin-logo/spin-logo.svg" alt="공지 아이콘">
+                                </div> 
+                                <div class="header-util__subject">
+                                    <p class="header-util__content">새로운 공지가 등록되었습니다.</p>
+                                    <p class="header-util__date">10월 28일</p>
+                                </div>
+                                <div class="header-util__remove">
+                                    <img src="https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/icon/pop-delete-icon.svg" alt="취소">
+                                </div>
+                            </a>
+                        </li>
+                   </ul>
+                </div>
+            </li>
+        </ul>
+        <div class="nav-wrap__mobile">
+            <a class="" onclick="myFunction3(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </a>
+            <nav id="gnbMobile" class="gnb__mobile">
+                <ul>
+                    <li>
+                        <a href="dash_board.html" class="">대시보드</a>
+                        <ul class="gnb__sub">
+                            <li>
+                                <a href="dash_board.html" class="">판매 현황</a>
+                            </li>
+                            <li>
+                                <a href="account.html" class="">정산 내역</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="campaign_management.html" class="">캠페인</a>
+                        <ul class="gnb__sub">
+                            <li>
+                                <a href="campaign_management.html" class="">내 캠페인 관리</a>
+                            </li>
+                            <li>
+                                <a href="campaign_list.html" class="">캠페인 리스트</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="account_setting.html" class="">마이페이지</a>
+                        <ul class="gnb__sub">
+                            <li>
+                                <a href="account_setting.html" class="">계정 관리</a>
+                            </li>
+                            <li>
+                                <a href="shop_setting.html" class="gnb__li--active">샵 관리</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="notice gnb__li">
+                        <a href="notice_board.html" class="">공지</a>
+                    </li>
+                </ul>
+                <button type="button" onclick="location.href='../login.html'">로그아웃</button>
+            </nav>
+        </div>
+    </header>
+    <div class="nav-wrap">
+        <h1>
+            <a href="dash_board.html" class="h1__wide">
+                <img src="../images/spin-logo/text-logo.svg" alt="spinprotocol">
+            </a>
+            <a href="dash_board.html" class="h1__tablet">
+                <img src="../images/spin-logo/medium-logo.png" alt="spinprotocol">
+            </a>
+        </h1>
+        <div class="nav__profile">
+            <div class="nav__profile-image">
+                <img src="../images/profile.png" alt="프로필 이미지" class="">
+            </div>
+            <!-- <p class="nav_shop">
+                <a href="http://womanstalk.co.kr/celeb/shop?id=491">
+                    <img src="https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/icon/shop-icon-white.svg" alt="celeb shop" class="nav_shop-image">
+                </a>
+            </p> -->
+            <p class="nav__profile-name">Amber</p>
+        </div>
+        <nav class="gnb">
+            <ul>
+                <li>
+                    <a href="dash_board.html" class="">대시보드</a>
+                    <ul class="gnb__sub">
+                        <li>
+                            <a href="dash_board.html" class="">판매 현황</a>
+                        </li>
+                        <li>
+                            <a href="account.html" class="">정산 내역</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="campaign_management.html" class="">캠페인</a>
+                    <ul class="gnb__sub">
+                        <li>
+                            <a href="campaign_management.html" class="">내 캠페인 관리</a>
+                        </li>
+                        <li>
+                            <a href="campaign_list.html" class="">캠페인 리스트</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="account_setting.html" class="">마이페이지</a>
+                    <ul class="gnb__sub">
+                        <li>
+                            <a href="account_setting.html" class="">계정 관리</a>
+                        </li>
+                        <li>
+                            <a href="shop_setting.html" class="">샵 관리</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="notice gnb__li">
+                    <a href="notice_board.html" class="">공지</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="nav__logout">
+            <button class="nav__btn" onclick="location.href='../login.html'">로그아웃</button>
+        </div>
+    </div>
+    <div id="main">
+        <div class="container">
+            <h2 class="section__title hidden">공지</h2>
+            <div class="notice__wrap">
+                <div class="title">
+                    <h3>공지(3)</h3>
+                </div>
+                <ul class="notice__list">
+                    <li class="notice">
+                        <div class="notice__title">
+                            <p class="notice__header">3. 스핀 지갑 '전송’ 기능 추가</p>
+                            <span class="notice__writer">관리자</span>
+                            <span class="notice__date">19.12.16</span>
+                        </div>
+                        <div class="notice__content">
+                            안녕하세요. 스핀 프로토콜입니다.
+                            드디어 지갑의 '전송' 기능이 추가되었습니다 :)
+                            
+                            전송 기능이란 ?  현재 가지고 있는 SPIN을 다양한 지갑으로 전송할 수 있는 기능입니다.
+                            SPIN을 타 지갑에 전송하고 더욱 더 안전하게 보관하세요! 
+                            
+                            ※전송 기능 이용방법 :
+                            지갑 &gt; 전송 버튼 클릭
+                            보내고 싶은 지갑 주소와 / 보내고 싶은 수량을 입력한 뒤 전송
+                            
+                            - 전송 가능한 지갑 및 거래소
+                            코인원 거래소 (https://coinone.co.kr/)
+                            Nova 지갑 (https://www.eosnova.io/) 
+                            비트베리 지갑 (https://bitberry.app)
+                            클레이튼 지갑 (https://wallet.klaytn.com)
+                            
+                            저희 SPIN 지갑뿐만 아니라, 
+                            다양한 지갑/거래소를 통해 보관이 가능합니다.
+                            *위의 지갑 외 다른 지갑으로 전송 시 복구가 불가합니다.
+                            
+                            또한 SPIN 현금화에 대해서도 많은 문의를 주셨었는데요.
+                            현재 ‘코인원’ 거래소를 통해 현금화가 가능합니다. (https://coinone.co.kr)
+                            현금화를 하기 위해서 코인원 회원가입 과 계좌 등록 절차를 완료해주셔야 합니다.
+                            
+                            ※현금화 방법은 관리자에게 1:1 문의해주세요! 
+                            
+                            앞으로 SPIN을 다양한 이벤트, 수익을 통해 얻고 사용할 수 있도록 준비중이니 많은 기대 부탁드립니다 :)
+                            
+                            감사합니다.
+                        </div>
+                    </li>
+                    <li class="notice">
+                        <div class="notice__title">
+                            <p class="notice__header">2. 친구 추천 이벤트 (종료)</p>
+                            <span class="notice__writer">관리자</span>
+                            <span class="notice__date">19.12.16</span>
+                        </div>
+                        <div class="notice__content">
+                            안녕하세요. SPIN Protocol입니다. 
+                            항상 셀럽공구 서비스를 아껴주시고 사랑해주신 회원 여러분께 진심으로 감사드립니다.
+                            함께 할 수 있는 셀럽공구를 만들어 나가고자 이벤트를 준비하였습니다. 
+                            
+                            ✓ 이벤트 기간
+                            2019년 10월 8일(화) 부터 11월 8일(금)까지 (한달간)
+                            
+                            ✓ 참여방법
+                            Step1 스핀 홈페이지 주소(spinprotocol.com)를 초대할 친구에게 전달합니다.
+                            Step2 초대한 친구는 가입하여, 상세 정보(계정 관리,샵 관리)를 등록합니다.
+                            Step3 추천자는 해당 설문지를 작성하시면 완료!!  
+                            
+                            
+                            ✓ 해당설문지링크 
+                            https://forms.gle/i7BifSqzitZepuJ26
+                            
+                            ✓ 모집기준
+                            팔로워: 1천명이상 (또한 현재 활동하고 있는 인플루언서)
+                            
+                            ✓ 추천에 대한 보상 
+                            1회 추천당 2,500원 상당의 SPIN코인 제공  
+                            
+                            ✓ 보상지급일
+                            2019년 11월 11일 월요일 (예정)
+                            (보상은 관리자의 확인후 진행됩니다.)
+                            
+                            ✓ 이벤트정책
+                            1. 가입이 확인되지 않거나, 추천모집기준에 부합하지 않은 경우 지급 불가합니다.
+                            2. 추천보상대상자의 지갑이 없는 경우 이벤트 참여 불가합니다.
+                            3. 설문지 내용 오/미기재시 지급받지 못할 수 있습니다.
+                            4. 중복 회원이 있는 경우 먼저 추천한 셀럽에게 보상이 지급됩니다.
+                            5. 허위계정 추천시 이벤트보상을 받을 수 없습니다.
+                            6. 위 내용은 상황에 따라 수정및 취소 될 수 있습니다.
+                            * 개인키는 분실시 복구가 불가하며, 스핀에서는 책임지지 않습니다.
+                            
+                            
+                            언제나 회원님의 소중한 개인정보를 안전하게 보호하고, 
+                            더 좋은 서비스를 제공해 드리기 위해 최선을 다하겠습니다.
+                            감사합니다.
+                        </div>
+                    </li>
+                    <li class="notice">
+                        <div class="notice__title">
+                            <p class="notice__header">1. 셀럽공구 서비스 이관 및 개인정보 이관 완료 안내</p>
+                            <span class="notice__writer">관리자</span>
+                            <span class="notice__date">19.12.16</span>
+                        </div>
+                        <div class="notice__content">
+                            안녕하세요. SPIN Protocol입니다. 항상 셀럽공구 서비스를 아껴주시고 사랑해주신 회원 여러분께 진심으로 감사드립니다. 
+                    
+                            SPIN Protocol은 2019년 5월 10일 자로 (주)크라클팩토리로부터 개인정보 및 서비스 이용과 관련한 제반 권리·의무를 안전하게 이관 및 승계 받았습니다. 
+                            
+                            상기 서비스 이관과 관련된 회사의 세부사항은 다음과 같습니다.
+                            
+                            개인정보를 제공받는 자:
+                            법인명: SPIN Protocol
+                            전화번호: 070-4906-5035
+                            이메일: biz@spinprotocol.io
+                            주소: 1 ROBINSON ROAD #17-00
+                            AIA TOWER SINGAPORE (048542)
+                            
+                            제공받는 자의 개인정보 이용목적: 셀럽공구 서비스 이관에 따른 지속적인 서비스 제공
+                            제공하는 개인정보 항목: 아이디(E-mail 주소), 성명, 휴대폰 번호, 배송지 주소, 쿠키, 서비스 이용 기록(방문 일시 IP)
+                            제공받는 자의 개인정보 보유 및 이용 기간: 서비스 이용계약 해지(회원탈퇴) 시까지. (단, 개인정보취급방침 및 관련 법령에 따라 보관이 필요한 경우 해당 회원정보를 보관할 수 있음)
+                            
+                            서비스 이관 이후에도 고객님의 개인정보는 기존과 동일하게 동의하신 범위 내에서만 이용되며, [개인정보 보호법], [정보통신망 이용 촉진 및 정보보호 등에 관한 법률]등 관련 법령과 정부 가이드라인이 규정하는 기술적·관리적 보호 조치를 준수하여 안전하게 보호하겠습니다.
+                            
+                            관련하여 궁금하신 점이나 소중한 의견은 언제든지 고객센터로 연락 주시기 바랍니다. 
+                            우먼스톡 고객센터 : 070-4906-5035 
+                            
+                            언제나 회원님의 소중한 개인정보를 안전하게 보호하고, 더 좋은 서비스를 제공해 드리기 위해 최선을 다하겠습니다.
+                            감사합니다.
+                        </div>
+                    </li>
+                </ul>
+                <div data-v-a2b58b10="" class="pagination">
+                    <button data-v-a2b58b10="" disabled="disabled" class="page-prev">&lt;</button>
+                    <input data-v-a2b58b10="" type="text" disabled="disabled" value="1">
+                    <span data-v-a2b58b10=""> of 1</span>
+                    <button data-v-a2b58b10="" disabled="disabled" class="page-next">&gt;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../js/header.js"></script>
+
+<script>
+var acc = document.getElementsByClassName("notice__title");
+var i;
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("open");
+    var notice__content = this.nextElementSibling;
+    if (notice__content.style.display === "block") {
+        notice__content.style.display = "none";
+    } else {
+        notice__content.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/element.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="css/campain_detail.css">
+    <title>Spin Protocol</title>
+</head>
+<body>
+    <header>
+        <ul class="header-util">
+            <li class="header-util__profile">
+                <button class="header-util-profile-img" onClick="location.href='http://womanstalk.co.kr/celeb/shop?id=491'">
+                    <img src="../images/shop-icon-white.svg" alt="shop">
+                </button>
+            </li>
+            <li class="header-util__wallet" onclick="myFunction()">
+                <button class="header__wrap-wallet-btn">
+                    <img src="../images/wallet-icon.svg" alt="wallet" class="header-util__wallet--black" data-char="wallet">
+                    <img src="../images/wallet_white.svg" alt="wallet" class="header-util__wallet--white">
+                </button>
+                <div class="header-util__lyr" id="myPopup">
+                    <div class="header-util__tit">
+                        <img src="../images/spin_img.png" alt="스핀캐릭터">
+                        <p>SPIN은 다양한 활동을 통해 제공하는</p>
+                        <p>보상 형태의 포인트입니다.</p>
+                    </div>
+                    <div class="header-util__container">
+                        <p>지갑을 통해 SPIN을 보관하고 전송하세요 :)</p>
+                        <button type="button">새로 만들기</button>
+                        <button type="button">로그인</button>
+                    </div>
+                </div>
+            </li>
+            <li class="header-util__notice" onclick="myFunction2()">
+                <button type="button" class="header__wrap-notice-btn">
+                    <span class="notice-count">2</span>
+                    <img src="../images/icon_alarm_new.svg" alt="notice" class="header__notice-icon-black">
+                    <img src="../images/icon_alarm_new_white.svg" alt="notice" class="header__notice-icon_white">
+                </button>
+                <div class="header-util__lyr" id="myPopup2">
+                    <strong>전체 알림</strong>
+                    <ul class="header-util__items">
+                        <li class="">
+                            <a href="dash_board.html">
+                                <div class="header-util__icon">
+                                    <img src="https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/spin-logo/spin-logo.svg" alt="공지 아이콘">
+                                </div> 
+                                <div class="header-util__subject">
+                                    <p class="header-util__content">새로운 공지가 등록되었습니다.</p>
+                                    <p class="header-util__date">10월 28일</p>
+                                </div>
+                                <div class="header-util__remove">
+                                    <img src="https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/icon/pop-delete-icon.svg" alt="취소">
+                                </div>
+                            </a>
+                        </li>
+                        <li class="header-util__items--click">
+                            <a href="dash_board.html">
+                                <div class="header-util__icon">
+                                    <img src="https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/spin-logo/spin-logo.svg" alt="공지 아이콘">
+                                </div> 
+                                <div class="header-util__subject">
+                                    <p class="header-util__content">새로운 공지가 등록되었습니다.</p>
+                                    <p class="header-util__date">10월 28일</p>
+                                </div>
+                                <div class="header-util__remove">
+                                    <img src="https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/icon/pop-delete-icon.svg" alt="취소">
+                                </div>
+                            </a>
+                        </li>
+                   </ul>
+                </div>
+            </li>
+        </ul>
+        <div class="nav-wrap__mobile">
+            <a class="" onclick="myFunction3(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </a>
+            <nav id="gnbMobile" class="gnb__mobile">
+                <ul>
+                    <li>
+                        <a href="dash_board.html" class="">대시보드</a>
+                        <ul class="gnb__sub">
+                            <li>
+                                <a href="dash_board.html" class="">판매 현황</a>
+                            </li>
+                            <li>
+                                <a href="account.html" class="">정산 내역</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="gnb__li">
+                        <a href="campaign_management.html" class="">캠페인</a>
+                        <ul class="gnb__sub">
+                            <li>
+                                <a href="campaign_management.html" class="">내 캠페인 관리</a>
+                            </li>
+                            <li>
+                                <a href="campaign_list.html" class="gnb__li--active">캠페인 리스트</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="account_setting.html" class="">마이페이지</a>
+                        <ul class="gnb__sub">
+                            <li>
+                                <a href="account_setting.html" class="">계정 관리</a>
+                            </li>
+                            <li>
+                                <a href="shop_setting.html" class="">샵 관리</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="notice">
+                        <a href="notice_board.html" class="">공지</a>
+                    </li>
+                </ul>
+                <button type="button" onclick="location.href='../login.html'">로그아웃</button>
+            </nav>
+        </div>
+    </header>
+    <div class="nav-wrap">
+        <h1>
+            <a href="dash_board.html" class="h1__wide">
+                <img src="../images/spin-logo/text-logo.svg" alt="spinprotocol">
+            </a>
+            <a href="dash_board.html" class="h1__tablet">
+                <img src="../images/spin-logo/medium-logo.png" alt="spinprotocol">
+            </a>
+        </h1>
+        <div class="nav__profile">
+            <div class="nav__profile-image">
+                <img src="../images/profile.png" alt="프로필 이미지" class="">
+            </div>
+            <!-- <p class="nav_shop">
+                <a href="http://womanstalk.co.kr/celeb/shop?id=491">
+                    <img src="https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/icon/shop-icon-white.svg" alt="celeb shop" class="nav_shop-image">
+                </a>
+            </p> -->
+            <p class="nav__profile-name">Amber</p>
+        </div>
+        <nav class="gnb">
+            <ul>
+                <li>
+                    <a href="dash_board.html" class="">대시보드</a>
+                    <ul class="gnb__sub">
+                        <li>
+                            <a href="dash_board.html" class="">판매 현황</a>
+                        </li>
+                        <li>
+                            <a href="account.html" class="">정산 내역</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="gnb__li">
+                    <a href="campaign_management.html" class="">캠페인</a>
+                    <ul class="gnb__sub">
+                        <li>
+                            <a href="campaign_management.html" class="">내 캠페인 관리</a>
+                        </li>
+                        <li>
+                            <a href="campaign_list.html" class="gnb__li--active">캠페인 리스트</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="account_setting.html" class="">마이페이지</a>
+                    <ul class="gnb__sub">
+                        <li>
+                            <a href="account_setting.html" class="">계정 관리</a>
+                        </li>
+                        <li>
+                            <a href="shop_setting.html" class="">샵 관리</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="notice">
+                    <a href="notice_board.html" class="">공지</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="nav__logout">
+            <button class="nav__btn" onclick="location.href='../login.html'">로그아웃</button>
+        </div>
+    </div>
+    <div id="main">
+       <div class="container">
+            <div class="campaign__main-wrap">
+                <div class="campaign__main-img">
+                    <div class="campaign__img-mask">
+                        <a href="http://womanstalk.co.kr/goods/goods_view.php?goodsNo=87705&amp;campaignId=629" target="_self" class="campaign__img-mask-txt">상품정보 보러가기</a>
+                    </div>
+                    <img src="http://dalpumae20181.godomall.com/data/goods/19/05/24/87705/87705_Main.jpg">
+                </div>
+                <div class="campaign__info-box">
+                    <h2 class="campaign_tit">★N사 실검1위★그레이멜린 알래스카85 내추럴 토너/대용량약산성토너</h2>
+                    <ul class="campaign__info">
+                        <li>
+                            <strong class="info__title">수익률</strong>
+                            <p class="info__txt">3%</p>
+                        </li>
+                        <li>
+                            <strong class="info__title">상품가격</strong>
+                            <p class="info__txt">17,900</p>
+                        </li>
+                        <li>
+                            <strong class="info__title">판매기간</strong> <p class="info__txt">19.12.04 ~ 19.12.31</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="campaign__notice">
+                <div class="campaign__article">
+                    <h3>안내사항</h3>
+                </div>
+                <p>상시 캠페인은 별도의 제품 협찬 없이 자신의 마켓에서 상품을 판매하고, 수익을 정산 받는 캠페인입니다.</p>
+            </div>
+            <div class="campaign__apply__info">
+                <div class="campaign__article">
+                <h3>신청자 정보</h3>
+                </div>
+                <div class="apply_info">
+                    <h2 class="apply__info-tit">인플루언서</h2>
+                    <div class="apply_info-content">
+                        <p class="info_info">amber (이정주)</p>
+                    </div>
+                    <div class="apply_info">
+                        <h2 class="apply__info-tit">전화번호</h2>
+                        <div class="apply_info-content">
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_wrap">
+                <button type="button" class="submit_btn">동의 후 신청하기</button>
+            </div>
+        </div>
+    </div>
+<script src="../js/header.js"></script>
+</body>
+</html>

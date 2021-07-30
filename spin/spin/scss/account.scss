@@ -1,0 +1,198 @@
+@import '_mixin';
+@import '_table';
+
+.container {
+    margin-left: 220px;
+    padding: 15px 30px;
+}
+.account {
+    font-size: 0;
+    .search {
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        & > div{
+            display: block;
+            font-size: 0;  
+            margin-bottom: 10px;
+            *{
+                display: inline-block;
+                height: 42px;
+                line-height: 42px;
+                vertical-align: top;
+            }
+            .search__title {
+                width: 130px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1rem;
+                color: #222;
+            }
+            & > div{
+                width: calc(100% - 130px);
+                font-size: 0;
+            }
+            &:last-child{margin-bottom:0;}
+        }
+        input, select{
+            position: relative;
+            padding: 0 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            &:focus{border: 1px solid #5e9b7c;}
+            &::placeholder {
+                font-style: normal;
+                font-weight: 100;
+                font-size: 0.9rem;
+                color: #999;
+            }
+        }
+        .search-date, .search-date__select{
+            em {
+                width: 30px;
+                font-size: 12px;
+                text-align: center;
+            }
+            select{
+                    width: calc((100% - 30px) / 2);
+                    &+select{margin-left: 10px;}
+                }
+            input {
+                width: calc((100% - 30px)/2);
+            }
+            input[type="date"]::-webkit-calendar-picker-indicator {
+                color: transparent;
+                background: none;
+                z-index: 1;
+            }
+            input::after {
+                content: "";
+                background: url(../../images/calendar-icon.png) no-repeat;
+                background-size: 100% auto;
+                position: absolute;
+                top: 6px;
+                right: 10px;
+                width: 24px;
+                height: 24px;
+                border-radius: 5px;
+                background-color: #fff;
+                cursor: pointer;
+            }
+        }
+        .search-code{
+            input{
+                width: 100%;
+            }
+        }
+        .search-state{
+            .radio {
+                display: inline-block;
+                width: calc((100% - 20px) / 3);
+                vertical-align: middle;
+                & + .radio{
+                    margin-left: 10px;
+                }
+                input[type="radio"], select[type="radio"]{
+                    & + label{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 42px;
+                        border: 1px solid #ddd;
+                        border-radius: 4px;
+                        text-align: center;
+                        cursor: text;
+                        background-color: #fff;
+                        span{
+                            font-style: normal;
+                            font-weight: 100;
+                            font-size: 0.9rem;
+                            color: #999;
+                        }
+                        &::before{
+                            display: none;
+                        }
+                    }
+                    &:checked + label{
+                        border: 1px solid #5e9b7c;
+                        span{
+                            font-style: normal;
+                            font-weight: 500;
+                            font-size: 0.9rem;
+                            color: #5e9b7c;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 반응형
+@include respond-to(handhelds){
+    .account {
+        .search {
+            padding: 0;
+            background-color: transparent;
+            border: none;
+            & > div{
+                margin-bottom: 5px;
+                .search__title{display: none;}
+                & > div{width: 100%}
+            }
+            input{
+                position: relative;
+                padding: 0 15px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                font-size: 1rem;
+            }
+            .search-date input::after{top: 4px;}
+            .search-code input{width: 100%;}
+            .search-state .search__box{
+                width: 100%;
+                height: 42px;
+                line-height: 42px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background-color: #fff; 
+                .radio{
+                    width: calc(100% / 3);
+                    height: 40px;
+                    vertical-align: top;
+                    border-right: 1px solid #ddd;
+                    &:last-child{border-right: 0;}
+                    & + .radio{margin-left: 0px;}
+                    input[type="radio"], select[type="radio"]{
+                        & + label{
+                            height: 40px;
+                            border: none;
+                            border-radius: 0;
+                            text-align: center;
+                            cursor: pointer;
+                            background-color: transparent;
+                        }
+                        &:checked + label{
+                            border: 1px solid #5e9b7c;
+                            span{
+                                font-style: normal;
+                                font-weight: 500;
+                                font-size: 0.9rem;
+                                color: #5e9b7c;
+                            }
+                        }
+                    }
+                    &+.radio{margin-left: 0;}
+                }
+
+            }
+        }
+    }
+
+
+
+}

@@ -1,0 +1,296 @@
+.section__title {
+    position: relative;
+    display: block;
+    padding-left: 20px;
+    font-size: 1.5rem;
+    line-height: 20px;
+    margin: 10px 0 20px 0;
+}
+  .section__title:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: url("https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/icon/dashboard-h1-icon.svg");
+    background-repeat: no-repeat;
+}
+.state li {
+    float: left;
+    width: calc((100% - 10px) / 2);
+    margin: 0 10px 0 0;
+    padding: 0 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0;
+}
+.state li:last-child {
+    margin-right: 0;
+}
+.state li > p {
+    display: inline-block;
+    width: 35%;
+    height: 80px;
+    position: relative;
+}
+.state li span {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    line-height: 20px;
+}
+.state li div {
+    display: inline-block;
+    width: 65%;
+    height: 80px;
+    text-align: right;
+    vertical-align: top;
+}
+.state li div .state-num {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 80px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #5e9b7c;
+}
+
+.state li div em {
+    display: inline-block;
+    color: #5e9b7c;
+    font-style: normal;
+    font-size: 1.3rem;
+    line-height: 84px;
+}
+.state:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.notice__wrap {
+    margin: 0 0 10px 0;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.notice__wrap .notice__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #222;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.notice__wrap .notice__text {
+    white-space: pre-line;
+    padding-top: 7px;
+}
+.notice__wrap .notice__text ul li {
+    position: relative;
+    padding-left: 15px;
+    font-size: 0.9rem;
+    line-height: 20px;
+}
+.notice__wrap .notice__text ul li:before {
+    content: "-";
+    position: absolute;
+    left: 0;
+}
+.notice__wrap .notice__text ul li + li {
+    margin-top: 7px;
+}
+.notice__wrap .notice__text ul em {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #777;
+}
+.notice__wrap .notice__text ul b {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #222;
+}
+.table {
+    margin-top: 20px;
+}
+.table .table__wrap {
+    margin-top: 0;
+}
+.table .table__wrap .help-mark {
+    position: relative;
+    cursor: pointer;
+    color: #666;
+    padding-left: 2px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+.table .table__wrap .help-mark:hover > .question-box {
+    display: block;
+}
+.table .table__wrap .help-mark .question-box {
+    display: none;
+    width: 200px;
+    padding: 10px;
+    background-color: #5e9b7c;
+    border-radius: 5px;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: #fff;
+    text-align: left;
+    white-space: normal !important;
+    -webkit-box-shadow: 0 0 4px #aaa;
+    box-shadow: 0 0 4px #aaa;
+}
+
+
+/* table 공통? */
+.table {
+    margin-top: 20px;
+}
+.table .table__wrap {
+    margin-top: 0;
+}
+.table .table__wrap .help-mark {
+    position: relative;
+    cursor: pointer;
+    color: #666;
+    padding-left: 2px;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+.table .table__wrap .help-mark:hover > .question-box {
+    display: block;
+}
+.table .table__wrap .help-mark .question-box {
+    display: none;
+    width: 200px;
+    padding: 10px;
+    background-color: #5e9b7c;
+    border-radius: 5px;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: #fff;
+    text-align: left;
+    white-space: normal !important;
+    -webkit-box-shadow: 0 0 4px #aaa;
+    box-shadow: 0 0 4px #aaa;
+}
+
+.table__wrap {
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+    font-size: 0;
+}
+.table__wrap .table__scroll {
+    overflow-x: auto;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.table__wrap .table__scroll table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+.table__wrap .table__scroll table tr {
+    border-bottom: 1px solid rgba(60, 60, 60, 0.1);
+}
+.table__wrap .table__scroll table tr th {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #6a6a6c;
+    white-space: nowrap;
+    height: 60px;
+    padding: 10px 20px;
+}
+.table__wrap .table__scroll table tr td {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #222;
+    white-space: nowrap;
+    padding: 5px 10px;
+}
+.table__wrap .table__scroll table tr td button {
+    padding: 0 10px;
+    line-height: 25px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 0.85rem;
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    margin: 0 3px;
+}
+.table__wrap .table__scroll table tr td button:hover {
+    color: #fff;
+    border: 1px solid #5e9b7c;
+    border-radius: 5px;
+    background-color: #5e9b7c;
+    cursor: pointer;
+}
+.table__wrap .table__scroll table tbody > tr {
+    height: 70px;
+}
+.table__wrap .table__scroll table tbody > tr:hover {
+    background-color: #f6fcfb;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    cursor: pointer;
+}
+.table__wrap .table__scroll table tbody > tr:last-child {
+    border-bottom: none;
+}
+.table__wrap .table__scroll table tbody > tr .campaign-name,
+.table__wrap .table__scroll table tbody > tr .dashboard_pd_name {
+    margin: 0 auto;
+    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.table__wrap .table__scroll table tbody > tr .campaign-name p {
+    margin: 0 auto;
+    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.product-link{
+    color: #5e9b7c;
+}
+.product-link:hover{
+    text-decoration: underline;
+}
+
+/* 반응형 */
+@media (max-width: 767px){
+    .state li{width:100%}
+    .state li:last-child{margin-top:10px}
+    .state li > p{height:65px}
+    .state li div{height:65px}
+    .state li div .state-num{line-height:65px}
+    .state li div .state-num{font-size:1.6rem !important}
+    .state li div em{line-height:65px}
+}
+@media (min-width: 768px) and (max-width: 1023px){
+}
+@media (min-width: 1024px) and (max-width: 1439px){
+}
+@media (min-width: 1440px){
+}

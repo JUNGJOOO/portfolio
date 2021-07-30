@@ -1,0 +1,78 @@
+@import '_mixin';
+.modal {
+    @include position($p: fixed, $t: 50%, $l:50%, $transform:translate(-50%,-50%));
+    @include box($w: 100%, $h: auto, $bg:#fff, $radius: 5px, $shadow: 0 0 10px rgba(0,0,0,0.7));
+    overflow: auto;
+    .modal__container{
+        .close, .modal__close{
+            @include position($p: absolute, $r: 10px, $t: 10px);
+            @include button($w: 24px, $h:24px, $size: 24px, $line-h: 14px, $weight:700, $color: #555);
+            text-align: center;
+            opacity: 0.5;
+            background: none;
+            &:hover{opacity: 0.8}
+        }
+        .modal__header{
+            @include box($h: 40px, $line-h: 40px, $bg: #eee, $padding: 0 0 0 15px);
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+            p{font-size: 0.9rem;}
+        }
+        .modal__body {
+            margin: 1.5rem;
+            & > div{
+                input{
+                    @include box($padding: 0 15px, $h:2.8rem, $line-h: 2.8rem, $border: 1px solid #ddd, $radius: 4px);
+                    vertical-align: top;
+                    &:focus{border: 1px solid #5e9b7c;}
+                }
+                button{
+                    @include box($h:2.8rem, $radius: 4px,$bg: #42b983);
+                    color: #fff;
+                }
+            }
+            &.pw{
+                .modal__id{
+                    font-size:0;
+                    &:last-child{
+                        margin-top: 15px;
+                    }
+                    .modal__id--input{
+                        width: calc(100% - 115px);
+                    }
+                    button{
+                        width: 110px;
+                        margin: 0 0 5px 5px;
+                    }
+                }
+                .modal__pw{
+                    margin-top: 15px;
+                    button{
+                        margin-top: 5px;
+                    }
+                }
+            }
+            &.id{
+                input{
+                    width: calc(100% - 115px);
+                }
+                button{
+                    width: 110px;
+                }
+                .modal__pw{
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}
+@include respond-to(handhelds){
+    .modal{width: 110%}
+    .modal .modal__container .modal__body{
+        margin: 1rem;
+        &.id{
+            input{width: calc(100% - 85px);}
+            button{width: 80px;}
+        }
+    }
+}

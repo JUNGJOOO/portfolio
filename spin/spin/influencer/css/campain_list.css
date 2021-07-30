@@ -1,0 +1,225 @@
+.campaign__filter-box {
+  margin: 0 auto;
+  font-size: 0;
+  text-align: center;
+  margin-top: 40px;
+}
+.campaign__filter-box button {
+  display: inline-block;
+  width: 130px;
+  padding: 10px 0;
+  border: 1px solid rgba(200, 200, 200, 0.5);
+  border-radius: 20px;
+  text-align: center;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  vertical-align: top;
+}
+.campaign__filter-box button:hover,
+.campaign__filter-box button.filter_active {
+  color: #fff;
+  background-color: #5e9b7c;
+  border: 1px solid #5e9b7c;
+}
+.campaign__filter-box button + button {
+  margin-left: 20px;
+}
+
+/* compaign__list-wrap */
+.compaign__list-wrap {
+  margin-top: 30px;
+}
+.compaign__list-wrap .box {
+  display: none;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 0;
+}
+.compaign__list-wrap .box .campaign {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 250px;
+  margin: 20px 10px;
+  border-radius: 16px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.compaign__list-wrap .box .campaign:hover,
+.compaign__list-wrap .box .campaign__filter-box button.campaign.filter_active,
+.campaign__filter-box.compaign__list-wrap .box button.campaign.filter_active {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.compaign__list-wrap .box .campaign .campaign__main-img {
+  position: relative;
+  padding: 0 0 80% 0;
+  overflow: hidden;
+}
+.compaign__list-wrap .box .campaign .campaign__main-img img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.compaign__list-wrap .box .campaign .campaign__info {
+  height: 190px;
+  background-color: #fff;
+}
+.compaign__list-wrap .box.regular .campaign .campaign__info {
+  height: 130px;
+  background-color: #fff;
+}
+.compaign__list-wrap .box .campaign .campaign__info .campaign__info-txt {
+  position: relative;
+  height: 110px;
+  padding: 20px 20px 0 20px;
+  font-size: 0;
+}
+.compaign__list-wrap .box .campaign .campaign__info .campaign__info-txt h4 {
+  height: 3rem;
+  overflow: hidden;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #222;
+  line-height: 1.5rem;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.compaign__list-wrap
+  .box
+  .campaign
+  .campaign__info
+  .campaign__info-txt
+  .info_commission {
+  position: absolute;
+  bottom: 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #5e9b7c;
+}
+.compaign__list-wrap .box .campaign .campaign__info .campaign__info-txt img {
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  width: 25px;
+}
+.compaign__list-wrap .box .campaign .campaign__info .campaign__info-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid rgba(200, 200, 200, 0.5);
+  font-size: 0;
+}
+.compaign__list-wrap .box .campaign .campaign__info .campaign__info-bottom li {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+.compaign__list-wrap .box .campaign .campaign__info .campaign__info-bottom li.info_dday:after {
+  content: "";
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 1px;
+  height: 25px;
+  background-color: rgba(200, 200, 200, 0.8);
+}
+.compaign__list-wrap .box .campaign .campaign__info .campaign__info-bottom li.info_dday:before,
+.compaign__list-wrap .box .campaign .campaign__info .campaign__info-bottom li.info_people:before {
+  content: "";
+  position: relative;
+  top: 2px;
+  left: -10px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url("https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/campaign_icon/icon_dday.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.compaign__list-wrap .box .campaign .campaign__info .campaign__info-bottom li.info_people:before {
+  background: url("https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/campaign_icon/icon_numpeople.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 공동구매 */
+.compaign__list-wrap .box .campaign .campaign__info .campaign__info-bottom {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid rgba(200, 200, 200, 0.5);
+  font-size: 0;
+}
+.compaign__list-wrap .box .campaign .campaign__info .campaign__info-bottom li {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+.compaign__list-wrap
+  .box
+  .campaign
+  .campaign__info
+  .campaign__info-bottom
+  li.info_dday:after {
+  content: "";
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 1px;
+  height: 25px;
+  background-color: rgba(200, 200, 200, 0.8);
+}
+.compaign__list-wrap .box .campaign .campaign__info .campaign__info-bottom li.info_dday:before,
+.compaign__list-wrap .box .campaign .campaign__info .campaign__info-bottom li.info_people:before {
+  content: "";
+  position: relative;
+  top: 2px;
+  left: -10px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url("https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/campaign_icon/icon_dday.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.compaign__list-wrap .box .campaign .campaign__info .campaign__info-bottom li.info_people:before {
+  background: url("https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/campaign_icon/icon_numpeople.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/* 반응형 */
+@media (max-width: 767px) {
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+}
+@media (min-width: 1440px) {
+}

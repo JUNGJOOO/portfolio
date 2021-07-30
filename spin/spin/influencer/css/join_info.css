@@ -1,0 +1,226 @@
+.wrap{
+    height: 100vh;
+    background: -webkit-gradient(linear,left top,right top,from(#00d9b7),to(#389fb2));
+    background: linear-gradient(90deg,#00d9b7,#389fb2);
+    margin-left: 0!important;
+}
+#main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 500px;
+}
+#footer {
+    width: 100%;
+    height: 50px;
+    background-color: hsla(0,0%,100%,.3);
+    font-style: normal;
+    font-weight: 200;
+    font-size: 0;
+    color: rgba(96,96,96,.6);
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+#footer div {
+    display: inline-block;
+    line-height: 50px;
+    font-weight: 300;
+}
+#footer div+div{
+    margin-left:12px;
+}
+#footer div a, #footer select {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgba(96,96,96,.6);
+}
+#footer select {
+    width: 100%;
+    height: 25px;
+    padding: 5px 16px 5px 5px;
+    border: none;
+    background: url(https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/icon/footer-select-arrow-icon.svg);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position: 100%;
+}
+/* 공통끝 */
+
+h1{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+}
+#main .main_input_box{
+    margin: 20px 0 40px;
+}
+.join__box .main__input_box{
+    width:100%;
+    margin:50px 0 0 0;
+}
+.join__box .main__input_box .input-box{
+    margin-bottom:20px;
+}
+.join__box .main__input_box .input-box label{
+    display:block;
+    color:#fff;
+}
+.join__box .main__input_box .input-box input{
+    width:100%;
+    height:45px;
+    margin:0 0 20px 0;
+    padding:20px;
+    background-color:rgba(0,0,0,0);
+    border:none;
+    border-radius:0;
+    border-bottom:1px solid rgba(255,255,255,0.3);
+    color:#fff
+}
+.join__box .main__input_box .input-box input::-webkit-input-placeholder{
+    font-style:normal;
+    font-weight:normal;
+    font-size:1rem;
+    color:#fff;
+}
+.join__box .main__input_box .input-box input::-moz-placeholder{
+    font-style:normal;
+    font-weight:normal;
+    font-size:1rem;
+    color:#fff;
+}
+.join__box .main__input_box .input-box input::-ms-input-placeholder{
+    font-style:normal;
+    font-weight:normal;
+    font-size:1rem;
+    color:#fff;
+}
+.join__box .main__input_box .input-box input::placeholder{
+    font-style:normal;
+    font-weight:normal;
+    font-size:1rem;
+    color:#fff
+}
+.join__box .main__input_box .input-box input:focus{
+    border-bottom:1px solid #fff
+}
+.join__box .main__input_box .input-box .password-box{
+    position:relative
+}
+.join__box .main__input_box .input-box .password-box button{
+    position:absolute;
+    top:25px;
+    right:0;
+    width:30px;
+    height:30px;
+    background-color:rgba(0,0,0,0);
+    background:url("https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/icon/eye-white-close-icon.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+.join__box .main__input_box .input-box .password-box button.open-eye{
+    background:url("https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/icon/eye-white-icon.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+.join__box .main__input_box .input-box .id-box{
+    position:relative;
+}
+.join__box .main__input_box .input-box .id-box .email{
+    width:33%;
+}
+.join__box .main__input_box .input-box .id-box .self-text{
+    width:30%
+}
+.join__box .main__input_box .input-box .id-box span{
+    color:#fff
+}
+.join__box .main__input_box .input-box .id-box select{
+    width:calc(36% - 20px);
+    height:45px;
+    padding:10px;
+    border:none;
+    border-radius:0;
+    background:url("https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/icon/arrow-white-icon.svg");
+    background-size:10px;
+    background-repeat:no-repeat;
+    background-position:right;
+    border-bottom:1px solid rgba(255,255,255,0.3);
+    color:#fff;
+}
+.join__box .main__input_box .input-box .id-box select:focus{
+    border-bottom:1px solid #fff;
+}
+.join__box .main__input_box .input-box .nickname-box{
+    position:relative
+}
+.join__box .main__input_box .input-box .nickname-box button{
+    position:absolute;
+    right:0px;
+    bottom:40px;
+    padding:5px;
+    color:rgba(255,255,255,0.5);
+    border:1px solid rgba(255,255,255,0.3);
+    border-radius:5px;
+    cursor:pointer;
+}
+.join__box .main__input_box .input-box .nickname-box .success-clear,.join__box .main__input_box .input-box .nickname-box button:hover{
+    color:#fff;border:1px solid #fff
+}
+.join__box .main__input_box .input-box .nickname-box .certify-clear{
+    text-align:center;
+    position:absolute;
+    right:0;
+    bottom:40px;
+    width:20px;
+    height:20px;
+    color:#fff;
+    border:1px solid #fff;
+    border-radius:100%;
+    cursor:pointer;
+}
+.join__box .btn-box button{
+    width:100%;
+    height:50px;
+    color:#000;
+    border-radius:50px;
+    background-color:rgba(255,255,255,0.7);
+    cursor:pointer;
+    -webkit-box-shadow:0 0 15px 0 rgba(124,124,124,0.4);
+    box-shadow:0 0 15px 0 rgba(124,124,124,0.4);
+}
+.join__box .btn-box button:hover{
+    background-color:rgba(255,255,255,1);
+    -webkit-transition:all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+/* 반응형 */
+@media (max-width: 767px){
+    * {font-size: 12px;}
+    #main{width:85%;}
+    .join__box .main__input_box .input-box input{padding:20px 10px; height:30px;}
+    .join__box .main__input_box .input-box{margin-bottom:10px;}
+    .join__box .main__input_box .input-box .id-box select{padding:0; height:40px;}
+    .join__box .main__input_box .input-box .password-box button{width:25px; height:25px;}
+    .join__box .main__input_box .input-box .nickname-box button{bottom:35px;}
+    #footer{height:40px}
+    #footer div{line-height:40px}
+    #footer div+div{margin-left:7px}
+    #footer div a{font-size:0.8rem}
+    #footer select{font-size:0.8rem}
+}
+@media (min-width: 768px) and (max-width: 1023px){
+    * {font-size: 13px;}
+}
+@media (min-width: 1024px) and (max-width: 1439px){
+    * {font-size: 14px;}
+}
+@media (min-width: 1440px){
+    * {font-size: 14px;}
+}

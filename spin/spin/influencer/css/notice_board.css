@@ -1,0 +1,85 @@
+.notice__wrap .notice__list {
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+.notice__wrap .notice__list li {
+  padding: 20px;
+  cursor: pointer;
+}
+.notice__wrap .notice__list li + li {
+  border-top: 1px solid #f1f1f1;
+}
+.notice__wrap .notice__list li p {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  word-break: keep-all;
+}
+.notice__wrap .notice__list li span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #999;
+}
+.notice__wrap .notice__list li .notice__content {
+  display: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #222;
+  margin-top: 15px;
+  word-break: break-all;
+  white-space: pre-line;
+  line-height: 20px;
+  border-top: 1px solid #aaa;
+}
+
+
+.notice-item-img {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  vertical-align: top;
+}
+.notice-item-img img {
+  width: 100%;
+}
+.notice-item-text {
+  display: inline-block;
+  vertical-align: top;
+  width: 270px;
+  padding: 0 5px;
+}
+.notice-item-text .notice-text-content {
+  font-size: 13px;
+  line-height: 18px;
+}
+.notice-item-text .notice-text-date {
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 14px;
+  color: #92949c;
+}
+.notice-delete-btn {
+  position: absolute;
+  right: 3px;
+  width: 32px;
+  line-height: 32px;
+  border: none;
+  z-index: 1000;
+}
+.notice-delete-btn img {
+  width: 9px;
+}
+.no-notice-msg {
+  color: #aaa;
+  text-align: center;
+  line-height: 280px;
+}
+li.click > * {
+  opacity: 0.4;
+}
+li.click .notice-delete-btn {
+  opacity: 1;
+}

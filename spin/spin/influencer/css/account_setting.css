@@ -1,0 +1,157 @@
+.container {
+  padding: 40px;
+}
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.info-box {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.info-box:nth-child(odd) {
+  margin-bottom: 30px;
+}
+.info-box .box-tit {
+  padding: 15px 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #222;
+}
+.info-box .box-tit.bank-tit {
+  padding: 30px 0;
+}
+.info-box .input-box {
+  padding: 5px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+.info-box .input-box input {
+  width: 80%;
+  height: 40px;
+  border: none;
+  border-radius: 0;
+  cursor: text;
+}
+.info-box .input-box select {
+  width: 80%;
+  height: 40px;
+  border: none;
+  border-radius: 0;
+  cursor: text;
+}
+.info-box .input-box label {
+  display: inline-block;
+  width: calc(20% - 10px);
+  padding: 10px 0 5px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9rem;
+  color: #787783;
+}
+.info-box .input-box .post_code {
+  width: calc(80% - 110px);
+  display: inline-block;
+}
+.info-box .input-box .detail-address {
+  width: calc(40% - 10px);
+}
+.info-box .notice-box {
+  margin-top: 25px;
+}
+.info-box .notice-box li {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.8rem;
+  color: #74767d;
+}
+.info-box .id_text {
+  line-height: 50px;
+}
+.info-box .error {
+  width: 80%;
+  margin-left: calc(20% - 10px);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.8rem;
+  color: red;
+}
+.info-box .sch_add_btn {
+  float: right;
+  width: 100px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #5e9b7c;
+  cursor: pointer;
+}
+.btn-wrap {
+  margin: 50px 0 20px 0;
+  text-align: center;
+}
+.btn-wrap button {
+  width: 200px;
+  height: 50px;
+  color: #000;
+  border: 1px solid rgba(208, 208, 208, 0.42);
+  border-radius: 7px;
+  background-color: #fff;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.btn-wrap .ishover,
+.btn-wrap button:hover {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: #5e9b7c;
+  color: #fff;
+}
+
+/* 반응형 */
+@media (max-width: 767px) {
+  .info-box {
+    padding: 10px 20px;
+  }
+  .info-box .sch_add_btn {
+    height: 35px;
+  }
+  .info-box .input-box label {
+    display: block;
+    width: 100%;
+  }
+  .info-box .input-box input,
+  .info-box .input-box select {
+    display: block;
+    width: 100%;
+    padding: 10px 5px;
+  }
+  .info-box .input-box input.detail-address,
+  .info-box .input-box select.detail-address {
+    width: 100%;
+  }
+  .btn-wrap {
+    margin: 30px 0 15px 0;
+  }
+  .btn-wrap button {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .btn-wrap {
+    margin: 40px 0 10px 0;
+  }
+  .btn-wrap button {
+    width: 180px;
+    height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
