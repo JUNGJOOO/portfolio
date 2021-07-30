@@ -9,18 +9,15 @@
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script>
     $(document).ready(function(){ 
-
         $('.bxslider').bxSlider({
             mode: 'vertical',
             auto: true,
             pause: 2000,
-//            speed:2
         });
         $('.bxslider2').bxSlider({
             mode: 'vertical',
             auto: true,
             pause: 2000,
-//            speed:2
         });
 
     });
@@ -284,6 +281,25 @@
                         </div>
                     </div>
                 </div>
+				<script>
+				var realtimeUN = document.querySelector(".realtime_unfold")
+				var ranking = realtimeUN.querySelector(".rank");
+				var typeA = ranking.querySelector(".rw_typeA");
+				var typeB = ranking.querySelector(".rw_typeB");
+				realtimeUN.addEventListener("click", sta_d)
+				function sta_d(sta_dt){
+					if(sta_dt.target.className === "tab1"){
+						typeA.style.display = "block";
+						typeB.style.display = "none";
+					} 
+					if(sta_dt.target.className === "tab2"){
+						typeA.style.display = "none";
+						typeB.style.display = "block";
+					}
+				}
+				</script>
+				
+				
                 <div class="weather">
                     <ul class="bxslider2">
                         <li>
@@ -612,55 +628,55 @@ var realtimeUN = document.querySelector(".realtime_unfold")
 var ranking = realtimeUN.querySelector(".rank");
 var typeA = ranking.querySelector(".rw_typeA");
 var typeB = ranking.querySelector(".rw_typeB");
-realtimeUN.addEventListener("click", 랭킹할일)
-function 랭킹할일(랭킹타겟){
-    if(랭킹타겟.target.className === "tab1"){
+realtimeUN.addEventListener("click", sta_a)
+function sta_a(sta_ata){
+    if(sta_ata.target.className === "tab1"){
         typeA.style.display = "block";
         typeB.style.display = "none";
     } 
-    if(랭킹타겟.target.className === "tab2"){
+    if(sta_ata.target.className === "tab2"){
         typeA.style.display = "none";
         typeB.style.display = "block";
     }
 }
 </script>
 <script>
-var 감싸기 = document.querySelector(".realtime");
-var 접기 = 감싸기.querySelector(".realtime_fold");
-var 펼치기 = 감싸기.querySelector(".realtime_unfold");
-var 버튼 = 감싸기.querySelector("a");    
-감싸기.addEventListener("click", 할일);
-function 할일(e){
+var dum_a = document.querySelector(".realtime");
+var dum_b = dum_a.querySelector(".realtime_fold");
+var dum_c = dum_a.querySelector(".realtime_unfold");
+var dum_btn = dum_a.querySelector("a");    
+dum_a.addEventListener("click", sta_b);
+function sta_b(e){
 //    console.log(e.target)
     if(e.target.className === "real_af"){
-        펼치기.style.display = "block";
-        접기.style.display = "none";
+        dum_c.style.display = "block";
+        dum_b.style.display = "none";
     }
     if(e.target.className === "real_auf"){
-        펼치기.style.display = "none";
-        접기.style.display = "block";
+        dum_c.style.display = "none";
+        dum_b.style.display = "block";
     }
     e.preventDefault();
 }
 </script> 
 <script>
-var 더보기내용 = document.querySelector(".none");
-var 더보기버튼 = document.querySelector(".more");   
-var 텍스몰 = document.querySelector(".type_more");
-더보기버튼.addEventListener("click", 할일);
-function 할일(e){
+var more_txt = document.querySelector(".none");
+var more_btn = document.querySelector(".more");   
+var more_type = document.querySelector(".type_more");
+more_btn.addEventListener("click", sta_c);
+function sta_c(e){
     if(e.target.className === "more"){
-        더보기내용.style.display = "block";
-        더보기버튼.style.display = "none";
-        텍스몰.classList.add("on");
+        more_txt.style.display = "block";
+        more_btn.style.display = "none";
+        more_type.classList.add("on");
     }
     e.preventDefault();
 }
 </script> 
 <script>
-var 전체 = document.querySelectorAll(".mainContainer > div");
-    for(var i = 0; i < 전체.length; i++) {
-        전체[i].addEventListener("click", openWork);
+var all = document.querySelectorAll(".mainContainer > div");
+    for(var i = 0; i < all.length; i++) {
+        all[i].addEventListener("click", openWork);
     }
     function openWork(e) {
         e.preventDefault();
