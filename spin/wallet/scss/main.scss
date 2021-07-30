@@ -1,0 +1,50 @@
+@import "mixin";
+.wallet-view > ul {
+    position: relative;
+    top: 40%;
+    transform: translateY(-40%);
+    text-align: center;
+
+    li {
+        font-size: 0;
+    }
+    img {
+        height: 120px;
+    }
+    div {
+        display: block;
+        margin-top: 15px;
+        font-size: 0;
+    }
+    div > * {
+        display: inline-block;
+        letter-spacing: -0.6px;
+    }
+    p {
+        font-size: 2.7rem;
+        font-weight: 700;
+    }
+    em {
+        margin-left: 10px;
+        font-style: normal;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    span {
+        display: block;
+        margin-top: 10px;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+.clip-wrap > div{
+    @include clip-wrap-div(72px, 30px);
+}
+.wallet-header button{
+    position: absolute; top: 15px; right: 15px;
+    display: inline-block; padding: 0 6px; margin-left: 4px;
+    font-size: 0.8rem; line-height: 18px;
+    border: 1px solid #808080; opacity: 0.3;
+}

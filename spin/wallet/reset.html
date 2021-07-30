@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Reset Password</title>
+	<link rel="stylesheet" href="css/common.css"> 
+	<link rel="stylesheet" href="css/access.css"> 
+</head>
+<body>
+<div class="wallet-pop-wrap">
+    <strong class="wallet-tit">Reset Password</strong>
+    <div class="container">
+        <ul>
+            <li>
+                <label>Private Key</label>
+                <input type="text" placeholder="Please enter your private key.">
+            </li>
+            <li>
+                <label>New Password</label>
+                <input type="password">
+                <span class="error">Please Enter At Least 9 Characters.</span>
+            </li>
+            <li>
+                <label class="password_new pt">Confirm New Password</label>
+                <input type="password">
+                <span class="error">These passwords don’t match.</span>
+            </li>
+        </ul>
+        <button type="button" class="btn-fix" onclick="location.href='access.html'">Reset Password</button>
+    </div>
+    <div class="restore-wrap">
+        <a href="access.html">Access Wallet</a>
+    </div>
+</div>
+</body>
+</html>

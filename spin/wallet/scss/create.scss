@@ -1,0 +1,30 @@
+@import "mixin";
+ul {
+  position: absolute;
+  top: 125px;
+  z-index: 100;
+  width: 100%;
+}
+.notice-wrap {
+  position: absolute;
+  top: 235px;
+
+  & > * {
+    color: #fff;
+  }
+  span {
+    font-weight: 700;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+p {
+  @include pStyle(block, 8px, break-all, 0.9rem, 20px, 100);
+}
+.bg-black {
+  @include bg-black(absolute, 0, 0, 0, block, 100%, 300px, #000);
+}
+.btn-fix {
+  @include btn-fix(absolute, 80px, 0, 0, 320px);
+}
