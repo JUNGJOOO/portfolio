@@ -77,15 +77,15 @@
 <script>
 document.addEventListener("scroll", scrollWork );
 function scrollWork() {
-	var html요소 = document.querySelector("html");
-	var gnb요소 = document.querySelector("#navContainer");
-	var 스크롤된높이 = html요소.scrollTop;
-	if (스크롤된높이 >= 860) {
-		gnb요소.className = "active";
-	} else if (스크롤된높이 < 860) {
-		gnb요소.className = "";
+	var target_html = document.querySelector("html");
+	var target_gnb = document.querySelector("#navContainer");
+	var scroll_height = target_html.scrollTop;
+	if (scroll_height >= 860) {
+		target_gnb.className = "active";
+	} else if (scroll_height < 860) {
+		target_gnb.className = "";
 	} 
-	console.log(스크롤된높이);
+	console.log(scroll_height);
 }
 </script>
 <main>
@@ -333,16 +333,16 @@ function scrollWork() {
             </ul>
         </section>
         <script>
-        var 스토리두번째 = document.querySelector(".story.exArea");
-        var 오브젝트 = 스토리두번째.querySelector(".ojt");
-        오브젝트.addEventListener("mouseover", 마우스오버할일);
-        오브젝트.addEventListener("mouseout", 마우스아웃할일);
-        function 마우스오버할일(e){
+        var story2 = document.querySelector(".story.exArea");
+        var object = story2.querySelector(".ojt");
+        object.addEventListener("mouseover", m_over);
+        object.addEventListener("mouseout", m_out);
+        function m_over(e){
             if(e.target.nodeName === "A"){
                 e.target.parentNode.parentNode.children[0].style.opacity="0.2";     
             }
         }
-        function 마우스아웃할일(e){
+        function m_out(e){
             if(e.target.nodeName === "A"){
                 e.target.parentNode.parentNode.children[0].style.opacity=""; 
             }
