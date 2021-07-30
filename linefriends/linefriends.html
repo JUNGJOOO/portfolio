@@ -61,8 +61,8 @@
 var lang = document.querySelector(".lang");
 var 버튼 = lang.querySelector("a");
 var 타겟 = lang.querySelector("ul")
-lang.addEventListener("click", 언어할일);
-function 언어할일(e){
+lang.addEventListener("click", work1);
+function work1(e){
     e.preventDefault();
     console.log(e.target.parentElement)
     if(lang.className === "lang"){
@@ -71,14 +71,14 @@ function 언어할일(e){
         lang.className = "lang";
     }
 }
-document.addEventListener("scroll", 스크롤할일);
-function 스크롤할일(ee){
-    var html요소 = document.querySelector("html");
+document.addEventListener("scroll", worscroll);
+function worscroll(ee){
+    var worscroll_html = document.querySelector("html");
     var header = document.querySelector(".headContainer");
-    var 스크롤된높이 = html요소.scrollTop;
-	if (스크롤된높이 >= 40) {
+    var worscroll_scrollheight = worscroll_html.scrollTop;
+	if (worscroll_scrollheight >= 40) {
 		header.className = "headContainer scroll";
-	} else if (스크롤된높이 < 40) {
+	} else if (worscroll_scrollheight < 40) {
 		header.className = "headContainer";
 	} 
 }
@@ -370,33 +370,33 @@ function 스크롤할일(ee){
     </div>
 <script>
     var page = document.querySelector(".pageNum");
-    var 넘기기타겟들 = page.querySelectorAll("a")
-    var 버전 = document.querySelector(".contents");
-    var 버전v2 = document.querySelector(".v2")
-    var 버전v3 = document.querySelector(".v3")
-    var 버전v4 = document.querySelector(".v4")
-    page.addEventListener("click", 페이지넘기기);
-    function 페이지넘기기(사건정황){
-        사건정황.preventDefault();
-        if (사건정황.target.nodeName === "A") {
-            for (var i = 0; i < 넘기기타겟들.length; i++) {
-                넘기기타겟들[i].className = "";
-            } 사건정황.target.className = "pass";
+    var page_target = page.querySelectorAll("a")
+    var ver1 = document.querySelector(".contents");
+    var ver2 = document.querySelector(".v2")
+    var ver3 = document.querySelector(".v3")
+    var ver4 = document.querySelector(".v4")
+    page.addEventListener("click", page_turn);
+    function page_turn(sta){
+        sta.preventDefault();
+        if (sta.target.nodeName === "A") {
+            for (var i = 0; i < page_target.length; i++) {
+                page_target[i].className = "";
+            } sta.target.className = "pass";
         }
-        if(사건정황.target.textContent === "2"){
-            버전v2.style.zIndex = "0";
+        if(sta.target.textContent === "2"){
+            ver2.style.zIndex = "0";
         } else{
-            버전v2.style.zIndex = "-1";
+            ver2.style.zIndex = "-1";
         }
-        if(사건정황.target.textContent === "3"){
-            버전v3.style.zIndex = "0";
+        if(sta.target.textContent === "3"){
+            ver3.style.zIndex = "0";
         } else{
-            버전v3.style.zIndex = "-2";
+            ver3.style.zIndex = "-2";
         }
-        if(사건정황.target.textContent === "4"){
-            버전v4.style.zIndex = "0";
+        if(sta.target.textContent === "4"){
+            ver4.style.zIndex = "0";
         } else{
-            버전v4.style.zIndex = "-3";
+            ver4.style.zIndex = "-3";
         }
     }
 </script>
