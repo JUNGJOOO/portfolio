@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>tradeKorea</title>
+    <meta name="description" content="트레이드코리아(tradeKorea)는 글로벌 진출을 목표로 하고 있는 국내 셀러들의 효율적인 해외 마케팅과 무역활동을 위해 다양한 서비스를 제공 하고 있습니다.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="tradeKorea:한국무역협회 운영,B2B e-Market place">
+    <meta property="og:description" content="트레이드코리아(tradeKorea)는 글로벌 진출을 목표로 하고 있는 국내 셀러들의 효율적인 해외 마케팅과 무역활동을 위해 다양한 서비스를 제공 하고 있습니다.">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/base_trken.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui-trken.css"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <!-- bxslider -->
+    <link rel="stylesheet" type="text/css" href="../css/jquery.bxslider.css"/>
+    <script type="text/javascript" src="../js/jquery.bxslider.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+
+<!-- s : contents -->
+<div id="contents" class="contents_inner">
+    <aside class="aside aside_mypage">
+        <div class="lnb_subtit m_p">Menu</div>
+        <div class="aside_mypage_box">
+            <p class="lnb_subtit3">My Product</p>
+            <div class="lnb">
+                <ul class="depth">
+                    <li><a href="#" class="depth_btn is_active">Manage Products</a></li>
+                    <li><a href="#" class="depth_btn">Add Product</a></li>
+                    <li><a href="#" class="depth_btn">Manage Group</a></li>
+                    <li><a href="#" class="depth_btn">Temporary Storage</a></li>
+                    <li><a href="#" class="depth_btn">Photo Management</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="aside_mypage_box">
+            <p class="lnb_subtit3">Inquiry Management</p>
+            <div class="lnb">
+                <ul class="depth1">
+                    <li>
+                        <a href="#" class="depth1_btn">My Inquiries</a>
+                        <a href="#" class="depth1_ico">하위 메뉴 열기</a>
+                        <ul class="depth2">
+                            <li><a href="#" class="depth2_btn">Company</a></li>
+                            <li><a href="#" class="depth2_btn">Product</a></li>
+                            <li><a href="#" class="depth2_btn">Buying Leads</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="depth_btn">Trash</a></li>
+                    <li><a href="#" class="depth_btn">Spam</a></li>
+                    <li><a href="#" class="depth_btn">Message Box</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="aside_mypage_box">
+            <p class="lnb_subtit3">My Trade Service</p>
+            <div class="lnb">
+                <ul class="depth1">
+                    <li>
+                        <a href="#" class="depth1_btn">My Matching Info</a>
+                        <a href="#" class="depth1_ico">하위 메뉴 열기</a>
+                        <ul class="depth2">
+                            <li><a href="#" class="depth2_btn">GBMS</a></li>
+                            <li><a href="#" class="depth2_btn">VIB</a></li>
+                            <li><a href="#" class="depth2_btn">Buying Offer</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="depth1_btn">My tK_Meet</a>
+                        <a href="#" class="depth1_ico">하위 메뉴 열기</a>
+                        <ul class="depth2">
+                            <li><a href="#" class="depth2_btn">Status</a></li>
+                            <li><a href="#" class="depth2_btn">Received Meeting</a></li>
+                            <li><a href="#" class="depth2_btn">Sent Meeting</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="aside_mypage_box">
+            <p class="lnb_subtit3">Order / Sale</p>
+            <div class="lnb">
+                <ul class="depth1">
+                    <li>
+                        <a href="#" class="depth1_btn">Order / Sale</a>
+                        <a href="#" class="depth1_ico">하위 메뉴 열기</a>
+                        <ul class="depth2">
+                            <li><a href="#" class="depth2_btn">Order Management</a></li>
+                            <li><a href="#" class="depth2_btn">Cancellation / Refund</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="depth1_btn">My Sales</a>
+                        <a href="#" class="depth1_ico">하위 메뉴 열기</a>
+                        <ul class="depth2">
+                            <li><a href="#" class="depth2_btn">Sales Management</a></li>
+                            <li><a href="#" class="depth2_btn">Cancellation / Refund</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="depth1_btn">Sample Purchase Order</a>
+                        <a href="#" class="depth1_ico">하위 메뉴 열기</a>
+                        <ul class="depth2">
+                            <li><a href="#" class="depth2_btn">Received Sample Purchase Order</a></li>
+                            <li><a href="#" class="depth2_btn">Sent Sample Purchase Order</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="depth1_btn">Price Offers</a>
+                        <a href="#" class="depth1_ico">하위 메뉴 열기</a>
+                        <ul class="depth2">
+                            <li><a href="#" class="depth2_btn">Received Price Offers</a></li>
+                            <li><a href="#" class="depth2_btn">Manage Price Offer</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="lnb_mb_close">
+            <em></em>
+        </button>
+    </aside>
+    <section class="contents mypage myprofile">
+        <section class="mypage_header">
+            <div class="label">
+                <p class="label_buyer">BUYER</p>
+                <p class="label_seller">SELLER</p>
+            </div>
+            <div class="name">
+                <span>삼성전자</span>
+                <strong><b>홍길동</b><em>님</em></strong>
+            </div>
+            <ul class="link">
+                <li><a href="#">My Profile</a></li>
+                <li><a href="#">My C/L</a></li>
+                <li><a href="#">My Minisite</a></li>
+                <li><a href="#">My Interest</a></li>
+                <li><a href="#">Contact us History</a></li>
+                <li><a href="#">My Report</a></li>
+            </ul>
+            <button type="button" class="btn_mypage_mb">
+                <strong class="ham">
+                    <em></em>
+                    <em></em>
+                    <em></em>
+                </strong>
+            </button>
+        </section> 
+        <section>
+            <div class="page_head">
+                <h3 class="page_tit">My Profile 수정페이지</h3>
+            </div>
+            <div class="page_head">
+                <h4 class="page_subtit2">Response contents</h4>
+            </div>
+            <div class="dform1 is_wide">
+                <div class="dform1_tr">
+                    <div class="left">
+                        <div class="left_box"><span>favorite Markets</span></div>
+                    </div>
+                    <div class="right right_pd1">
+                        <ul class="item_inline item_inline4">
+                            <li>
+                                <div class="item_box readonly">
+                                    <span class="">Beauty Beauty Beauty Beauty Beauty Beauty </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_box readonly">
+                                    <span>Beauty</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_box readonly">
+                                    <span>Beauty</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_box readonly">
+                                    <span>Beauty</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_box readonly">
+                                    <span>Beauty</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="search_button">
+                                    <button type="button" class="btn1">Search</button>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="font1 mt5">Please select your trade countries of interest. You can receive tradeAlert information about specific countries</div>
+                    </div>
+                </div>
+                <div class="dform1_tr">
+                    <div class="left">
+                        <div class="left_box"><span>favorite Keyword</span></div>
+                    </div>
+                    <div class="right right_pd1">
+                        <ul class="item_inline item_inline4">
+                            <li>
+                                <div class="item_box readonly">
+                                    <span class="">Beauty Beauty Beauty Beauty Beauty Beauty </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_box readonly">
+                                    <span class="">Beauty Beauty Beauty Beauty Beauty Beauty </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="search_button">
+                                    <button type="button" class="btn1">Search</button>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="font1 mt5">Please select your trade countries of interest. You can receive tradeAlert information about specific countries</div>
+                    </div>
+                </div>
+                <div class="dform1_tr">
+                    <div class="left">
+                        <div class="left_box"><span>test1</span></div>
+                    </div>
+                    <div class="right right_pd1">
+                        <ul class="xitem_block">
+                            <li class="readonly">
+                                <span>Beauty & Personal Care > Beauty > Beauty Appliance > Hair Dryer Beauty & Personal Care > Beauty > Beauty Appliance > Hair Dryer</span>
+                                <a href="#" class="btn_xitem" title="닫기">닫기</a>
+                            </li>
+                            <li>
+                                <span>Beauty & Personal Care > Beauty > Beauty Appliance > Hair Dryer Beauty & Personal Care > Beauty > Beauty Appliance > Hair Dryer</span>
+                                <a href="#" class="btn_xitem" title="닫기">닫기</a>
+                            </li>
+                        </ul>
+                        <div class="fit_box2 mt5">
+                            <input type="text" id="" class="input" name="" value="">
+                            <div class="search_button">
+                                <button type="button" class="btn1">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dform1_tr">
+                    <div class="left">
+                        <div class="left_box"><span>test1</span></div>
+                    </div>
+                    <div class="right right_pd1">
+                        <ul class="xitem_inline item_inline3">
+                            <li>
+                                <div class="item_box readonly">
+                                    <span>Beauty Beauty Beauty Beauty Beauty Beauty </span>
+                                    <a href="#" class="btn_xitem" title="닫기">닫기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_box">
+                                    <span>Beauty</span>
+                                    <a href="#" class="btn_xitem" title="닫기">닫기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_box">
+                                    <span>Beauty</span>
+                                    <a href="#" class="btn_xitem" title="닫기">닫기</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="fit_box2 mt5">
+                            <input type="text" id="" class="input" name="" value="">
+                            <div class="search_button">
+                                <button type="button" class="btn1">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dform1_tr">
+                    <div class="left">
+                        <div class="left_box"><span>test1</span></div>
+                    </div>
+                    <div class="right right_pd1">
+                        <ul class="xitem_inline item_inline4">
+                            <li>
+                                <div class="item_box readonly">
+                                    <span>Beauty Beauty Beauty Beauty Beauty Beauty </span>
+                                    <a href="#" class="btn_xitem" title="닫기">닫기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_box">
+                                    <span>Beauty</span>
+                                    <a href="#" class="btn_xitem" title="닫기">닫기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_box">
+                                    <span>Beauty</span>
+                                    <a href="#" class="btn_xitem" title="닫기">닫기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_box">
+                                    <span>Beauty</span>
+                                    <a href="#" class="btn_xitem" title="닫기">닫기</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="fit_box2 mt5">
+                            <input type="text" id="" class="input" name="" value="">
+                            <div class="search_button">
+                                <button type="button" class="btn1">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="dform1_tr">
+                    <div class="left">
+                        <div class="left_box"><span>test1</span></div>
+                    </div>
+                    <div class="right right_pd1">
+                        <ul class="item_inline item_inline4">
+                            <li>
+                                <div class="item_box readonly">
+                                    <span class="">Beauty Beauty Beauty Beauty Beauty Beauty </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_box">
+                                    <span>Beauty</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_box">
+                                    <span>Beauty</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item_box">
+                                    <span>Beauty</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dform1_tr">
+                    <div class="left">
+                        <div class="left_box"><span>test1</span></div>
+                    </div>
+                    <div class="right right_pd1">
+                        <!-- input x 닫기버튼 -->
+                        <div class="input_xitem">
+                            <input type="text" id="" class="input" name="" value="" readonly="readonly">
+                            <a href="#" class="btn_xitem2" title="닫기">닫기</a>
+                        </div>
+                        <!-- input닫기버튼 + search 검색버튼 -->
+                        <div class="fit_box2">
+                            <div class="input_xitem">
+                                <input type="text" id="" class="input" name="" value="" readonly="readonly">
+                                <a href="#" class="btn_xitem2" title="닫기">닫기</a>
+                            </div>
+                            <div class="search_button">
+                                <button type="button" class="btn1">Search</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="dform1_tr">
+                    <div class="left">
+                        <div class="left_box"><span>팝업버튼</span></div>
+                    </div>
+                    <div class="right">
+                        <div class="search_button">
+                            <button type="button" class="btn1" onclick="popshow('myacc_myprofile1')">Change</button>
+                        </div>
+                        <div class="search_button">
+                            <button type="button" class="btn1" onclick="popshow('myacc_myprofile2')">Change</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</div>
+<!-- e : contents -->
+
+
+
+
+
+<!-- s : popup -->
+<div class="popup" id="myacc_myprofile1">
+    <div class="pop_bg"></div>
+    <div class="pop_wrap width_600">
+        <div class="pop_head"><strong>New E-mail</strong></div>
+        <section class="pop_body">
+            <div class="content">
+                <div class="fit_box3 popcol2">
+                    <input type="text" id="" class="input" name="" value="">
+                    <em class="cn">@</em>
+                    <input type="text" id="" class="input" name="" value="">
+                    <div class="search_button">
+                        <button type="button" class="btn1">Send</button>
+                    </div>
+                </div>
+                <p class="popcolor0 popcol2">Please type an e-mail address you wish to change. This e-mail has to be new address that has not been registered tradeKorea before.</p>
+                <div class="pop_tit popcol2">Verification Number</div>
+                <div class="area_time">
+                    <input type="text" id="" class="input" name="" value="" placeholder="Enter your number (within 3 minutes)">
+                    <em class="area_time_txt">00:00</em>
+                </div>
+                <div class="pop_button">
+                    <button type="button" class="btn1">Complete</button>
+                </div>
+            </div>
+        </section>
+        <button type="button" class="pop_close" onclick="pophide('myacc_myprofile1')">
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+</div>
+<!-- e : popup -->
+
+
+
+<!-- s : popup -->
+<div class="popup" id="myacc_myprofile2">
+    <div class="pop_bg"></div>
+    <div class="pop_wrap width_600">
+        <div class="pop_head"><strong>Mobile Number</strong></div>
+        <section class="pop_body">
+            <div class="content">
+                <div class="fit_box2 popcol2">
+                    <div class="fit_middle2">
+                        <input type="text" id="" class="input" name="" value="">
+                        <em class="cn">-</em>
+                        <input type="text" id="" class="input" name="" value="">
+                        <em class="cn">-</em>
+                        <input type="text" id="" class="input" name="" value="">
+                    </div>
+                    <div class="search_button">
+                        <button type="button" class="btn1">Search</button>
+                    </div>
+                </div>
+                <p class="popcolor0 popcol2">핸드폰 번호를 입력하세요. 이미 가입된 번호일 경우 인증번호가 발송되지 않습니다.</p>
+                <div class="pop_tit popcol2">Certification Number</div>
+                <input type="text" id="" class="input" name="" value="" placeholder="Enter your number (within 3 minutes)">
+                <div class="pop_button">
+                    <button type="button" class="btn1">Complete</button>
+                </div>
+            </div>
+        </section>
+        <button type="button" class="pop_close" onclick="pophide('myacc_myprofile2')">
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+</div>
+<!-- e : popup -->
+
+
+
+</div>
+<!-- script -->
+<script type="text/javascript" src="../js/common2021.js"></script>
+</body>
+</html>

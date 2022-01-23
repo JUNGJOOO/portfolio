@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trk mail</title>
+    <style>
+        * { margin:0; padding:0; border:0; box-sizing: border-box; font-size: 14px;}
+        /* ========================= trk_mail ========================= */
+        .trk_mail                   { width: 800px; margin: 0 auto; background-color: #fff; border: 1px solid #e5e5e5; font-family:"Noto Sans KR"; font-size: 14px; color:#444; line-height:normal;}
+        .trk_mail .mail_inner       { padding: 25px 40px 80px;}
+        .mail_btn                   { display: block; width: 150px; margin: 0 auto; background-color: #30beb2; border-radius: 3px; line-height: 50px; color: #fff; text-align: center; text-decoration: none}
+        .page_head                  { display: block; margin-bottom: 20px; }
+        .page_tit                   { font-size: 25px; font-weight: 700; }
+        .mail_info                          { margin-top: 50px; padding-top: 40px; border-top: 1px solid #e5e5e5;}
+        .mail_info > strong                 { display: block; margin-bottom: 13px; font-size: 20px; font-weight: bold; }
+        .mail_info > span                   { display: inline-block; color: #666;}
+        .mail_info > a                      { display: inline-block; float: right; font-size: 12px; color: #30beb2; text-decoration: none;}
+        .mail_info .mail_info_area          { display: block; margin: 20px 0 40px; padding: 20px 0; background-color: #f4fbfb; border: 1px solid #ebf3f3;}
+        .mail_info .mail_info_area .left    { display: inline-block; }
+        .mail_info .mail_info_area .right   { display: inline-block; line-height: 2;}
+        .mail_info .right strong            { color: #30beb2;}
+        .mail_footer                        { width: 100%; padding: 25px 0; background-color: #dfdfdf; }
+        .mail_footer .left                  { display: inline-block; width: 200px; vertical-align: top;}
+        .mail_footer .right                 { display: inline-block; width: calc(100% - 210px); font-size: 12px;}
+        .mail_footer strong                 { font-size: 12px; color: #30beb2;}
+        .mail_footer a                      { padding: 0 5px; background-color: #999; font-size: 12px; color: #fff; text-decoration: none;}
+        .mail_footer b                      { font-size: 12px;}
+        .board_view_header2                             { position: relative; padding: 15px 20px; margin-bottom: 20px; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5;}
+        .board_view_header2 > strong                    { display: block; overflow: hidden; font-size: 18px; font-weight: 500; word-wrap: normal; word-break: break-all; text-overflow: ellipsis; white-space: nowrap; }
+        .board_view_header2 > div                       { position: absolute; top: 50%; right: 20px; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+        .board_view_header2 > div span                  { color: #666;}
+        .board_view_header2 > div strong                { position: relative; margin-right: 10px; padding-right: 10px; color: #666;}
+        .board_view_header2 > div strong::before        { content: ''; position: absolute; top: 6px; right: 0; width: 1px; height: 10px; background-color: #ccc;}
+        .list_type03                                    { margin-bottom: 20px; font-size: 0; }
+        .list_type03 .item                              { display: inline-block; position: relative; width: 100%; height: 100%; font-size: 0; vertical-align: top;}
+        .list_type03 .item .item_img                    { display: block; overflow: hidden; position: relative; width: 120px; height: 120px; border: 1px solid #e5e5e5; background-color: #fff;}
+        .list_type03 .item .item_img img                { width: 100%; }
+        .list_type03 .item dt                           { display: inline-block;}
+        .list_type03 .item dd                           { display: inline-block; position: relative; width: calc(100% - 150px); height: 100%; margin-left: 24px; vertical-align: top;}
+        .list_type03 .item_txt                          { font-size: 0;}
+        .list_type03 .item_txt > li                     { font-size: 0;}
+        .list_type03 .item_txt > li + li                { margin-top: 10px;}
+        .list_type03 .item_txt .left                    { display: inline-block; position: relative; width: 140px; vertical-align: top;}
+        .list_type03 .item_txt .left::before            { content: ''; position: absolute; top: 50%; right: 0; width: 1px; height: 10px; background-color: #ccc; -webkit-transform: translateY(-50%); transform: translateY(-50%);}
+        .list_type03 .item_txt .right                   { display:inline-block; width: calc(100% - 140px); padding-left: 20px;}
+        .list_type03 .item_txt .right span              { display: block; overflow: hidden; color: #666; word-wrap: normal; word-break: break-all; text-overflow: ellipsis; white-space: nowrap;}
+        .list_type03 .item_txt .right                   { display:inline-block; width: calc(100% - 140px); padding-left: 20px;}
+        .list_type03 .item_txt .right span              { display: block; overflow: hidden; color: #666; word-wrap: normal; word-break: break-all; text-overflow: ellipsis; white-space: nowrap;}
+        .list_type03 .list_type03_area1                 { margin-top: 3px; font-size: 0;}
+        .list_type03 .list_type03_area1 > strong        { display: inline-block; position: relative; width: 70px; margin-right: 15px; font-weight: normal; color: #666;}
+        .list_type03 .list_type03_area1 > strong::before{ content: ''; position: absolute; top: 50%; right: 0; width: 1px; height: 10px; background-color: #ccc; -webkit-transform: translateY(-50%); transform: translateY(-50%);}
+        .list_type03 .list_type03_area1 > b             { display: inline-block; width: calc(100% - 85px); font-weight: normal; color: #666;}
+        .chatting                                       { position: relative; padding: 30px; border: 1px solid #e5e5e5; background-color: #fafafa;}
+        .chatting > div + div                           { margin-top: 30px;}
+        .chatting::after                                { display: block; clear: both; content: ''; }
+        .chatting .owner                                { float: left; position: relative; width: 70%; font-size: 0;}
+        .chatting .owner > .chatting_box                { display: inline-block; position: relative; width: calc(100% - 150px); height: 100%; padding: 10px 20px; background-color: #fff; border-radius: 2px; border: 1px solid #e5e5e5; vertical-align: top;}
+        .chatting .owner > .chatting_box::before        { content: ''; position: absolute; top: 10px; left: -14px; width: 17px; height: 13px; background: url(../images/bg_chatting.png) no-repeat;}
+        .chatting .owner > .chatting_side               { display: inline-block; width: 150px; padding-left: 10px; vertical-align: bottom;}
+        .chatting .owner > .chatting_side i             { display: block; width: 16px; height: 16px; background: url(../images/icon_check2.png) no-repeat; background-position: -5px -5px; font-size: 0;}
+        .chatting .owner > .chatting_side .date         { display: block; margin-top: 3px; font-size: 12px; line-height: 1; color: #bbb;}
+        .chatting .owner > .chatting_side.is_read i     { background-position: -23px -5px;}
+        .chatting .owner > .chatting_side.is_read .date { color: #30beb2;}
+        .chatting .guest                                { float: right; position: relative; width: 70%; font-size: 0; }
+        .chatting .guest > .chatting_box                { display: inline-block; position: relative; width: calc(100% - 150px); height: 100%; margin-left: 150px; padding: 10px 20px; background-color: #cbece9; border: 1px solid #bde6e3; border-radius: 2px; vertical-align: top;}
+        .chatting .guest > .chatting_box::before        { content: ''; position: absolute; top: 10px; right: -14px; width: 17px; height: 13px; background: url(../images/bg_chatting2.png) no-repeat;}
+        .chatting .guest > .chatting_side               { display: inline-block; position: absolute; bottom: 0; left: 0; width: 150px; padding-left: 10px; vertical-align: bottom;}
+        .chatting .guest > .chatting_side i             { display: block; width: 16px; height: 16px; background: url(../images/icon_check2.png) no-repeat; background-position: -5px -5px; font-size: 0;}
+        .chatting .guest > .chatting_side .date         { display: block; font-size: 12px; line-height: 1.5; color: #bbb;}
+        .chatting .guest > .chatting_side.is_read i     { background-position: -23px -5px;}
+        .chatting .guest > .chatting_side.is_read .date { color: #30beb2;}
+        .chatting .chatting_type01                      { font-size: 0;}
+        .chatting .chatting_type01 .left                { display: inline-block; width: 70px; height: 70px; border: 1px solid #e5e5e5;}
+        .chatting .chatting_type01 .left a              { display: block; width: 100%; height: 100%;}
+        .chatting .chatting_type01 .left a img          { display: block; width: 100%; height: 100%;}
+        .chatting .chatting_type01 .right               { display: inline-block; width: calc(100% - 70px); padding-left: 10px; vertical-align: top;}
+        .chatting .chatting_type01 .right a             { display: block; font-size: 12px; font-weight: 500; line-height: 1.5; color: #444; text-decoration: none;}
+    </style>
+</head>
+<body>
+
+    <div class="trk_mail">
+        <div class="mail_inner">
+            <div class="mail_cont">
+                <div class="page_head">
+                    <h3 class="page_tit">My Inquiries</h3>
+                </div>
+                <div class="board_view_header2">
+                    <strong>Privacy Policy Updated Notice Privacy Policy Updated Notice Privacy Policy Updated Notice Privacy Policy Updated Notice Privacy Policy Updated Notice</strong>
+                </div>
+                <section class="list_type03">
+                    <dl class="item">
+                        <dt>
+                            <a href="#" class="item_img">
+                                <img src="../images/demo34.jpg" alt="EYEPATCHES C75 FOR EYELASH EXTENSIONS"/>
+                            </a>
+                        </dt>
+                        <dd>
+                            <ul class="item_txt">
+                                <li>
+                                    <p class="left">Product</p>
+                                    <p class="right">
+                                        <span style="font-weight: 700">Organic Red Ginseng test product</span>
+                                        <span class="list_type03_area1">
+                                            <strong>Category</strong>
+                                            <b>Water, Veterinary Instrument</b>
+                                        </span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="left">Nation</p>
+                                    <p class="right">
+                                        <span>South Korea</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="left">From (Name)</p>
+                                    <p class="right">
+                                        <span>tradeKorea CBT marketing 0430</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="left">Inquiry Expires</p>
+                                    <p class="right">
+                                        <span>Negotiable</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="left">Quantity</p>
+                                    <p class="right">
+                                        <span>100 Cubic Centimeter / Cubic Centimeters</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="left">Unit Price</p>
+                                    <p class="right">
+                                        <span>100 USD</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </section>
+                <div class="chatting">
+                    <div class="owner">
+                        <div class="chatting_box">test test test test test test </div>
+                        <div class="chatting_side is_read">
+                            <i class="read_check">읽음</i>
+                            <span class="date">2020-02-10 11:00:12</span>
+                        </div>
+                    </div>
+                    <div class="owner">
+                        <div class="chatting_box">test test test test test test </div>
+                        <div class="chatting_side">
+                            <i class="read_check">안읽음</i>
+                            <span class="date">2020-02-10 11:00:12</span>
+                        </div>
+                    </div>
+                    <div class="owner">
+                        <div class="chatting_box">
+                            <div class="chatting_type01">
+                                <div class="left">
+                                    <a href="/product/detail/P660716/trk111-product-skin-care-mouse-keyboard-pop.html" class="productImg">
+                                        <img src="../images/demo39.jpg" onerror="this.src='/img/common/NoImage_140.gif'" alt="/">
+                                    </a>
+                                </div>
+                                <div class="right">
+                                    <div class="title">
+                                        <a href="/product/detail/P660716/trk111-product-skin-care-mouse-keyboard-pop.html">trk111 product skin care mouse keyboard pop</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chatting_side">
+                            <i class="read_check">안읽음</i>
+                            <span class="date">2020-02-10 11:00:12</span>
+                        </div>
+                    </div>
+                    <div class="guest">
+                        <div class="chatting_box">test test test test test test </div>
+                        <div class="chatting_side is_read">
+                            <i class="read_check">읽음</i>
+                            <span class="date">2020-02-10 11:00:12</span>
+                        </div>
+                    </div>
+                    <div class="guest">
+                        <div class="chatting_box">test test test test test test </div>
+                        <div class="chatting_side">
+                            <i class="read_check">안읽음</i>
+                            <span class="date">2020-02-10 11:00:12</span>
+                        </div>
+                    </div>
+                    <div class="guest">
+                        <div class="chatting_box">
+                            <div class="chatting_type01">
+                                <div class="left">
+                                    <a href="/product/detail/P660716/trk111-product-skin-care-mouse-keyboard-pop.html" class="productImg">
+                                        <img src="../images/demo39.jpg" onerror="this.src='/img/common/NoImage_140.gif'" alt="/">
+                                    </a>
+                                </div>
+                                <div class="right">
+                                    <div class="title">
+                                        <a href="/product/detail/P660716/trk111-product-skin-care-mouse-keyboard-pop.html">trk111 product skin care mouse keyboard pop</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chatting_side">
+                            <i class="read_check">안읽음</i>
+                            <span class="date">2020-02-10 11:00:12</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mail_info">
+                <strong>서비스 신청 관련 문의</strong>
+                <span>문의 전 우수회원 해외 홍보 서비스 FAQ를 만드시 읽어주세요!</span>
+                <a href="#">FAQ 바로가기 ></a>
+                <div class="mail_info_area">
+                    <div class="left">
+                        <img src="../images/mail_logo2.jpg" alt="문의처"/>
+                    </div>
+                    <div class="right">
+                        담당자 : 현경호 주임<br/>
+                        Email문의 : <strong>wang91ho@kita.net</strong><br/>
+                        전화문의 : 02-6000-4411 
+                    </div>
+                </div>
+            </div>
+            <a href="#" target="_blank" class="mail_btn">인콰이어리 확인</a> 
+        </div>
+        <div class="mail_footer">
+            <div class="left">
+                <img src="../images/mail_logo.jpg" alt="네이버에서 알려드립니다. 개인정보 이용내역 안내" style="width:100%;border:0;vertical-align:top" loading="lazy">
+            </div>
+            <div class="right">
+                본 메일은 <strong>발신전용</strong> 메일입니다. 메일수신을 원하지 않으시면 <a href="#">이메일 수신거부 ></a> 버튼을 눌러주시기 바랍니다.<br/>
+                문의사항은 <b>tradeKorea@kita.net</b>으로 문의 바랍니다.<br/><br/>
+                한국무역협회 서울특별시 강남구 영동대로511(삼성동)  고객센터 : 1566-5114<br/>
+                대표자 : 김영주  사업자등록번호 : 120-82-00182<br/><br/>
+                Copyright ⓒ 2008 - 2021 KITA(Korea International Trade Association), All rights reserved.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
