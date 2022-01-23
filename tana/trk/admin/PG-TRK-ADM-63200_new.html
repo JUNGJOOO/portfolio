@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>TadeKorea Admin</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="tadeKorea Admin">
+    <meta name="subject" content="tadeKorea Admin">
+    <meta name="keywords" content="Global, e-Marketplace, tadeKorea Admin, tradeKorea Management system">
+    <meta property="og:title" content="tadeKorea Admin">
+    <!-- css default -->
+    <link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/base_trkadmin.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui-tradeadmin.css"/>
+    <!-- swiper css-->
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <!-- js ibsheet -->
+    <script src="../ibSheet/js/ibleaders.js"></script>
+    <script src="../ibSheet/js/ibsheetinfo.js"></script>
+    <script src="../ibSheet/js/ibsheet.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){
+    let IB_csi1 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"NO",       SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"전시유형",  SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"제목",      SaveName:"3", Align:"Left", Type:"Text", "Ellipsis":1},
+                    { Header:"진행상태",  SaveName:"4", Align:"Center", Type:"Text"},
+                    { Header:"등록일",    SaveName:"5", Align:"Center", Type:"Date", Format:"yyyy-MM-dd ~ yyyy-MM-dd"},
+                    { Header:"노출여부",  SaveName:"6", Align:"Center", Type:"Text"},
+                ]
+            }
+            const container = $("#ib_csi1")[0];
+            createIBSheet2(container,'myShee_csi1','100%','641px');
+            IBS_InitSheet(myShee_csi1,initData);
+            myShee_csi1.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            myShee_csi1.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                myShee_csi1.SetColWidth("sTitle", 100);
+            } else {
+                myShee_csi1.FitColWidth("7|12|38|10|23|10");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"1",
+                    2:"Global",
+                    3:"Global 2021 Online Exhibition [Beauty&Fashion]",
+                    4:"진행중",
+                    5:"2020-01-01 ~ 2020-10-10",
+                    6:"Y",
+                },{
+                    1:"2",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                },{
+                    1:"3",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                },{
+                    1:"4",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                },{
+                    1:"5",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                },{
+                    1:"6",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                },{
+                    1:"7",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                },{
+                    1:"8",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                },{
+                    1:"9",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                },{
+                    1:"10",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                },{
+                    1:"11",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                },{
+                    1:"12",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                },{
+                    1:"13",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                },{
+                    1:"14",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                },{
+                    1:"15",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                },{
+                    1:"16",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                }
+            ]
+        }
+    };
+    IB_csi1.initialize();
+
+    let IB_csi2 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"NO",            SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"상품정보",       SaveName:"2", Align:"Left", Type:"Html"},
+                    { Header:"인콰이어리 NO",  SaveName:"3", Align:"Center", Type:"Number"},
+                    { Header:"발신자 국가",    SaveName:"4", Align:"Center", Type:"Image"},
+                    { Header:"발신자 이름",    SaveName:"5", Align:"Center", Type:"Text"},
+                    { Header:"발신자 ID",      SaveName:"6", Align:"Center", Type:"Text"},
+                    { Header:"일시",           SaveName:"7", Align:"Center", Type:"Date", Format:"yyyy-MM-dd"}
+                ]
+            }
+            const container = $("#ib_csi2")[0];
+            createIBSheet2(container,'myShee_csi2','100%','340px');
+            IBS_InitSheet(myShee_csi2,initData);
+            myShee_csi2.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            myShee_csi2.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                myShee_csi2.SetColWidth("sTitle", 100);
+            } else {
+                myShee_csi2.FitColWidth("6|36|12|10|12|13|11");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"1",
+                    2:"<img src='http://web.tradekorea.com/product/568/2032568/PRO_B5_MIRCO_FIBER_MASK_2.jpg' class='ib_img1'><div class='ib_pdinfo1'><dl><dt>상품명 │</dt><dd>Disposable(Portable) Skincare Vita Energy Serum</dd></dl><dl><dt>회사명 │</dt><dd>Woosin trading co., ltd</dd></dl></div>",
+                    3:"422759",
+                    4:"../images/flags/AE.gif",
+                    5:"",
+                    6:"",
+                    7:"2020-01-01",
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"2020-01-01",
+                }
+            ]
+        }
+    };
+    IB_csi2.initialize();
+
+    let IB_csi3 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"",          SaveName:"1", Align:"Center", Type:"CheckBox"},
+                    { Header:"NO",        SaveName:"2", Align:"Center", Type:"Number"},
+                    { Header:"유형",      SaveName:"3", Align:"Center", Type:"Text"},
+                    { Header:"제목",      SaveName:"4", Align:"Left", Type:"Text", "Ellipsis":1},
+                    { Header:"진행상태",  SaveName:"5", Align:"Center", Type:"Text"},
+                    { Header:"전시기간",  SaveName:"6", Align:"Center", Type:"Date", Format:"yyyy-MM-dd ~ yyyy-MM-dd"},
+                    { Header:"노출여부",  SaveName:"7", Align:"Center", Type:"Text"},
+                ]
+            }
+            const container = $("#ib_csi3")[0];
+            createIBSheet2(container,'myShee_csi3','100%','340px');
+            IBS_InitSheet(myShee_csi3,initData);
+            myShee_csi3.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            myShee_csi3.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                myShee_csi3.SetColWidth("sTitle", 100);
+            } else {
+                myShee_csi3.FitColWidth("7|7|13|37|8|20|8");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"",
+                    2:"341",
+                    3:"Global",
+                    4:"",
+                    5:"진행중",
+                    6:"2020-01-01 ~ 2020-10-10",
+                    7:"Y",
+                },{
+                    1:"",
+                    2:"",
+                    3:"Organization",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                }
+            ]
+        }
+    };
+    IB_csi3.initialize();
+
+});
+</script>
+<div class="wrap">
+    <!-- s : header -->
+    <header>
+        <div class="header">
+            <h1 class="header_logo">
+                <a href="#"><span class="blind">tradeKorea Admin</span></a>
+            </h1>
+            <ul class="header_util">
+                <li><button type="button" class="btn_header_menu">메뉴</button></li>
+                <li class="is_on"><a title="알림" href="#"><span>99</span></a></li>
+                <li class="is_on"><a title="메모" href="#"><span>4</span></a></li>
+                <li class=""><a title="게시판" href="#"><span>0</span></a></li>
+                <li><a title="내정보" href="#"></a></li>
+                <li class="logout"><a title="로그아웃" href="#">Logout</a></li>
+            </ul>
+            <div class="alarm">
+                <ul class="alarm_wrap">
+                    <!-- is_off : 확인 후, is_open : 자세한 내용 열기 -->
+                    <li class="alarm_list is_off">
+                        <div class="alarm_tag">해외비즈니스매칭</div>
+                        <div class="alarm_tit">MORNING GLORY CORP 매칭 건이 있습니다. 해외비즈니스매칭 MORNING GLORY CORP 매칭 건이 있습니다.</div>
+                        <div class="alarm_time">2021-07-21 11:01</div>
+                        <div class="alarm_box">
+                            <div class="alarm_txt">관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요.</div>
+                            <button class="btn_alarm_drop" title="열기"></button>
+                        </div>
+                        <button class="btn_alarm"></button>
+                    </li>
+                    <li class="alarm_list">
+                        <div class="alarm_tag">해외비즈니스매칭</div>
+                        <div class="alarm_tit">MORNING GLORY CORP</div>
+                        <div class="alarm_time">2021-07-21 11:01</div>
+                        <div class="alarm_box">
+                            <div class="alarm_txt">관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요.</div>
+                            <button class="btn_alarm_drop" title="열기"></button>
+                        </div>
+                        <button class="btn_alarm"></button>
+                    </li>
+                    <li class="alarm_list is_off">
+                        <div class="alarm_tag">해외비즈니스매칭</div>
+                        <div class="alarm_tit">MORNING GLORY CORP 매칭 건이 있습니다. 해외비즈니스매칭 MORNING GLORY CORP 매칭 건이 있습니다.</div>
+                        <div class="alarm_time">2021-07-21 11:01</div>
+                        <div class="alarm_box">
+                            <div class="alarm_txt">관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요.</div>
+                            <button class="btn_alarm_drop" title="열기"></button>
+                        </div>
+                        <button class="btn_alarm"></button>
+                    </li>
+                </ul>
+            </div>
+            <div class="header_menu">
+                <ul>
+                    <li><a href="#">메일 (단건)</a></li>
+                    <li><a href="#">My Mailer (대량메일)</a></li>
+                    <li><a href="#">DataStory (통계)</a></li>
+                    <li><a href="#">Wiselog (통계)</a></li>
+                    <li><a href="#">Wisenut (검색엔진 모니터링)</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- e : header -->
+    <div class="container">
+    <div class="container_inner">
+        <!-- s : gnb -->
+        <div id="gnb" class="gnb">
+            <div class="gnb_inner">
+            <div class="gnb_wrap">
+                <div class="gnb_top">
+                    <button type="button" class="btn_menu_all" title="전체메뉴 열고닫기">
+                        <span class="btn_line"></span>
+                        <span class="btn_line"></span>
+                        <span class="btn_line"></span>
+                    </button>
+                    <button type="button" class="btn_menu_open" title="열기"></button>
+                    <button type="button" class="btn_menu_close" title="닫기"></button>
+                </div>
+                <div class="gnb_box">
+                    <ul>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>고객서비스</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-ADM-21000_new.html">고객</a></li>
+                                <li><a href="PG-TRK-ADM-22000.html">블랙리스트</a></li>
+                                <li><a href="PG-TRK-ADM-23000.html">미니 사이트</a></li>
+                                <li><a href="PG-TRK-ADM-24000.html">뉴스레터</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>상품 관리</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-ADM-31200_new.html">상품 승인</a></li>
+                                <li><a href="PG-TRK-ADM-31000_new.html">상품 조회</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>주문 관리</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>주문</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-ADM-41100.html">주문/계약</a></li>
+                                        <li><a href="PG-TRK-ADM-41200.html">취소/환불</a></li>
+                                        <li><a href="PG-TRK-ADM-41300.html">소액결제상품</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>소액결제</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-ADM-42100.html">KRP 계약</a></li>
+                                        <li><a href="PG-TRK-ADM-42200.html">연동정보</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>인콰이어리관리</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-ADM-51000.html">인콰이어리</a></li>
+                                <li><a href="PG-TRK-ADM-52000.html">바잉오퍼</a></li>
+                                <li><a href="PG-TRK-ADM-53000.html">스팸 필터</a></li>
+                                <li><a href="PG-TRK-ADM-54000.html">스팸 인콰이어리</a></li>
+                                <li><a href="PG-TRK-ADM-55000.html">스팸대상</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>사이트 관리</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-ADM-61000.html">메인</a></li>
+                                <li><a href="PG-TRK-ADM-62000.html">카테고리 메인</a></li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>온라인 전시관</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-ADM-63100_new.html">공통사항</a></li>
+                                        <li><a href="PG-TRK-ADM-63200_new.html">메인 콘텐츠</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="PG-TRK-ADM-64000.html">핫 카테고리</a></li>
+                                <li><a href="PG-TRK-ADM-65000.html">금지 단어</a></li>
+                                <li><a href="PG-TRK-ADM-66000.html">SEO</a></li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>게시판</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-ADM-67100.html">FAQ</a></li>
+                                        <li><a href="PG-TRK-ADM-67200.html">C/S</a></li>
+                                        <li><a href="PG-TRK-ADM-67300.html">공지사항</a></li>
+                                        <li><a href="PG-TRK-ADM-67400.html">성공사례</a></li>
+                                        <li><a href="PG-TRK-ADM-67500.html">추출회원</a></li>
+                                        <li><a href="PG-TRK-ADM-67600.html">이달의 기업</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="PG-TRK-ADM-68000.html">사용법</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>시스템 관리</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-ADM-71000.html">사용자 관리</a></li>
+                                <li><a href="PG-TRK-ADM-72000.html">메일 템플릿</a></li>
+                                <li><a href="PG-TRK-ADM-73000.html">카테고리 관리</a></li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>통계</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-ADM-74100.html">상품</a></li>
+                                        <li><a href="PG-TRK-ADM-74200.html">회원</a></li>
+                                        <li><a href="PG-TRK-ADM-74300.html">방문자</a></li>
+                                        <li><a href="PG-TRK-ADM-74400.html">인콰이어리</a></li>
+                                        <li><a href="PG-TRK-ADM-74500.html">바잉오퍼</a></li>
+                                        <li><a href="PG-TRK-ADM-74600.html">미니 사이트</a></li>
+                                        <li><a href="PG-TRK-ADM-74700.html">주간 보고서</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="sitemap">
+            <ul class="sitemap_container">
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">고객서비스</strong>
+                    <ul>
+                        <li><a href="PG-TRK-ADM-21000_new.html">고객</a></li>
+                        <li><a href="PG-TRK-ADM-22000.html">블랙리스트</a></li>
+                        <li><a href="PG-TRK-ADM-23000.html">미니 사이트</a></li>
+                        <li><a href="PG-TRK-ADM-24000.html">뉴스레터</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">상품관리</strong>
+                    <ul>
+                        <li><a href="PG-TRK-ADM-31200_new.html">상품 승인</a></li>
+                        <li><a href="PG-TRK-ADM-31000_new.html">상품 조회</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">주문관리</strong>
+                    <ul>
+                        <li><a href="#">주문</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-ADM-41100.html">주문/계약</a></li>
+                                <li><a href="PG-TRK-ADM-41200.html">취소/환불</a></li>
+                                <li><a href="PG-TRK-ADM-41300.html">소액결제상품</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">소액결제</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-ADM-42100.html">KRP 계약</a></li>
+                                <li><a href="PG-TRK-ADM-42200.html">연동정보</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">인콰이어리관리</strong>
+                    <ul>
+                        <li><a href="PG-TRK-ADM-51000.html">인콰이어리</a></li>
+                        <li><a href="PG-TRK-ADM-52000.html">바잉오퍼</a></li>
+                        <li><a href="PG-TRK-ADM-53000.html">스팸 필터</a></li>
+                        <li><a href="PG-TRK-ADM-54000.html">스팸 인콰이어리</a></li>
+                        <li><a href="PG-TRK-ADM-55000.html">스팸대상</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">사이트 관리</strong>
+                    <ul>
+                        <li><a href="PG-TRK-ADM-61000.html">메인</a></li>
+                        <li><a href="PG-TRK-ADM-62000.html">카테고리 메인</a></li>
+                        <li><a href="PG-TRK-ADM-63100_new.html">온라인 전시관</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-ADM-63100_new.html">공통사항</a></li>
+                                <li><a href="PG-TRK-ADM-63200_new.html">메인 콘텐츠</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="PG-TRK-ADM-64000.html">핫 카테고리</a></li>
+                        <li><a href="PG-TRK-ADM-65000.html">금지 단어</a></li>
+                        <li><a href="PG-TRK-ADM-66000.html">SEO</a></li>
+                        <li><a href="PG-TRK-ADM-67100.html">게시판</a></li>
+                        <li><a href="PG-TRK-ADM-68000.html">사용법</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">시스템 관리</strong>
+                    <ul>
+                        <li><a href="PG-TRK-ADM-71000.html">사용자 관리</a></li>
+                        <li><a href="PG-TRK-ADM-72000.html">메일 템플릿</a></li>
+                        <li><a href="PG-TRK-ADM-73000.html">카테고리 관리</a></li>
+                        <li><a href="PG-TRK-ADM-74100.html">통계</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-ADM-74100.html">상품</a></li>
+                                <li><a href="PG-TRK-ADM-74200.html">회원</a></li>
+                                <li><a href="PG-TRK-ADM-74300.html">방문자</a></li>
+                                <li><a href="PG-TRK-ADM-74400.html">인콰이어리</a></li>
+                                <li><a href="PG-TRK-ADM-74500.html">바잉오퍼</a></li>
+                                <li><a href="PG-TRK-ADM-74600.html">미니 사이트</a></li>
+                                <li><a href="PG-TRK-ADM-74700.html">주간 보고서</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- e : gnb -->
+        <div class="contents_wrap">
+            <!-- s : contents -->
+            <div class="contents contents_v1">
+                <div class="page_head">
+                    <div class="page_title">메뉴관리</div>
+                    <ul class="location">
+                        <li><a href="#" class="location_list">홈</a></li>
+                        <li><a href="#" class="location_list">사이트 관리</a></li>
+                        <li><a href="#" class="location_list">온라인전시관</a></li>
+                        <li><span class="location_list">메뉴관리</span></li>
+                    </ul>
+                </div>
+                <div class="form1 form1th form1td text-left">
+                    <table>
+                        <colgroup>
+                            <col style="width:80px;">
+                            <col style="width:auto">
+                            <col style="width:80px;">
+                            <col style="width:auto">
+                            <col style="width:80px;">
+                            <col style="width:auto">
+                            <col style="width:80px;">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>전시유형</th>
+                                <td colspan="3">
+                                    <div class="radio_box">
+                                        <input type="radio" id="radio1" name="radio_group1" value="" checked="checked">
+                                        <label for="radio1">전체</label>
+                                        <input type="radio" id="radio2" name="radio_group1" value="">
+                                        <label for="radio2">Global</label>
+                                        <input type="radio" id="radio3" name="radio_group1" value="">
+                                        <label for="radio3">Best selling</label>
+                                        <input type="radio" id="radio4" name="radio_group1" value="">
+                                        <label for="radio4">Theme</label>
+                                        <input type="radio" id="radio5" name="radio_group1" value="">
+                                        <label for="radio5">Organization</label>
+                                    </div>
+                                </td>
+                                <th>진행상태</th>
+                                <td>
+                                    <div class="select_box">
+                                        <select name="select1">
+                                            <option value="01">준비</option>
+                                            <option value="02">진행중</option>
+                                            <option value="03">종료</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th>노출여부</th>
+                                <td>
+                                    <div class="select_box">
+                                        <select name="select1">
+                                            <option value="">선택</option>
+                                            <option value="01">Y</option>
+                                            <option value="02">N</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>카테고리</th>
+                                <td colspan="3">
+                                    <div class="f0">
+                                        <div class="select_box dpoinline mr10" style="width: calc((100% - 20px) / 3);">
+                                            <select name="select1">
+                                                <option value="">1차 선택</option>
+                                            </select>
+                                        </div>
+                                        <div class="select_box dpoinline mr10" style="width: calc((100% - 20px) / 3);">
+                                            <select name="select1">
+                                                <option value="">2차 선택</option>
+                                            </select>
+                                        </div>
+                                        <div class="select_box dpoinline" style="width: calc((100% - 20px) / 3);">
+                                            <select name="select1">
+                                                <option value="">3차 선택</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>전시관검색</th>
+                                <td colspan="3">
+                                    <div class="f0">
+                                        <div class="select_box" style="width: 41%;">
+                                            <select name="select1">
+                                                <option value="01">제목</option>
+                                                <option value="02">키워드</option>
+                                            </select>
+                                        </div>
+                                        <input type="text" id="" name="" value="" style="width: calc(59% - 10px); margin-left: 10px;">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>기간검색</th>
+                                <td colspan="7">
+                                    <div class="f0">
+                                        <div class="select_box" style="display: inline-block; width: 220px; margin-right: 10px;">
+                                            <select name="select1">
+                                                <option value="01">전시기간</option>
+                                                <option value="02">등록일</option>
+                                            </select>
+                                        </div>
+                                        <div class="datepicker_boxfitday6" style="display: inline-block; width: calc(100% - 230px);">
+                                            <div class="datepicker_box">
+                                                <input type="text" id="" name="" class="datepicker" readonly="readonly">
+                                                <em class="cn1">~</em>
+                                                <input type="text" id="" name="" class="datepicker" readonly="readonly">
+                                            </div>
+                                            <div class="btn_group1">
+                                                <a href="#" class="btn_d1">전체</a>
+                                                <a href="#" class="btn_d1">1일</a>
+                                                <a href="#" class="btn_d1">7일</a>
+                                                <a href="#" class="btn_d1">30일</a>
+                                                <a href="#" class="btn_d1">90일</a>
+                                                <a href="#" class="btn_d1">1년</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="search_button mt10 mb30">
+                    <a href="#" id="btn_clear" class="btn_s1" title="검색초기화">초기화</a>
+                    <a href="#" id="btn_search" class="btn_s1" title="검색" >검색</a>
+                </div>
+                <section class="col_group">
+                    <div class="colv3_1 f0">
+                        <div class="width_32p">
+                            <div class="mb10">
+                                <div class="page_subtitle">Category Depth1</div>
+                                <div class="search_alone f_r">
+                                    <button type="button" class="sb3_plus">추가</button>
+                                </div>
+                            </div>
+                            <div class="category2">
+                                <ul>
+                                    <li>All</li>
+                                    <li>Category1 (10)</li>
+                                    <li>Category2 (5)</li>
+                                    <li class="is_active">Category3 (0)</li>
+                                    <li>Category4 (0)</li>
+                                    <li>Category5 (0)</li>
+                                    <li class="is_off">Category6 (0)</li>
+                                    <li>Category7 (0)</li>
+                                    <li>Category8 (0)</li>
+                                    <li>Category9 (0)</li>
+                                </ul>
+                            </div>
+                            <div class="mt10">
+                                <em class="cn0 mr5">위치이동</em>
+                                <div class="btn_group1">
+                                    <a href="#" class="btn_move_upup3" title="move up">↑↑</a>
+                                    <a href="#" class="btn_move_up3 ml5" title="move up">↑</a>
+                                    <a href="#" class="btn_move_down3 ml5" title="move down">↓</a>
+                                    <a href="#" class="btn_move_downdown3 ml5" title="move down">↓↓</a>
+                                    <a href="#" class="btn_d2 ml5">저장</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="width_32p mr2p ml2p">
+                            <div class="mb10">
+                                <div class="page_subtitle">Category Depth2</div>
+                                <div class="search_alone f_r">
+                                    <button type="button" class="sb3_plus">추가</button>
+                                </div>
+                            </div>
+                            <div class="category2">
+                                <ul>
+                                    <li>All</li>
+                                    <li>Category1 (10)</li>
+                                    <li>Category2 (5)</li>
+                                    <li class="is_active">Category3 (0)</li>
+                                    <li>Category4 (0)</li>
+                                    <li>Category5 (0)</li>
+                                    <li class="is_off">Category6 (0)</li>
+                                    <li>Category7 (0)</li>
+                                    <li>Category8 (0)</li>
+                                    <li>Category9 (0)</li>
+                                </ul>
+                            </div>
+                            <div class="mt10">
+                                <em class="cn0 mr5">위치이동</em>
+                                <div class="btn_group1">
+                                    <a href="#" class="btn_move_upup3" title="move up">↑↑</a>
+                                    <a href="#" class="btn_move_up3 ml5" title="move up">↑</a>
+                                    <a href="#" class="btn_move_down3 ml5" title="move down">↓</a>
+                                    <a href="#" class="btn_move_downdown3 ml5" title="move down">↓↓</a>
+                                    <a href="#" class="btn_d2 ml5">저장</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="width_32p">
+                            <div class="mb10">
+                                <div class="page_subtitle">Category Depth3</div>
+                                <div class="search_alone f_r">
+                                    <button type="button" class="sb3_plus">추가</button>
+                                </div>
+                            </div>
+                            <div class="category2">
+                                <ul>
+                                    <li>All</li>
+                                    <li>Category1 (10)</li>
+                                    <li>Category2 (5)</li>
+                                    <li class="is_active">Category3 (0)</li>
+                                    <li>Category4 (0)</li>
+                                    <li>Category5 (0)</li>
+                                    <li class="is_off">Category6 (0)</li>
+                                    <li>Category7 (0)</li>
+                                    <li>Category8 (0)</li>
+                                    <li>Category9 (0)</li>
+                                </ul>
+                            </div>
+                            <div class="mt10">
+                                <em class="cn0 mr5">위치이동</em>
+                                <div class="btn_group1">
+                                    <a href="#" class="btn_move_upup3" title="move up">↑↑</a>
+                                    <a href="#" class="btn_move_up3 ml5" title="move up">↑</a>
+                                    <a href="#" class="btn_move_down3 ml5" title="move down">↓</a>
+                                    <a href="#" class="btn_move_downdown3 ml5" title="move down">↓↓</a>
+                                    <a href="#" class="btn_d2 ml5">저장</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colv3_1">
+                        <div class="page_subtitle mb10">카테고리 정보</div>
+                        <div class="form1 form1th form1td2 text-left">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 105px;">
+                                    <col style="width: auto">
+                                    <col style="width: 105px;">
+                                    <col style="width: auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>카테고리명 (국문)</th>
+                                        <td>
+                                            <input type="text" id="" name="" value="">
+                                        </td>
+                                        <th>카테고리 번호</th>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>카테고리명 (영문)</th>
+                                        <td>
+                                            <input type="text" id="" name="" value="">
+                                        </td>
+                                        <th>노출여부</th>
+                                        <td>
+                                            <div class="select_box">
+                                                <select name="select1">
+                                                    <option value="01">Y</option>
+                                                    <option value="01">N</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>설명</th>
+                                        <td colspan="3">
+                                            <textarea></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>상위 카테고리</th>
+                                        <td colspan="3"></td>
+                                    </tr>
+                                    <tr>
+                                        <th>등록일</th>
+                                        <td></td>
+                                        <th>업데이트일</th>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="search_button mt30">
+                            <a href="#" class="btn_s1">저장</a>
+                            <a href="#" class="btn_s1">삭제</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- e : contents -->
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">저작권정책</a></li>
+            </ul>
+            <p class="footer_copy">Copyright ⓒ 2008 - 2021 KITA, All rights reserved</p>
+        </div>
+    </footer>
+</div>
+<!-- script -->
+<script type="text/javascript" src="../js/header2021.js"></script>
+<script type="text/javascript" src="../js/common2021.js"></script>
+</body>
+</html>
