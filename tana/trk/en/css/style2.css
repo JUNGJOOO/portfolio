@@ -1,0 +1,243 @@
+/* ====================	PG-TRK-EN-0150.html 와 PG-TRK-EN-6500.html에만 해당 ==================== */
+
+/* ==================== gauge ==================== */
+.gauge                                              { margin-bottom: 100px;}
+.gauge .gauge_inner                                 { position: relative; width: 1440px; height: 100%; margin: 0 auto;}
+.gauge .gauge_tit                                   { display: block; padding: 130px 0 40px; font-size:40px; font-weight: 700; text-align: center;}
+.gauge .gauge_visual                                { position: relative; }
+.gauge .gauge_visual_bg                             { display: block; position: relative; width: 100%; height: 700px; background: url(../images/gauge_banner.jpg) no-repeat center center / cover;}
+.gauge .gauge_visual .gauge_visual_box              { position: absolute; top: 50%; width: 100%; margin-top: -10px; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+.gauge .gauge_visual .gauge_visual_box .gauge_tit2  { margin-bottom: 20px; font-size: 50px; font-weight: 700; line-height: 1.3; color: #fff; text-align: left; word-break: break-word; text-shadow: 0 0 10px rgba(0,0,0,0.7);}
+.gauge .gauge_visual .gauge_visual_box .gauge_subtit{ font-size: 20px; font-weight: 500; line-height: 1.5; color: #fff; word-break: break-word; text-shadow: 0 0 3px rgb(0,0,0);}
+.gauge .gauge_item1                                 { padding: 35px 0; background-color: #eaf8f7; text-align: center; }
+.gauge .gauge_item1 p                               { font-size: 20px;}
+.gauge .gauge_item2                                 { font-size: 0;}
+.gauge .gauge_item2 > li                            { display: inline-block; width: calc((100% - 160px) / 3);}
+.gauge .gauge_item2 > li + li                       { margin-left: 80px;}
+.gauge .gauge_item2 > li img                        { display: block; width: 100%;}
+.gauge .gauge_item3                                 { padding: 45px 0 60px; background-color: #eaf8f7;}
+.gauge .gauge_item3 p                               { display: block; margin-bottom: 10px; font-size: 24px; font-weight: 700; color: #30beb2;}
+.gauge .gauge_item3 p em                            { font-size: 20px; font-weight: 700; color: #30beb2;}
+.gauge .gauge_item3 ul                              { padding: 20px 25px; background-color: #fff; border: 1px solid #e3f3f2; }
+.gauge .gauge_item3 ul li                           { display: block;}
+.gauge .gauge_bullet                                { font-size: 0;}
+.gauge .gauge_bullet > li                           { display: inline-block; position: relative; width: calc((100% - 130px)/2); margin-top: 30px;}
+.gauge .gauge_bullet > li::after                    { display: block; content: ''; clear: both;}
+.gauge .gauge_bullet > li:nth-child(2n)             { margin-left: 130px;}
+.gauge .gauge_bullet > li span                      { display: inline-block; font-size: 20px;}
+.gauge .gauge_bullet > li a                         { float: right; margin-top: 3px; font-size: 18px; font-weight: 500; color: #30beb2; vertical-align: top;}
+
+
+/* ==================== delivery ==================== */
+.delivery                                       { overflow: hidden;}
+.delivery .delivery_inner                       { position: relative; width: 1440px; height: 100%; margin: 0 auto;}
+.delivery .delivery_visual                      { display: block; position: relative; width: 100%; height: 900px; background: url(../images/delivery_bg1.png) no-repeat center center / cover;}
+.delivery .delivery_tit                         { display:block; width: 100%; margin: 30px 0; font-size: 40px; font-weight: 700; color: #30beb2;}
+.delivery .delivery_tit *                       { font-size: 40px; font-weight: 700;}
+.delivery_itme1                                 { position: relative; }
+.delivery_itme1 .delivery_itme1_bg              { display: block; width: 100%; height: 565px; background: url(../images/delivery_bg2.png) no-repeat center center / cover}
+.delivery_itme1 .delivery_itme1_box             { display: block; position: absolute; top: 0; width: 100%; height: 100%;}
+.delivery_itme1 .delivery_itme1_txt             { position: relative; top: 10%; left: 0; padding: 20px 100px 20px 30px; background: linear-gradient(90deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%); font-size: 24px; font-weight: 500; color: #0e376c;}
+.delivery_item2                                 { position: relative;}
+.delivery_item2 .delivery_item2_bg              { display: block; position: relative; width: 100%; height: 540px; background: url(../images/delivery_bg3.png) no-repeat center center / cover;}
+.delivery_item2 .delivery_item2_box             { display: block; position: absolute; top: 50%; left: 50%; width: 100%; margin-top: -55px; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
+.delivery_item2 .delivery_item2_box > div       { font-size: 0; text-align: center;}
+.delivery_item2 .delivery_item2_box > div *     { display: inline-block; vertical-align: bottom;}
+.delivery_item2 .delivery_item2_tit             { padding: 6px 20px; background-color: #30beb2; font-size: 30px; font-weight: 700; color: #fff;}
+.delivery_item2 .delivery_item2_per             { margin: 0 30px; font-size: 200px; line-height: 1; font-weight: 700; color: #f94f73;}
+.delivery_itme3                                 { position: relative; }
+.delivery_itme3 .delivery_item3_bg              { display: block; position: relative; width: 100%; height: 880px; background: url(../images/delivery_bg5.png) no-repeat center center / cover;}
+.delivery_itme3 .delivery_itme3_box             { width: 100%; position: absolute; left: 50%; bottom: 15%; -webkit-transform: translateX(-50%); transform: translateX(-50%);}
+.delivery_itme3 .delivery_itme3_box ul          { font-size: 0;}
+.delivery_itme3 .delivery_itme3_box ul li       { display: inline-block; width: calc((100% - 240px) / 3);}
+.delivery_itme3 .delivery_itme3_box ul li + li  { margin-left: 120px;}
+.delivery_itme3 .delivery_itme3_box ul li a     { display: block; padding: 20px 0; background-color: #30beb2; border-radius: 4px; font-size: 24px; color: #fff; text-align: center;}
+.delivery_process ol                            { position: relative; padding-left: 100px; margin-bottom: 50px; }
+.delivery_process ol::before                    { display: block; content: ''; position: absolute; top: 25px; left: 18px; width: 25px; height: 87%; background-color: #d6f2f0;}
+.delivery_process ol > li                       { position: relative;}
+.delivery_process ol > li + li                  { margin-top: 60px;}
+.delivery_process ol > li::before               { display: block; content:''; position:absolute; top:0; left: -100px; width: 60px; height: 60px; border-radius:100%; background-color:#cedbda; }
+.delivery_process dl dt                         { padding: 15px 0 10px; font-size: 20px; font-weight: 700;}
+.delivery_process dl dd                         { font-size: 18px;}
+.delivery_process dl dd p                       { font-size: 18px;}
+.delivery_process dl .bullet5 > li::before      { top: 4px;}
+.delivery_process dl .bullet5 > li              { font-size: 14px;}
+.delivery_process dl .bullet5 > li + li         { margin-top: 5px;}
+.delivery_process ol > li.is_active::before     { background-color: #30beb2;}
+.delivery_process ol > li.is_active dl          { opacity: 1;}
+.delivery_process_step1 dl                      { animation: delstep1 30s infinite;}
+.delivery_process_step2 dl                      { animation: delstep2 30s infinite;}
+.delivery_process_step3 dl                      { animation: delstep3 30s infinite;}
+.delivery_process_step4 dl                      { animation: delstep4 30s infinite;}
+.delivery_process_step5 dl                      { animation: delstep5 30s infinite;}
+.delivery_process_step1::before                 { animation: delstep1_circle 30s infinite;}
+.delivery_process_step2::before                 { animation: delstep2_circle 30s infinite;}
+.delivery_process_step3::before                 { animation: delstep3_circle 30s infinite;}
+.delivery_process_step4::before                 { animation: delstep4_circle 30s infinite;}
+.delivery_process_step5::before                 { animation: delstep5_circle 30s infinite;}
+
+@keyframes delstep1 {
+    0%   { opacity: 0.3;}
+    1%   { opacity: 1;}
+    18%  { opacity: 1;}
+    19%  { opacity: 0.3;}
+    100% { opacity: 0.3;}
+}
+@keyframes delstep2 {
+    0%   { opacity: 0.3;}
+    20%  { opacity: 0.3;}
+    21%  { opacity: 1;}
+    38%  { opacity: 1;}
+    39%  { opacity: 0.3;}
+    100% { opacity: 0.3;}
+}
+@keyframes delstep3 {
+    0%   { opacity: 0.3;}
+    40%  { opacity: 0.3;}
+    41%  { opacity: 1;}
+    58%  { opacity: 1;}
+    59%  { opacity: 0.3;}
+    100% { opacity: 0.3;}
+}
+@keyframes delstep4 {
+    0%   { opacity: 0.3;}
+    60%  { opacity: 0.3;}
+    61%  { opacity: 1;}
+    78%  { opacity: 1;}
+    79%  { opacity: 0.3;}
+    100% { opacity: 0.3;}
+}
+@keyframes delstep5 {
+    0%   { opacity: 0.3;}
+    80%  { opacity: 0.3;}
+    81%  { opacity: 1;}
+    98%  { opacity: 1;}
+    99%  { opacity: 0.3;}
+    100% { opacity: 0.3;}
+}
+@keyframes delstep1_circle {
+    0%   { background-color: #cedbda; }
+    1%   { background-color: #30beb2; }
+    18%  { background-color: #30beb2; }
+    19%  { background-color: #cedbda; }
+    100% { background-color: #cedbda; }
+}
+@keyframes delstep2_circle {
+    0%   { background-color: #cedbda; }
+    20%  { background-color: #cedbda; }
+    21%  { background-color: #30beb2; }
+    38%  { background-color: #30beb2; }
+    39%  { background-color: #cedbda; }
+    100% { background-color: #cedbda; }
+}
+@keyframes delstep3_circle {
+    0%   { background-color: #cedbda; }
+    40%  { background-color: #cedbda; }
+    41%  { background-color: #30beb2; }
+    58%  { background-color: #30beb2; }
+    59%  { background-color: #cedbda; }
+    100% { background-color: #cedbda; }
+}
+@keyframes delstep4_circle {
+    0%   { background-color: #cedbda; }
+    60%  { background-color: #cedbda; }
+    61%  { background-color: #30beb2; }
+    78%  { background-color: #30beb2; }
+    79%  { background-color: #cedbda; }
+    100% { background-color: #cedbda; }
+}
+@keyframes delstep5_circle {
+    0%   { background-color: #cedbda; }
+    80%  { background-color: #cedbda; }
+    81%  { background-color: #30beb2; }
+    98%  { background-color: #30beb2; }
+    99%  { background-color: #cedbda; }
+    100% { background-color: #cedbda; }
+}
+
+
+
+/* 1440px 이하 공통*/
+@media screen and (max-width: 1440px) {
+    /* ==================== gauge ==================== */
+    .gauge .gauge_inner                                 { width: 90%;}
+    .gauge .gauge_visual_bg                             { height: 0; padding-top: 54%;}
+    .gauge .gauge_tit                                   { padding: 100px 0 30px; font-size: 36px;}
+    .gauge .gauge_visual .gauge_visual_box .gauge_tit2  { font-size: 40px;}
+    .gauge .gauge_visual .gauge_visual_box .gauge_subtit{ font-size: 16px;}
+    .gauge .gauge_item1 p                               { font-size: 18px;}
+    .gauge .gauge_item2                                 { width: 80%; margin: 0 auto;}
+    .gauge .gauge_item3                                 { padding: 30px 0 50px;}
+    .gauge .gauge_bullet > li span                      { font-size: 18px;}
+    .gauge .gauge_bullet > li a                         { font-size: 16px;}
+
+    /* ==================== delivery ==================== */
+    .delivery .delivery_inner                                   { width: 90%;}
+    .delivery .delivery_visual                                  { height: 0; padding-top: 50%;}
+    .delivery .delivery_tit                                     { font-size: 34px;}
+    .delivery .delivery_tit *                                   { font-size: 34px;}
+    .delivery_itme1 .delivery_itme1_bg                          { height: 0; padding-top: 35%;}
+    .delivery_itme1 .delivery_itme1_txt                         { font-size: 20px;}
+    .delivery_item2 .delivery_item2_bg                          { height: 0; padding-top: 35%;}
+    .delivery_item2 .delivery_item2_box                         { margin-top: -20px;}
+    .delivery_item2 .delivery_item2_box .delivery_item2_area    { display: inline-block; width: 330px; margin-right: 50px;}
+    .delivery_item2 .delivery_item2_box .delivery_item2_area > *{ display: block;}
+    .delivery_item2 .delivery_item2_box > div img               { display: inline-block; width: 160px;}
+    .delivery_item2 .delivery_item2_per                         { margin: 0; font-size: 140px; }
+    .delivery_item2 .delivery_item2_tit                         { font-size: 22px;}
+    .delivery_itme3 .delivery_item3_bg                          { height: 0; padding-top: 48%;}
+    .delivery_itme3 .delivery_itme3_box ul li                   { width: calc((100% - 60px) / 3);}
+    .delivery_itme3 .delivery_itme3_box ul li + li              { margin-left: 30px;}
+    .delivery_itme3 .delivery_itme3_box ul li a                 { padding: 17px 0; font-size: 16px;}
+    .delivery_process dl dt                                     { font-size: 18px;}
+    .delivery_process dl dd p                                   { font-size: 16px;}
+}
+
+
+/* 모바일만 */
+@media screen and (max-width: 800px) {
+    /* ==================== gauge ==================== */
+    .gauge                                               { margin-bottom: 50px;}
+    .gauge .gauge_inner                                  { width: calc(100% - 40px);}
+    .gauge .gauge_visual_bg                              { padding-top: 80%;}
+    .gauge .gauge_visual .gauge_visual_box .gauge_tit2   { margin-bottom: 10px; font-size: 30px;}
+    .gauge .gauge_visual .gauge_visual_box .gauge_subtit { font-size: 14px;}
+    .gauge .gauge_tit                                    { padding: 50px 0 20px; font-size: 20px;}
+    .gauge .gauge_item1                                  { padding: 15px 0;}
+    .gauge .gauge_item1 p                                { font-size: 14px;}
+    .gauge .gauge_item2                                  { width: 100%;}
+    .gauge .gauge_item2 > li                             { display: block; width: 100%;}
+    .gauge .gauge_item2 > li + li                        { margin: 20px 0 0 0;}
+    .gauge .gauge_item3                                  { width: calc(100% - 40px); margin: 0 auto; padding: 15px 0 20px;}
+    .gauge .gauge_item3 p                                { font-size: 16px;}
+    .gauge .gauge_item3 p em                             { font-size: 14px;}
+    .gauge .gauge_item3 ul                               { padding: 15px;}
+    .gauge .gauge_bullet > li                            { display: block; width: 100%; margin-top: 20px;}
+    .gauge .gauge_bullet > li:nth-child(2n)              { margin-left: 0;}
+    .gauge .gauge_bullet > li span                       { font-size: 14px;}
+    .gauge .gauge_bullet > li a                          { font-size: 12px;}
+    .gauge .form2                                        { overflow-x: auto; width: 100%; height: 100%;}
+    .gauge .form2 table                                  { table-layout: fixed; width: 800px;}
+
+    /* ==================== delivery ==================== */
+    .delivery .delivery_inner                                { width: calc(100% - 40px); }
+    .delivery .delivery_tit                                  { margin: 25px 0; font-size: 20px;}
+    .delivery .delivery_tit *                                { font-size: 20px;}
+    .delivery_itme1 .delivery_itme1_txt                      { width: 100%; padding: 7px 10px; font-size: 14px;}
+    .delivery_item2 .delivery_item2_bg                       { padding-top: 40%;}
+    .delivery_item2 .delivery_item2_box                      { margin-top: 0;}
+    .delivery_item2 .delivery_item2_box .delivery_item2_area { width: 200px; margin-right: 10px; }
+    .delivery_item2 .delivery_item2_tit                      { font-size: 14px;}
+    .delivery_item2 .delivery_item2_per                      { font-size: 80px;}
+    .delivery_item2 .delivery_item2_box > div img            { width: 80px;}
+    .delivery_itme3 .delivery_itme3_box                      { top: 50%; bottom: auto; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
+    .delivery_itme3 .delivery_item3_bg                       { padding-top: 60%;}
+    .delivery_itme3 .delivery_itme3_box ul li                { display: block; width: 100%;}
+    .delivery_itme3 .delivery_itme3_box ul li + li           { margin: 10px 0 0 0;}
+    .delivery_itme3 .delivery_itme3_box ul li a              { padding: 14px 0; font-size: 14px;}
+    .delivery_process dl dt                                  { padding: 8px 0 5px; font-size: 16px;}
+    .delivery_process dl dd p                                { font-size: 14px;}
+    .delivery_process ol                                     { padding-left: 50px;}
+    .delivery_process ol::before                             { width: 18px; left: 11px;}
+    .delivery_process ol > li::before                        { width: 40px; height: 40px; left: -50px;}
+}
