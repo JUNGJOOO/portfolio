@@ -1,0 +1,536 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Admin HTML LIST</title>
+<style type="text/css">
+	*   { font-family:dotum;font-size:16px; line-height: 1.3; color:#333;}
+	h1 {position:relative; font:bold 22px/26px Dotum;padding:10px;margin-bottom:10px;border-bottom:2px solid #666;}
+	h2 {font:bold 20px/24px Dotum;padding:30px 0 0 0;}
+	dt {margin:0;padding:10px 0;border-top:1px solid #666;}
+	dd {margin:0;padding:0;}
+    table *                 { font-size: 13px;}
+	.intro                  { position:absolute;top:0;right:0;width:500px;text-align:right;line-height:14px;color:#999;}
+	.menutree               { border-collapse:collapse;width:100%; margin-bottom: 100px;}
+	.menutree thead th      { background:#eee;}
+	.menutree th            { border:1px solid #999;padding:5px 0;vertical-align:top; font-weight:normal;}
+	.menutree tbody         { border-bottom:2px soild blue;margin-bottom:3px;}
+	.menutree tbody tr th,
+    .menutree tbody tr td   { text-align:left; font-weight:normal; padding-left:10px; vertical-align: middle;}
+	.menutree td            { border:1px solid #999;padding:5px 0;text-align:center;}
+	.menutree td.url        { text-align:left;padding-left:10px;}
+	.menutree td.url a      { line-height: 1.6;}
+    .dircttit{ float:left; border:none; } 
+	.tit    { background:#909090; color:#fff; }
+	.tit02 {background:#0e457a; color:#fff; }
+	.tit03  { color:#f00; }
+    .br     { height: 10px;}
+    .delete { background-color: #000;}
+    .later  { background-color: #ccc;}
+    .new    { background-color: #abd8b1;}
+    .not    { background-color: #444;}
+    .wow    { background-color: moccasin;}
+</style>
+</head>
+<body>
+<h1 class="dircttit">
+	TRK Admin HTML LIST
+</h1>
+<table class="menutree" summary="메뉴구조도">
+	<colgroup>
+		<col width="15%" /><!-- 1detph -->
+		<col width="15%" /><!-- 2detph -->
+		<col width="15%" />
+		<col width="15%" /><!-- 3detph -->
+		<col width="20%" /><!-- URL -->
+		<col width="" /><!-- 비고 -->
+	</colgroup>
+	<thead>
+		<tr>
+			<th>1depth</th>
+			<th colspan="2">2depth</th>
+			<th>3depth</th>
+			<th>URL</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+        <tr>
+			<th>main</th>
+			<th></th>
+			<th></th>
+			<th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-10000_main.html" target="_blank">PG-TRK-ADM-10000_main.html</a></td>
+			<td></td>
+		</tr>
+
+
+        
+        <!-- 고객서비스 -->
+        <tr>
+            <th colspan="6" class="br"></th>
+        </tr>
+        <tr>
+            <th colspan="6" class="tit02">고객서비스</th>
+        </tr>
+        <tr>
+            <th class="new">w : 1600px</th>
+            <th>고객</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-21000_new.html" target="_blank">PG-TRK-ADM-21000_new.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>블랙리스트</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-22000.html" target="_blank">PG-TRK-ADM-22000.html</a></td>
+			<td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>미니사이트</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-23000.html" target="_blank">PG-TRK-ADM-23000.html</a></td>
+			<td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>뉴스레터</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-24000.html" target="_blank">PG-TRK-ADM-24000.html</a></td>
+			<td></td>
+        </tr>
+
+
+
+
+        <!-- 상품관리 -->
+        <tr>
+            <th colspan="6" class="br"></th>
+        </tr>
+        <tr>
+            <th colspan="6" class="tit02">상품관리</th>
+        </tr>
+        <tr>
+            <th class="new">w : 1600px</th>
+            <th>상품승인</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-31200_new.html" target="_blank">PG-TRK-ADM-31200_new.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th class="new">w : 1600px</th>
+            <th>상품조회</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-31000_new.html" target="_blank">PG-TRK-ADM-31000_new.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>상품 상세페이지</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-31100.html" target="_blank">PG-TRK-ADM-31100.html</a></td>
+            <td></td>
+        </tr>
+
+
+
+
+
+
+
+
+
+        <!-- 주문관리 -->
+        <tr>
+            <th colspan="6" class="br"></th>
+        </tr>
+        <tr>
+            <th colspan="6" class="tit02">주문관리</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th rowspan="3">주문</th>
+            <th></th>
+            <th>주문/계약</th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-41100.html" target="_blank">PG-TRK-ADM-41100.html</a></td>
+			<td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th>취소/환불</th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-41200.html" target="_blank">PG-TRK-ADM-41200.html</a></td>
+			<td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th>소액결제 상품</th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-41300.html" target="_blank">PG-TRK-ADM-41300.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th rowspan="2">소액결제</th>
+            <th></th>
+            <th>KRP 계약</th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-42100.html" target="_blank">PG-TRK-ADM-42100.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th>연동정보</th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-42200.html" target="_blank">PG-TRK-ADM-42200.html</a></td>
+            <td></td>
+        </tr>
+
+
+
+
+        <!-- 인콰이어리관리 -->
+        <tr>
+            <th colspan="6" class="br"></th>
+        </tr>
+        <tr>
+            <th colspan="6" class="tit02">인콰이어리관리</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>인콰이어리</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-51000.html" target="_blank">PG-TRK-ADM-51000.html</a></td>
+			<td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th rowspan="2">바잉오퍼</th>
+            <th>검색리스트</th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-52000.html" target="_blank">PG-TRK-ADM-52000.html</a></td>
+			<td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>검색결과 상세</th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-52100.html" target="_blank">PG-TRK-ADM-52100.html</a></td>
+			<td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>스팸 필터</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-53000.html" target="_blank">PG-TRK-ADM-53000.html</a></td>
+			<td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>스팸 인콰이어리</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-54000.html" target="_blank">PG-TRK-ADM-54000.html</a></td>
+			<td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>스팸대상</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-55000.html" target="_blank">PG-TRK-ADM-55000.html</a></td>
+			<td></td>
+        </tr>
+
+
+
+        
+        <!-- 사이트 관리 -->
+        <tr>
+            <th colspan="6" class="br"></th>
+        </tr>
+        <tr>
+            <th colspan="6" class="tit02">사이트 관리</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>메인</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-61000.html" target="_blank">PG-TRK-ADM-61000.html</a></td>
+			<td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>카테고리 메인</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-62000.html" target="_blank">PG-TRK-ADM-62000.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th rowspan="2">온라인전시관</th>
+            <th>전시관 등록관리</th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-63100_new.html" target="_blank">PG-TRK-ADM-63100_new.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>메뉴관리</th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-63200_new.html" target="_blank">PG-TRK-ADM-63200_new.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>핫 카테고리</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-64000.html" target="_blank">PG-TRK-ADM-64000.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>금지 단어</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-65000.html" target="_blank">PG-TRK-ADM-65000.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>SEO</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-66000.html" target="_blank">PG-TRK-ADM-66000.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th rowspan="15">게시판</th>
+            <th></th>
+            <th rowspan="3">FAQ</th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-67100.html" target="_blank">PG-TRK-ADM-67100.html</a></td>
+            <td>목록</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-67110.html" target="_blank">PG-TRK-ADM-67110.html</a></td>
+            <td>상세보기</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-67120.html" target="_blank">PG-TRK-ADM-67120.html</a></td>
+            <td>등록, 수정하기</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th rowspan="4">C/S</th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-67200.html" target="_blank">PG-TRK-ADM-67200.html</a></td>
+            <td>목록</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-67210.html" target="_blank">PG-TRK-ADM-67210.html</a></td>
+            <td>상세보기</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-67220.html" target="_blank">PG-TRK-ADM-67210.html</a></td>
+            <td>상세보기 + 작성된 답변보기</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-67230.html" target="_blank">PG-TRK-ADM-67220.html</a></td>
+            <td>답변작성하기, 답변수정하기</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th rowspan="3">공지사항</th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-67300.html" target="_blank">PG-TRK-ADM-67300.html</a></td>
+            <td>조회</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-67310.html" target="_blank">PG-TRK-ADM-67310.html</a></td>
+            <td>상세보기</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-67320.html" target="_blank">PG-TRK-ADM-67320.html</a></td>
+            <td>등록, 수정하기</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th rowspan="3">성공스토리</th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-67400.html" target="_blank">PG-TRK-ADM-67400.html</a></td>
+            <td>목록</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-67410.html" target="_blank">PG-TRK-ADM-67410.html</a></td>
+            <td>상세보기</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-67420.html" target="_blank">PG-TRK-ADM-67420.html</a></td>
+            <td>등록, 수정하기</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th>회원추출</th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-67500.html" target="_blank">PG-TRK-ADM-67500.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th>이달의 정보</th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-67600.html" target="_blank">PG-TRK-ADM-67600.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th rowspan="3">사용법</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-68000.html" target="_blank">PG-TRK-ADM-68000.html</a></td>
+            <td>목록</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-68010.html" target="_blank">PG-TRK-ADM-68010.html</a></td>
+            <td>상세보기</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-68020.html" target="_blank">PG-TRK-ADM-68020.html</a></td>
+            <td>등록, 수정하기</td>
+        </tr>
+
+
+
+
+
+        <!-- 시스템 관리 -->
+        <tr>
+            <th colspan="6" class="br"></th>
+        </tr>
+        <tr>
+            <th colspan="6" class="tit02">시스템 관리</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th rowspan="2">사용자 관리</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-71000.html" target="_blank">PG-TRK-ADM-71000.html</a></td>
+            <td>목록</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-71010.html" target="_blank">PG-TRK-ADM-71010.html</a></td>
+            <td>상세보기</td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>메일 템플릿</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-72000.html" target="_blank">PG-TRK-ADM-72000.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>카테고리 관리</th>
+            <th></th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-73000.html" target="_blank">PG-TRK-ADM-73000.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th rowspan="8">통계</th>
+            <th>상품</th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-74100.html" target="_blank">PG-TRK-ADM-74100.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>회원</th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-74200.html" target="_blank">PG-TRK-ADM-74200.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>방문자</th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-74300.html" target="_blank">PG-TRK-ADM-74300.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>인콰이어리</th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-74400.html" target="_blank">PG-TRK-ADM-74400.html</a></td>
+            <td></tr>
+        </tr>
+        <tr>
+            <th></th>
+            <th>바잉오퍼</th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-74500.html" target="_blank">PG-TRK-ADM-74500.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>미니 사이트</th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-74600.html" target="_blank">PG-TRK-ADM-74600.html</a></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th></th>
+            <th>주간 보고서</th>
+            <th></th>
+            <td class="url"><a href="public_html/PG-TRK-ADM-74700.html" target="_blank">PG-TRK-ADM-74700.html</a></td>
+			<td></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
