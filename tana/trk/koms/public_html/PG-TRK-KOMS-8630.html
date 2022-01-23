@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>TadeKorea Koms</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="tadeKorea Koms">
+    <meta name="subject" content="tadeKorea Koms">
+    <meta name="keywords" content="Global, e-Marketplace, tadeKorea Koms, tradeKorea Management system">
+    <meta property="og:title" content="tadeKorea Koms">
+    <!-- css default -->
+    <link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/base_trkkoms.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui-tradekoms.css"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <!-- js ibsheet -->
+    <script type="text/javascript" src="../ibSheet/js/ibleaders.js"></script>
+    <script type="text/javascript" src="../ibSheet/js/ibsheetinfo.js"></script>
+    <script type="text/javascript" src="../ibSheet/js/ibsheet.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){
+    let IB1 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0, MergeSheet: msHeaderOnly},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"No|No",      SaveName:"1", Align:"Center", ColMerge:1, Type:"Text"},
+                    { Header:"회사|회사",   SaveName:"2", Align:"Left", ColMerge:1, Type:"Text", "Ellipsis":1},
+                    { Header:"금주|수량",   SaveName:"3", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"금주|금액",   SaveName:"4", Align:"Right", ColMerge:1, Type:"Number"},
+                    { Header:"전주|수량",   SaveName:"5", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"전주|금액",   SaveName:"6", Align:"Right", ColMerge:1, Type:"Number"},
+                    { Header:"누적|수량",   SaveName:"7", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"누적|금액",   SaveName:"8", Align:"Right", ColMerge:1, Type:"Number"},
+                ]
+            }
+            const container = $("#ib_container1")[0];
+            createIBSheet2(container,'mySheet1','100%','441px');
+            IBS_InitSheet(mySheet1,initData);
+            mySheet1.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet1.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheet1.SetColWidth("sTitle", 100);
+            } else {
+                mySheet1.FitColWidth("7|21|12|12|12|12|12|12");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"1",
+                    2:"Amazon",
+                    3:"0",
+                    4:"0.00",
+                    5:"0",
+                    6:"0.00",
+                    7:"8",
+                    8:"319.92",
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                    8:"",
+                }
+            ]
+        }
+    };
+    IB1.initialize();
+});
+</script>
+<div class="wrap">
+    <div class="container">
+    <div class="container_inner">
+        <div class="contents_wrap">
+        <!-- s : contents -->
+        <div class="contents">
+            <div class="page_head">
+                <div class="page_title">주간현황</div>
+            </div>
+            <div class="clearfix">
+                <div class="form1 text-left width_1160 f_l">
+                    <table>
+                        <colgroup>
+                            <col style="width:123px;">
+                            <col style="width:200px;">
+                            <col style="width:123px;">
+                            <col style="width:auto;">
+                            <col style="width:123px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>사업명</th>
+                                <td>
+                                    <div class="select_box">
+                                        <select name="select1">
+                                            <option value="">선택</option>
+                                            <option value="01">2021</option>
+                                            <option value="02">2021 K-ABC 프로그램</option>
+                                            <option value="03">2020 K-ABC 프로그램</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th>기준일(금주)</th>
+                                <td>
+                                    <div class="datepicker_boxfit">
+                                        <input type="text" id="" name="" class="datepicker">
+                                        <em class="cn1">~</em>
+                                        <input type="text" id="" name="" class="datepicker">
+                                    </div>
+                                </td>
+                                <th>기준일(전주)</th>
+                                <td>
+                                    <div class="datepicker_boxfit">
+                                        <input type="text" id="" name="" class="datepicker">
+                                        <em class="cn1">~</em>
+                                        <input type="text" id="" name="" class="datepicker">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="search_button f_r">
+                    <a href="#" id="btn_clear" class="btn_s1" title="검색초기화">초기화</a>
+                    <a href="#" id="btn_search" class="btn_s1" title="검색" >검색</a>
+                </div>
+            </div>
+            <div class="col_info">
+                <div class="form_head">
+                    <a href="#" class="btn_c1 f_r" download>Excel File</a>
+                </div>
+                <!-- ibsheet -->
+                <div class="ib_hover">
+                    <div id="ib_container1"></div>
+                </div>
+            </div>
+        </div>
+        <!-- e : contents -->
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">저작권정책</a></li>
+            </ul>
+            <p class="footer_copy">Copyright ⓒ 2008 - 2021 KITA, All rights reserved</p>
+        </div>
+    </footer>
+</div>
+<!-- script -->
+<script type="text/javascript" src="../js/header2021.js"></script>
+<script type="text/javascript" src="../js/common2021.js"></script>
+</body>
+</html>

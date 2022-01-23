@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>TadeKorea Koms</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="tadeKorea Koms">
+    <meta name="subject" content="tadeKorea Koms">
+    <meta name="keywords" content="Global, e-Marketplace, tadeKorea Koms, tradeKorea Management system">
+    <meta property="og:title" content="tadeKorea Koms">
+    <!-- css default -->
+    <link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/base_trkkoms.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui-tradekoms.css"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <!-- js ibsheet -->
+    <script src="../ibSheet/js/ibleaders.js"></script>
+    <script src="../ibSheet/js/ibsheetinfo.js"></script>
+    <script src="../ibSheet/js/ibsheet.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){ 
+    let IB1 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:4},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"",              SaveName:"1", Align:"Center", Type:"CheckBox"},
+                    { Header:"번호",          SaveName:"2", Align:"Center", Type:"Number"},
+                    { Header:"구분",          SaveName:"3", Align:"Center", Type:"Combo", ComboText:"자체인력|외부인력"},
+                    { Header:"통역원이름",   SaveName:"4", Align:"Center", Type:"Text"},
+                    { Header:"연락처",       SaveName:"5", Align:"Center", Type:"Text"},
+                    { Header:"이메일",       SaveName:"6", Align:"Center", Type:"Text"},
+                    { Header:"언어",          SaveName:"7", Align:"Center", Type:"Text"},
+                    { Header:"비고",          SaveName:"8", Align:"Center", Type:"Text"},
+                    { Header:"사용여부",      SaveName:"9", Align:"Center", Type:"Combo", ComboText:"사용|미사용"},
+                    { Header:"등록일시",      SaveName:"10", Align:"Center", Type:"Date", Format:"yyyy-MM-dd"},
+                ]
+            }
+            const container = $("#ib_container1")[0];
+            createIBSheet2(container,'mySheet1','100%','441px');
+            IBS_InitSheet(mySheet1,initData);
+            mySheet1.FitColWidth("5|8|9|9|10|17|7|16|9|10");
+            mySheet1.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet1.LoadSearchData(this.data,{
+                Sync:1
+            });
+        },
+        data:{
+            data:[
+                {
+                    1:"",
+                    2:"111111",
+                    3:"자체인력",
+                    4:"홍길동",
+                    5:"010-1234-5678",
+                    6:"",
+                    7:"KR", //글자색상 color:#0046ae
+                    8:"",
+                    9:"사용",
+                    10:"2021-07-21"
+                },{
+                    1:"",
+                    2:"111111",
+                    3:"자체인력",
+                    4:"홍길동",
+                    5:"010-1234-5678",
+                    6:"",
+                    7:"EN", //글자색상 color:#eabb00
+                    8:"",
+                    9:"사용",
+                    10:"2021-07-21"
+                },{
+                    1:"",
+                    2:"111111",
+                    3:"자체인력",
+                    4:"홍길동",
+                    5:"010-1234-5678",
+                    6:"",
+                    7:"CH", //글자색상 color:#ea1414
+                    8:"",
+                    9:"사용",
+                    10:"2021-07-21"
+                }
+            ]
+        }
+    };
+    IB1.initialize();
+});
+</script>
+<div class="wrap">
+    <div class="container">
+    <div class="container_inner">
+        <div class="contents_wrap">
+        <!-- s : contents -->
+        <div class="contents">
+            <div class="page_head">
+                <div class="page_title">통역원관리</div>
+            </div>
+            <div class="clearfix">
+                <div class="form1 text-left">
+                    <table>
+                        <colgroup>
+                            <col style="width:123px;">
+                            <col style="width:auto;">
+                            <col style="width:123px;">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>에이전시</th>
+                                <td>
+                                    <div class="select_box">
+                                        <select name="select1">
+                                            <option value="01">전체</option>
+                                            <option value="02">그린서비스 주식회사</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th>사용여부</th>
+                                <td>
+                                    <div class="radio_box">
+                                        <input type="radio" id="radio1" name="radio_group1" value="" checked="checked">
+                                        <label for="radio1">전체</label>
+                                        <input type="radio" id="radio2" name="radio_group1" value="">
+                                        <label for="radio2">사용</label>
+                                        <input type="radio" id="radio3" name="radio_group1" value="">
+                                        <label for="radio3">미사용</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>필터</th>
+                                <td colspan="3">
+                                    <div class="fjs">
+                                        <div class="radio_box width_250">
+                                            <input type="radio" id="radio4" name="radio_group2" value="" checked="checked">
+                                            <label for="radio4">통역원이름</label>
+                                            <input type="radio" id="radio5" name="radio_group2" value="">
+                                            <label for="radio5">연락처</label>
+                                        </div>
+                                        <input type="text" id="" name="" value="">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="search_button mt30">
+                    <a href="#" id="btn_clear" class="btn_s1" title="검색초기화">초기화</a>
+                    <a href="#" id="btn_search" class="btn_s1" title="검색" >검색</a>
+                </div>
+            </div>
+            <div class="col_info">
+                <div class="form_head">
+                    <div class="page_subtitle">통역원</div>
+                    <div class="f_r">
+                        <div class="select_box width_90">
+                            <select name="select_listnum">
+                                <option value="20">20개</option>
+                                <option value="30">30개</option>
+                                <option value="40">40개</option>
+                                <option value="50">50개</option>
+                                <option value="60">60개</option>
+                                <option value="70">70개</option>
+                                <option value="80">80개</option>
+                                <option value="90">90개</option>
+                                <option value="100">100개</option>
+                                <option value="300">300개</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ibsheet -->
+                <div class="ib_hover">
+                    <div id="ib_container1"></div>
+                </div>
+
+                <div class="search_button mt30 mb50">
+                    <a href="#" id="btn_plus" class="btn_s1" title="추가">추가</a>
+                    <a href="#" id="btn_save" class="btn_s1" title="저장">저장</a>
+                </div>
+            </div>
+        </div>
+        <!-- e : contents -->
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">저작권정책</a></li>
+            </ul>
+            <p class="footer_copy">Copyright ⓒ 2008 - 2021 KITA, All rights reserved</p>
+        </div>
+    </footer>
+</div>
+<!-- script -->
+<script type="text/javascript" src="../js/header2021.js"></script>
+<script type="text/javascript" src="../js/common2021.js"></script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>TadeKorea Koms</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="tadeKorea Koms">
+    <meta name="subject" content="tadeKorea Koms">
+    <meta name="keywords" content="Global, e-Marketplace, tadeKorea Koms, tradeKorea Management system">
+    <meta property="og:title" content="tadeKorea Koms">
+    <!-- css default -->
+    <link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/base_trkkoms.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui-tradekoms.css"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <!-- js ibsheet -->
+    <script type="text/javascript" src="../ibSheet/js/ibleaders.js"></script>
+    <script type="text/javascript" src="../ibSheet/js/ibsheetinfo.js"></script>
+    <script type="text/javascript" src="../ibSheet/js/ibsheet.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){ 
+    let IB1 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"코드",          SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"캠페인 분류명",  SaveName:"2", Align:"Left", Type:"Text", "Ellipsis":1},
+                ]
+            }
+            const container = $("#ib_container1")[0];
+            createIBSheet2(container,'mySheet1','100%','841px');
+            IBS_InitSheet(mySheet1,initData);
+            mySheet1.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet1.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheet1.SetColWidth("sTitle", 100);
+            } else {
+                mySheet1.FitColWidth("20|80");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"200000",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                },{
+                    1:"",
+                    2:"",
+                }
+            ]
+        }
+    };
+    IB1.initialize();
+});
+</script>
+<div class="wrap">
+    <div class="container">
+    <div class="container_inner">
+    <div class="contents_wrap">
+        <!-- s : contents -->
+        <div class="contents">
+            <div class="page_head">
+                <div class="page_title">캠페인 콘텐츠</div>
+                <div class="search_button f_r">
+                    <a href="#" class="btn_s3">신규등록</a>
+                </div>
+            </div>
+            <section class="col_group">
+                <div class="colv1_2">
+                    <!-- ibsheet -->
+                    <div class="ib_hover">
+                        <div id="ib_container1"></div>
+                    </div>
+                </div>
+                <div class="colv1_3">
+                    <div class="form1 text-left">
+                        <table>
+                            <colgroup>
+                                <col style="width:123px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>캠페인 분류</th>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="area_memocounter mt30 mb10">
+                        <div class="page_subtitle3 f_l">SMS 컨텐츠 템플릿</div>
+                        <p><strong>22</strong><span>/100000byte</span></p>
+                    </div>
+                    <textarea readonly="readonly"></textarea>
+                    <div class="page_subtitle3 mt25 mb10">Mail 콘텐츠 템플릿</div>
+                    <div class="form1 text-left">
+                        <table>
+                            <colgroup>
+                                <col style="width:123px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>제목</th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="height: 470px; background-color: #ccc;">에디터영역</div>
+                    <div class="search_button mt20">
+                        <button type="button" class="btn_s1">저장</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- e : contents -->
+    </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">저작권정책</a></li>
+            </ul>
+            <p class="footer_copy">Copyright ⓒ 2008 - 2021 KITA, All rights reserved</p>
+        </div>
+    </footer>
+</div>
+<!-- script -->
+<script type="text/javascript" src="../js/header2021.js"></script>
+<script type="text/javascript" src="../js/common2021.js"></script>
+</body>
+</html>

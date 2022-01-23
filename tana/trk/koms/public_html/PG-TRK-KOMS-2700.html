@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>TadeKorea Koms</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="tadeKorea Koms">
+    <meta name="subject" content="tadeKorea Koms">
+    <meta name="keywords" content="Global, e-Marketplace, tadeKorea Koms, tradeKorea Management system">
+    <meta property="og:title" content="tadeKorea Koms">
+    <!-- css default -->
+    <link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/base_trkkoms.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui-tradekoms.css"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <!-- js ibsheet -->
+    <script src="../ibSheet/js/ibleaders.js"></script>
+    <script src="../ibSheet/js/ibsheetinfo.js"></script>
+    <script src="../ibSheet/js/ibsheet.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){ 
+    let IB1 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"번호",     SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"진행현황", SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"신청일",   SaveName:"3", Align:"Center", Type:"Date", Format:"yyyy-MM-dd"},
+                    { Header:"신청자",   SaveName:"4", Align:"Center", Type:"Text"},
+                    { Header:"부서",     SaveName:"5", Align:"Center", Type:"Text"},
+                    { Header:"회사명",   SaveName:"6", Align:"Center", Type:"Text"},
+                    { Header:"담당자명", SaveName:"7", Align:"Center", Type:"Text"},
+                    { Header:"품목",     SaveName:"8", Align:"Center", Type:"Text"},
+                ]
+            }
+            const container = $("#ib_container1")[0];
+            createIBSheet2(container,'mySheet1','100%','441px');
+            IBS_InitSheet(mySheet1,initData);
+            mySheet1.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet1.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheet1.SetColWidth("sTitle", 100);
+            } else {
+                mySheet1.FitColWidth("7|11|13|11|16|16|11|15");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"1",
+                    2:"진행중",
+                    3:"2020-01-01",
+                    4:"홍길동",
+                    5:"",
+                    6:"",
+                    7:"홍길동",
+                    8:"",
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:""
+                }
+            ]
+        }
+    };
+    IB1.initialize();
+});
+</script>
+<div class="wrap">
+    <div class="container">
+    <div class="container_inner">
+    <div class="contents_wrap">
+        <!-- s : contents -->
+        <div class="contents">
+            <div class="page_head">
+                <div class="page_title">KITA 임직원 매칭 신청</div>
+            </div>
+            <div class="form1 text-left">
+                <table>
+                    <colgroup>
+                        <col style="width:123px;">
+                        <col style="width:auto;">
+                        <col style="width:123px;">
+                        <col style="width:auto">
+                        <col style="width:123px;">
+                        <col style="width:auto">
+                        <col style="width:123px;">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>신청기간</th>
+                            <td colspan="7">
+                                <div class="datepicker_boxfitday3">
+                                    <div class="datepicker_box">
+                                        <input type="text" id="" name="" class="datepicker" readonly="readonly">
+                                        <em class="cn1">~</em>
+                                        <input type="text" id="" name="" class="datepicker" readonly="readonly">
+                                    </div>
+                                    <div class="btn_group1">
+                                        <a href="#" class="btn_d1">당일</a>
+                                        <a href="#" class="btn_d1">7일</a>
+                                        <a href="#" class="btn_d1">전체</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>신청자</th>
+                            <td>
+                                <input type="text" id="" name="" class="" value="">
+                            </td>
+                            <th>부서</th>
+                            <td>
+                                <input type="text" id="" name="" class="" value="">
+                            </td>
+                            <th>회사</th>
+                            <td>
+                                <input type="text" id="" name="" class="" value="">
+                            </td>
+                            <th>담당자</th>
+                            <td>
+                                <input type="text" id="" name="" class="" value="">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>진행현황</th>
+                            <td colspan="3">
+                                <div class="checkbox">
+                                    <input type="checkbox" name="" id="check1" value="">
+                                    <label for="check1" class="mr15">접수</label>
+                                    <input type="checkbox" name="" id="check2" value="">
+                                    <label for="check2" class="mr15">진행중</label>
+                                    <input type="checkbox" name="" id="check3" value="">
+                                    <label for="check3" class="mr15">완료</label>
+                                    <input type="checkbox" name="" id="check4" value="">
+                                    <label for="check4">반려</label>
+                                </div>
+                            </td>
+                            <th>매칭담당자</th>
+                            <td colspan="3">
+                                <div class="select_box">
+                                    <select name="select4">
+                                        <option value="">선택</option>
+                                        <option value="9">김우진 팀장</option>
+                                        <option value="17">김정화 팀장</option>
+                                        <option value="1252">이진아 팀장</option>
+                                        <option value="1337">이범근 팀장</option>
+                                        <option value="14">김대근 과장</option>
+                                        <option value="15">유동익 과장</option>
+                                        <option value="1364">윤명구 과장</option>
+                                        <option value="1388">김재영 과장</option>
+                                        <option value="7">양효전 대리</option>
+                                        <option value="1345">김지현 대리</option>
+                                        <option value="1369">한보람 대리</option>
+                                        <option value="1375">허선희 대리</option>
+                                        <option value="1386">지윤선 대리</option>
+                                        <option value="1387">윤소영 대리</option>
+                                        <option value="1396">하예슬 대리</option>
+                                        <option value="1406">엄슬기 대리</option>
+                                        <option value="1368">서승원 주임</option>
+                                        <option value="1379">이동섭 주임</option>
+                                        <option value="1385">김세진 주임</option>
+                                        <option value="1390">이경민 주임</option>
+                                        <option value="1391">장재신 주임</option>
+                                        <option value="1392">최보경 주임</option>
+                                        <option value="1393">홍지원 주임</option>
+                                        <option value="1394">오현지 주임</option>
+                                        <option value="1403">윤민아 주임</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="search_button mt20">
+                <a href="#" id="btn_clear" class="btn_s1" title="검색초기화">초기화</a>
+                <a href="#" id="btn_search" class="btn_s1" title="검색" >검색</a>
+            </div>
+            <section class="col_group mt50">
+                <div class="colv1_2" style="width: 670px;">
+                    <div class="form_head">
+                        <p class="total">
+                            전체 <strong>1</strong> 건, <span>1/1 page</span>
+                        </p>
+                        <div class="f_r">
+                            <div class="select_box width_90">
+                                <select name="select_listnum">
+                                    <option value="20">20개</option>
+                                    <option value="30">30개</option>
+                                    <option value="40">40개</option>
+                                    <option value="50">50개</option>
+                                    <option value="60">60개</option>
+                                    <option value="70">70개</option>
+                                    <option value="80">80개</option>
+                                    <option value="90">90개</option>
+                                    <option value="100">100개</option>
+                                    <option value="300">300개</option>
+                                </select>
+                            </div>
+                            <a href="#" class="btn_c1 ml10" download>Excel File</a>
+                        </div>
+                    </div>
+                    <!-- ibsheet -->
+                    <div class="ib_hover">
+                        <div id="ib_container1"></div>
+                    </div>
+                    <nav class="pagination">
+                        <a href="#" class="pagination_first">
+                            <i class="hide">처음페이지</i>
+                        </a>
+                        <a href="#" class="pagination_prev">
+                            <i class="hide">이전페이지</i>
+                        </a>
+                        <ul class="pagination_list">
+                            <li class="active"><a href="#" title="1페이지">1</a></li>
+                            <li><a href="#" title="2페이지">2</a></li>
+                            <li><a href="#" title="3페이지">3</a></li>
+                            <li><a href="#" title="4페이지">4</a></li>
+                            <li><a href="#" title="5페이지">5</a></li>
+                            <li><a href="#" title="6페이지">6</a></li>
+                            <li><a href="#" title="7페이지">7</a></li>
+                            <li><a href="#" title="8페이지">8</a></li>
+                            <li><a href="#" title="9페이지">9</a></li>
+                            <li><a href="#" title="10페이지">10</a></li>
+                        </ul>
+                        <a href="#" class="pagination_next">
+                            <i class="hide">다음페이지</i>
+                        </a>
+                        <a href="#" class="pagination_last">
+                            <i class="hide">마지막페이지</i>
+                        </a>
+                    </nav>
+                </div>
+                <div class="colv1_3" style="width: 700px;">
+                    <div class="form_head">
+                        <div class="page_subtitle">상세정보</div>
+                    </div>
+                    <div class="form1 text-left">
+                        <table>
+                            <colgroup>
+                                <col style="width:123px;">
+                                <col style="width:auto;">
+                                <col style="width:123px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>신청일</th>
+                                    <td></td>
+                                    <th>신청자 / 부서</th>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="form_head mt30">
+                        <div class="page_subtitle">회사정보</div>
+                    </div>
+                    <div class="form1 text-left">
+                        <table>
+                            <colgroup>
+                                <col style="width:123px;">
+                                <col style="width:auto;">
+                                <col style="width:123px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>회사</th>
+                                    <td></td>
+                                    <th>사업자번호</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>담당자/연락처</th>
+                                    <td></td>
+                                    <th>이메일</th>
+                                    <td>shane.park@t3eng.co.kr</td>
+                                </tr>
+                                <tr>
+                                    <th>첨부파일</th>
+                                    <td colspan="3">
+                                        <ul class="filedata">
+                                            <li><a href="#" download>2021_회사소개서.pdf</a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>품목</th>
+                                    <td colspan="3"></td>
+                                </tr>
+                                <tr>
+                                    <th>메모</th>
+                                    <td colspan="3">
+                                        <div class="area_memocounter">
+                                            <p><strong>22</strong><span>/100000byte</span></p>
+                                            <button type="button" class="" onclick="popshow('pop_small2')">더보기</button>
+                                        </div>
+                                        <textarea readonly="readonly"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="form_head mt30">
+                        <div class="page_subtitle">매칭담당자</div>
+                    </div>
+                    <div class="form1 text-left">
+                        <table>
+                            <colgroup>
+                                <col style="width:123px;">
+                                <col style="width:auto;">
+                                <col style="width:123px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>매칭담당자</th>
+                                    <td>
+                                        <div class="select_box">
+                                            <select name="select4">
+                                                <option value="">선택</option>
+                                                <option value="9">김우진 팀장</option>
+                                                <option value="17">김정화 팀장</option>
+                                                <option value="1252">이진아 팀장</option>
+                                                <option value="1337">이범근 팀장</option>
+                                                <option value="14">김대근 과장</option>
+                                                <option value="15">유동익 과장</option>
+                                                <option value="1364">윤명구 과장</option>
+                                                <option value="1388">김재영 과장</option>
+                                                <option value="7">양효전 대리</option>
+                                                <option value="1345">김지현 대리</option>
+                                                <option value="1369">한보람 대리</option>
+                                                <option value="1375">허선희 대리</option>
+                                                <option value="1386">지윤선 대리</option>
+                                                <option value="1387">윤소영 대리</option>
+                                                <option value="1396">하예슬 대리</option>
+                                                <option value="1406">엄슬기 대리</option>
+                                                <option value="1368">서승원 주임</option>
+                                                <option value="1379">이동섭 주임</option>
+                                                <option value="1385">김세진 주임</option>
+                                                <option value="1390">이경민 주임</option>
+                                                <option value="1391">장재신 주임</option>
+                                                <option value="1392">최보경 주임</option>
+                                                <option value="1393">홍지원 주임</option>
+                                                <option value="1394">오현지 주임</option>
+                                                <option value="1403">윤민아 주임</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <th>진행현황</th>
+                                    <td>
+                                        <div class="select_box">
+                                            <select name="select1">
+                                                <option value="">진행현황</option>
+                                                <option value="접수">접수</option>
+                                                <option value="진행중">진행중</option>
+                                                <option value="완료">완료</option>
+                                                <option value="반려">반려</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>지원서비스</th>
+                                    <td colspan="3">
+                                        <div class="checkbox height_auto">
+                                            <input type="checkbox" name="" id="check5" value="">
+                                            <label for="check5" class="mr15">타켓마케팅</label>
+                                            <input type="checkbox" name="" id="check6" value="">
+                                            <label for="check6" class="mr15">바이어리스트 제공</label>
+                                            <input type="checkbox" name="" id="check7" value="">
+                                            <label for="check7" class="mr15">인바운드 우선매칭</label>
+                                            <input type="checkbox" name="" id="check8" value="">
+                                            <label for="check8" class="mr15">OBMS</label>
+                                            <input type="checkbox" name="" id="check9" value="">
+                                            <label for="check9" class="mr15">알리바바</label>
+                                            <input type="checkbox" name="" id="check10" value="">
+                                            <label for="check10" class="mr15">글로벌 소싱</label>
+                                            <input type="checkbox" name="" id="check11" value="">
+                                            <label for="check11">미니사이트 제작지원</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>코멘트</th>
+                                    <td colspan="3">
+                                        <div class="area_memocounter">
+                                            <p><strong>22</strong><span>/4000byte</span></p>
+                                            <button type="button" class="" onclick="popshow('pop_small2')">더보기</button>
+                                        </div>
+                                        <textarea readonly="readonly"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="search_button mt20">
+                        <a href="#" class="btn_s1">저장</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- e : contents -->
+    </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">저작권정책</a></li>
+            </ul>
+            <p class="footer_copy">Copyright ⓒ 2008 - 2021 KITA, All rights reserved</p>
+        </div>
+    </footer>
+</div>
+<!-- script -->
+<script type="text/javascript" src="../js/header2021.js"></script>
+<script type="text/javascript" src="../js/common2021.js"></script>
+</body>
+</html>

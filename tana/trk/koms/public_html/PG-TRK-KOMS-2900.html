@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>TadeKorea Koms</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="tadeKorea Koms">
+    <meta name="subject" content="tadeKorea Koms">
+    <meta name="keywords" content="Global, e-Marketplace, tadeKorea Koms, tradeKorea Management system">
+    <meta property="og:title" content="tadeKorea Koms">
+    <!-- css default -->
+    <link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/base_trkkoms.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui-tradekoms.css"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <!-- js ibsheet -->
+    <script src="../ibSheet/js/ibleaders.js"></script>
+    <script src="../ibSheet/js/ibsheetinfo.js"></script>
+    <script src="../ibSheet/js/ibsheet.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){ 
+    let IB1 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"번호",            SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"신청  상태",      SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"회사명",          SaveName:"3", Align:"Center", Type:"Text", "Ellipsis":1},
+                    { Header:"아마존 계정",     SaveName:"4", Align:"Center", Type:"Text", "Ellipsis":1},
+                    { Header:"가상 계좌",       SaveName:"5", Align:"Center", Type:"Text"},
+                    { Header:"계정 생성",       SaveName:"6", Align:"Center", Type:"Text"},
+                    { Header:"셀러 승인",       SaveName:"7", Align:"Center", Type:"Text"},
+                    { Header:"카테고리승인",    SaveName:"8", Align:"Center", Type:"Text"},
+                    { Header:"상품  리스트",    SaveName:"9", Align:"Center", Type:"Text"},
+                    { Header:"FBA 입고",       SaveName:"10", Align:"Center", Type:"Text"},
+                ]
+            }
+            const container = $("#ib_container1")[0];
+            createIBSheet2(container,'mySheet1','100%','441px');
+            IBS_InitSheet(mySheet1,initData);
+            mySheet1.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet1.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheet1.SetColWidth("sTitle", 100);
+            } else {
+                mySheet1.FitColWidth("7|9|17|17|8|8|8|9|9|8");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"1",
+                    2:"진행중",
+                    3:"philsanglifescience",
+                    4:"23286pls.kita@gmail.com",
+                    5:"O",
+                    6:"O",
+                    7:"X",
+                    8:"O",
+                    9:"O",
+                    10:"△",
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                }
+            ]
+        }
+    };
+    IB1.initialize();
+
+    let IB2 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:4, MergeSheet: msHeaderOnly},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"상품|상품",        SaveName:"1", Align:"Center", ColMerge:1, Type:"Text", "Ellipsis":1},
+                    { Header:"금주|판매수량",    SaveName:"2", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"금주|판매금액",    SaveName:"3", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"누적|판매수량",    SaveName:"4", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"누적|판매금액",    SaveName:"5", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"B2B판매|B2B수량",  SaveName:"6", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"B2B판매|B2B금액",  SaveName:"7", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"총판매|순위",      SaveName:"8", Align:"Center", ColMerge:1, Type:"Number"}
+                ]
+            }
+            const container = $("#ib_container2")[0];
+            createIBSheet2(container,'mySheet2','100%','441px');
+            IBS_InitSheet(mySheet2,initData);
+            mySheet2.FitColWidth("23|11|11|11|11|11|11|11");
+            mySheet2.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet2.LoadSearchData(this.data,{
+                Sync:1
+            });
+        },
+        data:{
+            data:[
+                {
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                    8:"",
+                }
+            ]
+        }
+    };
+    IB2.initialize();
+    
+    let IB3 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:6, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0, MergeSheet: msHeaderOnly},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"상품|상품",        SaveName:"1", Align:"Center", ColMerge:1, Type:"Text", "Ellipsis":1},
+                    { Header:"금주|판매수량",    SaveName:"2", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"금주|판매금액",    SaveName:"3", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"누적|판매수량",    SaveName:"4", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"누적|판매금액",    SaveName:"5", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"B2B판매|B2B수량",  SaveName:"6", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"B2B판매|B2B금액",  SaveName:"7", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"총판매|순위",      SaveName:"8", Align:"Center", ColMerge:1, Type:"Number"}
+                ]
+            }
+            const container = $("#ib_container3")[0];
+            createIBSheet2(container,'mySheet3','100%','325px');
+            IBS_InitSheet(mySheet3,initData);
+            mySheet3.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet3.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheet3.SetColWidth("sTitle", 100);
+            } else {
+                mySheet3.FitColWidth("23|11|11|11|11|11|11|11");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"1",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                    8:"",
+                }, {
+                    1:"1",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                    8:"",
+                },
+            ]
+        }
+    };
+    IB3.initialize();
+
+    let IB4 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0, MergeSheet: msHeaderOnly},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"번호|번호",        SaveName:"1", Align:"Center", ColMerge:1, Type:"Text", "Ellipsis":1},
+                    { Header:"작업명|작업명",    SaveName:"2", Align:"Center", ColMerge:1, Type:"Html"},
+                    { Header:"작업일|작업일",    SaveName:"3", Align:"Center", ColMerge:1, Type:"Text"},
+                    { Header:"작업기간|시작일",  SaveName:"4", Align:"Center", ColMerge:1, Type:"Date", Format:"yyyy-MM-dd"},
+                    { Header:"작업기간|종료일",  SaveName:"5", Align:"Center", ColMerge:1, Type:"Date", Format:"yyyy-MM-dd"},
+                    { Header:"파일|파일",        SaveName:"6", Align:"Center", ColMerge:1, Type:"Button"},
+                    { Header:"삭제|삭제",        SaveName:"7", Align:"Center", ColMerge:1, Type:"Button"},
+                ]
+            }
+            const container = $("#ib_container4")[0];
+            createIBSheet2(container,'mySheet4','100%','281px');
+            IBS_InitSheet(mySheet4,initData);
+            mySheet4.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet4.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheet4.SetColWidth("sTitle", 100);
+            } else {
+                mySheet4.FitColWidth("5|15|20|20|20|10|10");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"1",
+                    2:"12월 4주차",
+                    3:"2020-01-01",
+                    4:"2020-01-01",
+                    5:"2020-01-01",
+                    6:"다운로드",
+                    7:"삭제",
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                },{
+                    1:"",
+                    2:"66",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                },
+            ]
+        }
+    };
+    IB4.initialize();
+
+    // 증빙의 rowspan.......... 사이트참고
+    let IB5 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:2, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"",         SaveName:"1", Align:"Center", Type:"CheckBox"},
+                    { Header:"번호",      SaveName:"2", Align:"Center", Type:"Number"},
+                    { Header:"지원일자",  SaveName:"3", Align:"Center", Type:"Date", Format:"yyyy-MM-dd"},
+                    { Header:"내용",      SaveName:"4", Align:"Center", Type:"Text"},
+                    { Header:"금액",      SaveName:"5", Align:"Center", Type:"Text"},
+                    { Header:"증빙",      SaveName:"6", Align:"Center", Type:"Text"},
+                ]
+            }
+            const container = $("#ib_container5")[0];
+            createIBSheet2(container,'mySheet5','100%','448px');
+            IBS_InitSheet(mySheet5,initData);
+            mySheet5.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet5.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheet5.SetColWidth("sTitle", 100);
+            } else {
+                mySheet5.FitColWidth("8|12|20|20|20|20");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"",
+                    2:"1",
+                    3:"2020-01-01",
+                    4:"1~6월분 지원",
+                    5:"1,000,000",
+                    6:"저쟝버튼 / 삭제버튼",
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                }
+            ]
+        }
+    };
+    IB5.initialize();
+
+    let IB6 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:2, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"",            SaveName:"1", Align:"Center", Type:"CheckBox"},
+                    { Header:"번호",        SaveName:"2", Align:"Center", Type:"Number"},
+                    { Header:"상품명",       SaveName:"3", Align:"Center", Type:"Text"},
+                    { Header:"아마존링크",   SaveName:"4", Align:"Center", Type:"Text"},
+                ]
+            }
+            const container = $("#ib_container6")[0];
+            createIBSheet2(container,'mySheet6','100%','448px');
+            IBS_InitSheet(mySheet6,initData);
+            mySheet6.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet6.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheet6.SetColWidth("sTitle", 100);
+            } else {
+                mySheet6.FitColWidth("8|12|30|50");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"",
+                    2:"1",
+                    3:"",
+                    4:"",
+                },{
+                    1:"",
+                    2:"2",
+                    3:"",
+                    4:"",
+                }
+            ]
+        }
+    };
+    IB6.initialize();
+});
+</script>
+<div class="wrap">
+    <div class="container">
+    <div class="container_inner">
+    <div class="contents_wrap">
+        <!-- s : contents -->
+        <div class="contents">
+            <div class="page_head">
+                <div class="page_title">K-ABC 사업관리</div>
+            </div>
+            <div class="form2 form_hover text-center mb30">
+                <table>
+                    <colgroup>
+                        <col style="width:30%;">
+                        <col style="width:25%;">
+                        <col style="width:10%;">
+                        <col style="width:10%;">
+                        <col style="width:15%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>사업명</th>
+                            <th>사업기간</th>
+                            <th>신청제한</th>
+                            <th>신청건</th>
+                            <th>누적판매액</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2021</td>
+                            <td>2019-08-08 ~ 2019-08-08</td>
+                            <td>12</td>
+                            <td>1</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2021 K-ABC 프로그램</td>
+                            <td>2019-08-08 ~ 2019-08-08</td>
+                            <td>12</td>
+                            <td>1</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>2021 K-ABC 프로그램</td>
+                            <td>2019-08-08 ~ 2019-08-08</td>
+                            <td>12</td>
+                            <td>1</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="search_button">
+                <a href="#" id="btn_clear" class="btn_s1" title="검색초기화">초기화</a>
+            </div>
+            <section class="col_group mt50">
+                <div class="colv1_2" style="width: 670px;">
+                    <div class="form_head">
+                        <div class="page_subtitle">신청기업</div>
+                        <div class="f_r">
+                            <div class="select_box width_90">
+                                <select name="select_listnum">
+                                    <option value="20">20개</option>
+                                    <option value="30">30개</option>
+                                    <option value="40">40개</option>
+                                    <option value="50">50개</option>
+                                    <option value="60">60개</option>
+                                    <option value="70">70개</option>
+                                    <option value="80">80개</option>
+                                    <option value="90">90개</option>
+                                    <option value="100">100개</option>
+                                    <option value="300">300개</option>
+                                </select>
+                            </div>
+                            <a href="#" class="btn_c1 ml10" download>Excel File</a>
+                            <button type="button" class="btn_d1 ml10" onclick="popshow('pop_big20'); mySheetbig20.FitColWidth('7|9|17|17|8|8|8|9|9|8')">전체보기</button>
+                            <button type="button" class="btn_d2 ml10" onclick="popshow('pop_ex2'); mySheetex2.FitColWidth('10|35|20|35')">메일발송</button>
+                        </div>
+                    </div>
+                    <!-- ibsheet -->
+                    <div class="ib_hover">
+                        <div id="ib_container1"></div>
+                    </div>
+                    <nav class="pagination">
+                        <a href="#" class="pagination_first">
+                            <i class="hide">처음페이지</i>
+                        </a>
+                        <a href="#" class="pagination_prev">
+                            <i class="hide">이전페이지</i>
+                        </a>
+                        <ul class="pagination_list">
+                            <li class="active"><a href="#" title="1페이지">1</a></li>
+                            <li><a href="#" title="2페이지">2</a></li>
+                            <li><a href="#" title="3페이지">3</a></li>
+                            <li><a href="#" title="4페이지">4</a></li>
+                            <li><a href="#" title="5페이지">5</a></li>
+                            <li><a href="#" title="6페이지">6</a></li>
+                            <li><a href="#" title="7페이지">7</a></li>
+                            <li><a href="#" title="8페이지">8</a></li>
+                            <li><a href="#" title="9페이지">9</a></li>
+                            <li><a href="#" title="10페이지">10</a></li>
+                        </ul>
+                        <a href="#" class="pagination_next">
+                            <i class="hide">다음페이지</i>
+                        </a>
+                        <a href="#" class="pagination_last">
+                            <i class="hide">마지막페이지</i>
+                        </a>
+                    </nav>
+                </div>
+                <div class="colv1_3" style="width: 700px;">
+                    <div class="tabs">
+                        <ul class="tab_head">
+                            <li><a href="#tabs_12">회사정보</a></li>
+                            <li><a href="#tabs_13">지원정보</a></li>
+                            <li><a href="#tabs_14">아마존상품정보</a></li>
+                        </ul>
+                        <div id="tabs_12">
+                            <div class="form1 text-left">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:120px;">
+                                        <col style="width:auto;">
+                                        <col style="width:120px;">
+                                        <col style="width:auto;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>사업자번호</th>
+                                            <td></td>
+                                            <th>회사명</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>전화번호</th>
+                                            <td></td>
+                                            <th>대표자</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>팩스번호</th>
+                                            <td></td>
+                                            <th>홈페이지</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>주소</th>
+                                            <td colspan="3"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>담당자</th>
+                                            <td colspan="3">
+                                                <div class="form2 form_hover text-center">
+                                                    <table>
+                                                        <colgroup>
+                                                            <col style="width: 20%;">
+                                                            <col style="width: 20%;">
+                                                            <col style="width: 25%;">
+                                                            <col style="width: 35%;">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>담당자명(영문)</th>
+                                                                <th>담당자명</th>
+                                                                <th>전화번호</th>
+                                                                <th>이메일</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Amber</td>
+                                                                <td>홍길동 과장</td>
+                                                                <td>82-10-7101-5170</td>
+                                                               <td>aaaaaa@gmail.com</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><p class="color11">아마존계정</p></th>
+                                            <td>
+                                                <input type="text" id="" name="" value="">
+                                            </td>
+                                            <th><p class="color11">신청상태</p></th>
+                                            <td>
+                                                <div class="select_box">
+                                                    <select name="select1">
+                                                        <option value="">선택</option>
+                                                        <option value="01">재입학</option>
+                                                        <option value="02">진행중</option>
+                                                        <option value="03">중도하자</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>진행상황</th>
+                                            <td colspan="3">
+                                                <div class="form2 form_hover text-center">
+                                                    <table>
+                                                        <colgroup>
+                                                            <col width="16%">
+                                                            <col width="16.6%">
+                                                            <col width="16.6%">
+                                                            <col width="17.2%">
+                                                            <col width="16.6%">
+                                                            <col width="16.6%">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>가상계좌</th>
+                                                                <th>계정생성</th>
+                                                                <th>셀러승인</th>
+                                                                <th>카테고리승인</th>
+                                                                <th>상품리스트</th>
+                                                                <th>FBA입고</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <div class="select_box">
+                                                                        <select name="select1">
+                                                                            <option value="01">O</option>
+                                                                            <option value="02">X</option>
+                                                                            <option value="03">△</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="select_box">
+                                                                        <select name="select1">
+                                                                            <option value="01">O</option>
+                                                                            <option value="02">X</option>
+                                                                            <option value="03">△</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="select_box">
+                                                                        <select name="select1">
+                                                                            <option value="01">O</option>
+                                                                            <option value="02">X</option>
+                                                                            <option value="03">△</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="select_box">
+                                                                        <select name="select1">
+                                                                            <option value="01">O</option>
+                                                                            <option value="02">X</option>
+                                                                            <option value="03">△</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="select_box">
+                                                                        <select name="select1">
+                                                                            <option value="01">O</option>
+                                                                            <option value="02">X</option>
+                                                                            <option value="03">△</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="select_box">
+                                                                        <select name="select1">
+                                                                            <option value="01">O</option>
+                                                                            <option value="02">X</option>
+                                                                            <option value="03">△</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="search_button mt20">
+                                <a href="#" class="btn_s1">저장</a>
+                            </div>
+                        </div>
+                        <div id="tabs_13">
+                            <div class="form_head form_head_tabfix">
+                                <a href="#" class="btn_d2 ml10">추가</a>
+                                <a href="#" class="btn_d2 ml10">저장</a>
+                                <a href="#" class="btn_d2 ml10">삭제</a>
+                            </div>
+                            <!-- ibsheet -->
+                            <div class="ib_hover">
+                                <div id="ib_container5"></div>
+                            </div>
+                        </div>
+                        <div id="tabs_14">
+                            <div class="form_head form_head_tabfix">
+                                <a href="#" class="btn_d2 ml10">추가</a>
+                                <a href="#" class="btn_d2 ml10">저장</a>
+                                <a href="#" class="btn_d2 ml10">삭제</a>
+                            </div>
+                            <!-- ibsheet -->
+                            <div class="ib_hover">
+                                <div id="ib_container6"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar1 mt30"></div>
+                    <div class="form_head mt30">
+                        <div class="page_subtitle">판매현황</div>
+                        <div class="btn_group2 f_r">
+                            <button type="button" class="btn_d1" onclick="popshow('pop_big21'); mySheetbig21.FitColWidth('23|11|11|11|11|11|11|11')">전체순위</button>
+                        </div>
+                    </div>
+                    <!-- ibsheet -->
+                    <div class="ib_hover">
+                        <div id="ib_container2"></div>
+                    </div>
+                    <div class="form_head mt30">
+                        <div class="page_subtitle">상품별 판매현황</div>
+                    </div>
+                    <!-- ibsheet -->
+                    <div class="ib_hover">
+                        <div id="ib_container3"></div>
+                    </div>
+                </div>
+            </section>
+            <div class="col_info">
+                <div class="form_head">
+                    <div class="page_subtitle">판매실적</div>
+                    <div class="btn_group2 f_r">
+                        <button type="button" class="btn_d1">실적추가</button>
+                        <button type="button" class="btn_d2">저장</button>
+                    </div>
+                </div>
+                <!-- ibsheet -->
+                <div class="ib_hover">
+                    <div id="ib_container4"></div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+<!-- s : popup -->
+<div class="pop" id="pop_big20">
+    <div class="pop_bg"></div>
+    <div class="pop_wrap width_1200">
+        <div class="pop_head"><strong>전체보기</strong></div>
+        <section class="pop_body height_700">
+            <div class="content">
+                <div class="mb10">
+                    <div class="pop_subtitle2">신청기업</div>
+                    <div class="btn_group2 f_r">
+                        <a href="#" class="btn_d2">순서변경</a>
+                    </div>
+                </div>
+                <!-- ibsheet -->
+                <div class="ib_hover">
+                    <div id="ib_big20"></div>
+                </div>
+            </div>
+        </section>
+        <button type="button" class="pop_close" onclick="pophide('pop_big20')">
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+</div>
+<!-- e : popup -->
+<script type="text/javascript">
+$(document).ready(function(){ 
+    let ib_big20 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:2},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"번호",            SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"신청  상태",      SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"회사명",          SaveName:"3", Align:"Center", Type:"Text", "Ellipsis":1},
+                    { Header:"아마존 계정",     SaveName:"4", Align:"Center", Type:"Text", "Ellipsis":1},
+                    { Header:"가상 계좌",       SaveName:"5", Align:"Center", Type:"Text"},
+                    { Header:"계정 생성",       SaveName:"6", Align:"Center", Type:"Text"},
+                    { Header:"셀러 승인",       SaveName:"7", Align:"Center", Type:"Text"},
+                    { Header:"카테고리승인",    SaveName:"8", Align:"Center", Type:"Text"},
+                    { Header:"상품  리스트",    SaveName:"9", Align:"Center", Type:"Text"},
+                    { Header:"FBA 입고",       SaveName:"10", Align:"Center", Type:"Text"},
+                ]
+            }
+            const container = $("#ib_big20")[0];
+            createIBSheet2(container,'mySheetbig20','100%','600px');
+            IBS_InitSheet(mySheetbig20,initData);
+            mySheetbig20.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheetbig20.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheetbig20.SetColWidth("sTitle", 100);
+            } else {
+                mySheetbig20.FitColWidth("7|9|17|17|8|8|8|9|9|8");
+        }
+        },
+        data:{
+            data:[
+                {
+                    1:"1",
+                    2:"진행중",
+                    3:"philsanglifescience",
+                    4:"23286pls.kita@gmail.com",
+                    5:"O",
+                    6:"O",
+                    7:"X",
+                    8:"O",
+                    9:"O",
+                    10:"△"
+                },
+            ]
+        }
+    };
+    ib_big20.initialize();
+});
+</script>
+
+
+
+
+<!-- s : popup -->
+<div class="pop" id="pop_ex2">
+    <div class="pop_bg"></div>
+    <div class="pop_wrap width_1400">
+        <div class="pop_head"><strong>메일발송</strong></div>
+        <section class="pop_body height_645">
+            <div class="content">
+                <div class="clearfix mb30">
+                    <div class="f_l width_650">
+                        <div class="form1 text-left mb20">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 110px;">
+                                    <col style="width: auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>캠페인 유형</th>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th>메일 스킨</th>
+                                        <td>
+                                            <div class="select_box">
+                                                <select name="select1">
+                                                    <option value="">선택</option>
+                                                    <option value="01">선정 및 세미나참가신청</option>
+                                                    <option value="02">K-ABC 프로그램일정안내</option>
+                                                    <option value="03">졸업안내</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pop_subtitle2 mb10">발송대상 선택</div>
+                        <!-- ibsheet -->
+                        <div class="ib_hover">
+                            <div id="ib_ex2"></div>
+                        </div>
+                    </div>
+                    <div class="f_r width_650">
+                        <div class="form1 text-left mb20">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 110px;">
+                                    <col style="width: auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>제목</th>
+                                        <td>
+                                            <input type="text" id="" name="" value="">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>파일첨부</th>
+                                        <td>
+                                            <div class="fileupload_boxfit2">
+                                                <div class="inb">
+                                                    <div class="form_fileupload">
+                                                        <input type="file" id="fileupload" name="" class="hide">
+                                                        <ul id="filelist" class="filelist"></ul>
+                                                    </div>
+                                                </div>
+                                                <label for="fileupload" class="fileupload_btn1">파일등록</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pop_subtitle2 mb10">발송대상 선택</div>
+                        <div style="height: 540px; background-color: #ccc;">메일 에디터영역</div>
+                    </div>
+                </div>
+                <div class="search_button">
+                    <a href="#" class="btn_s1">메일발송</a>
+                </div>
+            </div>
+        </section>
+        <button type="button" class="pop_close" onclick="pophide('pop_ex2')">
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+</div>
+<!-- e : popup -->
+<script type="text/javascript">
+$(document).ready(function(){ 
+    let ib_ex1 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:2},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"",       SaveName:"1", Align:"Center", Type:"CheckBox"},
+                    { Header:"회사명",  SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"담당자",  SaveName:"3", Align:"Center", Type:"Text"},
+                    { Header:"이메일",  SaveName:"4", Align:"Center", Type:"Text"},
+                ]
+            }
+            const container = $("#ib_ex2")[0];
+            createIBSheet2(container,'mySheetex2','100%','540px');
+            IBS_InitSheet(mySheetex2,initData);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheetex2.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheetex2.SetColWidth("sTitle", 100);
+            } else {
+                mySheetex2.FitColWidth("10|35|20|35");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                },
+            ]
+        }
+    };
+    ib_ex1.initialize();
+});
+</script>
+
+
+
+
+
+
+
+<!-- s : popup -->
+<div class="pop" id="pop_big21">
+    <div class="pop_bg"></div>
+    <div class="pop_wrap width_1200">
+        <div class="pop_head"><strong>전체순위</strong></div>
+        <section class="pop_body height_700">
+            <div class="content">
+                <!-- ibsheet -->
+                <div class="ib_hover">
+                    <div id="ib_big21"></div>
+                </div>
+            </div>
+        </section>
+        <button type="button" class="pop_close" onclick="pophide('pop_big21')">
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+</div>
+<!-- e : popup -->
+<script type="text/javascript">
+$(document).ready(function(){ 
+    let ib_big21 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:2, MergeSheet: msHeaderOnly},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"상품|상품",        SaveName:"1", Align:"Center", ColMerge:1, Type:"Text", "Ellipsis":1},
+                    { Header:"금주|판매수량",    SaveName:"2", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"금주|판매금액",    SaveName:"3", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"누적|판매수량",    SaveName:"4", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"누적|판매금액",    SaveName:"5", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"B2B판매|B2B수량",  SaveName:"6", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"B2B판매|B2B금액",  SaveName:"7", Align:"Center", ColMerge:1, Type:"Number"},
+                    { Header:"총판매|순위",      SaveName:"8", Align:"Center", ColMerge:1, Type:"Number"}
+                ]
+            }
+            const container = $("#ib_big21")[0];
+            createIBSheet2(container,'mySheetbig21','100%','635px');
+            IBS_InitSheet(mySheetbig21,initData);
+            mySheetbig21.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheetbig21.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheetbig21.SetColWidth("sTitle", 100);
+            } else {
+                mySheetbig21.FitColWidth("23|11|11|11|11|11|11|11");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                    8:""
+                },
+            ]
+        }
+    };
+    ib_big21.initialize();
+});
+</script>
+
+
+
+
+
+
+
+        </div>
+        <!-- e : contents -->
+    </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">저작권정책</a></li>
+            </ul>
+            <p class="footer_copy">Copyright ⓒ 2008 - 2021 KITA, All rights reserved</p>
+        </div>
+    </footer>
+</div>
+<!-- script -->
+<script type="text/javascript" src="../js/header2021.js"></script>
+<script type="text/javascript" src="../js/common2021.js"></script>
+</body>
+</html>

@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>TadeKorea Koms</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="tadeKorea Koms">
+    <meta name="subject" content="tadeKorea Koms">
+    <meta name="keywords" content="Global, e-Marketplace, tadeKorea Koms, tradeKorea Management system">
+    <meta property="og:title" content="tadeKorea Koms">
+    <!-- css default -->
+    <link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/base_trkkoms.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui-tradekoms.css"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <!-- js ibsheet -->
+    <script type="text/javascript" src="../ibSheet/js/ibleaders.js"></script>
+    <script type="text/javascript" src="../ibSheet/js/ibsheetinfo.js"></script>
+    <script type="text/javascript" src="../ibSheet/js/ibsheet.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){ 
+    let IB1 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"번호",      SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"모집채널",  SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"회사명",    SaveName:"3", Align:"Center", Type:"Text"},
+                    { Header:"전화번호",  SaveName:"4", Align:"Center", Type:"Number"},
+                    { Header:"모집상태",  SaveName:"5", Align:"Center", Type:"Text"}
+                ]
+            }
+            const container = $("#ib_container1")[0];
+            createIBSheet2(container,'mySheet1','100%','550px');
+            IBS_InitSheet(mySheet1,initData);
+            mySheet1.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet1.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheet1.SetColWidth("sTitle", 100);
+            } else {
+                mySheet1.FitColWidth("10|20|20|30|20");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"1",
+                    2:"온라인",
+                    3:"대성팩",
+                    4:"82-70-1234-1234",
+                    5:"확인중"
+                },{
+                    1:"1",
+                    2:"온라인",
+                    3:"대성팩",
+                    4:"82-70-1234-1234",
+                    5:"확인중"
+                }
+            ]
+        }
+    };
+    IB1.initialize();
+
+
+    let IB2 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:4},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"",          SaveName:"1", Align:"Center", Type:"CheckBox"},
+                    { Header:"번호",      SaveName:"2", Align:"Center", Type:"Number"},
+                    { Header:"작성일시",  SaveName:"3", Align:"Center", Type:"Date", Format:"yyyy-MM-dd"},
+                    { Header:"작성자",    SaveName:"4", Align:"Center", Type:"Text"},
+                    { Header:"*관리내역",  SaveName:"5", Align:"Center", Type:"Text"},
+                ]
+            }
+            const container = $("#ib_container2")[0];
+            createIBSheet2(container,'mySheet2','100%','441px');
+            IBS_InitSheet(mySheet2,initData);
+            mySheet2.FitColWidth("10|13|28|19|30");
+            mySheet2.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet2.LoadSearchData(this.data,{
+                Sync:1
+            });
+        },
+        data:{
+            data:[
+                {
+                    1:"ㅇㅇㅇ",
+                    2:"1",
+                    3:"2020-01-01",
+                    4:"홍길동",
+                    5:"ㅇㅇㅇ"
+                },{
+                    1:"ㅇㅇㅇ",
+                    2:"1",
+                    3:"2020-01-01",
+                    4:"홍길동",
+                    5:"ㅇㅇㅇ"
+                }
+            ]
+        }
+    };
+    IB2.initialize();
+
+
+    let IB3 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:4},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"",               SaveName:"1", Align:"Center", Type:"CheckBox"},
+                    { Header:"번호",           SaveName:"2", Align:"Center", Type:"Number"},
+                    { Header:"대표담당자",      SaveName:"3", Align:"Center", Type:"CheckBox", ItemText:"&nbsp;", MaxCheck:1, RadioIcon:1},
+                    { Header:"*이름",           SaveName:"4", Align:"Center", Type:"Text"},
+                    { Header:"직책",           SaveName:"5", Align:"Center", Type:"Combo", ComboText:"Staff|Chief|Assistant manager|Manager|Deputy General Manager|Director|Vice President|President|CEO"},
+                    { Header:"*휴대전화번호",       SaveName:"6", Align:"Center", Type:"Number"},
+                    { Header:"*이메일",         SaveName:"7", Align:"Center", Type:"Text"},
+                    { Header:"*카테고리",       SaveName:"8", Align:"Center", Type:"Text", "Ellipsis":1},
+                    { Header:"취급품목(영문)", SaveName:"9", Align:"Center", Type:"Text", },
+                    { Header:"비고",          SaveName:"10", Align:"Center", Type:"Text"}
+                ]
+            }
+            const container = $("#ib_container3")[0];
+            createIBSheet2(container,'mySheet3','100%','441px');
+            IBS_InitSheet(mySheet3,initData);
+            mySheet3.FitColWidth("5|5|7|8|13|9|12|13|13|10");
+            mySheet3.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet3.LoadSearchData(this.data,{
+                Sync:1
+            });
+        },
+        data:{
+            data:[
+                {
+                    1:"",
+                    2:"1",
+                    3:"",
+                    4:"홍길동",
+                    5:"Staff",
+                    6:"011-1234-5678",
+                    7:"jhpark@taejongfd.com",
+                    8:"Processed Food",
+                    9:"Processed Food",
+                    10:""
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                    8:"",
+                    9:"",
+                    10:""
+                }
+            ]
+        }
+    };
+    IB3.initialize();
+
+
+});
+</script>
+<div class="wrap">
+    <div class="container">
+    <div class="container_inner">
+    <div class="contents_wrap">
+        <!-- s : contents -->
+        <div class="contents">
+            <div class="page_head">
+                <div class="page_title">참가국내업체관리</div>
+            </div>
+            <div class="form1 text-left">
+                <table>
+                    <colgroup>
+                        <col style="width:123px;">
+                        <col style="width:auto;">
+                        <col style="width:123px;">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>행사명</th>
+                            <td>
+                                <div class="search_box1">
+                                    <input type="text" id="" name="" class="" value="">
+                                    <div class="search_box_btn">
+                                        <button type="button" class="sb_search" onclick="popshow('pop_big2'); mySheetbig2.FitColWidth('5|33|17|15|15|15');">검색</button>
+                                    </div>
+                                </div>
+                            </td>
+                            <th>모집채널</th>
+                            <td>
+                                <div class="select_box">
+                                    <select name="select2" >
+                                        <option value="">선택</option>
+                                        <option value="01">온라인</option>
+                                        <option value="02">오프라인</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>모집상태</th>
+                            <td>
+                                <div class="select_box">
+                                    <select name="select3" >
+                                        <option value="">선택</option>
+                                        <option value="01">확인중</option>
+                                        <option value="02">참석확정</option>
+                                        <option value="03">반려</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <th>시/도</th>
+                            <td>
+                                <div class="select_box">
+                                    <select name="select1">
+                                        <option value="">선택</option>
+                                        <option value="11">서울특별시</option>
+                                        <option value="26">부산광역시</option>
+                                        <option value="27">대구광역시</option>
+                                        <option value="28">인천광역시</option>
+                                        <option value="29">광주광역시</option>
+                                        <option value="30">대전광역시</option>
+                                        <option value="31">울산광역시</option>
+                                        <option value="36">세종특별자치시</option>
+                                        <option value="41">경기도</option>
+                                        <option value="42">강원도</option>
+                                        <option value="43">충청북도</option>
+                                        <option value="44">충청남도</option>
+                                        <option value="45">전라북도</option>
+                                        <option value="46">전라남도</option>
+                                        <option value="47">경상북도</option>
+                                        <option value="48">경상남도</option>
+                                        <option value="50">제주특별자치도</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>시/군/구</th>
+                            <td>
+                                <div class="select_box">
+                                    <select name="select1" >
+                                        <option value="">선택</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <th>회사명</th>
+                            <td>
+                                <input type="text" id="" name="" value="">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="search_button mt20">
+                <a href="#" id="btn_clear" class="btn_s1" title="검색초기화">초기화</a>
+                <a href="#" id="btn_search" class="btn_s1" title="검색" >검색</a>
+            </div>
+            <section class="col_group mt50">
+                <div class="colv1_2">
+                    <div class="form_head">
+                        <p class="total">
+                            전체 <strong>5</strong> 건, <span>1/1 page</span>
+                        </p>
+                        <div class="f_r">
+                            <button type="button" class="btn_d2 mr5" onclick="popshow('pop_ex1'); mySheetex1.FitColWidth('4|6|6|6|6|6|6|6|6|6|6|6|6|6|6|6|6')">엑셀등록</button>
+                            <div class="select_box width_90">
+                                <select name="select_listnum">
+                                    <option value="20">20개</option>
+                                    <option value="30">30개</option>
+                                    <option value="40">40개</option>
+                                    <option value="50">50개</option>
+                                    <option value="60">60개</option>
+                                    <option value="70">70개</option>
+                                    <option value="80">80개</option>
+                                    <option value="90">90개</option>
+                                    <option value="100">100개</option>
+                                    <option value="300">300개</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ibsheet -->
+                    <div class="ib_hover">
+                        <div id="ib_container1"></div>
+                    </div>
+
+                    <nav class="pagination">
+                        <a href="#" class="pagination_first">
+                            <i class="hide">처음페이지</i>
+                        </a>
+                        <a href="#" class="pagination_prev">
+                            <i class="hide">이전페이지</i>
+                        </a>
+                        <ul class="pagination_list">
+                            <li class="active"><a href="#" title="1페이지">1</a></li>
+                            <li><a href="#" title="2페이지">2</a></li>
+                            <li><a href="#" title="3페이지">3</a></li>
+                            <li><a href="#" title="4페이지">4</a></li>
+                            <li><a href="#" title="5페이지">5</a></li>
+                            <li><a href="#" title="6페이지">6</a></li>
+                            <li><a href="#" title="7페이지">7</a></li>
+                            <li><a href="#" title="8페이지">8</a></li>
+                            <li><a href="#" title="9페이지">9</a></li>
+                            <li><a href="#" title="10페이지">10</a></li>
+                        </ul>
+                        <a href="#" class="pagination_next">
+                            <i class="hide">다음페이지</i>
+                        </a>
+                        <a href="#" class="pagination_last">
+                            <i class="hide">마지막페이지</i>
+                        </a>
+                    </nav>
+                </div>
+                <div class="colv1_3">
+                    <div class="form_head">
+                        <div class="page_subtitle">국내업체 정보</div>
+                    </div>
+                    <div class="form1 text-left">
+                        <table>
+                            <colgroup>
+                                <col style="width:123px;">
+                                <col style="width:auto;">
+                                <col style="width:123px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><p class="color11">행사명</p></th>
+                                    <td colspan="3">
+                                        <div class="search_box1">
+                                            <input type="text" id="" name="" class="" value="">
+                                            <div class="search_box_btn">
+                                                <button type="button" class="sb_search" onclick="popshow('pop_big2'); mySheetbig2.FitColWidth('5|33|17|15|15|15');">검색</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><p class="color11">회사명</p></th>
+                                    <td colspan="3">
+                                        <div class="f0">
+                                            <em class="cn0" style="width: 45px; text-align: left;">영문</em>
+                                            <input type="text" id="" name="" value="" style="width: calc((100% - 187px) / 2); ">
+                                            <em class="cn0 color11" style="width: 65px;">국문</em>
+                                            <input type="text" id="" name="" value="" style="width: calc((100% - 187px) / 2); margin-right: 10px; ">
+                                            <button type="button" class="btn_d2" onclick="popshow('pop_big3'); mySheetbig3.FitColWidth('5|35|15|15|15|15')">불러오기</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><p class="color11">대표자</p></th>
+                                    <td colspan="3">
+                                        <div class="f0">
+                                            <em class="cn0" style="width: 45px; text-align: left;">영문</em>
+                                            <input type="text" id="" name="" value="" style="width: calc((100% - 187px) / 2); ">
+                                            <em class="cn0 color11" style="width: 65px;">국문</em>
+                                            <input type="text" id="" name="" value="" style="width: calc((100% - 187px) / 2); margin-right: 10px; ">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><p class="color11">사업자등록번호</p></th>
+                                    <td>
+                                        <div class="dashfit3">
+                                            <input type="text" id="" name="" value="">
+                                            <em class="cn2">-</em>
+                                            <input type="text" id="" name="" value="">
+                                            <em class="cn2">-</em>
+                                            <input type="text" id="" name="" value="">
+                                        </div>
+                                    </td>
+                                    <th>사업자유형</th>
+                                    <td>
+                                        <div class="select_box">
+                                            <select name="select1" >
+                                                <option value="">선택</option>
+                                                <option value="01">Manufacturer</option>
+                                                <option value="02">Trading Company</option>
+                                                <option value="03">Distributor(Wholesaler)</option>
+                                                <option value="04">Retailer</option>
+                                                <option value="05">Broker(Consultant commission-based)</option>
+                                                <option value="99">Others</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><p class="color11">전화번호</p></th>
+                                    <td>
+                                        <div class="dashfit4">
+                                            <input type="text" id="" name="" value="">
+                                            <em class="cn2">-</em>
+                                            <input type="text" id="" name="" value="">
+                                            <em class="cn2">-</em>
+                                            <input type="text" id="" name="" value="">
+                                            <em class="cn2">-</em>
+                                            <input type="text" id="" name="" value="">
+                                        </div>
+                                    </td>
+                                    <th><p class="color11">홈페이지</p></th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>종업원수</th>
+                                    <td>
+                                        <div class="select_box">
+                                            <select name="select1" >
+                                                <option value="">선택</option>
+                                                <option value="01">1-50</option>
+                                                <option value="02">51-100</option>
+                                                <option value="03">101-500</option>
+                                                <option value="04">501-1000</option>
+                                                <option value="05">1001-2000</option>
+                                                <option value="06">over 2000</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <th>연매출액</th>
+                                    <td>
+                                        <div class="select_box">
+                                            <select name="select1" >
+                                                <option value="">선택</option>
+                                                <option value="01">Below US$500,000</option>
+                                                <option value="02">US$500,000 - US$1 Million</option>
+                                                <option value="03">US$1 Million - US$5 Million</option>
+                                                <option value="04">US$5 Million - US$10 Million</option>
+                                                <option value="05">US$10 Million - US$50 Million</option>
+                                                <option value="06">US$50 Million - US$100 Million</option>
+                                                <option value="07">Above US$100 Million</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>소재지</th>
+                                    <td colspan="3">
+                                        <div class="boxfit2 width_280">
+                                            <div class="select_box">
+                                                <select name="select1">
+                                                    <option value="">선택</option>
+                                                    <option value="11">서울특별시</option>
+                                                    <option value="26">부산광역시</option>
+                                                    <option value="27">대구광역시</option>
+                                                    <option value="28">인천광역시</option>
+                                                    <option value="29">광주광역시</option>
+                                                    <option value="30">대전광역시</option>
+                                                    <option value="31">울산광역시</option>
+                                                    <option value="36">세종특별자치시</option>
+                                                    <option value="41">경기도</option>
+                                                    <option value="42">강원도</option>
+                                                    <option value="43">충청북도</option>
+                                                    <option value="44">충청남도</option>
+                                                    <option value="45">전라북도</option>
+                                                    <option value="46">전라남도</option>
+                                                    <option value="47">경상북도</option>
+                                                    <option value="48">경상남도</option>
+                                                    <option value="50">제주특별자치도</option>
+                                                </select>
+                                            </div>
+                                            <div class="select_box">
+                                                <select name="select1">
+                                                    <option value="">선택</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <input type="text" id="" name="" value="" style="width: calc(100% - 295px); margin-left: 10px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>비고</th>
+                                    <td colspan="3">
+                                        <textarea></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>모집상태</th>
+                                    <td colspan="3">
+                                        <div class="radio_box">
+                                            <input type="radio" id="radio1" name="radio_group1" value="" checked="checked">
+                                            <label for="radio1">확인중</label>
+                                            <input type="radio" id="radio2" name="radio_group1" value="">
+                                            <label for="radio2">참석확정</label>
+                                            <input type="radio" id="radio3" name="radio_group1" value="">
+                                            <label for="radio3">반려</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>반려사유</th>
+                                    <td colspan="3">
+                                        <div class="select_box">
+                                            <select name="select7" >
+                                                <option value="">선택</option>
+                                                <option value="01">품목불일치</option>
+                                                <option value="02">의심기업</option>
+                                                <option value="03">기타</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>모집채널</th>
+                                    <td></td>
+                                    <th>등록일시</th>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="search_button mt20">
+                        <a href="#" class="btn_s1">저장</a>
+                    </div>
+                </div>
+            </section>
+            <section class="col_info mt50">
+                <div class="form_head">
+                    <div class="page_subtitle">담당자 목록</div>
+                </div>
+                <!-- ibsheet -->
+                <div class="ib_hover">
+                    <div id="ib_container3"></div>
+                </div>
+                <div class="search_button mt20">
+                    <a href="#" class="btn_s1">추가</a>
+                </div>
+            </section>
+            <section class="col_info mt50">
+                <div class="form_head">
+                    <div class="page_subtitle">이력관리목록</div>
+                </div>
+                <!-- ibsheet -->
+                <div class="ib_hover">
+                    <div id="ib_container2"></div>
+                </div>
+                <div class="search_button mt20">
+                    <a href="#" class="btn_s1">추가</a>
+                    <a href="#" class="btn_s1">저장</a>
+                </div>
+            </section>
+        </div>
+        <!-- e : contents -->
+    </div>
+
+
+<!-- s : popup -->
+<div class="pop" id="pop_big2">
+    <div class="pop_bg"></div>
+    <div class="pop_wrap width_1200">
+        <div class="pop_head"><strong>행사목록</strong></div>
+        <section class="pop_body height_580">
+            <div class="content">
+                <div class="clearfix mb30">
+                    <div class="form1 text-left width_900 f_l">
+                        <table>
+                            <colgroup>
+                                <col style="width: 110px;">
+                                <col style="width: auto">
+                                <col style="width: 110px;">
+                                <col style="width: auto">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>행사상태</th>
+                                    <td>
+                                        <div class="select_box">
+                                            <select name="select1" >
+                                                <option value="">선택</option>
+                                                <option value="01">준비중</option>
+                                                <option value="02">진행중</option>
+                                                <option value="03">완료</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <th>행사명</th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="search_button f_r">
+                        <a href="#" id="btn_clear" class="btn_s1" title="초기화">초기화</a>
+                        <a href="#" id="btn_search" class="btn_s1" title="검색">검색</a>
+                    </div>
+                </div>
+                <!-- ibsheet -->
+                <div class="ib_hover">
+                    <div id="ib_big2"></div>
+                </div>
+            </div>
+        </section>
+        <button type="button" class="pop_close" onclick="pophide('pop_big2')">
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+</div>
+<!-- e : popup -->
+<script type="text/javascript">
+$(document).ready(function(){ 
+    let ib_big2 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:2},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"번호",          SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"행사명",        SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"행사기간",      SaveName:"3", Align:"Center", Type:"Date", Format:"yyyy-MM-dd ~ yyyy-MM-dd"},
+                    { Header:"행사운영분석",  SaveName:"4", Align:"Center", Type:"Text"},
+                    { Header:"행사담당자",    SaveName:"5", Align:"Center", Type:"Text"},
+                    { Header:"행사상태",      SaveName:"6", Align:"Center", Type:"Text"}
+                ]
+            }
+            const container = $("#ib_big2")[0];
+            createIBSheet2(container,'mySheetbig2','100%','441px');
+            IBS_InitSheet(mySheetbig2,initData);
+            mySheetbig2.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheetbig2.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheetbig2.SetColWidth("sTitle", 100);
+            } else {
+                mySheetbig2.FitColWidth("5|33|17|15|15|15");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"1",
+                    2:"",
+                    3:"2020-01-01~2020-01-01",
+                    4:"",
+                    5:"",
+                    6:"",
+                }
+            ]
+        }
+    };
+    ib_big2.initialize();
+});
+</script>
+
+
+
+<!-- s : popup -->
+<div class="pop" id="pop_big3">
+    <div class="pop_bg"></div>
+    <div class="pop_wrap width_1200">
+        <div class="pop_head"><strong>바이어 불러오기</strong></div>
+        <section class="pop_body height_580">
+            <div class="content">
+                <div class="clearfix mb30">
+                    <div class="form1 text-left width_88p">
+                        <table>
+                            <colgroup>
+                                <col style="width: auto">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="select_box width_25p mr7">
+                                            <select name="select1" >
+                                                <option value="01">업체명</option>
+                                                <option value="02">이메일</option>
+                                            </select>
+                                        </div>
+                                        <input type="text" id="" class="width_73p" name="" value="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="search_button f_r">
+                        <a href="#" id="btn_search" class="btn_s1" title="검색">검색</a>
+                    </div>
+                </div>
+                <!-- ibsheet -->
+                <div class="ib_hover">
+                    <div id="ib_big3"></div>
+                </div>
+            </div>
+        </section>
+        <button type="button" class="pop_close" onclick="pophide('pop_big3')">
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+</div>
+<!-- e : popup -->
+<script type="text/javascript">
+$(document).ready(function(){ 
+    let ib_big3 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:2},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"번호",     SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"행사명",   SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"국가",     SaveName:"3", Align:"Center", Type:"Text"},
+                    { Header:"대표자",   SaveName:"4", Align:"Center", Type:"Text"},
+                    { Header:"담당자명", SaveName:"5", Align:"Center", Type:"Text"},
+                    { Header:"전화번호", SaveName:"6", Align:"Center", Type:"Number"}
+                ]
+            }
+            const container = $("#ib_big3")[0];
+            createIBSheet2(container,'mySheetbig3','100%','441px');
+            IBS_InitSheet(mySheetbig3,initData);
+            mySheetbig3.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheetbig3.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheetbig3.SetColWidth("sTitle", 100);
+            } else {
+                mySheetbig3.FitColWidth("5|35|15|15|15|15");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"1",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"010-1234-5678",
+                }
+            ]
+        }
+    };
+    ib_big3.initialize();
+});
+</script>
+
+
+
+<!-- s : popup -->
+<div class="pop" id="pop_ex1">
+    <div class="pop_bg"></div>
+    <div class="pop_wrap width_1400">
+        <div class="pop_head"><strong>참가 국내업체 대량입력</strong></div>
+        <section class="pop_body height_645">
+            <div class="content">
+                <div class="clearfix mb30">
+                    <div class="form1 text-left" style="display: inline-block; width: calc(100% - 130px); vertical-align: top;">
+                        <table>
+                            <colgroup>
+                                <col style="width: 110px;">
+                                <col style="width: auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>첨부파일등록</th>
+                                    <td>
+                                        <div class="inb" style="display: inline-block; width: calc(100% - 180px); margin-right: 10px;">
+                                            <div class="form_fileupload">
+                                                <input type="file" id="fileupload" name="" class="hide">
+                                                <ul id="filelist" class="filelist"></ul>
+                                            </div>
+                                        </div>
+                                        <label for="fileupload" class="fileupload_btn1">파일등록</label>
+                                        <a href="#" class="btn_c1 ml10" download>Excel File</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="search_button f_r">
+                        <a href="#" id="btn_save" class="btn_s1" title="저장">저장</a>
+                    </div>
+                </div>
+                <!-- ibsheet -->
+                <div class="ib_hover">
+                    <div id="ib_ex1"></div>
+                </div>
+
+                <div class="search_button">
+                    <a href="#" id="btn_register" class="btn_s1" title="등록">등록</a>
+                    <a href="#" id="btn_delete" class="btn_s1" title="삭제">삭제</a>
+                </div>
+            </div>
+        </section>
+        <button type="button" class="pop_close" onclick="pophide('pop_ex1')">
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+</div>
+<!-- e : popup -->
+<script type="text/javascript">
+$(document).ready(function(){ 
+    let ib_ex1 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:2},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"",               SaveName:"1", Align:"Center", Type:"CheckBox"},
+                    { Header:"행사명",          SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"회사명(국문)",    SaveName:"3", Align:"Center", Type:"Text"},
+                    { Header:"회사명(영문)",    SaveName:"4", Align:"Center", Type:"Text"},
+                    { Header:"대표자(국문)",    SaveName:"5", Align:"Center", Type:"Text"},
+                    { Header:"대표자(영문)",    SaveName:"6", Align:"Center", Type:"Text"},
+                    { Header:"사업자등록번호",  SaveName:"7", Align:"Center", Type:"Text"},
+                    { Header:"전화번호",       SaveName:"8", Align:"Center", Type:"Text"},
+                    { Header:"시/도	",         SaveName:"9", Align:"Center", Type:"Text"},
+                    { Header:"주소지",         SaveName:"10", Align:"Center", Type:"Text"},
+                    { Header:"이름",           SaveName:"11", Align:"Center", Type:"Text"},
+                    { Header:"직책",           SaveName:"12", Align:"Center", Type:"Text"},
+                    { Header:"휴대전화번호",    SaveName:"13", Align:"Center", Type:"Text"},
+                    { Header:"이메일",          SaveName:"14", Align:"Center", Type:"Text"},
+                    { Header:"취금품목(영문)",  SaveName:"15", Align:"Center", Type:"Text"},
+                    { Header:"홈페이지",        SaveName:"16", Align:"Center", Type:"Text"},
+                    { Header:"비고",            SaveName:"17", Align:"Center", Type:"Text"},
+                ]
+            }
+            const container = $("#ib_ex1")[0];
+            createIBSheet2(container,'mySheetex1','1338px','441px');
+            IBS_InitSheet(mySheetex1,initData);
+            mySheetex1.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheetex1.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheetex1.SetColWidth("sTitle", 100);
+            } else {
+                mySheetex1.FitColWidth("4|6|6|6|6|6|6|6|6|6|6|6|6|6|6|6|6");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                    8:"",
+                    9:"",
+                    10:"",
+                    11:"",
+                    12:"",
+                    13:"",
+                    14:"",
+                    15:"",
+                    16:"",
+                    17:"",
+                },
+            ]
+        }
+    };
+    ib_ex1.initialize();
+});
+</script>
+
+
+
+    </div>
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">저작권정책</a></li>
+            </ul>
+            <p class="footer_copy">Copyright ⓒ 2008 - 2021 KITA, All rights reserved</p>
+        </div>
+    </footer>
+</div>
+<!-- script -->
+<script type="text/javascript" src="../js/header2021.js"></script>
+<script type="text/javascript" src="../js/common2021.js"></script>
+</body>
+</html>

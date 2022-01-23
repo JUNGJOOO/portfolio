@@ -1,0 +1,2998 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>TadeKorea Koms</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="tadeKorea Koms">
+    <meta name="subject" content="tadeKorea Koms">
+    <meta name="keywords" content="Global, e-Marketplace, tadeKorea Koms, tradeKorea Management system">
+    <meta property="og:title" content="tadeKorea Koms">
+    <!-- css default -->
+    <link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/base_trkkoms.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui-tradekoms.css"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <!-- js ibsheet -->
+    <script type="text/javascript" src="../ibSheet/js/ibleaders.js"></script>
+    <script type="text/javascript" src="../ibSheet/js/ibsheetinfo.js"></script>
+    <script type="text/javascript" src="../ibSheet/js/ibsheet.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    let IB1 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"번호",             SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"지원레벨",         SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"참가국",           SaveName:"3", Align:"Center", Type:"Text"},
+                    { Header:"회사명",           SaveName:"4", Align:"Center", Type:"Text"},
+                    { Header:"여권이름(영문)",   SaveName:"5", Align:"Center", Type:"Text"}
+                ]
+            }
+            const container = $("#ib_container1")[0];
+            createIBSheet2(container,'mySheet1','100%','600px');
+            IBS_InitSheet(mySheet1,initData);
+            mySheet1.SetEditable(false);
+            this.doAction();
+        },        doAction:function(){
+            mySheet1.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheet1.SetColWidth("sTitle", 100);
+            } else {
+                mySheet1.FitColWidth("10|15|25|30|20");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"1",
+                    2:"A",
+                    3:"Japan",
+                    4:"",
+                    5:""
+                },{
+                    1:"1",
+                    2:"A",
+                    3:"Japan",
+                    4:"",
+                    5:""
+                }
+            ]
+        }
+    };
+    IB1.initialize();
+});
+</script>
+<div class="wrap">
+    <div class="container">
+    <div class="container_inner">
+        <div class="contents_wrap">
+        <!-- s : contents -->
+        <div class="contents">
+            <div class="page_head">
+                <div class="page_title">항공/숙박정보</div>
+            </div>
+            <div class="form1 text-left">
+                <table>
+                    <colgroup>
+                        <col style="width:123px;">
+                        <col style="width:auto;">
+                        <col style="width:123px;">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>행사제목</th>
+                            <td>
+                                <div class="fjs">
+                                    <div class="search_box1 width_450 mr10">
+                                        <input type="text" id="" name="" class="" value="">
+                                        <div class="search_box_btn">
+                                            <button type="button" class="sb_search" onclick="popshow('pop_big2'); mySheetbig2.FitColWidth('5|33|17|15|15|15');">검색</button>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn_d2" onclick="popshow('pop_big5')">행사상세보기</button>
+                                </div>
+                            </td>
+                            <th>업체국가</th>
+                            <td>
+                                <div class="select_box">
+                                    <select name="select1" >
+                                        <option value="전체">전체</option>
+                                        <option value="AD">Andorra</option>
+                                        <option value="AE">U.A.E.</option>
+                                        <option value="AF">Afghanistan</option>
+                                        <option value="AG">Antigua Barbuda</option>
+                                        <option value="AI">Anguilla</option>
+                                        <option value="AL">Albania</option>
+                                        <option value="AM">Armenia</option>
+                                        <option value="AN">Neth.Antilles</option>
+                                        <option value="AO">Angola</option>
+                                        <option value="AQ">Antarctica</option>
+                                        <option value="AR">Argentina</option>
+                                        <option value="AS">A.Samoa</option>
+                                        <option value="AT">Austria</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="AW">Aruba</option>
+                                        <option value="AZ">Azerbaijani</option>
+                                        <option value="BA">Bosnia-Herzegov</option>
+                                        <option value="BB">Barbados</option>
+                                        <option value="BD">Bangladesh</option>
+                                        <option value="BE">Belgium</option>
+                                        <option value="BF">Burkina Faso</option>
+                                        <option value="BG">Bulgaria</option>
+                                        <option value="BH">Bahrain</option>
+                                        <option value="BI">Burundi</option>
+                                        <option value="BJ">Benin</option>
+                                        <option value="BM">Bermuda</option>
+                                        <option value="BN">Brunei</option>
+                                        <option value="BO">Bolivia</option>
+                                        <option value="BQ">Br.Antarc.T</option>
+                                        <option value="BR">Brazil</option>
+                                        <option value="BS">Bahamas</option>
+                                        <option value="BT">Bhutan</option>
+                                        <option value="BV">Bouvet Island</option>
+                                        <option value="BW">Botswana</option>
+                                        <option value="BY">Belarus</option>
+                                        <option value="BZ">Belize</option>
+                                        <option value="CA">Canada</option>
+                                        <option value="CC">Cocos Islands</option>
+                                        <option value="CD">Democrat Republic Of Congo (Zaire)</option>
+                                        <option value="CF">Cen.Afr.</option>
+                                        <option value="CG">Congo</option>
+                                        <option value="CH">Switzerland</option>
+                                        <option value="CI">Cote Divoire</option>
+                                        <option value="CK">Cook(Br)</option>
+                                        <option value="CL">Chile</option>
+                                        <option value="CM">Cameroon</option>
+                                        <option value="CN">China</option>
+                                        <option value="CO">Colombia</option>
+                                        <option value="CR">Costa Rica</option>
+                                        <option value="CS">Serbia and Montenegro</option>
+                                        <option value="CT">Canton&amp;E. Is</option>
+                                        <option value="CU">Cuba</option>
+                                        <option value="CV">Cape Verde</option>
+                                        <option value="CX">Christmas Is.</option>
+                                        <option value="CY">Cyprus</option>
+                                        <option value="CZ">Czecho Republic</option>
+                                        <option value="DE">Germany</option>
+                                        <option value="DJ">Djibouti</option>
+                                        <option value="DK">Denmark</option>
+                                        <option value="DM">C.Dominica</option>
+                                        <option value="DO">Dominican Rep.</option>
+                                        <option value="DZ">Algeria</option>
+                                        <option value="EC">Ecuador</option>
+                                        <option value="EE">Estonia</option>
+                                        <option value="EG">Egypt</option>
+                                        <option value="EH">Western Sahara</option>
+                                        <option value="ER">Eritrea</option>
+                                        <option value="ES">Spain</option>
+                                        <option value="ET">Ethiopia</option>
+                                        <option value="FI">Finland</option>
+                                        <option value="FJ">Fiji</option>
+                                        <option value="FK">Falkland</option>
+                                        <option value="FM">Micronesia</option>
+                                        <option value="FO">Faroe Is.</option>
+                                        <option value="FR">France</option>
+                                        <option value="FX">France, Metropolitan</option>
+                                        <option value="GA">Gabon</option>
+                                        <option value="GB">U. Kingdom</option>
+                                        <option value="GD">Grenada</option>
+                                        <option value="GE">Georgia</option>
+                                        <option value="GF">F.Guiana</option>
+                                        <option value="GH">Ghana</option>
+                                        <option value="GI">Gibraltar</option>
+                                        <option value="GL">Greenland</option>
+                                        <option value="GM">Gambia</option>
+                                        <option value="GN">Guinea</option>
+                                        <option value="GP">Guadeloupe</option>
+                                        <option value="GQ">E.Guinea</option>
+                                        <option value="GR">Greece</option>
+                                        <option value="GS">South Georgia </option>
+                                        <option value="GT">Guatemala</option>
+                                        <option value="GW">G.Bissau</option>
+                                        <option value="GY">Guyana</option>
+                                        <option value="HK">Hong Kong(China)</option>
+                                        <option value="HM">H.M.Isl</option>
+                                        <option value="HN">Honduras</option>
+                                        <option value="HR">Croatia</option>
+                                        <option value="HT">Haiti</option>
+                                        <option value="HU">Hungary</option>
+                                        <option value="ID">Indonesia</option>
+                                        <option value="IE">Ireland</option>
+                                        <option value="IL">Israel</option>
+                                        <option value="IN">India</option>
+                                        <option value="IO">B.I.O.T</option>
+                                        <option value="IQ">Iraq</option>
+                                        <option value="IR">Iran</option>
+                                        <option value="IS">Iceland</option>
+                                        <option value="IT">Italy</option>
+                                        <option value="JM">Jamaica</option>
+                                        <option value="JO">Jordan</option>
+                                        <option value="JP">Japan</option>
+                                        <option value="JT">Johnston Is</option>
+                                        <option value="KE">Kenya</option>
+                                        <option value="KG">Kyrgyzstan</option>
+                                        <option value="KH">Cambodia</option>
+                                        <option value="KI">Kiribati</option>
+                                        <option value="KM">Comoros</option>
+                                        <option value="KN">St.Kitts-Nevis</option>
+                                        <option value="KP">North Korea</option>
+                                        <option value="KR">South Korea</option>
+                                        <option value="KW">Kuwait</option>
+                                        <option value="KY">Cayman</option>
+                                        <option value="KZ">Kazakhstan</option>
+                                        <option value="LA">Laos</option>
+                                        <option value="LB">Lebanon</option>
+                                        <option value="LC">St.Lucia</option>
+                                        <option value="LI">Liechtenstein</option>
+                                        <option value="LK">Sri Lanka</option>
+                                        <option value="LR">Liberia</option>
+                                        <option value="LS">Lesotho</option>
+                                        <option value="LT">Lithuania</option>
+                                        <option value="LU">Luxembourg</option>
+                                        <option value="LV">Latbia</option>
+                                        <option value="LY">Libya</option>
+                                        <option value="MA">Morocco</option>
+                                        <option value="MC">Monaco</option>
+                                        <option value="MD">Moldova</option>
+                                        <option value="MG">Madagascar</option>
+                                        <option value="MH">Marshalls</option>
+                                        <option value="MI">Midway Is(Us)</option>
+                                        <option value="MK">Macedonia1</option>
+                                        <option value="ML">Mali</option>
+                                        <option value="MM">Myanmar</option>
+                                        <option value="MN">Mongolia</option>
+                                        <option value="MO">Macao(China)</option>
+                                        <option value="MP">N. Marianas</option>
+                                        <option value="MQ">Martinique</option>
+                                        <option value="MR">Mauritania</option>
+                                        <option value="MS">Montserrat</option>
+                                        <option value="MT">Malta</option>
+                                        <option value="MU">Mauritius</option>
+                                        <option value="MV">Maldives</option>
+                                        <option value="MW">Malawi</option>
+                                        <option value="MX">Mexico</option>
+                                        <option value="MY">Malaysia</option>
+                                        <option value="MZ">Mozambique</option>
+                                        <option value="NA">Namibia</option>
+                                        <option value="NC">N.Caledonia</option>
+                                        <option value="NE">Niger</option>
+                                        <option value="NF">Norfolk Is</option>
+                                        <option value="NG">Nigeria</option>
+                                        <option value="NH">New Hebrides</option>
+                                        <option value="NI">Nicaragua</option>
+                                        <option value="NL">Netherland</option>
+                                        <option value="NO">Norway</option>
+                                        <option value="NP">Nepal</option>
+                                        <option value="NQ">Dro.M.L</option>
+                                        <option value="NR">Nauru</option>
+                                        <option value="NT">Neutral Zone</option>
+                                        <option value="NU">Niue</option>
+                                        <option value="NZ">N.Zealand</option>
+                                        <option value="OM">Oman</option>
+                                        <option value="PA">Panama</option>
+                                        <option value="PC">P.I.T.T</option>
+                                        <option value="PE">Peru</option>
+                                        <option value="PF">F.Polynesia</option>
+                                        <option value="PG">Papua N.Gunea</option>
+                                        <option value="PH">Philippines</option>
+                                        <option value="PK">Pakistan</option>
+                                        <option value="PL">Poland</option>
+                                        <option value="PM">St.P&amp;M</option>
+                                        <option value="PN">Pitcairn Is</option>
+                                        <option value="PO">Plo</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="PS">Palestine (Polisario)</option>
+                                        <option value="PT">Portugal</option>
+                                        <option value="PU">Misc, Pacific Island.(Us)</option>
+                                        <option value="PW">Palau</option>
+                                        <option value="PY">Paraguay</option>
+                                        <option value="PZ">Canal Zone</option>
+                                        <option value="QA">Qatar</option>
+                                        <option value="RE">Reunion Is</option>
+                                        <option value="RO">Romania</option>
+                                        <option value="RU">Russia</option>
+                                        <option value="RW">Rwanda</option>
+                                        <option value="SA">Saudi Arabia</option>
+                                        <option value="SB">Solomon</option>
+                                        <option value="SC">Seychelles</option>
+                                        <option value="SD">Sudan</option>
+                                        <option value="SE">Sweden</option>
+                                        <option value="SG">Singapore</option>
+                                        <option value="SH">St.Helena</option>
+                                        <option value="SI">Slovenia</option>
+                                        <option value="SJ">S.J.M.I</option>
+                                        <option value="SK">Slovak</option>
+                                        <option value="SL">Sierra Leone</option>
+                                        <option value="SM">San Marino</option>
+                                        <option value="SN">Senegal</option>
+                                        <option value="SO">Somalia</option>
+                                        <option value="SR">Suriname</option>
+                                        <option value="ST">S.T&amp;P.Is</option>
+                                        <option value="SU">Ussr</option>
+                                        <option value="SV">El Salvador</option>
+                                        <option value="SY">Syria</option>
+                                        <option value="SZ">Swaziland</option>
+                                        <option value="TC">Turks&amp;Caicos Is</option>
+                                        <option value="TD">Chad</option>
+                                        <option value="TF">F.S.A.T</option>
+                                        <option value="TG">Togo</option>
+                                        <option value="TH">Thailand</option>
+                                        <option value="TJ">Tadjikstan</option>
+                                        <option value="TK">Tokelau</option>
+                                        <option value="TL">Timor</option>
+                                        <option value="TM">Turkmenistan</option>
+                                        <option value="TN">Tunisia</option>
+                                        <option value="TO">Tonga</option>
+                                        <option value="TP">East Timor</option>
+                                        <option value="TR">Turkey</option>
+                                        <option value="TT">T.Tobago</option>
+                                        <option value="TV">Tuvalu</option>
+                                        <option value="TW">Taiwan</option>
+                                        <option value="TZ">Tanzania</option>
+                                        <option value="UA">Ukraine</option>
+                                        <option value="UG">Uganda</option>
+                                        <option value="UM">U.S.M.I</option>
+                                        <option value="US">U.S.A</option>
+                                        <option value="UY">Uruguay</option>
+                                        <option value="UZ">Uzbekistan</option>
+                                        <option value="VA">Vatican City</option>
+                                        <option value="VC">St.Vincent</option>
+                                        <option value="VE">Venezuela</option>
+                                        <option value="VG">Br.Virgin Is.</option>
+                                        <option value="VI">Virgin Is.(Us)</option>
+                                        <option value="VN">Viet Nam</option>
+                                        <option value="VU">Vanuatu</option>
+                                        <option value="WF">W.A.F.I</option>
+                                        <option value="WK">Wake Island</option>
+                                        <option value="WS">Samoa</option>
+                                        <option value="YD">S. Yemen</option>
+                                        <option value="YE">Yemen</option>
+                                        <option value="YM">Macedonia2</option>
+                                        <option value="YT">Mayotte</option>
+                                        <option value="YU">Yugoslavia</option>
+                                        <option value="ZA">South Africa</option>
+                                        <option value="ZM">Zambia</option>
+                                        <option value="ZR">Zaire</option>
+                                        <option value="ZW">Zimbabwe</option>
+
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>필터</th>
+                            <td colspan="3">
+                                <div class="fjs">
+                                    <div class="radio_box width_900">
+                                        <input type="radio" id="radio1" name="radio_group1" value="" checked="checked">
+                                        <label for="radio1">회사명</label>
+                                        <input type="radio" id="radio2" name="radio_group1" value="">
+                                        <label for="radio2">여권이름(영문)</label>
+                                        <input type="radio" id="radio3" name="radio_group1" value="">
+                                        <label for="radio3">여권번호</label>
+                                        <input type="radio" id="radio4" name="radio_group1" value="">
+                                        <label for="radio4">소싱오피스</label>fjs
+                                        <input type="radio" id="radio5" name="radio_group1" value="">
+                                        <label for="radio5">호텔</label>
+                                        <input type="radio" id="radio6" name="radio_group1" value="">
+                                        <label for="radio6">비고</label>
+                                    </div>
+                                    <input type="text" id="" name="" value="">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="search_button mt20">
+                <a href="#" id="btn_clear" class="btn_s1" title="검색초기화">초기화</a>
+                <a href="#" id="btn_search" class="btn_s1" title="검색" >검색</a>
+            </div>
+            <section class="col_group mt50">
+                <div class="colv1_2" style="width: 570px;">
+                    <div class="form_head">
+                        <p class="total">
+                            전체 <strong>1</strong> 건, <span>1/1 page</span>
+                        </p>
+                        <div class="f_r">
+                            <div class="select_box width_90">
+                                <select name="select_listnum">
+                                    <option value="20">20개</option>
+                                    <option value="30">30개</option>
+                                    <option value="40">40개</option>
+                                    <option value="50">50개</option>
+                                    <option value="60">60개</option>
+                                    <option value="70">70개</option>
+                                    <option value="80">80개</option>
+                                    <option value="90">90개</option>
+                                    <option value="100">100개</option>
+                                    <option value="300">300개</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ibsheet -->
+                    <div class="ib_hover">
+                        <div id="ib_container1"></div>
+                    </div>
+
+                    <nav class="pagination">
+                        <a href="#" class="pagination_first">
+                            <i class="hide">처음페이지</i>
+                        </a>
+                        <a href="#" class="pagination_prev">
+                            <i class="hide">이전페이지</i>
+                        </a>
+                        <ul class="pagination_list">
+                            <li class="active"><a href="#" title="1페이지">1</a></li>
+                            <li><a href="#" title="2페이지">2</a></li>
+                            <li><a href="#" title="3페이지">3</a></li>
+                            <li><a href="#" title="4페이지">4</a></li>
+                            <li><a href="#" title="5페이지">5</a></li>
+                            <li><a href="#" title="6페이지">6</a></li>
+                            <li><a href="#" title="7페이지">7</a></li>
+                            <li><a href="#" title="8페이지">8</a></li>
+                            <li><a href="#" title="9페이지">9</a></li>
+                            <li><a href="#" title="10페이지">10</a></li>
+                        </ul>
+                        <a href="#" class="pagination_next">
+                            <i class="hide">다음페이지</i>
+                        </a>
+                        <a href="#" class="pagination_last">
+                            <i class="hide">마지막페이지</i>
+                        </a>
+                    </nav>
+                </div>
+                <div class="colv1_3" style="width: 800px;">
+                    <div class="form_head">
+                        <div class="page_subtitle">행사등록</div>
+                        <div class="btn_group2 f_r">
+                            <button type="button" class="btn_d2" onclick="popshow('pop_big7'); mySheetbig7.FitColWidth('5|55|20|20')">신규사업등록</button>
+                            <a href="http://sso.kita.net:9090/sso/login.jsp" class="btn_d2" target="_blank" title="CRM 바로가기">CRM 바로가기</a>
+                        </div>
+                    </div>
+                    <div class="form1 text-left">
+                        <table>
+                            <colgroup>
+                                <col style="width:123px;">
+                                <col style="width:auto;">
+                                <col style="width:123px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>회사명</th>
+                                    <td colspan="3"></td>
+                                </tr>
+                                <tr>
+                                    <th>지원레벨</th>
+                                    <td></td>
+                                    <th>참가국</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>항공지원율</th>
+                                    <td></td>
+                                    <th>숙박지원율</th>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>호텔명</th>
+                                    <td colspan="3">
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>숙박일수</th>
+                                    <td>
+                                        <div class="select_box">
+                                            <select name="select1" >
+                                                <option value="1">1박</option>
+                                                <option value="2">2박</option>
+                                                <option value="3">3박</option>
+                                                <option value="4">4박</option>
+                                                <option value="5">5박</option>
+                                                <option value="6">6박</option>
+                                                <option value="7">7박</option>
+                                                <option value="8">8박</option>
+                                                <option value="9">9박</option>
+                                                <option value="10">10박</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <th>소싱오피스</th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>초청장발송일</th>
+                                    <td>
+                                        <div class="datepicker_box1">
+                                            <input type="text" id="" name="" class="datepicker" readonly="readonly">
+                                        </div>
+                                    </td>
+                                    <th>여권이름(영문)</th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>성별</th>
+                                    <td>
+                                        <div class="select_box">
+                                            <select name="select1" >
+                                                <option value="1">남자</option>
+                                                <option value="2">여자</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <th>생년월일</th>
+                                    <td>
+                                        <div class="datepicker_box1">
+                                            <input type="text" id="" name="" class="datepicker" readonly="readonly">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>여권번호</th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                    <th>전화번호</th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>휴대전화번호</th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                    <th>이메일</th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>주소</th>
+                                    <td colspan="3">
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>국적</th>
+                                    <td colspan="3">
+                                        <div class="search_box1">
+                                            <input type="text" id="" name="" class="" value="">
+                                            <div class="search_box_btn">
+                                                <button type="button" class="sb_search" onclick="popshow('pop_nation1')">국가검색</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>출발시간</th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                    <th>도착시각</th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>비고</th>
+                                    <td colspan="3">
+                                        <textarea></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="search_button mt20">
+                        <a href="#" class="btn_s1">저장</a>
+                    </div>
+                </div>
+            </section>
+
+
+
+<!-- s : popup -->
+<div class="pop" id="pop_big2">
+<div class="pop_bg"></div>
+<div class="pop_wrap width_1200">
+    <div class="pop_head"><strong>행사목록</strong></div>
+    <section class="pop_body height_580">
+        <div class="content">
+            <div class="clearfix mb30">
+                <div class="form1 text-left width_900 f_l">
+                    <table>
+                        <colgroup>
+                            <col style="width: 110px;">
+                            <col style="width: auto">
+                            <col style="width: 110px;">
+                            <col style="width: auto">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>행사상태</th>
+                                <td>
+                                    <div class="select_box">
+                                        <select name="select1" >
+                                            <option value="">선택</option>
+                                            <option value="01">준비중</option>
+                                            <option value="02">진행중</option>
+                                            <option value="03">완료</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th>행사명</th>
+                                <td>
+                                    <input type="text" id="" name="" value="">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="search_button f_r">
+                    <a href="#" id="btn_clear" class="btn_s1" title="초기화">초기화</a>
+                    <a href="#" id="btn_search" class="btn_s1" title="검색">검색</a>
+                </div>
+            </div>
+            <!-- ibsheet -->
+            <div class="ib_hover">
+                <div id="ib_big2"></div>
+            </div>
+        </div>
+    </section>
+    <button type="button" class="pop_close" onclick="pophide('pop_big2')">
+        <span class="line"></span>
+        <span class="line"></span>
+    </button>
+</div>
+</div>
+<!-- e : popup -->
+<script type="text/javascript">
+$(document).ready(function(){ 
+let ib_big2 = {
+    initialize:function(){
+        let initData = {
+            Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:2},
+            HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+            Cols:[
+                { Header:"번호",          SaveName:"1", Align:"Center", Type:"Number"},
+                { Header:"행사명",        SaveName:"2", Align:"Center", Type:"Text"},
+                { Header:"행사기간",      SaveName:"3", Align:"Center", Type:"Date", Format:"yyyy-MM-dd ~ yyyy-MM-dd"},
+                { Header:"행사운영분석",  SaveName:"4", Align:"Center", Type:"Text"},
+                { Header:"행사담당자",    SaveName:"5", Align:"Center", Type:"Text"},
+                { Header:"행사상태",      SaveName:"6", Align:"Center", Type:"Text"}
+            ]
+        }
+        const container = $("#ib_big2")[0];
+        createIBSheet2(container,'mySheetbig2','100%','441px');
+        IBS_InitSheet(mySheetbig2,initData);
+        mySheetbig2.SetEditable(false);
+        this.doAction();
+    },
+    doAction:function(){
+        mySheetbig2.LoadSearchData(this.data,{Sync:1});
+        if ($("#pro-options").val() == "frozen-col") {
+            mySheetbig2.SetColWidth("sTitle", 100);
+        } else {
+            mySheetbig2.FitColWidth("5|33|17|15|15|15");
+        }
+    },
+    data:{
+        data:[
+            {
+                1:"1",
+                2:"",
+                3:"2020-01-01~2020-01-01",
+                4:"",
+                5:"",
+                6:"",
+            }
+        ]
+    }
+};
+ib_big2.initialize();
+});
+</script>
+
+
+
+
+
+<!-- s : popup -->
+<div class="pop" id="pop_big5">
+    <div class="pop_bg"></div>
+    <div class="pop_wrap width_1200">
+        <div class="pop_head"><strong>행사정보</strong></div>
+        <section class="pop_body height_700">
+            <div class="content">
+                <div class="form1 text-left">
+                    <table>
+                        <colgroup>
+                            <col style="width:123px;">
+                            <col style="width:auto;">
+                            <col style="width:123px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>행사명</th>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <th>행사명(영문)</th>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <th>행사기간</th>
+                                <td></td>
+                                <th>모집기간</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>행사장소</th>
+                                <td></td>
+                                <th>행사장소(영문)</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>행사유형</th>
+                                <td></td>
+                                <th>부스규모</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>참가업체수</th>
+                                <td></td>
+                                <th>행사예산</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>행사주최</th>
+                                <td></td>
+                                <th>행사주관</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>업종</th>
+                                <td></td>
+                                <th>업종(영문)</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>품목</th>
+                                <td></td>
+                                <th>품목(영문)</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>참가자지역</th>
+                                <td></td>
+                                <th>여행사</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>PCO</th>
+                                <td></td>
+                                <th>통역 에이전시</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>상담회 컨셉</th>
+                                <td></td>
+                                <th>부대행사</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>마케팅채널</th>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <th>해외업체지원</th>
+                                <td colspan="3">
+                                    <div class="form2 text-center">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width: 25%;">
+                                                <col style="width: 25%;">
+                                                <col style="width: 25%;">
+                                                <col style="width: 25%;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>레벨</th>
+                                                    <th>항공</th>
+                                                    <th>숙박</th>
+                                                    <th>지원건수</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>A</td>
+                                                    <td>100%</td>
+                                                    <td>100%</td>
+                                                    <td>20</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>담당소속</th>
+                                <td></td>
+                                <th>행사담당자</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>약도웹주소</th>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <th>파일첨부</th>
+                                <td colspan="3">
+                                    <ul class="filedata">
+                                        <li><a href="#" download>20170621 온라인 해외직판 종합 전략 세미나 및 상담회 개최안(홍보실).hwp</a></li>
+                                        <li><a href="#" download>20170621 온라인 해외직판 종합 전략 세미나 및 상담회 개최안(홍보실).hwp</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <button type="button" class="pop_close" onclick="pophide('pop_big5')">
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+</div>
+<!-- e : popup -->
+
+
+
+<!-- s : popup -->
+<div class="pop" id="pop_big7">
+<div class="pop_bg"></div>
+<div class="pop_wrap width_1200">
+    <div class="pop_head"><strong>CRM 사업목록</strong></div>
+    <section class="pop_body height_570">
+        <div class="content">
+            <div class="pop_inputonly mb30">
+                <input type="text" id="" class="input_s1" name="" value="">
+                <a href="#" id="btn_search" class="btn_d2" title="검색">검색</a>
+            </div>
+            <!-- ibsheet -->
+            <div class="ib_hover">
+                <div id="ib_big7"></div>
+            </div>
+        </div>
+    </section>
+    <button type="button" class="pop_close" onclick="pophide('pop_big7')">
+        <span class="line"></span>
+        <span class="line"></span>
+    </button>
+</div>
+</div>
+<!-- e : popup -->
+<script type="text/javascript">
+$(document).ready(function(){ 
+let ib_big7 = {
+    initialize:function(){
+        let initData = {
+            Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:2},
+            HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+            Cols:[
+                { Header:"번호",              SaveName:"1", Width: "138", Align:"Center", Type:"Number"},
+                { Header:"사업명",            SaveName:"2", Width: "600", Align:"Center", Type:"Text"},
+                { Header:"사업기간",          SaveName:"3", Width: "200", Align:"Center", Type:"Date", Format:"yyyy-MM-dd"},
+                { Header:"국내업체 모집기간",  SaveName:"4", Width: "200", Align:"Center", Type:"Date", Format:"yyyy-MM-dd ~ yyyy-MM-dd"},
+            ]
+        }
+        const container = $("#ib_big7")[0];
+        createIBSheet2(container,'mySheetbig7','100%','441px');
+        IBS_InitSheet(mySheetbig7,initData);
+        mySheetbig7.SetEditable(false);
+        this.doAction();
+    },
+    doAction:function(){
+        mySheetbig7.LoadSearchData(this.data,{Sync:1});
+        if ($("#pro-options").val() == "frozen-col") {
+            mySheetbig7.SetColWidth("sTitle", 100);
+        } else {
+            mySheetbig7.FitColWidth("5|55|20|20");
+    }
+    },
+    data:{
+        data:[
+            {
+                1:"1",
+                2:"",
+                3:"2020-01-01",
+                4:"2020-01-01 ~ 2020-01-01",
+            },
+        ]
+    }
+};
+ib_big7.initialize();
+});
+</script>
+
+
+
+
+
+
+<!-- s : popup -->
+<div class="pop" id="pop_nation1">
+<div class="pop_bg"></div>
+<div class="pop_wrap width_1200">
+    <div class="pop_head"><strong>국가 검색</strong></div>
+    <section class="pop_body pop_body_bg height_680">
+        <div class="content">
+            <div class="pop_title">
+                <div class="pop_subtitle1">선택항목 미리보기</div>
+                <div class="pop_subright">
+                    <a href="#" class="btn_refresh" title="회원정보 팝업창 열기"></a>
+                </div>
+            </div>
+
+            <div class="formnh_header mb30">
+                <table>
+                    <colgroup>
+                        <col style="width:110px;">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th><div>선택항목</div></th>
+                            <td>
+                                <div class="formnh_nation_group">
+                                    <div class="formnh_header_tit">South & Central America</div>
+                                    <div class="formnh_nations">
+                                        <p class="formnh_nation">
+                                            <strong class="formnh_nation_nm">Afghanistan [AF]</strong>
+                                            <a href="#" class="formnh_nation_close">닫기</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="formnh_nation_group">
+                                    <div class="formnh_header_tit">Europe</div>
+                                    <div class="formnh_nations">
+                                        <p class="formnh_nation">
+                                            <strong class="formnh_nation_nm">Afghanistan [AF]</strong>
+                                            <a href="#" class="formnh_nation_close">닫기</a>
+                                        </p>
+                                        <p class="formnh_nation">
+                                            <strong class="formnh_nation_nm">Afghanistan [AF]</strong>
+                                            <a href="#" class="formnh_nation_close">닫기</a>
+                                        </p>
+                                        <p class="formnh_nation">
+                                            <strong class="formnh_nation_nm">Afghanistan [AF]</strong>
+                                            <a href="#" class="formnh_nation_close">닫기</a>
+                                        </p>
+                                        <p class="formnh_nation">
+                                            <strong class="formnh_nation_nm">Afghanistan [AF]</strong>
+                                            <a href="#" class="formnh_nation_close">닫기</a>
+                                        </p>
+                                        <p class="formnh_nation">
+                                            <strong class="formnh_nation_nm">Afghanistan [AF]</strong>
+                                            <a href="#" class="formnh_nation_close">닫기</a>
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pop_btn_wrap mt20 mb30">
+                <a href="#" class="btn_d2">선택완료</a>
+                <a href="#" class="btn_d2">취소</a>
+            </div>
+            <div class="formnh text-left">
+                <table>
+                    <colgroup>
+                        <col style="width:220px;">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>
+                                <div class="checkbox">
+                                    <input type="checkbox" name="" id="nation_asia" value="">
+                                    <label for="nation_asia">Asia</label>
+                                </div>
+                            </th>
+                            <td>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AF" value="">
+                                        <label for="nation_AF">Afghanistan [AF]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AZ" value="">
+                                        <label for="nation_AZ">Azerbaijani [AZ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BD" value="">
+                                        <label for="nation_BD">Bangladesh [BD]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BT" value="">
+                                        <label for="nation_BT">Bhutan [BT]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BN" value="">
+                                        <label for="nation_BN">Brunei [BN]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_KH" value="">
+                                        <label for="nation_KH">Cambodia [KH]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CN" value="">
+                                        <label for="nation_CN">China [CN]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_TP" value="">
+                                        <label for="nation_TP">East Timor [TP]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_HK" value="">
+                                        <label for="nation_HK">Hong Kong(China) [HK]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_IN" value="">
+                                        <label for="nation_IN">India [IN]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_ID" value="">
+                                        <label for="nation_ID">Indonesia [ID]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_JP" value="">
+                                        <label for="nation_JP">Japan [JP]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_KZ" value="">
+                                        <label for="nation_KZ">Kazakhstan [KZ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_KG" value="">
+                                        <label for="nation_KG">Kyrgyzstan [KG]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_LA" value="">
+                                        <label for="nation_LA">Laos [LA]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MO" value="">
+                                        <label for="nation_MO">Macao(China) [MO]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MY" value="">
+                                        <label for="nation_MY">Malaysia [MY]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MV" value="">
+                                        <label for="nation_MV">Maldives [MV]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MN" value="">
+                                        <label for="nation_MN">Mongolia [MN]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MM" value="">
+                                        <label for="nation_MM">Myanmar [MM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_NP" value="">
+                                        <label for="nation_NP">Nepal [NP]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_KP" value="">
+                                        <label for="nation_KP">North Korea [KP]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PK" value="">
+                                        <label for="nation_PK">Pakistan [PK]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PH" value="">
+                                        <label for="nation_PH">Philippines [PH]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SG" value="">
+                                        <label for="nation_SG">Singapore [SG]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_KR" value="">
+                                        <label for="nation_KR">South Korea [KR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_LK" value="">
+                                        <label for="nation_LK">Sri Lanka [LK]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_TJ" value="">
+                                        <label for="nation_TJ">Tadjikstan [TJ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_TW" value="">
+                                        <label for="nation_TW">Taiwan [TW]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_TH" value="">
+                                        <label for="nation_TH">Thailand [TH]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_TL" value="">
+                                        <label for="nation_TL">Timor [TL]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_TM" value="">
+                                        <label for="nation_TM">Turkmenistan [TM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_UZ" value="">
+                                        <label for="nation_UZ">Uzbekistan [UZ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_VN" value="">
+                                        <label for="nation_VN">Viet Nam [VN]</label>
+                                    </div>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="checkbox">
+                                    <input type="checkbox" name="" id="nation_middleeast" value="">
+                                    <label for="nation_middleeast">Middle East</label>
+                                </div>
+                            </th>
+                            <td>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_DZ" value="">
+                                        <label for="nation_DZ">Algeria [DZ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AM" value="">
+                                        <label for="nation_AM">Armenia [AM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BH" value="">
+                                        <label for="nation_BH">Bahrain [BH]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_EG" value="">
+                                        <label for="nation_EG">Egypt [EG]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_IR" value="">
+                                        <label for="nation_IR">Iran [IR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_IQ" value="">
+                                        <label for="nation_IQ">Iraq [IQ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_IL" value="">
+                                        <label for="nation_IL">Israel [IL]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_JO" value="">
+                                        <label for="nation_JO">Jordan [JO]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_KW" value="">
+                                        <label for="nation_KW">Kuwait [KW]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_LB" value="">
+                                        <label for="nation_LB">Lebanon [LB]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_LY" value="">
+                                        <label for="nation_LY">Libya [LY]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MR" value="">
+                                        <label for="nation_MR">Mauritania [MR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MA" value="">
+                                        <label for="nation_MA">Morocco [MA]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_NT" value="">
+                                        <label for="nation_NT">Neutral Zone [NT]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_OM" value="">
+                                        <label for="nation_OM">Oman [OM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PO" value="">
+                                        <label for="nation_PO">Plo [PO]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_QA" value="">
+                                        <label for="nation_QA">Qatar [QA]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_YD" value="">
+                                        <label for="nation_YD">S. Yemen [YD]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SA" value="">
+                                        <label for="nation_SA">Saudi Arabia [SA]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SD" value="">
+                                        <label for="nation_SD">Sudan [SD]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SY" value="">
+                                        <label for="nation_SY">Syria [SY]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_TN" value="">
+                                        <label for="nation_TN">Tunisia [TN]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AE" value="">
+                                        <label for="nation_AE">U.A.E. [AE]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_YE" value="">
+                                        <label for="nation_YE">Yemen [YE]</label>
+                                    </div>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="checkbox">
+                                    <input type="checkbox" name="" id="nation_europe" value="">
+                                    <label for="nation_europe">Europe</label>
+                                </div>
+                            </th>
+                            <td>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AL" value="">
+                                        <label for="check_nh1">Albania [AL]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AD" value="">
+                                        <label for="check_nh1">Andorra [AD]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AT" value="">
+                                        <label for="check_nh1">Austria [AT]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BY" value="">
+                                        <label for="check_nh1">Belarus [BY]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BE" value="">
+                                        <label for="check_nh1">Belgium [BE]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BA" value="">
+                                        <label for="check_nh1">Bosnia-Herzegov [BA]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BG" value="">
+                                        <label for="check_nh1">Bulgaria [BG]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_HR" value="">
+                                        <label for="check_nh1">Croatia [HR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CY" value="">
+                                        <label for="check_nh1">Cyprus [CY]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CZ" value="">
+                                        <label for="check_nh1">Czecho Republic [CZ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_DK" value="">
+                                        <label for="check_nh1">Denmark [DK]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_EE" value="">
+                                        <label for="check_nh1">Estonia [EE]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_FO" value="">
+                                        <label for="check_nh1">Faroe Is. [FO]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_FI" value="">
+                                        <label for="check_nh1">Finland [FI]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_FR" value="">
+                                        <label for="check_nh1">France [FR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_FX" value="">
+                                        <label for="check_nh1">France, Metropolitan [FX]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GE" value="">
+                                        <label for="check_nh1">Georgia [GE]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_DE" value="">
+                                        <label for="check_nh1">Germany [DE]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GI" value="">
+                                        <label for="check_nh1">Gibraltar [GI]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GR" value="">
+                                        <label for="check_nh1">Greece [GR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_HU" value="">
+                                        <label for="check_nh1">Hungary [HU]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_IS" value="">
+                                        <label for="check_nh1">Iceland [IS]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_IE" value="">
+                                        <label for="check_nh1">Ireland [IE]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_IT" value="">
+                                        <label for="check_nh1">Italy [IT]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_LV" value="">
+                                        <label for="check_nh1">Latvia [LV]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_LI" value="">
+                                        <label for="check_nh1">Liechtenstein [LI]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_LT" value="">
+                                        <label for="check_nh1">Lithuania [LT]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_LU" value="">
+                                        <label for="check_nh1">Luxembourg [LU]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MK" value="">
+                                        <label for="check_nh1">Macedonia [MK]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_YM" value="">
+                                        <label for="check_nh1">Macedonia [YM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MT" value="">
+                                        <label for="check_nh1">Malta [MT]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MD" value="">
+                                        <label for="check_nh1">Moldova [MD]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MC" value="">
+                                        <label for="check_nh1">Monaco [MC]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_NL" value="">
+                                        <label for="check_nh1">Netherland [NL]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_NO" value="">
+                                        <label for="check_nh1">Norway [NO]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PL" value="">
+                                        <label for="check_nh1">Poland [PL]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PT" value="">
+                                        <label for="check_nh1">Portugal [PT]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_RO" value="">
+                                        <label for="check_nh1">Romania [RO]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_RU" value="">
+                                        <label for="check_nh1">Russia [RU]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SJ" value="">
+                                        <label for="check_nh1">S.J.M.I [SJ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SM" value="">
+                                        <label for="check_nh1">San Marino [SM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CS" value="">
+                                        <label for="check_nh1">Serbia and Montenegro [CS]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SK" value="">
+                                        <label for="check_nh1">Slovakia [SK]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SI" value="">
+                                        <label for="check_nh1">Slovenia [SI]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GS" value="">
+                                        <label for="check_nh1">South Georgia [GS]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_ES" value="">
+                                        <label for="check_nh1">Spain [ES]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SE" value="">
+                                        <label for="check_nh1">Sweden [SE]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AL" value="">
+                                        <label for="check_nh1">Albania [AL]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AD" value="">
+                                        <label for="check_nh1">Andorra [AD]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AT" value="">
+                                        <label for="check_nh1">Austria [AT]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BY" value="">
+                                        <label for="check_nh1">Belarus [BY]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BE" value="">
+                                        <label for="check_nh1">Belgium [BE]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BA" value="">
+                                        <label for="check_nh1">Bosnia-Herzegov [BA]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BG" value="">
+                                        <label for="check_nh1">Bulgaria [BG]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_HR" value="">
+                                        <label for="check_nh1">Croatia [HR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CY" value="">
+                                        <label for="check_nh1">Cyprus [CY]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CZ" value="">
+                                        <label for="check_nh1">Czecho Republic [CZ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_DK" value="">
+                                        <label for="check_nh1">Denmark [DK]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_EE" value="">
+                                        <label for="check_nh1">Estonia [EE]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_FO" value="">
+                                        <label for="check_nh1">Faroe Is. [FO]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_FI" value="">
+                                        <label for="check_nh1">Finland [FI]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_FR" value="">
+                                        <label for="check_nh1">France [FR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_FX" value="">
+                                        <label for="check_nh1">France, Metropolitan [FX]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GE" value="">
+                                        <label for="check_nh1">Georgia [GE]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_DE" value="">
+                                        <label for="check_nh1">Germany [DE]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GI" value="">
+                                        <label for="check_nh1">Gibraltar [GI]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GR" value="">
+                                        <label for="check_nh1">Greece [GR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_HU" value="">
+                                        <label for="check_nh1">Hungary [HU]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_IS" value="">
+                                        <label for="check_nh1">Iceland [IS]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_IE" value="">
+                                        <label for="check_nh1">Ireland [IE]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_IT" value="">
+                                        <label for="check_nh1">Italy [IT]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_LV" value="">
+                                        <label for="check_nh1">Latvia [LV]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_LI" value="">
+                                        <label for="check_nh1">Liechtenstein [LI]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_LT" value="">
+                                        <label for="check_nh1">Lithuania [LT]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_LU" value="">
+                                        <label for="check_nh1">Luxembourg [LU]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MK" value="">
+                                        <label for="check_nh1">Macedonia [MK]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_YM" value="">
+                                        <label for="check_nh1">Macedonia [YM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MT" value="">
+                                        <label for="check_nh1">Malta [MT]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MD" value="">
+                                        <label for="check_nh1">Moldova [MD]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MC" value="">
+                                        <label for="check_nh1">Monaco [MC]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_NL" value="">
+                                        <label for="check_nh1">Netherland [NL]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_NO" value="">
+                                        <label for="check_nh1">Norway [NO]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PL" value="">
+                                        <label for="check_nh1">Poland [PL]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PT" value="">
+                                        <label for="check_nh1">Portugal [PT]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_RO" value="">
+                                        <label for="check_nh1">Romania [RO]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_RU" value="">
+                                        <label for="check_nh1">Russia [RU]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SJ" value="">
+                                        <label for="check_nh1">S.J.M.I [SJ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SM" value="">
+                                        <label for="check_nh1">San Marino [SM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CS" value="">
+                                        <label for="check_nh1">Serbia and Montenegro [CS]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SK" value="">
+                                        <label for="check_nh1">Slovakia [SK]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SI" value="">
+                                        <label for="check_nh1">Slovenia [SI]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GS" value="">
+                                        <label for="check_nh1">South Georgia [GS]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_ES" value="">
+                                        <label for="check_nh1">Spain [ES]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SE" value="">
+                                        <label for="check_nh1">Sweden [SE]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CH" value="">
+                                        <label for="check_nh1">Switzerland [CH]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_TR" value="">
+                                        <label for="check_nh1">Turkey [TR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GB" value="">
+                                        <label for="check_nh1">U. Kingdom [GB]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_UA" value="">
+                                        <label for="check_nh1">Ukraine [UA]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SU" value="">
+                                        <label for="check_nh1">Ussr [SU]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_VA" value="">
+                                        <label for="check_nh1">Vatican City [VA]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_YU" value="">
+                                        <label for="check_nh1">Yugoslavia [YU]</label>
+                                    </div>
+                                </span>
+                                
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CH" value="">
+                                        <label for="check_nh1">Switzerland [CH]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_TR" value="">
+                                        <label for="check_nh1">Turkey [TR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GB" value="">
+                                        <label for="check_nh1">U. Kingdom [GB]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_UA" value="">
+                                        <label for="check_nh1">Ukraine [UA]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SU" value="">
+                                        <label for="check_nh1">Ussr [SU]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_VA" value="">
+                                        <label for="check_nh1">Vatican City [VA]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_YU" value="">
+                                        <label for="check_nh1">Yugoslavia [YU]</label>
+                                    </div>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="checkbox">
+                                    <input type="checkbox" name="" id="nation_northamerica" value="">
+                                    <label for="nation_northamerica">North America</label>
+                                </div>
+                            </th>
+                            <td>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CA" value="">
+                                        <label for="nation_CA">Canada [CA]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_US" value="">
+                                        <label for="nation_US">U.S.A [US]</label>
+                                    </div>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="checkbox">
+                                    <input type="checkbox" name="" id="nation_southcentralamerica" value="">
+                                    <label for="nation_southcentralamerica">South & Central America</label>
+                                </div>
+                            </th>
+                            <td>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AI" value="">
+                                        <label for="nation_AI">Anguilla [AI]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AG" value="">
+                                        <label for="nation_AG">Antigua Barbuda [AG]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AR" value="">
+                                        <label for="nation_AR">Argentina [AR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AW" value="">
+                                        <label for="nation_AW">Aruba [AW]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BS" value="">
+                                        <label for="nation_BS">Bahamas [BS]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BB" value="">
+                                        <label for="nation_BB">Barbados [BB]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BZ" value="">
+                                        <label for="nation_BZ">Belize [BZ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BM" value="">
+                                        <label for="nation_BM">Bermuda [BM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BO" value="">
+                                        <label for="nation_BO">Bolivia [BO]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BQ" value="">
+                                        <label for="nation_BQ">Br.Antarc.T [BQ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_VG" value="">
+                                        <label for="nation_VG">Br.Virgin Is. [VG]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BR" value="">
+                                        <label for="nation_BR">Brazil [BR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_DM" value="">
+                                        <label for="nation_DM">C.Dominica [DM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PZ" value="">
+                                        <label for="nation_PZ">Canal Zone [PZ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_KY" value="">
+                                        <label for="nation_KY">Cayman [KY]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CL" value="">
+                                        <label for="nation_CL">Chile [CL]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CO" value="">
+                                        <label for="nation_CO">Colombia [CO]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CR" value="">
+                                        <label for="nation_CR">Costa Rica [CR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CU" value="">
+                                        <label for="nation_CU">Cuba [CU]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_DO" value="">
+                                        <label for="nation_DO">Dominican Rep. [DO]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_EC" value="">
+                                        <label for="nation_EC">Ecuador [EC]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SV" value="">
+                                        <label for="nation_SV">El Salvador [SV]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GF" value="">
+                                        <label for="nation_GF">F.Guiana [GF]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_FK" value="">
+                                        <label for="nation_FK">Falkland [FK]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GL" value="">
+                                        <label for="nation_GL">Greenland [GL]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GD" value="">
+                                        <label for="nation_GD">Grenada [GD]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GP" value="">
+                                        <label for="nation_GP">Guadeloupe [GP]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GT" value="">
+                                        <label for="nation_GT">Guatemala [GT]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GY" value="">
+                                        <label for="nation_GY">Guyana [GY]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_HT" value="">
+                                        <label for="nation_HT">Haiti [HT]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_HN" value="">
+                                        <label for="nation_HN">Honduras [HN]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_JM" value="">
+                                        <label for="nation_JM">Jamaica [JM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MQ" value="">
+                                        <label for="nation_MQ">Martinique [MQ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MX" value="">
+                                        <label for="nation_MX">Mexico [MX]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MI" value="">
+                                        <label for="nation_MI">Midway Is(Us) [MI]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MS" value="">
+                                        <label for="nation_MS">Montserrat [MS]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AN" value="">
+                                        <label for="nation_AN">Neth.Antilles [AN]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_NI" value="">
+                                        <label for="nation_NI">Nicaragua [NI]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PA" value="">
+                                        <label for="nation_PA">Panama [PA]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PY" value="">
+                                        <label for="nation_PY">Paraguay [PY]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PE" value="">
+                                        <label for="nation_PE">Peru [PE]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PR" value="">
+                                        <label for="nation_PR">Puerto Rico [PR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_KN" value="">
+                                        <label for="nation_KN">St.Kitts-Nevis [KN]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_LC" value="">
+                                        <label for="nation_LC">St.Lucia [LC]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PM" value="">
+                                        <label for="nation_PM">St.P&M [PM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_VC" value="">
+                                        <label for="nation_VC">St.Vincent [VC]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SR" value="">
+                                        <label for="nation_SR">Suriname [SR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_TT" value="">
+                                        <label for="nation_TT">T.Tobago [TT]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_TC" value="">
+                                        <label for="nation_TC">Turks&Caicos Is [TC]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_UY" value="">
+                                        <label for="nation_UY">Uruguay [UY]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_VE" value="">
+                                        <label for="nation_VE">Venezuela [VE]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_VI" value="">
+                                        <label for="nation_VI">Virgin Is.(Us) [VI]</label>
+                                    </div>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="checkbox">
+                                    <input type="checkbox" name="" id="nation_africa" value="">
+                                    <label for="nation_africa">Africa</label>
+                                </div>
+                            </th>
+                            <td>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AO" value="">
+                                        <label for="nation_AO">Angola [AO]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_IO" value="">
+                                        <label for="nation_IO">B.I.O.T [IO]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BJ" value="">
+                                        <label for="nation_BJ">Benin [BJ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BW" value="">
+                                        <label for="nation_BW">Botswana [BW]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BV" value="">
+                                        <label for="nation_BV">Bouvet Island [BV]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BF" value="">
+                                        <label for="nation_BF">Burkina Faso [BF]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_BI" value="">
+                                        <label for="nation_BI">Burundi [BI]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CM" value="">
+                                        <label for="nation_CM">Cameroon [CM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CV" value="">
+                                        <label for="nation_CV">Cape Verde [CV]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CF" value="">
+                                        <label for="nation_CF">Cen.Afr. [CF]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_TD" value="">
+                                        <label for="nation_TD">Chad [TD]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_KM" value="">
+                                        <label for="nation_KM">Comoros [KM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CG" value="">
+                                        <label for="nation_CG">Congo [CG]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CI" value="">
+                                        <label for="nation_CI">Cote Divoire [CI]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CD" value="">
+                                        <label for="nation_CD">Democrat Republic Of Congo [CD]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_DJ" value="">
+                                        <label for="nation_DJ">Djibouti [DJ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GQ" value="">
+                                        <label for="nation_GQ">E.Guinea [GQ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_ER" value="">
+                                        <label for="nation_ER">Eritrea [ER]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_ET" value="">
+                                        <label for="nation_ET">Ethiopia [ET]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_TF" value="">
+                                        <label for="nation_TF">F.S.A.T [TF]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GW" value="">
+                                        <label for="nation_GW">G.Bissau [GW]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GA" value="">
+                                        <label for="nation_GA">Gabon [GA]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GM" value="">
+                                        <label for="nation_GM">Gambia [GM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GH" value="">
+                                        <label for="nation_GH">Ghana [GH]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_GN" value="">
+                                        <label for="nation_GN">Guinea [GN]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_KE" value="">
+                                        <label for="nation_KE">Kenya [KE]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_LS" value="">
+                                        <label for="nation_LS">Lesotho [LS]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_LR" value="">
+                                        <label for="nation_LR">Liberia [LR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MG" value="">
+                                        <label for="nation_MG">Madagascar [MG]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MW" value="">
+                                        <label for="nation_MW">Malawi [MW]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_ML" value="">
+                                        <label for="nation_ML">Mali [ML]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MU" value="">
+                                        <label for="nation_MU">Mauritius [MU]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_YT" value="">
+                                        <label for="nation_YT">Mayotte [YT]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MZ" value="">
+                                        <label for="nation_MZ">Mozambique [MZ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_NA" value="">
+                                        <label for="nation_NA">Namibia [NA]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_NE" value="">
+                                        <label for="nation_NE">Niger [NE]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_NG" value="">
+                                        <label for="nation_NG">Nigeria [NG]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PS" value="">
+                                        <label for="nation_PS">Palestine (Polisario) [PS]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_RE" value="">
+                                        <label for="nation_RE">Reunion Is [RE]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_RW" value="">
+                                        <label for="nation_RW">Rwanda [RW]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_ST" value="">
+                                        <label for="nation_ST">S.T&P.Is [ST]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SN" value="">
+                                        <label for="nation_SN">Senegal [SN]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SC" value="">
+                                        <label for="nation_SC">Seychelles [SC]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SL" value="">
+                                        <label for="nation_SL">Sierra Leone [SL]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SO" value="">
+                                        <label for="nation_SO">Somalia [SO]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_ZA" value="">
+                                        <label for="nation_ZA">South Africa [ZA]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SH" value="">
+                                        <label for="nation_SH">St.Helena [SH]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SZ" value="">
+                                        <label for="nation_SZ">Swaziland [SZ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_TZ" value="">
+                                        <label for="nation_TZ">Tanzania [TZ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_TG" value="">
+                                        <label for="nation_TG">Togo [TG]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_UG" value="">
+                                        <label for="nation_UG">Uganda [UG]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_EH" value="">
+                                        <label for="nation_EH">Western Sahara [EH]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_ZR" value="">
+                                        <label for="nation_ZR">Zaire [ZR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_ZM" value="">
+                                        <label for="nation_ZM">Zambia [ZM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_ZW" value="">
+                                        <label for="nation_ZW">Zimbabwe [ZW]</label>
+                                    </div>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                <div class="checkbox">
+                                    <input type="checkbox" name="" id="nation_oceania" value="">
+                                    <label for="nation_oceania">Oceania</label>
+                                </div>
+                            </th>
+                            <td>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AS" value="">
+                                        <label for="nation_AS">A.Samoa [AS]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AQ" value="">
+                                        <label for="nation_AQ">Antarctica [AQ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_AU" value="">
+                                        <label for="nation_AU">Australia [AU]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CT" value="">
+                                        <label for="nation_CT">Canton&E. Is [CT]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CX" value="">
+                                        <label for="nation_CX">Christmas Is. [CX]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CC" value="">
+                                        <label for="nation_CC">Cocos Islands [CC]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_CK" value="">
+                                        <label for="nation_CK">Cook(Br) [CK]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_NQ" value="">
+                                        <label for="nation_NQ">Dro.M.L [NQ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PF" value="">
+                                        <label for="nation_PF">F.Polynesia [PF]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_FJ" value="">
+                                        <label for="nation_FJ">Fiji [FJ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_HM" value="">
+                                        <label for="nation_HM">H.M.Isl [HM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_JT" value="">
+                                        <label for="nation_JT">Johnston Is [JT]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_KI" value="">
+                                        <label for="nation_KI">Kiribati [KI]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MH" value="">
+                                        <label for="nation_MH">Marshalls [MH]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_FM" value="">
+                                        <label for="nation_FM">Micronesia [FM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PU" value="">
+                                        <label for="nation_PU">Misc, Pacific Island.(Us) [PU]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_MP" value="">
+                                        <label for="nation_MP">N. Marianas [MP]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_NC" value="">
+                                        <label for="nation_NC">N.Caledonia [NC]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_NZ" value="">
+                                        <label for="nation_NZ">N.Zealand [NZ]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_NR" value="">
+                                        <label for="nation_NR">Nauru [NR]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_NH" value="">
+                                        <label for="nation_NH">New Hebrides [NH]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_NU" value="">
+                                        <label for="nation_NU">Niue [NU]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_NF" value="">
+                                        <label for="nation_NF">Norfolk Is [NF]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PC" value="">
+                                        <label for="nation_PC">P.I.T.T [PC]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PW" value="">
+                                        <label for="nation_PW">Palau [PW]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PG" value="">
+                                        <label for="nation_PG">Papua N.Gunea [PG]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_PN" value="">
+                                        <label for="nation_PN">Pitcairn Is [PN]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_WS" value="">
+                                        <label for="nation_WS">Samoa [WS]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_SB" value="">
+                                        <label for="nation_SB">Solomon [SB]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_TK" value="">
+                                        <label for="nation_TK">Tokelau [TK]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_TO" value="">
+                                        <label for="nation_TO">Tonga [TO]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_TV" value="">
+                                        <label for="nation_TV">Tuvalu [TV]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_UM" value="">
+                                        <label for="nation_UM">U.S.M.I [UM]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_VU" value="">
+                                        <label for="nation_VU">Vanuatu [VU]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_WF" value="">
+                                        <label for="nation_WF">W.A.F.I [WF]</label>
+                                    </div>
+                                </span>
+                                <span>
+                                    <div class="checkbox">
+                                        <input type="checkbox" name="" id="nation_WK" value="">
+                                        <label for="nation_WK">Wake Island [WK]</label>
+                                    </div>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </section>
+    <button type="button" class="pop_close" onclick="pophide('pop_nation1')">
+        <span class="line"></span>
+        <span class="line"></span>
+    </button>
+</div>
+</div>
+<!-- e : popup -->
+
+
+
+
+        </div>
+        <!-- e : contents -->
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">저작권정책</a></li>
+            </ul>
+            <p class="footer_copy">Copyright ⓒ 2008 - 2021 KITA, All rights reserved</p>
+        </div>
+    </footer>
+</div>
+<!-- script -->
+<script type="text/javascript" src="../js/header2021.js"></script>
+<script type="text/javascript" src="../js/common2021.js"></script>
+</body>
+</html>

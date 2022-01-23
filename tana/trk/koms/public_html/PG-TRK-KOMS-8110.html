@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>TadeKorea Koms</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="tadeKorea Koms">
+    <meta name="subject" content="tadeKorea Koms">
+    <meta name="keywords" content="Global, e-Marketplace, tadeKorea Koms, tradeKorea Management system">
+    <meta property="og:title" content="tadeKorea Koms">
+    <!-- css default -->
+    <link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/base_trkkoms.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui-tradekoms.css"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <!-- js ibsheet -->
+    <script type="text/javascript" src="../ibSheet/js/ibleaders.js"></script>
+    <script type="text/javascript" src="../ibSheet/js/ibsheetinfo.js"></script>
+    <script type="text/javascript" src="../ibSheet/js/ibsheet.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){
+
+
+
+
+    // IN아래에 OUT으로 1줄 더 생성해야합니다.........
+
+
+
+
+    let IB1 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:4, MergeSheet: msHeaderOnly},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:" | | ",                                         SaveName:"1", Align:"Center",  ColMerge:1, Type:"Html"},
+                    { Header:" | | ",                                         SaveName:"2", Align:"Center",  ColMerge:1, Type:"Text"},
+                    { Header:"Application|Count|Count",                       SaveName:"3", Align:"Center",  ColMerge:1, Type:"Number"},
+                    { Header:"Application|Total Count|Total Count",           SaveName:"4", Align:"Center",  ColMerge:1, Type:"Number"},
+                    { Header:"Matching|Count|Count",                          SaveName:"5", Align:"Center",  ColMerge:1, Type:"Number"},
+                    { Header:"Matching|Total Count|Total Count",              SaveName:"6", Align:"Center",  ColMerge:1, Type:"Number"},
+                    { Header:"Follow-up|Under Negotiation|Under Negotiation", SaveName:"7", Align:"Center",  ColMerge:1, Type:"Number"},
+                    { Header:"Follow-up|Quote Price|Quote Price",             SaveName:"8", Align:"Center",  ColMerge:1, Type:"Number"},
+                    { Header:"Follow-up|Contract|Count",                      SaveName:"9", Align:"Center",  ColMerge:1, Type:"Number"},
+                    { Header:"Follow-up|Contract|Amount",                     SaveName:"10", Align:"Center",  ColMerge:1, Type:"Number"},
+                    { Header:"Follow-up|Contract|Total Count",                SaveName:"11", Align:"Center",  ColMerge:1, Type:"Number"},
+                    { Header:"Follow-up|Contract|Total Amount",               SaveName:"12", Align:"Center",  ColMerge:1, Type:"Number"}
+               
+                ]
+            }
+            const container = $("#ib_container1")[0];
+            createIBSheet2(container,'mySheet1','100%','840px');
+            IBS_InitSheet(mySheet1,initData);
+            mySheet1.FitColWidth("8|8|8|8|8|8|8|8|8|10|8|10")
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet1.LoadSearchData(this.data,{
+                Sync:1
+            });
+        },
+        data:{
+            data:[
+                {
+                    1:"This Week<br/>8월 12일<br/> ~ 8월 18일",
+                    2:"IN",
+                    3:"1",
+                    4:"1",
+                    5:"1",
+                    6:"1",
+                    7:"1",
+                    8:"1",
+                    9:"1",
+                    10:"$419,489.06",
+                    11:"1",
+                    12:"21,778,857.65"
+                },{
+                    1:"Last Week<br/>8월 5일<br/> ~ 8월 11일",
+                    2:"IN",
+                    3:"1",
+                    4:"1",
+                    5:"1",
+                    6:"1",
+                    7:"1",
+                    8:"1",
+                    9:"1",
+                    10:"$419,489.06",
+                    11:"1",
+                    12:"21,778,857.65"
+                }
+            ]
+        }
+    };
+    IB1.initialize();
+
+
+});
+</script>
+<div class="wrap">
+    <div class="container">
+    <div class="container_inner">
+        <div class="contents_wrap">
+        <!-- s : contents -->
+        <div class="contents">
+            <div class="page_head">
+                <div class="page_title">매칭현황판</div>
+                <div class="search_button f_r">
+                    <a href="PG-TRK-KOMS-8110_vcr.html" class="btn_s3" target="_blank">전광판 버전으로 보기</a>
+                </div>
+            </div>
+            <section class="col_group">
+                <div class="colv2_5">
+                    <div class="form_head">
+                        <div class="page_subtitle">INBOUND by continent</div>
+                    </div>
+                    <div class="chart1">
+                        그래프
+                    </div>
+                    <ul class="area_graph mt20">
+                        <li class="area_graph_c3">Asia</li>
+                        <li class="area_graph_c4">Europe</li>
+                        <li class="area_graph_c5">North America</li>
+                        <li class="area_graph_c6">Middle East</li>
+                        <li class="area_graph_c7">Africa</li>
+                        <li class="area_graph_c8">South&Central America</li>
+                        <li class="area_graph_c9">Oceania</li>
+                        <li class="area_graph_c10">Null</li>
+                    </ul>
+                </div>
+                <div class="colv2_5">
+                    <div class="form_head">
+                        <div class="page_subtitle">Matching & Contract</div>
+                    </div>
+                    <ul class="online_box">
+                        <li>
+                            <div class="chart2">
+                                그래프
+                            </div>
+                            <ul class="area_graph mt20">
+                                <li class="area_graph_c11">Matching</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="chart3">
+                                그래프
+                            </div>
+                            <ul class="area_graph mt20">
+                                <li class="area_graph_c12">Contract</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="colv2_3">
+                    <div class="form_head">
+                        <div class="page_subtitle">Matching by country</div>
+                    </div>
+                    <div class="form2 form_hover text-center">
+                        <table>
+                            <colgroup>
+                                <col style="width:30%;">
+                                <col style="width:70%;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Ranking</th>
+                                    <th>Country</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <img src="../images/flags/AE.gif" class="mr5" alt="국기">Hong Kong(China)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <div class="col_info">
+                <div class="form_head">
+                    <div class="page_subtitle">Matching Board</div>
+                    <p class="total f_r">통계기준일 <strong>2020-01-01</strong></p>
+                </div>
+                <!-- ibsheet -->
+                <div class="ib_hover">
+                    <div id="ib_container1"></div>
+                </div>
+            </div>
+        </div>
+        <!-- e : contents -->
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">저작권정책</a></li>
+            </ul>
+            <p class="footer_copy">Copyright ⓒ 2008 - 2021 KITA, All rights reserved</p>
+        </div>
+    </footer>
+</div>
+<!-- script -->
+<script type="text/javascript" src="../js/header2021.js"></script>
+<script type="text/javascript" src="../js/common2021.js"></script>
+</body>
+</html>

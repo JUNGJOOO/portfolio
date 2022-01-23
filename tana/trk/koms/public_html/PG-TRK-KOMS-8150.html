@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>TadeKorea Koms</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="tadeKorea Koms">
+    <meta name="subject" content="tadeKorea Koms">
+    <meta name="keywords" content="Global, e-Marketplace, tadeKorea Koms, tradeKorea Management system">
+    <meta property="og:title" content="tadeKorea Koms">
+    <!-- css default -->
+    <link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/base_trkkoms.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui-tradekoms.css"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <!-- js ibsheet -->
+    <script type="text/javascript" src="../ibSheet/js/ibleaders.js"></script>
+    <script type="text/javascript" src="../ibSheet/js/ibsheetinfo.js"></script>
+    <script type="text/javascript" src="../ibSheet/js/ibsheet.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    // 담당자
+    let IB3 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:4},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"담당자명", SaveName:"1", Align:"Center", Type:"Text"},
+                    { Header:"구분",     SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"합계",     SaveName:"3", Align:"Center", Type:"Number"},
+                    { Header:"1월",      SaveName:"4", Align:"Center", Type:"Number"},
+                    { Header:"2월",      SaveName:"5", Align:"Center", Type:"Number"},
+                    { Header:"3월",      SaveName:"6", Align:"Center", Type:"Number"},
+                    { Header:"4월",      SaveName:"7", Align:"Center", Type:"Number"},
+                    { Header:"5월",      SaveName:"8", Align:"Center", Type:"Number"},
+                    { Header:"6월",      SaveName:"9", Align:"Center", Type:"Number"},
+                    { Header:"7월",      SaveName:"10", Align:"Center", Type:"Number"},
+                    { Header:"8월",      SaveName:"11", Align:"Center", Type:"Number"},
+                    { Header:"9월",      SaveName:"12", Align:"Center", Type:"Number"},
+                    { Header:"10월",     SaveName:"13", Align:"Center", Type:"Number"},
+                    { Header:"11월",     SaveName:"14", Align:"Center", Type:"Number"},
+                    { Header:"12월",     SaveName:"15", Align:"Center", Type:"Number"}
+                ]
+            }
+            const container = $("#ib_container3")[0];
+            createIBSheet2(container,'mySheet3','100%','450px');
+            IBS_InitSheet(mySheet3,initData);
+            mySheet3.FitColWidth("12|7|9|6|6|6|6|6|6|6|6|6|6|6|6");
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet3.LoadSearchData(this.data,{
+                Sync:1
+            });
+        },
+        data:{
+            data:[
+                {
+                    1:"관리자",
+                    2:"신청(건)",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                    8:"",
+                    9:"",
+                    10:"",
+                    11:"",
+                    12:"",
+                    13:"",
+                    14:"",
+                    15:"",
+                   
+                }
+            ]
+        }
+    };
+    IB3.initialize();
+
+    
+    // 신규/재주문
+    let IB8 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:4},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"신규/재주문", SaveName:"1", Align:"Center", Type:"Text"},
+                    { Header:"구분",     SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"합계",     SaveName:"3", Align:"Center", Type:"Number"},
+                    { Header:"1월",      SaveName:"4", Align:"Center", Type:"Number"},
+                    { Header:"2월",      SaveName:"5", Align:"Center", Type:"Number"},
+                    { Header:"3월",      SaveName:"6", Align:"Center", Type:"Number"},
+                    { Header:"4월",      SaveName:"7", Align:"Center", Type:"Number"},
+                    { Header:"5월",      SaveName:"8", Align:"Center", Type:"Number"},
+                    { Header:"6월",      SaveName:"9", Align:"Center", Type:"Number"},
+                    { Header:"7월",      SaveName:"10", Align:"Center", Type:"Number"},
+                    { Header:"8월",      SaveName:"11", Align:"Center", Type:"Number"},
+                    { Header:"9월",      SaveName:"12", Align:"Center", Type:"Number"},
+                    { Header:"10월",     SaveName:"13", Align:"Center", Type:"Number"},
+                    { Header:"11월",     SaveName:"14", Align:"Center", Type:"Number"},
+                    { Header:"12월",     SaveName:"15", Align:"Center", Type:"Number"}
+                ]
+            }
+            const container = $("#ib_container8")[0];
+            createIBSheet2(container,'mySheet7','100%','450px');
+            IBS_InitSheet(mySheet7,initData);
+            mySheet7.FitColWidth("12|7|9|6|6|6|6|6|6|6|6|6|6|6|6");
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet7.LoadSearchData(this.data,{
+                Sync:1
+            });
+        },
+        data:{
+            data:[
+                {
+                    1:"system",
+                    2:"신청(건)",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                    8:"",
+                    9:"",
+                    10:"",
+                    11:"",
+                    12:"",
+                    13:"",
+                    14:"",
+                    15:"",
+                }
+            ]
+        }
+    };
+    IB8.initialize();
+    
+
+    // 회원사여부
+    let IB5 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:4},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"회원사 여부", SaveName:"1", Align:"Center", Type:"Text"},
+                    { Header:"구분",     SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"합계",     SaveName:"3", Align:"Center", Type:"Number"},
+                    { Header:"1월",      SaveName:"4", Align:"Center", Type:"Number"},
+                    { Header:"2월",      SaveName:"5", Align:"Center", Type:"Number"},
+                    { Header:"3월",      SaveName:"6", Align:"Center", Type:"Number"},
+                    { Header:"4월",      SaveName:"7", Align:"Center", Type:"Number"},
+                    { Header:"5월",      SaveName:"8", Align:"Center", Type:"Number"},
+                    { Header:"6월",      SaveName:"9", Align:"Center", Type:"Number"},
+                    { Header:"7월",      SaveName:"10", Align:"Center", Type:"Number"},
+                    { Header:"8월",      SaveName:"11", Align:"Center", Type:"Number"},
+                    { Header:"9월",      SaveName:"12", Align:"Center", Type:"Number"},
+                    { Header:"10월",     SaveName:"13", Align:"Center", Type:"Number"},
+                    { Header:"11월",     SaveName:"14", Align:"Center", Type:"Number"},
+                    { Header:"12월",     SaveName:"15", Align:"Center", Type:"Number"}
+                ]
+            }
+            const container = $("#ib_container5")[0];
+            createIBSheet2(container,'mySheet5','100%','450px');
+            IBS_InitSheet(mySheet5,initData);
+            mySheet5.FitColWidth("12|7|9|6|6|6|6|6|6|6|6|6|6|6|6");
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet5.LoadSearchData(this.data,{
+                Sync:1
+            });
+        },
+        data:{
+            data:[
+                {
+                    1:"회원사",
+                    2:"매칭(건)",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                    8:"",
+                    9:"",
+                    10:"",
+                    11:"",
+                    12:"",
+                    13:"",
+                    14:"",
+                    15:"",
+                }
+            ]
+        }
+    };
+    IB5.initialize();
+
+
+    // 국가
+    let IB4 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:4},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"대륙명",   SaveName:"1", Align:"Center", Type:"Text"},
+                    { Header:"국가명",   SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"구분",     SaveName:"3", Align:"Center", Type:"Text"},
+                    { Header:"합계",     SaveName:"4", Align:"Center", Type:"Number"},
+                    { Header:"1월",      SaveName:"5", Align:"Center", Type:"Number"},
+                    { Header:"2월",      SaveName:"6", Align:"Center", Type:"Number"},
+                    { Header:"3월",      SaveName:"7", Align:"Center", Type:"Number"},
+                    { Header:"4월",      SaveName:"8", Align:"Center", Type:"Number"},
+                    { Header:"5월",      SaveName:"9", Align:"Center", Type:"Number"},
+                    { Header:"6월",      SaveName:"10", Align:"Center", Type:"Number"},
+                    { Header:"7월",      SaveName:"11", Align:"Center", Type:"Number"},
+                    { Header:"8월",      SaveName:"12", Align:"Center", Type:"Number"},
+                    { Header:"9월",      SaveName:"13", Align:"Center", Type:"Number"},
+                    { Header:"10월",     SaveName:"14", Align:"Center", Type:"Number"},
+                    { Header:"11월",     SaveName:"15", Align:"Center", Type:"Number"},
+                    { Header:"12월",     SaveName:"16", Align:"Center", Type:"Number"}
+                ]
+            }
+            const container = $("#ib_container4")[0];
+            createIBSheet2(container,'mySheet4','100%','450px');
+            IBS_InitSheet(mySheet4,initData);
+            mySheet4.FitColWidth("7|7|7|6|6|6|6|6|6|6|6|6|6|6|6|6");
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet4.LoadSearchData(this.data,{
+                Sync:1
+            });
+        },
+        data:{
+            data:[
+                {
+                    1:"Asia",
+                    2:"Afghanistan",
+                    3:"신청(건)",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                    8:"",
+                    9:"",
+                    10:"",
+                    11:"",
+                    12:"",
+                    13:"",
+                    14:"",
+                    15:"",
+                    16:"",
+                }
+            ]
+        }
+    };
+    IB4.initialize();
+
+
+    // 카테고리
+    let IB2 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:4},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"카테고리명", SaveName:"1", Align:"Center", Type:"Text"},
+                    { Header:"구분",     SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"합계",     SaveName:"3", Align:"Center", Type:"Number"},
+                    { Header:"1월",      SaveName:"4", Align:"Center", Type:"Number"},
+                    { Header:"2월",      SaveName:"5", Align:"Center", Type:"Number"},
+                    { Header:"3월",      SaveName:"6", Align:"Center", Type:"Number"},
+                    { Header:"4월",      SaveName:"7", Align:"Center", Type:"Number"},
+                    { Header:"5월",      SaveName:"8", Align:"Center", Type:"Number"},
+                    { Header:"6월",      SaveName:"9", Align:"Center", Type:"Number"},
+                    { Header:"7월",      SaveName:"10", Align:"Center", Type:"Number"},
+                    { Header:"8월",      SaveName:"11", Align:"Center", Type:"Number"},
+                    { Header:"9월",      SaveName:"12", Align:"Center", Type:"Number"},
+                    { Header:"10월",     SaveName:"13", Align:"Center", Type:"Number"},
+                    { Header:"11월",     SaveName:"14", Align:"Center", Type:"Number"},
+                    { Header:"12월",     SaveName:"15", Align:"Center", Type:"Number"}
+                ]
+            }
+            const container = $("#ib_container2")[0];
+            createIBSheet2(container,'mySheet2','100%','450px');
+            IBS_InitSheet(mySheet2,initData);
+            mySheet2.FitColWidth("12|7|9|6|6|6|6|6|6|6|6|6|6|6|6");
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet2.LoadSearchData(this.data,{
+                Sync:1
+            });
+        },
+        data:{
+            data:[
+                {
+                    1:"Top Category",
+                    2:"신청(건)",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                    7:"",
+                    8:"",
+                    9:"",
+                    10:"",
+                    11:"",
+                    12:"",
+                    13:"",
+                    14:"",
+                    15:"",
+                }
+            ]
+        }
+    };
+    IB2.initialize();
+
+
+    // 접수경로
+    let IB1 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:4},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"접수경로", SaveName:"1", Align:"Center", Type:"Text"},
+                    { Header:"구분",     SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"합계",     SaveName:"3", Align:"Center", Type:"Number"},
+                    { Header:"1월",      SaveName:"4", Align:"Center", Type:"Number"},
+                    { Header:"2월",      SaveName:"5", Align:"Center", Type:"Number"},
+                    { Header:"3월",      SaveName:"6", Align:"Center", Type:"Number"},
+                    { Header:"4월",      SaveName:"7", Align:"Center", Type:"Number"},
+                    { Header:"5월",      SaveName:"8", Align:"Center", Type:"Number"},
+                    { Header:"6월",      SaveName:"9", Align:"Center", Type:"Number"},
+                    { Header:"7월",      SaveName:"10", Align:"Center", Type:"Number"},
+                    { Header:"8월",      SaveName:"11", Align:"Center", Type:"Number"},
+                    { Header:"9월",      SaveName:"12", Align:"Center", Type:"Number"},
+                    { Header:"10월",     SaveName:"13", Align:"Center", Type:"Number"},
+                    { Header:"11월",     SaveName:"14", Align:"Center", Type:"Number"},
+                    { Header:"12월",     SaveName:"15", Align:"Center", Type:"Number"}
+                ]
+            }
+            const container = $("#ib_container1")[0];
+            createIBSheet2(container,'mySheet1','100%','450px');
+            IBS_InitSheet(mySheet1,initData);
+            mySheet1.FitColWidth("12|7|9|6|6|6|6|6|6|6|6|6|6|6|6");
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet1.LoadSearchData(this.data,{
+                Sync:1
+            });
+        },
+        data:{
+            data:[
+                {
+                    1:"GBMS",
+                    2:"신청(건)",
+                    3:"3",
+                    4:"4",
+                    5:"5",
+                    6:"6",
+                    7:"7",
+                    8:"8",
+                    9:"9",
+                    10:"10",
+                    11:"11",
+                    12:"12",
+                    13:"13",
+                    14:"14",
+                    15:"15",
+                    
+                }
+            ]
+        }
+    };
+    IB1.initialize();
+
+
+});
+</script>
+<div class="wrap">
+    <div class="container">
+    <div class="container_inner">
+        <div class="contents_wrap">
+        <!-- s : contents -->
+        <div class="contents">
+            <div class="page_head">
+                <div class="page_title">매칭실적</div>
+            </div>
+            <div class="clearfix">
+                <div class="form1 text-left width_1160 f_l">
+                    <table>
+                        <colgroup>
+                            <col style="width:123px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>조회기준</th>
+                                <td>
+                                    <div class="radio_box width_160">
+                                        <input type="radio" id="radio1" name="radio_group1" value="" checked="checked">
+                                        <label for="radio1">월별</label>
+                                        <input type="radio" id="radio2" name="radio_group1" value="">
+                                        <label for="radio2">일별</label>
+                                    </div>
+                                    <div class="select_box width_200" style="display: inline-block !important;"><!--월별일 경우-->
+                                        <select name="select1" >
+                                            <option value="2021" selected="selected">2021년</option>
+                                            <option value="2020">2020년</option>
+                                            <option value="2019">2019년</option>
+                                            <option value="2018">2018년</option>
+                                            <option value="2017">2017년</option>
+                                            <option value="2016">2016년</option>
+                                            <option value="2015">2015년</option>
+                                            <option value="2014">2014년</option>
+                                            <option value="2013">2013년</option>
+                                        </select>
+                                    </div>
+                                    <div class="datepicker_box width_500" style="display: none !important;"><!--일별일 경우-->
+                                        <input type="text" id="" name="" class="datepicker" readonly="readonly">
+                                        <em class="cn1">~</em>
+                                        <input type="text" id="" name="" class="datepicker" readonly="readonly">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="search_button f_r">
+                    <a href="#" id="btn_clear" class="btn_s1" title="검색초기화">초기화</a>
+                    <a href="#" id="btn_search" class="btn_s1" title="검색" >검색</a>
+                </div>
+            </div>
+            <div class="col_info">
+                <div class="form_head">
+                    <div class="page_subtitle"> 종합현황</div>
+                    <div class="f_r">
+                        <ul class="area_graph">
+                            <li class="area_graph_c13">신청</li>
+                            <li class="area_graph_c14">매칭</li>
+                        </ul>
+                        <a href="#" class="btn_c1 ml10" download>Excel File</a>
+                    </div>
+                </div>
+                <div class="chart7">
+                    그래프
+                </div>
+                <div class="tabs mt50">
+                    <ul class="tab_head width_500">
+                        <li><a href="#tabs_33">담당자</a></li>
+                        <li><a href="#tabs_34">신규/재주문</a></li>
+                        <li><a href="#tabs_35">회원사여부</a></li>
+                        <li><a href="#tabs_36">국가</a></li>
+                        <li><a href="#tabs_37">카테고리</a></li>
+                        <li><a href="#tabs_38">접수경로</a></li>
+                    </ul>
+                    <div id="tabs_33">
+                        <div class="form_head form_head_tabfix">
+                            <div class="select_box width_90">
+                                <select name="select_listnum">
+                                    <option value="20">20개</option>
+                                    <option value="30">30개</option>
+                                    <option value="40">40개</option>
+                                    <option value="50">50개</option>
+                                    <option value="60">60개</option>
+                                    <option value="70">70개</option>
+                                    <option value="80">80개</option>
+                                    <option value="90">90개</option>
+                                    <option value="100">100개</option>
+                                    <option value="300">300개</option>
+                                </select>
+                            </div>
+                            <a href="#" class="btn_c1 ml10" download>Excel File</a>
+                        </div>
+                        <!-- ibsheet -->
+                        <div class="ib_hover">
+                            <div id="ib_container3"></div>
+                        </div>
+                        <nav class="pagination">
+                            <a href="#" class="pagination_first">
+                                <i class="hide">처음페이지</i>
+                            </a>
+                            <a href="#" class="pagination_prev">
+                                <i class="hide">이전페이지</i>
+                            </a>
+                            <ul class="pagination_list">
+                                <li class="active"><a href="#" title="1페이지">1</a></li>
+                                <li><a href="#" title="2페이지">2</a></li>
+                                <li><a href="#" title="3페이지">3</a></li>
+                                <li><a href="#" title="4페이지">4</a></li>
+                                <li><a href="#" title="5페이지">5</a></li>
+                                <li><a href="#" title="6페이지">6</a></li>
+                                <li><a href="#" title="7페이지">7</a></li>
+                                <li><a href="#" title="8페이지">8</a></li>
+                                <li><a href="#" title="9페이지">9</a></li>
+                                <li><a href="#" title="10페이지">10</a></li>
+                            </ul>
+                            <a href="#" class="pagination_next">
+                                <i class="hide">다음페이지</i>
+                            </a>
+                            <a href="#" class="pagination_last">
+                                <i class="hide">마지막페이지</i>
+                            </a>
+                        </nav>
+                    </div>
+                    <div id="tabs_34">
+                        <div class="form_head form_head_tabfix">
+                            <div class="select_box width_90">
+                                <select name="select_listnum">
+                                    <option value="20">20개</option>
+                                    <option value="30">30개</option>
+                                    <option value="40">40개</option>
+                                    <option value="50">50개</option>
+                                    <option value="60">60개</option>
+                                    <option value="70">70개</option>
+                                    <option value="80">80개</option>
+                                    <option value="90">90개</option>
+                                    <option value="100">100개</option>
+                                    <option value="300">300개</option>
+                                </select>
+                            </div>
+                            <a href="#" class="btn_c1 ml10" download>Excel File</a>
+                        </div>
+                        <!-- ibsheet -->
+                        <div class="ib_hover">
+                            <div id="ib_container8"></div>
+                        </div>
+                        <nav class="pagination">
+                            <a href="#" class="pagination_first">
+                                <i class="hide">처음페이지</i>
+                            </a>
+                            <a href="#" class="pagination_prev">
+                                <i class="hide">이전페이지</i>
+                            </a>
+                            <ul class="pagination_list">
+                                <li class="active"><a href="#" title="1페이지">1</a></li>
+                                <li><a href="#" title="2페이지">2</a></li>
+                                <li><a href="#" title="3페이지">3</a></li>
+                                <li><a href="#" title="4페이지">4</a></li>
+                                <li><a href="#" title="5페이지">5</a></li>
+                                <li><a href="#" title="6페이지">6</a></li>
+                                <li><a href="#" title="7페이지">7</a></li>
+                                <li><a href="#" title="8페이지">8</a></li>
+                                <li><a href="#" title="9페이지">9</a></li>
+                                <li><a href="#" title="10페이지">10</a></li>
+                            </ul>
+                            <a href="#" class="pagination_next">
+                                <i class="hide">다음페이지</i>
+                            </a>
+                            <a href="#" class="pagination_last">
+                                <i class="hide">마지막페이지</i>
+                            </a>
+                        </nav>
+                    </div>
+                    <div id="tabs_35">
+                        <div class="form_head form_head_tabfix">
+                            <div class="select_box width_90">
+                                <select name="select_listnum">
+                                    <option value="20">20개</option>
+                                    <option value="30">30개</option>
+                                    <option value="40">40개</option>
+                                    <option value="50">50개</option>
+                                    <option value="60">60개</option>
+                                    <option value="70">70개</option>
+                                    <option value="80">80개</option>
+                                    <option value="90">90개</option>
+                                    <option value="100">100개</option>
+                                    <option value="300">300개</option>
+                                </select>
+                            </div>
+                            <a href="#" class="btn_c1 ml10" download>Excel File</a>
+                        </div>
+                        <!-- ibsheet -->
+                        <div class="ib_hover">
+                            <div id="ib_container5"></div>
+                        </div>
+                        <nav class="pagination">
+                            <a href="#" class="pagination_first">
+                                <i class="hide">처음페이지</i>
+                            </a>
+                            <a href="#" class="pagination_prev">
+                                <i class="hide">이전페이지</i>
+                            </a>
+                            <ul class="pagination_list">
+                                <li class="active"><a href="#" title="1페이지">1</a></li>
+                                <li><a href="#" title="2페이지">2</a></li>
+                                <li><a href="#" title="3페이지">3</a></li>
+                                <li><a href="#" title="4페이지">4</a></li>
+                                <li><a href="#" title="5페이지">5</a></li>
+                                <li><a href="#" title="6페이지">6</a></li>
+                                <li><a href="#" title="7페이지">7</a></li>
+                                <li><a href="#" title="8페이지">8</a></li>
+                                <li><a href="#" title="9페이지">9</a></li>
+                                <li><a href="#" title="10페이지">10</a></li>
+                            </ul>
+                            <a href="#" class="pagination_next">
+                                <i class="hide">다음페이지</i>
+                            </a>
+                            <a href="#" class="pagination_last">
+                                <i class="hide">마지막페이지</i>
+                            </a>
+                        </nav>
+                    </div>
+                    <div id="tabs_36">
+                        <div class="form_head form_head_tabfix">
+                            <div class="select_box width_90">
+                                <select name="select_listnum">
+                                    <option value="20">20개</option>
+                                    <option value="30">30개</option>
+                                    <option value="40">40개</option>
+                                    <option value="50">50개</option>
+                                    <option value="60">60개</option>
+                                    <option value="70">70개</option>
+                                    <option value="80">80개</option>
+                                    <option value="90">90개</option>
+                                    <option value="100">100개</option>
+                                    <option value="300">300개</option>
+                                </select>
+                            </div>
+                            <a href="#" class="btn_c1 ml10" download>Excel File</a>
+                        </div>
+                        <!-- ibsheet -->
+                        <div class="ib_hover">
+                            <div id="ib_container4"></div>
+                        </div>
+                        <nav class="pagination">
+                            <a href="#" class="pagination_first">
+                                <i class="hide">처음페이지</i>
+                            </a>
+                            <a href="#" class="pagination_prev">
+                                <i class="hide">이전페이지</i>
+                            </a>
+                            <ul class="pagination_list">
+                                <li class="active"><a href="#" title="1페이지">1</a></li>
+                                <li><a href="#" title="2페이지">2</a></li>
+                                <li><a href="#" title="3페이지">3</a></li>
+                                <li><a href="#" title="4페이지">4</a></li>
+                                <li><a href="#" title="5페이지">5</a></li>
+                                <li><a href="#" title="6페이지">6</a></li>
+                                <li><a href="#" title="7페이지">7</a></li>
+                                <li><a href="#" title="8페이지">8</a></li>
+                                <li><a href="#" title="9페이지">9</a></li>
+                                <li><a href="#" title="10페이지">10</a></li>
+                            </ul>
+                            <a href="#" class="pagination_next">
+                                <i class="hide">다음페이지</i>
+                            </a>
+                            <a href="#" class="pagination_last">
+                                <i class="hide">마지막페이지</i>
+                            </a>
+                        </nav>
+                    </div>
+                    <div id="tabs_37">
+                        <div class="form_head form_head_tabfix">
+                            <div class="select_box width_90">
+                                <select name="select_listnum">
+                                    <option value="20">20개</option>
+                                    <option value="30">30개</option>
+                                    <option value="40">40개</option>
+                                    <option value="50">50개</option>
+                                    <option value="60">60개</option>
+                                    <option value="70">70개</option>
+                                    <option value="80">80개</option>
+                                    <option value="90">90개</option>
+                                    <option value="100">100개</option>
+                                    <option value="300">300개</option>
+                                </select>
+                            </div>
+                            <a href="#" class="btn_c1 ml10" download>Excel File</a>
+                        </div>
+                        <!-- ibsheet -->
+                        <div class="ib_hover">
+                            <div id="ib_container2"></div>
+                        </div>
+                        <nav class="pagination">
+                            <a href="#" class="pagination_first">
+                                <i class="hide">처음페이지</i>
+                            </a>
+                            <a href="#" class="pagination_prev">
+                                <i class="hide">이전페이지</i>
+                            </a>
+                            <ul class="pagination_list">
+                                <li class="active"><a href="#" title="1페이지">1</a></li>
+                                <li><a href="#" title="2페이지">2</a></li>
+                                <li><a href="#" title="3페이지">3</a></li>
+                                <li><a href="#" title="4페이지">4</a></li>
+                                <li><a href="#" title="5페이지">5</a></li>
+                                <li><a href="#" title="6페이지">6</a></li>
+                                <li><a href="#" title="7페이지">7</a></li>
+                                <li><a href="#" title="8페이지">8</a></li>
+                                <li><a href="#" title="9페이지">9</a></li>
+                                <li><a href="#" title="10페이지">10</a></li>
+                            </ul>
+                            <a href="#" class="pagination_next">
+                                <i class="hide">다음페이지</i>
+                            </a>
+                            <a href="#" class="pagination_last">
+                                <i class="hide">마지막페이지</i>
+                            </a>
+                        </nav>
+                    </div>
+                    <div id="tabs_38">
+                        <div class="form_head form_head_tabfix">
+                            <div class="select_box width_90">
+                                <select name="select_listnum">
+                                    <option value="20">20개</option>
+                                    <option value="30">30개</option>
+                                    <option value="40">40개</option>
+                                    <option value="50">50개</option>
+                                    <option value="60">60개</option>
+                                    <option value="70">70개</option>
+                                    <option value="80">80개</option>
+                                    <option value="90">90개</option>
+                                    <option value="100">100개</option>
+                                    <option value="300">300개</option>
+                                </select>
+                            </div>
+                            <a href="#" class="btn_c1 ml10" download>Excel File</a>
+                        </div>
+                        <!-- ibsheet -->
+                        <div class="ib_hover">
+                            <div id="ib_container1"></div>
+                        </div>
+                        <nav class="pagination">
+                            <a href="#" class="pagination_first">
+                                <i class="hide">처음페이지</i>
+                            </a>
+                            <a href="#" class="pagination_prev">
+                                <i class="hide">이전페이지</i>
+                            </a>
+                            <ul class="pagination_list">
+                                <li class="active"><a href="#" title="1페이지">1</a></li>
+                                <li><a href="#" title="2페이지">2</a></li>
+                                <li><a href="#" title="3페이지">3</a></li>
+                                <li><a href="#" title="4페이지">4</a></li>
+                                <li><a href="#" title="5페이지">5</a></li>
+                                <li><a href="#" title="6페이지">6</a></li>
+                                <li><a href="#" title="7페이지">7</a></li>
+                                <li><a href="#" title="8페이지">8</a></li>
+                                <li><a href="#" title="9페이지">9</a></li>
+                                <li><a href="#" title="10페이지">10</a></li>
+                            </ul>
+                            <a href="#" class="pagination_next">
+                                <i class="hide">다음페이지</i>
+                            </a>
+                            <a href="#" class="pagination_last">
+                                <i class="hide">마지막페이지</i>
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e : contents -->
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">저작권정책</a></li>
+            </ul>
+            <p class="footer_copy">Copyright ⓒ 2008 - 2021 KITA, All rights reserved</p>
+        </div>
+    </footer>
+</div>
+<!-- script -->
+<script type="text/javascript" src="../js/header2021.js"></script>
+<script type="text/javascript" src="../js/common2021.js"></script>
+</body>
+</html>

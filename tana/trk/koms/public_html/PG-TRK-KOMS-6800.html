@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>TadeKorea Koms</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="tadeKorea Koms">
+    <meta name="subject" content="tadeKorea Koms">
+    <meta name="keywords" content="Global, e-Marketplace, tadeKorea Koms, tradeKorea Management system">
+    <meta property="og:title" content="tadeKorea Koms">
+    <!-- css default -->
+    <link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/base_trkkoms.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui-tradekoms.css"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <!-- js ibsheet -->
+    <script type="text/javascript" src="../ibSheet/js/ibleaders.js"></script>
+    <script type="text/javascript" src="../ibSheet/js/ibsheetinfo.js"></script>
+    <script type="text/javascript" src="../ibSheet/js/ibsheet.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){ 
+    let IB1 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:4},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"부스|번호",        SaveName:"1", Align:"Center", ColMerge:0, Type:"Text"},
+                    { Header:"해외업체|업체명",  SaveName:"2", Align:"Center", ColMerge:0, Type:"Text"},
+                    { Header:"해외업체|국가",    SaveName:"3", Align:"Center", ColMerge:0, Type:"Text"},
+                    { Header:"국내업체|10:00 ~ 10:40",   SaveName:"4", Align:"Center", ColMerge:0, Type:"Text"},
+                    { Header:"국내업체|10:50 ~ 11:30",   SaveName:"5", Align:"Center", ColMerge:0, Type:"Text"},
+                    { Header:"국내업체|11:40 ~ 12:20",   SaveName:"6", Align:"Center", ColMerge:0, Type:"Text"},
+                    { Header:"국내업체|13:30 ~ 14:20",   SaveName:"7", Align:"Center", ColMerge:0, Type:"Text"},
+                    { Header:"국내업체|14:30 ~ 15:20",   SaveName:"8", Align:"Center", ColMerge:0, Type:"Text"},
+                    { Header:"국내업체|15:30 ~ 16:20",   SaveName:"9", Align:"Center", ColMerge:0, Type:"Text"},
+                    { Header:"국내업체|16:30 ~ 17:20",   SaveName:"10", Align:"Center", ColMerge:0, Type:"Text"},
+                    { Header:"국내업체|17:30 ~ 18:00",   SaveName:"11", Align:"Center", ColMerge:0, Type:"Text"}
+                ]
+            }
+            const container = $("#ib_container1")[0];
+            createIBSheet2(container,'mySheet1','100%','441px');
+            IBS_InitSheet(mySheet1,initData);
+            mySheet1.FitColWidth("4|13|11|9|9|9|9|9|9|9|9");
+            mySheet1.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet1.LoadSearchData(this.data,{
+                Sync:1
+            });
+        },
+        data:{
+            data:[
+                {
+                    1:"A21",
+                    2:"SAIGON TRADING GROUP (SATRA GROUP)",
+                    3:"Hong Kong(China)",
+                    4:"Korea Taconic Co., Ltd.",
+                    5:"Korea Taconic Co., Ltd.",
+                    6:"Korea Taconic Co., Ltd.",
+                    7:"Korea Taconic Co., Ltd.",
+                    8:"Korea Taconic Co., Ltd.",
+                    9:"Korea Taconic Co., Ltd.",
+                    10:"Korea Taconic Co., Ltd.",
+                    11:"Korea Taconic Co., Ltd."
+                },{
+                    1:"A21",
+                    2:"SAIGON TRADING GROUP (SATRA GROUP)",
+                    3:"Hong Kong(China)",
+                    4:"Korea Taconic Co., Ltd.",
+                    5:"Korea Taconic Co., Ltd.",
+                    6:"Korea Taconic Co., Ltd.",
+                    7:"Korea Taconic Co., Ltd.",
+                    8:"Korea Taconic Co., Ltd.",
+                    9:"Korea Taconic Co., Ltd.",
+                    10:"Korea Taconic Co., Ltd.",
+                    11:"Korea Taconic Co., Ltd."
+                }
+            ]
+        }
+    };
+    IB1.initialize();
+});
+</script>
+<div class="wrap">
+    <div class="container">
+    <div class="container_inner">
+    <div class="contents_wrap">
+        <!-- s : contents -->
+        <div class="contents">
+            <div class="page_head">
+                <div class="page_title">참가업체스케줄</div>
+            </div>
+            <div class="form1 text-left">
+                <table>
+                    <colgroup>
+                        <col style="width:123px;">
+                        <col style="width:auto;">
+                        <col style="width:123px;">
+                        <col style="width:auto">
+                        <col style="width:123px;">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>행사제목</th>
+                            <td>
+                                <div class="fjs">
+                                    <div class="search_box1 mr10">
+                                        <input type="text" id="" name="" class="">
+                                        <div class="search_box_btn">
+                                            <button type="button" class="sb_search" onclick="popshow('pop_big2'); mySheetbig2.FitColWidth('5|33|17|15|15|15');">검색</button>
+                                        </div>
+                                    </div>
+                                    <div class="btn_group1">
+                                        <button type="button" class="btn_d2" onclick="popshow('pop_big5')">행사상세보기</button>
+                                    </div>
+                                </div>
+                            </td>
+                            <th>행사구분</th>
+                            <td>수출상담회 부스 : <em class="color11t">40</em> 개소, 미팅 : <em class="color11t">320</em> 건</td>
+                            <th>사용여부</th>
+                            <td>2019-10-29 ~ 2019-10-31 (종료)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col_info">
+                <div class="form_head">
+                    <div class="page_subtitle">참가업체스케줄</div>
+                    <div class="f_r">
+                        <div class="select_box width_130">
+                            <select name="select_listnum">
+                                <option value="1">2019-10-29</option>
+                                <option value="2">2019-10-30</option>
+                                <option value="3">2019-10-31</option>
+                            </select>
+                        </div>
+                        <a href="#" class="btn_c1 ml10" download>Excel File</a>
+                    </div>
+                </div>
+
+                <!-- ibsheet -->
+                <div class="ib_hover">
+                    <div id="ib_container1"></div>
+                </div>
+
+                <nav class="pagination">
+                    <a href="#" class="pagination_first">
+                        <i class="hide">처음페이지</i>
+                    </a>
+                    <a href="#" class="pagination_prev">
+                        <i class="hide">이전페이지</i>
+                    </a>
+                    <ul class="pagination_list">
+                        <li class="active"><a href="#" title="1페이지">1</a></li>
+                        <li><a href="#" title="2페이지">2</a></li>
+                        <li><a href="#" title="3페이지">3</a></li>
+                        <li><a href="#" title="4페이지">4</a></li>
+                        <li><a href="#" title="5페이지">5</a></li>
+                        <li><a href="#" title="6페이지">6</a></li>
+                        <li><a href="#" title="7페이지">7</a></li>
+                        <li><a href="#" title="8페이지">8</a></li>
+                        <li><a href="#" title="9페이지">9</a></li>
+                        <li><a href="#" title="10페이지">10</a></li>
+                    </ul>
+                    <a href="#" class="pagination_next">
+                        <i class="hide">다음페이지</i>
+                    </a>
+                    <a href="#" class="pagination_last">
+                        <i class="hide">마지막페이지</i>
+                    </a>
+                </nav>
+            </div>
+
+
+<!-- s : popup -->
+<div class="pop" id="pop_big2">
+<div class="pop_bg"></div>
+<div class="pop_wrap width_1200">
+    <div class="pop_head"><strong>행사목록</strong></div>
+    <section class="pop_body height_580">
+        <div class="content">
+            <div class="clearfix mb30">
+                <div class="form1 text-left width_900 f_l">
+                    <table>
+                        <colgroup>
+                            <col style="width: 110px;">
+                            <col style="width: auto">
+                            <col style="width: 110px;">
+                            <col style="width: auto">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>행사상태</th>
+                                <td>
+                                    <div class="select_box">
+                                        <select name="select1" >
+                                            <option value="">선택</option>
+                                            <option value="01">준비중</option>
+                                            <option value="02">진행중</option>
+                                            <option value="03">완료</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th>행사명</th>
+                                <td>
+                                    <input type="text" id="" name="" value="">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="search_button f_r">
+                    <a href="#" id="btn_clear" class="btn_s1" title="초기화">초기화</a>
+                    <a href="#" id="btn_search" class="btn_s1" title="검색">검색</a>
+                </div>
+            </div>
+            <!-- ibsheet -->
+            <div class="ib_hover">
+                <div id="ib_big2"></div>
+            </div>
+        </div>
+    </section>
+    <button type="button" class="pop_close" onclick="pophide('pop_big2')">
+        <span class="line"></span>
+        <span class="line"></span>
+    </button>
+</div>
+</div>
+<!-- e : popup -->
+<script type="text/javascript">
+$(document).ready(function(){ 
+let ib_big2 = {
+    initialize:function(){
+        let initData = {
+            Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:2},
+            HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+            Cols:[
+                { Header:"번호",          SaveName:"1", Align:"Center", Type:"Number"},
+                { Header:"행사명",        SaveName:"2", Align:"Center", Type:"Text"},
+                { Header:"행사기간",      SaveName:"3", Align:"Center", Type:"Date", Format:"yyyy-MM-dd ~ yyyy-MM-dd"},
+                { Header:"행사운영분석",  SaveName:"4", Align:"Center", Type:"Text"},
+                { Header:"행사담당자",    SaveName:"5", Align:"Center", Type:"Text"},
+                { Header:"행사상태",      SaveName:"6", Align:"Center", Type:"Text"}
+            ]
+        }
+        const container = $("#ib_big2")[0];
+        createIBSheet2(container,'mySheetbig2','100%','441px');
+        IBS_InitSheet(mySheetbig2,initData);
+        mySheetbig2.SetEditable(false);
+        this.doAction();
+    },
+    doAction:function(){
+        mySheetbig2.LoadSearchData(this.data,{Sync:1});
+        if ($("#pro-options").val() == "frozen-col") {
+            mySheetbig2.SetColWidth("sTitle", 100);
+        } else {
+            mySheetbig2.FitColWidth("5|33|17|15|15|15");
+        }
+    },
+    data:{
+        data:[
+            {
+                1:"1",
+                2:"",
+                3:"2020-01-01~2020-01-01",
+                4:"",
+                5:"",
+                6:"",
+            }
+        ]
+    }
+};
+ib_big2.initialize();
+});
+</script>
+
+
+
+
+
+<!-- s : popup -->
+<div class="pop" id="pop_big5">
+    <div class="pop_bg"></div>
+    <div class="pop_wrap width_1200">
+        <div class="pop_head"><strong>행사정보</strong></div>
+        <section class="pop_body height_700">
+            <div class="content">
+                <div class="form1 text-left">
+                    <table>
+                        <colgroup>
+                            <col style="width:123px;">
+                            <col style="width:auto;">
+                            <col style="width:123px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>행사명</th>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <th>행사명(영문)</th>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <th>행사기간</th>
+                                <td></td>
+                                <th>모집기간</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>행사장소</th>
+                                <td></td>
+                                <th>행사장소(영문)</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>행사유형</th>
+                                <td></td>
+                                <th>부스규모</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>참가업체수</th>
+                                <td></td>
+                                <th>행사예산</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>행사주최</th>
+                                <td></td>
+                                <th>행사주관</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>업종</th>
+                                <td></td>
+                                <th>업종(영문)</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>품목</th>
+                                <td></td>
+                                <th>품목(영문)</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>참가자지역</th>
+                                <td></td>
+                                <th>여행사</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>PCO</th>
+                                <td></td>
+                                <th>통역 에이전시</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>상담회 컨셉</th>
+                                <td></td>
+                                <th>부대행사</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>마케팅채널</th>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <th>해외업체지원</th>
+                                <td colspan="3">
+                                    <div class="form2 text-center">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width: 25%;">
+                                                <col style="width: 25%;">
+                                                <col style="width: 25%;">
+                                                <col style="width: 25%;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>레벨</th>
+                                                    <th>항공</th>
+                                                    <th>숙박</th>
+                                                    <th>지원건수</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>A</td>
+                                                    <td>100%</td>
+                                                    <td>100%</td>
+                                                    <td>20</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>담당소속</th>
+                                <td></td>
+                                <th>행사담당자</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>약도웹주소</th>
+                                <td colspan="3"></td>
+                            </tr>
+                            <tr>
+                                <th>파일첨부</th>
+                                <td colspan="3">
+                                    <ul class="filedata">
+                                        <li><a href="#" download>20170621 온라인 해외직판 종합 전략 세미나 및 상담회 개최안(홍보실).hwp</a></li>
+                                        <li><a href="#" download>20170621 온라인 해외직판 종합 전략 세미나 및 상담회 개최안(홍보실).hwp</a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <button type="button" class="pop_close" onclick="pophide('pop_big5')">
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+</div>
+<!-- e : popup -->
+
+
+
+
+        </div>
+        <!-- e : contents -->
+    </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">저작권정책</a></li>
+            </ul>
+            <p class="footer_copy">Copyright ⓒ 2008 - 2021 KITA, All rights reserved</p>
+        </div>
+    </footer>
+</div>
+<!-- script -->
+<script type="text/javascript" src="../js/header2021.js"></script>
+<script type="text/javascript" src="../js/common2021.js"></script>
+</body>
+</html>

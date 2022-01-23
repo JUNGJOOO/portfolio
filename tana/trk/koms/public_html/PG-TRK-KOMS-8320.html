@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>TadeKorea Koms</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="tadeKorea Koms">
+    <meta name="subject" content="tadeKorea Koms">
+    <meta name="keywords" content="Global, e-Marketplace, tadeKorea Koms, tradeKorea Management system">
+    <meta property="og:title" content="tadeKorea Koms">
+    <!-- css default -->
+    <link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/base_trkkoms.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui-tradekoms.css"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <!-- js ibsheet -->
+    <script src="../ibSheet/js/ibleaders.js"></script>
+    <script src="../ibSheet/js/ibsheetinfo.js"></script>
+    <script src="../ibSheet/js/ibsheet.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){ 
+
+    let IB1 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:5, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:4},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"상담회", SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"사절단", SaveName:"2", Align:"Center", Type:"Number"},
+                    { Header:"전시회", SaveName:"3", Align:"Center", Type:"Number"},
+                    { Header:"기타",   SaveName:"4", Align:"Center", Type:"Number"},
+                    { Header:"소계",   SaveName:"5", Align:"Center", Type:"Number"}
+                ]
+            }
+            const container = $("#ib_container1")[0];
+            createIBSheet2(container,'mySheet1','100%','242px');
+            IBS_InitSheet(mySheet1,initData);
+            mySheet1.FitColWidth("20|20|20|20|20");
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet1.LoadSearchData(this.data,{
+                Sync:1
+            });
+        },
+        data:{
+            data:[
+                {
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:""
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:""
+                }
+            ]
+        }
+    };
+    IB1.initialize();
+
+
+    let IB2 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:4},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"구분",       SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"해외업체수", SaveName:"2", Align:"Center", Type:"Number"},
+                    { Header:"국내업체수", SaveName:"3", Align:"Center", Type:"Number"},
+                    { Header:"상담건수",   SaveName:"4", Align:"Center", Type:"Number"},
+                    { Header:"상담금액",   SaveName:"5", Align:"Center", Type:"Number"}
+                ]
+            }
+            const container = $("#ib_container2")[0];
+            createIBSheet2(container,'mySheet2','100%','242px');
+            IBS_InitSheet(mySheet2,initData);
+            mySheet2.FitColWidth("20|20|20|20|20");
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet2.LoadSearchData(this.data,{
+                Sync:1
+            });
+        },
+        data:{
+            data:[
+                {
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:""
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:""
+                }
+            ]
+        }
+    };
+    IB2.initialize();
+
+
+    let IB3 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:4},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"번호",     SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"행사유형", SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"기타",     SaveName:"3", Align:"Center", Type:"Text"}
+                ]
+            }
+            const container = $("#ib_container3")[0];
+            createIBSheet2(container,'mySheet3','100%','242px');
+            IBS_InitSheet(mySheet3,initData);
+            mySheet3.FitColWidth("10|20|70");
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet3.LoadSearchData(this.data,{
+                Sync:1
+            });
+        },
+        data:{
+            data:[
+                {
+                    1:"",
+                    2:"",
+                    3:""
+                },{
+                    1:"",
+                    2:"",
+                    3:""
+                }
+            ]
+        }
+    };
+    IB3.initialize();
+
+
+});
+</script>
+<div class="wrap">
+    <div class="container">
+    <div class="container_inner">
+        <div class="contents_wrap">
+        <!-- s : contents -->
+        <div class="contents">
+            <div class="page_head">
+                <div class="page_title">행사집계표</div>
+            </div>
+            <div class="clearfix">
+                <div class="form1 text-left width_1160 f_l">
+                    <table>
+                        <colgroup>
+                            <col style="width:123px;">
+                            <col style="width:auto;">
+                            <col style="width:123px;">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>기간구분</th>
+                                <td>
+                                    <div class="f0">
+                                        <div class="select_box" style="width: calc((100% - 20px) / 3); ">
+                                            <select name="select1">
+                                                <option value="month">월</option>
+                                                <option value="half">반기</option>
+                                                <option value="quarter">분기</option>
+                                            </select>
+                                        </div>
+                                        <div class="select_box" style="width: calc((100% - 20px) / 3); margin: 0 10px;">
+                                            <select name="select2">
+                                                <option value="2021">2021</option>
+                                                <option value="2020">2020</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2013">2013</option>
+                                                <option value="2012">2012</option>
+                                                <option value="2011">2011</option>
+                                            </select>
+                                        </div>
+                                        <div class="select_box" style="width: calc((100% - 20px) / 3); ">
+                                            <select name="select3">
+                                                <option value="all">전체</option>
+                                                <option value="01">1월</option>
+                                                <option value="02">2월</option>
+                                                <option value="03">3월</option>
+                                                <option value="04">4월</option>
+                                                <option value="05">5월</option>
+                                                <option value="06">6월</option>
+                                                <option value="07">7월</option>
+                                                <option value="08">8월</option>
+                                                <option value="09">9월</option>
+                                                <option value="10">10월</option>
+                                                <option value="11">11웡</option>
+                                                <option value="12">12월</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                                <th>행사유형</th>
+                                <td>
+                                    <div class="select_box">
+                                        <select name="select1">
+                                            <option value="">전체</option>
+                                                <option value="01">수입상담회</option>
+                                                <option value="02">수출상담회</option>
+                                                <option value="03">사절단</option>
+                                                <option value="04">컨설팅상담회</option>
+                                                <option value="05">해외전시회</option>
+                                                <option value="06">기타</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="search_button f_r">
+                    <a href="#" id="btn_clear" class="btn_s1" title="검색초기화">초기화</a>
+                    <a href="#" id="btn_search" class="btn_s1" title="검색" >검색</a>
+                </div>
+            </div>
+            <div class="col_info">
+                <div class="form_head">
+                    <div class="page_subtitle2">건수</div>
+                    <div class="f_r">
+                        <a href="#" class="btn_c1 ml10" download>Excel File</a>
+                    </div>
+                </div>
+                <!-- ibsheet -->
+                <div class="ib_hover">
+                    <div id="ib_container1"></div>
+                </div>
+                <div class="form_head mt30">
+                    <div class="page_subtitle2 width_500">집계</div>
+                    <div class="f_r">
+                        <a href="#" class="btn_c1 ml10" download>Excel File</a>
+                    </div>
+                </div>
+                <!-- ibsheet -->
+                <div class="ib_hover">
+                    <div id="ib_container2"></div>
+                </div>
+                <div class="form_head mt30">
+                    <div class="page_subtitle2">행사목록</div>
+                    <div class="f_r">
+                        <a href="#" class="btn_c1 ml10" download>Excel File</a>
+                    </div>
+                </div>
+                <!-- ibsheet -->
+                <div class="ib_hover">
+                    <div id="ib_container3"></div>
+                </div>
+            </div>
+        </div>
+        <!-- e : contents -->
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">저작권정책</a></li>
+            </ul>
+            <p class="footer_copy">Copyright ⓒ 2008 - 2021 KITA, All rights reserved</p>
+        </div>
+    </footer>
+</div>
+<!-- script -->
+<script type="text/javascript" src="../js/header2021.js"></script>
+<script type="text/javascript" src="../js/common2021.js"></script>
+</body>
+</html>

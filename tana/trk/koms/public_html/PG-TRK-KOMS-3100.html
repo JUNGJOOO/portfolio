@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>TadeKorea Koms</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="tadeKorea Koms">
+    <meta name="subject" content="tadeKorea Koms">
+    <meta name="keywords" content="Global, e-Marketplace, tadeKorea Koms, tradeKorea Management system">
+    <meta property="og:title" content="tadeKorea Koms">
+    <!-- css default -->
+    <link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/base_trkkoms.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui-tradekoms.css"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <!-- js ibsheet -->
+    <script src="../ibSheet/js/ibleaders.js"></script>
+    <script src="../ibSheet/js/ibsheetinfo.js"></script>
+    <script src="../ibSheet/js/ibsheet.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){ 
+    let IB_tks1 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:5, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"번호",          SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"신청기간",      SaveName:"2", Align:"Center", Type:"Date", Format:"yyyy-MM-dd ~ yyyy-MM-dd"},
+                    { Header:"신청제한 수",   SaveName:"3", Align:"Center", Type:"Text"},
+                    { Header:"신청건수",      SaveName:"4", Align:"Center", Type:"Text"},
+                    { Header:"관리자",        SaveName:"5", Align:"Center", Type:"Text"},
+                ]
+            }
+            const container = $("#ib_tks1")[0];
+            createIBSheet2(container,'mySheettks1','100%','201px');
+            IBS_InitSheet(mySheettks1,initData);
+            mySheettks1.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheettks1.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheettks1.SetColWidth("sTitle", 100);
+            } else {
+                mySheettks1.FitColWidth("10|40|20|15|15");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"1",
+                    2:"2020-01-01 ~ 2020-01-01",
+                    3:"",
+                    4:"",
+                    5:"",
+                },{
+                    1:"1",
+                    2:"2020-01-01 ~ 2020-01-01",
+                    3:"",
+                    4:"",
+                    5:"",
+                },{
+                    1:"1",
+                    2:"2020-01-01 ~ 2020-01-01",
+                    3:"",
+                    4:"",
+                    5:"",
+                },{
+                    1:"1",
+                    2:"2020-01-01 ~ 2020-01-01",
+                    3:"",
+                    4:"",
+                    5:"",
+                },{
+                    1:"1",
+                    2:"2020-01-01 ~ 2020-01-01",
+                    3:"",
+                    4:"",
+                    5:"",
+                },{
+                    1:"1",
+                    2:"2020-01-01 ~ 2020-01-01",
+                    3:"",
+                    4:"",
+                    5:"",
+                },{
+                    1:"1",
+                    2:"2020-01-01 ~ 2020-01-01",
+                    3:"",
+                    4:"",
+                    5:"",
+                },
+            ]
+        }
+    };
+    IB_tks1.initialize();
+
+    let IB_tks2 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:4},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"진행상황",      SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"신청일",        SaveName:"2", Align:"Center", Type:"Date", Format:"yyyy-MM-dd"},
+                    { Header:"신청업체명",    SaveName:"3", Align:"Center", Type:"Text", "Ellipsis":1},
+                    { Header:"매칭희망지역",  SaveName:"4", Align:"Center", Type:"Text", "Ellipsis":1},
+                    { Header:"매칭전달일",    SaveName:"5", Align:"Center", Type:"Date", Format:"yyyy-MM-dd"},
+                    { Header:"회신일",       SaveName:"6", Align:"Center", Type:"Date", Format:"yyyy-MM-dd"},
+                ]
+            }
+            const container = $("#ib_tks2")[0];
+            createIBSheet2(container,'mySheettks2','100%','441px');
+            IBS_InitSheet(mySheettks2,initData);
+            mySheettks2.FitColWidth("12|16|20|20|16|16");
+            mySheettks2.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheettks2.LoadSearchData(this.data,{
+                Sync:1
+            });
+        },
+        data:{
+            data:[
+                {
+                    1:"접수",
+                    2:"2020-01-01",
+                    3:"",
+                    4:"",
+                    5:"2020-01-01",
+                    6:"2020-01-01",
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"",
+                }
+            ]
+        }
+    };
+    IB_tks2.initialize();
+
+    let IB_tks3 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"번호",   SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"처리일", SaveName:"2", Align:"Center", Type:"Date", Format:"yyyy-MM-dd HH:mm:ss"},
+                    { Header:"상태",   SaveName:"3", Align:"Center", Type:"Text"},
+                    { Header:"내용",   SaveName:"4", Align:"Center", Type:"Text", "Ellipsis":1},
+                    { Header:"관리자", SaveName:"5", Align:"Center", Type:"Text"},
+                ]
+            }
+            const container = $("#ib_tks3")[0];
+            createIBSheet2(container,'mySheettks3','100%','162px');
+            IBS_InitSheet(mySheettks3,initData);
+            mySheettks3.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheettks3.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheettks3.SetColWidth("sTitle", 100);
+            } else {
+                mySheettks3.FitColWidth("10|25|15|35|15");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"1",
+                    2:"2020-01-01 10:10:10",
+                    3:"현지의뢰",
+                    4:"",
+                    5:"한보람"
+                },
+            ]
+        }
+    };
+    IB_tks3.initialize();
+
+    let IB_tks4 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"해외지부",       SaveName:"1", Align:"Center", Type:"Text"},
+                    { Header:"의뢰일",         SaveName:"2", Align:"Center", Type:"Date", Format:"yyyy-MM-dd"},
+                    { Header:"의뢰내용",       SaveName:"3", Align:"Center", Type:"Text", "Ellipsis":1},
+                    { Header:"상태",           SaveName:"4", Align:"Center", Type:"Text"},
+                    { Header:"해외지부 회신일", SaveName:"5", Align:"Center", Type:"Date", Format:"yyyy-MM-dd"},
+                ]
+            }
+            const container = $("#ib_tks4")[0];
+            createIBSheet2(container,'mySheettks4','100%','162px');
+            IBS_InitSheet(mySheettks4,initData);
+            mySheettks4.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheettks4.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheettks4.SetColWidth("sTitle", 100);
+            } else {
+                mySheettks4.FitColWidth("20|20|25|15|20");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"뉴델리지부",
+                    2:"2020-01-01",
+                    3:"8월 아웃바운드",
+                    4:"Wait",
+                    5:"2020-01-01"
+                },
+            ]
+        }
+    };
+    IB_tks4.initialize();
+
+    let IB_tks5 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"",           SaveName:"1", Align:"Center", Type:"CheckBox"},
+                    { Header:"국가",        SaveName:"2", Align:"Center", Type:"Text", "Ellipsis":1},
+                    { Header:"회사명",      SaveName:"3", Align:"Center", Type:"Text", "Ellipsis":1},
+                    { Header:"담당자명",    SaveName:"4", Align:"Center", Type:"Text", "Ellipsis":1},
+                    { Header:"이메일",      SaveName:"5", Align:"Center", Type:"Text", "Ellipsis":1},
+                    { Header:"바이어 DB",   SaveName:"6", Align:"Center", Type:"Text"},
+                    { Header:"인콰이어리",   SaveName:"7", Align:"Center", Type:"Text"},
+                ]
+            }
+            const container = $("#ib_tks5")[0];
+            createIBSheet2(container,'mySheettks5','100%','162px');
+            IBS_InitSheet(mySheettks5,initData);
+            mySheettks5.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheettks5.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheettks5.SetColWidth("sTitle", 100);
+            } else {
+                mySheettks5.FitColWidth("7|15|25|15|15|11|12");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                    6:"Y",
+                    7:"N",
+                },
+            ]
+        }
+    };
+    IB_tks5.initialize();
+});
+</script>
+<div class="wrap">
+    <div class="container">
+    <div class="container_inner">
+    <div class="contents_wrap">
+        <!-- s : contents -->
+        <div class="contents">
+            <div class="page_head">
+                <div class="page_title">해외비즈니스매칭</div>
+            </div>
+            <div class="tabs">
+                <ul class="tab_head">
+                    <li><a href="#tabs_15">월별신청내역</a></li>
+                    <li><a href="#tabs_16">검색조건</a></li>
+                </ul>
+                <div id="tabs_15">
+                    <div class="form_head form_head_tabfix2">
+                        <div class="search_button">
+                            <a href="#" class="btn_s3">신규등록</a>
+                        </div>
+                    </div>
+                    <!-- ibsheet -->
+                    <div class="ib_hover">
+                        <div id="ib_tks1"></div>
+                    </div>
+                </div>
+                <div id="tabs_16">
+                    <div class="form1 text-left">
+                        <table>
+                            <colgroup>
+                                <col style="width:123px;">
+                                <col style="width:auto;">
+                                <col style="width:123px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>필터</th>
+                                    <td colspan="3">
+                                        <div class="fjs">
+                                            <div class="radio_box width_250">
+                                                <input type="radio" id="radio1" name="radio_group1" value="" checked="checked">
+                                                <label for="radio1">매칭일</label>
+                                                <input type="radio" id="radio2" name="radio_group1" value="">
+                                                <label for="radio2">사후관리일</label>
+                                            </div>
+                                            <div class="datepicker_boxfitday3">
+                                                <div class="datepicker_box">
+                                                    <input type="text" id="" name="" class="datepicker" readonly="readonly">
+                                                    <em class="cn1">~</em>
+                                                    <input type="text" id="" name="" class="datepicker" readonly="readonly">
+                                                </div>
+                                                <div class="btn_group1">
+                                                    <a href="#" class="btn_d1">당일</a>
+                                                    <a href="#" class="btn_d1">7일</a>
+                                                    <a href="#" class="btn_d1">전체</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>의뢰처</th>
+                                    <td>
+                                        <div class="select_box">
+                                            <select name="select1">
+                                                <option value="">선택</option>
+                                                <option value="0026">도쿄지부</option>
+                                                <option value="0027">뉴욕지부</option>
+                                                <option value="0028">워싱턴지부</option>
+                                                <option value="0029">북경지부</option>
+                                                <option value="0030">상해지부</option>
+                                                <option value="0031">브뤼셀지부</option>
+                                                <option value="0032">호치민지부</option>
+                                                <option value="0033">뉴델리지부</option>
+                                                <option value="0034">자카르타지부</option>
+                                                <option value="0035">성도지부</option>
+                                                <option value="0055">싱가포르지부</option>
+                                                <option value="0062">캄보디아</option>
+                                                <option value="0075">두바이지부</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <th>진행상황</th>
+                                    <td>
+                                        <div class="select_box">
+                                            <select name="select1">
+                                                <option value="">선택</option>
+                                                <option value="01">접수</option>
+                                                <option value="02">자료보완</option>
+                                                <option value="03">반려</option>
+                                                <option value="04">번역의뢰</option>
+                                                <option value="05">번역완료</option>
+                                                <option value="06">현지의뢰</option>
+                                                <option value="07">결과물수신</option>
+                                                <option value="08">결과물업체전달</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>카테고리</th>
+                                    <td>
+                                        <div class="fjs">
+                                            <div class="radio_box width_200">
+                                                <input type="radio" id="radio3" name="radio_group2" value="" checked="checked">
+                                                <label for="radio3">회사</label>
+                                                <input type="radio" id="radio4" name="radio_group2" value="">
+                                                <label for="radio4">상품</label>
+                                            </div>
+                                            <div class="search_box2">
+                                                <input type="text" id="" name="" class="" value="">
+                                                <div class="search_box_btn">
+                                                    <button type="button" class="sb_search" onclick="popshow('pop_category1')">검색</button>
+                                                    <button type="button" class="sb_refresh">새로고침</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <th>키워드</th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>신청업체</th>
+                                    <td>
+                                        <div class="fjs">
+                                            <div class="radio_box width_200">
+                                                <input type="radio" id="radio5" name="radio_group3" value="" checked="checked">
+                                                <label for="radio5">회사</label>
+                                                <input type="radio" id="radio6" name="radio_group3" value="">
+                                                <label for="radio6">상품</label>
+                                            </div>
+                                            <input type="text" id="" name="" value="">
+                                        </div>
+                                    </td>
+                                    <th>사업자번호</th>
+                                    <td>
+                                        <input type="number" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>희망지역</th>
+                                    <td>
+                                        <div class="select_box">
+                                            <select name="select1">
+                                                <option value="">선택</option>
+                                                <option value="01">러시아</option>
+                                                <option value="02">인도</option>
+                                                <option value="03">인도네시아</option>
+                                                <option value="04">일본</option>
+                                                <option value="05">미국</option>
+                                                <option value="06">중국</option>
+                                                <option value="07">베트남</option>
+                                                <option value="08">싱가포르ㆍ말레이시아</option>
+                                                <option value="09">유럽</option>
+                                                <option value="10">두바이</option>
+                                                <option value="11">폴란드</option>
+                                                <option value="12">멕시코</option>
+                                                <option value="13">브라질</option>
+                                                <option value="14">사우디아라비아</option>
+                                                <option value="15">남아프리카</option>
+                                                <option value="16">스페인</option>
+                                                <option value="17">벨기에</option>
+                                                <option value="18">중동</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <th>회신일</th>
+                                    <td>
+                                        <div class="datepicker_boxfitday3">
+                                            <div class="datepicker_box">
+                                                <input type="text" id="" name="" class="datepicker" readonly="readonly">
+                                                <em class="cn1">~</em>
+                                                <input type="text" id="" name="" class="datepicker" readonly="readonly">
+                                            </div>
+                                            <div class="btn_group1">
+                                                <a href="#" class="btn_d1">당일</a>
+                                                <a href="#" class="btn_d1">7일</a>
+                                                <a href="#" class="btn_d1">전체</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="search_button mt20">
+                        <a href="#" id="btn_clear" class="btn_s1" title="검색초기화">초기화</a>
+                        <a href="#" id="btn_search" class="btn_s1" title="검색" >검색</a>
+                    </div>
+                </div>
+            </div>
+            <section class="col_group mt50">
+                <div class="colv1_2" style="width: 670px;">
+                    <div class="form_head">
+                        <p class="total">
+                            전체 <strong>5</strong> 건, <span>1/1 page</span>
+                        </p>
+                        <div class="f_r">
+                            <div class="select_box width_90">
+                                <select name="select_listnum">
+                                    <option value="20">20개</option>
+                                    <option value="30">30개</option>
+                                    <option value="40">40개</option>
+                                    <option value="50">50개</option>
+                                    <option value="60">60개</option>
+                                    <option value="70">70개</option>
+                                    <option value="80">80개</option>
+                                    <option value="90">90개</option>
+                                    <option value="100">100개</option>
+                                    <option value="300">300개</option>
+                                </select>
+                            </div>
+                            <a href="#" class="btn_c1 ml10" download>Excel File</a>
+                        </div>
+                    </div>
+                    <!-- ibsheet -->
+                    <div class="ib_hover">
+                        <div id="ib_tks2"></div>
+                    </div>
+                    <nav class="pagination">
+                        <a href="#" class="pagination_first">
+                            <i class="hide">처음페이지</i>
+                        </a>
+                        <a href="#" class="pagination_prev">
+                            <i class="hide">이전페이지</i>
+                        </a>
+                        <ul class="pagination_list">
+                            <li class="active"><a href="#" title="1페이지">1</a></li>
+                            <li><a href="#" title="2페이지">2</a></li>
+                            <li><a href="#" title="3페이지">3</a></li>
+                            <li><a href="#" title="4페이지">4</a></li>
+                            <li><a href="#" title="5페이지">5</a></li>
+                            <li><a href="#" title="6페이지">6</a></li>
+                            <li><a href="#" title="7페이지">7</a></li>
+                            <li><a href="#" title="8페이지">8</a></li>
+                            <li><a href="#" title="9페이지">9</a></li>
+                            <li><a href="#" title="10페이지">10</a></li>
+                        </ul>
+                        <a href="#" class="pagination_next">
+                            <i class="hide">다음페이지</i>
+                        </a>
+                        <a href="#" class="pagination_last">
+                            <i class="hide">마지막페이지</i>
+                        </a>
+                    </nav>
+                </div>
+                <div class="colv1_3" style="width: 700px;">
+                    <div class="tabs">
+                        <ul class="tab_head">
+                            <li><a href="#tabs_51">신청정보</a></li>
+                            <li><a href="#tabs_52">회사정보</a></li>
+                            <li><a href="#tabs_53">상품정보(0)</a></li>
+                            <li><a href="#tabs_47">담당자정보(0)</a></li>
+                        </ul>
+                        <div id="tabs_51">
+                            <div class="form1 text-left">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:120px;">
+                                        <col style="width:auto;">
+                                        <col style="width:120px;">
+                                        <col style="width:auto;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>신청업체명</th>
+                                            <td>
+                                                <a href="#" class="text_ellipsis color4" target="_blank">ATC.lnc</a>
+                                            </td>
+                                            <th>신청일시</th>
+                                            <td>
+                                                <span class="font_1226">2020-01-01 10:10:10</span>
+                                                <button type="button" class="attachfile f_r" onclick="popshow('pop_small3');">
+                                                    <span>1</span>
+                                                </button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>신청담당자</th>
+                                            <td></td>
+                                            <th>진행상황</th>
+                                            <td>
+                                                결과물업체전달
+                                                <p class="color11">※매칭팀전달(2019-12-30)</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>전화번호</th>
+                                            <td></td>
+                                            <th>이메일</th>
+                                            <td>
+                                                <button type="button" class="text_ellipsis color4">abcd@gmail.com</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>매칭희망지역</th>
+                                            <td>일본, 인도</td>
+                                            <th>거래제안서</th>
+                                            <td>
+                                                <div class="btn_group2">
+                                                    <button type="button" class="btn_d2">영어버전</button>
+                                                    <button type="button" class="btn_d2">일본어버전</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="form_head mt30">
+                                <div class="page_subtitle">진행상황</div>
+                                <div class="btn_group2 f_r">
+                                    <button type="button" class="btn_d1" onclick="popshow(''); mySheet0000.FitColWidth()">번역의뢰</button>
+                                    <button type="button" class="btn_d1" onclick="popshow(''); mySheet0000.FitColWidth()">마케팅 요청</button>
+                                </div>
+                            </div>
+                            <!-- ibsheet -->
+                            <div class="ib_hover">
+                                <div id="ib_tks3"></div>
+                            </div>
+                            <div class="form_head mt30">
+                                <div class="page_subtitle">바이어마케팅현황</div>
+                            </div>
+                            <!-- ibsheet -->
+                            <div class="ib_hover">
+                                <div id="ib_tks4"></div>
+                            </div>
+                            <div class="form_head mt30">
+                                <div class="page_subtitle">바이어마케팅결과<span class="ml10">※ 관심 표명바이어 정보</span></div>
+                            </div>
+                            <!-- ibsheet -->
+                            <div class="ib_hover">
+                                <div id="ib_tks5"></div>
+                            </div>
+                            <div class="search_button mt20">
+                                <a href="#" class="btn_s4">매칭담당자 지정</a>
+                                <a href="#" class="btn_s4">바이어DB로 저장</a>
+                            </div>
+                        </div>
+                        <div id="tabs_52">
+                            <div class="form1 text-left">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:120px;">
+                                        <col style="width:auto;">
+                                        <col style="width:120px;">
+                                        <col style="width:auto;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>사업자번호</th>
+                                            <td></td>
+                                            <th>무역업번호</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>사업자유형</th>
+                                            <td></td>
+                                            <th>던스번호</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>회사명</th>
+                                            <td colspan="3">
+                                                <div class="area_txt1">
+                                                    <em>(영문)</em><span>sbi corporation</span>
+                                                    <em class="ml10">(국문)</em><span>SBI상사(주)</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>대표자</th>
+                                            <td colspan="3">
+                                                <div class="area_txt1">
+                                                    <em>(영문)</em><span>wwwww</span>
+                                                    <em class="ml10">(국문)</em><span>홍길동</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>전화번호</th>
+                                            <td></td>
+                                            <th>팩스번호</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>대표이메일</th>
+                                            <td colspan="3"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>주소(영문)</th>
+                                            <td colspan="3"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>tradeKorea ID</th>
+                                            <td>
+                                                <a href="#">
+                                                    <em class="cn0 mr10 color4">trk002</em>
+                                                </a>
+                                                <a href="https://testtest.tradekorea.com/main.do;JSESSIONID_TK=M9jcsdldq3jdKGTRmPi22XKPyvrhrZeVZ_BNogzgyMbD6nQVJThJ!70960331!-1020021924" class="btn_d2" target="_blank">미니사이트</a>
+                                            </td>
+                                            <th>불량셀러여부</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>홈페이지</th>
+                                            <td>
+                                                <a href="https://www.tradekorea.com/main.do" class="color4" target="_blank">http://tradekorea.com</a>
+                                            </td>
+                                            <th>키워드</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>카테고리</th>
+                                            <td colspan="3"></td>
+                                        </tr>
+                                        <tr>
+                                            <th>메모</th>
+                                            <td colspan="3">
+                                                <div class="form2 form_hover text-center">
+                                                    <table>
+                                                        <colgroup>
+                                                            <col width="17%">
+                                                            <col width="20%">
+                                                            <col width="63%">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>작성자</th>
+                                                                <th>작성일자</th>
+                                                                <th>내용</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <!-- <tr class="nodata">
+                                                                <td colspan="3">등록된 메모가 없습니다.</td>
+                                                            </tr> -->
+                                                            <tr>
+                                                                <td>홍길동</td>
+                                                                <td>2020-01-01</td>
+                                                                <td>
+                                                                    <a href="#">해당 업체는 매칭하면 안되는 업체입니다.</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>그룹정보</th>
+                                            <td colspan="3">
+                                                <div class="form1 text-left">
+                                                    <table>
+                                                        <colgroup>
+                                                            <col style="width:123px;">
+                                                            <col style="width:auto;">
+                                                        </colgroup>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>공통</th>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>개인</th>
+                                                                <td></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>상담내역</th>
+                                            <td colspan="3">
+                                                <div class="form2 form_hover text-center">
+                                                    <table>
+                                                        <colgroup>
+                                                            <col style="width:10%">
+                                                            <col style="width:13%">
+                                                            <col style="width:17%">
+                                                            <col style="width:15%">
+                                                            <col style="width:30%">
+                                                            <col style="width:15%">
+                                                        </colgroup>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>번호</th>
+                                                                <th>담당자</th>
+                                                                <th>작성일시</th>
+                                                                <th>상담유형</th>
+                                                                <th>상담내용</th>
+                                                                <th>무역담당자</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <!-- <tr class="nodata">
+                                                                <td colspan="6">상담내역이 없습니다.</td>
+                                                            </tr> -->
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>홍길동</td>
+                                                                <td>2020-01-01</td>
+                                                                <td>방문</td>
+                                                                <td>
+                                                                    <p class="text_ellipsis">이정희 부장, 손희진 사원 미팅
+                                                                        태국식품박람회  할랄전시관 지원 내용 소개,
+                                                                        서울식품박람회 전시 사전마케팅 관련 논의,
+                                                                        추후 Kmall24 관련 내용, 기타 KITA 지원 가능 내용 소개
+                                                                        세계일류상품 과 같은 KITA 인증 제품이라는 타이틀이 있으면 좋겠다,
+                                                                        예산 지원이 되는 부분이 많았으면 좋겠다,
+                                                                        수출탑 외에도 상 받을 수 있는 부분이 없는지
+                                                                        등에 대해서 문의하심</p>
+                                                                </td>
+                                                                <td>홍길동</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>등록정보</th>
+                                            <td></td>
+                                            <th>수정정보</th>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="tabs_53">
+                            <div class="height_y2">
+                                <div class="form1 text-left">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width:160px;">
+                                            <col style="width:123px;">
+                                            <col style="width:auto;">
+                                            <col style="width:123px;">
+                                            <col style="width:auto;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="4" class="p5">
+                                                    <a href="#" target="_blank" class="area_pdlist1_img" title="상세정보를 새 페이지에서 열기">
+                                                        <img src="../images/demo38.jpg" alt="WOONGJIN Morning Rice Drink and other drinks">
+                                                    </a>
+                                                </td>
+                                                <th>상품명</th>
+                                                <td colspan="3">
+                                                    <a href="http://www.tradekorea.com/product/detail/P645237/OKF%20Rice%20Milk.html" target="_blank" title="OKF Rice Milk 상세정보를 새 페이지에서 열기" target="_blank" class="color11">OKF Rice Milk</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>카테고리</th>
+                                                <td></td>
+                                                <th>키워드</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>최대조회국가</th>
+                                                <td colspan="3">
+                                                    <div>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회),</em>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회),</em>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회)</em>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>최대조회경로</th>
+                                                <td></td>
+                                                <th>등록일</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="4" class="p5">
+                                                    <a href="#" target="_blank" class="area_pdlist1_img" title="상세정보를 새 페이지에서 열기">
+                                                        <img src="../images/demo38.jpg" alt="WOONGJIN Morning Rice Drink and other drinks">
+                                                    </a>
+                                                </td>
+                                                <th>상품명</th>
+                                                <td colspan="3">
+                                                    <a href="http://www.tradekorea.com/product/detail/P645237/OKF%20Rice%20Milk.html" target="_blank" title="OKF Rice Milk 상세정보를 새 페이지에서 열기" target="_blank" class="color11">OKF Rice Milk</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>카테고리</th>
+                                                <td></td>
+                                                <th>키워드</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>최대조회국가</th>
+                                                <td colspan="3">
+                                                    <div>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회),</em>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회),</em>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회)</em>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>최대조회경로</th>
+                                                <td></td>
+                                                <th>등록일</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="4" class="p5">
+                                                    <a href="#" target="_blank" class="area_pdlist1_img" title="상세정보를 새 페이지에서 열기">
+                                                        <img src="../images/demo38.jpg" alt="WOONGJIN Morning Rice Drink and other drinks">
+                                                    </a>
+                                                </td>
+                                                <th>상품명</th>
+                                                <td colspan="3">
+                                                    <a href="http://www.tradekorea.com/product/detail/P645237/OKF%20Rice%20Milk.html" target="_blank" title="OKF Rice Milk 상세정보를 새 페이지에서 열기" target="_blank" class="color11">OKF Rice Milk</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>카테고리</th>
+                                                <td></td>
+                                                <th>키워드</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>최대조회국가</th>
+                                                <td colspan="3">
+                                                    <div>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회),</em>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회),</em>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회)</em>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>최대조회경로</th>
+                                                <td></td>
+                                                <th>등록일</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="4" class="p5">
+                                                    <a href="#" target="_blank" class="area_pdlist1_img" title="상세정보를 새 페이지에서 열기">
+                                                        <img src="../images/demo38.jpg" alt="WOONGJIN Morning Rice Drink and other drinks">
+                                                    </a>
+                                                </td>
+                                                <th>상품명</th>
+                                                <td colspan="3">
+                                                    <a href="http://www.tradekorea.com/product/detail/P645237/OKF%20Rice%20Milk.html" target="_blank" title="OKF Rice Milk 상세정보를 새 페이지에서 열기" target="_blank" class="color11">OKF Rice Milk</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>카테고리</th>
+                                                <td></td>
+                                                <th>키워드</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>최대조회국가</th>
+                                                <td colspan="3">
+                                                    <div>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회),</em>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회),</em>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회)</em>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>최대조회경로</th>
+                                                <td></td>
+                                                <th>등록일</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="4" class="p5">
+                                                    <a href="#" target="_blank" class="area_pdlist1_img" title="상세정보를 새 페이지에서 열기">
+                                                        <img src="../images/demo38.jpg" alt="WOONGJIN Morning Rice Drink and other drinks">
+                                                    </a>
+                                                </td>
+                                                <th>상품명</th>
+                                                <td colspan="3">
+                                                    <a href="http://www.tradekorea.com/product/detail/P645237/OKF%20Rice%20Milk.html" target="_blank" title="OKF Rice Milk 상세정보를 새 페이지에서 열기" target="_blank" class="color11">OKF Rice Milk</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>카테고리</th>
+                                                <td></td>
+                                                <th>키워드</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>최대조회국가</th>
+                                                <td colspan="3">
+                                                    <div>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회),</em>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회),</em>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회)</em>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>최대조회경로</th>
+                                                <td></td>
+                                                <th>등록일</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="4" class="p5">
+                                                    <a href="#" target="_blank" class="area_pdlist1_img" title="상세정보를 새 페이지에서 열기">
+                                                        <img src="../images/demo38.jpg" alt="WOONGJIN Morning Rice Drink and other drinks">
+                                                    </a>
+                                                </td>
+                                                <th>상품명</th>
+                                                <td colspan="3">
+                                                    <a href="http://www.tradekorea.com/product/detail/P645237/OKF%20Rice%20Milk.html" target="_blank" title="OKF Rice Milk 상세정보를 새 페이지에서 열기" target="_blank" class="color11">OKF Rice Milk</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>카테고리</th>
+                                                <td></td>
+                                                <th>키워드</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>최대조회국가</th>
+                                                <td colspan="3">
+                                                    <div>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회),</em>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회),</em>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회)</em>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>최대조회경로</th>
+                                                <td></td>
+                                                <th>등록일</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="4" class="p5">
+                                                    <a href="#" target="_blank" class="area_pdlist1_img" title="상세정보를 새 페이지에서 열기">
+                                                        <img src="../images/demo38.jpg" alt="WOONGJIN Morning Rice Drink and other drinks">
+                                                    </a>
+                                                </td>
+                                                <th>상품명</th>
+                                                <td colspan="3">
+                                                    <a href="http://www.tradekorea.com/product/detail/P645237/OKF%20Rice%20Milk.html" target="_blank" title="OKF Rice Milk 상세정보를 새 페이지에서 열기" target="_blank" class="color11">OKF Rice Milk</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>카테고리</th>
+                                                <td></td>
+                                                <th>키워드</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>최대조회국가</th>
+                                                <td colspan="3">
+                                                    <div>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회),</em>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회),</em>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회)</em>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>최대조회경로</th>
+                                                <td></td>
+                                                <th>등록일</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="4" class="p5">
+                                                    <a href="#" target="_blank" class="area_pdlist1_img" title="상세정보를 새 페이지에서 열기">
+                                                        <img src="../images/demo38.jpg" alt="WOONGJIN Morning Rice Drink and other drinks">
+                                                    </a>
+                                                </td>
+                                                <th>상품명</th>
+                                                <td colspan="3">
+                                                    <a href="http://www.tradekorea.com/product/detail/P645237/OKF%20Rice%20Milk.html" target="_blank" title="OKF Rice Milk 상세정보를 새 페이지에서 열기" target="_blank" class="color11">OKF Rice Milk</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>카테고리</th>
+                                                <td></td>
+                                                <th>키워드</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>최대조회국가</th>
+                                                <td colspan="3">
+                                                    <div>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회),</em>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회),</em>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회)</em>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>최대조회경로</th>
+                                                <td></td>
+                                                <th>등록일</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="4" class="p5">
+                                                    <a href="#" target="_blank" class="area_pdlist1_img" title="상세정보를 새 페이지에서 열기">
+                                                        <img src="../images/demo38.jpg" alt="WOONGJIN Morning Rice Drink and other drinks">
+                                                    </a>
+                                                </td>
+                                                <th>상품명</th>
+                                                <td colspan="3">
+                                                    <a href="http://www.tradekorea.com/product/detail/P645237/OKF%20Rice%20Milk.html" target="_blank" title="OKF Rice Milk 상세정보를 새 페이지에서 열기" target="_blank" class="color11">OKF Rice Milk</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>카테고리</th>
+                                                <td></td>
+                                                <th>키워드</th>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th>최대조회국가</th>
+                                                <td colspan="3">
+                                                    <div>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회),</em>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회),</em>
+                                                        <img src="../images/flags/us.gif" class="mr5" alt="국기"><em class="c0 mr5">U.S.A(2390회)</em>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>최대조회경로</th>
+                                                <td></td>
+                                                <th>등록일</th>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tabs_47">
+                            <div class="form1 text-left">
+                                <table>
+                                    <colgroup>
+                                        <col style="width:120px;">
+                                        <col style="width:auto;">
+                                        <col style="width:120px;">
+                                        <col style="width:auto;">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>대표</th>
+                                            <td></td>
+                                            <th>직함</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>성명(영)</th>
+                                            <td></td>
+                                            <th>성명(국)</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>이메일</th>
+                                            <td colspan="3"></td>
+                                        </tr>
+                                        <tr >
+                                            <th>TEL</th>
+                                            <td></td>
+                                            <th>MOBILE</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr><td colspan="4" class="bb1"></td></tr>
+                                        <tr>
+                                            <th>대표</th>
+                                            <td></td>
+                                            <th>직함</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>성명(영)</th>
+                                            <td></td>
+                                            <th>성명(국)</th>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th>이메일</th>
+                                            <td colspan="3"></td>
+                                        </tr>
+                                        <tr >
+                                            <th>TEL</th>
+                                            <td></td>
+                                            <th>MOBILE</th>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+<!-- s : popup -->
+<div class="pop" id="pop_small3">
+    <div class="pop_bg"></div>
+    <div class="pop_wrap width_500">
+        <div class="pop_head"><strong>첨부파일</strong></div>
+        <section class="pop_body">
+            <div class="content">
+                <div class="form2 text-center">
+                    <table>
+                        <colgroup>
+                            <col style="width:50px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="checkbox_table">
+                                        <input type="checkbox" name="" id="check6" value="">
+                                        <label for="check6"></label>
+                                    </div>
+                                </th>
+                                <th>파일명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- <tr class="nodata">
+                                <td colspan="2">검색된 데이터가 없습니다.</td>
+                            </tr> -->
+                            <tr>
+                                <td>
+                                    <div class="checkbox_table">
+                                        <input type="checkbox" name="" id="check1" value="">
+                                        <label for="check1"></label>
+                                    </div>
+                                </td>
+                                <td class="text-left">aaa.jpg</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="checkbox_table">
+                                        <input type="checkbox" name="" id="check2" value="">
+                                        <label for="check2"></label>
+                                    </div>
+                                </td>
+                                <td class="text-left">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.jpg</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="checkbox_table">
+                                        <input type="checkbox" name="" id="check3" value="">
+                                        <label for="check3"></label>
+                                    </div>
+                                </td>
+                                <td class="text-left">aaa.jpg</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pop_btn_wrap">
+                    <div class="down_info mt15 mb15">
+                        <strong class="color3">3</strong>개 <em>/</em> <strong class="color3">417.94</strong>KB
+                    </div>
+                    <a href="#" class="btn_d2">열기</a>
+                    <a href="#" class="btn_d2" download>다운로드</a>
+                </div>
+            </div>
+        </section>
+        <button type="button" class="pop_close" onclick="pophide('pop_small3')">
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+</div>
+<!-- e : popup -->
+
+
+
+
+
+
+<!-- s : popup -->
+<div class="pop" id="pop_category1">
+    <div class="pop_bg"></div>
+    <div class="pop_wrap width_700">
+        <div class="pop_head"><strong>카테고리</strong></div>
+        <section class="pop_body height_425">
+            <div class="content">
+                <div class="tabs tabs_pop">
+                    <ul class="tab_head mb30">
+                        <li><a href="#tabs_pop1">Recommended Category</a></li>
+                        <li><a href="#tabs_pop2">Choose your own category</a></li>
+                    </ul>
+                    <div id="tabs_pop1">
+                        <div class="form_head form_head_tabfix width_240">
+                            <span class="cn0 f_l">Categoryno : 182901828</span>
+                            <a href="#" class="btn_d2 ml10" title="추가">추가</a>
+                        </div>
+                        <div class="clearfix mb20">
+                            <div class="form1 text-left width_400 f_l">
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 110px;">
+                                        <col style="width: auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>키워드</th>
+                                            <td>
+                                                <input type="text" id="" name="" value="">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="search_button f_r">
+                                <a href="#" id="btn_search" class="btn_s1" title="검색">검색</a>
+                                <a href="#" id="btn_apply" class="btn_s1" title="apply">apply</a>
+                            </div>
+                        </div>
+                        <div class="category_recd">
+                            <ul>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</li>
+                                <li class="is_active">Food & Beverage</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="tabs_pop2">
+                        <div class="form_head form_head_tabfix width_240">
+                            <span class="cn0 f_l">Categoryno : 1111</span>
+                        </div>
+                        <input type="text" id="" class="input_s1" name="" value="">
+                        <div class="category">
+                            <ul>
+                                <li>
+                                    <div class="category_box">
+                                        <ul>
+                                            <li>Beauty & Personal Care Beauty & Personal CareBeauty & Personal CareBeauty & Personal Care</li>
+                                            <li class="is_active">Food & Beverage</li>
+                                            <li>Fashion</li>
+                                            <li>Home & Kitchen</li>
+                                            <li>Sport, Gifts & Toys</li>
+                                            <li>Stationery & Printing</li>
+                                            <li>Health & Medical</li>
+                                            <li>Electronic Products</li>
+                                            <li>Vehicles & Accessories</li>
+                                            <li>Equipment & Packaging</li>
+                                            <li>Electrical Components & Telecoms</li>
+                                            <li>Machinery & Parts</li>
+                                            <li>Industrial Supplies</li>
+                                            <li>Construction & Safety</li>
+                                            <li>Construction & Safety</li>
+                                            <li>Construction & Safety</li>
+                                            <li>Construction & Safety</li>
+                                            <li>Construction & Safety</li>
+                                            <li>Construction & Safety</li>
+                                            <li>Construction & Safety</li>
+                                            <li>Construction & Safety</li>
+                                            <li>Construction & Safety</li>
+                                            <li>Construction & Safety</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="category_box">
+                                        <ul>
+                                            <li>Beauty & Personal Care Beauty & Personal CareBeauty & Personal CareBeauty & Personal Care</li>
+                                            <li class="is_active">Food & Beverage</li>
+                                            <li>Fashion</li>
+                                            <li>Home & Kitchen</li>
+                                            <li>Sport, Gifts & Toys</li>
+                                            <li>Stationery & Printing</li>
+                                            <li>Health & Medical</li>
+                                            <li>Electronic Products</li>
+                                            <li>Vehicles & Accessories</li>
+                                            <li>Equipment & Packaging</li>
+                                            <li>Electrical Components & Telecoms</li>
+                                            <li>Machinery & Parts</li>
+                                            <li>Industrial Supplies</li>
+                                            <li>Construction & Safety</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="category_box">
+                                        <ul>
+                                            <li class="is_active">Beauty & Personal</li>
+                                            <li>Food & Beverage</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="category_box">
+                                        <ul>
+                                            <li>Beauty & Personal</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <button type="button" class="pop_close" onclick="pophide('pop_category1')">
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+</div>
+<!-- e : popup -->
+
+
+
+        </div>
+        <!-- e : contents -->
+    </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">저작권정책</a></li>
+            </ul>
+            <p class="footer_copy">Copyright ⓒ 2008 - 2021 KITA, All rights reserved</p>
+        </div>
+    </footer>
+</div>
+<!-- script -->
+<script type="text/javascript" src="../js/header2021.js"></script>
+<script type="text/javascript" src="../js/common2021.js"></script>
+</body>
+</html>

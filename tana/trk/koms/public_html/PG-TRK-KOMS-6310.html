@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>TadeKorea Koms</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="tadeKorea Koms">
+    <meta name="subject" content="tadeKorea Koms">
+    <meta name="keywords" content="Global, e-Marketplace, tadeKorea Koms, tradeKorea Management system">
+    <meta property="og:title" content="tadeKorea Koms">
+    <!-- css default -->
+    <link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/base_trkkoms.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui-tradekoms.css"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <!-- js ibsheet -->
+    <script type="text/javascript" src="../ibSheet/js/ibleaders.js"></script>
+    <script type="text/javascript" src="../ibSheet/js/ibsheetinfo.js"></script>
+    <script type="text/javascript" src="../ibSheet/js/ibsheet.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){ 
+    let IB1 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"번호",           SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"구분",           SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"업체명",         SaveName:"3", Align:"Center", Type:"Text"},
+                    { Header:"대표자명",       SaveName:"4", Align:"Center", Type:"Text"},
+                    { Header:"사업자등록번호", SaveName:"5", Align:"Center", Type:"Number"},
+                    { Header:"사용여부",       SaveName:"6", Align:"Center", Type:"Text"},
+                ]
+            }
+            const container = $("#ib_container1")[0];
+            createIBSheet2(container,'mySheet1','100%','630px');
+            IBS_InitSheet(mySheet1,initData);
+            this.doAction();
+        },
+
+
+        doAction:function(){
+            mySheet1.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheet1.SetColWidth("sTitle", 100);
+            } else {
+                mySheet1.FitColWidth("10|15|25|15|20|15");
+            }
+        },
+
+
+
+        data:{
+            data:[
+                {
+                    1:"1",
+                    2:"에이전시",
+                    3:"그린서비스 주식회사",
+                    4:"홍길동",
+                    5:"000-00-000",
+                    6:"사용중"
+                },{
+                    1:"1",
+                    2:"에이전시",
+                    3:"그린서비스 주식회사",
+                    4:"홍길동",
+                    5:"000-00-000",
+                    6:"사용중"
+                }
+            ]
+        }
+    };
+    IB1.initialize();
+
+
+
+    let IB2 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:4},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"번호",      SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"참가년월",  SaveName:"2", Align:"Center", Type:"Date", Format:"yyyy-MM"},
+                    { Header:"참가행사",  SaveName:"3", Align:"Center", Type:"Text"},
+                    { Header:"평가점수",  SaveName:"4", Align:"Center", Type:"Number"},
+                    { Header:"평가내용",  SaveName:"5", Align:"Center", Type:"Text"}
+                ]
+            }
+            const container = $("#ib_container2")[0];
+            createIBSheet2(container,'mySheet2','100%','400px');
+            IBS_InitSheet(mySheet2,initData);
+            mySheet2.FitColWidth("10|15|40|15|20");
+            mySheet2.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheet2.LoadSearchData(this.data,{
+                Sync:1
+            });
+        },
+        data:{
+            data:[
+                {
+                    1:"1",
+                    2:"2020-01",
+                    3:"",
+                    4:"100",
+                    5:""
+                },{
+                    1:"1",
+                    2:"2020-01",
+                    3:"",
+                    4:"100",
+                    5:""
+                }
+            ]
+        }
+    };
+    IB2.initialize();
+});
+</script>
+<div class="wrap">
+    <div class="container">
+    <div class="container_inner">
+    <div class="contents_wrap">
+        <!-- s : contents -->
+        <div class="contents">
+            <div class="page_head">
+                <div class="page_title">협력사정보</div>
+                <div class="search_button f_r">
+                    <a href="#" class="btn_s3">신규업체등록</a>
+                </div>
+            </div>
+            <div class="form1 text-left">
+                <table>
+                    <colgroup>
+                        <col style="width:123px;">
+                        <col style="width:auto;">
+                        <col style="width:123px;">
+                        <col style="width:auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>기업구분</th>
+                            <td>
+                                <div class="radio_box">
+                                    <input type="radio" id="radio1" name="radio_group1" value="" checked="checked">
+                                    <label for="radio1">전체</label>
+                                    <input type="radio" id="radio2" name="radio_group1" value="">
+                                    <label for="radio2">여행사</label>
+                                    <input type="radio" id="radio3" name="radio_group1" value="">
+                                    <label for="radio3">PCO</label>
+                                    <input type="radio" id="radio4" name="radio_group1" value="">
+                                    <label for="radio4">에이전시</label>
+                                </div>
+                            </td>
+                            <th>사용여부</th>
+                            <td>
+                                <div class="radio_box">
+                                    <input type="radio" id="radio5" name="radio_group2" value="" checked="checked">
+                                    <label for="radio5">전체</label>
+                                    <input type="radio" id="radio6" name="radio_group2" value="">
+                                    <label for="radio6">사용중</label>
+                                    <input type="radio" id="radio7" name="radio_group2" value="">
+                                    <label for="radio7">미사용</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>필터</th>
+                            <td colspan="3">
+                                <div class="fjs">
+                                    <div class="radio_box width_400">
+                                        <input type="radio" id="radio8" name="radio_group3" value="" checked="checked">
+                                        <label for="radio8">전체</label>
+                                        <input type="radio" id="radio9" name="radio_group3" value="">
+                                        <label for="radio9">대표자명</label>
+                                        <input type="radio" id="radio10" name="radio_group3" value="">
+                                        <label for="radio10">사업자등록번호</label>
+                                    </div>
+                                    <input type="text" id="" name="" value="">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="search_button mt20">
+                <a href="#" id="btn_clear" class="btn_s1" title="검색초기화">초기화</a>
+                <a href="#" id="btn_search" class="btn_s1" title="검색" >검색</a>
+            </div>
+            <section class="col_group mt50">
+                <div class="colv1_2" style="width:570px;">
+                    <div class="form_head">
+                        <p class="total">
+                            전체 <strong>1</strong> 건, <span>1/1 page</span>
+                        </p>
+                        <div class="f_r">
+                            <div class="select_box width_90">
+                                <select name="select_listnum">
+                                    <option value="20">20개</option>
+                                    <option value="30">30개</option>
+                                    <option value="40">40개</option>
+                                    <option value="50">50개</option>
+                                    <option value="60">60개</option>
+                                    <option value="70">70개</option>
+                                    <option value="80">80개</option>
+                                    <option value="90">90개</option>
+                                    <option value="100">100개</option>
+                                    <option value="300">300개</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ibsheet -->
+                    <div class="ib_hover">
+                        <div id="ib_container1"></div>
+                    </div>
+
+                    <nav class="pagination">
+                        <a href="#" class="pagination_first">
+                            <i class="hide">처음페이지</i>
+                        </a>
+                        <a href="#" class="pagination_prev">
+                            <i class="hide">이전페이지</i>
+                        </a>
+                        <ul class="pagination_list">
+                            <li class="active"><a href="#" title="1페이지">1</a></li>
+                            <li><a href="#" title="2페이지">2</a></li>
+                            <li><a href="#" title="3페이지">3</a></li>
+                            <li><a href="#" title="4페이지">4</a></li>
+                            <li><a href="#" title="5페이지">5</a></li>
+                            <li><a href="#" title="6페이지">6</a></li>
+                            <li><a href="#" title="7페이지">7</a></li>
+                            <li><a href="#" title="8페이지">8</a></li>
+                            <li><a href="#" title="9페이지">9</a></li>
+                            <li><a href="#" title="10페이지">10</a></li>
+                        </ul>
+                        <a href="#" class="pagination_next">
+                            <i class="hide">다음페이지</i>
+                        </a>
+                        <a href="#" class="pagination_last">
+                            <i class="hide">마지막페이지</i>
+                        </a>
+                    </nav>
+                </div>
+                <div class="colv1_3" style="width:800px;">
+                    <div class="form_head">
+                        <div class="page_subtitle">협력사 정보</div>
+                    </div>
+                    <div class="form1 text-left">
+                        <table>
+                            <colgroup>
+                                <col style="width:123px;">
+                                <col style="width:auto;">
+                                <col style="width:123px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><p class="color11">기업구분</p></th>
+                                    <td colspan="3">
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="" id="check8" value="">
+                                            <label for="check8" class="mr15">여행사</label>
+                                            <input type="checkbox" name="" id="check9" value="">
+                                            <label for="check9" class="mr15">PCO</label>
+                                            <input type="checkbox" name="" id="check10" value="">
+                                            <label for="check10">에이전시</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><p class="color11">회사명</p></th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                    <th><p class="color11">대표자명</p></th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><p class="color11">사업자등록번호</p></th>
+                                    <td>
+                                        <input type="text" id="" name="" value="" style="width: calc(100% - 50px); margin-right: 10px;">
+                                        <em class="cn0">(-제외)</em>
+                                    </td>
+                                    <th><p class="color11">담당자명</p></th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><p class="color11">담당자 연락처</p></th>
+                                    <td>
+                                        <div class="f0">
+                                            <input type="text" id="" name="" value="" style="width: calc((100% - 26px) / 3); ">
+                                            <em class="cn2">-</em>
+                                            <input type="text" id="" name="" value="" style="width: calc((100% - 26px) / 3); ">
+                                            <em class="cn2">-</em>
+                                            <input type="text" id="" name="" value="" style="width: calc((100% - 26px) / 3); ">
+                                        </div>
+                                    </td>
+                                    <th><p class="color11">담당자이메일</p></th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>소재지</th>
+                                    <td colspan="3">
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>홈페이지</th>
+                                    <td colspan="3">
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>시스템사용</th>
+                                    <td colspan="3">
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="" id="check11" value="">
+                                            <label for="check11" class="mr15">사용(KOMS 로그인 여부)</label>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- 체크박스 클릭시 나옴. -->
+                                <tr>
+                                    <th><p class="color11">아이디</p></th>
+                                    <td colspan="3">
+                                        <input type="text" id="" name="" value="" style="width:calc(100% - 280px); ">
+                                        <button type="button" class="btn_d2" style="margin: 0 10px;">중복확인</button>
+                                        <em class="cn0">※ ID 중복체크를 하지 않았습니다.</em>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><p class="color11">비밀번호</p></th>
+                                    <td>
+                                        <input type="password" id="" name="" value="">
+                                    </td>
+                                    <th><p class="color11">비밀번호 확인</p></th>
+                                    <td>
+                                        <input type="password" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>권한그룹</th>
+                                    <td colspan="3">
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <th>비고</th>
+                                    <td colspan="3">
+                                        <textarea></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>사용여부</th>
+                                    <td colspan="3">
+                                        <div class="radio_box">
+                                            <input type="radio" id="radio11" name="radio_group4" value="" checked="checked">
+                                            <label for="radio11">사용</label>
+                                            <input type="radio" id="radio12" name="radio_group4" value="">
+                                            <label for="radio12">미사용</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="search_button mt20">
+                        <a href="#" class="btn_s1">삭제</a>
+                        <a href="#" class="btn_s1">저장</a>
+                    </div>
+                    <div class="form_head mt30">
+                        <div class="page_subtitle">행사참가이력</div>
+                        <span class="total">
+                            전체 <strong>0</strong> 건, <span>1/1 page</span>
+                        </span>
+                    </div>
+
+                    <!-- ibsheet -->
+                    <div class="ib_hover">
+                        <div id="ib_container2"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- e : contents -->
+    </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">저작권정책</a></li>
+            </ul>
+            <p class="footer_copy">Copyright ⓒ 2008 - 2021 KITA, All rights reserved</p>
+        </div>
+    </footer>
+</div>
+<!-- script -->
+<script type="text/javascript" src="../js/header2021.js"></script>
+<script type="text/javascript" src="../js/common2021.js"></script>
+</body>
+</html>

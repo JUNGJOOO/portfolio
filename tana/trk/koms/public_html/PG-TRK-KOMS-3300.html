@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>TadeKorea Koms</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="tadeKorea Koms">
+    <meta name="subject" content="tadeKorea Koms">
+    <meta name="keywords" content="Global, e-Marketplace, tadeKorea Koms, tradeKorea Management system">
+    <meta property="og:title" content="tadeKorea Koms">
+    <!-- css default -->
+    <link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/base_trkkoms.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui-tradekoms.css"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <!-- js ibsheet -->
+    <script src="../ibSheet/js/ibleaders.js"></script>
+    <script src="../ibSheet/js/ibsheetinfo.js"></script>
+    <script src="../ibSheet/js/ibsheet.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){ 
+    let IB_tks6 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"Seller Corp Nm.",   SaveName:"1", Align:"Left", Type:"Text", "Ellipsis":1},
+                    { Header:"Request Day",       SaveName:"2", Align:"Center", Type:"Date", Format:"yyyy-MM-dd"},
+                    { Header:"Seller Category",   SaveName:"3", Align:"Left", Type:"Text", "Ellipsis":1},
+                    { Header:"REF",               SaveName:"4", Align:"Center", Type:"Button"},
+                    { Header:"Status",            SaveName:"5", Align:"Center", Type:"Text"},
+                ]
+            }
+            const container = $("#ib_tks6")[0];
+            createIBSheet2(container,'mySheettks6','100%','441px');
+            IBS_InitSheet(mySheettks6,initData);
+            mySheettks6.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheettks6.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheettks6.SetColWidth("sTitle", 100);
+            } else {
+                mySheettks6.FitColWidth("26|16|32|16|10");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"DONG SUNG CHEMICAL CO LTD",
+                    2:"2020-01-01",
+                    3:"Liquid Foundation,Face Cream & Lotion,Face Mask,Skin Care Serum,Skin Care Set",
+                    4:"Download",
+                    5:"Wait",
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                    5:"",
+                },
+            ]
+        }
+    };
+    IB_tks6.initialize();
+
+    let IB_tks7 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"Corp. Name",            SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"Contact Name",   SaveName:"2", Align:"Center", Type:"Date", Format:"yyyy-MM-dd"},
+                    { Header:"Tel",      SaveName:"3", Align:"Center", Type:"Text"},
+                ]
+            }
+            const container = $("#ib_tks7")[0];
+            createIBSheet2(container,'mySheettks7','100%','441px');
+            IBS_InitSheet(mySheettks7,initData);
+            mySheettks7.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheettks7.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheettks7.SetColWidth("sTitle", 100);
+            } else {
+                mySheettks7.FitColWidth("35|35|30");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"",
+                    2:"",
+                    3:"",
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                },
+            ]
+        }
+    };
+    IB_tks7.initialize();
+
+    let IB_tks8 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:0},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"No",            SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"Request Day",   SaveName:"2", Align:"Center", Type:"Date", Format:"yyyy-MM-dd"},
+                    { Header:"Contents",      SaveName:"3", Align:"Center", Type:"Text"},
+                    { Header:"Requestor",     SaveName:"4", Align:"Center", Type:"Text"},
+                ]
+            }
+            const container = $("#ib_tks8")[0];
+            createIBSheet2(container,'mySheettks8','100%','162px');
+            IBS_InitSheet(mySheettks8,initData);
+            mySheettks8.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheettks8.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheettks8.SetColWidth("sTitle", 100);
+            } else {
+                mySheettks8.FitColWidth("15|25|35|25");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"1",
+                    2:"2020-01-01",
+                    3:"7월 아웃바운드",
+                    4:"홍길동",
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                },{
+                    1:"",
+                    2:"",
+                    3:"",
+                    4:"",
+                }
+            ]
+        }
+    };
+    IB_tks8.initialize();
+});
+</script>
+<div class="wrap">
+    <div class="container">
+    <div class="container_inner">
+    <div class="contents_wrap">
+        <!-- s : contents -->
+        <div class="contents">
+            <div class="page_head">
+                <div class="page_title">해외비즈니스 매칭바이어 발굴</div>
+            </div>
+            <div class="form1 text-left">
+                <table>
+                    <colgroup>
+                        <col style="width:123px;">
+                        <col style="width:auto;">
+                        <col style="width:123px;">
+                        <col style="width:auto;">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>Date Requested</th>
+                            <td colspan="3">
+                                <div class="datepicker_boxfitday3">
+                                    <div class="datepicker_box">
+                                        <input type="text" id="" name="" class="datepicker" readonly="readonly">
+                                        <em class="cn1">~</em>
+                                        <input type="text" id="" name="" class="datepicker" readonly="readonly">
+                                    </div>
+                                    <div class="btn_group1">
+                                        <a href="#" class="btn_d1">Today</a>
+                                        <a href="#" class="btn_d1">Week</a>
+                                        <a href="#" class="btn_d1">All</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Seller Corp Nm.</th>
+                            <td>
+                                <input type="text" id="" name="" value="">
+                            </td>
+                            <th>Seller Keyword</th>
+                            <td>
+                                <input type="text" id="" name="" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Seller Category</th>
+                            <td colspan="3">
+                                <div class="search_box2">
+                                    <input type="text" id="" name="" class="" value="">
+                                    <div class="search_box_btn">
+                                        <button type="button" class="sb_search" onclick="popshow('pop_category1')">검색</button>
+                                        <button type="button" class="sb_refresh">새로고침</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="search_button mt20">
+                <a href="#" id="btn_clear" class="btn_s1" title="검색초기화">Clear</a>
+                <a href="#" id="btn_search" class="btn_s1" title="검색">Search</a>
+            </div>
+            <div class="dash_box1 mt50">
+                <ul class="dash_col4">
+                    <li>
+                        <p>업체 선정<em>10</em>건</p>
+                    </li>
+                    <li>
+                        <p>매칭 진행중<em>10</em>건</p>
+                    </li>
+                    <li>
+                        <p>매칭 취소<em>10</em>건</p>
+                    </li>
+                    <li>
+                        <p>매칭 완료<em>10</em>건</p>
+                    </li>
+                </ul>
+            </div>
+
+
+            <section class="col_group mt50">
+                <div class="colv1_2" style="width: 670px;">
+                    <div class="form_head">
+                        <p class="total">
+                            Total of <strong>5</strong>, <span>1/1 page</span>
+                        </p>
+                        <div class="f_r">
+                            <div class="select_box width_90">
+                                <select name="select_listnum">
+                                    <option value="20">20개</option>
+                                    <option value="30">30개</option>
+                                    <option value="40">40개</option>
+                                    <option value="50">50개</option>
+                                    <option value="60">60개</option>
+                                    <option value="70">70개</option>
+                                    <option value="80">80개</option>
+                                    <option value="90">90개</option>
+                                    <option value="100">100개</option>
+                                    <option value="300">300개</option>
+                                </select>
+                            </div>
+                            <a href="#" class="btn_c1 ml10" download>Excel File</a>
+                        </div>
+                    </div>
+                    <!-- ibsheet -->
+                    <div class="ib_hover">
+                        <div id="ib_tks6"></div>
+                    </div>
+                    <nav class="pagination">
+                        <a href="#" class="pagination_first">
+                            <i class="hide">처음페이지</i>
+                        </a>
+                        <a href="#" class="pagination_prev">
+                            <i class="hide">이전페이지</i>
+                        </a>
+                        <ul class="pagination_list">
+                            <li class="active"><a href="#" title="1페이지">1</a></li>
+                            <li><a href="#" title="2페이지">2</a></li>
+                            <li><a href="#" title="3페이지">3</a></li>
+                            <li><a href="#" title="4페이지">4</a></li>
+                            <li><a href="#" title="5페이지">5</a></li>
+                            <li><a href="#" title="6페이지">6</a></li>
+                            <li><a href="#" title="7페이지">7</a></li>
+                            <li><a href="#" title="8페이지">8</a></li>
+                            <li><a href="#" title="9페이지">9</a></li>
+                            <li><a href="#" title="10페이지">10</a></li>
+                        </ul>
+                        <a href="#" class="pagination_next">
+                            <i class="hide">다음페이지</i>
+                        </a>
+                        <a href="#" class="pagination_last">
+                            <i class="hide">마지막페이지</i>
+                        </a>
+                    </nav>
+                    <div class="form_head mt70">
+                        <div class="page_subtitle">Matching Results</div>
+                    </div>
+                    <!-- ibsheet -->
+                    <div class="ib_hover">
+                        <div id="ib_tks7"></div>
+                    </div>
+                    <div class="search_button mt20">
+                        <button type="button" class="btn_s4" onclick="popshow('pop_big22')">Register Buyer</button>
+                    </div>
+                </div>
+                <div class="colv1_3" style="width: 700px;">
+                    <div class="form_head">
+                        <div class="page_subtitle">Marketing Request</div>
+                    </div>
+                    <!-- ibsheet -->
+                    <div class="ib_hover">
+                        <div id="ib_tks8"></div>
+                    </div>
+                    <div class="form_head mt30">
+                        <div class="page_subtitle">Received request(C/L)</div>
+                    </div>
+                    <div class="area_mo_box mb20">
+                        株式会社LEZE<br/>
+                        2002年2月に設立されて以来、株式会社DA Techは常にデジタル飲酒測定器（アルコール測定器）の開発をリードしてきました。蓄積された経験と最先端技術で呼吸器産業のリーダーになるために力を入れています。弊社の最優先事項は、弊社の製品を使用する人々の安全を保障することです。
+                    </div>
+                    <div class="area_bg1 mb20">
+                        <a href="http://www.midha.co.kr" target="_blank">www.midha.co.kr</a>
+                    </div>
+                    <div class="page_subtitle3 mb10">Product Info</div>
+                    <div class="area_mo_pdinfo">
+                        <dl>
+                            <dt>
+                                <img src="../images/demo40.jpg" alt="kbeauty" />
+                            </dt>
+                            <dd>
+                                <strong>アルコールモニタリングおよびデータ管理システム（AF-50）</strong>
+                                <p>
+                                    アルコールモニタリングおよびデータ管理システム（AF-50）
+                                    説明
+                                    AlcofindのAF-50は携帯型アルコール監視データ管理システムです。特徴は、
+                                    1、スマートフォンとのワイヤレス接続
+                                    -Alcofindスマートフォンアプリケーション
+                                    -Bluetooth4.2LE
+                                    2.デュアルテストモード
+                                    -定性·定量試験
+                                    -迅速なアルコール検査または精密測定
+                                    3.業務用燃料電池センサー
+                                    -迅速かつ正確な分析
+                                    4.サーバーへのテストデータ送信
+                                    -中央集中型データ管理
+                                    5.Alcofindスマートフォンアプリケーション
+                                    -デバイスコントロールおよびテスト手順のガイダンス
+                                    -テストデータメモリー
+                                    -テストデータ送信(MMSメッセージ、サーバー)
+                                    -被験者識別のためのテスト画像
+                                    6.最適なアルコールモニタリングソリューション
+                                    -バス、タクシー、トラックの運転手が社外でテストを受ける。
+                                    ·社外勤務の従業員
+                                </p>
+                                <div class="btn_group2 f_r">
+                                    <a href="http://www.midha.co.kr" class="btn_d2" target="_blank">more info</a>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <img src="../images/demo40.jpg" alt="kbeauty" />
+                            </dt>
+                            <dd>
+                                <strong>アルコールモニタリングおよびデータ管理システム（AF-50）</strong>
+                                <p>
+                                    アルコールモニタリングおよびデータ管理システム（AF-50）
+                                    説明
+                                    AlcofindのAF-50は携帯型アルコール監視データ管理システムです。特徴は、
+                                    1、スマートフォンとのワイヤレス接続
+                                    -Alcofindスマートフォンアプリケーション
+                                    -Bluetooth4.2LE
+                                    2.デュアルテストモード
+                                    -定性·定量試験
+                                    -迅速なアルコール検査または精密測定
+                                    3.業務用燃料電池センサー
+                                    -迅速かつ正確な分析
+                                    4.サーバーへのテストデータ送信
+                                    -中央集中型データ管理
+                                    5.Alcofindスマートフォンアプリケーション
+                                    -デバイスコントロールおよびテスト手順のガイダンス
+                                    -テストデータメモリー
+                                    -テストデータ送信(MMSメッセージ、サーバー)
+                                    -被験者識別のためのテスト画像
+                                    6.最適なアルコールモニタリングソリューション
+                                    -バス、タクシー、トラックの運転手が社外でテストを受ける。
+                                    ·社外勤務の従業員
+                                </p>
+                                <div class="btn_group2 f_r">
+                                    <a href="http://www.midha.co.kr" class="btn_d2" target="_blank">more info</a>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <div class="page_subtitle3">Attachment file</div>
+                        <button type="button" class="attachfile" onclick="popshow('pop_small3');">
+                            <span>1</span>
+                        </button>
+                    </div>
+                    <div class="area_mo_box mt10">弊社の製品に関心をお寄せいただき、ありがとうございます。今後の事業協力について、どのように市場に進出し、共に成長できるかについて詳しく話し合えればと思っております。</div>
+                    <div class="search_button mt20">
+                        <a href="#" class="btn_s4">Reject</a>
+                        <a href="#" class="btn_s4">Download</a>
+                        <a href="#" class="btn_s4">Print</a>
+                        <a href="#" class="btn_s4">Marketing Letter</a>
+                    </div>
+                </div>
+            </section>
+
+
+<!-- s : popup -->
+<div class="pop" id="pop_category1">
+    <div class="pop_bg"></div>
+    <div class="pop_wrap width_700">
+        <div class="pop_head"><strong>카테고리</strong></div>
+        <section class="pop_body height_425">
+            <div class="content">
+                <div class="tabs tabs_pop">
+                    <ul class="tab_head mb30">
+                        <li><a href="#tabs_pop1">Recommended Category</a></li>
+                        <li><a href="#tabs_pop2">Choose your own category</a></li>
+                    </ul>
+                    <div id="tabs_pop1">
+                        <div class="form_head form_head_tabfix width_240">
+                            <span class="cn0 f_l">Categoryno : 182901828</span>
+                            <a href="#" class="btn_d2 ml10" title="추가">추가</a>
+                        </div>
+                        <div class="clearfix mb20">
+                            <div class="form1 text-left width_400 f_l">
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 110px;">
+                                        <col style="width: auto">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th>키워드</th>
+                                            <td>
+                                                <input type="text" id="" name="" value="">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="search_button f_r">
+                                <a href="#" id="btn_search" class="btn_s1" title="검색">검색</a>
+                                <a href="#" id="btn_apply" class="btn_s1" title="apply">apply</a>
+                            </div>
+                        </div>
+                        <div class="category_recd">
+                            <ul>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</li>
+                                <li class="is_active">Food & Beverage</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                                <li>Lorem Ipsum is</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="tabs_pop2">
+                        <div class="form_head form_head_tabfix width_240">
+                            <span class="cn0 f_l">Categoryno : 1111</span>
+                        </div>
+                        <input type="text" id="" class="input_s1" name="" value="">
+                        <div class="category">
+                            <ul>
+                                <li>
+                                    <div class="category_box">
+                                        <ul>
+                                            <li>Beauty & Personal Care Beauty & Personal CareBeauty & Personal CareBeauty & Personal Care</li>
+                                            <li class="is_active">Food & Beverage</li>
+                                            <li>Fashion</li>
+                                            <li>Home & Kitchen</li>
+                                            <li>Sport, Gifts & Toys</li>
+                                            <li>Stationery & Printing</li>
+                                            <li>Health & Medical</li>
+                                            <li>Electronic Products</li>
+                                            <li>Vehicles & Accessories</li>
+                                            <li>Equipment & Packaging</li>
+                                            <li>Electrical Components & Telecoms</li>
+                                            <li>Machinery & Parts</li>
+                                            <li>Industrial Supplies</li>
+                                            <li>Construction & Safety</li>
+                                            <li>Construction & Safety</li>
+                                            <li>Construction & Safety</li>
+                                            <li>Construction & Safety</li>
+                                            <li>Construction & Safety</li>
+                                            <li>Construction & Safety</li>
+                                            <li>Construction & Safety</li>
+                                            <li>Construction & Safety</li>
+                                            <li>Construction & Safety</li>
+                                            <li>Construction & Safety</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="category_box">
+                                        <ul>
+                                            <li>Beauty & Personal Care Beauty & Personal CareBeauty & Personal CareBeauty & Personal Care</li>
+                                            <li class="is_active">Food & Beverage</li>
+                                            <li>Fashion</li>
+                                            <li>Home & Kitchen</li>
+                                            <li>Sport, Gifts & Toys</li>
+                                            <li>Stationery & Printing</li>
+                                            <li>Health & Medical</li>
+                                            <li>Electronic Products</li>
+                                            <li>Vehicles & Accessories</li>
+                                            <li>Equipment & Packaging</li>
+                                            <li>Electrical Components & Telecoms</li>
+                                            <li>Machinery & Parts</li>
+                                            <li>Industrial Supplies</li>
+                                            <li>Construction & Safety</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="category_box">
+                                        <ul>
+                                            <li class="is_active">Beauty & Personal</li>
+                                            <li>Food & Beverage</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="category_box">
+                                        <ul>
+                                            <li>Beauty & Personal</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <button type="button" class="pop_close" onclick="pophide('pop_category1')">
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+</div>
+<!-- e : popup -->
+
+<!-- s : popup -->
+<div class="pop" id="pop_small3">
+    <div class="pop_bg"></div>
+    <div class="pop_wrap width_500">
+        <div class="pop_head"><strong>첨부파일</strong></div>
+        <section class="pop_body">
+            <div class="content">
+                <div class="form2 text-center">
+                    <table>
+                        <colgroup>
+                            <col style="width:50px;">
+                            <col style="width:auto;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>
+                                    <div class="checkbox_table">
+                                        <input type="checkbox" name="" id="check6" value="">
+                                        <label for="check6"></label>
+                                    </div>
+                                </th>
+                                <th>파일명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- <tr class="nodata">
+                                <td colspan="2">검색된 데이터가 없습니다.</td>
+                            </tr> -->
+                            <tr>
+                                <td>
+                                    <div class="checkbox_table">
+                                        <input type="checkbox" name="" id="check1" value="">
+                                        <label for="check1"></label>
+                                    </div>
+                                </td>
+                                <td class="text-left">aaa.jpg</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="checkbox_table">
+                                        <input type="checkbox" name="" id="check2" value="">
+                                        <label for="check2"></label>
+                                    </div>
+                                </td>
+                                <td class="text-left">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.jpg</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="checkbox_table">
+                                        <input type="checkbox" name="" id="check3" value="">
+                                        <label for="check3"></label>
+                                    </div>
+                                </td>
+                                <td class="text-left">aaa.jpg</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pop_btn_wrap">
+                    <div class="down_info mt15 mb15">
+                        <strong class="color3">3</strong>개 <em>/</em> <strong class="color3">417.94</strong>KB
+                    </div>
+                    <a href="#" class="btn_d2">열기</a>
+                    <a href="#" class="btn_d2" download>다운로드</a>
+                </div>
+            </div>
+        </section>
+        <button type="button" class="pop_close" onclick="pophide('pop_small3')">
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+</div>
+<!-- e : popup -->
+
+
+<!-- s : popup -->
+<div class="pop" id="pop_big22">
+    <div class="pop_bg"></div>
+    <div class="pop_wrap width_1200">
+        <div class="pop_head"><strong>Register Buyer</strong></div>
+        <section class="pop_body height_640">
+            <div class="content">
+                <div class="form1 text-left">
+                    <table>
+                        <colgroup>
+                            <col style="width:115px;">
+                            <col style="width:auto">
+                            <col style="width:115px;">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th><p class="color11">Email</p></th>
+                                <td colspan="3">
+                                    <div class="search_box1">
+                                        <input type="text" id="" name="" class="" value="">
+                                        <div class="search_box_btn">
+                                            <button type="button" class="sb_search">검색</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><p class="color11">Nation</p></th>
+                                <td colspan="3">
+                                    <div class="search_box1">
+                                        <input type="text" id="" name="" class="" value="">
+                                        <div class="search_box_btn">
+                                            <button type="button" class="sb_search" onclick="popshow('pop_nation2')">검색</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><p class="color11">Corp.Name</p></th>
+                                <td>
+                                    <input type="text" id="" name="" value="">
+                                </td>
+                                <th><p class="color11">Tel</p></th>
+                                <td>
+                                    <input type="text" id="" name="" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Contact Name</th>
+                                <td>
+                                    <input type="text" id="" name="" value="">
+                                </td>
+                                <th>Position</th>
+                                <td>
+                                    <div class="select_box">
+                                        <select name="select1">
+                                            <option value="">선택</option>
+                                            <option value="01">Staff</option>
+                                            <option value="02">Chief</option>
+                                            <option value="03">Assistant manager</option>
+                                            <option value="04">Manager</option>
+                                            <option value="05">Deputy General Manager</option>
+                                            <option value="06">General Manager</option>
+                                            <option value="07">Director</option>
+                                            <option value="09">Vice President</option>
+                                            <option value="08">President</option>
+                                            <option value="10">CEO</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Fax</th>
+                                <td colspan="3">
+                                    <input type="text" id="" name="" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Mobile</th>
+                                <td>
+                                    <input type="text" id="" name="" value="">
+                                </td>
+                                <th>Home URL</th>
+                                <td>
+                                    <input type="text" id="" name="" value="https://">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Address</th>
+                                <td colspan="3">
+                                    <input type="text" id="" name="" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><p class="color11">Keyword</p></th>
+                                <td colspan="3">
+                                    <div class="search_box2">
+                                        <input type="text" id="" name="" value="">
+                                        <div class="search_box_btn">
+                                            <button type="button" class="sb_plus">추가</button>
+                                            <button type="button" class="sb_refresh">새로고침</button>
+                                        </div>
+                                    </div>
+                                    <ul id="filelist" class="filelist">
+                                        <li><span>testtesttesttest.png</span><button>닫기</button></li>
+                                        <li><span>testtesttesttest.png</span><button>닫기</button></li>
+                                        <li><span>testtesttesttest.png</span><button>닫기</button></li>
+                                    </ul>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><p class="color11">Category</p></th>
+                                <td colspan="3">
+                                    <div class="search_box2">
+                                        <input type="text" id="" name="" class="" value="">
+                                        <div class="search_box_btn">
+                                            <button type="button" class="sb_search" onclick="popshow('pop_category1_1')">검색</button>
+                                            <button type="button" class="sb_refresh">새로고침</button>
+                                        </div>
+                                    </div>
+                                    <ul id="filelist" class="filelist">
+                                        <li><span>testtesttesttest.png</span><button>닫기</button></li>
+                                        <li><span>testtesttesttest.png</span><button>닫기</button></li>
+                                        <li><span>testtesttesttest.png</span><button>닫기</button></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Logo</th>
+                                <td colspan="3">
+                                    <label for="fileupload" class="fileupload_btn1">파일등록</label>
+                                    <div class="form_fileupload">
+                                        <input type="file" id="fileupload" name="" class="hide">
+                                        <ul id="filelist" class="filelist"></ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Remarks</th>
+                                <td colspan="3">
+                                    <textarea></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <button type="button" class="pop_close" onclick="pophide('pop_big22')">
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+    <!-- s : popup popup -->
+    <div class="pop" id="pop_nation2">
+        <div class="pop_bg"></div>
+        <div class="pop_wrap width_700">
+            <div class="pop_head"><strong>국가 검색</strong></div>
+            <section class="pop_body">
+                <div class="content">
+                    <div class="category mt0">
+                        <ul>
+                            <li style="width: calc(50% - 5px);">
+                                <div class="category_box">
+                                    <ul>
+                                        <li class="is_active">Asia</li>
+                                        <li>Middle East</li>
+                                        <li>Europe</li>
+                                        <li>North America</li>
+                                        <li>South &amp; Central America</li>
+                                        <li>Africa</li>
+                                        <li>Oceania</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li style="width: calc(50% - 5px);">
+                                <div class="category_box">
+                                    <ul>
+                                        <li>Azerbaijani</li>
+                                        <li>Bangladesh</li>
+                                        <li>Brunei</li>
+                                        <li class="is_active">Bhutan</li>
+                                        <li>China</li>
+                                        <li>Hong Kong(China)</li>
+                                        <li>Indonesia</li>
+                                        <li>India</li>
+                                        <li>Japan</li>
+                                        <li>Kyrgyzstan</li>
+                                        <li>Cambodia</li>
+                                        <li>North Korea</li>
+                                        <li>South Korea</li>
+                                        <li>Kazakhstan</li>
+                                        <li>Laos</li>
+                                        <li>Sri Lanka</li>
+                                        <li>Myanmar</li>
+                                        <li>Mongolia</li>
+                                        <li>Macao(China)</li>
+                                        <li>Maldives</li>
+                                        <li>Malaysia</li>
+                                        <li>Nepal</li>
+                                        <li>Philippines</li>
+                                        <li>Pakistan</li>
+                                        <li>Singapore</li>
+                                        <li>Thailand</li>
+                                        <li>Tadjikstan</li>
+                                        <li>Timor</li>
+                                        <li>Turkmenistan</li>
+                                        <li>East Timor</li>
+                                        <li>Taiwan</li>
+                                        <li>Uzbekistan</li>
+                                        <li>Viet Nam</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <button type="button" class="pop_close" onclick="pophide('pop_nation2')">
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </div>
+    </div>
+    <div class="pop" id="pop_category1_1">
+        <div class="pop_bg"></div>
+        <div class="pop_wrap width_700">
+            <div class="pop_head"><strong>카테고리</strong></div>
+            <section class="pop_body height_425">
+                <div class="content">
+                    <div class="tabs tabs_pop">
+                        <ul class="tab_head mb30">
+                            <li><a href="#tabs_pop1">Recommended Category</a></li>
+                            <li><a href="#tabs_pop2">Choose your own category</a></li>
+                        </ul>
+                        <div id="tabs_pop1">
+                            <div class="form_head form_head_tabfix width_240">
+                                <span class="cn0 f_l">Categoryno : 182901828</span>
+                                <a href="#" class="btn_d2 ml10" title="추가">추가</a>
+                            </div>
+                            <div class="clearfix mb20">
+                                <div class="form1 text-left width_400 f_l">
+                                    <table>
+                                        <colgroup>
+                                            <col style="width: 110px;">
+                                            <col style="width: auto">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>키워드</th>
+                                                <td>
+                                                    <input type="text" id="" name="" value="">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="search_button f_r">
+                                    <a href="#" id="btn_search" class="btn_s1" title="검색">검색</a>
+                                    <a href="#" id="btn_apply" class="btn_s1" title="apply">apply</a>
+                                </div>
+                            </div>
+                            <div class="category_recd">
+                                <ul>
+                                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</li>
+                                    <li class="is_active">Food & Beverage</li>
+                                    <li>Lorem Ipsum is</li>
+                                    <li>Lorem Ipsum is</li>
+                                    <li>Lorem Ipsum is</li>
+                                    <li>Lorem Ipsum is</li>
+                                    <li>Lorem Ipsum is</li>
+                                    <li>Lorem Ipsum is</li>
+                                    <li>Lorem Ipsum is</li>
+                                    <li>Lorem Ipsum is</li>
+                                    <li>Lorem Ipsum is</li>
+                                    <li>Lorem Ipsum is</li>
+                                    <li>Lorem Ipsum is</li>
+                                    <li>Lorem Ipsum is</li>
+                                    <li>Lorem Ipsum is</li>
+                                    <li>Lorem Ipsum is</li>
+                                    <li>Lorem Ipsum is</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="tabs_pop2">
+                            <div class="form_head form_head_tabfix width_240">
+                                <span class="cn0 f_l">Categoryno : 1111</span>
+                            </div>
+                            <input type="text" id="" class="input_s1" name="" value="">
+                            <div class="category">
+                                <ul>
+                                    <li>
+                                        <div class="category_box">
+                                            <ul>
+                                                <li>Beauty & Personal Care Beauty & Personal CareBeauty & Personal CareBeauty & Personal Care</li>
+                                                <li class="is_active">Food & Beverage</li>
+                                                <li>Fashion</li>
+                                                <li>Home & Kitchen</li>
+                                                <li>Sport, Gifts & Toys</li>
+                                                <li>Stationery & Printing</li>
+                                                <li>Health & Medical</li>
+                                                <li>Electronic Products</li>
+                                                <li>Vehicles & Accessories</li>
+                                                <li>Equipment & Packaging</li>
+                                                <li>Electrical Components & Telecoms</li>
+                                                <li>Machinery & Parts</li>
+                                                <li>Industrial Supplies</li>
+                                                <li>Construction & Safety</li>
+                                                <li>Construction & Safety</li>
+                                                <li>Construction & Safety</li>
+                                                <li>Construction & Safety</li>
+                                                <li>Construction & Safety</li>
+                                                <li>Construction & Safety</li>
+                                                <li>Construction & Safety</li>
+                                                <li>Construction & Safety</li>
+                                                <li>Construction & Safety</li>
+                                                <li>Construction & Safety</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="category_box">
+                                            <ul>
+                                                <li>Beauty & Personal Care Beauty & Personal CareBeauty & Personal CareBeauty & Personal Care</li>
+                                                <li class="is_active">Food & Beverage</li>
+                                                <li>Fashion</li>
+                                                <li>Home & Kitchen</li>
+                                                <li>Sport, Gifts & Toys</li>
+                                                <li>Stationery & Printing</li>
+                                                <li>Health & Medical</li>
+                                                <li>Electronic Products</li>
+                                                <li>Vehicles & Accessories</li>
+                                                <li>Equipment & Packaging</li>
+                                                <li>Electrical Components & Telecoms</li>
+                                                <li>Machinery & Parts</li>
+                                                <li>Industrial Supplies</li>
+                                                <li>Construction & Safety</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="category_box">
+                                            <ul>
+                                                <li class="is_active">Beauty & Personal</li>
+                                                <li>Food & Beverage</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="category_box">
+                                            <ul>
+                                                <li>Beauty & Personal</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <button type="button" class="pop_close" onclick="pophide('pop_category1_1')">
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </div>
+    </div>
+    <!-- e : popup popup -->
+</div>
+<!-- e : popup -->
+
+
+
+        </div>
+        <!-- e : contents -->
+    </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">저작권정책</a></li>
+            </ul>
+            <p class="footer_copy">Copyright ⓒ 2008 - 2021 KITA, All rights reserved</p>
+        </div>
+    </footer>
+</div>
+<!-- script -->
+<script type="text/javascript" src="../js/header2021.js"></script>
+<script type="text/javascript" src="../js/common2021.js"></script>
+</body>
+</html>
