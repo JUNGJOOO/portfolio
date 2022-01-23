@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>TadeKorea Admin</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="author" content="tadeKorea Admin">
+    <meta name="subject" content="tadeKorea Admin">
+    <meta name="keywords" content="Global, e-Marketplace, tadeKorea Admin, tradeKorea Management system">
+    <meta property="og:title" content="tadeKorea Admin">
+    <!-- css default -->
+    <link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/header.css"/>
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../css/base_trkadmin.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery-ui-tradeadmin.css"/>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.js"></script>
+    <!-- js ibsheet -->
+    <script src="../ibSheet/js/ibleaders.js"></script>
+    <script src="../ibSheet/js/ibsheetinfo.js"></script>
+    <script src="../ibSheet/js/ibsheet.js"></script>
+</head>
+<body>
+<div class="wrap">
+    <!-- s : header -->
+    <header>
+        <div class="header">
+            <h1 class="header_logo">
+                <a href="#"><span class="blind">tradeKorea Admin</span></a>
+            </h1>
+            <ul class="header_util">
+                <li><button type="button" class="btn_header_menu">메뉴</button></li>
+                <li class="is_on"><a title="알림" href="#"><span>99</span></a></li>
+                <li class="is_on"><a title="메모" href="#"><span>4</span></a></li>
+                <li class=""><a title="게시판" href="#"><span>0</span></a></li>
+                <li><a title="내정보" href="#"></a></li>
+                <li class="logout"><a title="로그아웃" href="#">Logout</a></li>
+            </ul>
+            <div class="alarm">
+                <ul class="alarm_wrap">
+                    <!-- is_off : 확인 후, is_open : 자세한 내용 열기 -->
+                    <li class="alarm_list is_off">
+                        <div class="alarm_tag">해외비즈니스매칭</div>
+                        <div class="alarm_tit">MORNING GLORY CORP 매칭 건이 있습니다. 해외비즈니스매칭 MORNING GLORY CORP 매칭 건이 있습니다.</div>
+                        <div class="alarm_time">2021-07-21 11:01</div>
+                        <div class="alarm_box">
+                            <div class="alarm_txt">관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요.</div>
+                            <button class="btn_alarm_drop" title="열기"></button>
+                        </div>
+                        <button class="btn_alarm"></button>
+                    </li>
+                    <li class="alarm_list">
+                        <div class="alarm_tag">해외비즈니스매칭</div>
+                        <div class="alarm_tit">MORNING GLORY CORP</div>
+                        <div class="alarm_time">2021-07-21 11:01</div>
+                        <div class="alarm_box">
+                            <div class="alarm_txt">관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요.</div>
+                            <button class="btn_alarm_drop" title="열기"></button>
+                        </div>
+                        <button class="btn_alarm"></button>
+                    </li>
+                    <li class="alarm_list is_off">
+                        <div class="alarm_tag">해외비즈니스매칭</div>
+                        <div class="alarm_tit">MORNING GLORY CORP 매칭 건이 있습니다. 해외비즈니스매칭 MORNING GLORY CORP 매칭 건이 있습니다.</div>
+                        <div class="alarm_time">2021-07-21 11:01</div>
+                        <div class="alarm_box">
+                            <div class="alarm_txt">관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요.</div>
+                            <button class="btn_alarm_drop" title="열기"></button>
+                        </div>
+                        <button class="btn_alarm"></button>
+                    </li>
+                </ul>
+            </div>
+            <div class="header_menu">
+                <ul>
+                    <li><a href="#">메일 (단건)</a></li>
+                    <li><a href="#">My Mailer (대량메일)</a></li>
+                    <li><a href="#">DataStory (통계)</a></li>
+                    <li><a href="#">Wiselog (통계)</a></li>
+                    <li><a href="#">Wisenut (검색엔진 모니터링)</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- e : header -->
+    <div class="container">
+    <div class="container_inner">
+        <!-- s : gnb -->
+        <div id="gnb" class="gnb">
+            <div class="gnb_inner">
+            <div class="gnb_wrap">
+                <div class="gnb_top">
+                    <button type="button" class="btn_menu_all" title="전체메뉴 열고닫기">
+                        <span class="btn_line"></span>
+                        <span class="btn_line"></span>
+                        <span class="btn_line"></span>
+                    </button>
+                    <button type="button" class="btn_menu_open" title="열기"></button>
+                    <button type="button" class="btn_menu_close" title="닫기"></button>
+                </div>
+                <div class="gnb_box">
+                    <ul>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>고객서비스</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-ADM-21000_new.html">고객</a></li>
+                                <li><a href="PG-TRK-ADM-22000.html">블랙리스트</a></li>
+                                <li><a href="PG-TRK-ADM-23000.html">미니 사이트</a></li>
+                                <li><a href="PG-TRK-ADM-24000.html">뉴스레터</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>상품 관리</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-ADM-31200_new.html">상품 승인</a></li>
+                                <li><a href="PG-TRK-ADM-31000_new.html">상품 조회</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>주문 관리</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>주문</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-ADM-41100.html">주문/계약</a></li>
+                                        <li><a href="PG-TRK-ADM-41200.html">취소/환불</a></li>
+                                        <li><a href="PG-TRK-ADM-41300.html">소액결제상품</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>소액결제</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-ADM-42100.html">KRP 계약</a></li>
+                                        <li><a href="PG-TRK-ADM-42200.html">연동정보</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>인콰이어리관리</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-ADM-51000.html">인콰이어리</a></li>
+                                <li><a href="PG-TRK-ADM-52000.html">바잉오퍼</a></li>
+                                <li><a href="PG-TRK-ADM-53000.html">스팸 필터</a></li>
+                                <li><a href="PG-TRK-ADM-54000.html">스팸 인콰이어리</a></li>
+                                <li><a href="PG-TRK-ADM-55000.html">스팸대상</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>사이트 관리</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-ADM-61000.html">메인</a></li>
+                                <li><a href="PG-TRK-ADM-62000.html">카테고리 메인</a></li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>온라인 전시관</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-ADM-63100_new.html">공통사항</a></li>
+                                        <li><a href="PG-TRK-ADM-63200_new.html">메인 콘텐츠</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="PG-TRK-ADM-64000.html">핫 카테고리</a></li>
+                                <li><a href="PG-TRK-ADM-65000.html">금지 단어</a></li>
+                                <li><a href="PG-TRK-ADM-66000.html">SEO</a></li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>게시판</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-ADM-67100.html">FAQ</a></li>
+                                        <li><a href="PG-TRK-ADM-67200.html">C/S</a></li>
+                                        <li><a href="PG-TRK-ADM-67300.html">공지사항</a></li>
+                                        <li><a href="PG-TRK-ADM-67400.html">성공사례</a></li>
+                                        <li><a href="PG-TRK-ADM-67500.html">추출회원</a></li>
+                                        <li><a href="PG-TRK-ADM-67600.html">이달의 기업</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="PG-TRK-ADM-68000.html">사용법</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>시스템 관리</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-ADM-71000.html">사용자 관리</a></li>
+                                <li><a href="PG-TRK-ADM-72000.html">메일 템플릿</a></li>
+                                <li><a href="PG-TRK-ADM-73000.html">카테고리 관리</a></li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>통계</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-ADM-74100.html">상품</a></li>
+                                        <li><a href="PG-TRK-ADM-74200.html">회원</a></li>
+                                        <li><a href="PG-TRK-ADM-74300.html">방문자</a></li>
+                                        <li><a href="PG-TRK-ADM-74400.html">인콰이어리</a></li>
+                                        <li><a href="PG-TRK-ADM-74500.html">바잉오퍼</a></li>
+                                        <li><a href="PG-TRK-ADM-74600.html">미니 사이트</a></li>
+                                        <li><a href="PG-TRK-ADM-74700.html">주간 보고서</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="sitemap">
+            <ul class="sitemap_container">
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">고객서비스</strong>
+                    <ul>
+                        <li><a href="PG-TRK-ADM-21000_new.html">고객</a></li>
+                        <li><a href="PG-TRK-ADM-22000.html">블랙리스트</a></li>
+                        <li><a href="PG-TRK-ADM-23000.html">미니 사이트</a></li>
+                        <li><a href="PG-TRK-ADM-24000.html">뉴스레터</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">상품관리</strong>
+                    <ul>
+                        <li><a href="PG-TRK-ADM-31200_new.html">상품 승인</a></li>
+                        <li><a href="PG-TRK-ADM-31000_new.html">상품 조회</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">주문관리</strong>
+                    <ul>
+                        <li><a href="#">주문</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-ADM-41100.html">주문/계약</a></li>
+                                <li><a href="PG-TRK-ADM-41200.html">취소/환불</a></li>
+                                <li><a href="PG-TRK-ADM-41300.html">소액결제상품</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">소액결제</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-ADM-42100.html">KRP 계약</a></li>
+                                <li><a href="PG-TRK-ADM-42200.html">연동정보</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">인콰이어리관리</strong>
+                    <ul>
+                        <li><a href="PG-TRK-ADM-51000.html">인콰이어리</a></li>
+                        <li><a href="PG-TRK-ADM-52000.html">바잉오퍼</a></li>
+                        <li><a href="PG-TRK-ADM-53000.html">스팸 필터</a></li>
+                        <li><a href="PG-TRK-ADM-54000.html">스팸 인콰이어리</a></li>
+                        <li><a href="PG-TRK-ADM-55000.html">스팸대상</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">사이트 관리</strong>
+                    <ul>
+                        <li><a href="PG-TRK-ADM-61000.html">메인</a></li>
+                        <li><a href="PG-TRK-ADM-62000.html">카테고리 메인</a></li>
+                        <li><a href="PG-TRK-ADM-63100_new.html">온라인 전시관</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-ADM-63100_new.html">공통사항</a></li>
+                                <li><a href="PG-TRK-ADM-63200_new.html">메인 콘텐츠</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="PG-TRK-ADM-64000.html">핫 카테고리</a></li>
+                        <li><a href="PG-TRK-ADM-65000.html">금지 단어</a></li>
+                        <li><a href="PG-TRK-ADM-66000.html">SEO</a></li>
+                        <li><a href="PG-TRK-ADM-67100.html">게시판</a></li>
+                        <li><a href="PG-TRK-ADM-68000.html">사용법</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">시스템 관리</strong>
+                    <ul>
+                        <li><a href="PG-TRK-ADM-71000.html">사용자 관리</a></li>
+                        <li><a href="PG-TRK-ADM-72000.html">메일 템플릿</a></li>
+                        <li><a href="PG-TRK-ADM-73000.html">카테고리 관리</a></li>
+                        <li><a href="PG-TRK-ADM-74100.html">통계</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-ADM-74100.html">상품</a></li>
+                                <li><a href="PG-TRK-ADM-74200.html">회원</a></li>
+                                <li><a href="PG-TRK-ADM-74300.html">방문자</a></li>
+                                <li><a href="PG-TRK-ADM-74400.html">인콰이어리</a></li>
+                                <li><a href="PG-TRK-ADM-74500.html">바잉오퍼</a></li>
+                                <li><a href="PG-TRK-ADM-74600.html">미니 사이트</a></li>
+                                <li><a href="PG-TRK-ADM-74700.html">주간 보고서</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- e : gnb -->
+        <div class="contents_wrap">
+            <!-- s : contents -->
+            <div class="contents">
+                <div class="contents">
+                    <div class="page_head">
+                        <div class="page_title">회원</div>
+                        <ul class="location">
+                            <li><a href="main.html" class="location_list">홈</a></li>
+                            <li><a href="#" class="location_list">시스템 관리</a></li>
+                            <li><a href="#" class="location_list">통계</a></li>
+                            <li><span class="location_list">회원</span></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix">
+                        <div class="form1 text-left width_1160 f_l">
+                            <table>
+                                <colgroup>
+                                    <col style="width:200px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th>기간</th>
+                                        <td>
+                                            <div class="datepicker_boxfitday4">
+                                                <div class="datepicker_box">
+                                                    <input type="text" id="" name="" class="datepicker" readonly="readonly">
+                                                    <em class="cn1">~</em>
+                                                    <input type="text" id="" name="" class="datepicker" readonly="readonly">
+                                                </div>
+                                                <div class="btn_group1">
+                                                    <a href="#" class="btn_d1">전체</a>
+                                                    <a href="#" class="btn_d1">주간</a>
+                                                    <a href="#" class="btn_d1">월간</a>
+                                                    <a href="#" class="btn_d1">년간</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="search_button f_r">
+                            <a href="#" id="btn_clear" class="btn_s1" title="검색초기화">초기화</a>
+                            <a href="#" id="btn_search" class="btn_s1" title="검색" >검색</a>
+                        </div>
+                    </div>
+                    <section class="col_group mt50">
+                        <div class="colv4">
+                            <div class="colpd2 mb10">
+                                <div class="clearfix">
+                                    <a class="page_more" href="#">더보기</a>
+                                </div>
+                                <div class="flex_center2">
+                                    <div class="count_title1">회원가입</div>
+                                    <strong class="ctnum">4,732</strong>
+                                    <em class="count_down">13</em>
+                                </div>
+                            </div>
+                            <div class="chart3">그래프 영역</div>
+                        </div>
+                        <div class="colv4">
+                            <div class="colpd2 mb10">
+                                <div class="clearfix">
+                                    <a class="page_more" href="#" title="자세히보기">자세히보기</a>
+                                </div>
+                                <div class="flex_center2">
+                                    <div class="count_title1">블랙리스트</div>
+                                    <strong class="ctnum">4,732</strong>
+                                    <em class="count_down">13</em>
+                                </div>
+                            </div>
+                            <div class="chart4">그래프 영역</div>
+                        </div>
+                        <div class="colv4">
+                            <div class="colpd2 mb10">
+                                <div class="clearfix">
+                                    <a class="page_more" href="#" title="자세히보기">자세히보기</a>
+                                </div>
+                                <div class="flex_center2">
+                                    <div class="count_title1">탈퇴</div>
+                                    <strong class="ctnum">4,732</strong>
+                                    <em class="count_down">13</em>
+                                </div>
+                            </div>
+                            <div class="chart5">그래프 영역</div>
+                        </div>
+                    </section>
+                    <section class="col_group mt50">
+                        <div class="colv6 flex_center">
+                            <div class="count_title2">국내사</div>
+                            <div class="count1">
+                                <div class="flex_center2">
+                                    <strong class="ctnum">100,000</strong>
+                                    <div class="count_title3">개인회원</div>
+                                </div>
+                            </div>
+                            <div class="count1">
+                                <div class="flex_center2">
+                                    <strong class="ctnum">100,000</strong>
+                                    <div class="count_title3">기업회원</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="colv6 flex_center">
+                            <div class="count_title2">협력사</div>
+                            <div class="count1">
+                                <div class="flex_center2">
+                                    <strong class="ctnum">100,000</strong>
+                                    <div class="count_title3">개인회원</div>
+                                </div>
+                            </div>
+                            <div class="count1">
+                                <div class="flex_center2">
+                                    <strong class="ctnum">100,000</strong>
+                                    <div class="count_title3">기업회원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="col_group mt50">
+                        <div class="colv6 flex_center">
+                            <div class="count_title2">해외</div>
+                            <div class="count1">
+                                <div class="flex_center2">
+                                    <strong class="ctnum">10,000</strong>
+                                    <div class="count_title3">개인회원</div>
+                                </div>
+                            </div>
+                            <div class="count1">
+                                <div class="flex_center2">
+                                    <strong class="ctnum">10,000</strong>
+                                    <div class="count_title3">기업회원</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="colv6 flex_center">
+                            <div class="count_title2">합계</div>
+                            <div class="count1">
+                                <div class="flex_center2">
+                                    <strong class="ctnum">10,000</strong>
+                                    <div class="count_title3">개인회원</div>
+                                </div>
+                            </div>
+                            <div class="count1">
+                                <div class="flex_center2">
+                                    <strong class="ctnum">10,000</strong>
+                                    <div class="count_title3">기업회원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+            <!-- e : contents -->
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="footer_wrap">
+            <ul class="footer_menu">
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">저작권정책</a></li>
+            </ul>
+            <p class="footer_copy">Copyright ⓒ 2008 - 2021 KITA, All rights reserved</p>
+        </div>
+    </footer>
+</div>
+<!-- script -->
+<script type="text/javascript" src="../js/header2021.js"></script>
+<script type="text/javascript" src="../js/common2021.js"></script>
+</body>
+</html>
