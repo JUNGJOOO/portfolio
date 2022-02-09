@@ -179,707 +179,600 @@ $(document).ready(function(){
 });
 </script>
 <div class="wrap">
-    <div class="container">
-    <div class="container_inner">
-    <div class="contents_wrap">
-        <!-- s : contents -->
-        <div class="contents">
-            <div class="page_head">
-                <div class="page_title">해외비즈니스 매칭바이어 발굴</div>
-            </div>
-            <div class="form1 text-left">
-                <table>
-                    <colgroup>
-                        <col style="width:123px;">
-                        <col style="width:auto;">
-                        <col style="width:123px;">
-                        <col style="width:auto;">
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th>Date Requested</th>
-                            <td colspan="3">
-                                <div class="datepicker_boxfitday3">
-                                    <div class="datepicker_box">
-                                        <input type="text" id="" name="" class="datepicker" readonly="readonly">
-                                        <em class="cn1">~</em>
-                                        <input type="text" id="" name="" class="datepicker" readonly="readonly">
-                                    </div>
-                                    <div class="btn_group1">
-                                        <a href="#" class="btn_d1">Today</a>
-                                        <a href="#" class="btn_d1">Week</a>
-                                        <a href="#" class="btn_d1">All</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Seller Corp Nm.</th>
-                            <td>
-                                <input type="text" id="" name="" value="">
-                            </td>
-                            <th>Seller Keyword</th>
-                            <td>
-                                <input type="text" id="" name="" value="">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Seller Category</th>
-                            <td colspan="3">
-                                <div class="search_box2">
-                                    <input type="text" id="" name="" class="" value="">
-                                    <div class="search_box_btn">
-                                        <button type="button" class="sb_search" onclick="popshow('pop_category1')">검색</button>
-                                        <button type="button" class="sb_refresh">새로고침</button>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="search_button mt20">
-                <a href="#" id="btn_clear" class="btn_s1" title="검색초기화">Clear</a>
-                <a href="#" id="btn_search" class="btn_s1" title="검색">Search</a>
-            </div>
-            <div class="dash_box1 mt50">
-                <ul class="dash_col4">
-                    <li>
-                        <p>업체 선정<em>10</em>건</p>
+    <!-- s : header -->
+    <div class="accessibility">
+        <a href="#contents">본문 바로가기</a>
+        <a href="#gnb">메뉴 바로가기</a>
+    </div>
+    <header>
+        <div class="header">
+            <h1 class="header_logo">
+                <a href="#"><span class="blind">tradeKorea Admin</span></a>
+            </h1>
+            <ul class="header_util">
+                <li class="is_on"><a title="알림" href="#"><span>99</span></a></li>
+                <li class="is_on"><a title="메모" href="#"><span>4</span></a></li>
+                <li class=""><a title="게시판" href="#"><span>0</span></a></li>
+                <li><a title="내정보" href="#"></a></li>
+                <li class="logout"><a title="로그아웃" href="#">Logout</a></li>
+            </ul>
+            <div class="alarm">
+                <ul class="alarm_wrap">
+                    <!-- is_off : 확인 후, is_open : 자세한 내용 열기 -->
+                    <li class="alarm_list is_off">
+                        <div class="alarm_tag">해외비즈니스매칭</div>
+                        <div class="alarm_tit">MORNING GLORY CORP 매칭 건이 있습니다. 해외비즈니스매칭 MORNING GLORY CORP 매칭 건이 있습니다.</div>
+                        <div class="alarm_time">2021-07-21 11:01</div>
+                        <div class="alarm_box">
+                            <div class="alarm_txt">관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요.</div>
+                            <button class="btn_alarm_drop" title="열기"></button>
+                        </div>
+                        <button class="btn_alarm"></button>
                     </li>
-                    <li>
-                        <p>매칭 진행중<em>10</em>건</p>
+                    <li class="alarm_list">
+                        <div class="alarm_tag">해외비즈니스매칭</div>
+                        <div class="alarm_tit">MORNING GLORY CORP</div>
+                        <div class="alarm_time">2021-07-21 11:01</div>
+                        <div class="alarm_box">
+                            <div class="alarm_txt">관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요.</div>
+                            <button class="btn_alarm_drop" title="열기"></button>
+                        </div>
+                        <button class="btn_alarm"></button>
                     </li>
-                    <li>
-                        <p>매칭 취소<em>10</em>건</p>
-                    </li>
-                    <li>
-                        <p>매칭 완료<em>10</em>건</p>
+                    <li class="alarm_list is_off">
+                        <div class="alarm_tag">해외비즈니스매칭</div>
+                        <div class="alarm_tit">MORNING GLORY CORP 매칭 건이 있습니다. 해외비즈니스매칭 MORNING GLORY CORP 매칭 건이 있습니다.</div>
+                        <div class="alarm_time">2021-07-21 11:01</div>
+                        <div class="alarm_box">
+                            <div class="alarm_txt">관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요.</div>
+                            <button class="btn_alarm_drop" title="열기"></button>
+                        </div>
+                        <button class="btn_alarm"></button>
                     </li>
                 </ul>
             </div>
-
-
-            <section class="col_group mt50">
-                <div class="colv1_2" style="width: 670px;">
-                    <div class="form_head">
-                        <p class="total">
-                            Total of <strong>5</strong>, <span>1/1 page</span>
-                        </p>
-                        <div class="f_r">
-                            <div class="select_box width_90">
-                                <select name="select_listnum">
-                                    <option value="20">20개</option>
-                                    <option value="30">30개</option>
-                                    <option value="40">40개</option>
-                                    <option value="50">50개</option>
-                                    <option value="60">60개</option>
-                                    <option value="70">70개</option>
-                                    <option value="80">80개</option>
-                                    <option value="90">90개</option>
-                                    <option value="100">100개</option>
-                                    <option value="300">300개</option>
-                                </select>
-                            </div>
-                            <a href="#" class="btn_c1 ml10" download>Excel File</a>
-                        </div>
-                    </div>
-                    <!-- ibsheet -->
-                    <div class="ib_hover">
-                        <div id="ib_tks6"></div>
-                    </div>
-                    <nav class="pagination">
-                        <a href="#" class="pagination_first">
-                            <i class="hide">처음페이지</i>
-                        </a>
-                        <a href="#" class="pagination_prev">
-                            <i class="hide">이전페이지</i>
-                        </a>
-                        <ul class="pagination_list">
-                            <li class="active"><a href="#" title="1페이지">1</a></li>
-                            <li><a href="#" title="2페이지">2</a></li>
-                            <li><a href="#" title="3페이지">3</a></li>
-                            <li><a href="#" title="4페이지">4</a></li>
-                            <li><a href="#" title="5페이지">5</a></li>
-                            <li><a href="#" title="6페이지">6</a></li>
-                            <li><a href="#" title="7페이지">7</a></li>
-                            <li><a href="#" title="8페이지">8</a></li>
-                            <li><a href="#" title="9페이지">9</a></li>
-                            <li><a href="#" title="10페이지">10</a></li>
-                        </ul>
-                        <a href="#" class="pagination_next">
-                            <i class="hide">다음페이지</i>
-                        </a>
-                        <a href="#" class="pagination_last">
-                            <i class="hide">마지막페이지</i>
-                        </a>
-                    </nav>
-                    <div class="form_head mt70">
-                        <div class="page_subtitle">Matching Results</div>
-                    </div>
-                    <!-- ibsheet -->
-                    <div class="ib_hover">
-                        <div id="ib_tks7"></div>
-                    </div>
-                    <div class="search_button mt20">
-                        <button type="button" class="btn_s4" onclick="popshow('pop_big22')">Register Buyer</button>
-                    </div>
+        </div>
+    </header>
+    <!-- e : header -->
+    <div class="container">
+    <div class="container_inner">
+        <!-- s : gnb -->
+        <div id="gnb" class="gnb">
+            <div class="gnb_inner">
+            <div class="gnb_wrap">
+                <div class="gnb_top">
+                    <button type="button" class="btn_menu_all" title="전체메뉴 열고닫기">
+                        <span class="btn_line"></span>
+                        <span class="btn_line"></span>
+                        <span class="btn_line"></span>
+                    </button>
+                    <button type="button" class="btn_menu_open" title="열기"></button>
+                    <button type="button" class="btn_menu_close" title="닫기"></button>
                 </div>
-                <div class="colv1_3" style="width: 700px;">
-                    <div class="form_head">
-                        <div class="page_subtitle">Marketing Request</div>
-                    </div>
-                    <!-- ibsheet -->
-                    <div class="ib_hover">
-                        <div id="ib_tks8"></div>
-                    </div>
-                    <div class="form_head mt30">
-                        <div class="page_subtitle">Received request(C/L)</div>
-                    </div>
-                    <div class="area_mo_box mb20">
-                        株式会社LEZE<br/>
-                        2002年2月に設立されて以来、株式会社DA Techは常にデジタル飲酒測定器（アルコール測定器）の開発をリードしてきました。蓄積された経験と最先端技術で呼吸器産業のリーダーになるために力を入れています。弊社の最優先事項は、弊社の製品を使用する人々の安全を保障することです。
-                    </div>
-                    <div class="area_bg1 mb20">
-                        <a href="http://www.midha.co.kr" target="_blank">www.midha.co.kr</a>
-                    </div>
-                    <div class="page_subtitle3 mb10">Product Info</div>
-                    <div class="area_mo_pdinfo">
-                        <dl>
-                            <dt>
-                                <img src="../images/demo40.jpg" alt="kbeauty" />
-                            </dt>
-                            <dd>
-                                <strong>アルコールモニタリングおよびデータ管理システム（AF-50）</strong>
-                                <p>
-                                    アルコールモニタリングおよびデータ管理システム（AF-50）
-                                    説明
-                                    AlcofindのAF-50は携帯型アルコール監視データ管理システムです。特徴は、
-                                    1、スマートフォンとのワイヤレス接続
-                                    -Alcofindスマートフォンアプリケーション
-                                    -Bluetooth4.2LE
-                                    2.デュアルテストモード
-                                    -定性·定量試験
-                                    -迅速なアルコール検査または精密測定
-                                    3.業務用燃料電池センサー
-                                    -迅速かつ正確な分析
-                                    4.サーバーへのテストデータ送信
-                                    -中央集中型データ管理
-                                    5.Alcofindスマートフォンアプリケーション
-                                    -デバイスコントロールおよびテスト手順のガイダンス
-                                    -テストデータメモリー
-                                    -テストデータ送信(MMSメッセージ、サーバー)
-                                    -被験者識別のためのテスト画像
-                                    6.最適なアルコールモニタリングソリューション
-                                    -バス、タクシー、トラックの運転手が社外でテストを受ける。
-                                    ·社外勤務の従業員
-                                </p>
-                                <div class="btn_group2 f_r">
-                                    <a href="http://www.midha.co.kr" class="btn_d2" target="_blank">more info</a>
-                                </div>
-                            </dd>
-                        </dl>
-                        <dl>
-                            <dt>
-                                <img src="../images/demo40.jpg" alt="kbeauty" />
-                            </dt>
-                            <dd>
-                                <strong>アルコールモニタリングおよびデータ管理システム（AF-50）</strong>
-                                <p>
-                                    アルコールモニタリングおよびデータ管理システム（AF-50）
-                                    説明
-                                    AlcofindのAF-50は携帯型アルコール監視データ管理システムです。特徴は、
-                                    1、スマートフォンとのワイヤレス接続
-                                    -Alcofindスマートフォンアプリケーション
-                                    -Bluetooth4.2LE
-                                    2.デュアルテストモード
-                                    -定性·定量試験
-                                    -迅速なアルコール検査または精密測定
-                                    3.業務用燃料電池センサー
-                                    -迅速かつ正確な分析
-                                    4.サーバーへのテストデータ送信
-                                    -中央集中型データ管理
-                                    5.Alcofindスマートフォンアプリケーション
-                                    -デバイスコントロールおよびテスト手順のガイダンス
-                                    -テストデータメモリー
-                                    -テストデータ送信(MMSメッセージ、サーバー)
-                                    -被験者識別のためのテスト画像
-                                    6.最適なアルコールモニタリングソリューション
-                                    -バス、タクシー、トラックの運転手が社外でテストを受ける。
-                                    ·社外勤務の従業員
-                                </p>
-                                <div class="btn_group2 f_r">
-                                    <a href="http://www.midha.co.kr" class="btn_d2" target="_blank">more info</a>
-                                </div>
-                            </dd>
-                        </dl>
-                    </div>
-                    <div>
-                        <div class="page_subtitle3">Attachment file</div>
-                        <button type="button" class="attachfile" onclick="popshow('pop_small3');">
-                            <span>1</span>
-                        </button>
-                    </div>
-                    <div class="area_mo_box mt10">弊社の製品に関心をお寄せいただき、ありがとうございます。今後の事業協力について、どのように市場に進出し、共に成長できるかについて詳しく話し合えればと思っております。</div>
-                    <div class="search_button mt20">
-                        <a href="#" class="btn_s4">Reject</a>
-                        <a href="#" class="btn_s4">Download</a>
-                        <a href="#" class="btn_s4">Print</a>
-                        <a href="#" class="btn_s4">Marketing Letter</a>
-                    </div>
-                </div>
-            </section>
-
-
-<!-- s : popup -->
-<div class="pop" id="pop_category1">
-    <div class="pop_bg"></div>
-    <div class="pop_wrap width_700">
-        <div class="pop_head"><strong>카테고리</strong></div>
-        <section class="pop_body height_425">
-            <div class="content">
-                <div class="tabs tabs_pop">
-                    <ul class="tab_head mb30">
-                        <li><a href="#tabs_pop1">Recommended Category</a></li>
-                        <li><a href="#tabs_pop2">Choose your own category</a></li>
+                <div class="gnb_box">
+                    <ul>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>온라인 매칭</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-KOMS-2100.html">인바운드</a></li>
+                                <li><a href="PG-TRK-KOMS-2200.html">인바운드 사후관리</a></li>
+                                <li><a href="PG-TRK-KOMS-2300.html">아웃바운드</a></li>
+                                <li><a href="PG-TRK-KOMS-2400.html">아웃바운드 사후관리</a></li>
+                                <li><a href="PG-TRK-KOMS-2500.html">VIB</a></li>
+                                <li><a href="PG-TRK-KOMS-2600.html">VIB 사후관리</a></li>
+                                <li><a href="PG-TRK-KOMS-2700.html">KITA 임직원 매칭 신청</a></li>
+                                <li><a href="PG-TRK-KOMS-2800.html">그룹 마케팅</a></li>
+                                <li><a href="PG-TRK-KOMS-2900.html">K-ABC 사업관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>TK서비스 관리</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-KOMS-3100.html">해외비즈니스 매칭</a></li>
+                                <li><a href="PG-TRK-KOMS-3200.html">해외비즈니스 매칭 바이어 발굴</a></li>
+                                <li><a href="PG-TRK-KOMS-3300.html">해외비즈니스 매칭번역</a></li>
+                                <li><a href="PG-TRK-KOMS-3400.html">바이어DB 타깃 매칭번역</a></li>
+                                <li><a href="PG-TRK-KOMS-3500.html">빅바이어상시 거래알선</a></li>
+                                <li><a href="PG-TRK-KOMS-3600.html">금융우대 서비스</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>바이어</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-KOMS-4100.html">바이어정보</a></li>
+                                <li><a href="PG-TRK-KOMS-4200.html">바이어마케팅</a></li>
+                                <li><a href="PG-TRK-KOMS-4300.html">바이어정보 대량입력</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>셀러</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-KOMS-5100.html">셀러정보</a></li>
+                                <li><a href="PG-TRK-KOMS-5200.html">셀러마케팅</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>상담회</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-KOMS-6100.html">행사관리</a></li>
+                                <li><a href="PG-TRK-KOMS-6200.html">체크리스트</a></li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>협력사관리</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-KOMS-6310.html">협력사정보</a></li>
+                                        <li><a href="PG-TRK-KOMS-6320.html">협력사평가</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="PG-TRK-KOMS-6400.html">참가해외업체관리</a></li>
+                                <li><a href="PG-TRK-KOMS-6500.html">참가국내업체관리</a></li>
+                                <li><a href="PG-TRK-KOMS-6600.html">매칭 매트릭스</a></li>
+                                <li><a href="PG-TRK-KOMS-6700.html">스케줄관리</a></li>
+                                <li><a href="PG-TRK-KOMS-6800.html">참가업체스케줄</a></li>
+                                <li><a href="PG-TRK-KOMS-6900.html">항공/숙박 정보</a></li>
+                                <li><a href="PG-TRK-KOMS-7000.html">통역원 배정관리</a></li>
+                                <li><a href="PG-TRK-KOMS-7100.html">통역원관리</a></li>
+                                <li><a href="PG-TRK-KOMS-7200.html">사후관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>분석</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>온라인매칭</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-KOMS-8110.html">매칭현황판</a></li>
+                                        <li><a href="PG-TRK-KOMS-8120.html">인바운드</a></li>
+                                        <li><a href="PG-TRK-KOMS-8130.html">아웃바운드</a></li>
+                                        <li><a href="PG-TRK-KOMS-8140.html">VIB</a></li>
+                                        <li><a href="PG-TRK-KOMS-8150.html">매칭실적</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>트레이드코리아 서비스</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-KOMS-8210.html">해외비즈니스매칭</a></li>
+                                        <li><a href="PG-TRK-KOMS-8220.html">빅바이어상시거래알선</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>오프라인매칭</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-KOMS-8310.html">행사현황판</a></li>
+                                        <li><a href="PG-TRK-KOMS-8320.html">행사집계표</a></li>
+                                        <li><a href="PG-TRK-KOMS-8330.html">상담일지</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>데이터베이스</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-KOMS-8410.html">바이어</a></li>
+                                        <li><a href="PG-TRK-KOMS-8420.html">셀러</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="PG-TRK-KOMS-8500.html">캠페인이력</a></li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>K-ABC 사업현황</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-KOMS-8610.html">전체현황</a></li>
+                                        <li><a href="PG-TRK-KOMS-8620.html">업체별 현황</a></li>
+                                        <li><a href="PG-TRK-KOMS-8630.html">주간현황</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>AI 바이어 매칭</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>AI 셀러추천</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="#">AI추천현황</a></li>
+                                        <li><a href="#">셀러추천결과</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">추천이력서관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>관리자</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-KOMS-9100.html">사용자관리</a></li>
+                                <li><a href="PG-TRK-KOMS-9200.html">캠페인 콘텐츠</a></li>
+                                <li><a href="PG-TRK-KOMS-9300.html">메일스킨</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                    <div id="tabs_pop1">
-                        <div class="form_head form_head_tabfix width_240">
-                            <span class="cn0 f_l">Categoryno : 182901828</span>
-                            <a href="#" class="btn_d2 ml10" title="추가">추가</a>
-                        </div>
-                        <div class="clearfix mb20">
-                            <div class="form1 text-left width_400 f_l">
-                                <table>
-                                    <colgroup>
-                                        <col style="width: 110px;">
-                                        <col style="width: auto">
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <th>키워드</th>
-                                            <td>
-                                                <input type="text" id="" name="" value="">
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="search_button f_r">
-                                <a href="#" id="btn_search" class="btn_s1" title="검색">검색</a>
-                                <a href="#" id="btn_apply" class="btn_s1" title="apply">apply</a>
-                            </div>
-                        </div>
-                        <div class="category_recd">
-                            <ul>
-                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</li>
-                                <li class="is_active">Food & Beverage</li>
-                                <li>Lorem Ipsum is</li>
-                                <li>Lorem Ipsum is</li>
-                                <li>Lorem Ipsum is</li>
-                                <li>Lorem Ipsum is</li>
-                                <li>Lorem Ipsum is</li>
-                                <li>Lorem Ipsum is</li>
-                                <li>Lorem Ipsum is</li>
-                                <li>Lorem Ipsum is</li>
-                                <li>Lorem Ipsum is</li>
-                                <li>Lorem Ipsum is</li>
-                                <li>Lorem Ipsum is</li>
-                                <li>Lorem Ipsum is</li>
-                                <li>Lorem Ipsum is</li>
-                                <li>Lorem Ipsum is</li>
-                                <li>Lorem Ipsum is</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div id="tabs_pop2">
-                        <div class="form_head form_head_tabfix width_240">
-                            <span class="cn0 f_l">Categoryno : 1111</span>
-                        </div>
-                        <input type="text" id="" class="input_s1" name="" value="">
-                        <div class="category">
-                            <ul>
-                                <li>
-                                    <div class="category_box">
-                                        <ul>
-                                            <li>Beauty & Personal Care Beauty & Personal CareBeauty & Personal CareBeauty & Personal Care</li>
-                                            <li class="is_active">Food & Beverage</li>
-                                            <li>Fashion</li>
-                                            <li>Home & Kitchen</li>
-                                            <li>Sport, Gifts & Toys</li>
-                                            <li>Stationery & Printing</li>
-                                            <li>Health & Medical</li>
-                                            <li>Electronic Products</li>
-                                            <li>Vehicles & Accessories</li>
-                                            <li>Equipment & Packaging</li>
-                                            <li>Electrical Components & Telecoms</li>
-                                            <li>Machinery & Parts</li>
-                                            <li>Industrial Supplies</li>
-                                            <li>Construction & Safety</li>
-                                            <li>Construction & Safety</li>
-                                            <li>Construction & Safety</li>
-                                            <li>Construction & Safety</li>
-                                            <li>Construction & Safety</li>
-                                            <li>Construction & Safety</li>
-                                            <li>Construction & Safety</li>
-                                            <li>Construction & Safety</li>
-                                            <li>Construction & Safety</li>
-                                            <li>Construction & Safety</li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="category_box">
-                                        <ul>
-                                            <li>Beauty & Personal Care Beauty & Personal CareBeauty & Personal CareBeauty & Personal Care</li>
-                                            <li class="is_active">Food & Beverage</li>
-                                            <li>Fashion</li>
-                                            <li>Home & Kitchen</li>
-                                            <li>Sport, Gifts & Toys</li>
-                                            <li>Stationery & Printing</li>
-                                            <li>Health & Medical</li>
-                                            <li>Electronic Products</li>
-                                            <li>Vehicles & Accessories</li>
-                                            <li>Equipment & Packaging</li>
-                                            <li>Electrical Components & Telecoms</li>
-                                            <li>Machinery & Parts</li>
-                                            <li>Industrial Supplies</li>
-                                            <li>Construction & Safety</li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="category_box">
-                                        <ul>
-                                            <li class="is_active">Beauty & Personal</li>
-                                            <li>Food & Beverage</li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="category_box">
-                                        <ul>
-                                            <li>Beauty & Personal</li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </section>
-        <button type="button" class="pop_close" onclick="pophide('pop_category1')">
-            <span class="line"></span>
-            <span class="line"></span>
-        </button>
-    </div>
-</div>
-<!-- e : popup -->
-
-<!-- s : popup -->
-<div class="pop" id="pop_small3">
-    <div class="pop_bg"></div>
-    <div class="pop_wrap width_500">
-        <div class="pop_head"><strong>첨부파일</strong></div>
-        <section class="pop_body">
-            <div class="content">
-                <div class="form2 text-center">
-                    <table>
-                        <colgroup>
-                            <col style="width:50px;">
-                            <col style="width:auto;">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <th>
-                                    <div class="checkbox_table">
-                                        <input type="checkbox" name="" id="check6" value="">
-                                        <label for="check6"></label>
-                                    </div>
-                                </th>
-                                <th>파일명</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- <tr class="nodata">
-                                <td colspan="2">검색된 데이터가 없습니다.</td>
-                            </tr> -->
-                            <tr>
-                                <td>
-                                    <div class="checkbox_table">
-                                        <input type="checkbox" name="" id="check1" value="">
-                                        <label for="check1"></label>
-                                    </div>
-                                </td>
-                                <td class="text-left">aaa.jpg</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="checkbox_table">
-                                        <input type="checkbox" name="" id="check2" value="">
-                                        <label for="check2"></label>
-                                    </div>
-                                </td>
-                                <td class="text-left">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.jpg</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="checkbox_table">
-                                        <input type="checkbox" name="" id="check3" value="">
-                                        <label for="check3"></label>
-                                    </div>
-                                </td>
-                                <td class="text-left">aaa.jpg</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="pop_btn_wrap">
-                    <div class="down_info mt15 mb15">
-                        <strong class="color3">3</strong>개 <em>/</em> <strong class="color3">417.94</strong>KB
-                    </div>
-                    <a href="#" class="btn_d2">열기</a>
-                    <a href="#" class="btn_d2" download>다운로드</a>
-                </div>
             </div>
-        </section>
-        <button type="button" class="pop_close" onclick="pophide('pop_small3')">
-            <span class="line"></span>
-            <span class="line"></span>
-        </button>
-    </div>
-</div>
-<!-- e : popup -->
-
-
-<!-- s : popup -->
-<div class="pop" id="pop_big22">
-    <div class="pop_bg"></div>
-    <div class="pop_wrap width_1200">
-        <div class="pop_head"><strong>Register Buyer</strong></div>
-        <section class="pop_body height_640">
-            <div class="content">
+        </div>
+        <div class="sitemap">
+            <ul class="sitemap_container">
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">온라인 매칭</strong>
+                    <ul>
+                        <li><a href="PG-TRK-KOMS-2100.html">인바운드</a></li>
+                        <li><a href="PG-TRK-KOMS-2200.html">인바운드 사후관리</a></li>
+                        <li><a href="PG-TRK-KOMS-2300.html">아웃바운드</a></li>
+                        <li><a href="PG-TRK-KOMS-2400.html">아웃바운드 사후관리</a></li>
+                        <li><a href="PG-TRK-KOMS-2500.html">VIB</a></li>
+                        <li><a href="PG-TRK-KOMS-2600.html">VIB 사후관리</a></li>
+                        <li><a href="PG-TRK-KOMS-2700.html">KITA 임직원 매칭 신청</a></li>
+                        <li><a href="PG-TRK-KOMS-2800.html">그룹 마케팅</a></li>
+                        <li><a href="PG-TRK-KOMS-2900.html">K-ABC 사업관리</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">TK서비스 관리</strong>
+                    <ul>
+                        <li><a href="PG-TRK-KOMS-3100.html">해외비즈니스 매칭</a></li>
+                        <li><a href="PG-TRK-KOMS-3200.html">해외비즈니스 매칭 바이어 발굴</a></li>
+                        <li><a href="PG-TRK-KOMS-3300.html">해외비즈니스 매칭번역</a></li>
+                        <li><a href="PG-TRK-KOMS-3400.html">바이어DB 타깃 매칭번역</a></li>
+                        <li><a href="PG-TRK-KOMS-3500.html">빅바이어상시 거래알선</a></li>
+                        <li><a href="PG-TRK-KOMS-3600.html">금융우대 서비스</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">바이어</strong>
+                    <ul>
+                        <li><a href="PG-TRK-KOMS-4100.html">바이어정보</a></li>
+                        <li><a href="PG-TRK-KOMS-4200.html">바이어마케팅</a></li>
+                        <li><a href="PG-TRK-KOMS-4300.html">바이어정보 대량입력</a></li>
+                    </ul>
+                </li>
+                 <li class="sitemap_list">
+                    <strong class="sitemap_title">셀러</strong>
+                    <ul>
+                        <li><a href="PG-TRK-KOMS-5100.html">셀러정보</a></li>
+                        <li><a href="PG-TRK-KOMS-5200.html">셀러마케팅</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">상담회</strong>
+                    <ul>
+                        <li><a href="PG-TRK-KOMS-6100.html">행사관리</a></li>
+                        <li><a href="PG-TRK-KOMS-6200.html">체크리스트</a></li>
+                        <li>
+                            <a href="#">협력사관리</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-KOMS-6310.html">협력사정보</a></li>
+                                <li><a href="PG-TRK-KOMS-6320.html">협력사평가</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="PG-TRK-KOMS-6400.html">참가해외업체관리</a></li>
+                        <li><a href="PG-TRK-KOMS-6500.html">참가국내업체관리</a></li>
+                        <li><a href="PG-TRK-KOMS-6600.html">매칭 매트릭스</a></li>
+                        <li><a href="PG-TRK-KOMS-6700.html">스케줄관리</a></li>
+                        <li><a href="PG-TRK-KOMS-6800.html">참가업체스케줄</a></li>
+                        <li><a href="PG-TRK-KOMS-6900.html">항공/숙박 정보</a></li>
+                        <li><a href="PG-TRK-KOMS-7000.html">통역원 배정관리</a></li>
+                        <li><a href="PG-TRK-KOMS-7100.html">통역원관리</a></li>
+                        <li><a href="PG-TRK-KOMS-7200.html">사후관리</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">분석</strong>
+                    <ul>
+                        <li>
+                            <a href="#">온라인매칭</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-KOMS-8110.html">매칭현황판</a></li>
+                                <li><a href="PG-TRK-KOMS-8120.html">인바운드</a></li>
+                                <li><a href="PG-TRK-KOMS-8130.html">아웃바운드</a></li>
+                                <li><a href="PG-TRK-KOMS-8140.html">VIB</a></li>
+                                <li><a href="PG-TRK-KOMS-8150.html">매칭실적</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">트레이드코리아 서비스</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-KOMS-8210.html">해외비즈니스매칭</a></li>
+                                <li><a href="PG-TRK-KOMS-8220.html">빅바이어상시거래알선</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">오프라인매칭</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-KOMS-8310.html">행사현황판</a></li>
+                                <li><a href="PG-TRK-KOMS-8320.html">행사집계표</a></li>
+                                <li><a href="PG-TRK-KOMS-8330.html">상담일지</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">데이터베이스</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-KOMS-8410.html">바이어</a></li>
+                                <li><a href="PG-TRK-KOMS-8420.html">셀러</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="PG-TRK-KOMS-8500.html">캠페인이력</a></li>
+                        <li>
+                            <a href="#">K-ABC 사업현황</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-KOMS-8610.html">전체현황</a></li>
+                                <li><a href="PG-TRK-KOMS-8620.html">업체별 현황</a></li>
+                                <li><a href="PG-TRK-KOMS-8630.html">주간현황</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">AI 바이어 매칭</strong>
+                    <ul class="gnb_depth2">
+                        <li>
+                            <a href="#">AI 셀러추천</a>
+                            <ul class="gnb_depth3">
+                                <li><a href="#">AI추천현황</a></li>
+                                <li><a href="#">셀러추천결과</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">추천이력서관리</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">관리자</strong>
+                    <ul>
+                        <li><a href="PG-TRK-KOMS-9100.html">사용자관리</a></li>
+                        <li><a href="PG-TRK-KOMS-9200.html">캠페인 콘텐츠</a></li>
+                        <li><a href="PG-TRK-KOMS-9300.html">메일스킨</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- e : gnb -->
+        <div class="contents_wrap">
+            <!-- s : contents -->
+            <div class="contents">
+                <div class="page_head">
+                    <div class="page_title">해외비즈니스 매칭바이어 발굴</div>
+                </div>
                 <div class="form1 text-left">
                     <table>
                         <colgroup>
-                            <col style="width:115px;">
-                            <col style="width:auto">
-                            <col style="width:115px;">
-                            <col style="width:auto">
+                            <col style="width:123px;">
+                            <col style="width:auto;">
+                            <col style="width:123px;">
+                            <col style="width:auto;">
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th><p class="color11">Email</p></th>
+                                <th>Date Requested</th>
                                 <td colspan="3">
-                                    <div class="search_box1">
-                                        <input type="text" id="" name="" class="" value="">
-                                        <div class="search_box_btn">
-                                            <button type="button" class="sb_search">검색</button>
+                                    <div class="datepicker_boxfitday3">
+                                        <div class="datepicker_box">
+                                            <input type="text" id="" name="" class="datepicker" readonly="readonly">
+                                            <em class="cn1">~</em>
+                                            <input type="text" id="" name="" class="datepicker" readonly="readonly">
+                                        </div>
+                                        <div class="btn_group1">
+                                            <a href="#" class="btn_d1">Today</a>
+                                            <a href="#" class="btn_d1">Week</a>
+                                            <a href="#" class="btn_d1">All</a>
                                         </div>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <th><p class="color11">Nation</p></th>
-                                <td colspan="3">
-                                    <div class="search_box1">
-                                        <input type="text" id="" name="" class="" value="">
-                                        <div class="search_box_btn">
-                                            <button type="button" class="sb_search" onclick="popshow('pop_nation2')">검색</button>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th><p class="color11">Corp.Name</p></th>
+                                <th>Seller Corp Nm.</th>
                                 <td>
                                     <input type="text" id="" name="" value="">
                                 </td>
-                                <th><p class="color11">Tel</p></th>
+                                <th>Seller Keyword</th>
                                 <td>
                                     <input type="text" id="" name="" value="">
                                 </td>
                             </tr>
                             <tr>
-                                <th>Contact Name</th>
-                                <td>
-                                    <input type="text" id="" name="" value="">
-                                </td>
-                                <th>Position</th>
-                                <td>
-                                    <div class="select_box">
-                                        <select name="select1">
-                                            <option value="">선택</option>
-                                            <option value="01">Staff</option>
-                                            <option value="02">Chief</option>
-                                            <option value="03">Assistant manager</option>
-                                            <option value="04">Manager</option>
-                                            <option value="05">Deputy General Manager</option>
-                                            <option value="06">General Manager</option>
-                                            <option value="07">Director</option>
-                                            <option value="09">Vice President</option>
-                                            <option value="08">President</option>
-                                            <option value="10">CEO</option>
-                                        </select>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Fax</th>
-                                <td colspan="3">
-                                    <input type="text" id="" name="" value="">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Mobile</th>
-                                <td>
-                                    <input type="text" id="" name="" value="">
-                                </td>
-                                <th>Home URL</th>
-                                <td>
-                                    <input type="text" id="" name="" value="https://">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Address</th>
-                                <td colspan="3">
-                                    <input type="text" id="" name="" value="">
-                                </td>
-                            </tr>
-                            <tr>
-                                <th><p class="color11">Keyword</p></th>
-                                <td colspan="3">
-                                    <div class="search_box2">
-                                        <input type="text" id="" name="" value="">
-                                        <div class="search_box_btn">
-                                            <button type="button" class="sb_plus">추가</button>
-                                            <button type="button" class="sb_refresh">새로고침</button>
-                                        </div>
-                                    </div>
-                                    <ul id="filelist" class="filelist">
-                                        <li><span>testtesttesttest.png</span><button>닫기</button></li>
-                                        <li><span>testtesttesttest.png</span><button>닫기</button></li>
-                                        <li><span>testtesttesttest.png</span><button>닫기</button></li>
-                                    </ul>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <th><p class="color11">Category</p></th>
+                                <th>Seller Category</th>
                                 <td colspan="3">
                                     <div class="search_box2">
                                         <input type="text" id="" name="" class="" value="">
                                         <div class="search_box_btn">
-                                            <button type="button" class="sb_search" onclick="popshow('pop_category1_1')">검색</button>
+                                            <button type="button" class="sb_search" onclick="popshow('pop_category1')">검색</button>
                                             <button type="button" class="sb_refresh">새로고침</button>
                                         </div>
                                     </div>
-                                    <ul id="filelist" class="filelist">
-                                        <li><span>testtesttesttest.png</span><button>닫기</button></li>
-                                        <li><span>testtesttesttest.png</span><button>닫기</button></li>
-                                        <li><span>testtesttesttest.png</span><button>닫기</button></li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Logo</th>
-                                <td colspan="3">
-                                    <label for="fileupload" class="fileupload_btn1">파일등록</label>
-                                    <div class="form_fileupload">
-                                        <input type="file" id="fileupload" name="" class="hide">
-                                        <ul id="filelist" class="filelist"></ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Remarks</th>
-                                <td colspan="3">
-                                    <textarea></textarea>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-            </div>
-        </section>
-        <button type="button" class="pop_close" onclick="pophide('pop_big22')">
-            <span class="line"></span>
-            <span class="line"></span>
-        </button>
-    </div>
-    <!-- s : popup popup -->
-    <div class="pop" id="pop_nation2">
-        <div class="pop_bg"></div>
-        <div class="pop_wrap width_700">
-            <div class="pop_head"><strong>국가 검색</strong></div>
-            <section class="pop_body">
-                <div class="content">
-                    <div class="category mt0">
-                        <ul>
-                            <li style="width: calc(50% - 5px);">
-                                <div class="category_box">
-                                    <ul>
-                                        <li class="is_active">Asia</li>
-                                        <li>Middle East</li>
-                                        <li>Europe</li>
-                                        <li>North America</li>
-                                        <li>South &amp; Central America</li>
-                                        <li>Africa</li>
-                                        <li>Oceania</li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li style="width: calc(50% - 5px);">
-                                <div class="category_box">
-                                    <ul>
-                                        <li>Azerbaijani</li>
-                                        <li>Bangladesh</li>
-                                        <li>Brunei</li>
-                                        <li class="is_active">Bhutan</li>
-                                        <li>China</li>
-                                        <li>Hong Kong(China)</li>
-                                        <li>Indonesia</li>
-                                        <li>India</li>
-                                        <li>Japan</li>
-                                        <li>Kyrgyzstan</li>
-                                        <li>Cambodia</li>
-                                        <li>North Korea</li>
-                                        <li>South Korea</li>
-                                        <li>Kazakhstan</li>
-                                        <li>Laos</li>
-                                        <li>Sri Lanka</li>
-                                        <li>Myanmar</li>
-                                        <li>Mongolia</li>
-                                        <li>Macao(China)</li>
-                                        <li>Maldives</li>
-                                        <li>Malaysia</li>
-                                        <li>Nepal</li>
-                                        <li>Philippines</li>
-                                        <li>Pakistan</li>
-                                        <li>Singapore</li>
-                                        <li>Thailand</li>
-                                        <li>Tadjikstan</li>
-                                        <li>Timor</li>
-                                        <li>Turkmenistan</li>
-                                        <li>East Timor</li>
-                                        <li>Taiwan</li>
-                                        <li>Uzbekistan</li>
-                                        <li>Viet Nam</li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="search_button mt20">
+                    <a href="#" id="btn_clear" class="btn_s1" title="검색초기화">Clear</a>
+                    <a href="#" id="btn_search" class="btn_s1" title="검색">Search</a>
                 </div>
-            </section>
-            <button type="button" class="pop_close" onclick="pophide('pop_nation2')">
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-        </div>
-    </div>
-    <div class="pop" id="pop_category1_1">
+                <div class="dash_box1 mt50">
+                    <ul class="dash_col4">
+                        <li>
+                            <p>업체 선정<em>10</em>건</p>
+                        </li>
+                        <li>
+                            <p>매칭 진행중<em>10</em>건</p>
+                        </li>
+                        <li>
+                            <p>매칭 취소<em>10</em>건</p>
+                        </li>
+                        <li>
+                            <p>매칭 완료<em>10</em>건</p>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <section class="col_group mt50">
+                    <div class="colv1_2" style="width: 670px;">
+                        <div class="form_head">
+                            <p class="total">
+                                Total of <strong>5</strong>, <span>1/1 page</span>
+                            </p>
+                            <div class="f_r">
+                                <div class="select_box width_90">
+                                    <select name="select_listnum">
+                                        <option value="20">20개</option>
+                                        <option value="30">30개</option>
+                                        <option value="40">40개</option>
+                                        <option value="50">50개</option>
+                                        <option value="60">60개</option>
+                                        <option value="70">70개</option>
+                                        <option value="80">80개</option>
+                                        <option value="90">90개</option>
+                                        <option value="100">100개</option>
+                                        <option value="300">300개</option>
+                                    </select>
+                                </div>
+                                <a href="#" class="btn_c1 ml10" download>Excel File</a>
+                            </div>
+                        </div>
+                        <!-- ibsheet -->
+                        <div class="ib_hover">
+                            <div id="ib_tks6"></div>
+                        </div>
+                        <nav class="pagination">
+                            <a href="#" class="pagination_first">
+                                <i class="hide">처음페이지</i>
+                            </a>
+                            <a href="#" class="pagination_prev">
+                                <i class="hide">이전페이지</i>
+                            </a>
+                            <ul class="pagination_list">
+                                <li class="active"><a href="#" title="1페이지">1</a></li>
+                                <li><a href="#" title="2페이지">2</a></li>
+                                <li><a href="#" title="3페이지">3</a></li>
+                                <li><a href="#" title="4페이지">4</a></li>
+                                <li><a href="#" title="5페이지">5</a></li>
+                                <li><a href="#" title="6페이지">6</a></li>
+                                <li><a href="#" title="7페이지">7</a></li>
+                                <li><a href="#" title="8페이지">8</a></li>
+                                <li><a href="#" title="9페이지">9</a></li>
+                                <li><a href="#" title="10페이지">10</a></li>
+                            </ul>
+                            <a href="#" class="pagination_next">
+                                <i class="hide">다음페이지</i>
+                            </a>
+                            <a href="#" class="pagination_last">
+                                <i class="hide">마지막페이지</i>
+                            </a>
+                        </nav>
+                        <div class="form_head mt70">
+                            <div class="page_subtitle">Matching Results</div>
+                        </div>
+                        <!-- ibsheet -->
+                        <div class="ib_hover">
+                            <div id="ib_tks7"></div>
+                        </div>
+                        <div class="search_button mt20">
+                            <button type="button" class="btn_s4" onclick="popshow('pop_big22')">Register Buyer</button>
+                        </div>
+                    </div>
+                    <div class="colv1_3" style="width: 700px;">
+                        <div class="form_head">
+                            <div class="page_subtitle">Marketing Request</div>
+                        </div>
+                        <!-- ibsheet -->
+                        <div class="ib_hover">
+                            <div id="ib_tks8"></div>
+                        </div>
+                        <div class="form_head mt30">
+                            <div class="page_subtitle">Received request(C/L)</div>
+                        </div>
+                        <div class="area_mo_box mb20">
+                            株式会社LEZE<br/>
+                            2002年2月に設立されて以来、株式会社DA Techは常にデジタル飲酒測定器（アルコール測定器）の開発をリードしてきました。蓄積された経験と最先端技術で呼吸器産業のリーダーになるために力を入れています。弊社の最優先事項は、弊社の製品を使用する人々の安全を保障することです。
+                        </div>
+                        <div class="area_bg1 mb20">
+                            <a href="http://www.midha.co.kr" target="_blank">www.midha.co.kr</a>
+                        </div>
+                        <div class="page_subtitle3 mb10">Product Info</div>
+                        <div class="area_mo_pdinfo">
+                            <dl>
+                                <dt>
+                                    <img src="../images/demo40.jpg" alt="kbeauty" />
+                                </dt>
+                                <dd>
+                                    <strong>アルコールモニタリングおよびデータ管理システム（AF-50）</strong>
+                                    <p>
+                                        アルコールモニタリングおよびデータ管理システム（AF-50）
+                                        説明
+                                        AlcofindのAF-50は携帯型アルコール監視データ管理システムです。特徴は、
+                                        1、スマートフォンとのワイヤレス接続
+                                        -Alcofindスマートフォンアプリケーション
+                                        -Bluetooth4.2LE
+                                        2.デュアルテストモード
+                                        -定性·定量試験
+                                        -迅速なアルコール検査または精密測定
+                                        3.業務用燃料電池センサー
+                                        -迅速かつ正確な分析
+                                        4.サーバーへのテストデータ送信
+                                        -中央集中型データ管理
+                                        5.Alcofindスマートフォンアプリケーション
+                                        -デバイスコントロールおよびテスト手順のガイダンス
+                                        -テストデータメモリー
+                                        -テストデータ送信(MMSメッセージ、サーバー)
+                                        -被験者識別のためのテスト画像
+                                        6.最適なアルコールモニタリングソリューション
+                                        -バス、タクシー、トラックの運転手が社外でテストを受ける。
+                                        ·社外勤務の従業員
+                                    </p>
+                                    <div class="btn_group2 f_r">
+                                        <a href="http://www.midha.co.kr" class="btn_d2" target="_blank">more info</a>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    <img src="../images/demo40.jpg" alt="kbeauty" />
+                                </dt>
+                                <dd>
+                                    <strong>アルコールモニタリングおよびデータ管理システム（AF-50）</strong>
+                                    <p>
+                                        アルコールモニタリングおよびデータ管理システム（AF-50）
+                                        説明
+                                        AlcofindのAF-50は携帯型アルコール監視データ管理システムです。特徴は、
+                                        1、スマートフォンとのワイヤレス接続
+                                        -Alcofindスマートフォンアプリケーション
+                                        -Bluetooth4.2LE
+                                        2.デュアルテストモード
+                                        -定性·定量試験
+                                        -迅速なアルコール検査または精密測定
+                                        3.業務用燃料電池センサー
+                                        -迅速かつ正確な分析
+                                        4.サーバーへのテストデータ送信
+                                        -中央集中型データ管理
+                                        5.Alcofindスマートフォンアプリケーション
+                                        -デバイスコントロールおよびテスト手順のガイダンス
+                                        -テストデータメモリー
+                                        -テストデータ送信(MMSメッセージ、サーバー)
+                                        -被験者識別のためのテスト画像
+                                        6.最適なアルコールモニタリングソリューション
+                                        -バス、タクシー、トラックの運転手が社外でテストを受ける。
+                                        ·社外勤務の従業員
+                                    </p>
+                                    <div class="btn_group2 f_r">
+                                        <a href="http://www.midha.co.kr" class="btn_d2" target="_blank">more info</a>
+                                    </div>
+                                </dd>
+                            </dl>
+                        </div>
+                        <div>
+                            <div class="page_subtitle3">Attachment file</div>
+                            <button type="button" class="attachfile" onclick="popshow('pop_small3');">
+                                <span>1</span>
+                            </button>
+                        </div>
+                        <div class="area_mo_box mt10">弊社の製品に関心をお寄せいただき、ありがとうございます。今後の事業協力について、どのように市場に進出し、共に成長できるかについて詳しく話し合えればと思っております。</div>
+                        <div class="search_button mt20">
+                            <a href="#" class="btn_s4">Reject</a>
+                            <a href="#" class="btn_s4">Download</a>
+                            <a href="#" class="btn_s4">Print</a>
+                            <a href="#" class="btn_s4">Marketing Letter</a>
+                        </div>
+                    </div>
+                </section>
+
+
+    <!-- s : popup -->
+    <div class="pop" id="pop_category1">
         <div class="pop_bg"></div>
         <div class="pop_wrap width_700">
             <div class="pop_head"><strong>카테고리</strong></div>
@@ -1016,21 +909,468 @@ $(document).ready(function(){
                     </div>
                 </div>
             </section>
-            <button type="button" class="pop_close" onclick="pophide('pop_category1_1')">
+            <button type="button" class="pop_close" onclick="pophide('pop_category1')">
                 <span class="line"></span>
                 <span class="line"></span>
             </button>
         </div>
     </div>
-    <!-- e : popup popup -->
-</div>
-<!-- e : popup -->
+    <!-- e : popup -->
 
-
-
+    <!-- s : popup -->
+    <div class="pop" id="pop_small3">
+        <div class="pop_bg"></div>
+        <div class="pop_wrap width_500">
+            <div class="pop_head"><strong>첨부파일</strong></div>
+            <section class="pop_body">
+                <div class="content">
+                    <div class="form2 text-center">
+                        <table>
+                            <colgroup>
+                                <col style="width:50px;">
+                                <col style="width:auto;">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="checkbox_table">
+                                            <input type="checkbox" name="" id="check6" value="">
+                                            <label for="check6"></label>
+                                        </div>
+                                    </th>
+                                    <th>파일명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- <tr class="nodata">
+                                    <td colspan="2">검색된 데이터가 없습니다.</td>
+                                </tr> -->
+                                <tr>
+                                    <td>
+                                        <div class="checkbox_table">
+                                            <input type="checkbox" name="" id="check1" value="">
+                                            <label for="check1"></label>
+                                        </div>
+                                    </td>
+                                    <td class="text-left">aaa.jpg</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="checkbox_table">
+                                            <input type="checkbox" name="" id="check2" value="">
+                                            <label for="check2"></label>
+                                        </div>
+                                    </td>
+                                    <td class="text-left">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.jpg</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="checkbox_table">
+                                            <input type="checkbox" name="" id="check3" value="">
+                                            <label for="check3"></label>
+                                        </div>
+                                    </td>
+                                    <td class="text-left">aaa.jpg</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pop_btn_wrap">
+                        <div class="down_info mt15 mb15">
+                            <strong class="color3">3</strong>개 <em>/</em> <strong class="color3">417.94</strong>KB
+                        </div>
+                        <a href="#" class="btn_d2">열기</a>
+                        <a href="#" class="btn_d2" download>다운로드</a>
+                    </div>
+                </div>
+            </section>
+            <button type="button" class="pop_close" onclick="pophide('pop_small3')">
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
         </div>
-        <!-- e : contents -->
     </div>
+    <!-- e : popup -->
+
+
+    <!-- s : popup -->
+    <div class="pop" id="pop_big22">
+        <div class="pop_bg"></div>
+        <div class="pop_wrap width_1200">
+            <div class="pop_head"><strong>Register Buyer</strong></div>
+            <section class="pop_body height_640">
+                <div class="content">
+                    <div class="form1 text-left">
+                        <table>
+                            <colgroup>
+                                <col style="width:115px;">
+                                <col style="width:auto">
+                                <col style="width:115px;">
+                                <col style="width:auto">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th><p class="color11">Email</p></th>
+                                    <td colspan="3">
+                                        <div class="search_box1">
+                                            <input type="text" id="" name="" class="" value="">
+                                            <div class="search_box_btn">
+                                                <button type="button" class="sb_search">검색</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><p class="color11">Nation</p></th>
+                                    <td colspan="3">
+                                        <div class="search_box1">
+                                            <input type="text" id="" name="" class="" value="">
+                                            <div class="search_box_btn">
+                                                <button type="button" class="sb_search" onclick="popshow('pop_nation2')">검색</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><p class="color11">Corp.Name</p></th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                    <th><p class="color11">Tel</p></th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Contact Name</th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                    <th>Position</th>
+                                    <td>
+                                        <div class="select_box">
+                                            <select name="select1">
+                                                <option value="">선택</option>
+                                                <option value="01">Staff</option>
+                                                <option value="02">Chief</option>
+                                                <option value="03">Assistant manager</option>
+                                                <option value="04">Manager</option>
+                                                <option value="05">Deputy General Manager</option>
+                                                <option value="06">General Manager</option>
+                                                <option value="07">Director</option>
+                                                <option value="09">Vice President</option>
+                                                <option value="08">President</option>
+                                                <option value="10">CEO</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Fax</th>
+                                    <td colspan="3">
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Mobile</th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                    <th>Home URL</th>
+                                    <td>
+                                        <input type="text" id="" name="" value="https://">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Address</th>
+                                    <td colspan="3">
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><p class="color11">Keyword</p></th>
+                                    <td colspan="3">
+                                        <div class="search_box2">
+                                            <input type="text" id="" name="" value="">
+                                            <div class="search_box_btn">
+                                                <button type="button" class="sb_plus">추가</button>
+                                                <button type="button" class="sb_refresh">새로고침</button>
+                                            </div>
+                                        </div>
+                                        <ul id="filelist" class="filelist">
+                                            <li><span>testtesttesttest.png</span><button>닫기</button></li>
+                                            <li><span>testtesttesttest.png</span><button>닫기</button></li>
+                                            <li><span>testtesttesttest.png</span><button>닫기</button></li>
+                                        </ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><p class="color11">Category</p></th>
+                                    <td colspan="3">
+                                        <div class="search_box2">
+                                            <input type="text" id="" name="" class="" value="">
+                                            <div class="search_box_btn">
+                                                <button type="button" class="sb_search" onclick="popshow('pop_category1_1')">검색</button>
+                                                <button type="button" class="sb_refresh">새로고침</button>
+                                            </div>
+                                        </div>
+                                        <ul id="filelist" class="filelist">
+                                            <li><span>testtesttesttest.png</span><button>닫기</button></li>
+                                            <li><span>testtesttesttest.png</span><button>닫기</button></li>
+                                            <li><span>testtesttesttest.png</span><button>닫기</button></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Logo</th>
+                                    <td colspan="3">
+                                        <label for="fileupload" class="fileupload_btn1">파일등록</label>
+                                        <div class="form_fileupload">
+                                            <input type="file" id="fileupload" name="" class="hide">
+                                            <ul id="filelist" class="filelist"></ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Remarks</th>
+                                    <td colspan="3">
+                                        <textarea></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <button type="button" class="pop_close" onclick="pophide('pop_big22')">
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </div>
+        <!-- s : popup popup -->
+        <div class="pop" id="pop_nation2">
+            <div class="pop_bg"></div>
+            <div class="pop_wrap width_700">
+                <div class="pop_head"><strong>국가 검색</strong></div>
+                <section class="pop_body">
+                    <div class="content">
+                        <div class="category mt0">
+                            <ul>
+                                <li style="width: calc(50% - 5px);">
+                                    <div class="category_box">
+                                        <ul>
+                                            <li class="is_active">Asia</li>
+                                            <li>Middle East</li>
+                                            <li>Europe</li>
+                                            <li>North America</li>
+                                            <li>South &amp; Central America</li>
+                                            <li>Africa</li>
+                                            <li>Oceania</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li style="width: calc(50% - 5px);">
+                                    <div class="category_box">
+                                        <ul>
+                                            <li>Azerbaijani</li>
+                                            <li>Bangladesh</li>
+                                            <li>Brunei</li>
+                                            <li class="is_active">Bhutan</li>
+                                            <li>China</li>
+                                            <li>Hong Kong(China)</li>
+                                            <li>Indonesia</li>
+                                            <li>India</li>
+                                            <li>Japan</li>
+                                            <li>Kyrgyzstan</li>
+                                            <li>Cambodia</li>
+                                            <li>North Korea</li>
+                                            <li>South Korea</li>
+                                            <li>Kazakhstan</li>
+                                            <li>Laos</li>
+                                            <li>Sri Lanka</li>
+                                            <li>Myanmar</li>
+                                            <li>Mongolia</li>
+                                            <li>Macao(China)</li>
+                                            <li>Maldives</li>
+                                            <li>Malaysia</li>
+                                            <li>Nepal</li>
+                                            <li>Philippines</li>
+                                            <li>Pakistan</li>
+                                            <li>Singapore</li>
+                                            <li>Thailand</li>
+                                            <li>Tadjikstan</li>
+                                            <li>Timor</li>
+                                            <li>Turkmenistan</li>
+                                            <li>East Timor</li>
+                                            <li>Taiwan</li>
+                                            <li>Uzbekistan</li>
+                                            <li>Viet Nam</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <button type="button" class="pop_close" onclick="pophide('pop_nation2')">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </div>
+        </div>
+        <div class="pop" id="pop_category1_1">
+            <div class="pop_bg"></div>
+            <div class="pop_wrap width_700">
+                <div class="pop_head"><strong>카테고리</strong></div>
+                <section class="pop_body height_425">
+                    <div class="content">
+                        <div class="tabs tabs_pop">
+                            <ul class="tab_head mb30">
+                                <li><a href="#tabs_pop1">Recommended Category</a></li>
+                                <li><a href="#tabs_pop2">Choose your own category</a></li>
+                            </ul>
+                            <div id="tabs_pop1">
+                                <div class="form_head form_head_tabfix width_240">
+                                    <span class="cn0 f_l">Categoryno : 182901828</span>
+                                    <a href="#" class="btn_d2 ml10" title="추가">추가</a>
+                                </div>
+                                <div class="clearfix mb20">
+                                    <div class="form1 text-left width_400 f_l">
+                                        <table>
+                                            <colgroup>
+                                                <col style="width: 110px;">
+                                                <col style="width: auto">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th>키워드</th>
+                                                    <td>
+                                                        <input type="text" id="" name="" value="">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="search_button f_r">
+                                        <a href="#" id="btn_search" class="btn_s1" title="검색">검색</a>
+                                        <a href="#" id="btn_apply" class="btn_s1" title="apply">apply</a>
+                                    </div>
+                                </div>
+                                <div class="category_recd">
+                                    <ul>
+                                        <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</li>
+                                        <li class="is_active">Food & Beverage</li>
+                                        <li>Lorem Ipsum is</li>
+                                        <li>Lorem Ipsum is</li>
+                                        <li>Lorem Ipsum is</li>
+                                        <li>Lorem Ipsum is</li>
+                                        <li>Lorem Ipsum is</li>
+                                        <li>Lorem Ipsum is</li>
+                                        <li>Lorem Ipsum is</li>
+                                        <li>Lorem Ipsum is</li>
+                                        <li>Lorem Ipsum is</li>
+                                        <li>Lorem Ipsum is</li>
+                                        <li>Lorem Ipsum is</li>
+                                        <li>Lorem Ipsum is</li>
+                                        <li>Lorem Ipsum is</li>
+                                        <li>Lorem Ipsum is</li>
+                                        <li>Lorem Ipsum is</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="tabs_pop2">
+                                <div class="form_head form_head_tabfix width_240">
+                                    <span class="cn0 f_l">Categoryno : 1111</span>
+                                </div>
+                                <input type="text" id="" class="input_s1" name="" value="">
+                                <div class="category">
+                                    <ul>
+                                        <li>
+                                            <div class="category_box">
+                                                <ul>
+                                                    <li>Beauty & Personal Care Beauty & Personal CareBeauty & Personal CareBeauty & Personal Care</li>
+                                                    <li class="is_active">Food & Beverage</li>
+                                                    <li>Fashion</li>
+                                                    <li>Home & Kitchen</li>
+                                                    <li>Sport, Gifts & Toys</li>
+                                                    <li>Stationery & Printing</li>
+                                                    <li>Health & Medical</li>
+                                                    <li>Electronic Products</li>
+                                                    <li>Vehicles & Accessories</li>
+                                                    <li>Equipment & Packaging</li>
+                                                    <li>Electrical Components & Telecoms</li>
+                                                    <li>Machinery & Parts</li>
+                                                    <li>Industrial Supplies</li>
+                                                    <li>Construction & Safety</li>
+                                                    <li>Construction & Safety</li>
+                                                    <li>Construction & Safety</li>
+                                                    <li>Construction & Safety</li>
+                                                    <li>Construction & Safety</li>
+                                                    <li>Construction & Safety</li>
+                                                    <li>Construction & Safety</li>
+                                                    <li>Construction & Safety</li>
+                                                    <li>Construction & Safety</li>
+                                                    <li>Construction & Safety</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="category_box">
+                                                <ul>
+                                                    <li>Beauty & Personal Care Beauty & Personal CareBeauty & Personal CareBeauty & Personal Care</li>
+                                                    <li class="is_active">Food & Beverage</li>
+                                                    <li>Fashion</li>
+                                                    <li>Home & Kitchen</li>
+                                                    <li>Sport, Gifts & Toys</li>
+                                                    <li>Stationery & Printing</li>
+                                                    <li>Health & Medical</li>
+                                                    <li>Electronic Products</li>
+                                                    <li>Vehicles & Accessories</li>
+                                                    <li>Equipment & Packaging</li>
+                                                    <li>Electrical Components & Telecoms</li>
+                                                    <li>Machinery & Parts</li>
+                                                    <li>Industrial Supplies</li>
+                                                    <li>Construction & Safety</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="category_box">
+                                                <ul>
+                                                    <li class="is_active">Beauty & Personal</li>
+                                                    <li>Food & Beverage</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="category_box">
+                                                <ul>
+                                                    <li>Beauty & Personal</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <button type="button" class="pop_close" onclick="pophide('pop_category1_1')">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </div>
+        </div>
+        <!-- e : popup popup -->
+    </div>
+    <!-- e : popup -->
+
+
+
+            </div>
+            <!-- e : contents -->
+        </div>
     </div>
     </div>
     <footer>

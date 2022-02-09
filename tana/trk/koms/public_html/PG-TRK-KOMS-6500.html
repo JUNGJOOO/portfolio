@@ -188,391 +188,731 @@ $(document).ready(function(){
 });
 </script>
 <div class="wrap">
+    <!-- s : header -->
+    <div class="accessibility">
+        <a href="#contents">본문 바로가기</a>
+        <a href="#gnb">메뉴 바로가기</a>
+    </div>
+    <header>
+        <div class="header">
+            <h1 class="header_logo">
+                <a href="#"><span class="blind">tradeKorea Admin</span></a>
+            </h1>
+            <ul class="header_util">
+                <li class="is_on"><a title="알림" href="#"><span>99</span></a></li>
+                <li class="is_on"><a title="메모" href="#"><span>4</span></a></li>
+                <li class=""><a title="게시판" href="#"><span>0</span></a></li>
+                <li><a title="내정보" href="#"></a></li>
+                <li class="logout"><a title="로그아웃" href="#">Logout</a></li>
+            </ul>
+            <div class="alarm">
+                <ul class="alarm_wrap">
+                    <!-- is_off : 확인 후, is_open : 자세한 내용 열기 -->
+                    <li class="alarm_list is_off">
+                        <div class="alarm_tag">해외비즈니스매칭</div>
+                        <div class="alarm_tit">MORNING GLORY CORP 매칭 건이 있습니다. 해외비즈니스매칭 MORNING GLORY CORP 매칭 건이 있습니다.</div>
+                        <div class="alarm_time">2021-07-21 11:01</div>
+                        <div class="alarm_box">
+                            <div class="alarm_txt">관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요.</div>
+                            <button class="btn_alarm_drop" title="열기"></button>
+                        </div>
+                        <button class="btn_alarm"></button>
+                    </li>
+                    <li class="alarm_list">
+                        <div class="alarm_tag">해외비즈니스매칭</div>
+                        <div class="alarm_tit">MORNING GLORY CORP</div>
+                        <div class="alarm_time">2021-07-21 11:01</div>
+                        <div class="alarm_box">
+                            <div class="alarm_txt">관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요.</div>
+                            <button class="btn_alarm_drop" title="열기"></button>
+                        </div>
+                        <button class="btn_alarm"></button>
+                    </li>
+                    <li class="alarm_list is_off">
+                        <div class="alarm_tag">해외비즈니스매칭</div>
+                        <div class="alarm_tit">MORNING GLORY CORP 매칭 건이 있습니다. 해외비즈니스매칭 MORNING GLORY CORP 매칭 건이 있습니다.</div>
+                        <div class="alarm_time">2021-07-21 11:01</div>
+                        <div class="alarm_box">
+                            <div class="alarm_txt">관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요.</div>
+                            <button class="btn_alarm_drop" title="열기"></button>
+                        </div>
+                        <button class="btn_alarm"></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- e : header -->
     <div class="container">
     <div class="container_inner">
-    <div class="contents_wrap">
-        <!-- s : contents -->
-        <div class="contents">
-            <div class="page_head">
-                <div class="page_title">참가국내업체관리</div>
+        <!-- s : gnb -->
+        <div id="gnb" class="gnb">
+            <div class="gnb_inner">
+            <div class="gnb_wrap">
+                <div class="gnb_top">
+                    <button type="button" class="btn_menu_all" title="전체메뉴 열고닫기">
+                        <span class="btn_line"></span>
+                        <span class="btn_line"></span>
+                        <span class="btn_line"></span>
+                    </button>
+                    <button type="button" class="btn_menu_open" title="열기"></button>
+                    <button type="button" class="btn_menu_close" title="닫기"></button>
+                </div>
+                <div class="gnb_box">
+                    <ul>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>온라인 매칭</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-KOMS-2100.html">인바운드</a></li>
+                                <li><a href="PG-TRK-KOMS-2200.html">인바운드 사후관리</a></li>
+                                <li><a href="PG-TRK-KOMS-2300.html">아웃바운드</a></li>
+                                <li><a href="PG-TRK-KOMS-2400.html">아웃바운드 사후관리</a></li>
+                                <li><a href="PG-TRK-KOMS-2500.html">VIB</a></li>
+                                <li><a href="PG-TRK-KOMS-2600.html">VIB 사후관리</a></li>
+                                <li><a href="PG-TRK-KOMS-2700.html">KITA 임직원 매칭 신청</a></li>
+                                <li><a href="PG-TRK-KOMS-2800.html">그룹 마케팅</a></li>
+                                <li><a href="PG-TRK-KOMS-2900.html">K-ABC 사업관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>TK서비스 관리</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-KOMS-3100.html">해외비즈니스 매칭</a></li>
+                                <li><a href="PG-TRK-KOMS-3200.html">해외비즈니스 매칭 바이어 발굴</a></li>
+                                <li><a href="PG-TRK-KOMS-3300.html">해외비즈니스 매칭번역</a></li>
+                                <li><a href="PG-TRK-KOMS-3400.html">바이어DB 타깃 매칭번역</a></li>
+                                <li><a href="PG-TRK-KOMS-3500.html">빅바이어상시 거래알선</a></li>
+                                <li><a href="PG-TRK-KOMS-3600.html">금융우대 서비스</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>바이어</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-KOMS-4100.html">바이어정보</a></li>
+                                <li><a href="PG-TRK-KOMS-4200.html">바이어마케팅</a></li>
+                                <li><a href="PG-TRK-KOMS-4300.html">바이어정보 대량입력</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>셀러</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-KOMS-5100.html">셀러정보</a></li>
+                                <li><a href="PG-TRK-KOMS-5200.html">셀러마케팅</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>상담회</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-KOMS-6100.html">행사관리</a></li>
+                                <li><a href="PG-TRK-KOMS-6200.html">체크리스트</a></li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>협력사관리</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-KOMS-6310.html">협력사정보</a></li>
+                                        <li><a href="PG-TRK-KOMS-6320.html">협력사평가</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="PG-TRK-KOMS-6400.html">참가해외업체관리</a></li>
+                                <li><a href="PG-TRK-KOMS-6500.html">참가국내업체관리</a></li>
+                                <li><a href="PG-TRK-KOMS-6600.html">매칭 매트릭스</a></li>
+                                <li><a href="PG-TRK-KOMS-6700.html">스케줄관리</a></li>
+                                <li><a href="PG-TRK-KOMS-6800.html">참가업체스케줄</a></li>
+                                <li><a href="PG-TRK-KOMS-6900.html">항공/숙박 정보</a></li>
+                                <li><a href="PG-TRK-KOMS-7000.html">통역원 배정관리</a></li>
+                                <li><a href="PG-TRK-KOMS-7100.html">통역원관리</a></li>
+                                <li><a href="PG-TRK-KOMS-7200.html">사후관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>분석</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>온라인매칭</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-KOMS-8110.html">매칭현황판</a></li>
+                                        <li><a href="PG-TRK-KOMS-8120.html">인바운드</a></li>
+                                        <li><a href="PG-TRK-KOMS-8130.html">아웃바운드</a></li>
+                                        <li><a href="PG-TRK-KOMS-8140.html">VIB</a></li>
+                                        <li><a href="PG-TRK-KOMS-8150.html">매칭실적</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>트레이드코리아 서비스</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-KOMS-8210.html">해외비즈니스매칭</a></li>
+                                        <li><a href="PG-TRK-KOMS-8220.html">빅바이어상시거래알선</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>오프라인매칭</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-KOMS-8310.html">행사현황판</a></li>
+                                        <li><a href="PG-TRK-KOMS-8320.html">행사집계표</a></li>
+                                        <li><a href="PG-TRK-KOMS-8330.html">상담일지</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>데이터베이스</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-KOMS-8410.html">바이어</a></li>
+                                        <li><a href="PG-TRK-KOMS-8420.html">셀러</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="PG-TRK-KOMS-8500.html">캠페인이력</a></li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>K-ABC 사업현황</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-KOMS-8610.html">전체현황</a></li>
+                                        <li><a href="PG-TRK-KOMS-8620.html">업체별 현황</a></li>
+                                        <li><a href="PG-TRK-KOMS-8630.html">주간현황</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>AI 바이어 매칭</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>AI 셀러추천</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="#">AI추천현황</a></li>
+                                        <li><a href="#">셀러추천결과</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">추천이력서관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>관리자</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-KOMS-9100.html">사용자관리</a></li>
+                                <li><a href="PG-TRK-KOMS-9200.html">캠페인 콘텐츠</a></li>
+                                <li><a href="PG-TRK-KOMS-9300.html">메일스킨</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="form1 text-left">
-                <table>
-                    <colgroup>
-                        <col style="width:123px;">
-                        <col style="width:auto;">
-                        <col style="width:123px;">
-                        <col style="width:auto">
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th>행사명</th>
-                            <td>
-                                <div class="search_box1">
-                                    <input type="text" id="" name="" class="" value="">
-                                    <div class="search_box_btn">
-                                        <button type="button" class="sb_search" onclick="popshow('pop_big2'); mySheetbig2.FitColWidth('5|33|17|15|15|15');">검색</button>
+            </div>
+        </div>
+        <div class="sitemap">
+            <ul class="sitemap_container">
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">온라인 매칭</strong>
+                    <ul>
+                        <li><a href="PG-TRK-KOMS-2100.html">인바운드</a></li>
+                        <li><a href="PG-TRK-KOMS-2200.html">인바운드 사후관리</a></li>
+                        <li><a href="PG-TRK-KOMS-2300.html">아웃바운드</a></li>
+                        <li><a href="PG-TRK-KOMS-2400.html">아웃바운드 사후관리</a></li>
+                        <li><a href="PG-TRK-KOMS-2500.html">VIB</a></li>
+                        <li><a href="PG-TRK-KOMS-2600.html">VIB 사후관리</a></li>
+                        <li><a href="PG-TRK-KOMS-2700.html">KITA 임직원 매칭 신청</a></li>
+                        <li><a href="PG-TRK-KOMS-2800.html">그룹 마케팅</a></li>
+                        <li><a href="PG-TRK-KOMS-2900.html">K-ABC 사업관리</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">TK서비스 관리</strong>
+                    <ul>
+                        <li><a href="PG-TRK-KOMS-3100.html">해외비즈니스 매칭</a></li>
+                        <li><a href="PG-TRK-KOMS-3200.html">해외비즈니스 매칭 바이어 발굴</a></li>
+                        <li><a href="PG-TRK-KOMS-3300.html">해외비즈니스 매칭번역</a></li>
+                        <li><a href="PG-TRK-KOMS-3400.html">바이어DB 타깃 매칭번역</a></li>
+                        <li><a href="PG-TRK-KOMS-3500.html">빅바이어상시 거래알선</a></li>
+                        <li><a href="PG-TRK-KOMS-3600.html">금융우대 서비스</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">바이어</strong>
+                    <ul>
+                        <li><a href="PG-TRK-KOMS-4100.html">바이어정보</a></li>
+                        <li><a href="PG-TRK-KOMS-4200.html">바이어마케팅</a></li>
+                        <li><a href="PG-TRK-KOMS-4300.html">바이어정보 대량입력</a></li>
+                    </ul>
+                </li>
+                 <li class="sitemap_list">
+                    <strong class="sitemap_title">셀러</strong>
+                    <ul>
+                        <li><a href="PG-TRK-KOMS-5100.html">셀러정보</a></li>
+                        <li><a href="PG-TRK-KOMS-5200.html">셀러마케팅</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">상담회</strong>
+                    <ul>
+                        <li><a href="PG-TRK-KOMS-6100.html">행사관리</a></li>
+                        <li><a href="PG-TRK-KOMS-6200.html">체크리스트</a></li>
+                        <li>
+                            <a href="#">협력사관리</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-KOMS-6310.html">협력사정보</a></li>
+                                <li><a href="PG-TRK-KOMS-6320.html">협력사평가</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="PG-TRK-KOMS-6400.html">참가해외업체관리</a></li>
+                        <li><a href="PG-TRK-KOMS-6500.html">참가국내업체관리</a></li>
+                        <li><a href="PG-TRK-KOMS-6600.html">매칭 매트릭스</a></li>
+                        <li><a href="PG-TRK-KOMS-6700.html">스케줄관리</a></li>
+                        <li><a href="PG-TRK-KOMS-6800.html">참가업체스케줄</a></li>
+                        <li><a href="PG-TRK-KOMS-6900.html">항공/숙박 정보</a></li>
+                        <li><a href="PG-TRK-KOMS-7000.html">통역원 배정관리</a></li>
+                        <li><a href="PG-TRK-KOMS-7100.html">통역원관리</a></li>
+                        <li><a href="PG-TRK-KOMS-7200.html">사후관리</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">분석</strong>
+                    <ul>
+                        <li>
+                            <a href="#">온라인매칭</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-KOMS-8110.html">매칭현황판</a></li>
+                                <li><a href="PG-TRK-KOMS-8120.html">인바운드</a></li>
+                                <li><a href="PG-TRK-KOMS-8130.html">아웃바운드</a></li>
+                                <li><a href="PG-TRK-KOMS-8140.html">VIB</a></li>
+                                <li><a href="PG-TRK-KOMS-8150.html">매칭실적</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">트레이드코리아 서비스</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-KOMS-8210.html">해외비즈니스매칭</a></li>
+                                <li><a href="PG-TRK-KOMS-8220.html">빅바이어상시거래알선</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">오프라인매칭</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-KOMS-8310.html">행사현황판</a></li>
+                                <li><a href="PG-TRK-KOMS-8320.html">행사집계표</a></li>
+                                <li><a href="PG-TRK-KOMS-8330.html">상담일지</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">데이터베이스</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-KOMS-8410.html">바이어</a></li>
+                                <li><a href="PG-TRK-KOMS-8420.html">셀러</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="PG-TRK-KOMS-8500.html">캠페인이력</a></li>
+                        <li>
+                            <a href="#">K-ABC 사업현황</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-KOMS-8610.html">전체현황</a></li>
+                                <li><a href="PG-TRK-KOMS-8620.html">업체별 현황</a></li>
+                                <li><a href="PG-TRK-KOMS-8630.html">주간현황</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">AI 바이어 매칭</strong>
+                    <ul class="gnb_depth2">
+                        <li>
+                            <a href="#">AI 셀러추천</a>
+                            <ul class="gnb_depth3">
+                                <li><a href="#">AI추천현황</a></li>
+                                <li><a href="#">셀러추천결과</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">추천이력서관리</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">관리자</strong>
+                    <ul>
+                        <li><a href="PG-TRK-KOMS-9100.html">사용자관리</a></li>
+                        <li><a href="PG-TRK-KOMS-9200.html">캠페인 콘텐츠</a></li>
+                        <li><a href="PG-TRK-KOMS-9300.html">메일스킨</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- e : gnb -->
+        <div class="contents_wrap">
+            <!-- s : contents -->
+            <div class="contents">
+                <div class="page_head">
+                    <div class="page_title">참가국내업체관리</div>
+                </div>
+                <div class="form1 text-left">
+                    <table>
+                        <colgroup>
+                            <col style="width:123px;">
+                            <col style="width:auto;">
+                            <col style="width:123px;">
+                            <col style="width:auto">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>행사명</th>
+                                <td>
+                                    <div class="search_box1">
+                                        <input type="text" id="" name="" class="" value="">
+                                        <div class="search_box_btn">
+                                            <button type="button" class="sb_search" onclick="popshow('pop_big2'); mySheetbig2.FitColWidth('5|33|17|15|15|15');">검색</button>
+                                        </div>
                                     </div>
-                                </div>
-                            </td>
-                            <th>모집채널</th>
-                            <td>
-                                <div class="select_box">
-                                    <select name="select2" >
-                                        <option value="">선택</option>
-                                        <option value="01">온라인</option>
-                                        <option value="02">오프라인</option>
+                                </td>
+                                <th>모집채널</th>
+                                <td>
+                                    <div class="select_box">
+                                        <select name="select2" >
+                                            <option value="">선택</option>
+                                            <option value="01">온라인</option>
+                                            <option value="02">오프라인</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>모집상태</th>
+                                <td>
+                                    <div class="select_box">
+                                        <select name="select3" >
+                                            <option value="">선택</option>
+                                            <option value="01">확인중</option>
+                                            <option value="02">참석확정</option>
+                                            <option value="03">반려</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th>시/도</th>
+                                <td>
+                                    <div class="select_box">
+                                        <select name="select1">
+                                            <option value="">선택</option>
+                                            <option value="11">서울특별시</option>
+                                            <option value="26">부산광역시</option>
+                                            <option value="27">대구광역시</option>
+                                            <option value="28">인천광역시</option>
+                                            <option value="29">광주광역시</option>
+                                            <option value="30">대전광역시</option>
+                                            <option value="31">울산광역시</option>
+                                            <option value="36">세종특별자치시</option>
+                                            <option value="41">경기도</option>
+                                            <option value="42">강원도</option>
+                                            <option value="43">충청북도</option>
+                                            <option value="44">충청남도</option>
+                                            <option value="45">전라북도</option>
+                                            <option value="46">전라남도</option>
+                                            <option value="47">경상북도</option>
+                                            <option value="48">경상남도</option>
+                                            <option value="50">제주특별자치도</option>
+                                        </select>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>시/군/구</th>
+                                <td>
+                                    <div class="select_box">
+                                        <select name="select1" >
+                                            <option value="">선택</option>
+                                        </select>
+                                    </div>
+                                </td>
+                                <th>회사명</th>
+                                <td>
+                                    <input type="text" id="" name="" value="">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="search_button mt20">
+                    <a href="#" id="btn_clear" class="btn_s1" title="검색초기화">초기화</a>
+                    <a href="#" id="btn_search" class="btn_s1" title="검색" >검색</a>
+                </div>
+                <section class="col_group mt50">
+                    <div class="colv1_2">
+                        <div class="form_head">
+                            <p class="total">
+                                전체 <strong>5</strong> 건, <span>1/1 page</span>
+                            </p>
+                            <div class="f_r">
+                                <button type="button" class="btn_d2 mr5" onclick="popshow('pop_ex1'); mySheetex1.FitColWidth('4|6|6|6|6|6|6|6|6|6|6|6|6|6|6|6|6')">엑셀등록</button>
+                                <div class="select_box width_90">
+                                    <select name="select_listnum">
+                                        <option value="20">20개</option>
+                                        <option value="30">30개</option>
+                                        <option value="40">40개</option>
+                                        <option value="50">50개</option>
+                                        <option value="60">60개</option>
+                                        <option value="70">70개</option>
+                                        <option value="80">80개</option>
+                                        <option value="90">90개</option>
+                                        <option value="100">100개</option>
+                                        <option value="300">300개</option>
                                     </select>
                                 </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>모집상태</th>
-                            <td>
-                                <div class="select_box">
-                                    <select name="select3" >
-                                        <option value="">선택</option>
-                                        <option value="01">확인중</option>
-                                        <option value="02">참석확정</option>
-                                        <option value="03">반려</option>
-                                    </select>
-                                </div>
-                            </td>
-                            <th>시/도</th>
-                            <td>
-                                <div class="select_box">
-                                    <select name="select1">
-                                        <option value="">선택</option>
-                                        <option value="11">서울특별시</option>
-                                        <option value="26">부산광역시</option>
-                                        <option value="27">대구광역시</option>
-                                        <option value="28">인천광역시</option>
-                                        <option value="29">광주광역시</option>
-                                        <option value="30">대전광역시</option>
-                                        <option value="31">울산광역시</option>
-                                        <option value="36">세종특별자치시</option>
-                                        <option value="41">경기도</option>
-                                        <option value="42">강원도</option>
-                                        <option value="43">충청북도</option>
-                                        <option value="44">충청남도</option>
-                                        <option value="45">전라북도</option>
-                                        <option value="46">전라남도</option>
-                                        <option value="47">경상북도</option>
-                                        <option value="48">경상남도</option>
-                                        <option value="50">제주특별자치도</option>
-                                    </select>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>시/군/구</th>
-                            <td>
-                                <div class="select_box">
-                                    <select name="select1" >
-                                        <option value="">선택</option>
-                                    </select>
-                                </div>
-                            </td>
-                            <th>회사명</th>
-                            <td>
-                                <input type="text" id="" name="" value="">
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="search_button mt20">
-                <a href="#" id="btn_clear" class="btn_s1" title="검색초기화">초기화</a>
-                <a href="#" id="btn_search" class="btn_s1" title="검색" >검색</a>
-            </div>
-            <section class="col_group mt50">
-                <div class="colv1_2">
-                    <div class="form_head">
-                        <p class="total">
-                            전체 <strong>5</strong> 건, <span>1/1 page</span>
-                        </p>
-                        <div class="f_r">
-                            <button type="button" class="btn_d2 mr5" onclick="popshow('pop_ex1'); mySheetex1.FitColWidth('4|6|6|6|6|6|6|6|6|6|6|6|6|6|6|6|6')">엑셀등록</button>
-                            <div class="select_box width_90">
-                                <select name="select_listnum">
-                                    <option value="20">20개</option>
-                                    <option value="30">30개</option>
-                                    <option value="40">40개</option>
-                                    <option value="50">50개</option>
-                                    <option value="60">60개</option>
-                                    <option value="70">70개</option>
-                                    <option value="80">80개</option>
-                                    <option value="90">90개</option>
-                                    <option value="100">100개</option>
-                                    <option value="300">300개</option>
-                                </select>
                             </div>
                         </div>
-                    </div>
 
+                        <!-- ibsheet -->
+                        <div class="ib_hover">
+                            <div id="ib_container1"></div>
+                        </div>
+
+                        <nav class="pagination">
+                            <a href="#" class="pagination_first">
+                                <i class="hide">처음페이지</i>
+                            </a>
+                            <a href="#" class="pagination_prev">
+                                <i class="hide">이전페이지</i>
+                            </a>
+                            <ul class="pagination_list">
+                                <li class="active"><a href="#" title="1페이지">1</a></li>
+                                <li><a href="#" title="2페이지">2</a></li>
+                                <li><a href="#" title="3페이지">3</a></li>
+                                <li><a href="#" title="4페이지">4</a></li>
+                                <li><a href="#" title="5페이지">5</a></li>
+                                <li><a href="#" title="6페이지">6</a></li>
+                                <li><a href="#" title="7페이지">7</a></li>
+                                <li><a href="#" title="8페이지">8</a></li>
+                                <li><a href="#" title="9페이지">9</a></li>
+                                <li><a href="#" title="10페이지">10</a></li>
+                            </ul>
+                            <a href="#" class="pagination_next">
+                                <i class="hide">다음페이지</i>
+                            </a>
+                            <a href="#" class="pagination_last">
+                                <i class="hide">마지막페이지</i>
+                            </a>
+                        </nav>
+                    </div>
+                    <div class="colv1_3">
+                        <div class="form_head">
+                            <div class="page_subtitle">국내업체 정보</div>
+                        </div>
+                        <div class="form1 text-left">
+                            <table>
+                                <colgroup>
+                                    <col style="width:123px;">
+                                    <col style="width:auto;">
+                                    <col style="width:123px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th><p class="color11">행사명</p></th>
+                                        <td colspan="3">
+                                            <div class="search_box1">
+                                                <input type="text" id="" name="" class="" value="">
+                                                <div class="search_box_btn">
+                                                    <button type="button" class="sb_search" onclick="popshow('pop_big2'); mySheetbig2.FitColWidth('5|33|17|15|15|15');">검색</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><p class="color11">회사명</p></th>
+                                        <td colspan="3">
+                                            <div class="f0">
+                                                <em class="cn0" style="width: 45px; text-align: left;">영문</em>
+                                                <input type="text" id="" name="" value="" style="width: calc((100% - 187px) / 2); ">
+                                                <em class="cn0 color11" style="width: 65px;">국문</em>
+                                                <input type="text" id="" name="" value="" style="width: calc((100% - 187px) / 2); margin-right: 10px; ">
+                                                <button type="button" class="btn_d2" onclick="popshow('pop_big3'); mySheetbig3.FitColWidth('5|35|15|15|15|15')">불러오기</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><p class="color11">대표자</p></th>
+                                        <td colspan="3">
+                                            <div class="f0">
+                                                <em class="cn0" style="width: 45px; text-align: left;">영문</em>
+                                                <input type="text" id="" name="" value="" style="width: calc((100% - 187px) / 2); ">
+                                                <em class="cn0 color11" style="width: 65px;">국문</em>
+                                                <input type="text" id="" name="" value="" style="width: calc((100% - 187px) / 2); margin-right: 10px; ">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><p class="color11">사업자등록번호</p></th>
+                                        <td>
+                                            <div class="dashfit3">
+                                                <input type="text" id="" name="" value="">
+                                                <em class="cn2">-</em>
+                                                <input type="text" id="" name="" value="">
+                                                <em class="cn2">-</em>
+                                                <input type="text" id="" name="" value="">
+                                            </div>
+                                        </td>
+                                        <th>사업자유형</th>
+                                        <td>
+                                            <div class="select_box">
+                                                <select name="select1" >
+                                                    <option value="">선택</option>
+                                                    <option value="01">Manufacturer</option>
+                                                    <option value="02">Trading Company</option>
+                                                    <option value="03">Distributor(Wholesaler)</option>
+                                                    <option value="04">Retailer</option>
+                                                    <option value="05">Broker(Consultant commission-based)</option>
+                                                    <option value="99">Others</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><p class="color11">전화번호</p></th>
+                                        <td>
+                                            <div class="dashfit4">
+                                                <input type="text" id="" name="" value="">
+                                                <em class="cn2">-</em>
+                                                <input type="text" id="" name="" value="">
+                                                <em class="cn2">-</em>
+                                                <input type="text" id="" name="" value="">
+                                                <em class="cn2">-</em>
+                                                <input type="text" id="" name="" value="">
+                                            </div>
+                                        </td>
+                                        <th><p class="color11">홈페이지</p></th>
+                                        <td>
+                                            <input type="text" id="" name="" value="">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>종업원수</th>
+                                        <td>
+                                            <div class="select_box">
+                                                <select name="select1" >
+                                                    <option value="">선택</option>
+                                                    <option value="01">1-50</option>
+                                                    <option value="02">51-100</option>
+                                                    <option value="03">101-500</option>
+                                                    <option value="04">501-1000</option>
+                                                    <option value="05">1001-2000</option>
+                                                    <option value="06">over 2000</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <th>연매출액</th>
+                                        <td>
+                                            <div class="select_box">
+                                                <select name="select1" >
+                                                    <option value="">선택</option>
+                                                    <option value="01">Below US$500,000</option>
+                                                    <option value="02">US$500,000 - US$1 Million</option>
+                                                    <option value="03">US$1 Million - US$5 Million</option>
+                                                    <option value="04">US$5 Million - US$10 Million</option>
+                                                    <option value="05">US$10 Million - US$50 Million</option>
+                                                    <option value="06">US$50 Million - US$100 Million</option>
+                                                    <option value="07">Above US$100 Million</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>소재지</th>
+                                        <td colspan="3">
+                                            <div class="boxfit2 width_280">
+                                                <div class="select_box">
+                                                    <select name="select1">
+                                                        <option value="">선택</option>
+                                                        <option value="11">서울특별시</option>
+                                                        <option value="26">부산광역시</option>
+                                                        <option value="27">대구광역시</option>
+                                                        <option value="28">인천광역시</option>
+                                                        <option value="29">광주광역시</option>
+                                                        <option value="30">대전광역시</option>
+                                                        <option value="31">울산광역시</option>
+                                                        <option value="36">세종특별자치시</option>
+                                                        <option value="41">경기도</option>
+                                                        <option value="42">강원도</option>
+                                                        <option value="43">충청북도</option>
+                                                        <option value="44">충청남도</option>
+                                                        <option value="45">전라북도</option>
+                                                        <option value="46">전라남도</option>
+                                                        <option value="47">경상북도</option>
+                                                        <option value="48">경상남도</option>
+                                                        <option value="50">제주특별자치도</option>
+                                                    </select>
+                                                </div>
+                                                <div class="select_box">
+                                                    <select name="select1">
+                                                        <option value="">선택</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <input type="text" id="" name="" value="" style="width: calc(100% - 295px); margin-left: 10px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>비고</th>
+                                        <td colspan="3">
+                                            <textarea></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>모집상태</th>
+                                        <td colspan="3">
+                                            <div class="radio_box">
+                                                <input type="radio" id="radio1" name="radio_group1" value="" checked="checked">
+                                                <label for="radio1">확인중</label>
+                                                <input type="radio" id="radio2" name="radio_group1" value="">
+                                                <label for="radio2">참석확정</label>
+                                                <input type="radio" id="radio3" name="radio_group1" value="">
+                                                <label for="radio3">반려</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>반려사유</th>
+                                        <td colspan="3">
+                                            <div class="select_box">
+                                                <select name="select7" >
+                                                    <option value="">선택</option>
+                                                    <option value="01">품목불일치</option>
+                                                    <option value="02">의심기업</option>
+                                                    <option value="03">기타</option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>모집채널</th>
+                                        <td></td>
+                                        <th>등록일시</th>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="search_button mt20">
+                            <a href="#" class="btn_s1">저장</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="col_info mt50">
+                    <div class="form_head">
+                        <div class="page_subtitle">담당자 목록</div>
+                    </div>
                     <!-- ibsheet -->
                     <div class="ib_hover">
-                        <div id="ib_container1"></div>
-                    </div>
-
-                    <nav class="pagination">
-                        <a href="#" class="pagination_first">
-                            <i class="hide">처음페이지</i>
-                        </a>
-                        <a href="#" class="pagination_prev">
-                            <i class="hide">이전페이지</i>
-                        </a>
-                        <ul class="pagination_list">
-                            <li class="active"><a href="#" title="1페이지">1</a></li>
-                            <li><a href="#" title="2페이지">2</a></li>
-                            <li><a href="#" title="3페이지">3</a></li>
-                            <li><a href="#" title="4페이지">4</a></li>
-                            <li><a href="#" title="5페이지">5</a></li>
-                            <li><a href="#" title="6페이지">6</a></li>
-                            <li><a href="#" title="7페이지">7</a></li>
-                            <li><a href="#" title="8페이지">8</a></li>
-                            <li><a href="#" title="9페이지">9</a></li>
-                            <li><a href="#" title="10페이지">10</a></li>
-                        </ul>
-                        <a href="#" class="pagination_next">
-                            <i class="hide">다음페이지</i>
-                        </a>
-                        <a href="#" class="pagination_last">
-                            <i class="hide">마지막페이지</i>
-                        </a>
-                    </nav>
-                </div>
-                <div class="colv1_3">
-                    <div class="form_head">
-                        <div class="page_subtitle">국내업체 정보</div>
-                    </div>
-                    <div class="form1 text-left">
-                        <table>
-                            <colgroup>
-                                <col style="width:123px;">
-                                <col style="width:auto;">
-                                <col style="width:123px;">
-                                <col style="width:auto;">
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th><p class="color11">행사명</p></th>
-                                    <td colspan="3">
-                                        <div class="search_box1">
-                                            <input type="text" id="" name="" class="" value="">
-                                            <div class="search_box_btn">
-                                                <button type="button" class="sb_search" onclick="popshow('pop_big2'); mySheetbig2.FitColWidth('5|33|17|15|15|15');">검색</button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th><p class="color11">회사명</p></th>
-                                    <td colspan="3">
-                                        <div class="f0">
-                                            <em class="cn0" style="width: 45px; text-align: left;">영문</em>
-                                            <input type="text" id="" name="" value="" style="width: calc((100% - 187px) / 2); ">
-                                            <em class="cn0 color11" style="width: 65px;">국문</em>
-                                            <input type="text" id="" name="" value="" style="width: calc((100% - 187px) / 2); margin-right: 10px; ">
-                                            <button type="button" class="btn_d2" onclick="popshow('pop_big3'); mySheetbig3.FitColWidth('5|35|15|15|15|15')">불러오기</button>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th><p class="color11">대표자</p></th>
-                                    <td colspan="3">
-                                        <div class="f0">
-                                            <em class="cn0" style="width: 45px; text-align: left;">영문</em>
-                                            <input type="text" id="" name="" value="" style="width: calc((100% - 187px) / 2); ">
-                                            <em class="cn0 color11" style="width: 65px;">국문</em>
-                                            <input type="text" id="" name="" value="" style="width: calc((100% - 187px) / 2); margin-right: 10px; ">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th><p class="color11">사업자등록번호</p></th>
-                                    <td>
-                                        <div class="dashfit3">
-                                            <input type="text" id="" name="" value="">
-                                            <em class="cn2">-</em>
-                                            <input type="text" id="" name="" value="">
-                                            <em class="cn2">-</em>
-                                            <input type="text" id="" name="" value="">
-                                        </div>
-                                    </td>
-                                    <th>사업자유형</th>
-                                    <td>
-                                        <div class="select_box">
-                                            <select name="select1" >
-                                                <option value="">선택</option>
-                                                <option value="01">Manufacturer</option>
-                                                <option value="02">Trading Company</option>
-                                                <option value="03">Distributor(Wholesaler)</option>
-                                                <option value="04">Retailer</option>
-                                                <option value="05">Broker(Consultant commission-based)</option>
-                                                <option value="99">Others</option>
-                                            </select>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th><p class="color11">전화번호</p></th>
-                                    <td>
-                                        <div class="dashfit4">
-                                            <input type="text" id="" name="" value="">
-                                            <em class="cn2">-</em>
-                                            <input type="text" id="" name="" value="">
-                                            <em class="cn2">-</em>
-                                            <input type="text" id="" name="" value="">
-                                            <em class="cn2">-</em>
-                                            <input type="text" id="" name="" value="">
-                                        </div>
-                                    </td>
-                                    <th><p class="color11">홈페이지</p></th>
-                                    <td>
-                                        <input type="text" id="" name="" value="">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>종업원수</th>
-                                    <td>
-                                        <div class="select_box">
-                                            <select name="select1" >
-                                                <option value="">선택</option>
-                                                <option value="01">1-50</option>
-                                                <option value="02">51-100</option>
-                                                <option value="03">101-500</option>
-                                                <option value="04">501-1000</option>
-                                                <option value="05">1001-2000</option>
-                                                <option value="06">over 2000</option>
-                                            </select>
-                                        </div>
-                                    </td>
-                                    <th>연매출액</th>
-                                    <td>
-                                        <div class="select_box">
-                                            <select name="select1" >
-                                                <option value="">선택</option>
-                                                <option value="01">Below US$500,000</option>
-                                                <option value="02">US$500,000 - US$1 Million</option>
-                                                <option value="03">US$1 Million - US$5 Million</option>
-                                                <option value="04">US$5 Million - US$10 Million</option>
-                                                <option value="05">US$10 Million - US$50 Million</option>
-                                                <option value="06">US$50 Million - US$100 Million</option>
-                                                <option value="07">Above US$100 Million</option>
-                                            </select>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>소재지</th>
-                                    <td colspan="3">
-                                        <div class="boxfit2 width_280">
-                                            <div class="select_box">
-                                                <select name="select1">
-                                                    <option value="">선택</option>
-                                                    <option value="11">서울특별시</option>
-                                                    <option value="26">부산광역시</option>
-                                                    <option value="27">대구광역시</option>
-                                                    <option value="28">인천광역시</option>
-                                                    <option value="29">광주광역시</option>
-                                                    <option value="30">대전광역시</option>
-                                                    <option value="31">울산광역시</option>
-                                                    <option value="36">세종특별자치시</option>
-                                                    <option value="41">경기도</option>
-                                                    <option value="42">강원도</option>
-                                                    <option value="43">충청북도</option>
-                                                    <option value="44">충청남도</option>
-                                                    <option value="45">전라북도</option>
-                                                    <option value="46">전라남도</option>
-                                                    <option value="47">경상북도</option>
-                                                    <option value="48">경상남도</option>
-                                                    <option value="50">제주특별자치도</option>
-                                                </select>
-                                            </div>
-                                            <div class="select_box">
-                                                <select name="select1">
-                                                    <option value="">선택</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <input type="text" id="" name="" value="" style="width: calc(100% - 295px); margin-left: 10px;">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>비고</th>
-                                    <td colspan="3">
-                                        <textarea></textarea>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>모집상태</th>
-                                    <td colspan="3">
-                                        <div class="radio_box">
-                                            <input type="radio" id="radio1" name="radio_group1" value="" checked="checked">
-                                            <label for="radio1">확인중</label>
-                                            <input type="radio" id="radio2" name="radio_group1" value="">
-                                            <label for="radio2">참석확정</label>
-                                            <input type="radio" id="radio3" name="radio_group1" value="">
-                                            <label for="radio3">반려</label>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>반려사유</th>
-                                    <td colspan="3">
-                                        <div class="select_box">
-                                            <select name="select7" >
-                                                <option value="">선택</option>
-                                                <option value="01">품목불일치</option>
-                                                <option value="02">의심기업</option>
-                                                <option value="03">기타</option>
-                                            </select>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>모집채널</th>
-                                    <td></td>
-                                    <th>등록일시</th>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div id="ib_container3"></div>
                     </div>
                     <div class="search_button mt20">
+                        <a href="#" class="btn_s1">추가</a>
+                    </div>
+                </section>
+                <section class="col_info mt50">
+                    <div class="form_head">
+                        <div class="page_subtitle">이력관리목록</div>
+                    </div>
+                    <!-- ibsheet -->
+                    <div class="ib_hover">
+                        <div id="ib_container2"></div>
+                    </div>
+                    <div class="search_button mt20">
+                        <a href="#" class="btn_s1">추가</a>
                         <a href="#" class="btn_s1">저장</a>
                     </div>
-                </div>
-            </section>
-            <section class="col_info mt50">
-                <div class="form_head">
-                    <div class="page_subtitle">담당자 목록</div>
-                </div>
-                <!-- ibsheet -->
-                <div class="ib_hover">
-                    <div id="ib_container3"></div>
-                </div>
-                <div class="search_button mt20">
-                    <a href="#" class="btn_s1">추가</a>
-                </div>
-            </section>
-            <section class="col_info mt50">
-                <div class="form_head">
-                    <div class="page_subtitle">이력관리목록</div>
-                </div>
-                <!-- ibsheet -->
-                <div class="ib_hover">
-                    <div id="ib_container2"></div>
-                </div>
-                <div class="search_button mt20">
-                    <a href="#" class="btn_s1">추가</a>
-                    <a href="#" class="btn_s1">저장</a>
-                </div>
-            </section>
+                </section>
+            </div>
+            <!-- e : contents -->
         </div>
-        <!-- e : contents -->
-    </div>
 
 
 <!-- s : popup -->

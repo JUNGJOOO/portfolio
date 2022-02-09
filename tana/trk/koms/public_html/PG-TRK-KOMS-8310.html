@@ -29,477 +29,817 @@
 </head>
 <body>
 <div class="wrap">
-    <div class="container">
-    <div class="container_inner">
-        <div class="contents_wrap">
-        <!-- s : contents -->
-        <div class="contents">
-            <div class="page_head">
-                <div class="page_title">행사현황판</div>
-            </div>
-            <div class="form1 text-left">
-                <table>
-                    <colgroup>
-                        <col style="width:123px;">
-                        <col style="width:auto;">
-                        <col style="width:123px;">
-                        <col style="width:auto">
-                        <col style="width:470px;">
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <th>행사제목</th>
-                            <td>
-                                <div class="search_box1">
-                                    <input type="text" id="" name="" class="" value="">
-                                    <div class="search_box_btn">
-                                        <button type="button" class="sb_search" onclick="popshow('pop_big2'); mySheetbig2.FitColWidth('5|33|17|15|15|15');">검색</button>
-                                    </div>
-                                </div>
-                            </td>
-                            <th rowspan="2">보고서<br/>다운로드</th>
-                            <td rowspan="2">
-                                <div class="search_button text-left">
-                                    <a href="#" id="btn_print" class="btn_s1" title="PRINT">PRINT</a>
-                                    <a href="#" id="btn_hwp" class="btn_s1" title="HWP" >HWP</a>
-                                </div>
-                            </td>
-                            <td rowspan="2">
-                                <div class="text-center">
-                                    <p>행사개최까지</p>
-                                    <strong class="font_30">D-DAY</strong>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>행사기간</th>
-                            <td>2020-01-01 ~ 2020-01-01</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="dash_box1 mt20 mb40">
-                <ul class="dash_col6">
-                    <li>
-                        <p>준비중 (종료)</p>
+    <!-- s : header -->
+    <div class="accessibility">
+        <a href="#contents">본문 바로가기</a>
+        <a href="#gnb">메뉴 바로가기</a>
+    </div>
+    <header>
+        <div class="header">
+            <h1 class="header_logo">
+                <a href="#"><span class="blind">tradeKorea Admin</span></a>
+            </h1>
+            <ul class="header_util">
+                <li class="is_on"><a title="알림" href="#"><span>99</span></a></li>
+                <li class="is_on"><a title="메모" href="#"><span>4</span></a></li>
+                <li class=""><a title="게시판" href="#"><span>0</span></a></li>
+                <li><a title="내정보" href="#"></a></li>
+                <li class="logout"><a title="로그아웃" href="#">Logout</a></li>
+            </ul>
+            <div class="alarm">
+                <ul class="alarm_wrap">
+                    <!-- is_off : 확인 후, is_open : 자세한 내용 열기 -->
+                    <li class="alarm_list is_off">
+                        <div class="alarm_tag">해외비즈니스매칭</div>
+                        <div class="alarm_tit">MORNING GLORY CORP 매칭 건이 있습니다. 해외비즈니스매칭 MORNING GLORY CORP 매칭 건이 있습니다.</div>
+                        <div class="alarm_time">2021-07-21 11:01</div>
+                        <div class="alarm_box">
+                            <div class="alarm_txt">관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요.</div>
+                            <button class="btn_alarm_drop" title="열기"></button>
+                        </div>
+                        <button class="btn_alarm"></button>
                     </li>
-                    <li>
-                        <p>해외업체모집 (종료)</p>
+                    <li class="alarm_list">
+                        <div class="alarm_tag">해외비즈니스매칭</div>
+                        <div class="alarm_tit">MORNING GLORY CORP</div>
+                        <div class="alarm_time">2021-07-21 11:01</div>
+                        <div class="alarm_box">
+                            <div class="alarm_txt">관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요.</div>
+                            <button class="btn_alarm_drop" title="열기"></button>
+                        </div>
+                        <button class="btn_alarm"></button>
                     </li>
-                    <li>
-                        <p>국내업체모집 (종료)</p>
-                    </li>
-                    <li>
-                        <p>매칭중 (종료)</p>
-                    </li>
-                    <li>
-                        <p>스케줄공지 (종료)</p>
-                    </li>
-                    <li class="is_active">
-                        <p>행사개최 (진행중)</p>
+                    <li class="alarm_list is_off">
+                        <div class="alarm_tag">해외비즈니스매칭</div>
+                        <div class="alarm_tit">MORNING GLORY CORP 매칭 건이 있습니다. 해외비즈니스매칭 MORNING GLORY CORP 매칭 건이 있습니다.</div>
+                        <div class="alarm_time">2021-07-21 11:01</div>
+                        <div class="alarm_box">
+                            <div class="alarm_txt">관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요. 관련내용을 입력해주세요.</div>
+                            <button class="btn_alarm_drop" title="열기"></button>
+                        </div>
+                        <button class="btn_alarm"></button>
                     </li>
                 </ul>
             </div>
-            <div class="form_head">
-                <div class="page_subtitle">행사현황판</div>
+        </div>
+    </header>
+    <!-- e : header -->
+    <div class="container">
+    <div class="container_inner">
+        <!-- s : gnb -->
+        <div id="gnb" class="gnb">
+            <div class="gnb_inner">
+            <div class="gnb_wrap">
+                <div class="gnb_top">
+                    <button type="button" class="btn_menu_all" title="전체메뉴 열고닫기">
+                        <span class="btn_line"></span>
+                        <span class="btn_line"></span>
+                        <span class="btn_line"></span>
+                    </button>
+                    <button type="button" class="btn_menu_open" title="열기"></button>
+                    <button type="button" class="btn_menu_close" title="닫기"></button>
+                </div>
+                <div class="gnb_box">
+                    <ul>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>온라인 매칭</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-KOMS-2100.html">인바운드</a></li>
+                                <li><a href="PG-TRK-KOMS-2200.html">인바운드 사후관리</a></li>
+                                <li><a href="PG-TRK-KOMS-2300.html">아웃바운드</a></li>
+                                <li><a href="PG-TRK-KOMS-2400.html">아웃바운드 사후관리</a></li>
+                                <li><a href="PG-TRK-KOMS-2500.html">VIB</a></li>
+                                <li><a href="PG-TRK-KOMS-2600.html">VIB 사후관리</a></li>
+                                <li><a href="PG-TRK-KOMS-2700.html">KITA 임직원 매칭 신청</a></li>
+                                <li><a href="PG-TRK-KOMS-2800.html">그룹 마케팅</a></li>
+                                <li><a href="PG-TRK-KOMS-2900.html">K-ABC 사업관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>TK서비스 관리</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-KOMS-3100.html">해외비즈니스 매칭</a></li>
+                                <li><a href="PG-TRK-KOMS-3200.html">해외비즈니스 매칭 바이어 발굴</a></li>
+                                <li><a href="PG-TRK-KOMS-3300.html">해외비즈니스 매칭번역</a></li>
+                                <li><a href="PG-TRK-KOMS-3400.html">바이어DB 타깃 매칭번역</a></li>
+                                <li><a href="PG-TRK-KOMS-3500.html">빅바이어상시 거래알선</a></li>
+                                <li><a href="PG-TRK-KOMS-3600.html">금융우대 서비스</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>바이어</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-KOMS-4100.html">바이어정보</a></li>
+                                <li><a href="PG-TRK-KOMS-4200.html">바이어마케팅</a></li>
+                                <li><a href="PG-TRK-KOMS-4300.html">바이어정보 대량입력</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>셀러</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-KOMS-5100.html">셀러정보</a></li>
+                                <li><a href="PG-TRK-KOMS-5200.html">셀러마케팅</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>상담회</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-KOMS-6100.html">행사관리</a></li>
+                                <li><a href="PG-TRK-KOMS-6200.html">체크리스트</a></li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>협력사관리</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-KOMS-6310.html">협력사정보</a></li>
+                                        <li><a href="PG-TRK-KOMS-6320.html">협력사평가</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="PG-TRK-KOMS-6400.html">참가해외업체관리</a></li>
+                                <li><a href="PG-TRK-KOMS-6500.html">참가국내업체관리</a></li>
+                                <li><a href="PG-TRK-KOMS-6600.html">매칭 매트릭스</a></li>
+                                <li><a href="PG-TRK-KOMS-6700.html">스케줄관리</a></li>
+                                <li><a href="PG-TRK-KOMS-6800.html">참가업체스케줄</a></li>
+                                <li><a href="PG-TRK-KOMS-6900.html">항공/숙박 정보</a></li>
+                                <li><a href="PG-TRK-KOMS-7000.html">통역원 배정관리</a></li>
+                                <li><a href="PG-TRK-KOMS-7100.html">통역원관리</a></li>
+                                <li><a href="PG-TRK-KOMS-7200.html">사후관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>분석</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>온라인매칭</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-KOMS-8110.html">매칭현황판</a></li>
+                                        <li><a href="PG-TRK-KOMS-8120.html">인바운드</a></li>
+                                        <li><a href="PG-TRK-KOMS-8130.html">아웃바운드</a></li>
+                                        <li><a href="PG-TRK-KOMS-8140.html">VIB</a></li>
+                                        <li><a href="PG-TRK-KOMS-8150.html">매칭실적</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>트레이드코리아 서비스</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-KOMS-8210.html">해외비즈니스매칭</a></li>
+                                        <li><a href="PG-TRK-KOMS-8220.html">빅바이어상시거래알선</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>오프라인매칭</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-KOMS-8310.html">행사현황판</a></li>
+                                        <li><a href="PG-TRK-KOMS-8320.html">행사집계표</a></li>
+                                        <li><a href="PG-TRK-KOMS-8330.html">상담일지</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>데이터베이스</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-KOMS-8410.html">바이어</a></li>
+                                        <li><a href="PG-TRK-KOMS-8420.html">셀러</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="PG-TRK-KOMS-8500.html">캠페인이력</a></li>
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>K-ABC 사업현황</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="PG-TRK-KOMS-8610.html">전체현황</a></li>
+                                        <li><a href="PG-TRK-KOMS-8620.html">업체별 현황</a></li>
+                                        <li><a href="PG-TRK-KOMS-8630.html">주간현황</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>AI 바이어 매칭</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li>
+                                    <a href="#" class="gnb_depth3_title"><span>AI 셀러추천</span><b class="caret"></b></a>
+                                    <ul class="gnb_depth3">
+                                        <li><a href="#">AI추천현황</a></li>
+                                        <li><a href="#">셀러추천결과</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">추천이력서관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="gnb_list">
+                            <a href="#" class="gnb_title"><span>관리자</span><b class="caret"></b></a>
+                            <ul class="gnb_depth2">
+                                <li><a href="PG-TRK-KOMS-9100.html">사용자관리</a></li>
+                                <li><a href="PG-TRK-KOMS-9200.html">캠페인 콘텐츠</a></li>
+                                <li><a href="PG-TRK-KOMS-9300.html">메일스킨</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <section class="col_group">
-                <div class="colv3">
-                    <div>
-                        <div class="page_subtitle3">해외업체모집</div>
-                        <a class="page_more" href="#" title="해외업체모집 자세히보기">자세히보기</a>
-                    </div>
-                    <div class="offline_box">
-                        <div class="offline_count">
-                            <div>
-                                <strong>32</strong>
-                                <em>건</em>
-                            </div>
-                        </div>
-                        <div class="offline_cont">
-                            <div class="offline_tit">
-                                <div class="f_l">온라인</div>
-                                <div class="f_r">발송 / 100건</div>
-                            </div>
-                            <div class="offline_bar bar_c1">
-                                <div class="bar_tit">
-                                    <div class="f_l">수신</div>
-                                    <div class="f_r">60건</div>
-                                </div>
-                                <div class="bar_box">
-                                    <span class="bar" style="width: 60%;">
-                                        <em>60</em><i>%</i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="offline_bar bar_c2">
-                                <div class="bar_tit">
-                                    <div class="f_l">확정</div>
-                                    <div class="f_r">40건</div>
-                                </div>
-                                <div class="bar_box">
-                                    <span class="bar" style="width: 40%;">
-                                        <em>40</em><i>%</i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="offline_tit mt20">
-                                <div class="f_l">오프라인</div>
-                                <div class="f_r">발송 / 0건</div>
-                            </div>
-                            <div class="offline_bar bar_c2">
-                                <div class="bar_tit">
-                                    <div class="f_l">확정</div>
-                                    <div class="f_r">70건</div>
-                                </div>
-                                <div class="bar_box">
-                                    <span class="bar" style="width: 70%;">
-                                        <em>70</em><i>%</i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="colv3">
-                    <div>
-                        <div class="page_subtitle3">국내업체모집</div>
-                        <div class="checkbox ml10 vta_top">
-                            <input type="checkbox" name="" id="check1" value="">
-                            <label for="check1">Tradekorea 공개</label>
-                        </div>
-                        <a class="page_more" href="#" title="국내업체모집 자세히보기">자세히보기</a>
-                    </div>
-                    <div class="offline_box">
-                        <div class="offline_count">
-                            <div>
-                                <strong>200</strong>
-                                <em>건</em>
-                            </div>
-                        </div>
-                        <div class="offline_cont">
-                            <div class="offline_tit">
-                                <div class="f_l">온라인</div>
-                                <div class="f_r">발송 / 170건</div>
-                            </div>
-                            <div class="offline_bar bar_c1">
-                                <div class="bar_tit">
-                                    <div class="f_l">수신</div>
-                                    <div class="f_r">100건</div>
-                                </div>
-                                <div class="bar_box">
-                                    <span class="bar" style="width: 100%;">
-                                        <em>100</em><i>%</i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="offline_bar bar_c2">
-                                <div class="bar_tit">
-                                    <div class="f_l">확정</div>
-                                    <div class="f_r">70건</div>
-                                </div>
-                                <div class="bar_box">
-                                    <span class="bar" style="width: 70%;">
-                                        <em>70</em><i>%</i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="offline_tit mt20">
-                                <div class="f_l">오프라인</div>
-                                <div class="f_r">발송 / 30건</div>
-                            </div>
-                            <div class="offline_bar bar_c2">
-                                <div class="bar_tit">
-                                    <div class="f_l">확정</div>
-                                    <div class="f_r">30건</div>
-                                </div>
-                                <div class="bar_box">
-                                    <span class="bar" style="width: 30%;">
-                                        <em>30</em><i>%</i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="colv3">
-                    <div>
-                        <div class="page_subtitle3">매칭현황</div>
-                        <a class="page_more" href="#" title="매칭현황 자세히보기">자세히보기</a>
-                    </div>
-                    <div class="offline_box">
-                        <div class="offline_count">
-                            <div>
-                                <strong>28</strong>
-                                <em>%</em>
-                                <span>매칭</span>
-                            </div>
-                        </div>
-                        <div class="offline_cont">
-                            <div class="offline_tit">
-                                <div class="f_l">미팅건수</div>
-                                <div class="f_r">전체 / 100건</div>
-                            </div>
-                            <div class="offline_bar bar_c4">
-                                <div class="bar_tit">
-                                    <div class="f_l">매칭</div>
-                                    <div class="f_r">60건</div>
-                                </div>
-                                <div class="bar_box">
-                                    <span class="bar" style="width: 60%;">
-                                        <em>60</em><i>%</i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="offline_bar bar_c5">
-                                <div class="bar_tit">
-                                    <div class="f_l">미정</div>
-                                    <div class="f_r">40건</div>
-                                </div>
-                                <div class="bar_box">
-                                    <span class="bar" style="width: 40%;">
-                                        <em>40</em><i>%</i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="offline_tit mt10">
-                                <div class="f_l">참가회사</div>
-                            </div>
-                            <ul class="offline_sum">
-                                <li>국내<em>200</em>업체</li>
-                                <li>해외<em>45</em>업체</li>
+            </div>
+        </div>
+        <div class="sitemap">
+            <ul class="sitemap_container">
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">온라인 매칭</strong>
+                    <ul>
+                        <li><a href="PG-TRK-KOMS-2100.html">인바운드</a></li>
+                        <li><a href="PG-TRK-KOMS-2200.html">인바운드 사후관리</a></li>
+                        <li><a href="PG-TRK-KOMS-2300.html">아웃바운드</a></li>
+                        <li><a href="PG-TRK-KOMS-2400.html">아웃바운드 사후관리</a></li>
+                        <li><a href="PG-TRK-KOMS-2500.html">VIB</a></li>
+                        <li><a href="PG-TRK-KOMS-2600.html">VIB 사후관리</a></li>
+                        <li><a href="PG-TRK-KOMS-2700.html">KITA 임직원 매칭 신청</a></li>
+                        <li><a href="PG-TRK-KOMS-2800.html">그룹 마케팅</a></li>
+                        <li><a href="PG-TRK-KOMS-2900.html">K-ABC 사업관리</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">TK서비스 관리</strong>
+                    <ul>
+                        <li><a href="PG-TRK-KOMS-3100.html">해외비즈니스 매칭</a></li>
+                        <li><a href="PG-TRK-KOMS-3200.html">해외비즈니스 매칭 바이어 발굴</a></li>
+                        <li><a href="PG-TRK-KOMS-3300.html">해외비즈니스 매칭번역</a></li>
+                        <li><a href="PG-TRK-KOMS-3400.html">바이어DB 타깃 매칭번역</a></li>
+                        <li><a href="PG-TRK-KOMS-3500.html">빅바이어상시 거래알선</a></li>
+                        <li><a href="PG-TRK-KOMS-3600.html">금융우대 서비스</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">바이어</strong>
+                    <ul>
+                        <li><a href="PG-TRK-KOMS-4100.html">바이어정보</a></li>
+                        <li><a href="PG-TRK-KOMS-4200.html">바이어마케팅</a></li>
+                        <li><a href="PG-TRK-KOMS-4300.html">바이어정보 대량입력</a></li>
+                    </ul>
+                </li>
+                 <li class="sitemap_list">
+                    <strong class="sitemap_title">셀러</strong>
+                    <ul>
+                        <li><a href="PG-TRK-KOMS-5100.html">셀러정보</a></li>
+                        <li><a href="PG-TRK-KOMS-5200.html">셀러마케팅</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">상담회</strong>
+                    <ul>
+                        <li><a href="PG-TRK-KOMS-6100.html">행사관리</a></li>
+                        <li><a href="PG-TRK-KOMS-6200.html">체크리스트</a></li>
+                        <li>
+                            <a href="#">협력사관리</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-KOMS-6310.html">협력사정보</a></li>
+                                <li><a href="PG-TRK-KOMS-6320.html">협력사평가</a></li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="col_group mt30">
-                <div class="colv3">
-                    <div>
-                        <div class="page_subtitle3">스케줄통보</div>
-                        <a class="page_more" href="#" title="스케줄통보 자세히보기">자세히보기</a>
-                    </div>
-                    <div class="offline_box">
-                        <div class="offline_count">
-                            <div>
-                                <strong>70</strong>
-                                <em>%</em>
-                                <span>수신확인</span>
-                            </div>
-                        </div>
-                        <div class="offline_cont">
-                            <div class="offline_tit">
-                                <div class="f_l">발송</div>
-                                <div class="f_r">0건</div>
-                            </div>
-                            <ul class="offline_sum">
-                                <li>1차<em>100</em>건</li>
-                                <li>2차<em>2</em>건</li>
+                        </li>
+                        <li><a href="PG-TRK-KOMS-6400.html">참가해외업체관리</a></li>
+                        <li><a href="PG-TRK-KOMS-6500.html">참가국내업체관리</a></li>
+                        <li><a href="PG-TRK-KOMS-6600.html">매칭 매트릭스</a></li>
+                        <li><a href="PG-TRK-KOMS-6700.html">스케줄관리</a></li>
+                        <li><a href="PG-TRK-KOMS-6800.html">참가업체스케줄</a></li>
+                        <li><a href="PG-TRK-KOMS-6900.html">항공/숙박 정보</a></li>
+                        <li><a href="PG-TRK-KOMS-7000.html">통역원 배정관리</a></li>
+                        <li><a href="PG-TRK-KOMS-7100.html">통역원관리</a></li>
+                        <li><a href="PG-TRK-KOMS-7200.html">사후관리</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">분석</strong>
+                    <ul>
+                        <li>
+                            <a href="#">온라인매칭</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-KOMS-8110.html">매칭현황판</a></li>
+                                <li><a href="PG-TRK-KOMS-8120.html">인바운드</a></li>
+                                <li><a href="PG-TRK-KOMS-8130.html">아웃바운드</a></li>
+                                <li><a href="PG-TRK-KOMS-8140.html">VIB</a></li>
+                                <li><a href="PG-TRK-KOMS-8150.html">매칭실적</a></li>
                             </ul>
-                            <div class="offline_tit mt10">
-                                <div class="f_l">수신</div>
-                                <div class="f_r">0건</div>
-                            </div>
-                            <ul class="offline_sum">
-                                <li>1차<em>100</em>건</li>
-                                <li>2차<em>2</em>건</li>
+                        </li>
+                        <li>
+                            <a href="#">트레이드코리아 서비스</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-KOMS-8210.html">해외비즈니스매칭</a></li>
+                                <li><a href="PG-TRK-KOMS-8220.html">빅바이어상시거래알선</a></li>
                             </ul>
-                            <div class="offline_tit mt10">
-                                <div class="f_l">오류</div>
-                                <div class="f_r">0건</div>
-                            </div>
-                            <ul class="offline_sum">
-                                <li>1차<em>100</em>건</li>
-                                <li>2차<em>2</em>건</li>
+                        </li>
+                        <li>
+                            <a href="#">오프라인매칭</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-KOMS-8310.html">행사현황판</a></li>
+                                <li><a href="PG-TRK-KOMS-8320.html">행사집계표</a></li>
+                                <li><a href="PG-TRK-KOMS-8330.html">상담일지</a></li>
                             </ul>
-                            
-                        </div>
-                    </div>
+                        </li>
+                        <li>
+                            <a href="#">데이터베이스</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-KOMS-8410.html">바이어</a></li>
+                                <li><a href="PG-TRK-KOMS-8420.html">셀러</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="PG-TRK-KOMS-8500.html">캠페인이력</a></li>
+                        <li>
+                            <a href="#">K-ABC 사업현황</a>
+                            <ul class="sitemap_depth3">
+                                <li><a href="PG-TRK-KOMS-8610.html">전체현황</a></li>
+                                <li><a href="PG-TRK-KOMS-8620.html">업체별 현황</a></li>
+                                <li><a href="PG-TRK-KOMS-8630.html">주간현황</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">AI 바이어 매칭</strong>
+                    <ul class="gnb_depth2">
+                        <li>
+                            <a href="#">AI 셀러추천</a>
+                            <ul class="gnb_depth3">
+                                <li><a href="#">AI추천현황</a></li>
+                                <li><a href="#">셀러추천결과</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">추천이력서관리</a></li>
+                    </ul>
+                </li>
+                <li class="sitemap_list">
+                    <strong class="sitemap_title">관리자</strong>
+                    <ul>
+                        <li><a href="PG-TRK-KOMS-9100.html">사용자관리</a></li>
+                        <li><a href="PG-TRK-KOMS-9200.html">캠페인 콘텐츠</a></li>
+                        <li><a href="PG-TRK-KOMS-9300.html">메일스킨</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- e : gnb -->
+        <div class="contents_wrap">
+            <!-- s : contents -->
+            <div class="contents">
+                <div class="page_head">
+                    <div class="page_title">행사현황판</div>
                 </div>
-                <div class="colv3">
-                    <div>
-                        <div class="page_subtitle3">여행사정보</div>
-                        <a class="page_more" href="#" title="여행사정보 자세히보기">자세히보기</a>
-                    </div>
-                    <div class="offline_box">
-                        <div class="offline_count">
-                            <div>
-                                <strong>10</strong>
-                                <em>%</em>
-                                <span>진행</span>
-                            </div>
-                        </div>
-                        <div class="offline_cont">
-                            <div class="offline_tit">
-                                <div class="f_l">참가확정</div>
-                                <div class="f_r">10건</div>
-                            </div>
-                            <div class="offline_bar bar_c3">
-                                <div class="bar_tit">
-                                    <div class="f_l">항공발권</div>
-                                    <div class="f_r">5건</div>
-                                </div>
-                                <div class="bar_box">
-                                    <span class="bar" style="width: 50%;">
-                                        <em>50</em><i>%</i>
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="offline_bar bar_c1">
-                                <div class="bar_tit">
-                                    <div class="f_l">숙박지원</div>
-                                    <div class="f_r">5건</div>
-                                </div>
-                                <div class="bar_box">
-                                    <span class="bar" style="width: 50%;">
-                                        <em>50</em><i>%</i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="colv3">
-                    <div>
-                        <div class="page_subtitle3">현장상황</div>
-                        <a class="page_more" href="#" title="현장상황 자세히보기">자세히보기</a>
-                    </div>
-                    <div class="offline_box">
-                        <div class="offline_count">
-                            <div>
-                                <strong class="">32</strong>
-                                <em>%</em>
-                                <span>성사</span>
-                            </div>
-                        </div>
-                        <div class="offline_cont">
-                            <div class="offline_tit mt20">
-                                <div class="f_l">참석률</div>
-                                <div class="f_r">미참석 / 960건</div>
-                            </div>
-                            <div class="offline_bar bar_c6">
-                                <div class="bar_tit">
-                                    <div class="f_l">상담건수</div>
-                                    <div class="f_r">70건</div>
-                                </div>
-                                <div class="bar_box">
-                                    <span class="bar" style="width: 70%;">
-                                        <em>70</em><i>%</i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-
-
-
-
-
-<!-- s : popup -->
-<div class="pop" id="pop_big2">
-<div class="pop_bg"></div>
-<div class="pop_wrap width_1200">
-    <div class="pop_head"><strong>행사목록</strong></div>
-    <section class="pop_body height_580">
-        <div class="content">
-            <div class="clearfix mb30">
-                <div class="form1 text-left width_900 f_l">
+                <div class="form1 text-left">
                     <table>
                         <colgroup>
-                            <col style="width: 110px;">
-                            <col style="width: auto">
-                            <col style="width: 110px;">
-                            <col style="width: auto">
+                            <col style="width:123px;">
+                            <col style="width:auto;">
+                            <col style="width:123px;">
+                            <col style="width:auto">
+                            <col style="width:470px;">
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th>행사상태</th>
+                                <th>행사제목</th>
                                 <td>
-                                    <div class="select_box">
-                                        <select name="select1" >
-                                            <option value="">선택</option>
-                                            <option value="01">준비중</option>
-                                            <option value="02">진행중</option>
-                                            <option value="03">완료</option>
-                                        </select>
+                                    <div class="search_box1">
+                                        <input type="text" id="" name="" class="" value="">
+                                        <div class="search_box_btn">
+                                            <button type="button" class="sb_search" onclick="popshow('pop_big2'); mySheetbig2.FitColWidth('5|33|17|15|15|15');">검색</button>
+                                        </div>
                                     </div>
                                 </td>
-                                <th>행사명</th>
-                                <td>
-                                    <input type="text" id="" name="" value="">
+                                <th rowspan="2">보고서<br/>다운로드</th>
+                                <td rowspan="2">
+                                    <div class="search_button text-left">
+                                        <a href="#" id="btn_print" class="btn_s1" title="PRINT">PRINT</a>
+                                        <a href="#" id="btn_hwp" class="btn_s1" title="HWP" >HWP</a>
+                                    </div>
                                 </td>
+                                <td rowspan="2">
+                                    <div class="text-center">
+                                        <p>행사개최까지</p>
+                                        <strong class="font_30">D-DAY</strong>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>행사기간</th>
+                                <td>2020-01-01 ~ 2020-01-01</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="search_button f_r">
-                    <a href="#" id="btn_clear" class="btn_s1" title="초기화">초기화</a>
-                    <a href="#" id="btn_search" class="btn_s1" title="검색">검색</a>
+                <div class="dash_box1 mt20 mb40">
+                    <ul class="dash_col6">
+                        <li>
+                            <p>준비중 (종료)</p>
+                        </li>
+                        <li>
+                            <p>해외업체모집 (종료)</p>
+                        </li>
+                        <li>
+                            <p>국내업체모집 (종료)</p>
+                        </li>
+                        <li>
+                            <p>매칭중 (종료)</p>
+                        </li>
+                        <li>
+                            <p>스케줄공지 (종료)</p>
+                        </li>
+                        <li class="is_active">
+                            <p>행사개최 (진행중)</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form_head">
+                    <div class="page_subtitle">행사현황판</div>
+                </div>
+                <section class="col_group">
+                    <div class="colv3">
+                        <div>
+                            <div class="page_subtitle3">해외업체모집</div>
+                            <a class="page_more" href="#" title="해외업체모집 자세히보기">자세히보기</a>
+                        </div>
+                        <div class="offline_box">
+                            <div class="offline_count">
+                                <div>
+                                    <strong>32</strong>
+                                    <em>건</em>
+                                </div>
+                            </div>
+                            <div class="offline_cont">
+                                <div class="offline_tit">
+                                    <div class="f_l">온라인</div>
+                                    <div class="f_r">발송 / 100건</div>
+                                </div>
+                                <div class="offline_bar bar_c1">
+                                    <div class="bar_tit">
+                                        <div class="f_l">수신</div>
+                                        <div class="f_r">60건</div>
+                                    </div>
+                                    <div class="bar_box">
+                                        <span class="bar" style="width: 60%;">
+                                            <em>60</em><i>%</i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="offline_bar bar_c2">
+                                    <div class="bar_tit">
+                                        <div class="f_l">확정</div>
+                                        <div class="f_r">40건</div>
+                                    </div>
+                                    <div class="bar_box">
+                                        <span class="bar" style="width: 40%;">
+                                            <em>40</em><i>%</i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="offline_tit mt20">
+                                    <div class="f_l">오프라인</div>
+                                    <div class="f_r">발송 / 0건</div>
+                                </div>
+                                <div class="offline_bar bar_c2">
+                                    <div class="bar_tit">
+                                        <div class="f_l">확정</div>
+                                        <div class="f_r">70건</div>
+                                    </div>
+                                    <div class="bar_box">
+                                        <span class="bar" style="width: 70%;">
+                                            <em>70</em><i>%</i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colv3">
+                        <div>
+                            <div class="page_subtitle3">국내업체모집</div>
+                            <div class="checkbox ml10 vta_top">
+                                <input type="checkbox" name="" id="check1" value="">
+                                <label for="check1">Tradekorea 공개</label>
+                            </div>
+                            <a class="page_more" href="#" title="국내업체모집 자세히보기">자세히보기</a>
+                        </div>
+                        <div class="offline_box">
+                            <div class="offline_count">
+                                <div>
+                                    <strong>200</strong>
+                                    <em>건</em>
+                                </div>
+                            </div>
+                            <div class="offline_cont">
+                                <div class="offline_tit">
+                                    <div class="f_l">온라인</div>
+                                    <div class="f_r">발송 / 170건</div>
+                                </div>
+                                <div class="offline_bar bar_c1">
+                                    <div class="bar_tit">
+                                        <div class="f_l">수신</div>
+                                        <div class="f_r">100건</div>
+                                    </div>
+                                    <div class="bar_box">
+                                        <span class="bar" style="width: 100%;">
+                                            <em>100</em><i>%</i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="offline_bar bar_c2">
+                                    <div class="bar_tit">
+                                        <div class="f_l">확정</div>
+                                        <div class="f_r">70건</div>
+                                    </div>
+                                    <div class="bar_box">
+                                        <span class="bar" style="width: 70%;">
+                                            <em>70</em><i>%</i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="offline_tit mt20">
+                                    <div class="f_l">오프라인</div>
+                                    <div class="f_r">발송 / 30건</div>
+                                </div>
+                                <div class="offline_bar bar_c2">
+                                    <div class="bar_tit">
+                                        <div class="f_l">확정</div>
+                                        <div class="f_r">30건</div>
+                                    </div>
+                                    <div class="bar_box">
+                                        <span class="bar" style="width: 30%;">
+                                            <em>30</em><i>%</i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colv3">
+                        <div>
+                            <div class="page_subtitle3">매칭현황</div>
+                            <a class="page_more" href="#" title="매칭현황 자세히보기">자세히보기</a>
+                        </div>
+                        <div class="offline_box">
+                            <div class="offline_count">
+                                <div>
+                                    <strong>28</strong>
+                                    <em>%</em>
+                                    <span>매칭</span>
+                                </div>
+                            </div>
+                            <div class="offline_cont">
+                                <div class="offline_tit">
+                                    <div class="f_l">미팅건수</div>
+                                    <div class="f_r">전체 / 100건</div>
+                                </div>
+                                <div class="offline_bar bar_c4">
+                                    <div class="bar_tit">
+                                        <div class="f_l">매칭</div>
+                                        <div class="f_r">60건</div>
+                                    </div>
+                                    <div class="bar_box">
+                                        <span class="bar" style="width: 60%;">
+                                            <em>60</em><i>%</i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="offline_bar bar_c5">
+                                    <div class="bar_tit">
+                                        <div class="f_l">미정</div>
+                                        <div class="f_r">40건</div>
+                                    </div>
+                                    <div class="bar_box">
+                                        <span class="bar" style="width: 40%;">
+                                            <em>40</em><i>%</i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="offline_tit mt10">
+                                    <div class="f_l">참가회사</div>
+                                </div>
+                                <ul class="offline_sum">
+                                    <li>국내<em>200</em>업체</li>
+                                    <li>해외<em>45</em>업체</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="col_group mt30">
+                    <div class="colv3">
+                        <div>
+                            <div class="page_subtitle3">스케줄통보</div>
+                            <a class="page_more" href="#" title="스케줄통보 자세히보기">자세히보기</a>
+                        </div>
+                        <div class="offline_box">
+                            <div class="offline_count">
+                                <div>
+                                    <strong>70</strong>
+                                    <em>%</em>
+                                    <span>수신확인</span>
+                                </div>
+                            </div>
+                            <div class="offline_cont">
+                                <div class="offline_tit">
+                                    <div class="f_l">발송</div>
+                                    <div class="f_r">0건</div>
+                                </div>
+                                <ul class="offline_sum">
+                                    <li>1차<em>100</em>건</li>
+                                    <li>2차<em>2</em>건</li>
+                                </ul>
+                                <div class="offline_tit mt10">
+                                    <div class="f_l">수신</div>
+                                    <div class="f_r">0건</div>
+                                </div>
+                                <ul class="offline_sum">
+                                    <li>1차<em>100</em>건</li>
+                                    <li>2차<em>2</em>건</li>
+                                </ul>
+                                <div class="offline_tit mt10">
+                                    <div class="f_l">오류</div>
+                                    <div class="f_r">0건</div>
+                                </div>
+                                <ul class="offline_sum">
+                                    <li>1차<em>100</em>건</li>
+                                    <li>2차<em>2</em>건</li>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colv3">
+                        <div>
+                            <div class="page_subtitle3">여행사정보</div>
+                            <a class="page_more" href="#" title="여행사정보 자세히보기">자세히보기</a>
+                        </div>
+                        <div class="offline_box">
+                            <div class="offline_count">
+                                <div>
+                                    <strong>10</strong>
+                                    <em>%</em>
+                                    <span>진행</span>
+                                </div>
+                            </div>
+                            <div class="offline_cont">
+                                <div class="offline_tit">
+                                    <div class="f_l">참가확정</div>
+                                    <div class="f_r">10건</div>
+                                </div>
+                                <div class="offline_bar bar_c3">
+                                    <div class="bar_tit">
+                                        <div class="f_l">항공발권</div>
+                                        <div class="f_r">5건</div>
+                                    </div>
+                                    <div class="bar_box">
+                                        <span class="bar" style="width: 50%;">
+                                            <em>50</em><i>%</i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="offline_bar bar_c1">
+                                    <div class="bar_tit">
+                                        <div class="f_l">숙박지원</div>
+                                        <div class="f_r">5건</div>
+                                    </div>
+                                    <div class="bar_box">
+                                        <span class="bar" style="width: 50%;">
+                                            <em>50</em><i>%</i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colv3">
+                        <div>
+                            <div class="page_subtitle3">현장상황</div>
+                            <a class="page_more" href="#" title="현장상황 자세히보기">자세히보기</a>
+                        </div>
+                        <div class="offline_box">
+                            <div class="offline_count">
+                                <div>
+                                    <strong class="">32</strong>
+                                    <em>%</em>
+                                    <span>성사</span>
+                                </div>
+                            </div>
+                            <div class="offline_cont">
+                                <div class="offline_tit mt20">
+                                    <div class="f_l">참석률</div>
+                                    <div class="f_r">미참석 / 960건</div>
+                                </div>
+                                <div class="offline_bar bar_c6">
+                                    <div class="bar_tit">
+                                        <div class="f_l">상담건수</div>
+                                        <div class="f_r">70건</div>
+                                    </div>
+                                    <div class="bar_box">
+                                        <span class="bar" style="width: 70%;">
+                                            <em>70</em><i>%</i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+
+
+
+    <!-- s : popup -->
+    <div class="pop" id="pop_big2">
+    <div class="pop_bg"></div>
+    <div class="pop_wrap width_1200">
+        <div class="pop_head"><strong>행사목록</strong></div>
+        <section class="pop_body height_580">
+            <div class="content">
+                <div class="clearfix mb30">
+                    <div class="form1 text-left width_900 f_l">
+                        <table>
+                            <colgroup>
+                                <col style="width: 110px;">
+                                <col style="width: auto">
+                                <col style="width: 110px;">
+                                <col style="width: auto">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th>행사상태</th>
+                                    <td>
+                                        <div class="select_box">
+                                            <select name="select1" >
+                                                <option value="">선택</option>
+                                                <option value="01">준비중</option>
+                                                <option value="02">진행중</option>
+                                                <option value="03">완료</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <th>행사명</th>
+                                    <td>
+                                        <input type="text" id="" name="" value="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="search_button f_r">
+                        <a href="#" id="btn_clear" class="btn_s1" title="초기화">초기화</a>
+                        <a href="#" id="btn_search" class="btn_s1" title="검색">검색</a>
+                    </div>
+                </div>
+                <!-- ibsheet -->
+                <div class="ib_hover">
+                    <div id="ib_big2"></div>
                 </div>
             </div>
-            <!-- ibsheet -->
-            <div class="ib_hover">
-                <div id="ib_big2"></div>
-            </div>
-        </div>
-    </section>
-    <button type="button" class="pop_close" onclick="pophide('pop_big2')">
-        <span class="line"></span>
-        <span class="line"></span>
-    </button>
-</div>
-</div>
-<!-- e : popup -->
-<script type="text/javascript">
-$(document).ready(function(){ 
-let ib_big2 = {
-    initialize:function(){
-        let initData = {
-            Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:2},
-            HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
-            Cols:[
-                { Header:"번호",          SaveName:"1", Align:"Center", Type:"Number"},
-                { Header:"행사명",        SaveName:"2", Align:"Center", Type:"Text"},
-                { Header:"행사기간",      SaveName:"3", Align:"Center", Type:"Date", Format:"yyyy-MM-dd ~ yyyy-MM-dd"},
-                { Header:"행사운영분석",  SaveName:"4", Align:"Center", Type:"Text"},
-                { Header:"행사담당자",    SaveName:"5", Align:"Center", Type:"Text"},
-                { Header:"행사상태",      SaveName:"6", Align:"Center", Type:"Text"}
+        </section>
+        <button type="button" class="pop_close" onclick="pophide('pop_big2')">
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+    </div>
+    <!-- e : popup -->
+    <script type="text/javascript">
+    $(document).ready(function(){ 
+    let ib_big2 = {
+        initialize:function(){
+            let initData = {
+                Cfg:{SearchMode:2, Page:10, FrozenCol:0, UseHeaderActionMenu:false, MouseHoverMode:1, SelectionRowsMode:1, AutoFitColWidth:"resize", DeferredVScroll:1, SizeMode:2},
+                HeaderMode:{Sort:1, ColMove:0, ColResize:0, HeaderCheck:1},
+                Cols:[
+                    { Header:"번호",          SaveName:"1", Align:"Center", Type:"Number"},
+                    { Header:"행사명",        SaveName:"2", Align:"Center", Type:"Text"},
+                    { Header:"행사기간",      SaveName:"3", Align:"Center", Type:"Date", Format:"yyyy-MM-dd ~ yyyy-MM-dd"},
+                    { Header:"행사운영분석",  SaveName:"4", Align:"Center", Type:"Text"},
+                    { Header:"행사담당자",    SaveName:"5", Align:"Center", Type:"Text"},
+                    { Header:"행사상태",      SaveName:"6", Align:"Center", Type:"Text"}
+                ]
+            }
+            const container = $("#ib_big2")[0];
+            createIBSheet2(container,'mySheetbig2','100%','441px');
+            IBS_InitSheet(mySheetbig2,initData);
+            mySheetbig2.SetEditable(false);
+            this.doAction();
+        },
+        doAction:function(){
+            mySheetbig2.LoadSearchData(this.data,{Sync:1});
+            if ($("#pro-options").val() == "frozen-col") {
+                mySheetbig2.SetColWidth("sTitle", 100);
+            } else {
+                mySheetbig2.FitColWidth("5|33|17|15|15|15");
+            }
+        },
+        data:{
+            data:[
+                {
+                    1:"1",
+                    2:"",
+                    3:"2020-01-01~2020-01-01",
+                    4:"",
+                    5:"",
+                    6:"",
+                }
             ]
         }
-        const container = $("#ib_big2")[0];
-        createIBSheet2(container,'mySheetbig2','100%','441px');
-        IBS_InitSheet(mySheetbig2,initData);
-        mySheetbig2.SetEditable(false);
-        this.doAction();
-    },
-    doAction:function(){
-        mySheetbig2.LoadSearchData(this.data,{Sync:1});
-        if ($("#pro-options").val() == "frozen-col") {
-            mySheetbig2.SetColWidth("sTitle", 100);
-        } else {
-            mySheetbig2.FitColWidth("5|33|17|15|15|15");
-        }
-    },
-    data:{
-        data:[
-            {
-                1:"1",
-                2:"",
-                3:"2020-01-01~2020-01-01",
-                4:"",
-                5:"",
-                6:"",
-            }
-        ]
-    }
-};
-ib_big2.initialize();
-});
-</script>
+    };
+    ib_big2.initialize();
+    });
+    </script>
 
 
 
@@ -510,8 +850,8 @@ ib_big2.initialize();
 
 
 
-        </div>
-        <!-- e : contents -->
+            </div>
+            <!-- e : contents -->
         </div>
     </div>
     </div>
