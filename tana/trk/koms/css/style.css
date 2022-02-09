@@ -5,7 +5,7 @@
 .header_logo            { width: 230px; height: 42px; margin: 27px 0 0 30px; background: url(../images/logo.jpg) no-repeat;}
 .main .header_logo      { width: 230px; height: 42px; margin: 27px 0 0 30px; background: url(../images/logo_main.jpg) no-repeat;}
 .sitemap .sitemap_list  { width: 200px !important;}
-.sitemap_open.sitemap   { background-color: #525fab; min-height: 1000px;}
+.sitemap_open.sitemap   { background-color: #525fab; min-height: 1100px;}
 .page_more              { float: right; display: block; width: 30px; height: 25px; font-size: 0; background: url(../images/common.png) no-repeat; background-position: -137px -10px;}
 
 
