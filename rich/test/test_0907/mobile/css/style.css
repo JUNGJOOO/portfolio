@@ -185,14 +185,12 @@ input:focus:-ms-input-placeholder{ /* Internet Explorer 10+ */ color:transparent
 .sec2 .sec2_cont::after{
     position: absolute; right: -12px; top: -103px;
     width: 163px; height: 135px;
-    background: url(../images/bg_olchi1.png) no-repeat;
+    background: url(../images/bg_olchi2.png) no-repeat;
+    background-size: 100% auto;
     content: '';
 }
 .sec2 .sec2_cont *  { font-family: 'NotoSans';}
 
-
-
-/* 여기하는중 */
 
 
 
