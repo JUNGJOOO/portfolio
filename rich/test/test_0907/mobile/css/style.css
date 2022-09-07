@@ -234,8 +234,8 @@ body.is_clipped .lyback	{ display: block;}
 	/* 상담신청완료 폼 ************************************************************************************************************************/
     .layer_area_mo .lycontact 		     { display: block; width: 330px; margin:0 auto; padding: 53px 0; background-color: #fff; border-radius: 10px; box-shadow: 0 10px 10px rgba(0,0,0,0.2); text-align: center; -webkit-box-sizing:border-box;box-sizing:border-box;}
 	.layer_area_mo .lycontact .tit	     { line-height: 1; padding-bottom: 160px; font-size: 20px; font-weight: 700; letter-spacing: -0.5px;}
-    .layer_area_mo .lycontact .lycontact_ver2 .tit { background: url(../images/icon_work_pc.png) no-repeat bottom center; background-size: 135px 135px;}
-    .layer_area_mo .lycontact .lycontact_ver1 .tit { background: url(../images/icon_over_pc.png) no-repeat bottom center; background-size: 135px 135px;}
+    .layer_area_mo .lycontact .lycontact_ver2 .tit { background: url(../images/icon_work_mo.png) no-repeat bottom center; background-size: 135px 135px;}
+    .layer_area_mo .lycontact .lycontact_ver1 .tit { background: url(../images/icon_over_mo.png) no-repeat bottom center; background-size: 135px 135px;}
     .layer_area_mo .lycontact .txt       { padding: 20px 0 10px; font-size: 15px; letter-spacing: -0.5px;}
 	.layer_area_mo .lycontact .txt b     { display: block; font-weight: 400; color: #FD8700;}
 	.layer_area_mo .lycontact .time      { display: block; max-width: 280px; height: 30px; line-height: 30px; margin: 0 auto; background-color: #F6FBFC; border-radius: 50px; font-size:13px; color: #666;}
