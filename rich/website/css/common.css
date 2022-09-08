@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+@font-face { 
+  font-family: 'Noto Sans KR'; 
+  font-style: normal; 
+  font-weight: 100; 
+  src: url(../font/NotoSansKR-Thin/notokr-thin.woff2) format('woff2'), 
+      url(../font/NotoSansKR-Thin/notokr-thin.woff) format('woff'), 
+      url(../font/NotoSansKR-Thin/notokr-thin.otf) format('opentype'); 
+} 
+@font-face { 
+  font-family: 'Noto Sans KR'; 
+  font-style: normal; 
+  font-weight: 300; 
+  src: url(../font/NotoKR-Light/notokr-light.woff2) format('woff2'), 
+      url(../font/NotoKR-Light/notokr-light.woff) format('woff'), 
+      url(../font/NotoKR-Light/notokr-light.otf) format('opentype'); 
+} 
+@font-face { 
+  font-family: 'Noto Sans KR'; 
+  font-style: normal; 
+  font-weight: 400; 
+  src: url(../font/NotoKR-Regular/notokr-regular.woff2) format('woff2'), 
+        url(../font/NotoKR-Regular/notokr-regular.woff) format('woff'), 
+        url(../font/NotoKR-Regular/notokr-regular.otf) format('opentype'); 
+ } 
+@font-face { 
+  font-family: 'Noto Sans KR'; 
+  font-style: normal; 
+  font-weight: 500; 
+  src: url(../font/NotoKR-Medium/notoKR-medium.woff2) format('woff2'), 
+        url(../font/NotoKR-Medium/notoKR-medium.woff) format('woff'), 
+        url(../font/NotoKR-Medium/notoKR-medium.otf) format('opentype'); 
+ } 
+@font-face { 
+  font-family: 'Noto Sans KR'; 
+  font-style: normal; 
+  font-weight: 700; 
+  src: url(../font/NotoKR-Bold/notokr-bold.woff2) format('woff2'), 
+        url(../font/NotoKR-Bold/notokr-bold.woff) format('woff'), 
+        url(../font/NotoKR-Bold/notokr-bold.otf) format('opentype'); 
+ } 
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 700;
+    src: local('Spoqa Han Sans Bold'),
+    url('../font/SpoqaHanSans/SpoqaHanSansBold.woff2') format('woff2'),
+    url('../font/SpoqaHanSans/SpoqaHanSansBold.woff') format('woff'),
+    url('../font/SpoqaHanSansBold.ttf') format('truetype');
+}
+
+/* reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';	content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+
+/* custom */
+body{-webkit-text-size-adjust:none} /* 뷰포트 변환시 폰트크기 자동확대 방지. */
+input[type='text'],input[type='password'],input[type='submit'],input[type='search'],input[type='tel'],input[type='email'],html input[type='button'],input[type='reset']{-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0}
+input[type='search']::-webkit-search-cancel-button{-webkit-appearance:none}
+
+body{background:#fff}
+body,th,td,input,select,textarea,button{font-size:14px;line-height:1;font-family:'Noto Sans KR','맑은고딕','Malgun Gothic','나눔고딕',NanumGothic,'돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;color:#1e1e1e;font-weight:400;}
+
+a{color:#1e1e1e;text-decoration:none;vertical-align: top}
+a:active, a:hover{text-decoration:none}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+button{border:0 none;background-color:transparent;cursor:pointer}
+
+img {border: 0;vertical-align: top;}
+.max{ width: 100%;}
+.max-img{ max-width:100%}
+
+.of-hi{overflow: hidden}
+.ta-c{text-align: center}
+
+/*input 공통*/
+input[type=text], input[type=tel]{outline:none; vertical-align:middle; height:52px; line-height: 52px; font-size:18px; border:1px solid #c7c7c7; margin:0; padding:0 15px; transition:border-color 0.2s; width: 100%; box-sizing: border-box; letter-spacing:-0.5px;}
+input[type=text]:focus{}
+input[type=text]:checked{}
+
+input:focus::-webkit-input-placeholder{ /* WebKit browsers */ color:transparent; }
+input:focus:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */ color:transparent;}
+input:focus::-moz-placeholder { /* Mozilla Firefox 19+ */ color:transparent;}
+input:focus:-ms-input-placeholder{ /* Internet Explorer 10+ */ color:transparent;}
+
+::-webkit-input-placeholder { /* Chrome */ color: #969696;}
+:-ms-input-placeholder { /* IE 10+ */ color: #969696;}
+::-moz-placeholder { /* Firefox 19+ */ color: #969696; opacity: 1;}
+:-moz-placeholder { /* Firefox 4 - 18 */ color: #969696; opacity: 1;}
+input[type=text]::-ms-clear, input[type=tel]::-ms-clear{display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal, input[type=tel]::-ms-reveal {display: none; width : 0; height: 0; }
+
+select{opacity:0; filter:alpha(opacity=0); /* IE 8 */}
+
+.select{ font-size:18px; letter-spacing:-1px; box-sizing:border-box; -webkit-appearance:none;position:relative; display:block; background: url(https://img.adinsu.co.kr/adinsu/mw/main/arr_select.png) no-repeat 90% center #fff; background-size:22px 13px;}
+.select label{position:absolute; padding-top:16px; font-size:18px; color:#000; top:0; left:15px;}
+.select select option{font-size:18px; letter-spacing:-1px; width: 100%;}
+:root select{background-position:90% 40% \0/IE9}
+
+/*form*/
+.form{width: 100%; overflow: hidden}
+.form dl{float: left; margin-left: 10px; margin-top: 19px}
+.form dl:first-child{ margin-left: 0}
+.form dl dt{ font-weight: 700; font-size: 18px; color: #000000; background:url(https://img.adinsu.co.kr/adinsu/mw/main/icon_dot.png) no-repeat left center #fff; padding-left: 15px; margin-bottom: 10px }
+.form .name{width: 280px;}
+
+.form .phone{position: relative; width:280px;}
+.form .phone .select{position: absolute; left: 1px; top:1px;}
+.form .inpt_phone{ padding-left: 110px;}
+.form .phone .sel_number{width:110px;  height: 50px; opacity: 0}
+
+.form .place{width:280px; }
+.form .place .select{border: 1px solid #c7c7c7; box-sizing: border-box; width: 100%; height: 52px}
+.form .place .select label{position:absolute; padding-top:16px; font-size:18px; color:#000; top:0px; left:15px; display: block;}
+.form .place .sel_place{ width: 100%; height: 50px}
+
+caption{overflow:hidden;width:100%;height:1px;font-size:0;line-height:0;text-indent:-9999px;}
+
+/* loading */
+.waiting{background-image: url(https://img.adinsu.co.kr/adinsu/mw/loading.gif);
+background-position: 50% 50%;
+background-size: 50px;
+background-repeat: no-repeat;
+position: absolute;
+top: 0px;
+left: 0px;
+right: 0px;
+bottom: 0px;
+}
