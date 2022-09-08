@@ -1,0 +1,602 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="굿카"/>
+<meta name="keywords" content="굿카">
+<meta property="og:title" content="굿카">
+<meta property="og:url" content="https://goodcar.co.kr">
+<meta property="og:image" content="/sns_share.jpg">
+<meta property="og:description" content="굿카"/>
+<meta name="twitter:card" content="굿카">
+<meta name="twitter:title" content="굿카">
+<meta name="twitter:url" content="https://goodcar.co.kr">
+<meta name="twitter:image" content="/images/sns_share.jpg">
+<meta name="twitter:description" content="굿카"/>
+
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/slick.css">
+<link rel="stylesheet" type="text/css" href="css/company.css">
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/TweenMax.min.js"></script>
+<script type="text/javascript" src="js/respond-image.js"></script>
+<script type="text/javascript" src="js/slick.js"></script>
+	
+<script>
+	//reveal
+	var rafId = null;
+	var delay = 150;
+	var lTime = 0;
+
+	function scroll() {
+	  var scrollTop = $(window).scrollTop();
+	  var height = $(window).height();
+	  var visibleTop = scrollTop + height;
+	  $('.reveal').each(function() {
+		var $t = $(this);
+		if ($t.hasClass('reveal_visible')) { return; }
+		var top = $t.offset().top;
+		if (top <= visibleTop) {
+		  if (top + $t.height() < scrollTop) {
+			$t.removeClass('reveal_pending').addClass('reveal_visible');
+		  } else {
+			$t.addClass('reveal_pending');
+			if (!rafId) requestAnimationFrame(reveal);  
+		  }
+		}
+	  });
+	
+		if( scrollTop > 0){
+			$('.btn_top').show();
+		}else{
+			$('.btn_top').hide();
+		}
+		
+	}
+	function reveal() {
+	  rafId = null;
+	  var now = performance.now();
+
+	  if (now - lTime > delay) {
+		lTime = now;
+		var $ts = $('.reveal_pending');
+		$($ts.get(0)).removeClass('reveal_pending').addClass('reveal_visible');  
+	  }
+
+
+	  if ($('.reveal_pending').length >= 1) rafId = requestAnimationFrame(reveal);
+	}
+
+	$(scroll);
+	$(window).scroll(scroll);
+	
+	$(document).ready(function(){
+		// 화살표 모션
+//		arrowMotion();
+//		function arrowMotion(){
+//			$('.scroll_motion .visual_arrow').animate( { "margin-top" : "0px", 'opacity':1 }, {duration:0,complete:function(){
+//
+//			   $('.scroll_motion .visual_arrow').animate( { "margin-top" : "20px",'opacity':0 }, {duration:2000,complete:arrowMotion()});
+//			}});
+//			
+//		}
+		
+		$('.multiple-items').slick({
+		  arrows: true,
+		  dots: false,
+		  infinite: true,
+		  autoplaySpeed: 3000,
+		  autoplay: true,
+		  slidesToShow: 5,
+		  slidesToScroll: 1,
+		  prevArrow: '.btn_prev',
+		  nextArrow: '.btn_next',
+		  responsive: [
+			 {
+			  breakpoint: 1200,
+			  settings: {
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				infinite: true,
+				dots: false
+			  }
+			},
+			{
+			  breakpoint: 768,
+			  settings: {
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				infinite: true,
+				dots: false
+			  }
+			},
+			{
+			  breakpoint: 640,
+			  settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1
+			  }
+			}
+		  ]
+		});
+		
+		$('.link_navi').click(function(e){
+			e.preventDefault();
+			
+			$('.side_menu').addClass('on');
+			$('body').addClass('lock');
+		});
+		$('.btn_close').click(function(e){
+			e.preventDefault();
+			
+			$('.side_menu').removeClass('on');
+			$('body').removeClass('lock');
+		});
+		
+		$('.scrollDown').click(function(e){
+			e.preventDefault();
+			
+			moveSection(2);
+		});
+		
+		$('.btn_top').click(function(e){
+			e.preventDefault();
+			
+			$('body,html').animate({
+			"scrollTop": 0
+			}, 550);
+		});
+		
+		
+	});
+</script>
+
+<script>
+	$(window).scroll(function(){
+		winTop =  $(window).scrollTop();
+		winH = $(window).innerHeight();
+
+		if( winTop > 0 ){
+			$("#gnb_con").addClass('on');
+
+		}else{
+			$("#gnb_con").removeClass('on');
+		}
+	});
+	
+	function moveSection( sectionNum ){
+		
+		$('.btn_close').trigger('click');	// 모바일
+		
+		topMenuH = $('#gnb_con').height() - 9;
+		
+		switch(sectionNum){
+			case 1:  $('html, body').animate( { scrollTop : 0 }, 400 );
+				break;
+			case 2:  $('html, body').animate( { scrollTop : $('#menuCon2').position().top - topMenuH }, 400 );
+				break;
+			case 3:  $('html, body').animate( { scrollTop : $('#menuCon3').position().top - topMenuH }, 400 );
+				break;
+			case 4:  $('html, body').animate( { scrollTop : $('#menuCon4').position().top - topMenuH }, 400 );
+				break;
+			case 5:  $('html, body').animate( { scrollTop : $('#menuCon5').position().top - topMenuH }, 400 );
+				break;
+			default : $('html, body').animate( { scrollTop : 0 }, 400 );
+				break;
+		}
+		
+	}
+</script>
+	
+</head>
+
+<body>
+	<div id="sdinsu_wrap">
+		<div id="gnb_con">
+			<div id="gnb">
+				<h1><a href="/"><span class="tit_logo">Rich Planet</span></a></h1>
+				<ul class="list_menu">
+	 				<li><a href="javascript:moveSection(1)">애드인슈</a></li>
+					<li><a href="javascript:moveSection(2)">사업영역</a></li>
+					<li><a href="javascript:moveSection(3)">경쟁력</a></li>
+					<li><a href="javascript:moveSection(4)">연혁</a></li>
+					<li><a href="javascript:moveSection(5)">채용</a></li>
+					<li class="blog"><a href=""></a></li>
+				</ul>
+				<a href="" class="link_navi ">
+					<span class="img_gnb ico_navi">모바일 메뉴열기</span>
+				</a>
+			</div>
+		</div>
+		
+		<div class="side_menu">
+			<div class="side_menu_con">
+				<div class="btn_close_con">
+					<div class="btn_close"><a href=""><img class="max-img" src="images/adinsu/icon_close.png" alt=""></a></div>
+				</div>
+				<ul>
+					<li><a href="javascript:moveSection(1)">애드인슈</a></li>
+					<li><a href="javascript:moveSection(2)">사업영역</a></li>
+					<li><a href="javascript:moveSection(3)">경쟁력</a></li>
+					<li><a href="javascript:moveSection(4)">연혁</a></li>
+					<li><a href="javascript:moveSection(5)">채용</a></li>
+					<li><a href="">블로그 바로가기</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="content_layout_type1" id="menuCon1">
+			<div class="visual_mo">
+				<img class="max-img" src="images/adinsu/top_visual_mo.jpg" alt="">
+				<div class="scrollDown"></div>
+			</div>
+			<div class="visual_txt_con">
+				<div class="txt1 reveal"><img data-src-base="images/adinsu/" data-src="<768:visual_t1_mo.png, >768:visual_t1.png" src="images/adinsu/visual_t1.png" class="max-img" alt="다이렉트 자동차보험 전문 통합 비즈니스 기업"></div>
+				<div class="txt2 reveal"><img data-src-base="images/adinsu/" data-src="<768:visual_t2_mo.png, >768:visual_t2.png" src="images/adinsu/visual_t2.png" class="max-img" alt="애드인슈"></div>
+				<div class="txt3 reveal"><img data-src-base="images/adinsu/" data-src="<768:visual_t3_mo.png, >768:visual_t3.png" src="images/adinsu/visual_t3.png" class="max-img" alt="국내 최초 11개 모든 다이렉트 자동차 보험 비교 서비스를 제공합니다."></div>
+			</div>
+		</div>
+		<div class="scrollDown pc_img"></div>
+		<div class="content_layout_type3" id="menuCon2">
+			<div class="view_con">
+				<div class="mo_inner category_title"><img class="max-img" src="images/adinsu/category1_title.png" alt="사업영역"></div>
+				<div class="mo_inner ta-c">
+					<h3 class="reveal st_title1"><img class="max-img" src="images/adinsu/section1_title.png" alt="자동차보험료 비교 서비스"></h3>
+					<h4 class="reveal">애드인슈는 고객이 가장 유리한 다이렉트 자동차보험을 선택할 수 있도록 다양한 비즈니스를 운영하고 있습니다.</h4>
+				</div>
+
+				<div class="car_insurance_list">
+					<div class="box_con reveal">
+						<a href="#">
+							<div class="box"><img data-src-base="images/adinsu/" data-src="<1200:s1_img01_mo.jpg, >1200:s1_img01.jpg" src="images/adinsu/s1_img01.jpg" class="max" alt=""></div>
+							<div class="txt_con"><div class="txt"><span class="point">다이렉트 카보험</span> 바로가기</div></div>
+							
+						</a>
+					</div>
+					<ul class="car_insurance_list_btn_group">
+						<li><a href="#">다이렉트 카보험 1</a></li>
+						<li><a href="#">다이렉트 카보험 2</a></li>
+						<li><a href="#">다이렉트 카보험 3</a></li>
+						<li><a href="#">다이렉트 카보험 4</a></li>
+						<li><a href="#">다이렉트 카보험 5</a></li>
+					</ul>
+					<div class="box_con reveal">
+						<a href="#">
+							<div class="box"><img data-src-base="images/adinsu/" data-src="<1200:s1_img02_mo.jpg, >1200:s1_img02.jpg" src="images/adinsu/s1_img02.jpg" class="max" alt=""></div>
+							<div class="txt_con"><div class="txt"><span class="point">이지카 다이렉트</span> 바로가기</div></div>
+						</a>
+					</div>
+					<div class="box_con reveal">
+						<a href="#">
+							<div class="box"><img data-src-base="images/adinsu/" data-src="<1200:s1_img03_mo.jpg, >1200:s1_img03.jpg" src="images/adinsu/s1_img03.jpg" class="max" alt=""></div>
+							<div class="txt_con"><div class="txt"><span class="point">굿카</span> 바로가기</div></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="con_bg">
+			<div class="content_layout_type3 ta-c">
+				<div class="mo_inner">
+					<div>
+						<h3 class="reveal st_title2"><img class="max-img" src="images/adinsu/section2_title.png" alt=""></h3>
+						<h4 class="reveal">좀 더 나은 다이렉트 자동차 보험 비교 서비스를 제공하기 위한 다양한 사업 및 서비스 제안을 기다립니다.</h4>
+					</div>
+					<div class="reveal partnerships_img"><img data-src-base="images/adinsu/" data-src="<1200:section2_img01_mo.png, >1200:section2_img01.png" src="images/adinsu/section2_img01_mo.png" class="max-img" alt=""></div>
+					
+					<div class="info_cont_con reveal">
+						<div class="title">제안<br class="pc_img">검토 절차</div>
+						<div class="info_cont">
+							<div class="circle">
+								<div class="num"><img class="max-img" src="images/adinsu/icon_info01.png" alt=""></div>
+								<div class="desc_cont">제안<br>등록</div>
+							</div>
+						</div><div class="info_arrow"><img data-src-base="images/adinsu/" data-src="<1200:info_arrow_mo.png, >1200:info_arrow.png" src="images/adinsu/info_arrow.png" class="max-img" alt=""></div><div class="info_cont">
+							<div class="circle">
+								<div class="num"><img class="max-img" src="images/adinsu/icon_info02.png" alt=""></div>
+								<div class="desc_cont">제안내용<br>접수</div>
+							</div>
+						</div><div class="info_arrow"><img data-src-base="images/adinsu/" data-src="<1200:info_arrow_mo.png, >1200:info_arrow.png" src="images/adinsu/info_arrow.png" class="max-img" alt=""></div><div class="info_cont">
+							<div class="circle">
+								<div class="num"><img class="max-img" src="images/adinsu/icon_info03.png" alt=""></div>
+								<div class="desc_cont">담당자<br>상세검토</div>
+							</div>
+						</div><div class="info_arrow"><img data-src-base="images/adinsu/" data-src="<1200:info_arrow_mo.png, >1200:info_arrow.png" src="images/adinsu/info_arrow.png" class="max-img" alt=""></div><div class="info_cont">
+							<div class="circle">
+								<div class="num"><img class="max-img" src="images/adinsu/icon_info04.png" alt=""></div>
+								<div class="desc_cont">이메일로<br>검토결과 회신</div>
+							</div>
+						</div>
+					</div>
+					<div class="email_txt reveal">제휴제안 이메일 : <a href="mailto:sonnet3@adinsu.co.kr">sonnet3@adinsu.co.kr</a></div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="content_layout_type3" id="menuCon3">
+			<div class="mo_inner view_con">
+				<div class="category_title"><img class="max-img" src="images/adinsu/category2_title.png" alt="경쟁력"></div>
+				<div class="ta-c">
+					<h3 class="reveal st_title3"><img class="max-img" src="images/adinsu/section3_title.png" alt=""></h3>
+					<h4 class="reveal">애드인슈는 고객이 쉽고 빠르게 다이렉트 자동차보험을 선택할 수 있도록 국내 모든 자동차보험사 및 다양한 파트너와 함께하고 있습니다.</h4>
+				</div>
+				<ul class="list_network reveal">
+					<li><img data-src-base="images/adinsu/" data-src="<640:network_logo1_mo.jpg, >640:network_logo1.jpg" src="images/adinsu/network_logo1.jpg" class="max-img" alt="현대해상 다이렉트"></li>
+					<li><img data-src-base="images/adinsu/" data-src="<640:network_logo2_mo.jpg, >640:network_logo2.jpg" src="images/adinsu/network_logo2.jpg" class="max-img" alt="삼성다이렉트화재"></li>
+					<li><img data-src-base="images/adinsu/" data-src="<640:network_logo3_mo.jpg, >640:network_logo3.jpg" src="images/adinsu/network_logo3.jpg" class="max-img" alt="DB손해보험|다이렉트"></li>
+					<li><img data-src-base="images/adinsu/" data-src="<640:network_logo4_mo.jpg, >640:network_logo4.jpg" src="images/adinsu/network_logo4.jpg" class="max-img" alt="KB손해보험|다이렉트"></li>
+					<li><img data-src-base="images/adinsu/" data-src="<640:network_logo5_mo.jpg, >640:network_logo5.jpg" src="images/adinsu/network_logo5.jpg" class="max-img" alt="AXA"></li>
+					<li><img data-src-base="images/adinsu/" data-src="<640:network_logo6_mo.jpg, >640:network_logo6.jpg" src="images/adinsu/network_logo6.jpg" class="max-img" alt="MERITZ"></li>
+					<li><img data-src-base="images/adinsu/" data-src="<640:network_logo7_mo.jpg, >640:network_logo7.jpg" src="images/adinsu/network_logo7.jpg" class="max-img" alt="한화다이렉트"></li>
+					<li><img data-src-base="images/adinsu/" data-src="<640:network_logo8_mo.jpg, >640:network_logo8.jpg" src="images/adinsu/network_logo8.jpg" class="max-img" alt="롯데하우머치다이렉트"></li>
+					<li><img data-src-base="images/adinsu/" data-src="<640:network_logo9_mo.jpg, >640:network_logo9.jpg" src="images/adinsu/network_logo9.jpg" class="max-img" alt="흥국화재 이유다이렉트"></li>
+					<li><img data-src-base="images/adinsu/" data-src="<640:network_logo10_mo.jpg, >640:network_logo10.jpg" src="images/adinsu/network_logo10.jpg" class="max-img" alt="에듀카"></li>
+					<li><img data-src-base="images/adinsu/" data-src="<640:network_logo11_mo.jpg, >640:network_logo11.jpg" src="images/adinsu/network_logo11.jpg" class="max-img" alt="DAUM"></li>
+					<li><img data-src-base="images/adinsu/" data-src="<640:network_logo12_mo.jpg, >640:network_logo12.jpg" src="images/adinsu/network_logo12.jpg" class="max-img" alt="happy money"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="con_bg">
+			<div class="content_layout_type3 ta-c">
+				<div class="mo_inner">
+					<div class="ta-c">
+						<h3 class=" st_title4 reveal"><img class="max-img" src="images/adinsu/section4_title.png" alt=""></h3>
+						<h4 class="reveal">애드인슈는 고객이 가장 유리한 다이렉트 자동차보험을 선택할 수 있도록 다양한 비즈니스를 운영하고 있습니다.</h4>
+					</div>
+					<ul class="list_direct">
+						<li class="reveal">
+							<p class="icon"><img class="max-img" src="images/adinsu/section4_list_img01.png" alt=""></p>
+							<p class="main_txt">업계 최대<br>마케팅 점유율</p>
+							<p class="sub_txt">다양한 마케팅 활동으로<br>각종 매체광고 영역<br>최대 점유</p>
+						</li><li class="reveal">
+							<p class="icon"><img class="max-img" src="images/adinsu/section4_list_img02.png" alt=""></p>
+							<p class="main_txt">동일 서비스<br>이용자수 업체 최대</p>
+							<p class="sub_txt">월평균 10만여명의<br>비교견적 서비스<br>이용</p>
+						</li><li class="reveal">
+							<p class="icon"><img class="max-img" src="images/adinsu/section4_list_img03.png" alt=""></p>
+							<p class="main_txt">철저한<br>광고심의 준수</p>
+							<p class="sub_txt">허위, 과장된 서비스 제공이 아닌<br>고객위주의 실질적<br>서비스 제공 </p>
+						</li><li class="reveal">
+							<p class="icon"><img class="max-img" src="images/adinsu/section4_list_img04.png" alt=""></p>
+							<p class="main_txt">높은<br>가입률</p>
+							<p class="sub_txt">많은 고객님들이 믿고<br>선택해 주시는 애드인슈의<br>높은 가입율</p>
+						</li><li class="reveal">
+							<p class="icon"><img class="max-img" src="images/adinsu/section4_list_img05.png" alt=""></p>
+							<p class="main_txt">전문화된<br>전속 TM조직 운영</p>
+							<p class="sub_txt">TM근무경력 15년 이상의<br>전문 전속인력<br>보유</p>
+						</li><li class="reveal">
+							<p class="icon"><img class="max-img" src="images/adinsu/section4_list_img06.png" alt=""></p>
+							<p class="main_txt">근무환경 및<br>지원시스템</p>
+							<p class="sub_txt">서비스 품질향상을 위한<br>체계적인 고객응대<br>교육 진행</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="content_layout_type3">
+			<div class="mo_inner view_con">
+				<div class="ta-c">
+					<h3 class="st_title5 reveal"><img class="max-img" src="images/adinsu/section5_title.png" alt=""></h3>
+					<h4 class="reveal">다이렉트 자동차보험 호전환 시장 내 상위 4개사 중 절반 이상의 압도적인 점유율을 차지</h4>
+				</div>
+				<div class="share_con reveal">
+					<div class="share_graph"><img class="max-img" src="images/adinsu/share_graph.jpg" alt=""></div>
+					<div class="share_txt">※ 2017년 매출기준</div>
+				</div>
+				
+			</div>
+		</div>
+		<div style="border-top: 1px solid #e9edf2">
+			<div class="content_layout_type3" id="menuCon4">
+				<div class="mo_inner view_con">
+					<div class="ta-c">
+						<h3 class="st_title6 reveal"><img class="max-img" src="images/adinsu/section6_title.png" alt="연혁"></h3>
+					</div>
+					<div>
+						<div class="list_history reveal">
+							<div class="year_con">
+                                <div class="bg"><img data-src-base="https://img.adinsu.co.kr/adinsu/company/" data-src="<1200:history2020_mo.png, >1200:history2020.png" src="https://img.adinsu.co.kr/adinsu/company/history2020.png" class="max-img" alt="2020"></div>
+                                <div class="txt_con">
+                                        <!--2020 대한민국소비자만족도 1위 수상 내용 추가-->
+										<dl>
+                                            <dt>07월</dt>
+                                            <dd><span class="point">2020 대한민국소비자만족도 1위 수상</span></dd>
+                                        </dl>
+										<!--//2020 고객선호브랜드지수 1위 수상 내용 추가-->
+										<dl>
+                                            <dt>08월</dt>
+                                            <dd><span class="point">2020 고객선호브랜드지수 1위 수상</span></dd>
+                                        </dl>
+                                    </div>
+                            </div>
+							<div class="year_con">
+                                <div class="bg"><img data-src-base="https://img.adinsu.co.kr/adinsu/company/" data-src="<1200:history2019_mo.png, >1200:history2019.png" src="https://img.adinsu.co.kr/adinsu/company/history2019.png" class="max-img" alt="2019"></div>
+                                <div class="txt_con">
+                                        <!--2019고객선호브랜드지수1위 내용 추가-->
+										<dl>
+                                            <dt>04월</dt>
+                                            <dd><span class="point">2019 대한민국소비자만족도 1위 수상</span></dd>
+                                        </dl>
+										<!--//2019고객선호브랜드지수1위 내용 추가-->
+										<dl>
+                                            <dt>08월</dt>
+                                            <dd><span class="point">2019 고객선호브랜드지수 1위 수상</span></dd>
+                                        </dl>
+                                    </div>
+                            </div>
+							<div class="year_con">
+								<div class="bg"><img data-src-base="images/adinsu/" data-src="<1200:history1_mo.png, >1200:history1.png" src="images/adinsu/history1.png" class="max-img" alt=""></div>
+								<div class="txt_con">
+									<dl>
+										<dt>05월</dt>
+										<dd><span class="point">2018 한국소비자만족도 1위 수상</span></dd>
+										<dd><span class="point">2018 고객선호브랜드지수 1위 수상</span></dd>
+									</dl>
+								</div>
+							</div>
+							<div class="year_con">
+								<div class="bg"><img data-src-base="images/adinsu/" data-src="<1200:history2_mo.png, >1200:history2.png" src="images/adinsu/history2.png" class="max-img" alt=""></div>
+								<div class="txt_con">
+									<dl>
+										<dt>12월</dt>
+										<dd><span class="point">삼성화재 제휴(업계 최초 전 11개<br>다이렉트 자동차 보험회사와 제휴 성공)</span></dd> 
+									</dl>
+									<dl>
+										<dt>11월</dt>
+										<dd><span class="point">2017 우수기업/우수상품 수상</span></dd>
+									</dl>
+									<dl>
+										<dt>09월</dt>
+										<dd>The-K 손해보험 제휴</dd>
+									</dl>
+									<dl>
+										<dt>07월</dt>
+										<dd>AXA 손해보험 제휴</dd>
+									</dl>
+									<dl>
+										<dt>05월</dt>
+										<dd>MG 손해보험 제휴</dd>
+									</dl>
+									<dl>
+										<dt>03월</dt>
+										<dd>KB 손해보험 제휴</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="year_con">
+								<div class="bg"><img data-src-base="images/adinsu/" data-src="<1200:history3_mo.png, >1200:history3.png" src="images/adinsu/history3.png" class="max-img" alt=""></div>
+								<div class="txt_con">
+									<dl>
+										<dt>09월</dt>
+										<dd><span class="point">2016 고객선호브랜드지수 1위 수상</span></dd>
+										<dd><span class="point">2016 한국소비자만족지수 1위 수상</span></dd>
+									</dl>
+									<dl>
+										<dt>04월</dt>
+										<dd>메리츠화재 제휴</dd>
+									</dl>
+									<dl>
+										<dt>02월</dt>
+										<dd>한화손해보험 제휴</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="year_con">
+								<div class="bg"><img data-src-base="images/adinsu/" data-src="<1200:history4_mo.png, >1200:history4.png" src="images/adinsu/history4.png" class="max-img" alt=""></div>
+								<div class="txt_con">
+									<dl>
+										<dt>11월</dt>
+										<dd>현대해상 제휴</dd>
+									</dl>
+									<dl>
+										<dt>10월</dt>
+										<dd>흥국화재, 동부화재, 롯데손해보험<br>3개 보험사 제휴</dd>
+									</dl>
+									<dl>
+										<dt>09월</dt>
+										<dd><span class="point">애드인슈 회사 설립</span></dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="con_bg">
+			<div class="content_layout_type3 ta-c" id="menuCon5">
+				<div class="mo_inner">
+					<div>
+						<h3 class="st_title7 reveal"><img class="max-img" src="images/adinsu/section7_title.png" alt=""></h3>
+						<h4 class="reveal">다이렉트 자동차보험 IMC마케팅을 혁신할 인재를 모십니다.</h4>
+					</div>
+					<div class="sub_title reveal">모집분야</div>
+					<ul class="list_field reveal">
+						<li>디지털 서비스기획</li>
+						<li>디지털 마케팅</li>
+						<li>제휴/영업</li>
+						<li>텔레마케팅</li>
+					</ul>
+					<div class="down_txt reveal">※ <span class="point">입사지원서</span>를 <span class="point">다운로드</span> 받아 작성 후 이메일로 보내주세요.<a class="btn_down" href="#">다운로드</a></div>
+					<div class="email_txt reveal">채용지원 : <a href="mailto:sonnet3@adinsu.co.kr">sonnet3@adinsu.co.kr</a></div>
+					
+				</div>
+			</div>
+		</div>
+		
+		<div class="awards_slider_con">
+			<div class="mo_inner">
+				<div class="awards_slider">
+					<button class="btn_slide btn_prev slick-arrow" type="button"><span class="ico_arrow">이전</span></button>
+					<ul class="slider multiple-items _prize">
+						<!--2019고객선호브랜드지수1위 내용 추가-->
+						<li>
+							<span class="icon"><img class="max-img" alt="" src="https://img.adinsu.co.kr/adinsu/company/btm_grade_2019_1.png"></span>
+							<span class="txt">2019 고객선호<br>브랜드지수 1위</span>
+						</li>
+						<!--//2019고객선호브랜드지수1위 내용 추가-->
+						<li>
+							<span class="icon"><img class="max-img" alt="" src="https://img.adinsu.co.kr/adinsu/company/btm_grade_2019.png"></span>
+							<span class="txt">2019 대한민국<br>소비자만족도 1위</span>
+						</li>
+						<li>
+							<span class="icon"><img class="max-img" alt="" src="https://img.adinsu.co.kr/adinsu/company/btm_grade1.png"></span>
+							<span class="txt">2018 대한민국<br>소비자만족도 1위</span>
+						</li>
+						<li>
+							<span class="icon"><img class="max-img" alt="" src="https://img.adinsu.co.kr/adinsu/company/btm_grade2.png"></span>
+							<span class="txt">2018 고객선호<br>브랜드지수 1위</span>
+						</li>
+						<li>
+							<span class="icon"><img class="max-img" alt="" src="https://img.adinsu.co.kr/adinsu/company/btm_grade3.png"></span>
+							<span class="txt">2017 우수기업<br>우수상품</span>
+						</li>
+						<li>
+							<span class="icon"><img class="max-img" alt="" src="https://img.adinsu.co.kr/adinsu/company/btm_grade4.png"></span>
+							<span class="txt">2016 한국소비자<br>만족지수 1위</span>
+						</li>
+						<li>
+							<span class="icon"><img class="max-img" alt="" src="https://img.adinsu.co.kr/adinsu/company/btm_grade5.png"></span>
+							<span class="txt">2016 고객선호<br>브랜드지수 1위</span>
+						</li>
+					</ul>
+					<button class="btn_slide btn_next slick-arrow" type="button"><span class="ico_arrow">다음</span></button>
+				</div>
+			</div>
+		</div>
+		<footer id="footer">
+			<div class="content_layout_type2">
+				<div class="mo_inner">
+					<div class="logo">
+						<a href="">
+							<img class="" width="125" height="37" src="images/adinsu/footer_logo.png" alt="애드인슈">
+						</a>
+					</div>
+					<div class="right_con">
+						<!-- <p class="btn_privacy_agree"><a href="#">개인정보취급방침</a></p> -->
+						<!-- <p class="address">서울특별시 중구 세종대로9길 41, 3층(서소문동, 퍼시픽타워)<span class="mo_img"> </span>(주)애드인슈  |  대표 김진수  |  사업자등록번호 251-86-00150<br class="mo_img"><span class="pc_img">  |  </span>제휴문의 : <a href="mailto:sonnet3@adinsu.co.kr">sonnet3@adinsu.co.kr</a></p> -->
+						<p class="address">서울특별시 중구 세종대로9길 41, 3층(서소문동, 퍼시픽타워)<span class="mo_img"> </span>(주)애드인슈  |  대표 김용석<br class="pc_img">사업자등록번호 251-86-00150<br class="mo_img"><span class="pc_img">  |  </span>제휴문의 : <a href="mailto:sonnet3@adinsu.co.kr">sonnet3@adinsu.co.kr</a></p>
+						<p class="copy">Copyrightⓒ2015 by Adinsu All rights Reserved.</p>
+					</div>
+					<div class="btn_sns_con">
+						<span class="blog">
+							<a href="https://blog.naver.com/adinsu_directcar" target="_blank" title="새창열림"></a>
+						</span>
+						<span class="post">
+							<a href="https://post.naver.com/adinsu_directcar" target="_blank" title="새창열림"></a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</footer>
+		
+		<div class="btn_top">
+			<a href="javascript:void(0)"><img width="38" height="38" alt="위로" src="images/adinsu/btn_top.jpg"></a>
+		</div>
+	</div>
+</body>
+</html>
