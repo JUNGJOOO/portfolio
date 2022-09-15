@@ -1,0 +1,382 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'ONE-Mobile-Title';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Title.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/spoqa/SpoqaHanSansNeo-Bold.eot);
+    src: url(../fonts/spoqa/SpoqaHanSansNeo-Bold.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/spoqa/SpoqaHanSansNeo-Bold.woff) format('woff'),
+         url(../fonts/spoqa/SpoqaHanSansNeo-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    font-style: normal;
+    font-weight: 600;
+    src: url(../fonts/spoqa/SpoqaHanSansNeo-Medium.eot);
+    src: url(../fonts/spoqa/SpoqaHanSansNeo-Medium.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/spoqa/SpoqaHanSansNeo-Medium.woff) format('woff'),
+         url(../fonts/spoqa/SpoqaHanSansNeo-Medium.ttf) format('truetype');
+}
+@font-face { /*base*/
+    font-family: 'SpoqaHanSansNeo';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/spoqa/SpoqaHanSansNeo-Regular.eot);
+    src: url(../fonts/spoqa/SpoqaHanSansNeo-Regular.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/spoqa/SpoqaHanSansNeo-Regular.woff) format('woff'),
+         url(../fonts/spoqa/SpoqaHanSansNeo-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/spoqa/SpoqaHanSansNeo-Light.eot);
+    src: url(../fonts/spoqa/SpoqaHanSansNeo-Light.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/spoqa/SpoqaHanSansNeo-Light.woff) format('woff'),
+         url(../fonts/spoqa/SpoqaHanSansNeo-Light.ttf) format('truetype');
+}
+
+
+@font-face {
+    font-family: 'esamanru';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/esamanru/esamanru-Bold.eot);
+    src: url(../fonts/esamanru/esamanru-Bold.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/esamanru/esamanru-Bold.woff) format('woff'),
+         url(../fonts/esamanru/esamanru-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'esamanru';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/esamanru/esamanru-Medium.eot);
+    src: url(../fonts/esamanru/esamanru-Medium.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/esamanru/esamanru-Medium.woff) format('woff'),
+         url(../fonts/esamanru/esamanru-Medium.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'esamanru';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/esamanru/esamanru-Light.eot);
+    src: url(../fonts/esamanru/esamanru-Light.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/esamanru/esamanru-Light.woff) format('woff'),
+         url(../fonts/esamanru/esamanru-Light.ttf) format('truetype');
+}
+
+/* 공통 */
+.btn_small        { display: inline-block; position: relative; width: 100%; max-width: 160px; height: 37px; line-height: 37px; padding-right: 15px; background-color: #FF4848; border-radius: 10px; font-family: 'SpoqaHanSansNeo','sans-serif'; font-weight: 600; font-size: 18px; color: #fff; text-align: center; letter-spacing: 0; -webkit-box-sizing:border-box;box-sizing:border-box; cursor: pointer;}
+.btn_small::after { position: absolute; top: 14px; left: 50%; transform: translateX(-50%); margin-left: 30%; content: ''; width: 8px; height: 8px; border-top: 2px solid #fff; border-right: 2px solid #fff; transform: rotate(45deg);}
+
+/* 플로팅버튼 */
+.floating                { position: fixed; bottom: 10px; right: 10px; z-index: 1;}
+.floating .floating_link {
+    display:-webkit-box;display:-webkit-flex;display:flex;
+    -webkit-box-pack:center;justify-content:center;
+    -webkit-box-align:center;align-items:center;
+    width: 64px; height: 64px;
+    -webkit-box-shadow:0 1px 6px rgba(0, 0, 0,0.3);box-shadow:0 1px 6px rgba(0, 0, 0,0.3);
+    border: transparent; border-radius: 32px; font-size: 12px; line-height: 1.166; color: #fff; cursor: pointer;
+}
+.mv2 .floating .floating_link { background-color: #FF4848;}
+.mv4 .floating .floating_link { background-color: #FF6726;}
+
+/* ======================================== calcform ======================================== */
+/* 페이지상단부분에 있을때 사용 / 팝업에는 사용X */
+.calcform                         { position: relative; font-size: 0; text-align: center;}
+.calcform ul                      { position: relative; display: inline-block; width: 100%; font-size: 0; }
+.calcform ul li                   { display: block; width: 100%; vertical-align: top}
+.calcform ul li+li                { margin-top: 10px;}
+.calcform input                   { overflow:visible; width: 100%; height: 100%; padding: 0 15px; font-size: 16px; color:#3E3E3E; border: none; outline:none; -webkit-box-sizing:border-box;box-sizing:border-box;}
+.calcform .name                   { overflow: hidden; height: 55px; border:1px solid #999 !important; border-radius: 15px; background-color: #fff; -webkit-box-sizing:border-box;box-sizing:border-box;}
+.calcform .phone                  { overflow: hidden; position: relative; height: 55px; border:1px solid #999 !important; border-radius: 15px; background-color: #fff; -webkit-box-sizing:border-box;box-sizing:border-box; font-size: 0;}
+.calcform .phone::before          { position: absolute; top: 50%; left: 60px; margin-top: -2%;  content: ''; width: 7px; height: 7px; border-top: 2px solid #3E3E3E; border-right: 2px solid #3E3E3E; transform: rotate(135deg);}
+.calcform .phone::after           { position: absolute; top: 50%; left: 90px; transform: translateY(-50%); width: 1px; height: 18px; background-color: #999; content: '';}
+.calcform .phone label            { position: absolute; top: 50%; left:15px; transform: translateY(-50%); letter-spacing: 0px; font-size: 16px; color: #3E3E3E;}
+.calcform .phone .sel_list        { width:90px; height:100%; border: none !important; color:#3E3E3E; font-size: 16px; vertical-align: top; cursor: pointer; opacity: 0; filter: alpha(opacity=0);}
+.calcform .phone .sel_list option { color:#3E3E3E;}
+.calcform .phone input            { position: relative; width: calc(100% - 90px); padding: 0 20px; border: none !important;}
+.calcform .privacy_box            { margin: 15px auto 0; font-size:0; text-align: center;}
+.calcform .privacy                { position:relative; display: inline-block; cursor:pointer; vertical-align: middle;}
+.calcform .privacy input.privacy_input { overflow:hidden; position:absolute; top:0; left:0; z-index:5; height: 18px; width: 18px; opacity:0; cursor:pointer; }
+.calcform .privacy i              { float:left; display:block; position: relative; z-index:3; width:18px; height:18px;  background-color: #D2D2D2; border-radius: 2px;}
+.calcform .privacy i::before      { position: absolute; top: 1.5px; left: 6px; width: 5px; height: 9px; border: solid white; border-width: 0 2px 2px 0; transform: rotate(45deg); content: "";}
+.calcform .privacy input.privacy_input:checked+i { background-color: #FF4848;}
+.calcform .privacy label          { line-height: 18px; margin-left: 6px; font-size: 14px; vertical-align: top; cursor: pointer; letter-spacing: 0;}
+.calcform .btn_pop_view           { display: inline-block; line-height: 18px; margin-left: 6px !important; border-bottom: 1px solid #999; font-size: 14px; letter-spacing: -1px; color: #999; vertical-align: top; cursor:pointer;}
+.calcform .privacy_noti           { display:inline-block; position: relative; line-height: 20px; padding-left: 20px; font-size: 14px; color:#999; letter-spacing: -1.1px; vertical-align: middle;}
+.calcform .privacy_noti::before   { position: absolute; top: 2px; left: 0; width: 15px; height: 15px; line-height: 14px; background-color: #999; border-radius: 50%; font-size: 10px; color: #fff; text-align: center; content: 'i'; }
+.calcform .btn_go_wrap            { display: block; position: relative; width: 100%; height: 55px; margin: 15px 0; background-color: #FF4848; border-radius: 15px;}
+.calcform .btn_go_wrap::before    { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); content: "자동차보험료 통합견적 비교가 진행중입니다.\A 잠시만 기다려 주세요."; white-space: pre; width: 100%; font-size: 12px; text-align: center; color: #fff;}
+.calcform .btn_go_wrap .btn_go    { display: inline-block; position: relative; width: 100%; height: 100%; line-height: 55px; border-radius: 15px; background-color: #FF4848; font-weight: 600; font-size: 20px; color: #fff; text-align: center; letter-spacing: 0; -webkit-box-sizing:border-box;box-sizing:border-box;}
+
+.calcform.calcform_mv2                      { padding: 20px 16px; background-color: #fff; border-radius: 25px; -webkit-box-sizing:border-box;box-sizing:border-box;}
+
+.ov4 .btn_small                             { background-color: #FF6726; border-radius: 20px;}
+.calcform.calcform_ov4                      { padding: 0; background-color: #fff; border-radius: 0; -webkit-box-sizing:border-box;box-sizing:border-box;}
+.calcform.calcform_ov4 .name                { border-radius: 5px;}
+.calcform.calcform_ov4 .phone               { border-radius: 5px;}
+.calcform.calcform_ov4 .btn_go_wrap         { height: 70px; background-color: #FF6726; border-radius: 30px;}
+.calcform.calcform_ov4 .btn_go_wrap .btn_go { line-height: 72px; padding-right: 30px; background-color: #FF6726; border-radius: 30px;  font-family: 'esamanru'; font-size: 26px; font-weight: 300;}
+.calcform.calcform_ov4 .btn_go_wrap .btn_go::before { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(45deg); margin-left: 30%; width: 10px; height: 10px; border-top: 3px solid #fff; border-right: 3px solid #fff; content: '';}
+.calcform.calcform_ov4 .privacy input.privacy_input:checked+i { background-color: #FF6726;}
+
+.mv4 .btn_small                             { background-color: #FF6726; border-radius: 20px;}
+.calcform.calcform_mv4                      { padding: 20px 16px; background-color: #fff; border: 1px solid #F2F2F2; border-radius: 10px; -webkit-box-sizing:border-box;box-sizing:border-box;}
+.calcform.calcform_mv4 .name                { border-radius: 5px;}
+.calcform.calcform_mv4 .phone               { border-radius: 5px;}
+.calcform.calcform_mv4 .btn_go_wrap         { background-color: #FF6726; border-radius: 30px;}
+.calcform.calcform_mv4 .btn_go_wrap .btn_go { line-height: 59px; padding-right: 30px; background-color: #FF6726; border-radius: 30px; font-family: 'esamanru'; font-size: 26px; font-weight: 300;}
+.calcform.calcform_mv4 .btn_go_wrap .btn_go::before { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(45deg); margin-left: 30%; width: 10px; height: 10px; border-top: 3px solid #fff; border-right: 3px solid #fff;  content: '';}
+.calcform.calcform_mv4 .privacy input.privacy_input:checked+i { background-color: #FF6726;}
+
+
+/* calcform_l1p : calcform_layerstyle1_pc 레이어팝업1의 디자인의 pc버전 */
+.calcform_l1p                         { position: relative; font-size: 0; text-align: center;}
+.calcform_l1p ul                      { position: relative; display: inline-block; width: 100%; font-size: 0; }
+.calcform_l1p ul li+li                { margin-top: 10px;}
+.calcform_l1p input                   { overflow:visible; width: 100%; height: 100%; padding: 0 15px; font-size: 16px; color:#3E3E3E; border: none; outline:none; -webkit-box-sizing:border-box;box-sizing:border-box;}
+.calcform_l1p .name                   { overflow: hidden; height: 55px; border:1px solid #999 !important; border-radius: 15px; background-color: #fff; -webkit-box-sizing:border-box;box-sizing:border-box;}
+.calcform_l1p .phone                  { overflow: hidden; position: relative; height: 55px; border:1px solid #999 !important; border-radius: 15px; background-color: #fff; font-size: 0; -webkit-box-sizing:border-box;box-sizing:border-box;}
+.calcform_l1p .phone::before          { position: absolute; top: 50%; left: 60px; margin-top: -2%;  content: ''; width: 7px; height: 7px; border-top: 2px solid #3E3E3E; border-right: 2px solid #3E3E3E; transform: rotate(135deg);}
+.calcform_l1p .phone::after           { position: absolute; top: 50%; left: 90px; transform: translateY(-50%); width: 1px; height: 18px; background-color: #999; content: '';}
+.calcform_l1p .phone label            { position: absolute; top: 50%; left:15px; transform: translateY(-50%); letter-spacing: 0px; font-size: 16px; color: #3E3E3E;}
+.calcform_l1p .phone .sel_list        { width:90px; height:100%; border: none !important; color:#3E3E3E; font-size: 16px; vertical-align: top; cursor: pointer; opacity: 0; filter: alpha(opacity=0);}
+.calcform_l1p .phone .sel_list option { color:#3E3E3E;}
+.calcform_l1p .phone input            { position: relative; width: calc(100% - 90px); padding: 0 20px; border: none !important;}
+.calcform_l1p .privacy_box            { margin: 15px auto 0; font-size:0; text-align: center;}
+.calcform_l1p .privacy                { position:relative; display: inline-block; cursor:pointer; vertical-align: middle;}
+.calcform_l1p .privacy input.privacy_input { overflow:hidden; position:absolute; top:0; left:0; z-index:5; height: 18px; width: 18px; opacity:0; cursor:pointer; }
+.calcform_l1p .privacy i              { float:left; display:block; position: relative; z-index:3; width:18px; height:18px;  background-color: #D2D2D2; border-radius: 2px;}
+.calcform_l1p .privacy i::before      { position: absolute; top: 1.5px; left: 6px; width: 5px; height: 9px; border: solid white; border-width: 0 2px 2px 0; transform: rotate(45deg); content: "";}
+.calcform_l1p .privacy input.privacy_input:checked+i { background-color: #000;}
+.ov2 .calcform_l1p .privacy input.privacy_input:checked+i { background-color: #FF4848;}
+.ov4 .calcform_l1p .privacy input.privacy_input:checked+i { background-color: #FF6726;}
+.calcform_l1p .privacy label          { line-height: 18px; margin-left: 6px; font-size: 14px; vertical-align: top; cursor: pointer; letter-spacing: 0;}
+.calcform_l1p .btn_pop_view           { display: inline-block; line-height: 18px; margin-left: 6px !important; border-bottom: 1px solid #999; font-size: 14px; letter-spacing: -1px; color: #999; vertical-align: top; cursor:pointer;}
+.calcform_l1p .privacy_noti           { display:inline-block; position: relative; line-height: 20px; padding-left: 20px; font-size: 14px; color:#999; letter-spacing: -0.5px; vertical-align: middle;}
+.calcform_l1p .privacy_noti::before   { position: absolute; top: 2px; left: 0; width: 15px; height: 15px; line-height: 14px; background-color: #999; border-radius: 50%; font-size: 10px; color: #fff; text-align: center; content: 'i'; }
+.calcform_l1p .btn_go_wrap            { margin: 40px auto 13px;}
+.calcform_l1p .btn_go       { display: inline-block; position: relative; width: 100%; height: 55px; line-height: 55px; border-radius: 15px; background-color: #FF4848; font-weight: 600; font-size: 20px; color: #fff; text-align: center; letter-spacing: 0; box-sizing: border-box;}
+.ov4 .calcform_l1p .btn_go  { background-color: #FF6726;}
+
+
+/* calcform_l1m : calcform_layerstyle1_mobile 레이어팝업1의 디자인의 mobile버전 */
+.calcform_l1m                         { position: relative; font-size: 0; text-align: center;}
+.calcform_l1m ul                      { position: relative; display: inline-block; width: 100%; font-size: 0; }
+.calcform_l1m ul li+li                { margin-top: 10px;}
+.calcform_l1m input                   { overflow:visible; width: 100%; height: 100%; padding: 0 15px; font-size: 12px; color:#3E3E3E; border: none; outline:none; -webkit-box-sizing:border-box;box-sizing:border-box;}
+.calcform_l1m .name                   { overflow: hidden; height: 40px; border:1px solid #999 !important; border-radius: 10px; background-color: #fff; -webkit-box-sizing:border-box;box-sizing:border-box;}
+.calcform_l1m .phone                  { overflow: hidden; position: relative; height: 40px; border:1px solid #999 !important; border-radius: 10px; background-color: #fff; -webkit-box-sizing:border-box;box-sizing:border-box; font-size: 0;}
+.calcform_l1m .phone::before          { position: absolute; top: 50%; left: 50px; margin-top: -2%; content: ''; width: 5px; height: 5px; border-top: 2px solid #3E3E3E; border-right: 2px solid #3E3E3E; transform: rotate(135deg);}
+.calcform_l1m .phone::after           { position: absolute; top: 50%; left: 80px; transform: translateY(-50%); width: 1px; height: 18px; background-color: #999; content: '';}
+.calcform_l1m .phone label            { position: absolute; top: 50%; left:15px; transform: translateY(-50%); letter-spacing: 0px; font-size: 12px; color: #3E3E3E;}
+.calcform_l1m .phone .sel_list        { width:80px; height:100%; border: none !important; color:#3E3E3E; font-size: 12px; vertical-align: top; cursor: pointer; opacity: 0; filter: alpha(opacity=0); /* IE 8 */}
+.calcform_l1m .phone .sel_list option { color:#3E3E3E;}
+.calcform_l1m .phone input            { position: relative; width: calc(100% - 80px); padding: 0 15px; border: none !important;}
+.calcform_l1m .privacy_box            { margin-top: 15px; font-size:0; text-align: center;}
+.calcform_l1m .privacy                { position:relative; display: inline-block; cursor:pointer; vertical-align: middle;}
+.calcform_l1m .privacy input.privacy_input { overflow:hidden; position:absolute; top:0; left:0; z-index:5; height: 18px; width: 18px; opacity:0; cursor:pointer; }
+.calcform_l1m .privacy i              { float:left; display:block; position: relative; z-index:3; width:18px; height:18px;  background-color: #D2D2D2; border-radius: 2px;}
+.calcform_l1m .privacy i::before      { position: absolute; top: 1.5px; left: 6px; width: 5px; height: 9px; border: solid white; border-width: 0 2px 2px 0; transform: rotate(45deg); content: "";}
+.calcform_l1m .privacy input.privacy_input:checked+i      { background-color: #000;}
+.mv2 .calcform_l1m .privacy input.privacy_input:checked+i { background-color: #FF4848;}
+.mv4 .calcform_l1m .privacy input.privacy_input:checked+i { background-color: #FF6726;}
+.calcform_l1m .privacy label          { line-height: 18px; margin-left: 6px; font-size: 12px; vertical-align: top; cursor: pointer; letter-spacing: 0;}
+.calcform_l1m .btn_pop_view           { display: inline-block; line-height: 18px; margin-left: 6px !important; border-bottom: 1px solid #999; font-size: 12px; letter-spacing: -1px; color: #999; vertical-align: top; cursor:pointer;}
+.calcform_l1m .privacy_noti           { display:inline-block; position: relative; line-height: 20px; padding-left: 17px; font-size: 12px; color:#999; letter-spacing: -0.5px; vertical-align: middle;}
+.calcform_l1m .privacy_noti::before   { position: absolute; top: 2px; left: 0; width: 15px; height: 15px; line-height: 14px; background-color: #999; border-radius: 50%; font-size: 10px; color: #fff; text-align: center; content: 'i'; }
+.calcform_l1m .btn_go_wrap  	      { margin: 25px 0 10px;}
+.calcform_l1m .btn_go      { display: inline-block; position: relative; width: 100%; height: 55px; line-height: 55px; border-radius: 15px; background-color: #FF4848; font-weight: 600; font-size: 20px; color: #fff; text-align: center; letter-spacing: 0; -webkit-box-sizing:border-box;box-sizing:border-box;}
+.mv4 .calcform_l1m .btn_go { background-color: #FF6726;}
+
+
+/* OV2(단독)의 calcform_horizontal 가로 */
+.calcform_h1                         { position: relative; font-size: 0; text-align: center;}
+.calcform_h1 ul                      { position: relative; display: inline-block; width: 660px; font-size: 0; }
+.calcform_h1 ul li                   { vertical-align: top;}
+.calcform_h1 ul .name_box            { display: inline-block; width: 320px; margin-right: 20px; }
+.calcform_h1 ul .phone_box           { display: inline-block; width: 320px; }
+.calcform_h1 input                   { overflow:visible; width: 100%; height: 100%; padding: 0 15px; font-size: 16px; color:#3E3E3E; border: none; outline:none; -webkit-box-sizing:border-box;box-sizing:border-box;}
+.calcform_h1 .name                   { overflow: hidden; height: 55px; border:1px solid #999 !important; border-radius: 15px; background-color: #fff; -webkit-box-sizing:border-box;box-sizing:border-box;}
+.calcform_h1 .phone                  { overflow: hidden; position: relative; height: 55px; border:1px solid #999 !important; border-radius: 15px; background-color: #fff; font-size: 0; -webkit-box-sizing:border-box;box-sizing:border-box;}
+.calcform_h1 .phone::before          { position: absolute; top: 50%; left: 60px; margin-top: -2%;  content: ''; width: 7px; height: 7px; border-top: 2px solid #3E3E3E; border-right: 2px solid #3E3E3E; transform: rotate(135deg);}
+.calcform_h1 .phone::after           { position: absolute; top: 50%; left: 90px; transform: translateY(-50%); width: 1px; height: 18px; background-color: #999; content: '';}
+.calcform_h1 .phone label            { position: absolute; top: 50%; left:15px; transform: translateY(-50%); letter-spacing: 0px; font-size: 16px; color: #3E3E3E;}
+.calcform_h1 .phone .sel_list        { width:90px; height:100%; border: none !important; color:#3E3E3E; font-size: 16px; vertical-align: top; cursor: pointer; opacity: 0; filter: alpha(opacity=0); /* IE 8 */}
+.calcform_h1 .phone .sel_list option { color:#3E3E3E;}
+.calcform_h1 .phone input            { position: relative; width: calc(100% - 90px); padding: 0 20px; border: none !important;}
+.calcform_h1 .privacy_box            { margin: 15px auto 0; font-size:0; text-align: center;}
+.calcform_h1 .privacy                { position:relative; display: inline-block; margin-right: 40px; cursor:pointer; vertical-align: middle;}
+.calcform_h1 .privacy input.privacy_input { overflow:hidden; position:absolute; top:0; left:0; z-index:5; height: 18px; width: 18px; opacity:0; cursor:pointer; }
+.calcform_h1 .privacy i              { float:left; display:block; position: relative; z-index:3; width:18px; height:18px;  background-color: #D2D2D2; border-radius: 2px;}
+.calcform_h1 .privacy i::before      { position: absolute; top: 1.5px; left: 6px; width: 5px; height: 9px; border: solid white; border-width: 0 2px 2px 0; transform: rotate(45deg); content: "";}
+.calcform_h1 .privacy input.privacy_input:checked+i { background-color: #FF4848;}
+.calcform_h1 .privacy label          { line-height: 18px; margin-left: 6px; font-size: 14px; vertical-align: top; cursor: pointer; letter-spacing: 0;}
+.calcform_h1 .btn_pop_view           { display: inline-block; line-height: 18px; margin-left: 6px !important; border-bottom: 1px solid #999; font-size: 14px; letter-spacing: -1px; color: #999; vertical-align: top; cursor:pointer;}
+.calcform_h1 .privacy_noti           { display:inline-block; position: absolute; bottom: 0; right: 150px; line-height: 20px; padding-left: 20px; font-size: 14px; color:#999; letter-spacing: -0.5px; vertical-align: middle;}
+.calcform_h1 .privacy_noti::before   { position: absolute; top: 2px; left: 0; width: 15px; height: 15px; line-height: 14px; background-color: #999; border-radius: 50%; font-size: 10px; color: #fff; text-align: center; content: 'i'; }
+.calcform_h1 .btn_go_wrap            { display: inline-block; position: relative; width: 320px; height: 55px; border-radius: 15px; background-color: #FF4848; margin-left: 20px; vertical-align: top;}
+.calcform_h1 .btn_go_wrap::before    { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); content: "자동차보험료 통합견적 비교가 진행중입니다.\A 잠시만 기다려 주세요."; white-space: pre; width: 100%; font-size: 12px; text-align: center; color: #fff;}
+.calcform_h1 .btn_go                 { display: inline-block; position: relative; width: 100%; height: 55px; line-height: 55px; border-radius: 15px; background-color: #FF4848; font-weight: 600; font-size: 20px; color: #fff; text-align: center; letter-spacing: 0; -webkit-box-sizing:border-box;box-sizing:border-box;}
+
+
+
+
+
+
+
+
+
+/* ======================================== mflayer ======================================== */
+/* mflayer : mobile fix full layer*/
+.mflayer { 
+    display: none;
+    position: fixed; top: 0; left: 0; bottom: 0; right: 0; zoom: 1; z-index:100;
+    width:100%; height:100%;
+}
+.mflayer_cont {
+	position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    width: 100%; height: 100%;
+    background: #F5F5F5; border: 1px solid #707070;
+}
+.mflayer_head {
+	position: relative; z-index: 1; height: 54px; padding: 0 15px; background: #fff;
+    -webkit-box-shadow:0 1px 1px rgb( 200,200,200);box-shadow: 0 1px 1px rgb( 200,200,200);
+}
+.mflayer_head img { height: 44px; margin-top: 4px;}
+.mflayer_body {
+	overflow-y: scroll; overflow: auto;
+	height: auto !important; max-height: calc( 100% - 54px);
+	padding: 30px 15px 40px;
+    -webkit-box-sizing:border-box;box-sizing:border-box;
+}
+.mflayer_close				{ display: block; position: absolute; top: 0; right: 3px; z-index: 10002;}
+.mflayer_close > a			{ display: block; position: relative; width: 54px; height: 54px; cursor: pointer; font-size: 0; -webkit-box-sizing:border-box;box-sizing:border-box;}
+.mflayer_close > a::before,
+.mflayer_close > a::after	{ position: absolute; top: 50%; left: 50%; content: ''; height: 30px; width: 2px; background-color: #3E3E3E}
+.mflayer_close > a::after   { transform: translate(-50%,-50%) rotate(-45deg);}
+.mflayer_close > a::before  { transform: translate(-50%,-50%) rotate(45deg);}
+
+@media (min-width: 768px) {
+	.mflayer_cont { max-width: 600px; height: 90vh;}
+}
+
+
+
+/* ======================================== partner_Wrap ======================================== */
+.partner_Wrap * { font-family: 'SpoqaHanSansNeo' !important;}
+/* 가로버전(pc) */
+.partner_Con-pc .partner_Title      { width: 100%; padding: 0 0 30px 0; font-size: 24px; font-weight: 700; -webkit-box-sizing:border-box;box-sizing:border-box;}
+.partner_Con-pc .partner_Title span { font-size: 24px;  font-weight: 600;}
+.partner_Con-pc .Info_List          { font-size: 0;}
+.partner_Con-pc .Info_List *{letter-spacing: -0.5px;}
+.partner_Con-pc .Info_List > div    { display: inline-block; width: calc((100% - 15px)/2); vertical-align: top; -webkit-box-sizing:border-box;box-sizing:border-box;}
+.partner_Con-pc .Info_List > div+div{ margin-left: 15px;}
+.partner_Con-pc .Info_List > div p  { display: block; position: relative; line-height: 22px; padding: 0 15px 7px 12px; font-size: 14px; font-weight: 500; color: #3e3e3e;}
+.partner_Con-pc .Info_List > div p::before{ position: absolute; top: 7.5px; left: 0; width: 4px; height: 4px; background-color: #3E3E3E; border-radius: 50%; content: '';}
+.partner_Con-pc .Info_List .ttype   { font-size: 18px; font-weight: 700;}
+.partner_Con-pc .Info_List .ttype * { font-size: 18px; font-weight: 700;}
+.partner_Con-pc .Info_List .ttype01 { font-size: 18px; font-weight: 700; color: #FF4848;}
+.partner_Con-pc .Info_List .ttype02 { font-size: 18px; font-weight: 700; color: #006AC8;}
+.partner_Con-pc .Info_List .ttype03 { color: #FF4848;}
+.partner_Con-pc .Info_auth          { display: block; padding: 15px 0 0 12px;}
+
+/* 세로버전(mo) */
+.partner_Con-mo .partner_Title      { width: 100%; padding: 0 0 30px 0; font-size: 24px; font-weight: 600; -webkit-box-sizing:border-box;box-sizing:border-box;}
+.partner_Con-mo .partner_Title span { font-size: 24px;  font-weight: 600;}
+.partner_Con-mo .Info_List          { font-size: 0;}
+.partner_Con-mo .Info_List *		{ letter-spacing: 0;}
+.partner_Con-mo .Info_List p		{ display: block; position: relative; line-height: 22px; padding: 0 15px 10px 12px; font-size: 14px; font-weight: 500; color: #3e3e3e;}
+.partner_Con-mo .Info_List p::before{ position: absolute; top: 7.5px; left: 0; width: 4px; height: 4px; background-color: #3E3E3E; border-radius: 50%; content: '';}
+.partner_Con-mo .Info_List .ttype   { font-size: 18px; font-weight: 700;}
+.partner_Con-mo .Info_List .ttype * { font-size: 18px; font-weight: 700;}
+.partner_Con-mo .Info_List .ttype01 { font-size: 18px; font-weight: 700; color: #FF4848;}
+.partner_Con-mo .Info_List .ttype02 { font-size: 18px; font-weight: 700; color: #006AC8;}
+.partner_Con-mo .Info_List .ttype03 { color: #FF4848;}
+.partner_Con-mo .Info_auth          { display: block; padding: 10px 0 0 0; font-size: 14px; color: #777;}
+.partner_Con-mo .partner_Btn		{ margin-top: 40px;}
+.partner_Con-mo .partner_Btn a		{ display: block; cursor: pointer;}
+.partner_Con-mo .partner_Btn a span { display: block; line-height: 55px; background: #006AC8; border-radius: 15px; font-size: 20px; font-weight: 600; color: #fff; text-align: center; }
+.mv4 .partner_Con-mo .Info_List .ttype01 { color: #FF6726;}
+.mv4 .partner_Con-mo .Info_List .ttype02 { color: #2683DF;}
+
+/* ================================================================================================================ */
+
+/* 전체 공통 레이어팝업 */
+body.is_clipped			{ overflow: hidden;}
+.lyback					{ display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0, 0, 0,0.5); z-index: 99; width: 100vw; height: 100vh;}
+body.is_clipped .lyback	{ display: block;}
+
+.layer							{ display: none; position: fixed; top: 0; left: 0; bottom: 0; right: 0; width:100%; height:100%; zoom: 1; z-index:100;}
+.layer .layer_area_pc			{ position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);} /*가운데오는 기능만*/
+.layer .layer_area_mo		    { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);} /*가운데오는 기능만*/
+/* pc 팝업닫기 버튼 */
+.layer .layer_close				{ display: block; position: absolute; left: 50%; bottom: -80px; transform: translateX(-50%); z-index: 10002;}
+.layer .layer_close > a			{ display: block; position: relative; width: 60px; height: 60px; border: 2px solid #fff; border-radius: 50%; cursor: pointer; font-size: 0; -webkit-box-sizing:border-box;box-sizing:border-box;}
+.layer .layer_close > a::before,
+.layer .layer_close > a::after	{ position: absolute; top: 50%; left: 50%; content: ''; height: 30px; width: 2px; background-color: #fff;}
+.layer .layer_close > a::after  { transform: translate(-50%,-50%) rotate(-45deg);}
+.layer .layer_close > a::before { transform: translate(-50%,-50%) rotate(45deg);}
+/* mobile 팝업닫기 버튼 */
+.layer .layer_area_mo .layer_close				{ bottom: -50px;}
+.layer .layer_area_mo .layer_close > a 			{ width: 40px; height: 40px;}
+.layer .layer_area_mo .layer_close > a::before,
+.layer .layer_area_mo .layer_close > a::after	{ height: 20px;}
+
+	/* 비교견적신청하기 폼 ************************************************************************************************************************/
+	.lysignup_pc 						  { width: 500px; padding: 50px 60px; background-color: #fff; border: 1px solid #707070; border-radius: 20px; text-align: center; -webkit-box-sizing:border-box;box-sizing:border-box;}
+	.lysignup_pc .tit				      { margin-bottom: 50px; line-height: 40px; font-family: 'ONE-Mobile-Title'; font-size: 32px;}
+	.lysignup_pc .calc_form ul li+li	  { margin-top: 15px;}
+	.lysignup_pc .calc_form .btn_go_wrap  { margin: 45px 0 15px;}
+	.lysignup_mo 						  { width: 330px; padding: 40px 20px; background-color: #fff; border: 1px solid #707070; border-radius: 20px; text-align: center; -webkit-box-sizing:border-box;box-sizing:border-box;}
+	.lysignup_mo .tit				      { margin-bottom: 22px; line-height: 30px; font-family: 'ONE-Mobile-Title'; font-size: 24px; color: #000;}
+
+	/* 상담신청완료 폼 ************************************************************************************************************************/
+    .layer_area_pc .lycontact 				 { display: block; width: 500px; margin:0 auto; padding: 50px 0; background-color: #fff; border: 1px solid #707070; text-align: center; border-radius: 20px; -webkit-box-sizing:border-box;box-sizing:border-box;}
+	.layer_area_pc .lycontact .tit			 { line-height: 40px; font-family: 'ONE-Mobile-Title'; font-size: 32px;}
+	.layer_area_pc .lycontact .tit *		 { line-height: 40px; font-family: 'ONE-Mobile-Title'; font-size: 32px;}
+	.layer_area_pc .lycontact .tit em		 { color: #000;}
+	.layer_area_pc .lycontact .txt    		 { padding-top: 20px; font-size: 18px; }
+	.layer_area_pc .lycontact .txt em 		 { font-size: 18px; font-weight: 600; color: #000;}
+	.layer_area_pc .lycontact .time   		 { padding-top: 220px; text-align: center; border: none; }
+	.layer_area_pc .lycontact .time span	 { display: inline-block; width: 350px; height: 50px; background-color: #3E3E3E; border-radius: 30px;}
+	.layer_area_pc .lycontact .time span em  { line-height: 50px; font-size: 18px; font-weight: 700; color: #fff;}
+    .ov2 .layer_area_pc .lycontact .tit em { color: #FF4848;}
+    .ov4 .layer_area_pc .lycontact .tit em { color: #FF6726;}
+	.ov2 .layer_area_pc .lycontact .txt em { color: #FF4848;}
+	.ov4 .layer_area_pc .lycontact .txt em { color: #FF6726;}
+	.ov2 .layer_area_pc .lycontact .time   { background:url(../images/icon_work_ov2.png) no-repeat; background-position: center 35px;}
+    .ov4 .layer_area_pc .lycontact .time   { background:url(../images/icon_work_ov4.png) no-repeat; background-position: center 35px;}
+
+	.layer_area_mo .lycontact		        { display: block; width: 330px;margin:0 auto; padding: 35px 0; background-color: #fff; border: 1px solid #707070; text-align: center; border-radius: 20px; -webkit-box-sizing:border-box;box-sizing:border-box;}
+	.layer_area_mo .lycontact .tit	        { line-height: 30px; font-family: 'ONE-Mobile-Title'; font-size: 24px;}
+	.layer_area_mo .lycontact .tit *        { line-height: 30px; font-family: 'ONE-Mobile-Title'; font-size: 24px;}
+    .layer_area_mo .lycontact .tit em       { color: #000;}
+	.layer_area_mo .lycontact .txt	        { padding-top: 11px; font-size: 13px;}
+	.layer_area_mo .lycontact .txt em       { font-size: 13px; font-weight: 600; color: #000;}
+	.layer_area_mo .lycontact .time			{ padding-top: 170px; text-align: center; border: none;}
+    .layer_area_mo .lycontact .time span	{ display: inline-block; width: 250px; height: 40px; background-color: #3E3E3E; border-radius: 30px;}
+	.layer_area_mo .lycontact .time span em	{ line-height: 40px; font-size: 14px; font-weight: 700; color: #fff;}
+    .mv2 .layer_area_mo .lycontact .tit em { color: #FF4848;}
+    .mv4 .layer_area_mo .lycontact .tit em { color: #FF6726;}
+    .mv2 .layer_area_mo .lycontact .txt em { color: #FF4848;}
+    .mv4 .layer_area_mo .lycontact .txt em { color: #FF6726;}
+	.mv2 .layer_area_mo .lycontact .time   { background:url(../images/m_icon_work_mv2.png) no-repeat; background-size: auto 60%; background-position: center 25px;}
+	.mv4 .layer_area_mo .lycontact .time   { background:url(../images/m_icon_work_mv4.png) no-repeat; background-size: auto 60%; background-position: center 25px;}
+
+	/*상담신청완료 시간내*/
+	.lycontact .lycontact_ver1 { display: none;}
+	.lycontact .lycontact_ver2 { display: block;}
+
+	/*상담신청완료 시간외*/
+	.lycontact .lycontact_overtime .lycontact_ver1 { display: block;}
+	.lycontact .lycontact_overtime .lycontact_ver2 { display: none;}
