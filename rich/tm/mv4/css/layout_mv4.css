@@ -138,7 +138,6 @@ header a img   { height: 20px; padding-top: 14px;}
 .partner_Wrap .mitem2 .partner_Btn a.btn_sum  { background:#2683DF}
 .partner_Wrap .mitem2 .partner_Tel            { width: 50%;}
 .partner_Wrap .mitem2 .partner_Tel a          { display: block; height: 28px; line-height: 28px; font-size: 20px; font-weight: 600; color: #3E3E3E;}
-.partner_Wrap .mitem2 .partner_Tel a{color: blue;}
 
 /* 5 갱신 */
 .mv4_sec4            { padding: 50px 0 150px; background: #fff url(../images/bg_renew.png) no-repeat center 77%; background-size: auto 76px; text-align: center;}
