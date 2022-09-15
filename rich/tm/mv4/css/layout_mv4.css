@@ -76,8 +76,8 @@ header a img   { height: 20px; padding-top: 14px;}
 .simple_Wrap > ul li:nth-child(2n-1)         { margin-right: 60px;}
 .simple_Wrap > ul li:nth-child(2n-1)::before { position: absolute; top: 0; right: -30px; width: 1px; height: 100%; background: url(../images/border_style1.png) repeat-y; content: '';}
 .simple_Wrap .simple_Box                { overflow: hidden; position: relative; width:100%; margin:0 auto; -webkit-box-sizing:border-box;box-sizing:border-box;}
-.simple_Wrap .simple_Box .simple_Thum   { display:block; margin: 0 auto; text-align: center;}
-.simple_Wrap .simple_Box .simple_Thum img{ width: 100%;}
+.simple_Wrap .simple_Box .simple_Thum   { display:block; height:44px; margin: 0 auto; text-align: center;}
+.simple_Wrap .simple_Box .simple_Thum img{ height: 100%;}
 .simple_Wrap .simple_Box .calcul_wrap   { margin-top: 5px; text-align: center;}
 .simple_Wrap .simple_Box .fee           { display: block; height: 37px; line-height: 37px; font-size: 18px; color: #3E3E3E; font-weight: 600; text-align: center; cursor: pointer;}
 .simple_Wrap .simple_Box .fee span      { line-height: 30px; font-size: 24px; font-weight: 700; color: #FF4848; vertical-align: bottom;}
@@ -136,7 +136,8 @@ header a img   { height: 20px; padding-top: 14px;}
 .partner_Wrap .mitem2 .partner_Btn a+a        { margin-left: 10px;}
 .partner_Wrap .mitem2 .partner_Btn a.btn_view { background:#FF6726}
 .partner_Wrap .mitem2 .partner_Btn a.btn_sum  { background:#2683DF}
-.partner_Wrap .mitem2 .partner_Tel a          { display: block; height: 28px; line-height: 28px; font-size: 22px; font-weight: 600; color: #3E3E3E;}
+.partner_Wrap .mitem2 .partner_Tel a          { display: block; height: 28px; line-height: 28px; font-size: 20px; font-weight: 600; color: #3E3E3E;}
+.partner_Wrap .mitem2 .partner_Tel a{color: red;}
 
 /* 5 갱신 */
 .mv4_sec4            { padding: 50px 0 150px; background: #fff url(../images/bg_renew.png) no-repeat center 77%; background-size: auto 76px; text-align: center;}
