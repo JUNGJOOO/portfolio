@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>IRIS</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Classification" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta name="description" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta name="keywords" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta name="Subject" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta property="og:title" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta property="og:description" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta name="twitter:title" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta name="twitter:card" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta name="twitter:description" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/nice-select.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+<div class="wrap wrap-type1">
+    <header>
+        <h1 class="header_logo">
+            <a href="javascript:;">
+                <img src="../images/header_logo1.png" alt="GoodRich"/>
+            </a>
+        </h1>
+        <div class="header_btn">
+            <button type="button">
+                <span class="hide">닫기</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- s:main_top -->
+        <section class="main_top">
+            <h2 class="main_tit"><span>어떤 보험상품</span>이 필요하신가요?</h2>
+            <p class="main_subtit">관심 분야를 선택해주세요. (중복 선택 가능)</p>
+            <a class="btn_sample" href="javascript:;">보험료 비교 샘플보기</a>
+            <ul class="prd_list">
+                <li class="prd_box">
+                    <input type="checkbox" name="prdList" id="prd01">
+                    <label for="prd01">
+                        <div class="prd_lst">
+                            <p class="prd_tit">암</p>
+                        </div>
+                        <div class="prd_hidden">
+                            <p>재발율 높은<br>암치료!<br>미리 준비하는<br>암보험</p>
+                        </div>
+                    </label>
+                </li>
+                <li class="prd_box">
+                    <input type="checkbox" name="prdList" id="prd02" disabled="disabled">
+                    <label for="prd02">
+                        <div class="prd_lst">
+                            <p class="prd_tit">뇌·심장</p>
+                        </div>
+                        <div class="prd_hidden">
+                            <p>보장은 넓게,<br>마음은<br>든든하게!</p>
+                        </div>
+                    </label>
+                </li>
+                <li class="prd_box">
+                    <input type="checkbox" name="prdList" id="prd03">
+                    <label for="prd03">
+                        <div class="prd_lst">
+                            <p class="prd_tit">수술비</p>
+                        </div>
+                        <div class="prd_hidden">
+                            <p>큰 병 이겨내는<br>큰 힘 되는 보험!</p>
+                        </div>
+                    </label>
+                </li>
+                <li class="prd_box">
+                    <input type="checkbox" name="prdList" id="prd04">
+                    <label for="prd04">
+                        <div class="prd_lst">
+                            <p class="prd_tit">후유장애</p>
+                        </div>
+                        <div class="prd_hidden">
+                            <p>치료후 자주<br>발생하는<br>후유장애!</p>
+                        </div>
+                    </label>
+                </li>
+                <li class="prd_box">
+                    <input type="checkbox" name="prdList" id="prd05">
+                    <label for="prd05">
+                        <div class="prd_lst">
+                            <p class="prd_tit">치매간병</p>
+                        </div>
+                        <div class="prd_hidden">
+                            <p>부모님의<br>안전하고 편안한<br>노후 준비!</p>
+                        </div>
+                    </label>
+                </li>
+                <li class="prd_box">
+                    <input type="checkbox" name="prdList" id="prd06">
+                    <label for="prd06">
+                        <div class="prd_lst">
+                            <p class="prd_tit">입원일당</p>
+                        </div>
+                        <div class="prd_hidden">
+                            <p>마음편한<br>입원비 보험!</p>
+                        </div>
+                    </label>
+                </li>
+                <li class="prd_box">
+                    <input type="checkbox" name="prdList" id="prd07">
+                    <label for="prd07">
+                        <div class="prd_lst">
+                            <p class="prd_tit">실손</p>
+                        </div>
+                        <div class="prd_hidden">
+                            <p>살아가는 동안의<br>병원비 보장!</p>
+                        </div>
+                    </label>
+                </li>
+                <li class="prd_box">
+                    <input type="checkbox" name="prdList" id="prd08">
+                    <label for="prd08">
+                        <div class="prd_lst">
+                            <p class="prd_tit">운전자상해</p>
+                        </div>
+                        <div class="prd_hidden">
+                            <p>급격하고<br>우연한 사고를<br>위한 보험!</p>
+                        </div>
+                    </label>
+                </li>
+                <li class="prd_box">
+                    <input type="checkbox" name="prdList" id="prd09">
+                    <label for="prd09">
+                        <div class="prd_lst">
+                            <p class="prd_tit">치아</p>
+                        </div>
+                        <div class="prd_hidden">
+                            <p>온 가족<br>미리준비하는<br>치아보험!</p>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+        </section>
+        <!-- e:main_top -->
+
+        <!-- s:main_form -->
+        <section class="main_form">
+            <h2 class="cont_tit">기본 정보 입력</h2>
+            <p class="cont_subtit">기본정보를 입력하고 보험료를 계산해보세요!</p>
+            <div class="form_area">
+                <ul class="form_group1">
+                    <li class="form_name">
+                        <h3 class="tit">
+                            <label for="name">이름</label>
+                        </h3>
+                        <div>
+                            <input type="text" id="name" placeholder="이름을 입력해 주세요">
+                            <p class="gender_chk">
+                                <span>
+                                    <input type="radio" name="gender" id="men" checked="checked">
+                                    <label for="men">남자</label>
+                                </span>
+                                <span>
+                                    <input type="radio" name="gender" id="women">
+                                    <label for="women">여자</label>
+                                </span>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="form_num">
+                        <h3 class="tit">
+                            <label for="phone">연락처</label>
+                        </h3>
+                        <div>
+                            <input type="tel" id="phone" placeholder="숫자만 입력해주세요 (-제외)">
+                            <a class="btn_form" href="javascript:;">인증</a>
+                        </div>
+                    </li>
+                    <li class="form_confirm">
+                        <h3 class="tit">
+                            <label for="" class="hide">인증</label>
+                        </h3>
+                        <div>
+                            <div class="form_confirm-inp">
+                                <input type="tel" id="" placeholder="인증번호를 입력해주세요">
+                                <span class="form_confirm-time">3:00</span>
+                                <p class="form_confirm-txt">인증번호가 발송되었습니다.</p>
+                            </div>
+                            <a href="javascript:;" class="btn_form">확인</a>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="form_group2">
+                    <li class="form_birth">
+                        <h3 class="tit">
+                            <label for="birth">생년월일</label>
+                        </h3>
+                        <div>
+                            <input type="text" id="birth" placeholder="예) 19880101">
+                        </div>
+                    </li>
+                    <li class="form_job">
+                        <h3 class="tit">
+                            <label for="job">직업</label>
+                            <div class="tooltip">직업에서 기타를 선택하신 경우, 정확한<br/> 보험료 산출이 어려운 점 참고 해주세요.</div>
+                        </h3>
+                        <div>
+                            <select name="job" id="job" class="js-select">
+                                <option value="직업선택">직업선택</option>
+                                <option value="사무직">사무직</option>
+                                <option value="주부">주부</option>
+                                <option value="학생">학생</option>
+                                <option value="미취학아동">미취학아동</option>
+                                <option value="기타">기타</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="form_drive">
+                        <h3 class="tit">
+                            <label for="drive">운전여부</label>
+                        </h3>
+                        <div>
+                            <select name="drive" id="drive" class="js-select">
+                                <option value="운전여부">운전여부</option>
+                                <option value="운전안함">운전안함</option>
+                                <option value="자가용">자가용</option>
+                                <option value="영업용">영업용</option>
+                            </select>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="form_bottom">
+                <div class="agree_area">
+                    <input type="checkbox" name="" id="agree">
+                    <label for="agree">개인정보수집 및 활용동의</label>
+                    <a href="https://goodrichmall.com/common/open_agreement?chkboxId=checkAgreement_totalSum" onclick="window.open(this.href,'_blank','width=500,height=810,left=400,top=190,scrollbars=no'); return false;">보기</a>
+                </div>
+                <button type="button" class="btn_design">보험료 비교 상담</button>
+            </div>
+        </section>
+        <!-- e:main_form -->
+
+        <!-- s:main_login -->
+        <section class="main_login">
+            <h2 class="cont_tit">간편 로그인</h2>
+            <p class="cont_subtit">인증 없이 쉽고 빠르게!</p>
+            <p class="login_info"><b>직업</b>과 <b>운전형태</b>는 임의로 지정되며,<br/>보험료가 다를 수 있습니다.</p>
+            <div class="login_area">
+                <button type="button" class="btn_naver">
+                    <span>네이버로 로그인</span>
+                </button>
+                <button type="button" class="btn_kakao">
+                    <span>카카오톡으로 로그인</span>
+                <button>
+            </div>
+        </section>
+        <!-- e:main_login -->
+
+    </main>
+</div>
+
+<!-- script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="../js/jquery.nice-select.min.js"></script>
+<script src="../js/common.js"></script>
+
+</body>
+</html>
