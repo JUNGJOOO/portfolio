@@ -29,17 +29,17 @@
 #gnb_con 							{ position:fixed; top:0; left:0; right:0; z-index:101;}
 #gnb_con #gnb 						{ overflow:visible;position:relative;margin:0 auto; padding: 0 60px; height:100%}
 #gnb_con #gnb h1					{ float: left; margin-top: 20px}
-#gnb_con #gnb .tit_logo				{ display: block; overflow: hidden; width:125px;height: 44px; background: url('http://img.direct-carbohum.com/adinsu/company/logo.png') no-repeat top left; background-size:125px; font-size: 0}
+#gnb_con #gnb .tit_logo				{ display: block; overflow: hidden; width:125px;height: 44px; background: url('../images/logo.png') no-repeat top left; background-size:125px; font-size: 0}
 #gnb_con #gnb .list_menu			{ overflow:hidden; float: right; height: 70px; margin-top: 23px}
 #gnb_con #gnb .list_menu li			{ float: left; margin: 0 0 0 51px; height: 40px; line-height: 40px}
 #gnb_con #gnb .list_menu li a		{ font-size: 18px; font-weight:700; color: #fff; letter-spacing: -0.025em}
 #gnb_con #gnb .list_menu li.blog	{ display: none;}
-#gnb_con #gnb .list_menu li.blog a	{ display: block; width: 40px; height: 40px; background: url('http://img.direct-carbohum.com/adinsu/company/icon_bolg.png') no-repeat left top}
-#gnb_con #gnb .list_menu li.blog a:hover{ display: block; width: 40px; height: 40px; background: url('http://img.direct-carbohum.com/adinsu/company/icon_bolg_on.png') no-repeat left top}
+#gnb_con #gnb .list_menu li.blog a	{ display: block; width: 40px; height: 40px; background: url('../images/icon_bolg.png') no-repeat left top}
+#gnb_con #gnb .list_menu li.blog a:hover{ display: block; width: 40px; height: 40px; background: url('../images/icon_bolg_on.png') no-repeat left top}
 #gnb_con.on #gnb					{ height: 84px; background: #fff; box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.06)}
-#gnb_con.on #gnb .tit_logo			{ background: url('http://img.direct-carbohum.com/adinsu/company/logo_on.png') no-repeat top left; background-size: 125px}
+#gnb_con.on #gnb .tit_logo			{ background: url('../images/logo_on.png') no-repeat top left; background-size: 125px}
 #gnb_con.on #gnb .list_menu li a	{ color: #000000}
-#gnb_con.on #gnb .list_menu li.blog a{ display: block; width: 40px; height: 40px; background: url('http://img.direct-carbohum.com/adinsu/company/icon_bolg_scroll.png') no-repeat left top}
+#gnb_con.on #gnb .list_menu li.blog a{ display: block; width: 40px; height: 40px; background: url('../images/icon_bolg_scroll.png') no-repeat left top}
 #gnb_con .link_navi{ display:none}
 
 /* side_menu */
@@ -60,10 +60,10 @@
 #footer .btn_sns_con		 { display: none; float: right; margin: 44px 55px 0 0}
 #footer .btn_sns_con .blog	 { float:left; width:32px; height:30px; margin-right:25px}
 #footer .btn_sns_con .post	 { float:left; width:17px; height:30px}
-#footer .btn_sns_con .blog a { display:inline-block; width:32px; height:30px; background: url('http://img.direct-carbohum.com/adinsu/company/ico_blog.png') no-repeat center left; background-size: 32px}
-#footer .btn_sns_con .post a { display:inline-block; width:17px; height:30px; background: url('http://img.direct-carbohum.com/adinsu/company/ico_post.png') no-repeat center left; background-size: 17px}
-#footer .btn_sns_con .blog a:hover { background: url('http://img.direct-carbohum.com/adinsu/company/ico_blog_on.png') no-repeat center left; background-size: 32px}
-#footer .btn_sns_con .post a:hover { background: url('http://img.direct-carbohum.com/adinsu/company/ico_post_on.png') no-repeat center left; background-size: 17px}
+#footer .btn_sns_con .blog a { display:inline-block; width:32px; height:30px; background: url('../images/ico_blog.png') no-repeat center left; background-size: 32px}
+#footer .btn_sns_con .post a { display:inline-block; width:17px; height:30px; background: url('../images/ico_post.png') no-repeat center left; background-size: 17px}
+#footer .btn_sns_con .blog a:hover { background: url('../images/ico_blog_on.png') no-repeat center left; background-size: 32px}
+#footer .btn_sns_con .post a:hover { background: url('../images/ico_post_on.png') no-repeat center left; background-size: 17px}
 
 /* ë¹„ì£¼ì–¼ì˜ì—­ */
 .content_layout_type1 { overflow: hidden; position: relative ;width: 100%; height: 100vh !important; box-sizing:border-box;}
@@ -84,8 +84,8 @@
 .swiper-slide-active .txt2,
 .swiper-slide-active .txt3 {-webkit-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); opacity: 1;}
 .swiper_bg  					{ position: absolute; top: 0; right: 0; bottom: 0; left: 0; -webkit-transition: 4s all; -moz-transition: 4s all;  transition: 4s all;}
-.swiper_bg1 					{ background: url(http://img.direct-carbohum.com/adinsu/company/visual_bg1.jpg) no-repeat center center; background-size: cover;}
-.swiper_bg2 					{ background: url(http://img.direct-carbohum.com/adinsu/company/visual_bg2.jpg) no-repeat center center; background-size: cover;}
+.swiper_bg1 					{ background: url(../images/visual_bg1.jpg) no-repeat center center; background-size: cover;}
+.swiper_bg2 					{ background: url(../images/visual_bg2.jpg) no-repeat center center; background-size: cover;}
 .swiper-slide-active .swiper_bg {  -webkit-animation: visual_move 6s ease-in; -moz-animation: visual_move 6s ease-in; animation: visual_move 6s ease-in;}
 .visual_pagination{
 	position: absolute; top: 50%; left: 50% !important; bottom: auto !important; z-index: 100;
@@ -110,16 +110,16 @@
 .car_insurance_list .box_con a			{ display: block}
 .car_insurance_list .box_con a:hover .box{ box-shadow: 8px 13px 15px 0px rgba(73, 84, 98, 0.1);}
 .car_insurance_list .box_con .txt_con	{ text-align: center; margin-top: 30px; height: 22px;padding-bottom: 20px; background: none}
-.car_insurance_list .box_con a:hover .txt_con{ background:url('http://img.direct-carbohum.com/adinsu/company/icon_tm_arrow.jpg') no-repeat center bottom; }
+.car_insurance_list .box_con a:hover .txt_con{ background:url('../images/icon_tm_arrow.jpg') no-repeat center bottom; }
 .car_insurance_list .box_con .txt		{ display: inline-block; font-size: 20px; border-bottom: 2px solid #000; padding-bottom: 10px}
 .car_insurance_list .box_con .txt .point{ font-size: 20px; font-weight: 700;}
 .car_insurance_list_btn_group			{ display: none; position: absolute; top: 475px; left: 33px; height: 20px;}
 .car_insurance_list_btn_group li		{ float: left; margin-left: 15px;}
-.car_insurance_list_btn_group li a		{ display: inline-block; width: 116px; background:url('http://img.direct-carbohum.com/adinsu/company/icon_tm_btn.jpg') no-repeat right 2px; font-size: 14px; font-weight: 500; text-align: left;}
+.car_insurance_list_btn_group li a		{ display: inline-block; width: 116px; background:url('../images/icon_tm_btn.jpg') no-repeat right 2px; font-size: 14px; font-weight: 500; text-align: left;}
 .car_insurance_list_btn_group li:first-child{ margin-left: 0}
-.car_insurance_list_btn_group li:hover a{ cursor: pointer; background:url('http://img.direct-carbohum.com/adinsu/company/icon_tm_btn_on.jpg') no-repeat right 2px; color: #3ae6d7; padding-bottom: 5px; border-bottom: 1px solid #3ae6d7}
+.car_insurance_list_btn_group li:hover a{ cursor: pointer; background:url('../images/icon_tm_btn_on.jpg') no-repeat right 2px; color: #3ae6d7; padding-bottom: 5px; border-bottom: 1px solid #3ae6d7}
 .car_insurance_list .box_con.on a .box	{ box-shadow: 8px 13px 15px 0px rgba(73, 84, 98, 0.1);}
-.car_insurance_list .box_con.on a .txt_con{ background:url('http://img.direct-carbohum.com/adinsu/company/icon_tm_arrow.jpg') no-repeat center bottom; }
+.car_insurance_list .box_con.on a .txt_con{ background:url('../images/icon_tm_arrow.jpg') no-repeat center bottom; }
 .car_insurance_list_btn_group li		{ -webkit-transform: translate(0, -30px); -webkit-transition: all 500ms; opacity:0; transform: translate(0, -30px); transition: all 500ms;}
 .car_insurance_list_btn_group li.on		{ opacity:1; -webkit-transform: translate(0, 10px); transform: translate(0, 10px);}
 
@@ -157,7 +157,7 @@
 
 /* 7 ì—°í˜ */
 .list_history			{ position: relative; margin: 50px 0 0; font-size: 0; text-align: center;}
-.list_history:before	{ content: ""; position: absolute; top: 57px; left: 0; z-index: -1; display: block; width: 100%; height: 347px; background: url('https://img.adinsu.co.kr/adinsu/company/list_history_bg_v2.png') no-repeat;}
+.list_history:before	{ content: ""; position: absolute; top: 57px; left: 0; z-index: -1; display: block; width: 100%; height: 347px; background: url('../images/list_history_bg_v2.png') no-repeat;}
 .list_history:after 	{ content:''; display: block; clear: both;}
 .list_history .year_con	{ display: inline-block; position: relative; width: 235px; margin: 0 86px 20px 0; vertical-align: top; text-align: center;}
 .list_history .year_con:nth-of-type(4),
@@ -201,8 +201,8 @@
 
 
 /* slick multiple-items */
-.btn_prev	{ position: absolute; top:50%; left: 0; transform: translateY(-50%); -webkit-transform: translateY(-50%); z-index:15; width:20px; height:50px; padding: 0; background: url('http://img.direct-carbohum.com/adinsu/company/btn_layer_left_on.png') no-repeat center; background-size: 20px}
-.btn_next	{ position: absolute; top:50%; right: 0; transform: translateY(-50%); -webkit-transform: translateY(-50%); z-index:15; width:20px; height:50px; padding: 0; background: url('http://img.direct-carbohum.com/adinsu/company/btn_layer_right_on.png') no-repeat center; background-size: 20px}
+.btn_prev	{ position: absolute; top:50%; left: 0; transform: translateY(-50%); -webkit-transform: translateY(-50%); z-index:15; width:20px; height:50px; padding: 0; background: url('../images/btn_layer_left_on.png') no-repeat center; background-size: 20px}
+.btn_next	{ position: absolute; top:50%; right: 0; transform: translateY(-50%); -webkit-transform: translateY(-50%); z-index:15; width:20px; height:50px; padding: 0; background: url('../images/btn_layer_right_on.png') no-repeat center; background-size: 20px}
 .ico_arrow	{ overflow:hidden;font-size: 0; text-indent:-9999px}
 .awards_slider_con		{ background: #2a2a2a}
 .awards_slider			{ position: relative; width: 1100px; margin: 0 auto}
@@ -228,8 +228,8 @@
 	.slider_img_con h2	{ font-size: 72px; font-weight: 500; color: #fff; letter-spacing: -0.025em;}
 	.slider_img_con p	{ font-size: 40px; color: #fff; letter-spacing: -0.025em; margin-top: 23px; line-height: 1.2}
 	
-	.btn_prev.slick-disabled{ background: url('http://img.direct-carbohum.com/adinsu/company/btn_layer_left.png') no-repeat top left;}
-	.btn_next.slick-disabled{ background: url('http://img.direct-carbohum.com/adinsu/company/btn_layer_right.png') no-repeat top left;}
+	/* .btn_prev.slick-disabled{ background: url('http://img.direct-carbohum.com/adinsu/company/btn_layer_left.png') no-repeat top left;} */
+	/* .btn_next.slick-disabled{ background: url('http://img.direct-carbohum.com/adinsu/company/btn_layer_right.png') no-repeat top left;} */
 	.list_insure_type1		{ overflow: hidden; margin: 30px auto 0; text-align: center}
 	.list_insure_type1 li	{ display: inline-block; width: 80px; height: 26px; margin: 5px 4px; padding:8px 14px; background: #fff; border: 1px solid #e8e8e8}
 	.list_insure_type2_con								{ text-align:center; margin-top: 50px}
@@ -355,10 +355,10 @@
 	#gnb_con #gnb h1		{ margin-top: 14px}
 	#gnb_con #gnb .tit_logo	{ width: 90px; background-size: 90px}
 	#gnb_con .link_navi 		  { display:block; z-index: 10; float:right; height: 39px;}
-	#gnb_con .link_navi .ico_navi { display: block; width: 29px; height: 23px; margin: 19px auto 0; background-image: url(http://img.direct-carbohum.com/adinsu/company/icon_navi.png); background-size:29px auto; font-size: 1px; color: transparent; text-indent: 0}
+	#gnb_con .link_navi .ico_navi { display: block; width: 29px; height: 23px; margin: 19px auto 0; background-image: url(../images/icon_navi.png); background-size:29px auto; font-size: 1px; color: transparent; text-indent: 0}
 	#gnb_con.on #gnb				{ height: 60px}
 	#gnb_con.on #gnb .tit_logo		{ width: 90px; background-size: 90px}
-	#gnb_con.on .link_navi .ico_navi{ background-image: url(http://img.direct-carbohum.com/adinsu/company/icon_navi_on.png);}
+	#gnb_con.on .link_navi .ico_navi{ background-image: url(../images/icon_navi_on.png);}
 	.list_menu{ display: none}
 			
 	/* side_menu */
@@ -368,16 +368,16 @@
 	.side_menu ul				{ overflow:hidden; width:100%; padding-bottom:52px; background: #000;}
 	.side_menu ul li			{ border-top: 1px solid rgba(255, 255, 255, 0.1);}
 	.side_menu ul li:first-child{ border-top:none}
-	.side_menu ul li a			{ display:block; width:100%; height:60px; line-height:60px; font-size: 20px; color:#fff; letter-spacing: -0.025em; background: url(http://img.direct-carbohum.com/adinsu/company/icon_sidenavi_arrow.png) no-repeat right center; background-size: 8px auto}
-	.side_menu ul li.active a	{ color:#11d6c5; background: url(http://img.direct-carbohum.com/adinsu/company/icon_sidenavi_arrow_on.png) no-repeat right center; background-size: 8px auto}
+	.side_menu ul li a			{ display:block; width:100%; height:60px; line-height:60px; font-size: 20px; color:#fff; letter-spacing: -0.025em; background: url(../images/icon_sidenavi_arrow.png) no-repeat right center; background-size: 8px auto}
+	.side_menu ul li.active a	{ color:#11d6c5; background: url(../images/icon_sidenavi_arrow_on.png) no-repeat right center; background-size: 8px auto}
 
     /* ë¹„ì£¼ì–¼ì˜ì—­ */
 	.scrollDown { width:20px; height: 20px; margin-left: -10px}
 	.visual_txt		  		  { top: 40%; }
 	.visual_txt .txt2 		  { margin: 25px 0;}
 	.swiper_bg  			  { background-size: cover;}
-	.swiper_bg1 			  { background: url(http://img.direct-carbohum.com/adinsu/company/visual_bg1_m2.jpg) no-repeat center center; background-size: cover;}
-	.swiper_bg2 			  { background: url(http://img.direct-carbohum.com/adinsu/company/visual_bg2_m2.jpg) no-repeat center center; background-size: cover;}
+	.swiper_bg1 			  { background: url(../images/visual_bg1_m2.jpg) no-repeat center center; background-size: cover;}
+	.swiper_bg2 			  { background: url(../images/visual_bg2_m2.jpg) no-repeat center center; background-size: cover;}
 	.visual_pagination 		  { top: 40%; margin: -21vh 0 0 0;}
 	.visual_pagination > span { width: 90px !important;}
 	
