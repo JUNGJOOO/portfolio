@@ -80,7 +80,7 @@ address, cite, code, dfn, em, var {font-style: normal;font-weight: normal;}
 .dropdown_btn .arrow { display: inline-block; position: absolute; top: 50%; right: 17px; -webkit-transform: translateX(-50%) rotate(45deg); transform: translateX(-50%) rotate(45deg); margin-top: -6px; padding: 2.5px; border: solid black; border-width: 0 2px 2px 0;}
 .dropdown_list                           { display: none; padding: 16px 0; border-right: 1px solid #E1E1E1; border-bottom: 1px solid #E1E1E1; border-left: 1px solid #E1E1E1;}
 .dropdown_list ::-webkit-scrollbar       { width: 4px; height: 4px;}
-.dropdown_list ::-webkit-scrollbar-thumb { background: #ffa400; border-radius: 30px;}
+.dropdown_list ::-webkit-scrollbar-thumb { background: #E1E1E1; border-radius: 30px;}
 .dropdown_list ::-webkit-scrollbar-track { background: transparent;}
 .dropdown_list .dropdown_box             { overflow: auto; max-height: 210px; margin: 0 15px 0 23px;}
 .dropdown_list a                         { display: block; width: 100%;}
@@ -97,7 +97,6 @@ address, cite, code, dfn, em, var {font-style: normal;font-weight: normal;}
 #dropdown.is_active .dropdown_list       { display: block;}
 #dropdown.is_active .dropdown_btn .arrow { -webkit-transform: translateX(-50%) rotate(-135deg); transform: translateX(-50%) rotate(-135deg); margin-top: -2px;}
 
-
 /* media ================================================ */
 @media screen and (max-width: 1023px) {
     .wrap { padding: 35px 16px;}
@@ -106,5 +105,5 @@ address, cite, code, dfn, em, var {font-style: normal;font-weight: normal;}
     .dropdown_list .dropdown_box{ max-height: 140px;}
 }
 @media (max-width: 360px) {
-    .dropdown_list span{display: none;}
+    .dropdown_list span{ display: none; }
 }
