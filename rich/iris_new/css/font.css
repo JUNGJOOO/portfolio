@@ -1,0 +1,59 @@
+/* Pretendard */
+@font-face {
+    font-family: 'Pretendard';font-weight: 900;font-style: normal;
+    src: url(../font/Pretendard-Black.otf);
+    src: url(../font/Pretendard-Black.otf?#iefix) format('embedded-opentype'),
+         url(../font/Pretendard-Black.otf) format('truetype');
+    src: url(../font/Pretendard-Black.woff2) format('woff2'),
+         url(../font/Pretendard-Black.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';font-weight: 700;font-style: normal;
+    src: url(../font/Pretendard-Bold.otf);
+    src: url(../font/Pretendard-Bold.otf?#iefix) format('embedded-opentype'),
+         url(../font/Pretendard-Bold.otf) format('truetype');
+    src: url(../font/Pretendard-Bold.woff2) format('woff2'),
+         url(../font/Pretendard-Bold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';font-weight: 600;font-style: normal;
+    src: url(../font/Pretendard-SemiBold.otf);
+    src: url(../font/Pretendard-SemiBold.otf?#iefix) format('embedded-opentype'),
+         url(../font/Pretendard-SemiBold.otf) format('truetype');
+    src: url(../font/Pretendard-SemiBold.woff2) format('woff2'),
+         url(../font/Pretendard-SemiBold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';font-weight: 500;font-style: normal;
+    src: url(../font/Pretendard-Medium.otf);
+    src: url(../font/Pretendard-Medium.otf?#iefix) format('embedded-opentype'),
+         url(../font/Pretendard-Medium.otf) format('truetype');
+    src: url(../font/Pretendard-Medium.woff2) format('woff2'),
+         url(../font/Pretendard-Medium.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';font-weight: 400;font-style: normal;
+    src: url(../font/Pretendard-Regular.otf);
+    src: url(../font/Pretendard-Regular.otf?#iefix) format('embedded-opentype'),
+         url(../font/Pretendard-Regular.otf) format('truetype');
+    src: url(../font/Pretendard-Regular.woff2) format('woff2'),
+         url(../font/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard';font-weight: 300;font-style: normal;
+    src: url(../font/Pretendard-Light.otf);
+    src: url(../font/Pretendard-Light.otf?#iefix) format('embedded-opentype'),
+         url(../font/Pretendard-Light.otf) format('truetype');
+    src: url(../font/Pretendard-Light.woff2) format('woff2'),
+         url(../font/Pretendard-Light.woff) format('woff');
+}
+
+/* JalnanGothic */
+@font-face {
+     font-family: 'JalnanGothic';font-weight: 500;font-style: normal;
+     src: url(../font/JalnanGothic.otf);
+     src: url(../font/JalnanGothic.otf) format('embedded-opentype'),
+          url(../font/JalnanGothic.otf) format('truetype');
+     src: url(../font/JalnanGothic.woff2) format('woff2'),
+          url(../font/JalnanGothic.woff) format('woff');
+} 
