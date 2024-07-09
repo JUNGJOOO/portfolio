@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+/* 웹폰트 */
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../font/SpoqaHanSansNeo-Bold.eot');
+    src: url('../font/SpoqaHanSansNeo-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../font/SpoqaHanSansNeo-Bold.woff') format('woff'),
+         url('../font/SpoqaHanSansNeo-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../font/SpoqaHanSansNeo-Medium.eot');
+    src: url('../font/SpoqaHanSansNeo-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../font/SpoqaHanSansNeo-Medium.woff') format('woff'),
+         url('../font/SpoqaHanSansNeo-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../font/SpoqaHanSansNeo-Regular.eot');
+    src: url('../font/SpoqaHanSansNeo-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../font/SpoqaHanSansNeo-Regular.woff') format('woff'),
+         url('../font/SpoqaHanSansNeo-Regular.ttf') format('truetype');
+}
+
+/* COMMON */
+* {margin:0; padding: 0; font-family: 'SpoqaHanSansNeo'}
+html, body {margin:0;padding:0;background-color:#fff; width:100%; height:100%; font-family: 'SpoqaHanSansNeo', 'sans-serif', '맑은고딕', Malgun Gothic, '나눔고딕', NanumGothic, '돋움', Dotum;}
+hr {display:none;}
+img,fieldset {border:0 none;}
+dl,ul,ol,li {list-style: none;}
+h1,h2,h3,h4,h5,dl,dt,dd,ul,li,ol,th,td,p,blockquote,form,fieldset,legend {margin:0;padding:0;}
+table {border-collapse:collapse;}
+a {text-decoration:none;color:#333; } 
+a:hover {text-decoration:none;color:#333; }
+input,textarea {color:#333; font-size:12px;border:1px solid #dfdfdf;vertical-align:middle;font-family:'SpoqaHanSansNeo', 'sans-serif', '맑은고딕', Malgun Gothic; }
+input[type=text]{border:1px solid #dfdfdf; font-size:15px}
+input[type=checkbox]{border:none !important}
+input[type=radio]{border:none !important}
+select {background: #fff;color:#333; font-size:12px;vertical-align:middle;font-family:'SpoqaHanSansNeo', 'sans-serif', '맑은고딕', Malgun Gothic; border:1px solid #dfdfdf;}
+body,th,td {font-size:13px; color:#333;letter-spacing:-1px}
+em{font-style:normal}
+caption { display:none;}
+.pd_none{padding:0 !important;}
+
+/* 전체 레이아웃 */
+#wrap   { width:100%; position:relative}
+
+/* 헤더 */
+.header { border-bottom: 1px solid #E67401; text-align: center;}
+
+/* 본문 */
+.main                       { overflow: hidden; width:100%; margin: 0 auto; background-color: #F5F5F5;}
+.main .inner                { position: relative; width: 1100px; margin: 0 auto; padding: 80px 0;}
+.main .inner::after         { position: absolute; bottom: 60px; right: -275px; width: 506px; height: 184px; background: url('../images/hicar_car.png') no-repeat; content: '';}
+.title                      { padding-bottom: 43px; text-align: center;}
+.title strong               { display: block; line-height: 60px; font-family: "rixdongnimgothic-pro", sans-serif; font-size: 48px; font-weight: 500; color: #00346D}
+.title span                 { display: block; line-height: 60px; font-family: "rixdongnimgothic-pro", sans-serif; font-size: 48px; font-weight: 500; color: #E67401}
+.main_item                  { margin: -10px; font-size: 0; }
+.main_item li               { display: inline-block; position: relative; height: 270px; padding: 30px 20px 20px 30px; margin: 5px; box-sizing: border-box; border-radius: 10px; background-color: #fff; box-shadow: 0 3px 10px rgba(0,0,0,0.15); vertical-align: top;}
+.main_item .item_tit        { display: block; line-height: 36px; margin-bottom: 12px; font-family: "rixdongnimgothic-pro", sans-serif; font-size: 32px; font-weight:500; color: #00346D;}
+.main_item .item_subtit     { line-height: 25px; font-size: 19px; color: #777;}
+.main_item .item_subtit .fs1{ font-weight: 700; color: #047DB5;}
+.main_item .main_item_row1  { width: calc((100% - 40px) / 4);}
+.main_item .main_item_row2  { width: calc((100% - 20px) / 2);}
+.main_item li::before       { position: absolute; bottom: 20px; right: 20px; width: 80px; height: 80px; background: url('../images/hicar_item_icon.png') no-repeat; background-size: 1000% auto; content: '';}
+.main_item li:nth-of-type(2)::before  { background-position: -80px 0;}
+.main_item li:nth-of-type(3)::before  { background-position: -160px 0;}
+.main_item li:nth-of-type(4)::before  { background-position: -240px 0;}
+.main_item li:nth-of-type(5)::before  { background-position: -320px 0;}
+.main_item li:nth-of-type(6)::before  { background-position: -400px 0;}
+.main_item li:nth-of-type(7)::before  { background-position: -480px 0;}
+.main_item li:nth-of-type(8)::before  { background-position: -560px 0;}
+.main_item li:nth-of-type(9)::before  { background-position: -640px 0;}
+.main_item li:nth-of-type(10)::before { background-position: -720px 0;}
+
+/* 메인비주얼 */
+.visual                        { position: relative; width: 100%; min-width: 1100px; height: 556px; margin: 0 auto;}
+.visual-area                   { width: 1100px; height: 557px; margin: 0 auto; font-size: 0;}
+.visual .visual-left           { display: inline-block; position: relative; width: 50%; height: 100%; vertical-align: top;}
+.visual .visual-left > img     { position: absolute; top: 0; right: 0;}
+.visual .visual-right          { display: inline-block; width: 50%; height: 100%; padding: 76px 0 0 80px; box-sizing: border-box; vertical-align: top;}
+.visual .visual-tit            { margin-bottom: 12px; font-size: 25px; font-weight: 700; color: #00346D;}
+.visual .visual-subtit strong  { display: block; line-height: 60px; font-family: "rixdongnimgothic-pro", sans-serif; font-size: 48px; font-weight: 500; color: #00346D;}
+.visual .visual-subtit span    { line-height: 60px; font-family: "rixdongnimgothic-pro", sans-serif; font-size: 48px; font-weight: 500; color: #E67401; letter-spacing: -1.7px;}
+.visual .visual-subtit em      { margin-left: 5px; font-size: 40px; color: #E67401;}
+.visual .visual-right ul       { width: 340px; margin-top: 30px; font-size: 0;}
+.visual .visual-right ul li    { display: inline-block; width: 340px; height: 72px; border-radius: 40px;}
+.visual .visual-right ul li+li { margin-top: 15px;}
+.visual .visual-right ul li a  { display: block; width: 100%; height: 100%; line-height: 73px; padding-left: 50px; background:url('../images/join_btn.png') no-repeat; background-position: 85% center; font-size: 25px; color: #fff; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.visual .visual-right ul li:nth-of-type(1) { background-color: #E67401;}
+.visual .visual-right ul li:nth-of-type(2) { background-color: #047DB5;}
+
+/* 가입시유의사항 */
+.youneed                 { background-color: #FEEEDB;}
+.youneed .inner          { width: 1100px; margin: 0 auto; padding: 40px 0;}
+.youneed .youneed-tit    { display: block; padding-bottom: 10px; font-size: 20px; font-weight: 700; color: #E67401;}
+.youneed ul li           { position: relative; line-height: 20px; padding-left: 10px; font-size: 14px; color: #222;}
+.youneed ul li+li        { margin-top: 7px;}
+.youneed ul li::before   { position: absolute; top: 8px; left: 0; width: 3.5px; height: 3.5px; background-color: #222; border-radius: 50%; content: '';}
+.youneed .youneed-detail { margin-top:7px; padding-left: 10px;; }
+
+/* footer */
+.footer .inner              { width: 1100px; margin: 0 auto; padding: 40px 0;;}
+.footer .footer-info ul     { font-size: 0;}
+.footer .footer-info ul+ul  { margin-top: 10px;} 
+.footer .footer-info ul li  { line-height: 22px; font-size: 14px; color: #777;}
+.footer .footer-info ul li.fttype{ font-weight: 700; color: #000;}
+.footer .footer-copy        { margin-top: 10px;}
+.footer .footer-copy p      { color: #999; }
+.footer .footer-copy div    { color: #555;}
+.btn_privacy_view           { margin-left: 5px; }
+.btn_privacy_view a         { padding: 2px 8px; background:#C8C8C8; font-weight: 500; color:#000; transition: 0.2s all;}
+.btn_privacy_view a:hover   { background-color: #777; color:#fff;}
+
+/* 혜택 */
+.benefit_wrap{height:410px; background:url('../images/cont_01_bg.png') repeat}
+.benefit_wrap p{padding:58px 0 0 0; padding-left:50%; margin-left:-369px}
+
+/* 여성운전자 헤택 */
+.female_benefit{width:100%; height:444px; background:url('../images/female_benefit_bg.png') no-repeat center}
+.female_benefit p{padding:59px 0 0 0; padding-left:50%; margin-left:-279px}
+
+/* 출동 서비스 */
+.move_service{width:100%; height:500px;}
+.move_service p{padding:63px 0 0 0;padding-left:50%; margin-left:-359px}

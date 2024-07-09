@@ -1,0 +1,281 @@
+@charset "utf-8";
+
+/* 웹폰트 */
+/* nanumgothic */
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+/* SpoqaHanSansNeo */
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../font/SpoqaHanSansNeo-Bold.eot');
+    src: url('../font/SpoqaHanSansNeo-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../font/SpoqaHanSansNeo-Bold.woff') format('woff'),
+         url('../font/SpoqaHanSansNeo-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../font/SpoqaHanSansNeo-Medium.eot');
+    src: url('../font/SpoqaHanSansNeo-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../font/SpoqaHanSansNeo-Medium.woff') format('woff'),
+         url('../font/SpoqaHanSansNeo-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SpoqaHanSansNeo';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../font/SpoqaHanSansNeo-Regular.eot');
+    src: url('../font/SpoqaHanSansNeo-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../font/SpoqaHanSansNeo-Regular.woff') format('woff'),
+         url('../font/SpoqaHanSansNeo-Regular.ttf') format('truetype');
+}
+
+/*  COMMON */
+*{-webkit-text-size-adjust:none;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,input,fieldset,textarea,p,blockquote,th,td {margin:0; padding:0}
+body{-webkit-touch-callout:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+body {overflow:auto; width:100%; -webkit-text-size-adjust:none; -webkit-overflow-scrolling:touch}
+table{border:0; border-collapse:collapse; padding:0; border-spacing:0}
+fieldset,img {border:none}
+img{max-width:100%}
+ol,ul {list-style:none}
+em, strong {font-style:normal}
+legend, caption {display:none; width:0; height:0; margin:0; padding:0; font-size:0; line-height:0}
+section{margin:0; padding:0}
+a{text-decoration:none}
+html {width:100%; height:100%}
+body, input, textarea, select, button, table {font-family: 'SpoqaHanSansNeo', 'sans-serif', NanumGothicWeb, 나눔 고딕, 'Malgun Gothic', 맑은 고딕, AppleGothic, 돋움,Sans-serif; color:#595959; font-size:13px; letter-spacing:-1px}
+
+/* 전체 */
+#mwrap { min-width:320px;}
+
+.float-service                          { position: fixed;right:0;bottom:0;left:0;z-index:10; height: 82px; box-shadow:0px -5px 25px 5px rgb(0 0 0 / 25%); border-radius:20px 20px 0 0; background-color: #F08C00; font-size: 0; text-align: center;}
+.float-service a                        { position: relative; display: inline-block; width:50%; line-height: 82px; padding-left: 30px; box-sizing: border-box; font-size: 22px; font-weight: 600; color: #fff;}
+.float-service a+a:after                { content:''; position: absolute; top:50%; left:0; transform: translateY(-50%); width:1px; height:32px; background-color:rgb(255 255 255 / 50%)}
+.float-service a::before                { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 22px; height: 22px; background: url(../images/hicar_fix_icon.png) no-repeat; background-size: 200% auto; content: '';}
+.float-service a:nth-of-type(1)::before { margin-left: -55px;}
+.float-service a:nth-of-type(2)::before { margin-left: -42px; background-position: -22px 0;}
+.float-service__close                   { position: absolute;top:12px;right:20px;width:24px;height:24px;background-image: url("data:image/svg+xml,%3Csvg id='Close' xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Crect id='Tech_Messaging_x_Dark_Close_Button_-_Drawer_background' data-name='Tech/Messaging/x/Dark/Close Button - Drawer background' width='24' height='24' fill='none'/%3E%3Cpath id='Close_Button' data-name='Close Button' d='M12,24A12,12,0,0,1,3.515,3.515a12,12,0,1,1,16.97,16.97A11.922,11.922,0,0,1,12,24ZM8,7a1,1,0,0,0-.707,1.707L10.585,12,7.293,15.293a1,1,0,1,0,1.415,1.415L12,13.414l3.293,3.293a1,1,0,1,0,1.415-1.415L13.414,12l3.293-3.292a1,1,0,0,0-1.415-1.415L12,10.585,8.707,7.293A1,1,0,0,0,8,7Z' fill='%23aaa'/%3E%3C/svg%3E%0A");}
+
+/* header */
+.header { position:relative; width:100%;}
+.header-logo a  { font-size: 0;}
+
+/* visual */
+.visual { width:100%; position:relative; text-align:center;}
+
+/*intype*/
+.hi_intype01 .intype02    { display: none;}
+.hi_intype02 .intype01    { display: none;}
+.hi_intype01 #container   { background-color: #f5f5f5;}
+.hi_intype01 #header_wrap { border-bottom: 1px solid #E67401;}
+
+/* main_top_menu */
+.hi_intype01 .header-logo   { text-align: center;}
+.hi_intype01 .header-logo a { display: block;}
+.hi_intype02 .header-logo   { text-align: center;} 
+.hi_intype02 .header-logo a { display: block;} 
+
+/* container */
+.hi_intype01 .visual .btn_calc     { width:100%;}
+.hi_intype02 .inner                { max-width: 720px; margin: 0 auto; box-sizing: border-box;}
+.hi_intype02 .visual h2 img        { width: 100%;}
+.hi_intype02 .visual .btn_calc     { margin-top: -18.5%; font-size: 0; text-align:center;}
+.hi_intype02 .visual .btn_calc img { width:90%;}
+.hi_intype01 .intype01_box         { position: relative;}
+.hi_intype01 .intype01_box::before { position: absolute; bottom: 70px; left: 0; right: 0; width: 100%; height: 42px; background: linear-gradient( to top, #F5F5F5, #C2EEF9 ); content: '';}
+.hi_intype01 .intype01_bg                              { width: auto; max-height: 500px; background: #c1eef9 url('../images/main_visualbg_03.png') top center no-repeat; background-size:auto 100%;}
+.hi_intype01 .intype01_bg .inner                       { position:relative; max-width:720px; height: 400px; padding: 28px 15px 0; margin: 0 auto; box-sizing: border-box;}
+.hi_intype01 .intype01_bg .inner .visual-tit           { display: block; margin-bottom: 12px; font-size: 15px; font-weight: 700; line-height: 15px; color: #00346D; letter-spacing: -0.3px;}
+.hi_intype01 .intype01_bg .inner .visual-subtit        { display: block; line-height: 45px; font-family: "rixdongnimgothic-pro", sans-serif; font-size: 38px; font-weight:500; line-height: 45px; color: #00346D;}
+.hi_intype01 .intype01_bg .inner .visual-subtit strong { font-weight: 500}
+.hi_intype01 .intype01_bg .inner .visual-subtit span   { display: block; color: #E67401;}
+.hi_intype01 .intype01_box ul                     { position: relative; max-width: 720px; margin: -45px auto 0; padding: 0 15px; box-sizing: border-box; font-size: 0;}
+.hi_intype01 .intype01_box ul li                  { display: block; width: 100%;}
+.hi_intype01 .intype01_box ul li+li               { margin-top: 10px;}
+.hi_intype01 .intype01_box ul li a                { display: block; height: 72px; border-radius: 40px;}
+.hi_intype01 .intype01_box ul li:nth-of-type(1) a { background-color: #E67401;}
+.hi_intype01 .intype01_box ul li:nth-of-type(2) a { background-color: #047DB5;}
+.hi_intype01 .intype01_box ul li a span           { margin-right: 10px; line-height: 72px; font-size: 25px; font-weight: 500; color: #fff;}
+.hi_intype01 .intype01_box ul li a i              { display: inline-block; line-height: 70px;}
+.hi_intype01 .intype01_box ul li a i img          { width: 25px; height: 25px; vertical-align: middle;}
+.hi_intype01 .title        { margin: 47px auto 33px; padding: 0 15px; line-height: 40px; font-family: "rixdongnimgothic-pro", sans-serif; font-size: 32px; -webkit-box-sizing: border-box; box-sizing: border-box;}
+.hi_intype01 .title strong { display: block; font-weight: 500; color: #00346D;}
+.hi_intype01 .title span   { display: block; font-weight: 500; color: #E67401;}
+.hi_intype01 .main_item                  { overflow: hidden; position: relative; max-width: 720px; margin: 0 auto; padding: 0 15px 230px 15px; box-sizing: border-box; font-size: 0;}
+.hi_intype01 .main_item::after           { position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%); width: 360px; height: 131px; margin-left: 95px; background: url('../images/hicar_car.png') no-repeat; background-size: 100% auto; content: '';}
+.hi_intype01 .main_item li               { display: block; position: relative;  height: 133px; padding: 24px 15px 23px 16px; box-sizing: border-box; background-color: #fff; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.15); text-align: left;}
+.hi_intype01 .main_item li+li            { margin-top: 15px;}
+.hi_intype01 .main_item .item_tit        { display: block; line-height: 28px; margin-bottom: 10px; font-family: "rixdongnimgothic-pro", sans-serif; font-weight: 500; font-size: 24px; color: #00346D;}
+.hi_intype01 .main_item .item_subtit     { line-height: 22px; font-size: 16px; color: #777;}
+.hi_intype01 .main_item .item_subtit .fs1{ font-weight: 700; color: #047DB5;}
+.hi_intype01 .main_item li::before                 { position: absolute; top: 18px; right: 15px; width: 58px; height: 58px; background: url('../images/hicar_item_icon.png') no-repeat; background-size: 1000% auto; content: '';}
+.hi_intype01 .main_item li:nth-of-type(2)::before  { background-position: -116px 0;}
+.hi_intype01 .main_item li:nth-of-type(3)::before  { background-position: -58px 0;;}
+.hi_intype01 .main_item li:nth-of-type(4)::before  { background-position: -174px 0;}
+.hi_intype01 .main_item li:nth-of-type(5)::before  { background-position: -232px 0;}
+.hi_intype01 .main_item li:nth-of-type(6)::before  { background-position: -290px 0;}
+.hi_intype01 .main_item li:nth-of-type(7)::before  { background-position: -348px 0;}
+.hi_intype01 .main_item li:nth-of-type(8)::before  { background-position: -406px 0;}
+.hi_intype01 .main_item li:nth-of-type(9)::before  { background-position: -464px 0;}
+.hi_intype01 .main_item li:nth-of-type(10)::before { background-position: -522px 0;}
+
+/* 가입 시 유의사항 */
+.hi_intype01 .youneed                 { background-color: #FEEEDB; font-size:14px; color: #222; text-align: left;}
+.hi_intype01 .youneed .inner          { max-width: 720px; margin: 0 auto; padding: 40px 15px; box-sizing: border-box;}
+.hi_intype01 .youneed .youneed-tit    { display: block; padding-bottom: 10px; font-size: 14px; font-weight: 700; color: #E67401;}
+.hi_intype01 .youneed ul li           { position: relative; line-height: 20px; padding-left: 10px; font-size: 14px; font-weight: 500; word-break: keep-all;}
+.hi_intype01 .youneed ul li+li        { margin-top: 10px;}
+.hi_intype01 .youneed ul li::before   { position: absolute; top: 8px; left: 0; width: 3.5px; height: 3.5px; background-color: #222; border-radius: 50%; content: '';}
+.hi_intype01 .youneed .youneed-detail { margin-top:10px;}
+.hi_intype02 .youneed              { padding: 5%; margin: 25px auto 0; background:#fff; font-size: 16px; text-align:left;}
+.hi_intype02 .youneed .inner       { max-width: 720px; margin: 0 auto;  box-sizing: border-box;}
+.hi_intype02 .youneed .youneed-tit { font-size: 24px; color: #456299;}
+.hi_intype02 .youneed ul           { margin: 15px 0;}
+.hi_intype02 .youneed ul li+li     { margin-top: 5px;}
+
+/* footer */
+.hi_intype01 #foot-wrap                      { height: 300px;}
+.hi_intype01 .footer                         { max-width: 720px; margin: 0 auto; padding: 40px 15px 125px; box-sizing: border-box;}
+.hi_intype01 .footer .footer_info ul         { font-size: 0;}
+.hi_intype01 .footer .footer_info ul+ul      { margin-top: 20px;} 
+.hi_intype01 .footer .footer_info ul li      { line-height: 22px; font-size: 12px; color: #777;}
+.hi_intype01 .footer .footer_info ul .fttype { font-weight: 700; color: #000;}
+.hi_intype01 .footer .footer_info .btn_privacy_view   { display: inline-block; margin: 5px 0;}
+.hi_intype01 .footer .footer_info .btn_privacy_view a { padding: 2px 8px; background:#C8C8C8; font-weight: 500; color:#000;}
+
+.hi_intype01 .footer .copyright          { margin-top: 20px;}
+.hi_intype01 .footer .copyright p        { color: #999; }
+.hi_intype01 .footer .copyright div      { margin-top: 3px; color: #555;}
+
+.hi_intype02 #foot-wrap         { position:relative; float:left; width:100%; padding-bottom: 100px;background:#e3e3e4;}
+.hi_intype02 .footer            { margin:0 auto; padding: 5px 0 10px 0; text-align:center;}
+.hi_intype02 .footer p          { padding-bottom:5px; font-size:12px; color: #757575 !important; }
+.hi_intype02 .footer .copyright { padding-top: 10px; background:url('../images/bg_foot_bar.gif') repeat-x left top;}
+.hi_intype02 .footer p a        { color: #888888 !important; font-weight:bold;}
+.hi_intype02 .footer span       { width:270px; line-height:1.3em; margin-top:5px; font-size:11px; color: #a7a6a6 !important;}
+
+
+/* 메인 타이틀 */
+.visual_tit_wrap{width:100%; background:url('../images/main_visual_bg.png') no-repeat 0 0  ; background-size:contain; position:relative;}
+.visual_tit_wrap h2{/* padding:6% 32% 6% 2%; */text-align:center;}
+/*.visual_tit_wrap h2 img{width: 95%;/* max-width:333px; / text-align:left;}*/
+.visual_tit_wrap a { position:absolute; bottom:30px; text-align:center;}
+.visual_tit_wrap a img {width:80%;}
+
+/* 혜택 */
+.benefit_wrap{background:url('../images/cont_01_bg.png') repeat; padding:6% 0; text-align:center}
+.benefit_wrap img{width:95%; max-width:530px}
+.benefit_wrap a{display:block; padding-top:15px}
+
+/* 여성운전자 혜택 */
+.female_benefit{background:url('../images/female_service_bg.png') no-repeat; background-size:cover; padding:6% 0; text-align:center}
+.female_benefit img{width:90%; max-width:482px}
+
+/* 출동서비스 */
+.move_service{/*background:url('../images/move_service_bg.png') repeat;*/ padding:6% 0; text-align:center}
+.move_service img{width:90%; max-width:482px}
+
+/* 전문상담 */
+.counsel {clear: both; position: relative; width: 100%; height: 54px; margin: 0 auto; background: url(../images/bg_custom.jpg) repeat-x left top; }
+.counsel img {width: 320px;}
+.counsel span {position: absolute; top:0; }
+.counsel span img {width: 74px;}
+.counsel .counselor {right: 81px;}
+.counsel .apply {right: 5px;}
+.counsel .tel {clear: both; font-size: 12px; font-weight: bold; width: 80%; height: 56px; padding: 5px 0 0 5px; color: #fff; background: url(../images/bg_tel.jpg) no-repeat 0 0;
+-o-background-size: 315px 52px; -moz-background-size: 315px 52px; -webkit-background-size: 315px 52px; background-size:315px 52px; letter-spacing:0}
+.counsel .tel em {display: block; font-size: 20px; font-weight: bold; color: #ffffa7 !important;}
+
+
+.btn_new_close{position: absolute; top: 25px; right: 5px;}
+.btn_new_close img{height:15px !important}
+
+/* 개인정보취급방침 */
+.privacy-info {margin:0px 0px 15px 0px; font-size: 11px; line-height:20px;}
+.privacy-info .title {color: #e45050; font-size: 12px; font-weight: bold;}
+.privacy-info .jang {font-size: 14px; font-weight: bold;}
+.privacy-info div {padding:40px 10px 0; background:#f6f6f6;}
+
+/* 심의관련수정 17/09/15 김현지차장추가 */
+#header_wrap ._s_logo{position:absolute; top:14px; right:10px}
+#header_wrap ._s_logo img{height:30px}
+._add_visual{background:url('../images/re_main_visual.png') no-repeat; background-size:100% auto; margin-bottom:25px; padding-bottom:25px}
+._add_visual h2{text-indent:-9999px}
+.btn_price_calc{position:absolute; left:50%; margin-left:-30%; bottom:-15px}
+
+
+
+
+
+
+/* 푸시 서비스 등록 폼 */
+.site-form input,.site-form textarea,.site-form button,.site-form select {-webkit-appearance:none; -moz-appearance:none; appearance:none;}
+.site-form{display: none;position: relative;padding:50px 20px 30px;background: #fff;font-family:'notosanskr';}
+.site-form-open{overflow-x:scroll;display: block;position: fixed;top:0;right:0;bottom:0;left:0;z-index:100;}
+.site-form__tit{color:#003070;font-size:26px;font-weight: bold;}
+.site-form-bx{margin-top:40px}
+.site-form-bx__tit{color:#003070;font-size:18px;font-weight: bold;}
+.site-form-bx__txt{width:100%;height:36px;margin-top: 10px;padding-left:20px;border:none;border-radius:10px;box-sizing:border-box;background-color: #E7E6EB;line-height: 36px;color:#F08C00;font-size:18px;}
+
+.site-form-bx__info{position: relative;margin-bottom:20px;padding-left: 13px;color:#808080;font-size: 16px;word-break:keep-all;}
+.site-form-bx__info:before{content:'•';position: absolute;top:0;left:1px;width:5px;height:10px}
+.site-form-chklst li{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;padding:20px 0;border-top:1px solid #ddd;font-size:18px;font-weight: normal;}
+.site-form-chklst li:first-child{border-top:none}
+.site-form-chklst .site-form-chklst__tit{width:calc(100% - 70px);color:#000;font-size:18px;text-align: left;}
+.site-form-chklst .site-form-chklst__txt{text-align: right;}
+.site-form-chklst__chk{position: relative;}
+.site-form-chklst__chk input{display: none}
+.site-form-chklst__chk input + label{position: relative;display: inline-block;width:51px;height:31px;border-radius:25px;background: #E7E6EB;}
+.site-form-chklst__chk input + label:after{content:'';position: absolute;top:2px;left:calc(100% - 29px);width:27px;height:27px;box-sizing:border-box;border:1px solid rgb(0 0 0 / 4%);border-radius:50%;background: #fff;transition:all .1s ease}
+
+.site-form-chklst__chk input:checked + label{background-color: #F08C00;}
+.site-form-chklst__chk input:checked + label:after{left:2px}
+.site-form-chklst__link{display: block;}
+.site-form-chklst__link button{padding:0;border:none;outline:none;background: none;color:#808080;font-size:14px;}
+.site-form-bttn{display: flex;justify-content:space-between;height:65px;margin:20px -10px}
+.site-form-bttn .btn{flex:1 1 auto;align-self:stretch;margin:0 10px;color:#fff;border-radius:10px;border:none;outline:none;font-size:22px;font-weight: bold;}
+.site-form-bttn .btn.btn-pri{background-color: #003070;}
+.site-form-bttn .btn.btn-sec{background-color: #808080;}
+.site-form-loading{justify-content:center;align-items:center}
+.site-form-loading img{height:19px}
+
+/* datepicker */
+.ui-datepicker.calendar-tomorrow{overflow: hidden;position: fixed!important;top: 50%!important;left: 50%!important;transform: translate(-50%, -50%);width:350px;padding:10px;border-radius:10px;border:none!important}
+.calendar-tomorrow table{background-color: #fff;}
+.calendar-tomorrow-dimmed{position: fixed;top:0;right:0;bottom:0;left:0;z-index:100;width:100%;height:100%;background-color: rgb(0 0 0 / 50%);}
+
+.calendar-tomorrow .ui-datepicker-header{background-color: #fff;border:none}
+
+#ui-datepicker-div.ui-datepicker th{padding:10px 0 15px;color:#808080;font-size:14px}
+#ui-datepicker-div.ui-datepicker select.ui-datepicker-month{margin-left:10px;padding-right:15px;background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6.69' height='11.438' viewBox='0 0 6.69 11.438'%3E%3Cpath id='SF_Icon_chevron.forward' data-name='SF Icon / chevron.forward' d='M6.69,5.719a.913.913,0,0,0-.317-.7L1.5.254A.814.814,0,0,0,.889,0,.886.886,0,0,0,0,.882a.9.9,0,0,0,.279.641L4.6,5.713.279,9.915a.88.88,0,0,0,.609,1.523.824.824,0,0,0,.616-.254L6.373,6.424A.922.922,0,0,0,6.69,5.719Z' fill='%23f08c00'/%3E%3C/svg%3E%0A") no-repeat 100% 50%;}
+#ui-datepicker-div.ui-datepicker select.ui-datepicker-month, 
+#ui-datepicker-div.ui-datepicker select.ui-datepicker-year{width:auto;border:none;color:#000;font-weight: bold;-webkit-appearance:none; -moz-appearance:none; appearance:none;}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-prev{top:8px;left:initial;right:42px;background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.971' height='17.324' viewBox='0 0 9.971 17.324'%3E%3Cpath id='SF_Symbol_chevron.backward' data-name='SF Symbol / chevron.backward' d='M0,8.662a1.162,1.162,0,0,0,.4.889L8,16.992a1.112,1.112,0,0,0,.811.332,1.153,1.153,0,0,0,1.162-1.162,1.192,1.192,0,0,0-.352-.83L2.773,8.662l6.846-6.67a1.211,1.211,0,0,0,.352-.83A1.153,1.153,0,0,0,8.809,0,1.112,1.112,0,0,0,8,.332L.4,7.764A1.2,1.2,0,0,0,0,8.662Z' fill='%23f08c00'/%3E%3C/svg%3E%0A") no-repeat 50% 50%;}
+#ui-datepicker-div.ui-datepicker .ui-datepicker-next{top:8px;background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.971' height='17.324' viewBox='0 0 9.971 17.324'%3E%3Cpath id='SF_Symbol_chevron.forward' data-name='SF Symbol / chevron.forward' d='M9.971,8.662a1.272,1.272,0,0,0-.4-.9L1.973.332A1.129,1.129,0,0,0,1.162,0,1.146,1.146,0,0,0,0,1.162a1.169,1.169,0,0,0,.352.83l6.836,6.67L.352,15.332a1.16,1.16,0,0,0,.811,1.992,1.145,1.145,0,0,0,.811-.332l7.6-7.441A1.162,1.162,0,0,0,9.971,8.662Z' fill='%23f08c00'/%3E%3C/svg%3E%0A") no-repeat 50% 50%;}
+#ui-datepicker-div.ui-datepicker .ui-widget-header a:hover{border:none;outline:none}
+
+#ui-datepicker-div .ui-datepicker-title{margin:0;padding-left:20px;font-size:20px;font-weight: bold;text-align: left;}
+#ui-datepicker-div .ui-datepicker-calendar{margin:0}
+#ui-datepicker-div .ui-datepicker-calendar .ui-state-disabled {color:#808080}
+#ui-datepicker-div .ui-datepicker-calendar .ui-datepicker-today a{color:#F08C00}
+#ui-datepicker-div .ui-datepicker-calendar .ui-state-default{width:40px;height:40px;border-radius:50%;border:none;background-color: #fff;;color:#000;text-align: center;line-height:40px;}
+#ui-datepicker-div .ui-datepicker-calendar .ui-state-default.ui-state-hover,
+#ui-datepicker-div .ui-datepicker-calendar .ui-datepicker-current-day{border-radius:50%;background-color: #F08C00!important;color:#fff;font-weight: bold;}
+#ui-datepicker-div .ui-datepicker-calendar .ui-datepicker-current-day a{background-color: #F08C00!important;color:#fff}
+#ui-datepicker-div .ui-datepicker-calendar tbody{font-size:20px}
+
+.notice-auth{display: none;position: fixed;top: 50%;left: 50%;min-width:320px;max-width:350px;transform: translate(-50%, -50%);}
+.notice-auth__bttn{display: block;}
+
+/* modal */
+.modal-area{display: flex;align-items: center;justify-content: center;position: fixed;top:0;right:0;bottom:0;left:0;z-index:105;padding:0 20px;background: rgb(0 0 0 / 40% );}
+.modal-inner{width:100%;max-width:350px;min-width:320px;padding:30px;background: #fff;border-radius:10px}
+.modal__head{margin-bottom: 20px;color:#000;font-size:18px}
+.modal__body{margin-bottom: 30px;color:#000;font-size:16px;line-height: 24px;}
+.modal__foot{text-align: right;}
+.modal__btn{height:40px;margin-left:10px;padding:0 30px;border-radius:10px;border:0;background: #808080;outline:none;line-height:40px;color:#fff;font-size:18px;font-weight: bold;}
+.modal__btn-highlight{background: #F08C00;}
