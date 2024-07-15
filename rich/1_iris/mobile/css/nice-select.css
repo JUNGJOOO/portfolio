@@ -1,0 +1,100 @@
+.nice-select {
+    display: block;
+    float: right;
+    clear: both;
+    position: relative;
+    min-width:40px; height: 20px;
+    box-sizing: border-box;
+    padding-right: 48px;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    font-family:'NanumSquare';
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+.nice-select::after {
+    display: block;
+    position: absolute; right: 0; top: 50%;
+    width: 10px; height: 6px; margin-top: -3px;
+    background: url(../images/icon_down.png) no-repeat right center;
+    pointer-events: none;
+    -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+    content: '';
+}
+.nice-select.open::after {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+}
+
+/* list */
+.nice-select .list {
+    overflow: hidden;
+    position: absolute; top: 100%; left: 0; z-index: 15;
+    min-width: 50px;
+    margin-top: 10px; padding: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+    box-sizing: border-box;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transform-origin: 50% 0;
+        -ms-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+    -webkit-transform: scale(0.75) translateY(-21px);
+        -ms-transform: scale(0.75) translateY(-21px);
+            transform: scale(0.75) translateY(-21px);
+    -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+    transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+}
+.nice-select.open .list {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: scale(1) translateY(0);
+        -ms-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+}
+.nice-select .list:hover .option:not(:hover) { background-color: transparent !important;}
+.nice-select .option {
+    min-height: 40px; line-height: 40px;
+    padding: 0 15px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    list-style: none;
+    text-align: left;
+    -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+}
+.nice-select .option:hover    { background-color: #f6f6f6;}
+.nice-select .option.selected { font-weight: 900;}
+.nice-select .option+.option  { margin-top: 0;}
+
+/* 비활성화 */
+.nice-select.is_disabled          { border-color: #ededed !important; color: #999 !important; pointer-events: none !important;}
+.nice-select.is_disabled::after   { display: none !important;}
+.nice-select.is_disabled .current { color: #333 !important; border-bottom: none !important;}
+
+/* form_area ========================================================================================= */
+.form_area .nice-select          { width: 100%; height: 18px; letter-spacing: -0.35px; padding: 0; border: 0; font-size: 16px; color: #c0c0c0; outline: none;}
+.form_area .nice-select::after   { width: 20px; height: 20px; margin-top: -11px; background: url('../images/icon_drop_arrow.png') no-repeat center;}
+.form_area .nice-select .option  { font-size: 14px; color: #444; line-height: 30px; min-height: 30px; }
+.form_area .nice-select .list    { right: 0; width: 100%;}
+.form_area .nice-select .current { display: block; height: 18px; line-height: 18px; font-weight: 500; color: #333 !important;}
+
+/* result_item ========================================================================================= */
+.result_item .nice-select          { float: left; height: 100%; padding-right: 80px; font-size: 16px;}
+.result_item .nice-select::after   { right: 0;}
+.result_item .nice-select::before  { display: block; position: absolute; right: 15px; top: 0; height: 27px; line-height: 27px; font-size: 16px; color: #333; font-weight: 700; content: '만원 보장';}
+.result_item .nice-select .current { display: inline-block; height: 27px; line-height: 27px; font-weight: 700; color: #FE7600; border-bottom: 1px solid #FFA33A;}
+.result_item .nice-select .list    { margin-top: 0; min-width: 100px;}

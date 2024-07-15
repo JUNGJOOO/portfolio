@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>IRIS 모바일 메인</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Classification" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta name="description" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta name="keywords" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta name="Subject" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta property="og:title" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta property="og:description" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta name="twitter:title" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta name="twitter:card" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta name="twitter:description" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css">
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/nice-select.css"> 
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+
+<div class="wrap wrap-type1">
+    <header class="header_main">
+        <h1>
+            <a href="javascript:;">
+                <img src="../images/header_logo1.png" alt="Goodrich"/>
+            </a>
+        </h1>
+    </header>
+    
+    <main>
+        <!-- s:main_visual -->
+        <section class="main_visual">
+            <div class="inner">
+                <h2 class="tit"><span>내 보험료</span> 지금 바로 <br/>확인해보세요.</h2>
+                <p class="txt">어떤 보험상품이 필요하신가요?</p>
+                <div class="btn">
+                    <button type="button">필요한 보험 상품 선택하기</button>
+                </div>
+                <ul>
+                    <li>
+                        <a href="javascript:;">암</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">치아</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">치매간병</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- e:main_visual -->
+
+        <!-- s:main_login -->
+        <section class="main_login">
+            <div class="inner">
+                <h2 class="cont_tit">간편 로그인</h2>
+                <p class="cont_subtit">인증 없이 쉽고 빠르게!</p>
+                <div class="login_area">
+                    <button type="button" class="btn_naver">네이버 아이디로 보험비교</button>
+                    <button type="button" class="btn_kakao">카카오 아이디로 보험비교</button>
+                </div>
+                <div class="main_info">간편 로그인의 경우 <b>직업</b>과 <b>운전형태</b>는 임의로 지정되어 보험료가 다를 수 있는 점 참고해주세요.</div>
+            </div>
+        </section>
+        <!-- e:main_login -->
+
+        <!-- s:form_area -->
+        <section class="form_area">
+            <div class="inner">
+                <h2 class="cont_tit">직접 정보 입력</h2>
+                <p class="cont_subtit">보험료 설계를 위한 내 정보를 입력해주세요</p>
+                <ul class="form1">
+                    <li class="form_name">
+                        <div class="form_box">
+                            <h3 class="tit">
+                                <label for="name">이름</label>
+                            </h3>
+                            <div>
+                                <input type="text" placeholder="이름을 입력해 주세요">
+                            </div>
+                        </div>
+                        <div class="form_box gender_chk">
+                            <span>
+                                <input type="radio" name="gender" id="men" checked="checked">
+                                <label for="men">남자</label>
+                            </span>
+                            <span>
+                                <input type="radio" name="gender" id="women">
+                                <label for="women">여자</label>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="form_birth">
+                        <div class="form_box">
+                            <h3 class="tit">
+                                <label for="birth">생년월일</label>
+                            </h3>
+                            <div>
+                                <input type="text" id="birth" placeholder="예) 19880101">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="form_num">
+                        <div class="form_box">
+                            <h3 class="tit">
+                                <label for="phone">휴대폰 번호</label>
+                            </h3>
+                            <div>
+                                <input type="tel" id="phone" placeholder="숫자만 입력해주세요">
+                                <a class="btn_send" href="javascript:;">인증</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="form_confirm">
+                        <div class="form_box">
+                            <h3 class="tit">
+                                <label for="phone">인증번호</label>
+                            </h3>
+                            <div>
+                                <input type="tel" id="phone" placeholder="숫자만 입력해주세요">
+                                <span class="form_confirm-time">3:00</span>
+                                <a class="btn_verify" href="javascript:;">확인</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="form_job">
+                        <div class="form_box">
+                            <h3 class="tit">
+                                <label for="phone">직업선택</label>
+                            </h3>
+                            <div>
+                                <select name="job" id="job" class="js-select">
+                                    <option value="직업선택">직업선택</option>
+                                    <option value="사무직">사무직</option>
+                                    <option value="주부">주부</option>
+                                    <option value="학생">학생</option>
+                                    <option value="미취학아동">미취학아동</option>
+                                    <option value="기타">기타</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="form_drive">
+                        <div class="form_box">
+                            <h3 class="tit">
+                                <label for="phone">운전형태</label>
+                            </h3>
+                            <div>
+                                <select name="drive" id="drive" class="js-select">
+                                    <option value="운전여부">운전여부</option>
+                                    <option value="운전안함">운전안함</option>
+                                    <option value="자가용">자가용</option>
+                                    <option value="영업용">영업용</option>
+                                </select>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="form_bottom">
+                        <div class="agree_area">
+                            <input type="checkbox" name="" id="agree">
+                            <label for="agree">개인정보수집 및 활용동의</label>
+                            <a href="https://goodrichmall.com/common/open_agreement?chkboxId=checkAgreement_totalSum" onclick="window.open(this.href,'_blank'); return false;">보기</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="main_info">직업에서 기타를 선택하신 경우, 정확한 보험료 산출이 어려운 점 참고 해주세요.</div>
+            </div>
+        </section>
+        <!-- e:form_area -->
+
+    </main>
+    
+    <footer class="footer">
+        <div class="inner">
+            <!-- <div class="footer_info">고객님의 개인정보에 따라 보험가입이 어려울 수 있으며, 실시간 보험료가 아니므로 시간차에 따라 보험료 결과가 달라질 수 있습니다. 또한, 위의 보험료는 단순 참고용이니 정확한 보험료는 상담원을 통해서 확인해주시기 바랍니다.</div> -->
+        </div>
+        <div class="footer_wrap">
+            <button type="button" class="btn_sample"><span>샘플보기</span></button>
+            <button type="button" class="btn_design"><span>보험료 설계 상담</span></button>
+        </div>
+    </footer>
+
+    <!-- 퀵메뉴 -->
+    <div class="quick">
+        <div class="quick_top"><a href="javascript:;"></a></div>
+    </div>
+</div>
+
+<!-- script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="../js/jquery.nice-select.min.js"></script>
+<script src="../js/common.js"></script>
+
+</body>
+</html>
