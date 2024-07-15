@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>셀프보험비교서비스</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="css/font.css" />
+    <link rel="stylesheet" type="text/css" href="css/nice-select.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+<div class="wrap wrap-step3 is_skeleton">
+    <header class="header-type2">
+        <div class="header">
+        <div class="inner">
+            <h1 class="header_logo">
+            <a href="index.html"><img src="images/logo_header.png" alt="GoodRich" /></a>
+            </h1>
+            <div class="header_btn">
+            <!-- is_done class추가-->
+            <button type="submit" onclick="openLayer('layer-do')" class="btn_save is_done">결과 저장</button>
+            </div>
+        </div>
+        </div>
+        <div class="htop">
+        <div class="inner">
+            <a href="main2.html" class="btn_movelink">이전으로</a>
+            <p class="htop_txt2">
+            ⚠️ 고객님의 개인정보에 따라 보험 가입이 거절되거나 보험료 인상 또는 보장 내용이 달라질 수 있으며, 지급
+            한도나 면책 사유 등에 따라 보험금 지급이 제한될 수 있으니 반드시 상담을 통해 확인해 주세요
+            </p>
+        </div>
+        </div>
+        <div class="hinfo">
+        <div class="inner"><strong>원하는 보장금액으로 변경</strong>하고 보험료를 한번에 확인해 보세요!</div>
+        </div>
+    </header>
+
+    <!-- fixed_item -->
+    <div class="fixed_item">
+        <div class="inner">
+            <div class="item_wrap">
+                <div class="item">
+                    <div class="item_top">
+                        <div class="item_logo">
+                            <img src="https://images.bohumpro.co.kr/COMMON/images/logo/type_w150/DBF.png" alt="DB손해보험" />
+                        </div>
+                        <div class="item_flag">
+                            <span>개정중</span>
+                        </div>
+                        <div class="item_tit">참좋은 훼밀리더블플러무해지(납입중0%/납입후50%) (15-40세) 10종/8종</div>
+                        <div class="item_total">
+                            <div class="total_left">
+                                <span>월</span>
+                                <span class="count_num1"></span>
+                                <span>원</span>
+                            </div>
+                            <div class="total_right">
+                                <span>100세 만기</span>
+                                <span>20년납 기준</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item_top">
+                        <div class="item_logo">
+                            <img src="https://images.bohumpro.co.kr/COMMON/images/logo/type_w150/LIF.png" alt="KB손해보험" />
+                        </div>
+                        <div class="item_flag">
+                            <span>개정중</span>
+                        </div>
+                        <div class="item_tit">참좋은 훼밀리더블플러무해지(납입중0%/납입후50%) (15-40세) 10종/8종</div>
+                        <div class="item_total">
+                            <div class="total_left">
+                                <span>월</span>
+                                <span class="count_num2"></span>
+                                <span>원</span>
+                            </div>
+                            <div class="total_right">
+                                <span>100세 만기</span>
+                                <span>20년납 기준</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item_top">
+                        <div class="item_logo">
+                            <img src="https://images.bohumpro.co.kr/COMMON/images/logo/type_w150/HDF.png" alt="현대해상" />
+                        </div>
+                        <div class="item_flag">
+                            <span>개정중</span>
+                        </div>
+                        <div class="item_tit">참좋은 훼밀리더블플러무해지(납입중0%/납입후50%) (15-40세) 10종/8종</div>
+                        <div class="item_total">
+                            <div class="total_left">
+                                <span>월</span>
+                                <span class="count_num3"></span>
+                                <span>원</span>
+                            </div>
+                            <div class="total_right">
+                                <span>100세 만기</span>
+                                <span>20년납 기준</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- main -->
+    <main>
+        <div class="inner">
+            <div class="item_wrap">
+                <div class="item_main">
+                    <div class="item">
+                        <div class="item_top"> 
+                            <div class="item_logo">
+                                <img src="https://images.bohumpro.co.kr/COMMON/images/logo/type_w150/DBF.png" alt="DB손해보험" />
+                            </div>
+                            <div class="item_flag">
+                                <span>개정중</span>
+                            </div>
+                            <div class="item_tit">참좋은 훼밀리더블플러무해지(납입중0%/납입후50%) (15-40세) 10종/8종</div>
+                            <div class="item_total">
+                                <div class="total_left">
+                                    <span>월</span>
+                                    <span class="count_num1"></span>
+                                    <span>원</span>
+                                </div>
+                                <div class="total_right">
+                                    <span>100세 만기</span>
+                                    <span>20년납 기준</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item_cont">
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외) 암진단비Ⅱ암진단비Ⅱ (유사암제외)암진단비Ⅱ</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="" class="js-select">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30" data-default="true">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                    <div class="item_tooltip">금액을 변경해 보세요<button type="button" onclick="tooltip_close()" class="tooltip_close">닫기</button></div>
+                                </div>
+                            </div>
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외) 암진단비Ⅱ암진단비Ⅱ (유사암제외)암진단비Ⅱ</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80" data-default="true">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                </div>
+                            </div>
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외)</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30" data-default="true">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                </div>
+                            </div>
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외)</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30" data-default="true">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                </div>
+                            </div>
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외)</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30" data-default="true">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                </div>
+                            </div>
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외)</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30" data-default="true">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                </div>
+                            </div>
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외)</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30" data-default="true">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_top">
+                            <div class="item_logo">
+                                <img src="https://images.bohumpro.co.kr/COMMON/images/logo/type_w150/DBF.png" alt="DB손해보험" />
+                            </div>
+                            <div class="item_flag">
+                                <span>개정중</span>
+                            </div>
+                            <div class="item_tit">참좋은 훼밀리더블플러무해지(납입중0%/납입후50%) (15-40세) 10종/8종</div>
+                                <div class="item_total">
+                                <div class="total_left">
+                                    <span>월</span>
+                                    <span class="count_num2"></span>
+                                    <span>원</span>
+                                </div>
+                                <div class="total_right">
+                                    <span>100세 만기</span>
+                                    <span>20년납 기준</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item_cont">
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외) 암진단비Ⅱ암진단비Ⅱ (유사암제외)암진단비Ⅱ</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="" class="js-select">
+                                            <option value="10" data-default="true">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                </div>
+                            </div>
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외) 암진단비Ⅱ암진단비Ⅱ (유사암제외)암진단비Ⅱ</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30" data-default="true">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                </div>
+                            </div>
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외)</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30" data-default="true">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                </div>
+                            </div>
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외)</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30" data-default="true">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                </div>
+                            </div>
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외)</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30" data-default="true">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item_top">
+                            <div class="item_logo">
+                                <img src="https://images.bohumpro.co.kr/COMMON/images/logo/type_w150/DBF.png" alt="DB손해보험" />
+                            </div>
+                            <div class="item_flag">
+                                <span>개정중</span>
+                            </div>
+                            <div class="item_tit">참좋은 훼밀리더블플러무해지(납입중0%/납입후50%) (15-40세) 10종/8종</div>
+                            <div class="item_total">
+                                <div class="total_left">
+                                    <span>월</span>
+                                    <span class="count_num3"></span>
+                                    <span>원</span>
+                                </div>
+                                <div class="total_right">
+                                    <span>100세 만기</span>
+                                    <span>20년납 기준</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item_cont">
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외) 암진단비Ⅱ암진단비Ⅱ (유사암제외)암진단비Ⅱ</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="" class="js-select">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60" data-default="true">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                </div>
+                            </div>
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외) 암진단비Ⅱ암진단비Ⅱ (유사암제외)암진단비Ⅱ</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30" data-default="true">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                </div>
+                            </div>
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외)</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30" data-default="true">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                </div>
+                            </div>
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외)</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30" data-default="true">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                </div>
+                            </div>
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외)</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30" data-default="true">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                </div>
+                            </div>
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외)</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30" data-default="true">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                </div>
+                            </div>
+                            <div class="item_list">
+                                <div class="tit">
+                                    <span>암진단Ⅱ(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('layer-detail')" class="btn_item_search">보장내용 보기</button>
+                                    <div class="tit_tooltip">암진단비Ⅱ(유사암제외) 암진단비Ⅱ(유사암제외)</div>
+                                </div>
+                                <div class="item_list_box">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30" data-default="true">30</option>
+                                            <option value="40">40</option>
+                                            <option value="50">50</option>
+                                            <option value="60">60</option>
+                                            <option value="70">70</option>
+                                            <option value="80">80</option>
+                                            <option value="90">90</option>
+                                        </select>
+                                        <span class="select_unit">만원</span>
+                                    </div>
+                                    <div class="amount_self">36,500원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item_footer">
+                    <button type="button" onclick="openLayer('layer-confirm')" class="btn_style1">
+                        <span>변경 금액으로 다시 계산</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer_info">
+            <div class="inner">
+                <p>
+                    <strong>[ 필수안내사항 ]</strong><br />
+                    ※ 보험대리점 : 굿리치㈜(GoodRich Co., Ltd.) (등록번호 : 제2006038313호)<br />
+                    ※ 본 광고는 광고심의기준을 준수하였으며, 유효기간은 심의일로부터 1년입니다.<br />
+                    <span class="footer_emphasis">
+                    ※ 보험계약자가 기존 보험계약을 해지하고 새로운 보험계약을 체결하는 과정에서<br />
+                    ① 질병이력, 연령증가 등으로 가입이 거절되거나 보험료가 인상될 수 있습니다.<br />
+                    ② 가입 상품에 따라 새로운 면책기간 적용 및 보장 제한 등 기타 불이익이 발생할 수 있습니다.
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="footer_dlbrt">
+            <div class="inner">
+            <p>리치-준법-0000</p>
+            </div>
+        </div>
+        <div class="footer_desc">
+            <div class="inner">
+                <p class="footer_link">
+                    <a href="javascript:;" open-privacy="">이용약관</a>
+                    <a href="javascript:;" open-privacy-agree=""><strong>개인정보처리방침</strong></a>
+                    <a href="javascript:;" open-parter="">제휴보험사</a>
+                    <a href="javascript:;">회사소개</a>
+                    <a href="javascript:;" open-protection-standards="">금융소비자보호기준</a>
+                    <a href="javascript:;" open-internal-control="">금융소비자보호 내부통제기준</a>
+                </p>
+                <p class="footer_address">
+                    서울특별시 중구 세종대로9길 41, 7층 (서소문동,퍼시픽타워)<br />
+                    굿리치㈜(GoodRich Co., Ltd.) 사업자등록번호 201-85-28762 | 대표이사 한승표<br />
+                    마케팅ᆞ제휴 문의 partnership@goodrich.co.kr 02-6288-5762<br />
+                    CopyrightⓒGoodRich Co., Ltd. All Rights Reserved.
+                </p>
+                <a href="index.html" class="footer_logo">
+                    <img src="images/logo_footer.png" alt="굿리치몰" />
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- quick_navi -->
+    <div class="quick_navi">
+        <a href="main2.html" class="btn_qfilter">
+            <img src="images/btn_qfilter.png" alt="직접 변경 버튼" />
+            <span class="quick_tit">직접 변경</span>
+        </a>
+        <a onclick="openLayer('layer-do')" class="btn_qsave">
+            <img src="images/btn_qsave.png" alt="결과 저장 버튼" />
+            <span class="quick_tit">결과 저장</span>
+        </a>
+        <a href="javascript:;" id="btn_qtop" class="btn_qtop">
+            <img src="images/btn_qtop.png" alt="위로 버튼" />
+            <span class="hide">위로</span>
+        </a>
+    </div>
+
+    <!-- s:layercf -->
+    <div class="layercf layer-do">
+        <div class="dim_replace"></div>
+        <div class="dim">
+            <div class="layer_wrap">
+                <div class="layer_header">
+                    <div class="layer_title">보험 결과 저장</div>
+                    <button type="button" class="layer_close">닫기</button>
+                </div>
+                <div class="layer_body">
+                    <div class="layer_tit3">휴대폰 번호를 입력해 주세요</div>
+                    <ul class="form1">
+                        <li class="form_num">
+                            <div class="hide">
+                                <label for="inp_share01">휴대폰</label>
+                            </div>
+                            <div class="form_box">
+                                <span class="form_num-fix">010</span>
+                                <input type="text" id="inp_share01" placeholder="12345678" maxlength="8">
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="layer_btn_wrap">
+                        <button type="button" class="btn_kakao">
+                            <span>카카오톡으로 결과 저장</span>
+                        </button>
+                        <button type="button" class="btn_sms">
+                            <span>문자메시지로 결과 저장</span>
+                        </button>
+                    </div>
+                    <div class="layer_txt2">⚠ 해당 보험료는 단순 참고용으로 반드시 상담을 통해 정보를 확인해 주세요.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e:layercf -->
+
+    <!-- s:layercf -->
+    <div class="layercf layer-confirm">
+        <div class="dim_replace"></div>
+        <div class="dim">
+            <div class="layer_wrap">
+                <div class="layer_tit1">해당 보험료는 단순 참고용으로<br/>반드시 상담원을 통해 보험 정보를 확인해 주세요</div>
+                <img src="images/img_olchi2.png" alt="올치 이미지"/>
+                <button type="button" class="btn_small btn_orange layer_close">확인</button>
+            </div>
+        </div>
+    </div>
+    <!-- e:layercf -->
+
+    <!-- s:layercf -->
+    <div class="layercf layer-detail">
+        <div class="dim_replace"></div>
+        <div class="dim">
+            <div class="layer_wrap">
+                <div class="layer_header">
+                    <div class="layer_title">표적항암약물허가치료보장특약Ⅱ(갱신형)(100세만기)</div>
+                    <button type="button" class="layer_close">닫기</button>
+                </div>
+                <div class="layer_body">
+                    <div class="detail_box">
+                        <dl>
+                            <dt>가입금액</dt>
+                            <dd><span class="num">3,000 만원</span></dd>
+                        </dl>
+                    </div>
+                    <div class="detail_area">
+                        <div class="detail_list">
+                            <div class="head">
+                                <strong class="tit">수술급여금(1종)</strong>
+                                <span class="option">보장금액 500만원</span>
+                            </div>
+                            <div class="cont">
+                                <p class="txt">심혈관특정질환Ⅰ(기타심장부정맥제외)로 진단 확정시 최초 1회에 한하여 가입금액 지급 (최초 1회한) (1년미만 50%)z심혈관특정질환Ⅰ(기타심장부정맥제외)로 진단 확정시 최초 1회에 한하여 가입금액 지급 (최초 1회한) (1년미만 50%)</p>
+                            </div>
+                        </div>
+                        <div class="detail_list">
+                            <div class="head">
+                                <strong class="tit">수술급여금(1종)</strong>
+                                <span class="option">보장금액 500만원</span>
+                            </div>
+                            <div class="cont">
+                                <p class="txt">심혈관특정질환Ⅰ(기타심장부정맥제외)로 진단 확정시 최초 1회에 한하여 가입금액 지급 (최초 1회한) (1년미만 50%)</p>
+                            </div>
+                        </div>
+                        <div class="detail_list">
+                            <div class="head">
+                                <strong class="tit">수술급여금(1종)</strong>
+                                <span class="option">보장금액 500만원</span>
+                            </div>
+                            <div class="cont">
+                                <p class="txt">심혈관특정질환Ⅰ(기타심장부정맥제외)로 진단 확정시 최초 1회에 한하여 가입금액 지급 (최초 1회한) (1년미만 50%)</p>
+                            </div>
+                        </div>
+                        <div class="detail_list">
+                            <div class="head">
+                                <strong class="tit">수술급여금(1종)</strong>
+                                <span class="option">보장금액 500만원</span>
+                            </div>
+                            <div class="cont">
+                                <p class="txt">심혈관특정질환Ⅰ(기타심장부정맥제외)로 진단 확정시 최초 1회에 한하여 가입금액 지급 (최초 1회한) (1년미만 50%)</p>
+                            </div>
+                        </div>
+                        <div class="detail_list">
+                            <div class="head">
+                                <strong class="tit">수술급여금(1종)</strong>
+                                <span class="option">보장금액 500만원</span>
+                            </div>
+                            <div class="cont">
+                                <p class="txt">심혈관특정질환Ⅰ(기타심장부정맥제외)로 진단 확정시 최초 1회에 한하여 가입금액 지급 (최초 1회한) (1년미만 50%)</p>
+                            </div>
+                        </div>
+                        <div class="detail_list">
+                            <div class="head">
+                                <strong class="tit">수술급여금(1종)</strong>
+                                <span class="option">보장금액 500만원</span>
+                            </div>
+                            <div class="cont">
+                                <p class="txt">심혈관특정질환Ⅰ(기타심장부정맥제외)로 진단 확정시 최초 1회에 한하여 가입금액 지급 (최초 1회한) (1년미만 50%)</p>
+                            </div>
+                        </div>
+                        <div class="detail_list">
+                            <div class="head">
+                                <strong class="tit">수술급여금(1종)</strong>
+                                <span class="option">보장금액 500만원</span>
+                            </div>
+                            <div class="cont">
+                                <p class="txt">심혈관특정질환Ⅰ(기타심장부정맥제외)로 진단 확정시 최초 1회에 한하여 가입금액 지급 (최초 1회한) (1년미만 50%)</p>
+                            </div>
+                        </div>
+                        <div class="detail_list">
+                            <div class="head">
+                                <strong class="tit">수술급여금(1종)</strong>
+                                <span class="option">보장금액 500만원</span>
+                            </div>
+                            <div class="cont">
+                                <p class="txt">심혈관특정질환Ⅰ(기타심장부정맥제외)로 진단 확정시 최초 1회에 한하여 가입금액 지급 (최초 1회한) (1년미만 50%)</p>
+                            </div>
+                        </div>
+                        <div class="detail_list">
+                            <div class="head">
+                                <strong class="tit">수술급여금(1종)</strong>
+                                <span class="option">보장금액 500만원</span>
+                            </div>
+                            <div class="cont">
+                                <p class="txt">심혈관특정질환Ⅰ(기타심장부정맥제외)로 진단 확정시 최초 1회에 한하여 가입금액 지급 (최초 1회한) (1년미만 50%)</p>
+                            </div>
+                        </div>
+                        <div class="detail_list">
+                            <div class="head">
+                                <strong class="tit">수술급여금(1종)</strong>
+                                <span class="option">보장금액 500만원</span>
+                            </div>
+                            <div class="cont">
+                                <p class="txt">심혈관특정질환Ⅰ(기타심장부정맥제외)로 진단 확정시 최초 1회에 한하여 가입금액 지급 (최초 1회한) (1년미만 50%)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e:layercf -->
+
+</div>
+
+<!-- script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="js/jquery.nice-select.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
