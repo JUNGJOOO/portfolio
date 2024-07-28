@@ -1,0 +1,455 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title>베오플레이</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/trans.css" />
+<!--h3에 해당하는 폰트-->
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface&amp;subset=latin-ext" rel="stylesheet">
+</head>
+<body>
+<div class="bodyBox">
+<div class="wrap">
+<!--header시작-->
+<header>
+    <a class="hide" href="#">컨텐츠 바로가기</a>
+    <div class="headerBanner">
+        <a href="#">2-YEAR WARRANTY</a>
+        <a href="#">30-DAY RISK FREE TRIAL</a>
+        <a href="#">FREE DELIVERY &amp; RETURN</a>
+    </div>
+    <div class="headContainer">
+        <h1>
+            <a href="beo.html">
+                <img src="images/logo.png" alt="B&O PLAY"/>
+            </a>
+        </h1>
+        <a href="#" class="cartGroup">
+            <span>cart</span>
+        </a>
+        <nav class="active">
+            <h2 class="hide">메인 네비게이션</h2>
+            <a href="#" class="open">닫기</a>
+            <ul>
+                <li><a href="#">Speakers</a></li>
+                <li><a href="#">Headphones</a></li>
+                <li><a href="#">Earphones</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Find Store</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<script>
+var nav = document.querySelector("nav");
+var click = nav.querySelector("a");
+var ul = nav.querySelector("ul")
+nav.addEventListener("click", 할일);
+function 할일(e){
+    e.preventDefault();
+    console.log(e.target);
+
+    if(click.className === "open"){
+        ul.className = "on";
+        click.className = "close";
+    } else{
+        ul.className = "";
+        click.className = "open"
+    }     
+} 
+</script>
+<!--main시작-->
+<main>
+    <section class="mainVisual">
+        <div class="mainBack">
+            <img class="mV1" src="images/bg_main.jpg" alt="BeoSound 1 and 2"/>
+            <img class="mV2" src="images/bg_main_ver2.jpg" alt="BeoSound 1 and 2"/>
+        </div>
+        <h3 class="hide">메인 품목</h3>
+        <div class="mainTxt">
+            <h3>BeoSound 1 &amp; 2</h3>
+            <p>Powerful wireless speaker<br>
+                system with 360-degree sound<br>
+                performance.
+            </p>
+            <div class="icon_type1">
+                <a href="#">
+                    <p>BESOUND 1</p>
+                </a>
+                <a href="#">
+                    <p>BESOUND 2</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="product">
+        <h3 class="hide">product lists</h3>
+        <div class="col2">
+            <a href="#" class="imageWrapper">
+                <img class="iV1" src="images/product_1.jpg" alt="BEOPLAY E8 – WIRELESS EARPHONES"/>
+                <img class="iV2" src="images/product_1_ver2.png" alt="BEOPLAY E8 – WIRELESS EARPHONES"/>
+            </a>
+            <div class="contentWrapper">
+                <h4>BEOPLAY E8 – WIRELESS EARPHONES</h4>
+                <p>Premium, truly wireless earphones with Bang &amp; Olufsen Signature Sound. Simple but gem-like, E8 is crafted for the long term.</p>
+                <a href="#" class="icon_type2">
+                    <p class="unit">€</p>
+                    <p class="price">299</p>
+                </a>
+            </div>
+        </div>
+        <div class="col1">
+            <a href="#" class="imageWrapper">
+                <img src="images/product_2.png" alt="BEOPLAY P6 – PREMIUM, POWERFUL, PORTABLE SPEAKER"/>
+            </a>
+            <div class="contentWrapper">
+                <h4>BEOPLAY P6 – PREMIUM, POWERFUL, PORTABLE SPEAKER</h4>
+                <p>Powerful and portable Bluetooth speaker with True360 Bang &amp; Olufsen Signature Sound. Up to 16 hours of playtime.</p>
+                <a href="#" class="icon_type2">
+                    <p class="unit">€</p>
+                    <p class="price">399</p>
+                </a>
+            </div>
+        </div>
+        <div class="col1">
+            <a href="#" class="imageWrapper">
+                <img src="images/product_3.jpg" alt="BEOPLAY H9I – WIRELESS OVER-EAR HEADPHONES"/>
+            </a>
+            <div class="contentWrapper">
+                <h4>BEOPLAY H9I – WIRELESS OVER-EAR HEADPHONES</h4>
+                <p>Improved Active Noise Cancellation and Proximity Sensor.</p>
+                <a href="#" class="icon_type2">
+                    <p class="unit">€</p>
+                    <p class="price">499</p>
+                </a>
+            </div>
+        </div>
+        <div class="col1">
+            <a href="#" class="imageWrapper">
+                <img src="images/product_4.jpg" alt="BEOPLAY P6 – PREMIUM, POWERFUL, PORTABLE SPEAKER"/>
+            </a>
+            <div class="contentWrapper">
+                <h4>BEOPLAY P6 – PREMIUM, POWERFUL, PORTABLE SPEAKER</h4>
+                <p>Powerful and portable Bluetooth speaker with True360 Bang &amp; Olufsen Signature Sound. Up to 16 hours of playtime.</p>
+                <a href="#" class="icon_type2">
+                    <p class="unit">€</p>
+                    <p class="price">399</p>
+                </a>
+            </div>
+        </div>
+        <div class="col1">
+            <a href="#" class="imageWrapper">
+                <img src="images/product_5.png" alt="BEOPLAY H9I – WIRELESS OVER-EAR HEADPHONES"/>
+                <div class="meta">
+                    <p>NOW IN BLACK</p>
+                </div>
+            </a>
+            <div class="contentWrapper">
+                <h4>BEOPLAY H9I – WIRELESS OVER-EAR HEADPHONES</h4>
+                <p>Improved Active Noise Cancellation and Proximity Sensor.</p>
+                <a href="#" class="icon_type2">
+                    <p class="unit">€</p>
+                    <p class="price">499</p>
+                </a>
+            </div>
+        </div>
+        <div class="col1">
+            <a href="#" class="imageWrapper">
+                <img src="images/product_6.png" alt="BEOPLAY P6 – PREMIUM, POWERFUL, PORTABLE SPEAKER"/>
+            </a>
+            <div class="contentWrapper">
+                <h4>BEOPLAY P6 – PREMIUM, POWERFUL, PORTABLE SPEAKER</h4>
+                <p>Powerful and portable Bluetooth speaker with True360 Bang &amp; Olufsen Signature Sound. Up to 16 hours of playtime.</p>
+                <a href="#" class="icon_type2">
+                    <p class="unit">€</p>
+                    <p class="price">399</p>
+                </a>
+            </div>
+        </div>
+        <div class="col1">
+            <a href="#" class="imageWrapper">
+                <img src="images/product_7.png" alt="BEOPLAY H9I – WIRELESS OVER-EAR HEADPHONES"/>
+            </a>
+            <div class="contentWrapper">
+                <h4>BEOPLAY H9I – WIRELESS OVER-EAR HEADPHONES</h4>
+                <p>Improved Active Noise Cancellation and Proximity Sensor.</p>
+                <a href="#" class="icon_type2">
+                    <p class="unit">€</p>
+                    <p class="price">499</p>
+                </a>
+            </div>
+        </div>
+        <div class="col1">
+            <a href="#" class="imageWrapper">
+                <img src="images/product_8.jpg" alt="BEOPLAY H9I – WIRELESS OVER-EAR HEADPHONES"/>
+            </a>
+            <div class="contentWrapper">
+                <h4>BEOPLAY H9I – WIRELESS OVER-EAR HEADPHONES</h4>
+                <p>Improved Active Noise Cancellation and Proximity Sensor.</p>
+                <a href="#" class="icon_type2">
+                    <p class="unit">€</p>
+                    <p class="price">499</p>
+                </a>
+            </div>
+        </div>
+        <div class="col1">
+            <a href="#" class="imageWrapper">
+                <img src="images/product_9.png" alt="BEOPLAY H9I – WIRELESS OVER-EAR HEADPHONES"/>
+                <div class="meta">
+                    <p>NOW IN BLACK</p>
+                </div>
+            </a>
+            <div class="contentWrapper">
+                <h4>BEOPLAY H9I – WIRELESS OVER-EAR HEADPHONES</h4>
+                <p>Improved Active Noise Cancellation and Proximity Sensor.</p>
+                <a href="#" class="icon_type2">
+                    <p class="unit">€</p>
+                    <p class="price">499</p>
+                </a>
+            </div>
+        </div>
+        <div class="col2">
+            <a href="#" class="imageWrapper">
+                <img class="iV1" src="images/product_10.jpg" alt="BEOPLAY E8 – WIRELESS EARPHONES"/>
+                <img class="iV2" src="images/product_10_ver2.jpg" alt="BEOPLAY E8 – WIRELESS EARPHONES"/>
+            </a>
+            <div class="contentWrapper">
+                <h4>BEOPLAY E8 – WIRELESS EARPHONES</h4>
+                <p>Premium, truly wireless earphones with Bang &amp; Olufsen Signature Sound. Simple but gem-like, E8 is crafted for the long term.</p>
+                <a href="#" class="icon_type2">
+                    <p class="unit">€</p>
+                    <p class="price">299</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <h3>About B&amp;O</h3>
+        <div class="col2">
+            <a href="#" class="imageWrapper">
+                <img class="iV1" src="images/product_1.jpg" alt="BEOPLAY E8 – WIRELESS EARPHONES"/>
+                <img class="iV2" src="images/product_1_ver2.png" alt="BEOPLAY E8 – WIRELESS EARPHONES"/>
+            </a>
+            <div class="contentWrapper">
+                <h4>BEOPLAY E8 – WIRELESS EARPHONES</h4>
+                <p>Premium, truly wireless earphones with Bang &amp; Olufsen Signature Sound. Simple but gem-like, E8 is crafted for the long term.</p>
+                <a href="#" class="icon_type3">
+                    <p>EXPERIENCE</p>
+                </a>
+            </div>
+        </div>
+        <div class="col1">
+            <a href="#" class="imageWrapper">
+                <img src="images/about_2.jpg" alt="HEADPHONES COLLECTION"/>
+            </a>
+            <div class="contentWrapper">
+                <h4>HEADPHONES COLLECTION</h4>
+                <p>Powerful and portable Bluetooth speaker with True360 Bang &amp; Olufsen Signature Sound. Up to 16 hours of playtime.</p>
+                <a href="#" class="icon_type3">
+                    <p>EXPLORE</p>
+                </a>
+            </div>
+        </div>
+        <div class="col1">
+            <a href="#" class="imageWrapper">
+                <img src="images/about_3.jpg" alt="SPEAKER COLLECTION"/>
+            </a>
+            <div class="contentWrapper">
+                <h4>SPEAKER COLLECTION</h4>
+                <p>Explore the selection of speakers from Bang &amp; Olufsen. Choose between portable Bluetooth or wireless to enjoy sound the way you like</p>
+                <a href="#" class="icon_type3">
+                    <p>EXPLORE</p>
+                </a>
+            </div>
+        </div>
+        <div class="col1">
+            <a href="#" class="imageWrapper">
+                <img src="images/about_4.png" alt="BEOPLAY E8 – PINK POWDER"/>
+            </a>
+            <div class="contentWrapper">
+                <h4>BEOPLAY E8 – PINK POWDER</h4>
+                <p>Beoplay E8 Powder Pink is part of a wider collection of E8 colour variants, which we will be launching in the future, each with its own unique colour concept. Find selected stores for purchase.</p>
+                <a href="#" class="icon_type3">
+                    <p>EXPLORE</p>
+                </a>
+            </div>
+        </div>
+        <div class="col1">
+            <a href="#" class="imageWrapper">
+                <img src="images/about_5.jpg" alt="THE JOURNAL"/>
+            </a>
+            <div class="contentWrapper">
+                <h4>THE JOURNAL</h4>
+                <p>Be inspired by our selection of articles and podcasts on sound, design and art.</p>
+                <a href="#" class="icon_type3">
+                    <p>EXPERIENCE</p>
+                </a>
+            </div>
+        </div>
+        <div class="col2">
+            <a href="#" class="imageWrapper">
+                <img class="iV1" src="images/about_6.jpg" alt="STREAM YOUR MUSIC TO ANY ROOM"/>
+                <img class="iV2" src="images/about_6_ver2.jpg" alt="STREAM YOUR MUSIC TO ANY ROOM"/>
+            </a>
+            <div class="contentWrapper">
+                <h4>STREAM YOUR MUSIC TO ANY ROOM</h4>
+                <p>Create the ultimate soundscape in your home with B&amp;O multiroom speakers. Let an infinity of music flow - straight from your favourite music source. Features Beoplay A9, A6, M5 and M3.</p>
+                <a href="#" class="icon_type3">
+                    <p>EXPERIENCE</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="inspire">
+        <h3>Inspiration</h3>
+        <div class="col1">
+            <a href="#" class="imageWrapper">
+                <img src="images/Inspiration_1.jpg" alt="BEOPLAYA9"/>
+            </a>
+            <div class="contentWrapper">
+                <h4>#BEOPLAYA9</h4>
+                <p>Iconic looks and stunning sounds with Beoplay A9. Explore #BeoplayA9 and be inspired on different ways to live with a speaker that's designed like a piece of furniture.</p>
+                <a href="#" class="icon_type3">
+                    <p>EXPERIENCE</p>
+                </a>
+            </div>
+        </div>
+        <div class="col1">
+            <a href="#" class="imageWrapper">
+                <img src="images/Inspiration_2.jpg" alt="BEOPLAYA6"/>
+            </a>
+            <div class="contentWrapper">
+                <h4>#BEOPLAYA6</h4>
+                <p>Beoplay P6 is a Premium, powerful and portable Bluetooth speaker designed by the award-winning Danish designer Cecilie Manz. Explore #BeoplayP6 for more inspiration.</p>
+                <a href="#" class="icon_type3">
+                    <p>EXPERIENCE</p>
+                </a>
+            </div>
+        </div>
+        <div class="col1">
+            <a href="#" class="imageWrapper">
+                <img src="images/Inspiration_3.jpg" alt="BEOPLAYA5"/>
+            </a>
+            <div class="contentWrapper">
+                <h4>#BEOPLAYA5</h4>
+                <p>Beoplay M5 is a versatile connected speaker that can be experienced alone or can be replicated around the home. Explore #BeoplayM5 for inspiration.</p>
+                <a href="#" class="icon_type3">
+                    <p>EXPERIENCE</p>
+                </a>
+            </div>
+        </div>
+        <div class="col1">
+            <a href="#" class="imageWrapper">
+                <img src="images/Inspiration_4.jpg" alt="BEOPLAYA8"/>
+            </a>
+            <div class="contentWrapper">
+                <h4>#BEOPLAYA8</h4>
+                <p>Cord free and truly wireless, E8 makes no compromise on sound quality. Explore #BeoplayE8 for more inspiration and experience the different colour variants including special editions.</p>
+                <a href="#" class="icon_type3">
+                    <p>EXPERIENCE</p>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+<!--footer시작--> 
+<footer>
+    <ul class="footerArea">
+        <li>
+            <strong>
+                <a href="#">CUSTOMER CARE</a>
+            </strong>
+            <ul>
+                <li><a href="#">Find Store</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Limited Warranty</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </li>
+        <li>
+            <strong>
+                <a href="#">OUR POLICIES</a>
+            </strong>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">Terms and conditions</a></li>
+                <li><a href="#">terms of sale</a></li>
+                <li><a href="#">Free shipping and returns</a></li>
+            </ul>
+        </li>
+        <li>
+            <strong>
+                <a href="#">OUR COMPANY</a>
+            </strong>
+            <ul>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Collaborations</a></li>
+                <li><a href="#">Inspiration</a></li>
+                <li><a href="#">Bang &amp; Olufsen</a></li>
+            </ul>
+        </li>
+        <li>
+            <strong>
+                <a href="#">FOLLOW US</a>
+            </strong>
+            <ul>
+                <li><a href="#">Sign up for our newletter</a></li>
+                <li><a href="#">Download App for iOS</a></li>
+                <li><a href="#">Download App for Android</a></li>
+            </ul>
+            <ul class="social">
+                <li><a href="#">facebook</a></li>
+                <li><a href="#">instagram</a></li>
+                <li><a href="#">journal</a></li>
+                <li><a href="#">twitter</a></li>
+                <li><a href="#">youtube</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="lang">
+        <a href="#" class="other">OTHER</a>
+        <a href="#">ENGLISH</a>
+    </div>
+    <ul class="etc_link">
+        <li>
+            <a href="#">
+                <img src="images/f_help1.jpg" alt="Find Store"/>
+            </a>
+            <p>Find Store</p>
+        </li>
+        <li>
+            <a href="#">
+                <img src="images/f_help2.jpg" alt="Support"/>
+            </a>
+            <p>Support</p>
+        </li>
+        <li>
+            <a href="#">
+                <img src="images/f_help3.jpg" alt="Newsletter"/>
+            </a>
+            <p>Newsletter</p>
+        </li>
+        <li>
+            <a href="#">
+                <img src="images/f_help4.jpg" alt="Bang & Olufsen"/>
+            </a>
+            <p>Bang &amp; Olufsen</p>
+        </li>
+    </ul>
+    <div class="info">
+        <a href="#">Member of Bang &amp; Olufsen Group</a>
+        <div class="copyright">
+            <p>@ B&amp;O PLAY 2018</p>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+</body>
+</html>
