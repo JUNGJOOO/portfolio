@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title>NAVER Light</title>
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/common.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+    $(document).ready(function(){ 
+        $('.bxslider').bxSlider({
+            mode: 'vertical',
+            auto: true,
+            pause: 2000,
+        });
+        $('.bxslider2').bxSlider({
+            mode: 'vertical',
+            auto: true,
+            pause: 2000,
+        });
+
+    });
+    </script>
+</head>
+<body>
+<div class="headContainer">
+    <h1>
+        <a><img src="images/logo.png" alt="네이버"></a>
+    </h1>
+    <div class="toggle">
+        <a href="naver_light_2.html" class="toggle_icon"></a>
+    </div>
+    <div class="search">
+        <div class="searchGroup">
+            <input type="text" class="input_search">
+            <div class="buttonGroup">
+                <button>
+                    <span class="mic">음성검색</span>
+                </button>
+                <button>
+                    <span class="camera">스마트렌즈</span>
+                </button>
+                <button>
+                    <span class="around">스마트어라운드</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mainContainer">
+    <div class="news">
+        <div class="news_fold spaceIn fold">
+            <div class="ttl">
+                <h2><a>뉴스</a></h2>
+                <a href="#" class="ctrlW">열고닫기</a>
+            </div>
+        </div>
+        <div class="news_unfold spaceIn unfold"><!--펼침-->
+            <div class="ttl">
+                <h2><a>뉴스</a></h2>
+                <a href="#" class="ctrlO">열고닫기</a>
+            </div>
+            <div class="container">
+                <ul class="type_text">
+                    <li>
+                        <a href="#">태풍 '솔릭' 전남 접근...자정 고창 부근 상륙할 듯</a>
+                        <a href="#" class="national">기상특보</a>
+                    </li>
+                    <li>
+                        <a href="#">실종자 1명, 부상자 1명...중재본, 대응 2단계로 '격상'</a>
+                    </li>
+                    <li>
+                        <a href="#">"수시모집 코 앞인데..." 86개 대학에 구조조정 칼바람</a>
+                    </li>
+                    <li>
+                        <a href="#">태풍도 막을 수 없는 그리움...내일 2차 이산가족 상봉</a>
+                    </li>
+                    <li class= "del">
+                        <a href="#">태풍 솔릭 여향권 전남 해남, 330여세대 정전</a>
+                    </li>
+                </ul>
+                <div class="realtime">
+                    <div class="realtime_fold">
+                        <h3>실시간급상승</h3>
+                        <ul class="bxslider">
+                            <li><a href="#"><em>1</em>태풍제비</a></li>
+                            <li><a href="#"><em>2</em>이수련</a></li>
+                            <li><a href="#"><em>3</em>김정근</a></li>
+                            <li><a href="#"><em>4</em>양궁</a></li>
+                            <li><a href="#"><em>5</em>한국 이란 하이라이트</a></li>
+                            <li><a href="#"><em>6</em>이승우 골</a></li>
+                            <li><a href="#"><em>7</em>한국사능력검정시험</a></li>
+                            <li><a href="#"><em>8</em>두리랜드</a></li>
+                            <li><a href="#"><em>9</em>한국 우즈벡</a></li>
+                            <li><a href="#"><em>10</em>퍼스트 어벤져</a></li>
+                        </ul>
+                        <a href="#" class="real_af"></a>
+                    </div>
+                    <div class="realtime_unfold"><!--펼침-->
+                        <div class="sub">
+                            <a href="#" class="real on">실시간 급상승</a>
+                            <a href="#" class="topic">뉴스토픽</a>
+                        </div>
+                        <a href="#" class="real_auf"></a>
+                        <div class="rank">
+                            <div class="rw_typeA">
+                                <ul class="tab_sort">
+                                    <li class="on">
+                                        <a href="#" class="tab1">1~10위</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="tab2">11~20위</a>
+                                    </li>
+                                </ul>
+                                <ul class="rankBox">
+                                    <li>
+                                        <a href="#">
+                                            <em>1</em>
+                                            <span>태풍제비</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <em>2</em>
+                                            <span>이수련</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <em>3</em>
+                                            <span>김정근</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <em>4</em>
+                                            <span>양궁</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <em>5</em>
+                                            <span>한국 이란 하이라이트</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <em>6</em>
+                                            <span>이승우 골</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <em>7</em>
+                                            <span>한국사능력사검정시험</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <em>8</em>
+                                            <span>두리랜드</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <em>9</em>
+                                            <span>한국 우즈벡</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <em>10</em>
+                                            <span>퍼스트 어벤져</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="rw_typeB">
+                                <ul class="tab_sort">
+                                    <li>
+                                        <a href="#" class="tab1">1~10위</a>
+                                    </li>
+                                    <li class="on">
+                                        <a href="#" class="tab2">11~20위</a>
+                                    </li>
+                                </ul>
+                                <ul class="rankBox">
+                                    <li>
+                                        <a href="#">
+                                            <em>11</em>
+                                            <span>유재석</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <em>12</em>
+                                            <span>장혜진</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <em>13</em>
+                                            <span>천일의 스캔들</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <em>14</em>
+                                            <span>송혜교</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <em>15</em>
+                                            <span>나혼자산다</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <em>16</em>
+                                            <span>와이디온라인</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <em>17</em>
+                                            <span>2018 아시안게임 양궁</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <em>18</em>
+                                            <span>김민정</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <em>19</em>
+                                            <span>메간폭스</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <em>20</em>
+                                            <span>조현우</span>
+                                        </a>
+                                        <a href="#" class="tracking"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="time">
+                            <span>2018.12.31 24:00 기준</span>
+                            <ul>
+                                <li class="on"><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                            </ul>
+                            <a href="#" class="tracking_main">급상승 트래킹</a>
+                        </div>
+                    </div>
+                </div>
+				<script>
+				var realtimeUN = document.querySelector(".realtime_unfold")
+				var ranking = realtimeUN.querySelector(".rank");
+				var typeA = ranking.querySelector(".rw_typeA");
+				var typeB = ranking.querySelector(".rw_typeB");
+				realtimeUN.addEventListener("click", sta_d)
+				function sta_d(sta_dt){
+					if(sta_dt.target.className === "tab1"){
+						typeA.style.display = "block";
+						typeB.style.display = "none";
+					} 
+					if(sta_dt.target.className === "tab2"){
+						typeA.style.display = "none";
+						typeB.style.display = "block";
+					}
+				}
+				</script>
+				
+				
+                <div class="weather">
+                    <ul class="bxslider2">
+                        <li>
+                            <a href="#">
+                                <div class="icon_w"></div>
+                                <span>26</span>
+                                <div class="tx">
+                                    <p>울릉/독도</p>
+                                    <p>어제보다 3˚ 낮음</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon_w"></div>
+                                <span>24</span>
+                                <div class="tx">
+                                    <p>서울</p>
+                                    <p>시간당 강수량 1.5mm</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icon_w"></div>
+                                <span>34</span>
+                                <div class="tx">
+                                    <p>대구</p>
+                                    <p>어제보다 4˚ 높음</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" class="weather_local"></a>
+                </div>
+                <ul class="type_text">
+                    <li class="textArea">
+                        <a href="#">
+                            <span class="imgArea">
+                                <img src="images/news_text.jpg" alt="계속 바뀌는 예상 경로...'시마론'이 '솔릭'잡아당겼나" />
+                            </span>
+                            <span>계속 바뀌는 예상 경로...'시마론'이 '솔릭'잡아당겼나</span>
+                        </a>
+                    </li>
+                    <li class="textArea">
+                        <a href="#">
+                            <span class="imgArea">
+                                <img src="images/news_text.png" alt="흥민-의조-승우 3톱 출격...이란전 선봉장" />
+                            </span>
+                            <span>흥민-의조-승우 3톱 출격...이란전 선봉장</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="type_tab">
+                    <li><a href="#">뉴스홈</a></li>
+                    <li><a href="#">언론사별</a></li>
+                    <li><a href="#">연령별랭킹</a></li>
+                    <li><a href="#">남녀별랭킹</a></li>
+                </ul>
+                <ul class="type_text none">
+                    <li>
+                        <a href="#">송영무, 한국당 압박에 "대한미국 위해하면 북한도 적"</a>
+                    </li>
+                    <li>
+                        <a href="#">최순실 변호인 "묵시적 공모? 관심법이 21세기 되살아나"</a>
+                    </li>
+                    <li>
+                        <a href="#">'긴급조치 위반' 김부겸, 40년 만의 재심서 무죄 판결</a>
+                    </li>
+                    <li>
+                        <a href="#">교역조건 3년 8개ㅐ월 만에 최저...수출호조에도 유가가 발목</a>
+                    </li>
+                    <li>
+                        <a href="#">간첩 혐의 7년 유죄 선고 받은 32년만에 "무죄"</a>
+                    </li>
+                    <li class="textArea">
+                        <a href="#">
+                            <span class="imgArea">
+                                <img src="images/news_text_2.jpg" alt="" />
+                            </span>
+                            <span>가뭄 해소에 부족했던 태풍 '솔릭'...내주 전국 비 예보 '주목'</span>
+                        </a>
+                    </li>
+                    <li class="textArea">
+                        <a href="#">
+                            <span class="imgArea">
+                                <img src="images/news_text_3.jpg" alt="" />
+                            </span>
+                            <span>美 펜스 부통령 "2020년까지 우주軍 창설...달에 사람 상주시킬 것</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="type_more">
+                    <a href="#" class="more">뉴스 더보기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner t">
+        <a href="#">
+            <img src="images/banner_1.png" alt="오키도키, 엄마한테 전화해줘~ colva, aki 영상공유하고, N페이 받자!"/>
+        </a>
+    </div>
+    <div class="enter">
+        <div class="enter_fold spaceIn fold">
+            <div class="ttl">
+                <h2><a href="#">연예</a></h2>
+                <a href="#" class="ctrlW">열고닫기</a>
+            </div>
+        </div>
+        <div class="enter_unfold spaceIn unfold"><!--펼침-->
+            <div class="ttl">
+                <h2><a href="#">연예</a></h2>
+                <a href="#" class="ctrlO">열고닫기</a>
+            </div>
+            <div class="container">
+                <ul class="type_text">
+                    <li class="textArea">
+                        <a href="#">
+                            <span class="imgArea">
+                                <img src="images/enter_text_1.jpg" alt="티파니 소녀시대 완전체 컴백? 꼭 다시 모인다"/>
+                            </span>
+                            <span>티파니 "소녀시대 완전체 컴백? 꼭 다시 모인다"</span>
+                        </a>
+                    </li>
+                    <li class="textArea">
+                        <a href="#">
+                            <span class="imgArea">
+                                <img src="images/enter_text_2.jpg" alt="김남주 남편 김승우, 내 최고의 술친구"/>
+                            </span>
+                            <span>김남주 "남편 김승우, 내 최고의 술친구"</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">샤샤 완린, 기절→병원서 의식회복..."안정 취하는 중"(공식)</a>
+                    </li>
+                    <li>
+                        <a href="#">'3억뷰'블랙핑크, '뚜두뚜두' 최초·최고·최단 기록들(종합)</a>
+                    </li>
+                    <li>
+                        <a href="#">'어서와한국' 어노즈 부부, 로맨틱한 '유람선' 데이트(ft.16년만)</a>
+                    </li>
+                    <li>
+                        <a href="#">아이콘, 美 빌보드 독점 인터뷰 "해외 투어 기대↑...新 앨범 작업 중"</a>
+                    </li>
+                    <li>
+                        <a href="#">한복 입구 얼쑤...'조선 EDM'으로 돌아온 방탄소년단</a>
+                    </li>
+                    <li class="textArea">
+                        <a href="#">
+                            <span class="imgArea">
+                                <img src="images/enter_text_3.jpg" alt="로이킴 '안아줘'(나를 좀 안아줘요ㅠㅠ)" />
+                            </span>
+                            <span>로이킴 '안아줘'(나를 좀 안아줘요ㅠㅠ)</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="type_tab">
+                    <li><a href="#">TV연예홈</a></li>
+                    <li><a href="#">TV</a></li>
+                    <li><a href="#">포토</a></li>
+                    <li><a href="#">뮤지션리그</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="sport">
+        <div class="sport_fold spaceIn fold">
+            <div class="ttl">
+                <h2><a href="#">스포츠</a></h2>
+                <a href="#" class="ctrlW">열고닫기</a>
+            </div>
+        </div>
+        <div class="sport_unfold spaceIn unfold"><!--펼침-->
+            <div class="ttl">
+                <h2><a href="#">스포츠</a></h2>
+                <a href="#" class="ctrlO">열고닫기</a>
+            </div>
+            <div class="container">
+                <ul class="type_text">
+                    <li class="textArea">
+                        <a href="#">
+                            <span class="imgArea">
+                                <img src="images/sport_text_1.jpg" alt="'세계 최빈국'이 아스널에 광고를? 논란에 입장 밝힌 르완다" />
+                            </span>
+                            <span>'세계 최빈국'이 아스널에 광고를? 논란에 입장 밝힌 르완다</span>
+                        </a>
+                    </li>
+                    <li class="textArea">
+                        <a href="#">
+                            <span class="imgArea">
+                                <img src="images/sport_text_2.jpg" alt="시리아, 팔레스타인 1-0 꺾고 8강 진출...베트남과 격돌↑[AG 리뷰]" />
+                            </span>
+                            <span>시리아, 팔레스타인 1-0 꺾고 8강 진출...베트남과 격돌↑[AG 리뷰]</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">레알, 작심했다...첼시에 '아자르 최종 오퍼' 넣는다</a>
+                    </li>
+                    <li>
+                        <a href="#">정현,24일 오전 세계 12위 상대로 시즌 세 번재 4강 도전</a>
+                    </li>
+                    <li>
+                        <a href="#">주장 김현수 "시작도 안했는데 욕 많이 먹어"...오지환 논란 '정면돌파'?[AG]</a>
+                    </li>
+                    <li>
+                        <a href="#">"손흥민, 커리어 2년 없어질 수도"이란전 외신도 관심 폭발 [자카르타AG]</a>
+                    </li>
+                    <li>
+                        <a href="#">'넥벤저스'와 한 방쓰는 이정후 "타팀 선배들에게도 배워갈래요"[아시안게임]</a>
+                    </li>
+                </ul>
+                <ul class="type_tab">
+                    <li><a href="http://www.cellapy.co.kr/">야구</a></li>
+                    <li><a href="#">해외야구</a></li>
+                    <li><a href="#">축구</a></li>
+                    <li><a href="#">해외축구</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="banner m">
+        <a href="#">
+            <img src="images/banner_2.jpg" alt="셀라피 뷰티 시그널 영주크림, 재호앰플 시그널키트 무료 증정">
+        </a>
+    </div>
+    <div class="shopping">
+        <div class="shopping_fold spaceIn fold">
+            <div class="ttl">
+                <h2><a href="#">쇼핑</a></h2>
+                <a href="#" class="ctrlW">열고닫기</a>
+            </div>
+        </div>
+        <div class="shopping_unfold spaceIn unfold"><!--펼침-->
+            <div class="ttl">
+                <h2><a href="#">쇼핑</a></h2>
+                <a href="#" class="ctrlO">열고닫기</a>
+            </div>
+            <div class="container">
+                <ul class="type_text">
+                    <li class="textArea">
+                        <a href="#">
+                            <span class="imgArea">
+                                <img src="images/shopping_text_1.jpg" alt="오늘만 'GUCCI' 실비 백 파격 세일"/>
+                            </span>
+                            <span>오늘만 'GUCCI' 실비 백 파격 세일</span>
+                        </a>
+                    </li>
+                    <li class="textArea">
+                        <a href="#">
+                            <span class="imgArea">
+                                <img src="images/shopping_text_2.jpg" alt="주말에 간편하게! 쿠킹 박스 7종"/>
+                            </span>
+                            <span>주말에 간편하게! 쿠킹 박스 7종</span>
+                        </a>
+                    </li>
+                    <li class="textArea">
+                        <a href="#">
+                            <span class="imgArea">
+                                <img src="images/shopping_text_3.jpg" alt="지아자 산양유 크림 2개→5천 원대"/>
+                            </span>
+                            <span>지아자 산양유 크림 2개→5천 원대</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><em>#청순폭발 #미모상승</em>&nbsp;예쁜 옷 많아요! '리린' 1Day 특가</a>
+                    </li>
+                    <li>
+                        <a href="#"><em>포인트로 완벽</em>&nbsp;이번 시즌 특히 사랑받는 옐로 코디 90</a>
+                    </li>
+                    <li>
+                        <a href="#"><em>나올 때마다 완판</em>&nbsp;'스케쳐스' 딜라이트 3 단독 선발매</a>
+                    </li>
+                    <li class="textArea">
+                        <a href="#">
+                            <span class="imgArea">
+                                <img src="images/shopping_text_4.jpg" alt="브라운 원피스"/>
+                            </span>
+                            <span>브라운 원피스</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="type_tab">
+                    <li><a href="#">네이버쇼핑</a></li>
+                    <li><a href="#">네이버페이</a></li>
+                    <li><a href="#">네이버핫딜</a></li>
+                    <li><a href="#">네이버쇼핑</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="beta spaceIn">
+        <h2>
+            <strong>우리동네</strong>
+            <b>Beta</b>
+        </h2>
+        <p>현재 라이트홈에서 우리동네 카드는 제공되지 않습니다.</p>
+    </div>
+</div>
+<footer class="footerContainer spaceIn">
+    <div class="manage">
+        <a href="#">로그인</a>
+        <a href="#">내 정보관리</a>
+        <a href="#">PC버전</a>
+    </div>
+    <div class="etc_link">
+        <a href="#">이용약관</a>
+        <a href="#">개인정보처리방침</a>
+        <a href="#">검색광고</a>
+    </div>
+    <div class="house">
+        <a href="#" class="copy">Ⓒ NAVER Corp.</a>
+        <a href="#">네이버 고객센터</a>
+    </div>
+</footer>
+<div class="banner usFix">
+    <div>
+        <p><em>미리보는 라이트홈,</em> 마음에 드셨나요?</p>
+        <p>해외에선 좀 더 빠른 라이트홈으로!</p>
+    </div>
+    <a href="#">사용하기</a>
+</div>
+<!-- 스크립트 -->
+<script>
+var realtimeUN = document.querySelector(".realtime_unfold")
+var ranking = realtimeUN.querySelector(".rank");
+var typeA = ranking.querySelector(".rw_typeA");
+var typeB = ranking.querySelector(".rw_typeB");
+realtimeUN.addEventListener("click", sta_a)
+function sta_a(sta_ata){
+    if(sta_ata.target.className === "tab1"){
+        typeA.style.display = "block";
+        typeB.style.display = "none";
+    } 
+    if(sta_ata.target.className === "tab2"){
+        typeA.style.display = "none";
+        typeB.style.display = "block";
+    }
+}
+</script>
+<script>
+var dum_a = document.querySelector(".realtime");
+var dum_b = dum_a.querySelector(".realtime_fold");
+var dum_c = dum_a.querySelector(".realtime_unfold");
+var dum_btn = dum_a.querySelector("a");    
+dum_a.addEventListener("click", sta_b);
+function sta_b(e){
+//    console.log(e.target)
+    if(e.target.className === "real_af"){
+        dum_c.style.display = "block";
+        dum_b.style.display = "none";
+    }
+    if(e.target.className === "real_auf"){
+        dum_c.style.display = "none";
+        dum_b.style.display = "block";
+    }
+    e.preventDefault();
+}
+</script> 
+<script>
+var more_txt = document.querySelector(".none");
+var more_btn = document.querySelector(".more");   
+var more_type = document.querySelector(".type_more");
+more_btn.addEventListener("click", sta_c);
+function sta_c(e){
+    if(e.target.className === "more"){
+        more_txt.style.display = "block";
+        more_btn.style.display = "none";
+        more_type.classList.add("on");
+    }
+    e.preventDefault();
+}
+</script> 
+<script>
+var all = document.querySelectorAll(".mainContainer > div");
+    for(var i = 0; i < all.length; i++) {
+        all[i].addEventListener("click", openWork);
+    }
+    function openWork(e) {
+        e.preventDefault();
+        var targetDiv = e.target.parentNode.parentNode.parentNode;
+
+        if(e.target.className === "ctrlW") {
+            targetDiv.classList.remove("close");
+        } else if (e.target.className === "ctrlO") {
+            targetDiv.classList.add("close");
+        }
+    }
+</script> 
+</body>
+</html>

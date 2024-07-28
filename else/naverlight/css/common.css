@@ -1,0 +1,509 @@
+@charset "utf-8";
+/*헤더*/
+.headContainer{
+    position: relative;
+    margin-bottom: 8px;
+    background-color: white;
+    padding-bottom: 9px;
+}
+h1 a{
+    display: block;
+    cursor: pointer;
+}
+h1 a img{
+    display: block;
+    text-align: center;
+    width: 200px; height: 48px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+.toggle{
+    position: absolute;
+    top: 17px;
+    left: 15px;
+}
+.toggle_icon{
+    display: block;
+    width: 21px; height: 16px;
+    background: url(../images/burger.png) no-repeat center;
+    background-size: 100% auto;
+}
+.search{
+    display: block;
+    margin: 0 15px;
+}
+.searchGroup{
+    position: relative;
+    border: 2px solid #00c73c;
+    background-color: white;
+    padding:7px 85px 7px 10px
+}
+.search input[type="text"]{
+    display: block;
+    width: 100%; height: 24px;
+    font-size: 17px;
+    color: black;
+    border: none;
+}
+.buttonGroup{
+    position: absolute;
+    bottom: 0; right: 7px;
+    font-size: 0;
+}
+.buttonGroup button{
+    width: 40px; height: 40px;
+    background:none;
+    border: none;
+}
+.buttonGroup span{
+    display: block;
+    font-size: 0;
+    width: 26px; height: 26px;
+    background: url(../images/icon_search.png) no-repeat;
+    background-size: 300% auto;
+}
+.buttonGroup span.mic{background-position: left 0;}
+.buttonGroup span.camera{background-position:right 0;}
+.buttonGroup span.around{background-position: center;}
+
+
+/*콘텐츠*/
+.mainContainer{overflow: hidden;}
+.mainContainer > div .fold{display: none;}
+.mainContainer > div .unfold{display: block;}
+.mainContainer > div.close .fold{display: block;}
+.mainContainer > div.close .unfold{display: none;}
+
+.mainContainer > div{background-color: white; margin-bottom: 10px;}
+
+/*
+.news{background-color: white; margin-bottom: 10px;}
+.banner_1{background-color: white; margin-bottom: 10px;}
+.enter{background-color: white; margin-bottom: 10px;}
+.sport{background-color: white; margin-bottom: 10px;}
+.banner{margin-bottom: 10px;}
+.shopping{background-color: white; margin-bottom: 10px;}
+.beta{background-color: white; margin-bottom: 10px;}
+*/
+.footerContainer{margin-bottom: 70px;}
+.spaceIn{padding: 15px;}
+/* == 공통 text == */
+.container{
+    font-size: 15px; 
+    display: block;
+}
+.type_text li{
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    font-size: 15px;
+    padding: 9px 0;
+}
+.type_text .national{
+    color: #999;
+    padding-left: 10px;
+}
+.type_text .national:before{
+    content: '';
+    display: inline-block;
+    width: 1px; height:12px;
+    border-left: 1px solid rgba(0,0,0,0.08);
+    padding-left: 10px;
+}
+/* == 공통 tit 열고닫기 == */
+.unfold .ttl{margin-bottom: 9px;}
+.ttl:after{content: ''; display: block; clear: both;}
+.ttl h2{
+    float: left;
+    font-size: 17px;
+    line-height:20px;
+    letter-spacing: -1px;
+}
+.ctrlW{
+    float: right;
+    font-size: 12px;
+    text-indent: -999999px;
+    width: 20px; height: 20px;
+    background: url(../images/icon_arrow_2.png) no-repeat center top;
+    background-size: 100% auto;
+}
+.ctrlO{
+    float: right;
+    font-size: 12px;
+    text-indent: -999999px;
+    width: 20px; height: 20px;
+    background: url(../images/icon_arrow_2.png) no-repeat center bottom;;
+    background-size: 100% auto;
+}
+/* ============ news ============ */
+/* 실시간 급상승 */
+.container .type_text li.del{border: 0;}
+.realtime_fold{
+    padding: 8px 0; 
+    position: relative; 
+    display: block;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.realtime_fold:after{content: ''; display: block; clear: both;}
+.realtime_fold h3{
+
+    float: left;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 0 5px 0 4px;
+    color: white;
+    background-color: #81a9db;
+    letter-spacing: -1px;
+}
+.realtime_fold em{font-style: italic; margin-right:10px;}
+
+
+/*  bxslider  */
+.realtime .bx-wrapper{padding-left: 90px;}
+.bx-controls{display: none; }
+
+
+.real_af{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 10px; height: 8px;
+    background: url(../images/icon_arrow_3.png)no-repeat bottom;
+    background-size: 100% auto;
+}
+/* ======= unfold 시작 ======= */
+.realtime_unfold{
+    display: none;
+    position: relative;
+/*    top: -1px;*/
+    margin: 0 -15px;
+    border-top: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+.realtime_unfold .sub{
+    font-size: 15px;
+    padding: 10px 0 10px 15px;
+}
+.realtime_unfold .sub a{
+    font-size: 16px; 
+    color: gray;
+}
+.realtime_unfold .sub a.on{color: #00c73c}
+.realtime_unfold .sub a.real{
+    background: url(../images/footer_bar.jpg) no-repeat right;
+    padding:0 12px 0 0;
+}
+.realtime_unfold .sub a.topic{padding:0 0 0 8px;}
+
+.realtime_unfold .real_auf{
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 10px; height: 8px;
+    background: url(../images/icon_arrow_3.png)no-repeat top;
+    background-size: 100% auto;
+}
+.realtime_unfold .tab_sort{
+    border-top: 1px solid rgba(0,0,0,0.08);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    font-size: 0;
+    background-color: #f9f9f9;
+}
+.realtime_unfold .tab_sort li{
+    width: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    padding: 10px 0;
+}
+.realtime_unfold .tab_sort li:first-child{
+    background: url(../images/footer_bar.jpg) no-repeat right;
+}
+.realtime_unfold .tab_sort li.on a{
+    color: white;
+    background-color: #00c73c;
+}
+.realtime_unfold .tab_sort li a{
+    font-size: 14px;
+    line-height: 20px;
+    padding: 3px 5px;
+    letter-spacing: -1px;
+}
+.realtime_unfold .rank{
+    padding: 0 15px;
+    position: relative;
+    top: 0; bottom: 0; left: 0; right: 0;
+    height: 480px;
+}
+.realtime_unfold .rank .rw_typeA{
+    position: relative; top: 0;
+}
+.realtime_unfold .rank .rw_typeB{
+    position: relative; top: 0;
+    display: none;
+}
+.realtime_unfold .rank li{
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding: 10px 0 10px 10px;
+    position: relative;
+}
+.realtime_unfold .rank li a{
+    display: inline-block;
+    font-size: 17px;
+    line-height: 17px;
+}
+.realtime_unfold .rankBox li em{font-style: italic;}
+
+
+
+
+.realtime_unfold .rank .tracking{
+    position: absolute;
+    right: 15px;
+    background: url(../images/icon_realtime.png) no-repeat 0 center;
+    background-size: 116px 25px;
+    width: 22px; height: 22px;
+    border: 1px solid rgba(0,0,0,0.08);
+}
+
+
+
+
+
+
+
+
+
+
+
+.realtime_unfold .time{padding: 15px;}
+.realtime_unfold .time ul:after{content: ''; display: block; clear: both;}
+.realtime_unfold .time ul{margin-left: -3px;}
+.realtime_unfold .time li{
+    float: left;
+    background: url(../images/icon_realtime.png) no-repeat;
+    background-size: 116px 25px;
+    background-position: -100px -5px;
+    width: 15px; height: 15px;
+    cursor: pointer;
+}
+.realtime_unfold .time li.on{background-position: -88px -5px;}
+.realtime_unfold .time span{
+    font-size: 13px;
+    color: rgba(0,0,0,0.7); 
+    letter-spacing: -0.5px;
+}
+.realtime_unfold .time .tracking_main{
+    font-size: 12px;
+    color: rgba(0,0,0,0.7);
+    border: 1px solid rgba(0,0,0,0.08);
+    position: absolute;
+    right: 15px;
+    bottom: 17px;
+    padding: 6px 5px;
+    cursor: pointer;
+}
+.realtime_unfold .time .tracking_main:before{
+    content: '';
+    float: left;
+    background: url(../images/icon_realtime.png) no-repeat;
+    background-size: 116px 25px;
+    background-position: -20px center;
+    width: 57px; height: 20px;
+}
+.realtime_unfold .time .tracking_main:after{
+    content: '';
+    float: right;
+    background: url(../images/icon_realtime.png) no-repeat;
+    background-size: 116px 25px;
+    background-position: -75px center;
+    width: 15px; height: 20px;
+}
+/* weather 시작 */
+.weather{
+    position: relative;
+    display: block;
+    padding: 2px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.weather li .icon_w{
+    background: url(../images/weather.png) no-repeat;
+    background-size: 600% auto;
+    background-position: -106px 2px;
+    width: 53px;
+    height: 53px;
+    display: block;
+    vertical-align: top;
+    top: 0;
+}
+.weather li:nth-child(3) .icon_w{
+    background-position: -160px 2px;
+}
+.weather li:nth-child(4) .icon_w{
+    background-position: -160px -160px;
+}
+.weather span{
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 55px;
+    font-size: 35px;
+    line-height: 35px;
+}
+.weather span:after{
+    position: absolute;
+    top: 2px; right: -15px;
+    content: '℃';
+    font-size: 15px;
+    line-height: 15px;
+}
+.weather .tx{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 120px;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -1px;
+}
+
+.weather_local{
+    background: url(../images/icon_weather_3.png)no-repeat;
+    background-size: 39px 39px;
+    position: absolute;
+    right: 0; top: 50%;
+    transform: translateY(-50%);
+    width: 40px; height: 40px;
+}
+.type_text .textArea a{font-size: 0;}
+.type_text .textArea span{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 15px;
+}
+.type_text .textArea .imgArea{
+    width: 75px; height: 50px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.type_text .textArea span img{
+    display: block;
+    position: relative;
+    top: 50%; transform: translateY(-50%);
+    width: 75px;
+    overflow: hidden;
+}
+
+
+
+.type_tab{
+    font-size: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.type_tab li{
+    display: inline-block;
+    width: calc((100% - 3px)/4);
+    box-sizing: border-box;
+    text-align: center;
+    border-left: 1px solid rgba(0,0,0,0.1)
+}
+.type_tab li:first-child{border: 0;}
+.type_tab li a{
+    font-size: 15px;
+    line-height: 46px;
+}
+.none{display: none;}
+.none li:last-child{border: 0; padding: 9px 0 0 0;}
+.type_more{
+    display: block;
+    background-color: rgba(0,0,0,0.03);
+    text-align: center;
+    font-size: 15px;
+    line-height: 40px;
+    margin-top: 10px;
+}
+.type_more.on{
+    margin-top: 0;
+    display: none;
+}
+/* ============ fold 전부 ============ */
+.fold{background-color: #f5f5f5;}
+/* ============ shopping ============ */
+.shopping .type_text em{color: #30a5ff;}
+/* ============ beta ============ */
+.beta{position: relative; background-color: #f5f5f5;}
+.beta strong{font-size: 17px;}
+.beta b{
+    position: relative;
+    top: 2px;
+    display:inline-block;
+    width: 21px; height: 10px;
+    text-indent: -99999px;
+    background: url(../images/beta.png) no-repeat;
+    background-size: 100% auto;
+}
+.beta p{font-size: 13px; opacity: 0.7;}
+/*풋터*/
+.footerContainer{
+    background-color: #f5f5f5;;
+    text-align: center;
+    font-size: 0;
+    border-top: 1px solid #e1e1e1;
+}
+.footerContainer.spaceIn{padding: 18px 0 24px;}
+.footerContainer a{font-size: 12px;}
+.footerContainer div+div{margin-top: 10px;}
+.manage{line-height: 26px;}
+.manage a{
+    border: 1px solid #bdbdbd;
+    background-color: white;
+    padding: 4px 8px;
+    vertical-align: bottom;
+}
+.manage a+a{margin-left: 11px;}
+.etc_link a, .house a{
+    background: url(../images/footer_bar.jpg) 0 4px no-repeat;
+    padding: 0 10px 0 9px;
+}
+.etc_link a:first-child, .house a:first-child{background-image: none;}
+.etc_link a{line-height: 12px;}
+.house a{line-height: 12px}
+
+/* ============ banner ============ */
+.banner.t{background: url(../images/banner_1_back.jpg) repeat-x;}
+.banner.m{background: url(../images/banner_2_back.jpg) repeat-x;}
+.banner img{
+    display: block;
+    height: 120px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+.banner.usFix{
+    margin-bottom: 0;
+    padding: 18px 15px;
+    position: fixed;
+    bottom: 0;
+    right: 0; left: 0;
+    background-color: #00c73c;
+}
+.usFix p{
+    color: white;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 300;
+    letter-spacing: -1px;
+}
+.usFix em{color: yellow;}
+.usFix a{
+    position:absolute;
+    top: 20px;
+    right: 15px;
+    padding: 4px 11px;
+    font-size: 15px;
+    color: #00c73c;
+    background-color: white;
+    letter-spacing: -1px;
+}
