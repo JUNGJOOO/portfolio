@@ -1,0 +1,43 @@
+
+
+★ 꼬딕씨 사용하지 말것
+인터넷 익스플로러 호환을 위한 eot이기 때문에. 이거는 이제 사용하지 말자.
+
+/* HGGGOTHICSSI_PRO */
+
+@font-face {
+    font-family: 'HGGGothicssi';
+    font-style: normal;
+    font-weight: 900;
+    src: url(../font/hgg/HGGGOTHICSSI_PRO_99G.eot);
+    src: url(../font/hgg/HGGGOTHICSSI_PRO_99G.eot?#iefix) format('embedded-opentype'),
+         url(../font/hgg/HGGGOTHICSSI_PRO_99G.woff) format('woff'),
+         url(../font/hgg/HGGGOTHICSSI_PRO_99G.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'HGGGothicssi';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../font/hgg/HGGGOTHICSSI_PRO_80G.eot);
+    src: url(../font/hgg/HGGGOTHICSSI_PRO_80G.eot?#iefix) format('embedded-opentype'),
+         url(../font/hgg/HGGGOTHICSSI_PRO_80G.woff) format('woff'),
+         url(../font/hgg/HGGGOTHICSSI_PRO_80G.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'HGGGothicssi';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../font/hgg/HGGGOTHICSSI_PRO_60G.eot);
+    src: url(../font/hgg/HGGGOTHICSSI_PRO_60G.eot?#iefix) format('embedded-opentype'),
+         url(../font/hgg/HGGGOTHICSSI_PRO_60G.woff) format('woff'),
+         url(../font/hgg/HGGGOTHICSSI_PRO_60G.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'HGGGothicssi';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../font/hgg/HGGGOTHICSSI_PRO_20G.eot);
+    src: url(../font/hgg/HGGGOTHICSSI_PRO_20G.eot?#iefix) format('embedded-opentype'),
+         url(../font/hgg/HGGGOTHICSSI_PRO_20G.woff) format('woff'),
+         url(../font/hgg/HGGGOTHICSSI_PRO_20G.ttf) format('truetype');
+}
