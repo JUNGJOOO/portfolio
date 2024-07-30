@@ -1,0 +1,60 @@
+
+
+※ 중요주의사항
+나눔스퀘어는 한글로 사용시에 편안함을 느낄수 있는 가독성 높은 폰트임은 틀림없으나, 16px 이하 크로 사용시에는 폰트깨짐이 발생합니다.
+1번으로하면 덜 깨지고, 2번으로 하면 16px이하는 깨진다.
+
+
+< 1번방법 >
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+또는
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+
+.선택자{ font-famliy:'NanumSquare', san-serif;}
+
+
+< 2번방법 >
+16px이하는 깨진다!!!!
+
+/* 나눔스퀘어 */
+@font-face {/*가는 Light*/
+    font-family:'NanumSquare';
+    font-style: normal;
+    font-weight: 300;
+    src:url(../font/ns/NanumSquareL.eot);
+    src:url(../font/ns/NanumSquareL.eot?#iefix) format('embedded-opentype'),
+        url(../font/ns/NanumSquareL.woff) format('woff'),
+        url(../font/ns/NanumSquareL.ttf) format('truetype'),
+        url(../font/ns/NanumSquareR.svg#nanumsquarelight) format('svg');
+}
+@font-face {/*중간 Regular*/
+    font-family:'NanumSquare';
+    font-style: normal;
+    font-weight: 500;
+    src:url(../font/ns/NanumSquareR.eot);
+    src:url(../font/ns/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+        url(../font/ns/NanumSquareR.woff) format('woff'),
+        url(../font/ns/NanumSquareR.ttf) format('truetype'),
+        url(../font/ns/NanumSquareR.svg#nanumsquareregular) format('svg');
+
+}
+@font-face { /*굵은 Bold*/
+    font-family:'NanumSquare';
+    font-style:normal;
+    font-weight: 700;
+    src:url(../font/ns/NanumSquareB.eot);
+    src:url(../font/ns/NanumSquareB.eot?#iefix) format('embedded-opentype'),
+        url(../font/ns/NanumSquareB.woff) format('woff'),
+        url(../font/ns/NanumSquareB.ttf) format('truetype'),
+        url(../font/ns/NanumSquareR.svg#nanumsquarebold) format('svg');
+}
+@font-face { /*아주 굵은 Extra Bold*/
+    font-family:'NanumSquare';
+    font-style: normal;
+    font-weight: 900;
+    src:url(../font/ns/NanumSquareEB.eot);
+    src:url(../font/ns/NanumSquareEB.eot?#iefix) format('embedded-opentype'),
+        url(../font/ns/NanumSquareEB.woff) format('woff'),
+        url(../font/ns/NanumSquareEB.ttf) format('truetype'),
+        url(../font/ns/NanumSquareR.svg#nanumsquareextrabold) format('svg');
+}
