@@ -1,0 +1,38 @@
+
+
+https://noonnu.cc/font_page/678
+https://www.gg-onestore.com/Font
+
+
+이걸로 사용
+@font-face{
+    font-family: 'ONEMobile-Title';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/ONEMobile-Title/ONE-Mobile-Title.woff2) format('woff2'),
+         url(../fonts/ONEMobile-Title/ONE-Mobile-Title.woff) format('woff'),
+         url(../fonts/ONEMobile-Title/ONE-Mobile-Title.otf) format('opentype');
+}
+
+
+인터넷 익스플로러 호환을 위한 eot이기 때문에. 이거는 이제 사용하지 말자.
+@font-face {
+	font-family: 'ONEMobile-Title';    
+    font-style: normal;    
+    font-weight: normal; 
+    src: url(../fonts/ONEMobile-Title/ONE-Mobile-Title.eot);
+    src: url(../fonts/ONEMobile-Title/ONE-Mobile-Title.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/ONEMobile-Title/ONE-Mobile-Title.woff) format('woff'),
+         url(../fonts/ONEMobile-Title/ONE-Mobile-Title.ttf) format('truetype');
+}
+
+
+
+@font-face {
+    font-family: 'ONE-Mobile-Title';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Title.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p { font-family: 'ONE-Mobile-Title'; }
