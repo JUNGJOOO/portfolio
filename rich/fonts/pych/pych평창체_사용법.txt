@@ -1,0 +1,25 @@
+
+
+
+
+font-family: 'PyeongChang';
+인터넷 익스플로러 호환을 위한 eot이기 때문에. 이거는 이제 사용하지 말자.
+
+@font-face {
+    font-family: 'PyeongChang';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../font/pych/PyeongChang-Regular.eot);
+    src: url(../font/pych/PyeongChang-Regular.eot?#iefix) format('embedded-opentype'),
+         url(../font/pych/PyeongChang-Regular.woff) format('woff'),
+         url(../font/pych/PyeongChang-Regular.ttf) format("truetype");
+} 
+@font-face {
+    font-family: 'PyeongChang';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../font/pych/PyeongChang-Bold.eot);
+    src: url(../font/pych/PyeongChang-Bold.eot?#iefix) format('embedded-opentype'),
+         url(../font/pych/PyeongChang-Bold.woff) format('woff'),
+         url(../font/pych/PyeongChang-Bold.ttf) format("truetype");
+} 
