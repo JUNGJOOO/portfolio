@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>IRIS 셀프설계 결과</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Classification" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta name="description" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta name="keywords" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta name="Subject" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta property="og:title" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta property="og:description" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta name="twitter:title" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta name="twitter:card" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <meta name="twitter:description" content="IRIS로 보험료 계산, 보험비교, 보험료 설계">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/nice-select.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="wrap wrap-type3">
+    <header>
+        <h1 class="header_logo">
+            <a href="javascript:;">
+                <img src="../images/header_logo1.png" alt="GoodRich"/>
+            </a>
+        </h1>
+        <div class="header_btn">
+            <button type="button" onclick="openLayer('layer-ask')">
+                <span class="hide">닫기</span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <!-- s:search -->
+        <section class="search">
+            <h2 class="hide">고객 정보 영역</h2>
+            <div class="search_box">
+                <h3 class="search_tit">고객 정보</h3>
+                <ul class="search_customer">
+                    <li>
+                        <strong class="search_customer_tit">이름</strong>
+                        <span class="search_customer_txt">김리치</span>
+                    </li>
+                    <li>
+                        <strong class="search_customer_tit">성별</strong>
+                        <span class="search_customer_txt">여자</span>
+                    </li>
+                    <li>
+                        <strong class="search_customer_tit">생년월일</strong>
+                        <span class="search_customer_txt">2000.01.01</span>
+                    </li>
+                    <li>
+                        <strong class="search_customer_tit">직업</strong>
+                        <span class="search_customer_txt">사무직</span>
+                    </li>
+                    <li>
+                        <strong class="search_customer_tit">운전</strong>
+                        <span class="search_customer_txt">운전안함</span>
+                    </li>
+                    <li>
+                        <strong class="search_customer_tit">납기조건</strong>
+                        <span class="search_customer_txt">해지환급금 미지급형</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="search_box">
+                <h3 class="search_tit">보종 선택</h3>
+                <ul class="search_category">
+                    <li>
+                        <span class="search_category_txt">수술비</span>
+                    </li>
+                    <li>
+                        <span class="search_category_txt">후유장애</span>
+                    </li>
+                    <li>
+                        <span class="search_category_txt">입원일당</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- e:search -->
+   
+        <!-- s:top -->
+        <div class="top">
+            <h2 class="hide">검색 결과 영역</h2>
+            <div class="top_total">
+                <div class="self">
+                    <div class="left">내가 직접 설계하는 내 보험! <b>가입금액을 수정해서</b> 필요한 보장금액으로만 설계해보세요.</div>
+                    <div class="right">
+                        <strong>30대 남성</strong><span>평균 가입 금액</span>
+                        <button type="button" onclick="openLayer('layer-again')" class="btn_datum">통계보기</button>
+                    </div>
+                </div>
+            </div>
+            <div class="top_self">
+                <div class="self_logo">
+                    <img src="../images/insr_logo_l_N04.png" alt="MG손해보험"/>
+                </div>
+                <div class="self_box">
+                    <div class="self_tit">퍼펙트플러스종합보험(세만기형) (Hi2210) 3종 해지환급금미지급형</div>
+                    <div class="self_detail">
+                        <dl class="detail_expr">
+                            <dt>납기만기</dt>
+                            <dd>
+                                <span>20년납</span>
+                                <span>100세만기</span>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e:top -->
+
+        <!-- s:result -->
+        <section class="result">
+            <div class="top_tbl">
+                <div class="thead_tit1">
+                    <div>특약</div>
+                </div>
+                <div class="thead_tit2">
+                    <div>보장금액</div>
+                    <p class="tooltip">보장금액을 수정해서 보험설계를 할 수 있습니다.</p>
+                </div>
+                <div class="thead_tit3">
+                    <div>보험료</div>
+                </div>
+            </div>
+            <div class="result-tbl">
+                <table>
+                    <colgroup>
+                        <col style="width:640px" />
+                        <col style="width:10px;" />
+                        <col style="width:220px" />
+                        <col style="width:10px;" />
+                        <col style="width:220px" />
+                    </colgroup>
+                    <thead>
+                        <tr class="hide">
+                            <th>특약</th>
+                            <th></th>
+                            <th>보장금액</th>
+                            <th></th>
+                            <th>보험료</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p class="tbl_tit">
+                                    <span>암진단비(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('modal-detail1')" class="btn_item_search">보장내용 보기</button>
+                                </p>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_guarantee">
+                                    <div class="select_wrap">
+                                        <select name="" id="" class="is_disabled">
+                                            <option value="500">1,000</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_amount">1,000,000 원</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="tbl_tit">
+                                    <span>유사암진단비</span>
+                                    <button type="button" onclick="openLayer('modal-detail1')" class="btn_item_search">보장내용 보기</button>
+                                </p>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_guarantee">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="500">500</option>
+                                            <option value="1000">1000</option>
+                                            <option value="1500">1500</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_amount">20,000 원</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="tbl_tit">
+                                    <span>계속암진단비</span>
+                                    <button type="button" onclick="openLayer('modal-detail1')" class="btn_item_search">보장내용 보기</button>
+                                </p>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_guarantee">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="30">30</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_amount">20,000 원</div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p class="tbl_tit">
+                                    <span>암직접치료입원일당(요양병원제외)(1일이상 180일 한도)</span>
+                                    <button type="button" onclick="openLayer('modal-detail2')" class="btn_item_search">보장내용 보기</button>
+                                </p>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_guarantee">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="500">500</option>
+                                            <option value="1000">1000</option>
+                                            <option value="1500">1500</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_amount">20,000 원</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="tbl_tit">
+                                    <span>암요양병원입원일당(1일이상90일한도)</span>
+                                    <button type="button" onclick="openLayer('modal-detail2')" class="btn_item_search">보장내용 보기</button>
+                                </p>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_guarantee">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="500">500</option>
+                                            <option value="1000">1000</option>
+                                            <option value="1500">1500</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_amount">20,000 원</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="tbl_tit">
+                                    <span>암수술입원일당(1일이상20일한도)</span>
+                                    <button type="button" onclick="openLayer('modal-detail2')" class="btn_item_search">보장내용 보기</button>
+                                </p>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_guarantee">
+                                    <div class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="500">500</option>
+                                            <option value="1000">1000</option>
+                                            <option value="1500">1500</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_amount">20,000 원</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="tbl_tit">
+                                    <span>항암방사선약물치료비(최초1회한)</span>
+                                    <button type="button" onclick="openLayer('modal-detail2')" class="btn_item_search">보장내용 보기</button>
+                                </p>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_guarantee">
+                                    <div class="select_wrap is_bottom">
+                                        <select name="" id="">
+                                            <option value="500">500</option>
+                                            <option value="1000">1000</option>
+                                            <option value="1500">1500</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_amount">20,000 원</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="tbl_tit">
+                                    <span>항암방사선약물치료비(최초1회한)</span>
+                                    <button type="button" onclick="openLayer('modal-detail1')" class="btn_item_search">보장내용 보기</button>
+                                </p>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_guarantee">
+                                    <div class="select_wrap is_bottom">
+                                        <select name="" id="">
+                                            <option value="500">500</option>
+                                            <option value="1000">1000</option>
+                                            <option value="1500">1500</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_amount">20,000 원</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="tbl_tit">
+                                    <span>항암방사선약물치료비(최초1회한)</span>
+                                    <button type="button" onclick="openLayer('modal-detail1')" class="btn_item_search">보장내용 보기</button>
+                                </p>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_guarantee">
+                                    <div class="select_wrap is_bottom">
+                                        <select name="" id="">
+                                            <option value="500">500</option>
+                                            <option value="1000">1000</option>
+                                            <option value="1500">1500</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_amount">20,000 원</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="tbl_tit">
+                                    <span>항암방사선약물치료비(최초1회한)</span>
+                                    <button type="button" onclick="openLayer('modal-detail2')" class="btn_item_search">보장내용 보기</button>
+                                </p>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_guarantee">
+                                    <div class="select_wrap is_bottom">
+                                        <select name="" id="">
+                                            <option value="500">500</option>
+                                            <option value="1000">1000</option>
+                                            <option value="1500">1500</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_amount">20,000 원</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="tbl_tit">
+                                    <span>항암방사선약물치료비(최초1회한)</span>
+                                    <button type="button" onclick="openLayer('modal-detail1')" class="btn_item_search">보장내용 보기</button>
+                                </p>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_guarantee">
+                                    <div class="select_wrap is_bottom">
+                                        <select name="" id="">
+                                            <option value="500">500</option>
+                                            <option value="1000">1000</option>
+                                            <option value="1500">1500</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_amount">20,000 원</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="tbl_tit">
+                                    <span>암진단비(유사암제외)</span>
+                                    <button type="button" onclick="openLayer('modal-detail2')" class="btn_item_search">보장내용 보기</button>
+                                </p>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_guarantee">
+                                    <div class="select_wrap is_bottom">
+                                        <select name="" id="">
+                                            <option value="500">500</option>
+                                            <option value="1000">1000</option>
+                                            <option value="1500">1500</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_amount">20,000 원</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="tbl_tit">
+                                    <span>유사암진단비</span>
+                                    <button type="button" onclick="openLayer('modal-detail1')" class="btn_item_search">보장내용 보기</button>
+                                </p>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_guarantee">
+                                    <div class="select_wrap is_bottom">
+                                        <select name="" id="">
+                                            <option value="500">500</option>
+                                            <option value="1000">1000</option>
+                                            <option value="1500">1500</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <td></td>
+                            <td>
+                                <div class="tbl_amount">20,000 원</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- e:result -->
+
+        <!-- s:self_total -->
+        <div class="self_total">
+            <em>(예상)</em>
+            <span>월 보험료</span>
+            <strong class="total">1,123,170</strong>
+            <span>원</span>
+            <button type="button" onclick="openLayer('message')" class="btn_check">보험료 확인</button> <!-- 활성화시클래스 is_active 추가 -->
+            <div class="tooltip">보장금액 수정 시, 보험료 확인 버튼을 클릭해주세요.</div>
+        </div>
+        <!-- e:self_total -->
+
+        <!-- s:fixed_self -->
+        <div class="fixed_self">
+            <div class="top">
+                <div class="top_total">
+                    <div class="self">
+                        <div class="left">내가 직접 설계하는 내 보험! <b>가입금액을 수정해서</b> 필요한 보장금액으로만 설계해보세요.</div>
+                        <div class="right">
+                            <strong>30대 남성</strong><span>평균 가입 금액</span>
+                            <button type="button" onclick="openLayer('layer-again')" class="btn_datum">통계보기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="top_self">
+                    <div class="self_logo">
+                        <img src="../images/insr_logo_l_N04.png" alt="MG손해보험"/>
+                    </div>
+                    <div class="self_box">
+                        <div class="self_tit">퍼펙트플러스종합보험(세만기형) (Hi2210) 3종 해지환급금미지급형</div>
+                        <div class="self_detail">
+                            <dl class="detail_expr">
+                                <dt>납기만기</dt>
+                                <dd>
+                                    <span>20년납</span>
+                                    <span>100세만기</span>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="top_tbl">
+                    <div class="thead_tit1">
+                        <div>특약</div>
+                    </div>
+                    <div class="thead_tit2">
+                        <div>보장금액</div>
+                        <p class="tooltip">보장금액을 수정해서 보험설계를 할 수 있습니다.</p>
+                    </div>
+                    <div class="thead_tit3">
+                        <div>보험료</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- e:fixed_self -->
+    </main>
+    <footer class="footer">
+        <div class="footer_info">고객님의 개인정보에 따라 보험가입이 어려울 수 있으며, 실시간 보험료가 아니므로 시간차에 따라 보험료 결과가 달라질 수 있습니다.<br/>또한, 위의 보험료는 단순 참고용이니 정확한 보험료는 상담원을 통해서 확인해주시기 바랍니다.</div>
+        <div class="footer_wrap">
+            <button type="button" onclick="location.href='self.html'" class="btn_re"><span>조건 수정</span></button>
+            <button type="button" onclick="openLayer('layer-do')" class="btn_do"><span>보험료 결과 저장(공유)</span></button>
+        </div>
+    </footer>
+
+    <!-- s:modal -->
+    <div class="cf modal modal-detail1">
+        <div class="dim_replace"></div>
+        <div class="dim">
+            <div class="modal_wrap">
+                <div class="modal_header">
+                    <h3 class="tit">심혈관특정질환Ⅳ 진단비</h3>
+                    <button type="button" class="modal_close">닫기</button>
+                    <div class="orange_box">
+                        <dl>
+                            <dt>가입금액</dt>
+                            <dd>
+                                <span class="num">2</span>
+                                <span class="unit">만원</span>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="modal_body">
+                    <div class="modal_area">
+                        <div class="modal_list">
+                            <div class="head">
+                                <strong class="tit">수술급여금(1종)</strong>
+                                <span class="option">보장금액 500만원</span>
+                            </div>
+                            <div class="cont">
+                                <p class="txt">심혈관특정질환Ⅰ(기타심장부정맥제외)로 진단 확정시 최초 1회에 한하여 가입금액 지급 (최초 1회한) (1년미만 50%)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e:modal -->
+
+    <!-- s:modal -->
+    <div class="cf modal modal-detail2">
+        <div class="dim_replace"></div>
+        <div class="dim">
+            <div class="modal_wrap">
+                <div class="modal_header">
+                    <h3 class="tit">1~5종질병수술특약Ⅲ</h3>
+                    <button type="button" class="modal_close">닫기</button>
+                    <div class="orange_box">
+                        <dl>
+                            <dt>가입금액</dt>
+                            <dd>
+                                <span class="num">500</span>
+                                <span class="unit">만원</span>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="modal_body">
+                    <div class="modal_area">
+                        <div class="modal_list">
+                            <div class="head">
+                                <strong class="tit">수술급여금(1종)</strong>
+                                <span class="option">보장금액 500만원</span>
+                            </div>
+                            <div class="cont">
+                                <p class="txt">심혈관특정질환Ⅰ(기타심장부정맥제외)로 진단 확정시 최초 1회에 한하여 가입금액 지급 (최초 1회한) (1년미만 50%)</p>
+                            </div>
+                        </div>
+                        <div class="modal_list">
+                            <div class="head">
+                                <strong class="tit">수술급여금(1종)</strong>
+                                <span class="option">보장금액 500만원</span>
+                            </div>
+                            <div class="cont">
+                                <p class="txt">심혈관특정질환Ⅰ(기타심장부정맥제외)로 진단 확정시 최초 1회에 한하여 가입금액 지급 (최초 1회한) (1년미만 50%)</p>
+                            </div>
+                        </div>
+                        <div class="modal_list">
+                            <div class="head">
+                                <strong class="tit">수술급여금(1종)</strong>
+                                <span class="option">보장금액 500만원</span>
+                            </div>
+                            <div class="cont">
+                                <p class="txt">심혈관특정질환Ⅰ(기타심장부정맥제외)로 진단 확정시 최초 1회에 한하여 가입금액 지급 (최초 1회한) (1년미만 50%)</p>
+                            </div>
+                        </div>
+                        <div class="modal_list">
+                            <div class="head">
+                                <strong class="tit">수술급여금(1종)</strong>
+                                <span class="option">보장금액 500만원</span>
+                            </div>
+                            <div class="cont">
+                                <p class="txt">심혈관특정질환Ⅰ(기타심장부정맥제외)로 진단 확정시 최초 1회에 한하여 가입금액 지급 (최초 1회한) (1년미만 50%)</p>
+                            </div>
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e:modal -->
+
+    <!-- s:layer -->
+    <div class="cf layer layer-do">
+        <div class="dim_replace"></div>
+        <div class="dim">
+            <div class="layer_wrap">
+                <h3 class="layer_tit2">보험료 결과 저장(공유)하기</h3>
+                <p class="layer_txt3">아래의 정보를 입력해주세요. (복수 입력 가능)</p>
+                <ul class="layer_dolist">
+                    <li>
+                        <label for="inp_share01" class="do_tit">카카오톡</label>
+                        <input type="text" id="inp_share01" class="layer_input1" placeholder="휴대폰번호를 입력해주세요(-제외)">
+                    </li>
+                    <li>
+                        <label for="inp_share02" class="do_tit">SMS문자</label>
+                        <input type="text" id="inp_share02" class="layer_input1" placeholder="휴대폰번호를 입력해주세요(-제외)">
+                    </li>
+                </ul>
+                <ul class="layer_noti">
+                    <li>고객님 정보에 따라, 보험사 상품 노출 시 시간차에 따라 보험료 결과가 달라질 수 있습니다.
+                    <li>해당 보험료는 단순 참고용이니 정확한 보험료는 상담원을 통해서 확인해주시기 바랍니다.</li>
+                </ul>
+                <ul class="layer_btn_wrap">
+                    <li><button type="button" class="layer_close layer_btn1">취소</button></li>
+                    <li><button type="button" class="layer_close layer_btn2">확인</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- e:layer -->
+
+    <!-- s:layer -->
+    <div class="cf layer layer-ask">
+        <div class="dim_replace"></div>
+        <div class="dim">
+            <div class="layer_wrap">
+                <h3 class="layer_tit2">보험설계를<br>그만하시겠습니까?</h3>
+                <ul class="layer_btn_wrap">
+                    <li><button type="button" onclick="location.href='self.html'" class="layer_btn1">이전 페이지로 이동</button></li>
+                    <li><button type="button" class="layer_close layer_btn2">계속 할게요</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- e:layer -->
+
+    <!-- s:layer -->
+    <div class="cf layer layer-loading">
+        <div class="dim_replace"></div>
+        <div class="dim">
+            <div class="layer_wrap">
+                <img class="layer_render" src="../images/loading_olchi.gif" alt="로딩"/>
+                <p class="layer_txt4">선택한 조건에 알맞은 보험을 찾고 있습니다.<br>잠시만 기다려주세요.</p>
+            </div>
+        </div>
+    </div>
+    <!-- e:layer -->
+
+    <!-- s:layer -->
+    <div class="cf layer layer-again">
+        <div class="dim_replace"></div>
+        <div class="dim">
+            <div class="layer_wrap">
+                <img src="../images/pop_olchi.png" alt="올치 이미지"/>
+                <h3 class="layer_tit1">고객님의 조건에 맞는<br><span>상품이 없습니다.</span></h3>
+                <p class="layer_txt1">고객님의 조건을 수정해서 보험료를 알아보세요!</p>
+                <button type="button" class="layer_close btn-arrow btn-orange btn-radius btn-middle">다시 계산하기</button>
+            </div>
+        </div>
+    </div>
+    <!-- e:layer -->
+
+    <!-- s:message -->
+    <div class="cf message">
+        <div class="dim_replace"></div>
+        <div class="dim">
+            <div class="message_wrap">
+                <img src="../images/icon_check_L.png" alt="메시지 아이콘"/>
+                <p class="message_txt">월 보험료가 다시 계산되었습니다.</p>
+            </div>
+        </div>
+    </div>
+    <!-- e:message -->
+ 
+</div>
+<!-- script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="../js/jquery.nice-select.min.js"></script>
+<script src="../js/common.js"></script>
+<!-- chart script -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="../js/chart.js"></script>
+</body>
+</html>
