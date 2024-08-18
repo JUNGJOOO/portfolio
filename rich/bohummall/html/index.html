@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대한민국 보험 대표비교몰</title>
+    <!-- css -->
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/ui-lightness/jquery-ui-1.8.2.custom.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/jquery.bxslider.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+    <!-- js -->
+    <script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui-1.8.2.custom.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../js/swiper.min.js"></script>
+</head>
+<body>
+<div id="pro-wrap" class="pro-wrap1">
+    <!--header-->
+    <div id="header_wrap">
+        <a name="#top"></a>
+        <div class="header_top">
+            <h1 class="header_logo">
+                <a href="index.html"><img src="../images/header_logo.png" alt="로고"/></a>
+            </h1>
+            <div class="header_util">
+                <div id="gnb_request" class="btn-request">
+                    <a href="remodeling.html">보장분석신청</a>
+                </div>
+            </div>
+            <div class="header_sitemap">
+                <a href="javascript:;" class="menu_trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <!--header_gnb-->
+                <div class="header_gnb_wrap">
+                    <div class="header_gnb">
+                        <div class="header_gnb_top">
+                            <div class="header_gnb_logo">
+                                <a href="javascript:;"><img src="../images/header_logo.png" alt="로고"/></a>
+                            </div>
+                            <div class="header_gnb_util">
+                                <div id="gnb_request" class="btn-request">
+                                    <a href="remodeling.html">보장분석신청</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header_gnb_area">
+                            <div class="header_gnb_lnb">
+                                <ul>
+                                    <li id="gnb_request" class="gnb_request"><a href="tel:080-808-1088" onclick="GAEvents('버튼클릭', '무료통화', '무료통화하기');">080.808.1088</a></li>
+                                    <li id="gnb_request"><a href="javascript:;">무료상담신청</a></li>
+                                </ul>
+                            </div>
+                            <div class="gnb_linkarea">
+                                <a href="javascript:;"><img src="../images/gnb_linkarea1.png" alt="내가 가입한 보험 보장분석 시넝하기"/></a>
+                            </div>
+                            <ul class="gnb_menu">
+                                <li><a href="javascript:go_insur_calculation(''); GAEvents('버튼클릭', '통합보험료계산', '통합보험료계산 선택');" class="gnb_tit gnb_pointtit">보험료계산</a></li>
+                                <li class="is_active">
+                                    <a class="gnb_tit gnb_droptit">보험종류</a>
+                                    <div class="gnb_2depth">
+                                        <ul>
+                                            <li class="gnb_rec"><a href="javascript:go_insur_category('204');">암보험</a></li>
+                                            <li><a href="javascript:go_insur_category('221');">수술/입원비보험</a></li>
+                                            <li><a href="javascript:go_insur_category('230');">신생아보험</a></li>
+                                            <li><a href="javascript:go_insur_category('236');">어린이보험</a></li>
+                                            <li><a href="javascript:go_insur_category('244');">유병자보험</a></li>
+                                            <li class="gnb_rec"><a href="javascript:go_insur_category('201');">의료실비보험</a></li>
+                                            <li><a href="javascript:go_insur_category('223');">정기보험</a></li>
+                                            <li><a href="javascript:go_insur_category('215');">종신보험</a></li>
+                                            <li><a href="javascript:go_insur_category('213');">연금/연금저축보험</a></li>
+                                            <li class="gnb_rec"><a href="javascript:go_insur_category('209');">운전자/상해보험</a></li>
+                                            <li><a href="javascript:go_insur_category('227');">주택화재보험</a></li>
+                                            <li><a href="javascript:go_insur_category('228');">치아보험</a></li>
+                                            <li><a href="javascript:go_insur_category('218');">치매간병보험</a></li>
+                                            <li><a href="javascript:go_insur_category('225');">변액보험/변액연금</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="javascript:go_recommend_ranking();" class="gnb_tit">추천보험</a></li>
+                                <li>
+                                    <a class="gnb_tit gnb_droptit">손해보험사</a>
+                                    <div class="gnb_2depth">
+                                        <ul>
+                                            <li><a href="javascript:insur_company_page('A','GRF');">MG손해보험</a></li>
+                                            <li><a href="javascript:insur_company_page('A','HKF');">흥국화재</a></li>
+                                            <li><a href="javascript:insur_company_page('A','DBF');">DB손해보험</a></li>
+                                            <li><a href="javascript:insur_company_page('A','NHF');">NH농협손해보험</a></li>
+                                            <li><a href="javascript:insur_company_page('A','LTF');">롯데손해보험</a></li>
+                                            <li><a href="javascript:insur_company_page('A','HDF');">현대해상</a></li>
+                                            <li><a href="javascript:insur_company_page('A','LIF');">KB손해보험</a></li>
+                                            <li><a href="javascript:insur_company_page('A','MZF');">메리츠화재</a></li>
+                                            <li><a href="javascript:insur_company_page('A','SSF');">삼성화재</a></li>
+                                            <li><a href="javascript:insur_company_page('A','HHF');">한화손해보험</a></li>
+                                            <li><a href="javascript:insur_company_page('A','HNF');">하나손해보험</a></li>
+                                            <li><a href="javascript:insur_company_page('A','AGF');">AIG손해보험</a></li>
+                                            <li><a href="javascript:insur_company_page('A','ACF');">ACE손해보험</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="gnb_tit gnb_droptit">생명보험사</a>
+                                    <div class="gnb_2depth">
+                                        <ul>
+                                            <li><a href="javascript:insur_company_page('A','DYL');">동양생명</a></li>
+                                            <li><a href="javascript:insur_company_page('A','ABL');">DGB생명</a></li>
+                                            <li><a href="javascript:insur_company_page('A','IBL');">IBK연금보험</a></li>
+                                            <li><a href="javascript:insur_company_page('A','HKL');">흥국생명</a></li>
+                                            <li><a href="javascript:insur_company_page('A','MAL');">미래에셋생명</a></li>
+                                            <li><a href="javascript:insur_company_page('A','SHL');">신한라이프</a></li>
+                                            <li><a href="javascript:insur_company_page('A','LNL');">라이나생명</a></li>
+                                            <li><a href="javascript:insur_company_page('A','AAL');">ABL생명</a></li>
+                                            <li><a href="javascript:insur_company_page('A','BCL');">BNP파리바카디프생명</a></li>
+                                            <li><a href="javascript:insur_company_page('A','MLL');">메트라이프생명</a></li>
+                                            <li><a href="javascript:insur_company_page('A','DBL');">DB생명</a></li>
+                                            <li><a href="javascript:insur_company_page('A','KBL');">교보생명</a></li>
+                                            <li><a href="javascript:insur_company_page('A','SSL');">삼성생명</a></li>
+                                            <li><a href="javascript:insur_company_page('A','DHL');">한화생명</a></li>
+                                            <li><a href="javascript:insur_company_page('A','LIL');">KB생명보험</a></li>
+                                            <li><a href="javascript:insur_company_page('A','KDL');">KDB생명</a></li>
+                                            <li><a href="javascript:insur_company_page('A','PDL');">푸르덴셜생명</a></li>
+                                            <li><a href="javascript:insur_company_page('A','AIL');">AIA생명</a></li>
+                                            <li><a href="javascript:insur_company_page('A','NHL');">NH농협생명</a></li>
+                                            <li><a href="javascript:insur_company_page('A','ACL');">처브라이프생명</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--//header_gnb-->
+            </div>		
+        </div>
+        <div class="header_lnb">
+            <ul><!--선택됐을때 class="_selected" 클래스 추가-->
+                <li id="gnb_calculation" class="lnb_point">
+                    <a href="javascript:;">보험료계산</a>
+                </li>
+                <li>
+                    <a href="javascript:;">보험종류</a>
+                </li>
+                <li id="gnb_recommend">
+                    <a href="javascript:go_recommend_ranking();">추천보험</a>
+                </li>
+                <li>
+                    <a href="http://mobile.bohummall.myhost.com/MOBILE/mobile_main/view_html/company_all">보험사</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--//header-->
+
+    <!--main-->
+    <div id="mainwrap" class="main_visual">
+        <div class="swiper main_visual_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="javascript:go_insur_calculation('');">
+                        <img src="../images/main_cal_bg3.png" alt="실시간으로 알 수 있는 보험료 비교 견적 서비스 누구나 쉽게 내보험료를 확인하세요!" />
+                        <span class="visual_view">
+                            <img src="../images/main_cal_btn.png" alt="자세히보기 연결버튼" />
+                        </span>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="javascript:;">
+                        <img src="../images/main_cal_bg4.png" alt="실시간으로 알 수 있는 보험료 비교 견적 서비스 누구나 쉽게 내보험료를 확인하세요!" />
+                        <span class="visual_view">
+                            <img src="../images/main_cal_btn.png" alt="자세히보기 연결버튼" />
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="custom">
+                <div class="main-button-prev"></div>
+                <div class="main-button-next"></div>
+            </div>
+        </div>
+
+    </div>
+    <!--//main-->
+
+    <div id="contents" class="contents">
+        <!--무료상담신청-->
+        <form id="layer_request_frm" class="main_fca">
+            <input type="hidden" name="request_category_code" value="" />
+            <input type="hidden" name="main_code_type" value="" />
+            <input type="hidden" name="sub_code" value="" />
+            <input type="hidden" id="name_flag" name="name_flag" value="1" />
+            <input type="hidden" id="phone_flag" name="phone_flag" value="1" />
+            <input type="hidden" name="result_page" value="N" />
+            <div class="fca_box">
+                <strong>간단히 이름/연락처만<br>남겨주세요!</strong>
+                <p>
+                    <span class="txt01">비대면 보험전문가</span>가 보험점검 및<br>
+                    어려운 보장분석도 준비하여 보내 드려요.
+                </p>
+            </div>
+            <div class="mtype1_Form">
+                <ul>
+                    <li>
+                        <p>
+                            <span class="mtype1_Form_tit">이름</span>
+                            <input type="text" class="mtype1_Form_input" name="name" placeholder="이름을 입력하세요." />
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span class="mtype1_Form_tit">연락처</span>
+                            <div class="phone">
+                                <label for="phone1">010</label>
+                                <select name="phone1" id="phone1" class="sel_list" onchange="$('label[for='+this.id+']').text(this.value);">
+                                    <option value="010">010</option>
+                                    <option value="011">011</option>
+                                    <option value="016">016</option>
+                                    <option value="017">017</option>
+                                    <option value="018">018</option>
+                                    <option value="019">019</option>
+                                </select> 
+                                <input type="tel" name="phone2" placeholder="예)12345678" class="inpt_phone" maxlength="9"
+                                    onkeyup="this.value=autoHypenPhone(this.value)">
+                            </div>
+                        </p>
+                    </li>
+                    <li class="_prvy">
+                        <label class="chk-wrap">
+                            <input type="checkbox" name="gather">
+                            <span class="chk chk_bk"></span>개인정보수집 및 활용동의
+                        </label>
+                        <a class="_prvy_view" href="javascript:click_agreement_img('layer_request_frm', 'gather');">보기</a>
+                    </li>
+                </ul>
+            </div>
+            <p class="fca_btn"><a href="javascript:void(0);" id="btn_main_request">보장분석 무료신청</a></p>
+        </form>
+        <!--//무료상담신청-->
+
+        <!--보험종류-->
+        <div class="main_rec_prd">
+            <div class="main_inner">
+                <div class="main_tit">보험 종류별로 찾아보세요</div>
+                <div class="main_subtit">나에게 필요한 보험을 선택해주세요</div>
+            </div>
+            <ul class="recprd_list">
+                <li class="recprd_item1 recprd_point">
+                    <a href="javascript:go_insur_category('204');">
+                        <span>암<br>보험</span>
+                    </a>
+                </li>
+                <li class="recprd_item2">
+                    <a href="javascript:go_insur_category('221');">
+                        <span>수술/입원비<br>보험</span>
+                    </a>
+                </li>
+                <li class="recprd_item3">
+                    <a href="javascript:go_insur_category('230');">
+                        <span>신생아<br>보험</span>
+                    </a>
+                </li>
+                <li class="recprd_item4">
+                    <a href="javascript:go_insur_category('236');">
+                        <span>어린이<br>보험</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="recprd_list">
+                <li class="recprd_item5">
+                    <a href="javascript:go_insur_category('244');">
+                        <span>유병자<br>보험</span>
+                    </a>
+                </li>
+                <li class="recprd_item6 recprd_point">
+                    <a href="javascript:go_insur_category('201');">
+                        <span>의료실비<br>보험</span>
+                    </a>
+                </li>
+                <li class="recprd_item7">
+                    <a href="javascript:go_insur_category('223');">
+                        <span>정기<br>보험</span>
+                    </a>
+                </li>
+                <li class="recprd_item8">
+                    <a href="javascript:go_insur_category('215');">
+                        <span>종신<br>보험</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="recprd_list">
+                <li class="recprd_item9">
+                    <a href="javascript:go_insur_category('213');">
+                        <span>연금/연금<br>저축보험</span>
+                    </a>
+                </li>
+                <li class="recprd_item10 recprd_point">
+                    <a href="javascript:go_insur_category('209');">
+                        <span>운전자보험<br>상해보험</span>
+                    </a>
+                </li>
+                <li class="recprd_item11">
+                    <a href="javascript:go_insur_category('227');">
+                        <span>주택화재<br>보험</span>
+                    </a>
+                </li>
+                <li class="recprd_item12">
+                    <a href="javascript:go_insur_category('228');">
+                        <span>치아<br>보험</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="recprd_list">
+                <li class="recprd_item13">
+                    <a href="javascript:go_insur_category('218');">
+                        <span>치매간병<br>보험</span>
+                    </a>
+                </li>
+                <li class="recprd_item14">
+                    <a href="javascript:go_insur_category('225');">
+                        <span>변액보험<br>변액연금</span>
+                    </a>
+                </li>
+                <li class="recprd_item15">
+                    <a href="javascript:go_insur_category('219');">
+                        <span>저축<br>보험</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!--보험추천-->
+        <div class="main_list">
+            <div class="main_inner">
+                <div class="main_tit">보험몰 추천 보험</div>
+                <div class="main_subtit">전문가가 추천하는 대표 보험상품을 만나보세요</div>
+                <ul class="main_list_box">
+                    <li><a href="javascript:go_insur_view_new('HKF-102-4218','srch_category','204');"><div class="imgbox imgbox1"></div><span class="list_tit">비갱신형 암보험</span></a></li>
+                    <li><a href="javascript:go_insur_view_new('DBF-109-4224','srch_category','221');"><div class="imgbox imgbox2"></div><span class="list_tit">수술/입원비보험</span></a></li>
+                    <li><a href="javascript:go_insur_view_new('HDF-117-4089','srch_category','230');"><div class="imgbox imgbox3"></div><span class="list_tit">신생아 건강종합보험</span></a></li>
+                    <li><a href="javascript:go_insur_view_new('HDF-118-4153','srch_category','236');"><div class="imgbox imgbox4"></div><span class="list_tit">어린이 건강조합보험</span></a></li>
+                    <li><a href="javascript:go_insur_view_new('HDF-130-4276','srch_category','244');"><div class="imgbox imgbox5"></div><span class="list_tit">유병자 건강보험</span></a></li>
+                    <li style="display:none;"><a href="javascript:go_insur_view_new('DBF-101-4158','srch_category','201');"><div class="imgbox imgbox6"></div><span class="list_tit">성인 의료실비보험</span></a></li>
+                    <li style="display:none;"><a href="javascript:go_insur_view_new('HHF-112-4281','srch_category','227');"><div class="imgbox imgbox7"></div><span class="list_tit">주택화재보험</span></a></li>
+                    <li style="display:none;"><a href="javascript:go_insur_view_new('HKL-113-3827','srch_category','228');"><div class="imgbox imgbox8"></div><span class="list_tit">치아보험</span></a></li>
+                    <li style="display:none;"><a href="javascript:go_insur_view_new('HKL-107-4151','srch_category','218');"><div class="imgbox imgbox9"></div><span class="list_tit">부모님 치매간병보험</span></a></li>
+                    <li style="display:none;"><a href="javascript:go_insur_view_new('MAL-106-4223','srch_category','215');"><div class="imgbox imgbox10"></div><span class="list_tit">종신보험</span></a></li>
+                </ul>
+            </div>
+            <div class="list_more">
+                <p class="best_close" style="display:none;" onclick="close_add_main_list();">닫기</p>
+                <p class="best_open" onclick="open_add_main_list();">더보기</p>
+            </div>
+        </div>
+
+        <!--//보험추천-->    
+        <div class="bar"></div>
+    </div>
+
+    <!--보험사종류-->
+	<div class="comcompany">
+		<div class="main_inner">
+			<div class="main_tit">제휴보험사</div>
+		</div>
+		<ul class="comcompany_menu">
+			<li class="is_active"><a href="#comcompany_tabs_f">손해보험사</a></li>
+			<li><a href="#comcompany_tabs_l">생명보험사</a></li>
+		</ul>
+		<div class="comcompany_cont">
+			<div id="comcompany_tabs_f">
+				<ul class="scroller_item1">
+					<li>
+						<a href="javascript:insur_company_page('A','GRF');">
+							<img src="../images/logo_type150/GRF.png" alt="MG손해보험">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','HKF');">
+							<img src="../images/logo_type150/HKF.png" alt="흥국화재">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','DBF');">
+							<img src="../images/logo_type150/DBF.png" alt="DB손해보험">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','NHF');">
+							<img src="../images/logo_type150/NHF.png" alt="NH농협손해보험">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','LTF');">
+							<img src="../images/logo_type150/LTF.png" alt="롯데손해보험">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','HDF');">
+							<img src="../images/logo_type150/HDF.png" alt="현대해상">
+						</a>
+					</li>
+				</ul>
+				<ul class="scroller_item2">
+					<li>
+						<a href="javascript:insur_company_page('A','LIF');">
+							<img src="../images/logo_type150/LIF.png" alt="KB손해보험">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','MZF');">
+							<img src="../images/logo_type150/MZF.png" alt="메리츠화재">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','SSF');">
+							<img src="../images/logo_type150/SSF.png" alt="삼성화재">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','HHF');">
+							<img src="../images/logo_type150/HHF.png" alt="한화손해보험">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','HNF');">
+							<img src="../images/logo_type150/HNF.png" alt="하나손해보험">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','AGF');">
+							<img src="../images/logo_type150/AGF.png" alt="AIG손해보험">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','ACF');">
+							<img src="../images/logo_type150/ACF.png" alt="ACE손해보험">
+						</a>
+					</li>						
+				</ul>
+			</div>
+			<div id="comcompany_tabs_l">
+				<ul class="scroller_item3">
+					<li>
+						<a href="javascript:insur_company_page('A','DYL');">
+							<img src="../images/logo_type150/DYL.png" alt="동양생명">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','ABL');">
+							<img src="../images/logo_type150/ABL.png" alt="DGB생명">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','IBL');">
+							<img src="../images/logo_type150/IBL.png" alt="IBK연금보험">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','HKL');">
+							<img src="../images/logo_type150/HKL.png" alt="흥국생명">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','MAL');">
+							<img src="../images/logo_type150/MAL.png" alt="미래에셋생명">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','SHL');">
+							<img src="../images/logo_type150/SHL.png" alt="신한라이프">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','LNL');">
+							<img src="../images/logo_type150/LNL.png" alt="라이나생명">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','AAL');">
+							<img src="../images/logo_type150/AAL.png" alt="ABL생명">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','BCL');">
+							<img src="../images/logo_type150/BCL.png" alt="BNP파리바카디프생명">
+						</a>
+					</li>
+				</ul>
+				<ul class="scroller_item4">
+					<li>
+						<a href="javascript:insur_company_page('A','MLL');">
+							<img src="../images/logo_type150/MLL.png" alt="메트라이프생명">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','DBL');">
+							<img src="../images/logo_type150/DBL.png" alt="DB생명">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','KBL');">
+							<img src="../images/logo_type150/KBL.png" alt="교보생명">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','SSL');">
+							<img src="../images/logo_type150/SSL.png" alt="삼성생명">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','DHL');">
+							<img src="../images/logo_type150/DHL.png" alt="한화생명">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','KLL');">
+							<img src="../images/logo_type150/KLL.png" alt="KB라이프생명">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','KDL');">
+							<img src="../images/logo_type150/KDL.png" alt="KDB생명">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','AIL');">
+							<img src="../images/logo_type150/AIL.png" alt="AIA생명">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','NHL');">
+							<img src="../images/logo_type150/NHL.png" alt="NH농협생명">
+						</a>
+					</li>
+					<li>
+						<a href="javascript:insur_company_page('A','ACL');">
+							<img src="../images/logo_type150/ACL.png" alt="처브라이프생명">
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- quick_area : 굿리치몰동일 -->
+	<div class="quick-area">
+		<div class="quick-area-box">
+			<a href="tel:080-830-3000" class="quick-link">무료<br>통화</a>
+			<a href="javascript:go_request_input('');GAEvents('버튼클릭', '상담신청(입력)', '무료상담신청');" class="quick-link">상담<br>신청</a>
+			<a href="" class="quick-link-top">TOP</a>
+		</div>
+	</div>
+
+    <!-- footer -->
+    <div id="footer" class="footer">
+        <div class="footer__highlight">
+            <div class="footer__highlight-inner">
+                <p>
+                    <strong>[ 필수안내사항 ]</strong><br>
+                </p>
+                <ul>
+                    <li>※ 보험대리점 : (주)리치앤코(Rich&amp;co.) (등록번호 : 제2006038313호)</li>
+                    <li>※ 본 광고는 광고심의기준을 준수하였으며, 유효기간은 심의일로부터 1년입니다.</li>
+                </ul>
+                <span class="footer_emphasis">
+                    ※ 보험계약자가 기존 보험계약을 해지하고 새로운 보험계약을 체결하는 과정에서<br>
+                    ① 질병이력, 연령증가 등으로 가입이 거절되거나 보험료가 인상될 수 있습니다.<br>
+                    ② 가입 상품에 따라 새로운 면책기간 적용 및 보장 제한 등 기타 불이익이  발생할 수 있습니다.
+                </span>
+            </div>
+        </div>
+        <div class="footer-dlbrtx-m">
+            <p>리치-준법-2023-0103-0234-광고(2023.01.03 ~ 2024.01.02)</p>
+        </div>
+        <div class="foot-info">
+            <ul>
+                <li><a href="javascript:go_request_input('');">상담신청</a> |</li>
+                <li><a href="javascript:go_view_html('company_feature');">차별화</a> |</li>
+                <li><a href="http://www.bohummall.co.kr?mobile=true">PC버전</a></li>
+                <br/>
+                <li><a href="javascript:go_view_html('privacy');" class="footer_point">개인정보처리방침</a> |</li>
+                <li><a href="javascript:go_common_view_html(&quot;agreement&quot;);">이용약관</a></li>
+                <br/>
+                <li><a href="javascript:go_common_view_html('guard_guide');">금융소비자보호기준</a> |</li>
+                <li><a href="javascript:go_common_view_html('control_guide');">금융소비자보호 내부통제기준</a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <span>
+                서울특별시 중구 세종대로9길 41, 4층(서소문동, 올리브타워)<br/>
+                ㈜리치앤코(Rich&amp;Co.) 보험대리점 보험몰지점 (등록번호 제2006038313호)<br/>
+                사업자등록번호 104-85-21828 ㅣ 대표이사 한승표<br/>마케팅ᆞ제휴 문의 partnership@richnco.co.kr 02-6288-5762<br/>
+                Copyrightⓒ2009-2015 by Rich&amp;Co. All Rights Reserved.
+            </span>		
+        </div>
+    </div>
+
+    <!-- script -->
+    <script type="text/javascript" src="../js/common.js"></script>
+</div>
+</body>
+</html>
