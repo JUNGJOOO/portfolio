@@ -1,0 +1,59 @@
+/* Pretendard */
+@font-face {
+    font-family: 'Pretendard'; font-weight: 900; font-style: normal;
+    src: url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Black.otf);
+    src: url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Black.otf?#iefix) format('embedded-opentype'),
+         url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Black.otf) format('truetype');
+    src: url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Black.woff2) format('woff2'),
+         url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Black.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard'; font-weight: 700; font-style: normal;
+    src: url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Bold.otf);
+    src: url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Bold.otf?#iefix) format('embedded-opentype'),
+         url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Bold.otf) format('truetype');
+    src: url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Bold.woff2) format('woff2'),
+         url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Bold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard'; font-weight: 600; font-style: normal;
+    src: url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-SemiBold.otf);
+    src: url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-SemiBold.otf?#iefix) format('embedded-opentype'),
+         url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-SemiBold.otf) format('truetype');
+    src: url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-SemiBold.woff2) format('woff2'),
+         url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-SemiBold.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard'; font-weight: 500; font-style: normal;
+    src: url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Medium.otf);
+    src: url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Medium.otf?#iefix) format('embedded-opentype'),
+         url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Medium.otf) format('truetype');
+    src: url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Medium.woff2) format('woff2'),
+         url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Medium.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard'; font-weight: 400; font-style: normal;
+    src: url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Regular.otf);
+    src: url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Regular.otf?#iefix) format('embedded-opentype'),
+         url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Regular.otf) format('truetype');
+    src: url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Regular.woff2) format('woff2'),
+         url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Regular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Pretendard'; font-weight: 300; font-style: normal;
+    src: url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Light.otf);
+    src: url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Light.otf?#iefix) format('embedded-opentype'),
+         url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Light.otf) format('truetype');
+    src: url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Light.woff2) format('woff2'),
+         url(https://jungjooo.github.io/portfolio/rich/fonts/pretendard/Pretendard-Light.woff) format('woff');
+}
+
+/* JalnanGothic */
+@font-face {
+     font-family: 'JalnanGothic'; font-weight: 500; font-style: normal;
+     src: url(https://jungjooo.github.io/portfolio/rich/fonts/jalnangothic/JalnanGothic.otf);
+     src: url(https://jungjooo.github.io/portfolio/rich/fonts/jalnangothic/JalnanGothic.otf) format('embedded-opentype'),
+          url(https://jungjooo.github.io/portfolio/rich/fonts/jalnangothic/JalnanGothic.otf) format('truetype');
+     src: url(https://jungjooo.github.io/portfolio/rich/fonts/jalnangothic/JalnanGothic.woff2) format('woff2'),
+          url(https://jungjooo.github.io/portfolio/rich/fonts/jalnangothic/JalnanGothic.woff) format('woff');
+} 

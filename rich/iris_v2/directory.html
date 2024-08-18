@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Directory LIST</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&display=swap" rel="stylesheet">
+	<style type="text/css">
+	* 		   { margin: 0; padding: 0; font-family: 'Gothic A1', sans-serif; font-size: 14px; line-height: 1.4; font-weight: 400; color:#333; list-style: none;}
+	body 	   { background-color: #e8e6e2;}
+	.wrap	   { width: 700px; margin: 30px auto 100px; box-sizing: border-box;}
+	a 	       { cursor: pointer;}
+	a:active,
+	a:hover	   { color:#ff6d05;}
+	.br 	   { height: 50px;}
+	.top 		           { position: relative; margin-bottom: 15px;}
+	.top h1                { position:relative; font-size: 18px; font-weight: 700;}
+	.top p 				   { margin-top: 5px;}
+	.top .link             { display: block; margin: 15px 0 10px;}
+	.menutree 			   { border-collapse:collapse; width: 100%; background-color: #fdfcf9;}
+	.menutree thead th 	   { background:#f3f1ed; text-align: center;}
+	.menutree th 		   { padding: 5px 0; border: 1px solid #999; font-weight: 700; vertical-align:top;}
+	.menutree td 		   { padding: 5px 0; border: 1px solid #999;}
+	.menutree tbody tr th,
+	.menutree tbody tr td  { text-align:left; padding-left: 10px; vertical-align: middle;}	
+	/*  */
+	.top h1 b              { font-size: 18px; font-weight: 700; color: #2cc7ae;}
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<div class="top">
+		<h1><b>셀프보험비교서비스 버전2</b> Directory LIST</h1>
+		<p>test</p>
+	</div>
+    <table class="menutree" summary="메뉴구조도">
+		<colgroup>
+			<col width="15%"/>
+			<col width="25%"/>
+			<col width="25%"/>
+			<col width=""/>
+		</colgroup>
+		<thead>
+			<tr>
+				<th>구분</th>
+				<th>URL</th>
+				<th></th>
+				<th>비고</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>index</th>
+				<td>header-type1</td>
+				<td class="url">
+                    <a href="html/index.html" target="_blank">index.html</a>
+				</td>
+                <td>메인페이지</td>
+			</tr>
+			<tr>
+				<th rowspan="3">main</th>
+				<td>header-type2 / wrap-step1</td>
+				<td class="url">
+                    <a href="html/main1.html" target="_blank">main1.html</a>
+				</td>
+                <td>추천상품</td>
+			</tr>
+			<tr>
+				<td>wrap-step2</td>
+				<td class="url">
+                    <a href="html/main2.html" target="_blank">main2.html</a>
+				</td>
+                <td>상품선택</td>
+			</tr>
+			<tr>
+				<td>header-type2 / wrap-step3</td>
+				<td class="url">
+                    <a href="html/main3.html" target="_blank">main3.html</a>
+				</td>
+                <td>직접설계</td>
+			</tr>
+
+			<!-- popup -->
+			<tr>
+				<th rowspan="3">popup</th>
+				<td>layer-loading</td>
+				<td class="url">
+                    <a href="html/popup1.html" target="_blank">popup1.html</a>
+				</td>
+                <td>보험료를 계산하고 있어요</td>
+			</tr>
+			<tr>
+				<td>layer-again</td>
+				<td class="url">
+                    <a href="html/popup2.html" target="_blank">popup2.html</a>
+				</td>
+                <td>조건에 맞는 상품이 없습니다</td>
+			</tr>
+			<tr>
+				<td>layer-confirm</td>
+				<td class="url">
+                    <a href="html/popup3.html" target="_blank">popup3.html</a>
+				</td>
+                <td>상담원을 통해 보험 정보를 확인해 주세요</td>
+			</tr>
+			
+			<!-- modal -->
+			<tr>
+				<th rowspan="5">modal</td>
+				<td>layer-login</th>
+				<td class="url">
+					<a href="html/modal1.html" target="_blank">modal1.html  투명</a>
+				</td>
+                <td>내 정보 입력하기(로그인)</td>
+			</tr>
+			<tr>
+				<td>layer-preview</td>
+				<td class="url">
+					<a href="html/modal2.html" target="_blank">modal2.html 흰색</a>
+				</td>
+				<td>샘플</td>
+			</tr>
+			<tr>
+				<td>layer-filter</td>
+				<td class="url">
+					<a href="html/modal3.html" target="_blank">modal3.html</a>
+				</td>
+				<td>보험 변경</td>
+			</tr>
+			<tr>
+				<td>layer-detail</td>
+				<td class="url">
+					<a href="html/modal4.html" target="_blank">modal4.html</a>
+				</td>
+				<td>보험 설명</td>
+			</tr>
+			<tr>
+				<td>layer-do</td>
+				<td class="url">
+					<a href="html/modal5.html" target="_blank">modal5.html</a>
+				</td>
+				<td>보험 결과 저장</td>
+			</tr>
+			<tr>
+				<th></th>
+				<td></td>
+				<td class="url">
+                    <a href="html/main_system.html" target="_blank">main_system.html</a>
+				</td>
+                <td>예상 보험료 결과</td>
+			</tr>
+
+		</tbody>
+	</table>
+</div>
+</body>
+</html>
