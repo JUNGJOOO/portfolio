@@ -1,0 +1,73 @@
+.nice-select {
+    display: block; float: right; clear: both;position: relative;
+    width: 100%; height: 48px; padding: 0 35px 0 14px;
+    -webkit-box-sizing: border-box; box-sizing: border-box;
+    border: 0; border: 1px solid #E0E0E0;
+    background-color: #FAFAFA; border-radius: 12px;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer; outline: none;
+    -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    font-family:'Pretendard'; font-size: 14px; font-weight: 500;
+    letter-spacing: -0.35px; outline: none; white-space: nowrap;
+}
+.nice-select::after {
+    display: block; position: absolute; right: 14px; top: 50%;
+    width: 12px; height: 12px; margin-top: -5px;
+    background: url(../images/icon_down.png) no-repeat right center;
+    pointer-events: none;
+    background: url('http://img.bohummall.co.kr/insur-template/js-select1.png') no-repeat center;
+    -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+    content: '';
+}
+.nice-select:hover         { border: 1px solid #616161;}
+.nice-select .current      { overflow: hidden; display: block; height: 48px; line-height: 48px; font-weight: 500; color: #9E9E9E !important; word-wrap: normal; word-break: break-all; text-overflow: ellipsis; white-space: nowrap;}
+.js-select.ng-dirty + .nice-select .current { color: #222 !important;}
+.nice-select.open          { border: 1px solid #616161;}
+.nice-select.open::after   { -webkit-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg);}
+.nice-select.open .current { color: #222 !important;}
+
+/* list */
+.nice-select .list {
+    overflow: hidden; position: absolute; top: 100%; right: 0; z-index: 10;
+    min-width: 50px; width: 100%;
+    margin-top: 5px; padding: 10px 5px;
+    background-color: #fff; border-radius: 12px;
+    -webkit-box-sizing: border-box; box-sizing: border-box;
+    opacity: 0; pointer-events: none;
+    -webkit-transform-origin: 50% 0;
+        -ms-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+    -webkit-transform: scale(0.75) translateY(-21px);
+        -ms-transform: scale(0.75) translateY(-21px);
+            transform: scale(0.75) translateY(-21px);
+    -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+            transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3);
+            box-shadow: 0 0 3px rgba(0,0,0,0.3);
+}
+.nice-select.open .list {
+    opacity: 1; pointer-events: auto;
+    -webkit-transform: scale(1) translateY(0);
+        -ms-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+}
+.nice-select .list:hover .option:not(:hover) { background-color: transparent !important;}
+.nice-select .option {
+    min-height: 28px; line-height: 28px; padding: 0 10px;
+    outline: none; cursor: pointer; border-radius: 12px;
+    list-style: none; font-weight: 500; text-align: left; color: #222;
+    -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+}
+.nice-select .option:hover    { background-color: #eee;}
+
+/* 비활성화 */
+.nice-select.is_disabled          { border-color: #ededed !important; color: #999 !important; pointer-events: none !important;}
+.nice-select.is_disabled::after   { display: none !important;}
+.nice-select.is_disabled .current { color: #333 !important; border-bottom: none !important;}
