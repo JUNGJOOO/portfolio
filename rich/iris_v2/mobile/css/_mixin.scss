@@ -1,0 +1,24 @@
+// vw 수치 계산
+@function VW($el) {
+    $vw_cnt: (720 * 0.01) * 1px;
+    @return ($el/$vw_cnt) * 1vw;
+}
+
+@mixin sWidth { // Galaxy Fold 접었을때
+    @media only screen and (max-width: 319px) {
+        @content;
+    }
+}
+@mixin bWidth { // Galaxy Fold 펼쳤을때
+    @media only screen and (min-width: 540px) {
+        @content;
+    }
+}
+@mixin set-font($style-name) {
+    $settings: map-get($font-settings, $style-name);
+
+    font-size: nth($settings, 1);
+    font-weight: nth($settings, 2);
+    line-height: nth($settings, 3);
+    letter-spacing: nth($settings, 4);
+}

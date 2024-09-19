@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>셀프보험비교서비스</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style_new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+</head>
+<body>
+<div class="wrap">
+    <!-- header -->
+    <header class="header-type1">
+        <h1 class="header_logo">
+            <a href="index.html"><img src="images/logo_header.svg" alt="GoodRich"/></a>
+        </h1>
+    </header>
+    
+    <!-- main -->
+    <main>
+        <!-- main_top -->
+        <section class="main_top">
+            <div class="swiper main_swiper">    
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide main_slide1">
+                        <h2 class="main_tit"><span>내가 원하는 만큼만,</span><br/>보험료도 보장도<br>셀프로 비교해 보세요!</h2>
+                    </div>
+                    <div class="swiper-slide main_slide2">
+                        <h2 class="main_tit">낮은 보험료 순으로<br/><span>보험료를 추천해 드려요!</span></h2>
+                    </div>
+                    <div class="swiper-slide main_slide3">
+                        <h2 class="main_tit">보장금액도 직접 변경해서<br/><span>비교해 보세요!</span></h2>
+                    </div>
+                </div>
+                <div class="main_pagination"></div>
+            </div>
+        </section>  
+        <!-- main_list -->
+        <section class="main_list">
+            <div class="inner">
+                <h2 class="cont_tit">궁금한 보험을 선택해 주세요</h2>
+                <div class="cont_desc">*암, 뇌·심장, 수술비, 치매·간병, 후유장해, 입원비 선택 시 실손의료비, 운전자·상해, 치아 중복 선택이 불가능합니다</div>
+                <ul class="prd_list">
+                    <li>
+                        <input type="checkbox" name="prdList" id="prd01" disabled>
+                        <label for="prd01">
+                            <div class="prd_lst">
+                                <p class="prd_tit">종합</p>
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="prdList" id="prd02" disabled>
+                        <label for="prd02">
+                            <div class="prd_lst">
+                                <p class="prd_tit">암</p>
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="prdList" id="prd03" checked>
+                        <label for="prd03">
+                            <div class="prd_lst">
+                                <p class="prd_tit">뇌·<br/>심장</p>
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="prdList" id="prd04">
+                        <label for="prd04">
+                            <div class="prd_lst">
+                                <p class="prd_tit">수술비</p>
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="prdList" id="prd05">
+                        <label for="prd05">
+                            <div class="prd_lst">
+                                <p class="prd_tit">치매</p>
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="prdList" id="prd06">
+                        <label for="prd06">
+                            <div class="prd_lst">
+                                <p class="prd_tit">간병</p>
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="prdList" id="prd07">
+                        <label for="prd07">
+                            <div class="prd_lst">
+                                <p class="prd_tit">후유장해</p>
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="prdList" id="prd08">
+                        <label for="prd08">
+                            <div class="prd_lst">
+                                <p class="prd_tit">입원비</p>
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="prdList" id="prd09">
+                        <label for="prd09">
+                            <div class="prd_lst">
+                                <p class="prd_tit">실손<br/>의료비</p>
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="prdList" id="prd10">
+                        <label for="prd10">
+                            <div class="prd_lst">
+                                <p class="prd_tit">운전자·<br/>상해</p>
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="prdList" id="prd11">
+                        <label for="prd11">
+                            <div class="prd_lst">
+                                <p class="prd_tit">치아</p>
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="prdList" id="prd12">
+                        <label for="prd12">
+                            <div class="prd_lst">
+                                <p class="prd_tit">사망 <br/>(정기)</p>
+                            </div>
+                        </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="prdList" id="prd13">
+                        <label for="prd13">
+                            <div class="prd_lst">
+                                <p class="prd_tit">사망 <br/>(종신)</p>
+                            </div>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- main_login -->
+        <section class="main_login">
+            <div class="inner">
+                <h2 class="cont_tit">보험 비교를 위해<br/>정보를 입력해 주세요</h2>
+                <div class="login_area">
+                    <button type="button" class="btn_kakao">
+                        <span>카카오로 간편 비교</span>
+                    </button>
+                    <button type="button" class="btn_naver">
+                        <span>네이버로 간편 비교</span>
+                    </button>
+                    <button type="button" class="btn_certify" onclick="openLayer('layer-login')">
+                        <span>직접 입력하여 비교하기</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="footer_info">
+            <div class="inner">
+                <p>
+                    <strong>[ 필수안내사항 ]</strong><br>
+                    ※ 보험대리점 : 굿리치㈜(GoodRich Co., Ltd.)<br class="br"/>(등록번호 : 제2006038313호)<br>
+                    ※ 본 광고는 광고심의기준을 준수하였으며, 유효기간은 심의일로부터 1년입니다.<br>
+                    <span class="footer_emphasis">
+                        ※ 보험계약자가 기존 보험계약을 해지하고 새로운 보험계약을 체결하는 과정에서<br>
+                        ① 질병이력, 연령증가 등으로 가입이 거절되거나 보험료가 인상될 수 있습니다.<br>
+                        ② 가입 상품에 따라 새로운 면책기간 적용 및 보장 제한 등 기타 불이익이 발생할 수 있습니다.
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="footer_dlbrt">
+            <div class="inner">
+                <p>리치-준법-0000-0000-0000-광고<br/> (0000-00-00 ~ 0000-00-00)</p>
+            </div>
+        </div>
+        <div class="footer_desc">
+            <div class="inner">
+                <p class="footer_link">
+                    <a href="javascript:;" open-privacy-agree=""><strong>개인정보처리방침</strong></a>
+                    <a href="javascript:;" open-privacy="">이용약관</a><br/>
+                    <a href="javascript:;" open-protection-standards="">금융소비자보호기준</a>
+                    <a href="javascript:;" open-internal-control="">금융소비자보호 내부통제기준</a>
+                </p>
+                <p class="footer_address">
+                    서울특별시 중구 세종대로9길 41, 7층 (서소문동,퍼시픽타워)<br/>
+                    굿리치㈜(GoodRich Co., Ltd.) 사업자등록번호 201-85-28762 | 대표이사 한승표<br/>
+                    마케팅ᆞ제휴 문의 partnership@goodrich.co.kr 02-6288-5762<br/><br/>
+                    CopyrightⓒGoodRich Co., Ltd. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- floating -->
+    <div class="floating">
+        <div class="floating_preview">
+            <button type="button" onclick="openLayer('layer-preview')">
+                <span>서비스<br>미리보기</span>
+            </button>
+        </div>
+        <div class="floating_type1">
+            <button type="button" class="btn_kakao">
+                <span>카카오로<br/> 간편 비교</span>
+            </button>
+            <button type="button" class="btn_naver">
+                <span>네이버로<br/> 간편 비교</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- s:layercf -->
+    <div class="layercf layer-login">
+        <div class="dim">
+            <div class="layer_wrap">
+                <div class="layer_header">
+                    <div class="layer_title">내 정보 입력하기</div>
+                    <button type="button" class="layer_close">닫기</button>
+                </div>
+                <div class="layer_body">
+                    <ul class="form1">
+                        <li class="form_name">
+                            <div class="tit">
+                                <label for="name">이름</label>
+                            </div>
+                            <div class="form_box form_box_left">
+                                <input type="text" id="name" placeholder="이름 (예:김리치)">
+                            </div>
+                            <div class="form_box gender_chk">
+                                <span class="make1">
+                                    <input type="radio" name="gender" id="men" checked="checked">
+                                    <label for="men">남자</label>
+                                </span>
+                                <span class="make1">
+                                    <input type="radio" name="gender" id="women">
+                                    <label for="women">여자</label>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="form_birth">
+                            <div class="tit">
+                                <label for="birth">생년월일</label>
+                            </div>
+                            <div class="form_box">
+                                <input type="text" id="birth" placeholder="숫자 8자리 (예: 19880101)" maxlength="8">
+                            </div>
+                        </li>
+                        <li class="form_num">
+                            <div class="tit">
+                                <label for="phone">휴대폰</label>
+                            </div>
+                            <div class="form_box form_box_left">
+                                <span class="form_num-fix">010</span>
+                                <input type="text" id="phone" placeholder="12345678" maxlength="8">
+                            </div>
+                            <div class="form_box form_box_right">
+                                <a class="make2" href="javascript:;">인증</a>
+                            </div>
+                        </li>
+                        <li class="form_confirm">
+                            <div class="tit">
+                                <label for="phone">인증번호</label>
+                            </div>
+                            <div class="form_box form_box_left">
+                                <input type="tel" id="phone" placeholder="인증번호">
+                                <span class="form_confirm-time">3:00</span>
+                                <span class="form_confirm-txt">인증번호를 발송하였습니다</span>
+                            </div>
+                            <div class="form_box form_box_right">
+                                <a class="make2" href="javascript:;">확인</a>
+                            </div>
+                        </li>
+                        <li class="form_bottom">
+                            <div class="agree_area">
+                                <input type="checkbox" name="" id="agree">
+                                <label for="agree">개인정보수집 · 활용 및 제공을 위한 동의(필수)</label>
+                                <a href="https://goodrichmall.com/common/open_agreement?chkboxId=checkAgreement_totalSum" onclick="window.open(this.href,'_blank'); return false;">보기</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="layer_footer">
+                    <button type="button" class="btn_normal btn_black layer_close" onclick="location.href='main1.html'">보험료 확인하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e:layercf -->
+
+    <!-- s:layercf -->
+    <div class="layercf layer-preview">
+        <div class="dim">
+            <div class="layer_wrap">
+                <div class="preview_header">
+                    <div class="preview_title">서비스 미리보기</div>
+                    <button type="button" class="preview_close layer_close">닫기</button>
+                </div>
+                <div class="preview_body">
+                    <div class="swiper preview_swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="images/preview_img1.svg" alt="보험료 낮은 순으로 보험을 추천해드리며 상세 보장내용을 볼 수 있습니다"/></div>
+                            <div class="swiper-slide"><img src="images/preview_img2.svg" alt="보장금액을 직접 변경하여 원하는 보험료로 비교 · 설계 할 수 있습니다"/></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e:layercf -->
+
+
+
+
+
+
+
+</div>
+
+<!-- script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html> 
