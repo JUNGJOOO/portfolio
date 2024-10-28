@@ -417,7 +417,7 @@
 
 
 /* MG손해보험 BK type-default ========================================================= */
-.sitecode-BK .main-spot 			      { background:url(../images/bg_spot_sitecodeBK.png) center center no-repeat ;}
+.sitecode-BK .main-spot 			      { background:url(../images/bg_spot_sitecodeBK.png) center center no-repeat; background-size: cover;}
 .sitecode-BK .all-spot  			      { background:#fff url(../images/bg_BK_spot.jpg) no-repeat 50% 0;}
 .sitecode-BK .sld-spotlist .slick-prev    { left:0;background-position: 0 0;}
 .sitecode-BK .sld-spotlist .slick-next    { right:0;background-position: 100% 0;}
