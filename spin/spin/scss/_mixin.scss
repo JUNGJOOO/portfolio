@@ -103,17 +103,17 @@ $tablet-width: 768px;
 $desktop-width: 1024px;
 $pc-width: 1600px;
 
-@mixin respond-to($media) {
-    @if $media == handhelds {
-        @media all and (max-width: $tablet-width - 1) { @content; }
-    }
-    @else if $media == medium-screens {
-        @media all and (min-width: $tablet-width ) and (max-width: $desktop-width - 1) { @content; }
-    }
-    @else if $media == wide-screens {
-        @media all and (min-width: $desktop-width) and (max-width: $pc-width - 1) { @content; }
-    }
-    @else if $media == pc-screens {
-        @media all and (min-width: $pc-width) { @content; }
-    }
-}
+// @mixin respond-to($media) {
+//     @if $media == handhelds {
+//         @media all and (max-width: $tablet-width - 1) { @content; }
+//     }
+//     @else if $media == medium-screens {
+//         @media all and (min-width: $tablet-width ) and (max-width: $desktop-width - 1) { @content; }
+//     }
+//     @else if $media == wide-screens {
+//         @media all and (min-width: $desktop-width) and (max-width: $pc-width - 1) { @content; }
+//     }
+//     @else if $media == pc-screens {
+//         @media all and (min-width: $pc-width) { @content; }
+//     }
+// }

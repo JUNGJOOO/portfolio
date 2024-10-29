@@ -1,4 +1,4 @@
-@import '_mixin';
+@import "_mixin.scss";
 
 header {
     @include box($h: 70px, $bg: #fff);
@@ -174,7 +174,7 @@ header {
                         border: none;
                         text-align: center;
                         img{
-                            width: 9px
+                            width: 14px;
                         }
                     }
                     .no-notice-msg{

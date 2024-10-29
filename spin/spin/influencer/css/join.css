@@ -89,7 +89,7 @@ input[type="checkbox"]+label span{
     width:27px;
     height:27px;
     margin:-2px 3px 0 0;
-    background:url("https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/signup/checkbox_white.png");
+    background:url("../../images/checkbox_white.png");
     background-size:contain;
     background-repeat:no-repeat;
     vertical-align:middle;
@@ -118,7 +118,7 @@ input[type="checkbox"]+label em.necessary{
 input[type="checkbox"]:checked+label span{
     width:27px;
     height:27px;
-    background:url("https://prod-spin-protocol-resource.s3.ap-northeast-2.amazonaws.com/public/resources/images/signup/checkbox_white_v.png");
+    background:url("../../images/checkbox_white_v.png");
     background-size:contain;
     background-repeat:no-repeat;
     vertical-align:middle;
