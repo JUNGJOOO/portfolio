@@ -1,0 +1,215 @@
+@charset "utf-8";
+// @import "variable","mixin";
+@import "mixin";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+$font-size: 14px;
+$font-color: #222;
+$point-color: #00dbbf;
+%outline{ outline: none; }
+%cursor{ cursor: pointer; }
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: $font-color;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+// 세로 스크롤 제거
+body {
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+// 가로 스크롤
+::-webkit-scrollbar {
+    width: 10px;
+    height: 0.6rem;
+    &:hover{
+        background-color: #f3f3f3;
+    }
+}
+::-webkit-scrollbar-thumb {
+    background: #d9d9d9;
+    border-radius: 10px;
+    &:hover{
+        background-color: #ccc;
+    }
+}
+
+body{ background-color: #f4f6f7; }
+li{ list-style: none; }
+a{ 
+    @extend %cursor;
+    text-decoration: none; 
+}
+select{
+    @extend %cursor;
+    @extend %outline;
+    appearance: none;
+    background:url(../images/select-arrow-icon.svg) no-repeat;
+    background-position: 97% center;
+    background-size: 10px;
+}
+
+@include respond-to(handhelds){
+    select{background-position: 95% center;}
+}
+textarea{ 
+    @extend %outline;
+    resize: none;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+}
+input{  
+    @extend %outline;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    &::placeholder{
+        font-size: 0.85rem;
+        color: #999;
+        font-weight: 200;
+    }
+    &:hover{
+        appearance: none !important;
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+    }
+}
+input[type="text"]:disabled{
+    background-color: transparent;
+}
+
+button{
+    @extend %cursor;
+    background-color: transparent;
+    border: none;
+    &:focus{
+        @extend %outline;
+    }
+}
+
+input[type="radio"]{
+    display: none!important;
+    & + label::before{
+        content: '';
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        line-height: 13px;
+        margin: -2px 8px 0 0;
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+        border-radius: 100%;
+        cursor: pointer;
+    }
+    &:checked + label:before {
+        content: '\25CF';
+        color: #fff;
+        border-color: transparent;
+        font-size: 12px;
+        background: #5e9b7c;
+    }
+}
+
+input[type="checkbox"] {
+  display:none;
+  & + label{
+    color:#f2f2f2;
+    cursor: pointer;
+    font-size: 1.11rem;
+    line-height: 27px;
+    &.all{
+      @include font($size: 1.2rem, $weight: 500, $color: #fff);
+    }
+    span{
+      @include box($display: inline-block, $margin: -2px 3px 0 0, $w: 27px, $h: 27px);
+      @include bg-img(
+        //   $img: $base-img-url + '/signup/checkbox_white.png',
+          $size: contain,
+          $vertical: middle
+      );
+      cursor:pointer;
+    }
+    & > a{
+      @include font($size: 1.11rem, $color: #fff);
+      &:hover{
+        text-decoration: underline;
+      }
+      margin-left: -4px;
+    }
+    em{
+      @include font($size: 0.85rem, $weight: 100, $color: #fff);
+      padding-left: 5px;
+      &.necessary{
+        color: yellow;
+      }
+    }
+  }
+  &:checked + label{
+    span{
+      @include box($w: 27px, $h: 27px);
+      @include bg-img(
+        // $img: $base-img-url + '/signup/checkbox_white_v.png',
+        $size: contain,
+        $vertical: middle
+      );
+    }
+  }
+}
+
+@include respond-to(handhelds){ 
+    $font-size: 12px; 
+    *{ font-size: $font-size; }
+}
+@include respond-to(medium-screens){
+    $font-size: 13px;
+    *{ font-size: $font-size; } 
+}
+@include respond-to(pc-screens){
+    $font-size: 14px;
+    *{ font-size: $font-size; } 
+}
+@include respond-to(wide-screens){
+    $font-size: 14px;
+    *{ font-size: $font-size; } 
+}
+
+
+@include respond-to(medium-screens){
+  input[type="checkbox"] {
+    & + label{
+      font-size: 1.2rem;
+      &.all{
+        @include font($size: 1.3rem, $color: #fff);
+      }
+      a{
+        @include font($size: 1.2rem, $color: #fff);
+      }
+      em{
+        @include font($size: 0.9rem, $weight: 100, $color: #fff);
+      }
+    }
+  }
+}
+@include respond-to(handhelds){
+  input[type="checkbox"] {
+    & + label{
+      font-size: 1.2rem;
+      a{
+        @include font($size: 1.1rem, $color: #fff);
+      }
+      em{
+        @include font($size: 0.9rem, $weight: 100, $color: #fff);
+      }
+    }
+  }
+}

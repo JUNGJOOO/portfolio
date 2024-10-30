@@ -1,0 +1,118 @@
+
+@mixin position($p: absolute, $t: null, $r: null, $b: null, $l: null, $transform: null, $z: null) {
+    position : $p;
+    top : $t;
+    right: $r;
+    bottom: $b;
+    left: $l;
+    transform: $transform;
+    z-index: $z;
+}
+
+@mixin flex($display: flex, $justify: center, $align: center, $direction: null, $wrap: null) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin box($display: null, $padding: null, $margin: null, $w: 100%, $h: auto, $line-h: null, $bg: null, $radius: null, $border: null, $shadow: null, $size:1rem) {
+    display: $display;
+    padding : $padding;
+    margin: $margin;
+    width: $w;
+    height: $h;
+    line-height: $line-h;
+    background-color: $bg;
+    border: $border;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    font-size: $size;
+}
+
+
+@mixin display-box($d: box, $orient: null, $pack: null, $line-clamp: null, $text-over: null){
+    display: -ms-flex$d; // Internet Explorer 10
+    display: -moz-$d; // Firefox
+    display: -webkit-$d; // Safari, Chrome, and Opera
+    -webkit-box-orient: $orient;
+    -moz-box-orient: $orient;
+    box-pack: $pack;
+    -webkit-box-pack: $pack;
+    -moz-box-pack: $pack;
+    -webkit-line-clamp: $line-clamp;
+    overflow: hidden;
+    text-overflow: $text-over;
+}
+
+@mixin button($w: null, $h: null, $line-h: null, $weight: null, $p: null, $color: null, $border: null, $radius: 5px, $bg: null, $size: null) {
+    padding: $p;
+    width: $w;
+    height: $h;
+    font-size: $size;
+    line-height: $line-h;
+    font-weight: $weight;
+    color: $color;
+    border: $border;
+    border-radius: $radius;
+    background-color: $bg;
+    cursor: pointer;
+}
+
+@mixin bg-img($img: null, $size: null, $vertical: null, $position: null, $repeat: no-repeat){
+    background: url($img);
+    background-size: $size;
+    background-repeat: $repeat;
+    background-position: $position;
+    vertical-align: $vertical;
+}
+
+@mixin clear($clear: both, $display:block){
+    content: '';
+    clear: $clear;
+    display: $display;
+}
+
+@mixin font($style: normal, $weight: normal, $size: 1rem, $color: null, $align: null, $line-h: null, $space: null, $break: null ) {
+    font: {
+        style: $style;
+        weight: $weight;
+        size: $size;
+    }
+    color: $color;  
+    text-align: $align;
+    line-height: $line-h;
+    white-space: $space;
+    word-break: $break;
+}
+
+@mixin input($pd: null, $w: null, $h: null, $border: null, $radius: 5px, $align: null ){
+    padding: $pd;
+    width: $w;
+    height: $h;
+    border: $border;
+    border-radius: $radius;
+    text-align: $align;
+    cursor: pointer;
+}
+
+// reactive
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$pc-width: 1600px;
+
+@mixin respond-to($media) {
+    @if $media == handhelds {
+        @media all and (max-width: $tablet-width - 1) { @content; }
+    }
+    @else if $media == medium-screens {
+        @media all and (min-width: $tablet-width ) and (max-width: $desktop-width - 1) { @content; }
+    }
+    @else if $media == wide-screens {
+        @media all and (min-width: $desktop-width) and (max-width: $pc-width - 1) { @content; }
+    }
+    @else if $media == pc-screens {
+        @media all and (min-width: $pc-width) { @content; }
+    }
+}
