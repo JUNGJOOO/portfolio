@@ -1,0 +1,14 @@
+@import "mixin";
+.restore-wrap {
+  @include reset-wrap(absolute, 50%, 0, translateX(-50%), 100%, 50px, center, 100, #f1f3f5, inset 0 4px 5px rgba(0, 0, 0, 0.08));
+
+  & > * {
+    display: inline-block;
+  }
+  a {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $point-color;
+    cursor: pointer;
+  }
+}
